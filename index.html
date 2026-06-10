@@ -102,7 +102,7 @@
         }
 
         .hero {
-            min-height: 75vh;
+            min-height: 80vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -180,37 +180,6 @@
         .btn-secondary:hover {
             background-color: rgba(255, 255, 255, 0.08);
             transform: translateY(-2px);
-        }
-
-        /* Nuova Sezione st2cpp in evidenza */
-        .featured-product-section {
-            padding: 60px 5%;
-            max-width: 1300px;
-            margin: 0 auto;
-        }
-
-        .featured-card-large {
-            background: linear-gradient(135deg, rgba(11, 19, 41, 0.8) 0%, rgba(3, 7, 18, 0.9) 100%);
-            border: 1px solid rgba(0, 180, 216, 0.3);
-            border-radius: 20px;
-            padding: 45px;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            box-shadow: 0 10px 40px rgba(0, 180, 216, 0.05);
-        }
-
-        .featured-card-large h3 {
-            font-size: 2rem;
-            color: #fff;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .featured-logo {
-            height: 40px;
-            width: auto;
         }
 
         .features-section {
@@ -326,24 +295,6 @@
             <div class="hero-buttons">
                 <a href="https://github.com/undoRT" target="_blank" class="btn btn-primary">Explore Source Code</a>
                 <a href="architecture.html" class="btn btn-secondary">Read Architecture</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="featured-product-section">
-        <div class="featured-card-large">
-            <div>
-                <span class="product-badge compiler">Active Project</span>
-                <h3>
-                    <img src="assets/st2cpp_logo.png" alt="st2cpp Logo" class="featured-logo">
-                    The Transpilation Engine
-                </h3>
-            </div>
-            <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 900px;">
-                <strong>st2cpp</strong> represents the technological foundation of our ecosystem pipeline. It functions as an advanced transpiler/compiler designed to ingest standard IEC 61131-3 Structured Text (ST) and transform it directly into highly optimized, native C++ binaries. This bypasses the overhead of traditional software runtimes, providing bare-metal performance for execution inside the undoPLC infrastructure.
-            </p>
-            <div style="margin-top: 10px;">
-                <a href="https://github.com/undoRT" target="_blank" style="color: var(--cyan-primary); text-decoration: none; font-weight: 600; font-size: 0.95rem;">View Private Repository Specifications &rarr;</a>
             </div>
         </div>
     </section>
