@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>undoRT | Architecture Detail</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <a href="index.html"><img src="assets/logo.png" alt="undoRT Logo" class="nav-logo"></a>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="architecture.html" style="color: var(--cyan-light);">Architecture</a>
+            <a href="https://github.com/undoRT" target="_blank" class="github-link">GitHub Org</a>
+        </nav>
+    </header>
+
+    <main style="padding-top: 140px; padding-left: 8%; padding-right: 8%; max-width: 1000px; margin: 0 auto; min-height: 80vh;">
+        <h1 style="font-size: 2.8rem; margin-bottom: 20px; color: var(--cyan-light);">Ecosystem Architecture</h1>
+        <p style="color: var(--text-muted); font-size: 1.2rem; margin-bottom: 40px;">Discover how undoRT achieves microsecond-level determinism by integrating custom hardware-level runtime environments with high-level compilation tooling.</p>
+        
+        <section style="background-color: var(--card-bg); padding: 40px; border-radius: 12px; margin-bottom: 40px; border: 1px solid rgba(176, 168, 204, 0.05);">
+            <h2 style="margin-bottom: 20px; color: #fff;">The Deterministic Execution Loop</h2>
+            <p style="color: var(--text-muted); margin-bottom: 15px;">
+                Traditional SoftPLCs introduce overhead through intermediate virtual machines or heavy interpretation layers. 
+                <strong>undoPLC</strong> bypasses this completely by executing native, optimized C++ binaries compiled directly from IEC 61131-3 Structured Text via <strong>st2cpp</strong>.
+            </p>
+            <p style="color: var(--text-muted);">
+                When paired with <strong>undoOS</strong> (Linux Preempt-RT kernel configuration), context switches are minimized. Real-time tasks and fieldbus management via <strong>undoBUS</strong> (IgH EtherCAT Master) are bound to isolated CPU cores using strict FIFO real-time scheduling priorities, eliminating jitter and non-deterministic latencies.
+            </p>
+        </section>
+
+        <section style="background-color: var(--card-bg); padding: 40px; border-radius: 12px; margin-bottom: 40px; border: 1px solid rgba(176, 168, 204, 0.05);">
+            <h2 style="margin-bottom: 20px; color: #fff;">The Integration Pipeline</h2>
+            <p style="color: var(--text-muted);">
+                The migration suite <strong>undoImport</strong> allows users to ingest existing commercial IDE configurations (such as TwinCAT or CODESYS projects), extracting the core logical workflows and seamlessly routing them into the open-source undoRT build process.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 undoRT Open Source Project. Built for the future of industrial automation.</p>
+    </footer>
+
+</body>
+</html>

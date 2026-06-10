@@ -1,10 +1,10 @@
 /* Color Palette & Reset */
 :root {
-    --bg-dark: #001326;
-    --card-bg: #001e3d;       
-    --cyan-tech: #0099b8;
-    --cyan-light: #00d2da;    
-    --lavender: #b0a8cc;
+    --bg-dark: #001326;       /* Deep dark blue from the logo background */
+    --card-bg: #001e3d;       /* Slightly lighter blue for cards */
+    --cyan-tech: #0099b8;     /* Cyan accent from the logo arrow */
+    --cyan-light: #00d2da;    /* Bright cyan for hover effects */
+    --lavender: #b0a8cc;      /* Lavender from the "undo" text */
     --text-white: #ffffff;
     --text-muted: #a0aec0;
 }
@@ -39,7 +39,7 @@ header {
 }
 
 .nav-logo {
-    height: 45px; /* Adatta l'altezza del logo nel menu */
+    height: 45px;
     width: auto;
 }
 
@@ -151,7 +151,7 @@ header nav a.github-link:hover {
     background-color: rgba(255, 255, 255, 0.05);
 }
 
-/* Features Section */
+/* Features/Ecosystem Section */
 .features-section {
     padding: 100px 8%;
     background-color: rgba(0, 19, 38, 0.5);
@@ -160,8 +160,15 @@ header nav a.github-link:hover {
 .features-section h2 {
     text-align: center;
     font-size: 2.2rem;
-    margin-bottom: 60px;
+    margin-bottom: 15px;
     color: var(--text-white);
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 60px;
+    font-size: 1.1rem;
 }
 
 .features-grid {
@@ -183,44 +190,18 @@ header nav a.github-link:hover {
     border-color: rgba(0, 153, 184, 0.4);
 }
 
-.feature-card .icon {
-    font-size: 2rem;
+.product-logo-container {
     margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+    height: 40px;
+    align-items: center;
 }
 
-.feature-card h3 {
-    font-size: 1.4rem;
-    margin-bottom: 15px;
-    color: var(--cyan-light);
-}
-
-.feature-card p {
-    color: var(--text-muted);
-    font-size: 0.95rem;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 40px 20px;
-    color: #4a5568;
-    border-top: 1px solid rgba(176, 168, 204, 0.05);
-    font-size: 0.9rem;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .hero h1 { font-size: 2.5rem; }
-    .hero-buttons { flex-direction: column; }
-    header nav { display: none; } /* Per semplicità sui dispositivi mobili */
-}
-
-.section-subtitle {
-    text-align: center;
-    color: var(--text-muted);
-    margin-top: -50px;
-    margin-bottom: 50px;
-    font-size: 1.1rem;
+.product-card-logo {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
 }
 
 .product-badge {
@@ -240,15 +221,23 @@ footer {
 .product-badge.compiler { background-color: rgba(245, 158, 11, 0.15); color: #f59e0b; }
 .product-badge.utility { background-color: var(--lavender); color: var(--bg-dark); }
 
-.product-logo-container {
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: flex-start; 
-    height: 40px;               
-    align-items: center;
+.feature-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
 }
 
-.product-card-logo {
-    height: 100%;               
-    width: auto;                
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: #4a5568;
+    border-top: 1px solid rgba(176, 168, 204, 0.05);
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+    .hero-buttons { flex-direction: column; }
+    header nav { display: none; }
 }
