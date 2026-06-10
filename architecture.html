@@ -4,39 +4,148 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>undoRT | Architecture Detail</title>
-    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="icon" type="image/png" href="assets/undoRT_logo.png">
+
+    <style>
+        :root {
+            --bg-main: #030712;        
+            --bg-card: #0b1329;        
+            --border-glow: #1c2541;    
+            --cyan-primary: #00b4d8;   
+            --lavender: #b0a8cc;       
+            --text-primary: #f3f4f6;   
+            --text-muted: #9ca3af;     
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-main) !important;
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            background-color: rgba(3, 7, 18, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .nav-logo {
+            height: 40px;
+            width: auto;
+        }
+
+        header nav {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        header nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        header nav a:hover {
+            color: var(--text-primary);
+        }
+
+        main {
+            padding-top: 140px; 
+            padding-left: 5%; 
+            padding-right: 5%; 
+            max-width: 1000px; 
+            margin: 0 auto; 
+            min-height: 80vh;
+        }
+
+        h1 {
+            font-size: 2.8rem; 
+            margin-bottom: 20px; 
+            color: #fff;
+            font-weight: 800;
+        }
+
+        .architecture-card {
+            background-color: var(--bg-card); 
+            padding: 40px; 
+            border-radius: 16px; 
+            margin-bottom: 30px; 
+            border: 1px solid var(--border-glow);
+        }
+
+        .architecture-card h2 {
+            margin-bottom: 20px; 
+            color: var(--cyan-primary);
+            font-size: 1.6rem;
+        }
+
+        .architecture-card p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            color: #4b5563;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.85rem;
+            margin-top: 100px;
+        }
+    </style>
 </head>
 <body>
 
     <header>
         <div class="logo-container">
-            <a href="index.html"><img src="assets/logo.png" alt="undoRT Logo" class="nav-logo"></a>
+            <a href="index.html"><img src="assets/undoRT_logo.png" alt="undoRT Logo" class="nav-logo"></a>
         </div>
         <nav>
             <a href="index.html">Home</a>
-            <a href="architecture.html" style="color: var(--cyan-light);">Architecture</a>
-            <a href="https://github.com/undoRT" target="_blank" class="github-link">GitHub Org</a>
+            <a href="architecture.html" style="color: var(--cyan-primary);">Architecture</a>
+            <a href="https://github.com/undoRT" target="_blank">GitHub Org</a>
         </nav>
     </header>
 
-    <main style="padding-top: 140px; padding-left: 8%; padding-right: 8%; max-width: 1000px; margin: 0 auto; min-height: 80vh;">
-        <h1 style="font-size: 2.8rem; margin-bottom: 20px; color: var(--cyan-light);">Ecosystem Architecture</h1>
+    <main>
+        <h1>Ecosystem Architecture</h1>
         <p style="color: var(--text-muted); font-size: 1.2rem; margin-bottom: 40px;">Discover how undoRT achieves microsecond-level determinism by integrating custom hardware-level runtime environments with high-level compilation tooling.</p>
         
-        <section style="background-color: var(--card-bg); padding: 40px; border-radius: 12px; margin-bottom: 40px; border: 1px solid rgba(176, 168, 204, 0.05);">
-            <h2 style="margin-bottom: 20px; color: #fff;">The Deterministic Execution Loop</h2>
-            <p style="color: var(--text-muted); margin-bottom: 15px;">
+        <section class="architecture-card">
+            <h2>The Deterministic Execution Loop</h2>
+            <p>
                 Traditional SoftPLCs introduce overhead through intermediate virtual machines or heavy interpretation layers. 
                 <strong>undoPLC</strong> bypasses this completely by executing native, optimized C++ binaries compiled directly from IEC 61131-3 Structured Text via <strong>st2cpp</strong>.
             </p>
-            <p style="color: var(--text-muted);">
+            <p>
                 When paired with <strong>undoOS</strong> (Linux Preempt-RT kernel configuration), context switches are minimized. Real-time tasks and fieldbus management via <strong>undoBUS</strong> (IgH EtherCAT Master) are bound to isolated CPU cores using strict FIFO real-time scheduling priorities, eliminating jitter and non-deterministic latencies.
             </p>
         </section>
 
-        <section style="background-color: var(--card-bg); padding: 40px; border-radius: 12px; margin-bottom: 40px; border: 1px solid rgba(176, 168, 204, 0.05);">
-            <h2 style="margin-bottom: 20px; color: #fff;">The Integration Pipeline</h2>
-            <p style="color: var(--text-muted);">
+        <section class="architecture-card">
+            <h2>The Integration Pipeline</h2>
+            <p>
                 The migration suite <strong>undoImport</strong> allows users to ingest existing commercial IDE configurations (such as TwinCAT or CODESYS projects), extracting the core logical workflows and seamlessly routing them into the open-source undoRT build process.
             </p>
         </section>
