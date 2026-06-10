@@ -1,0 +1,254 @@
+/* Color Palette & Reset */
+:root {
+    --bg-dark: #001326;
+    --card-bg: #001e3d;       
+    --cyan-tech: #0099b8;
+    --cyan-light: #00d2da;    
+    --lavender: #b0a8cc;
+    --text-white: #ffffff;
+    --text-muted: #a0aec0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: rgba(0, 19, 38, 0.8);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(176, 168, 204, 0.1);
+}
+
+.nav-logo {
+    height: 45px; /* Adatta l'altezza del logo nel menu */
+    width: auto;
+}
+
+header nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: var(--cyan-light);
+}
+
+header nav a.github-link {
+    color: var(--lavender);
+    border: 1px solid var(--lavender);
+    padding: 6px 16px;
+    border-radius: 6px;
+    transition: all 0.3s;
+}
+
+header nav a.github-link:hover {
+    background-color: var(--lavender);
+    color: var(--bg-dark);
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 8% 60px 8%;
+    background: radial-gradient(circle at 80% 20%, rgba(0, 153, 184, 0.15) 0%, transparent 50%);
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.badge {
+    background-color: rgba(0, 153, 184, 0.15);
+    color: var(--cyan-light);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 25px;
+    border: 1px solid rgba(0, 153, 184, 0.3);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    background: linear-gradient(135deg, #fff 0%, var(--lavender) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tagline {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+}
+
+/* Buttons */
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 12px 32px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background-color: var(--cyan-tech);
+    color: var(--text-white);
+}
+
+.btn-primary:hover {
+    background-color: var(--cyan-light);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-white);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-secondary:hover {
+    border-color: var(--text-white);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Features Section */
+.features-section {
+    padding: 100px 8%;
+    background-color: rgba(0, 19, 38, 0.5);
+}
+
+.features-section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 60px;
+    color: var(--text-white);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background-color: var(--card-bg);
+    padding: 40px 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(176, 168, 204, 0.05);
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 153, 184, 0.4);
+}
+
+.feature-card .icon {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: var(--cyan-light);
+}
+
+.feature-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: #4a5568;
+    border-top: 1px solid rgba(176, 168, 204, 0.05);
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+    .hero-buttons { flex-direction: column; }
+    header nav { display: none; } /* Per semplicità sui dispositivi mobili */
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    margin-top: -50px;
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+}
+
+.product-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+.product-badge.core { background-color: rgba(239, 68, 68, 0.15); color: #ef4444; }
+.product-badge.runtime { background-color: rgba(16, 185, 129, 0.15); color: #10b981; }
+.product-badge.fieldbus { background-color: rgba(6, 182, 212, 0.15); color: #06b6d4; }
+.product-badge.compiler { background-color: rgba(245, 158, 11, 0.15); color: #f59e0b; }
+.product-badge.utility { background-color: var(--lavender); color: var(--bg-dark); }
+
+.product-logo-container {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start; 
+    height: 40px;               
+    align-items: center;
+}
+
+.product-card-logo {
+    height: 100%;               
+    width: auto;                
+}
