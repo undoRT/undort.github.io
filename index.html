@@ -208,17 +208,21 @@
             gap: 25px;
         }
 
+        /* Feature Card modified to act as a proper block link */
         .feature-card {
             background-color: var(--bg-card);
             padding: 35px;
             border-radius: 16px;
             border: 1px solid var(--border-glow);
-            transition: all 0.3s ease;
+            text-decoration: none; /* Removes underline from text */
+            display: block;        /* Ensures whole area is clickable */
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .feature-card:hover {
             transform: translateY(-5px);
-            border-color: rgba(0, 180, 216, 0.3);
+            border-color: rgba(0, 180, 216, 0.4);
+            box-shadow: 0 10px 30px rgba(0, 180, 216, 0.05);
         }
 
         .product-logo-container {
@@ -255,6 +259,11 @@
         .feature-card p {
             color: var(--text-muted);
             font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+
+        .feature-card:hover p {
+            color: var(--text-primary); /* Slightly brightens text on card hover */
         }
 
         footer {
@@ -304,45 +313,45 @@
         <p class="section-subtitle">A fully integrated, open-source stack for next-gen deterministic control.</p>
         
         <div class="features-grid">
-            <div class="feature-card">
+            <a href="https://github.com/undoRT/undoOS" target="_blank" class="feature-card">
                 <div class="product-logo-container">
                     <img src="assets/undoOS_logo.png" alt="undoOS Logo" class="product-card-logo">
                 </div>
                 <span class="product-badge core">Core OS</span>
                 <p>A highly optimized Linux Preempt-RT distribution tailored for multi-platform industrial hardware, ensuring microsecond-level deterministic execution.</p>
-            </div>
+            </a>
 
-            <div class="feature-card">
+            <a href="https://github.com/undoRT/undoPLC" target="_blank" class="feature-card">
                 <div class="product-logo-container">
                     <img src="assets/undoPLC_logo.png" alt="undoPLC Logo" class="product-card-logo">
                 </div>
                 <span class="product-badge runtime">Runtime</span>
                 <p>A custom, high-performance multi-threaded SoftPLC runtime infrastructure designed from scratch to leverage the full power of undoOS.</p>
-            </div>
+            </a>
 
-            <div class="feature-card">
+            <a href="https://github.com/undoRT/undoBUS" target="_blank" class="feature-card">
                 <div class="product-logo-container">
                     <img src="assets/undoBUS_logo.png" alt="undoBUS Logo" class="product-card-logo">
                 </div>
                 <span class="product-badge fieldbus">Fieldbus</span>
                 <p>Ultra-precise fieldbus management. Launching with native support for EtherCAT Master (powered by IgH technology) running deterministically in user-space.</p>
-            </div>
+            </a>
 
-            <div class="feature-card">
+            <a href="https://github.com/undoRT/st2cpp" target="_blank" class="feature-card">
                 <div class="product-logo-container">
                     <img src="assets/st2cpp_logo.png" alt="st2cpp Logo" class="product-card-logo">
                 </div>
                 <span class="product-badge compiler">Compiler</span>
                 <p>The core translation engine. A powerful transpiler that compiles standard Structured Text (ST) into optimized, native C++ code for execution.</p>
-            </div>
+            </a>
 
-            <div class="feature-card">
+            <a href="https://github.com/undoRT/undoImport" target="_blank" class="feature-card">
                 <div class="product-logo-container">
                     <img src="assets/undoImport_logo.png" alt="undoImport Logo" class="product-card-logo">
                 </div>
                 <span class="product-badge utility">Migration</span>
                 <p>A suite of migration utilities designed to ingest legacy commercial projects (TwinCAT, CODESYS) and seamlessly port them into the undoRT pipeline.</p>
-            </div>
+            </a>
         </div>
     </section>
 
