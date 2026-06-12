@@ -182,6 +182,35 @@
             transform: translateY(-2px);
         }
 
+        /* ── Dev status banner ── */
+        .dev-notice {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            max-width: 720px;
+            margin: 0 auto 20px auto;
+            padding: 12px 20px;
+            border-radius: 10px;
+            background: rgba(245, 158, 11, 0.07);
+            border: 1px solid rgba(245, 158, 11, 0.2);
+            font-size: 0.88rem;
+            color: #fcd34d;
+            text-align: left;
+        }
+
+        .dev-notice-icon {
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .dev-notice a {
+            color: #fcd34d;
+            font-weight: 600;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        /* ── Ecosystem section ── */
         .features-section {
             padding: 60px 5%;
             max-width: 1300px;
@@ -208,21 +237,37 @@
             gap: 25px;
         }
 
-        /* Feature Card modified to act as a proper block link */
+        /* ── Feature cards ── */
         .feature-card {
             background-color: var(--bg-card);
             padding: 35px;
             border-radius: 16px;
             border: 1px solid var(--border-glow);
-            text-decoration: none; /* Removes underline from text */
-            display: block;        /* Ensures whole area is clickable */
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
         }
 
         .feature-card:hover {
             transform: translateY(-5px);
             border-color: rgba(0, 180, 216, 0.4);
             box-shadow: 0 10px 30px rgba(0, 180, 216, 0.05);
+        }
+
+        /* Released card gets a slightly warmer border */
+        .feature-card.released {
+            border-color: rgba(0, 180, 216, 0.25);
+        }
+
+        /* Planned cards are slightly dimmed */
+        .feature-card.planned {
+            opacity: 0.75;
+        }
+        .feature-card.planned:hover {
+            opacity: 1;
         }
 
         .product-logo-container {
@@ -250,20 +295,126 @@
             letter-spacing: 0.5px;
         }
 
-        .product-badge.core { background-color: rgba(239, 68, 68, 0.1); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.2); }
-        .product-badge.runtime { background-color: rgba(16, 185, 129, 0.1); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.2); }
-        .product-badge.fieldbus { background-color: rgba(6, 182, 212, 0.1); color: #22d3ee; border: 1px solid rgba(6, 182, 212, 0.2); }
-        .product-badge.compiler { background-color: rgba(245, 158, 11, 0.1); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.2); }
-        .product-badge.utility { background-color: rgba(176, 168, 204, 0.1); color: #c3bcdf; border: 1px solid rgba(176, 168, 204, 0.2); }
+        .product-badge.core       { background-color: rgba(239, 68, 68, 0.1);   color: #f87171; border: 1px solid rgba(239, 68, 68, 0.2); }
+        .product-badge.runtime    { background-color: rgba(16, 185, 129, 0.1);  color: #34d399; border: 1px solid rgba(16, 185, 129, 0.2); }
+        .product-badge.fieldbus   { background-color: rgba(6, 182, 212, 0.1);   color: #22d3ee; border: 1px solid rgba(6, 182, 212, 0.2); }
+        .product-badge.compiler   { background-color: rgba(245, 158, 11, 0.1);  color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.2); }
+        .product-badge.utility    { background-color: rgba(176, 168, 204, 0.1); color: #c3bcdf; border: 1px solid rgba(176, 168, 204, 0.2); }
 
         .feature-card p {
             color: var(--text-muted);
             font-size: 0.95rem;
             transition: color 0.2s ease;
+            flex: 1;
+            margin-bottom: 20px;
         }
 
         .feature-card:hover p {
-            color: var(--text-primary); /* Slightly brightens text on card hover */
+            color: var(--text-primary);
+        }
+
+        /* ── Status pill at bottom of each card ── */
+        .status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 5px 12px;
+            border-radius: 20px;
+            letter-spacing: 0.3px;
+            align-self: flex-start;
+            margin-top: auto;
+        }
+
+        .status-pill::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .status-pill.available {
+            background: rgba(52, 211, 153, 0.1);
+            color: #34d399;
+            border: 1px solid rgba(52, 211, 153, 0.25);
+        }
+        .status-pill.available::before {
+            background: #34d399;
+            box-shadow: 0 0 6px #34d399;
+        }
+
+        .status-pill.in-development {
+            background: rgba(245, 158, 11, 0.1);
+            color: #fbbf24;
+            border: 1px solid rgba(245, 158, 11, 0.2);
+        }
+        .status-pill.in-development::before {
+            background: #fbbf24;
+        }
+
+        /* ── Roadmap section ── */
+        .roadmap-section {
+            padding: 60px 5% 20px;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .roadmap-section h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .roadmap-section .section-subtitle {
+            margin-bottom: 36px;
+        }
+
+        .roadmap-track {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            max-width: 760px;
+        }
+
+        .roadmap-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 20px 24px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-glow);
+            border-radius: 12px;
+        }
+
+        .roadmap-item.active {
+            border-color: rgba(52, 211, 153, 0.3);
+        }
+
+        .roadmap-step {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            padding-top: 3px;
+            min-width: 60px;
+        }
+
+        .roadmap-item.active .roadmap-step {
+            color: #34d399;
+        }
+
+        .roadmap-body h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .roadmap-body p {
+            font-size: 0.88rem;
+            color: var(--text-muted);
         }
 
         footer {
@@ -292,66 +443,118 @@
         <nav>
             <a href="#ecosystem">Ecosystem</a>
             <a href="architecture.html">Architecture</a>
+            <a href="#roadmap">Roadmap</a>
             <a href="https://github.com/undoRT" target="_blank" class="github-link">GitHub Org</a>
         </nav>
     </header>
 
     <section class="hero">
         <div class="hero-content">
-            <span class="badge">Next-Generation Automation</span>
+            <span class="badge">Next-Generation Open Source Automation (Early Development)</span>
             <h1>Deterministic Real-Time Control Platform</h1>
-            <p class="tagline">Engineered for next-generation industrial automation systems where microsecond-level precision and absolute predictability are non-negotiable.</p>
+            <p class="tagline">An open-source stack for industrial automation where C++ performance, IEC 61131-3 compatibility, and Linux real-time scheduling converge.</p>
+
+            <div class="dev-notice">
+                <span>undoRT is in active early development. Currently, <a href="https://github.com/undoRT/st2cpp">st2cpp</a> is the only released component. The rest of the ecosystem is being built in the open — contributions welcome.</span>
+            </div>
+
             <div class="hero-buttons">
                 <a href="https://github.com/undoRT" target="_blank" class="btn btn-primary">Explore Source Code</a>
+                <a href="https://github.com/undoRT/st2cpp" target="_blank" class="btn btn-primary">Get st2cpp</a>
                 <a href="architecture.html" class="btn btn-secondary">Read Architecture</a>
             </div>
+
         </div>
     </section>
 
     <section id="ecosystem" class="features-section">
         <h2>The undoRT Ecosystem</h2>
-        <p class="section-subtitle">A fully integrated, open-source stack for next-gen deterministic control.</p>
+        <p class="section-subtitle">Five components, one pipeline — from hardware OS to legacy migration.</p>
         
         <div class="features-grid">
-            <a href="https://github.com/undoRT/undoOS" target="_blank" class="feature-card">
-                <div class="product-logo-container">
-                    <img src="assets/undoOS_logo.png" alt="undoOS Logo" class="product-card-logo">
-                </div>
-                <span class="product-badge core">Core OS</span>
-                <p>A highly optimized Linux Preempt-RT distribution tailored for multi-platform industrial hardware, ensuring microsecond-level deterministic execution.</p>
-            </a>
 
-            <a href="https://github.com/undoRT/undoPLC" target="_blank" class="feature-card">
-                <div class="product-logo-container">
-                    <img src="assets/undoPLC_logo.png" alt="undoPLC Logo" class="product-card-logo">
-                </div>
-                <span class="product-badge runtime">Runtime</span>
-                <p>A custom, high-performance multi-threaded SoftPLC runtime infrastructure designed from scratch to leverage the full power of undoOS.</p>
-            </a>
-
-            <a href="https://github.com/undoRT/undoBUS" target="_blank" class="feature-card">
-                <div class="product-logo-container">
-                    <img src="assets/undoBUS_logo.png" alt="undoBUS Logo" class="product-card-logo">
-                </div>
-                <span class="product-badge fieldbus">Fieldbus</span>
-                <p>Ultra-precise fieldbus management. Launching with native support for EtherCAT Master (powered by IgH technology) running deterministically in user-space.</p>
-            </a>
-
-            <a href="https://github.com/undoRT/st2cpp" target="_blank" class="feature-card">
+            <a href="https://github.com/undoRT/st2cpp" target="_blank" class="feature-card released">
                 <div class="product-logo-container">
                     <img src="assets/st2cpp_logo.png" alt="st2cpp Logo" class="product-card-logo">
                 </div>
                 <span class="product-badge compiler">Compiler</span>
-                <p>The core translation engine. A powerful transpiler that compiles standard Structured Text (ST) into optimized, native C++ code for execution.</p>
+                <p>Transpiles IEC 61131-3 Structured Text into clean, native C++17. Supports Function Blocks, structs, enums, arrays, inheritance, and modular project generation.</p>
+                <span class="status-pill available">Released · v0.1.2</span>
             </a>
 
-            <a href="https://github.com/undoRT/undoImport" target="_blank" class="feature-card">
+            <a href="https://github.com/undoRT/undoPLC" target="_blank" class="feature-card planned">
+                <div class="product-logo-container">
+                    <img src="assets/undoPLC_logo.png" alt="undoPLC Logo" class="product-card-logo">
+                </div>
+                <span class="product-badge runtime">Runtime</span>
+                <p>A multi-threaded SoftPLC runtime that executes C++ binaries compiled by st2cpp. Designed from scratch to run natively on undoOS with no intermediate VM.</p>
+                <span class="status-pill in-development">In Development</span>
+            </a>
+
+            <a href="https://github.com/undoRT/undoOS" target="_blank" class="feature-card planned">
+                <div class="product-logo-container">
+                    <img src="assets/undoOS_logo.png" alt="undoOS Logo" class="product-card-logo">
+                </div>
+                <span class="product-badge core">Core OS</span>
+                <p>A Linux Preempt-RT configuration optimized for multi-platform industrial hardware. Real-time tasks are pinned to isolated cores with FIFO scheduling for predictable latency.</p>
+                <span class="status-pill in-development">In Development</span>
+            </a>
+
+            <a href="https://github.com/undoRT/undoBUS" target="_blank" class="feature-card planned">
+                <div class="product-logo-container">
+                    <img src="assets/undoBUS_logo.png" alt="undoBUS Logo" class="product-card-logo">
+                </div>
+                <span class="product-badge fieldbus">Fieldbus</span>
+                <p>Fieldbus management built on IgH EtherCAT Master, running deterministically in user-space alongside undoPLC. Launching with EtherCAT; further protocols planned.</p>
+                <span class="status-pill in-development">In Development</span>
+            </a>
+
+            <a href="https://github.com/undoRT/undoImport" target="_blank" class="feature-card planned">
                 <div class="product-logo-container">
                     <img src="assets/undoImport_logo.png" alt="undoImport Logo" class="product-card-logo">
                 </div>
                 <span class="product-badge utility">Migration</span>
-                <p>A suite of migration utilities designed to ingest legacy commercial projects (TwinCAT, CODESYS) and seamlessly port them into the undoRT pipeline.</p>
+                <p>Ingests existing TwinCAT and CODESYS projects, extracts logic and variable declarations, and routes them into the undoRT build pipeline via st2cpp.</p>
+                <span class="status-pill in-development">In Development</span>
             </a>
+
+        </div>
+    </section>
+
+    <!-- Roadmap section -->
+    <section id="roadmap" class="roadmap-section">
+        <h2>Roadmap</h2>
+        <p class="section-subtitle" style="text-align:left;">Where the project stands and where it is headed.</p>
+
+        <div class="roadmap-track">
+            <div class="roadmap-item active">
+                <span class="roadmap-step">Now</span>
+                <div class="roadmap-body">
+                    <h3>st2cpp v0.1 — Compiler foundation</h3>
+                    <p>ST → C++17 transpiler with full POU support, modular project generation, and a header-only runtime. Public release with GPL-3.0 license.</p>
+                </div>
+            </div>
+            <div class="roadmap-item">
+                <span class="roadmap-step">Next</span>
+                <div class="roadmap-body">
+                    <h3>st2cpp v0.2 — Semantic analysis + standard library</h3>
+                    <p>Type checking, better error messages with source locations, and support for IEC 61131-3 standard functions (TON, CTU, ABS, MAX…).</p>
+                </div>
+            </div>
+            <div class="roadmap-item">
+                <span class="roadmap-step">Later</span>
+                <div class="roadmap-body">
+                    <h3>undoImport — Legacy project migration</h3>
+                    <p>TwinCAT (.tmc/.tpy) and CODESYS project import, feeding directly into st2cpp. Makes the pipeline immediately useful for existing automation projects.</p>
+                </div>
+            </div>
+            <div class="roadmap-item">
+                <span class="roadmap-step">Future</span>
+                <div class="roadmap-body">
+                    <h3>undoPLC + undoOS + undoBUS — The full stack</h3>
+                    <p>SoftPLC runtime, Linux RT image, and EtherCAT fieldbus integration. These components require dedicated RT hardware for validation and are being developed in parallel.</p>
+                </div>
+            </div>
         </div>
     </section>
 

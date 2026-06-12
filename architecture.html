@@ -65,36 +65,34 @@
             transition: color 0.2s ease;
         }
 
-        header nav a:hover {
-            color: var(--text-primary);
-        }
+        header nav a:hover { color: var(--text-primary); }
 
         main {
-            padding-top: 140px; 
-            padding-left: 5%; 
-            padding-right: 5%; 
-            max-width: 1000px; 
-            margin: 0 auto; 
+            padding-top: 140px;
+            padding-left: 5%;
+            padding-right: 5%;
+            max-width: 1000px;
+            margin: 0 auto;
             min-height: 80vh;
         }
 
         h1 {
-            font-size: 2.8rem; 
-            margin-bottom: 20px; 
+            font-size: 2.8rem;
+            margin-bottom: 20px;
             color: #fff;
             font-weight: 800;
         }
 
         .architecture-card {
-            background-color: var(--bg-card); 
-            padding: 40px; 
-            border-radius: 16px; 
-            margin-bottom: 30px; 
+            background-color: var(--bg-card);
+            padding: 40px;
+            border-radius: 16px;
+            margin-bottom: 30px;
             border: 1px solid var(--border-glow);
         }
 
         .architecture-card h2 {
-            margin-bottom: 20px; 
+            margin-bottom: 20px;
             color: var(--cyan-primary);
             font-size: 1.6rem;
         }
@@ -104,6 +102,79 @@
             font-size: 1.05rem;
             margin-bottom: 15px;
         }
+
+        .architecture-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Pipeline diagram */
+        .pipeline {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            flex-wrap: wrap;
+            margin: 30px 0 10px;
+            row-gap: 12px;
+        }
+
+        .pipeline-node {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .pipeline-box {
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .pipeline-box.ready {
+            background: rgba(52, 211, 153, 0.12);
+            border: 1px solid rgba(52, 211, 153, 0.3);
+            color: #34d399;
+        }
+
+        .pipeline-box.planned {
+            background: rgba(156, 163, 175, 0.07);
+            border: 1px solid rgba(156, 163, 175, 0.2);
+            color: #9ca3af;
+        }
+
+        .pipeline-label {
+            font-size: 0.68rem;
+            color: var(--text-muted);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .pipeline-arrow {
+            color: #1c2541;
+            font-size: 1.4rem;
+            padding: 0 6px;
+            margin-bottom: 20px;
+        }
+
+        .pipeline-legend {
+            display: flex;
+            gap: 20px;
+            margin-top: 16px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .pipeline-legend span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .dot { width: 8px; height: 8px; border-radius: 50%; }
+        .dot.green { background: #34d399; }
+        .dot.gray  { background: #4b5563; }
 
         footer {
             text-align: center;
@@ -130,23 +201,68 @@
 
     <main>
         <h1>Ecosystem Architecture</h1>
-        <p style="color: var(--text-muted); font-size: 1.2rem; margin-bottom: 40px;">Discover how undoRT achieves microsecond-level determinism by integrating custom hardware-level runtime environments with high-level compilation tooling.</p>
-        
-        <section class="architecture-card">
-            <h2>The Deterministic Execution Loop</h2>
-            <p>
-                Traditional SoftPLCs introduce overhead through intermediate virtual machines or heavy interpretation layers. 
-                <strong>undoPLC</strong> bypasses this completely by executing native, optimized C++ binaries compiled directly from IEC 61131-3 Structured Text via <strong>st2cpp</strong>.
-            </p>
-            <p>
-                When paired with <strong>undoOS</strong> (Linux Preempt-RT kernel configuration), context switches are minimized. Real-time tasks and fieldbus management via <strong>undoBUS</strong> (IgH EtherCAT Master) are bound to isolated CPU cores using strict FIFO real-time scheduling priorities, eliminating jitter and non-deterministic latencies.
-            </p>
-        </section>
+        <p style="color: var(--text-muted); font-size: 1.2rem; margin-bottom: 40px;">How the undoRT components fit together, and where the project stands today.</p>
 
         <section class="architecture-card">
             <h2>The Integration Pipeline</h2>
             <p>
-                The migration suite <strong>undoImport</strong> allows users to ingest existing commercial IDE configurations (such as TwinCAT or CODESYS projects), extracting the core logical workflows and seamlessly routing them into the open-source undoRT build process.
+                The full undoRT pipeline moves from Structured Text source to deterministic hardware execution in four stages. Only the first stage — the <strong>st2cpp</strong> compiler — is currently released. The remaining components are in active development.
+            </p>
+
+            <div class="pipeline">
+                <div class="pipeline-node">
+                    <div class="pipeline-box ready">ST Source</div>
+                    <span class="pipeline-label">IEC 61131-3</span>
+                </div>
+                <span class="pipeline-arrow">→</span>
+                <div class="pipeline-node">
+                    <div class="pipeline-box ready">st2cpp</div>
+                    <span class="pipeline-label">Released</span>
+                </div>
+                <span class="pipeline-arrow">→</span>
+                <div class="pipeline-node">
+                    <div class="pipeline-box ready">C++17 Binary</div>
+                    <span class="pipeline-label">Output</span>
+                </div>
+                <span class="pipeline-arrow">→</span>
+                <div class="pipeline-node">
+                    <div class="pipeline-box planned">undoPLC</div>
+                    <span class="pipeline-label">Planned</span>
+                </div>
+                <span class="pipeline-arrow">→</span>
+                <div class="pipeline-node">
+                    <div class="pipeline-box planned">undoOS + undoBUS</div>
+                    <span class="pipeline-label">Planned</span>
+                </div>
+            </div>
+
+            <div class="pipeline-legend">
+                <span><span class="dot green"></span>Available now</span>
+                <span><span class="dot gray"></span>In development</span>
+            </div>
+        </section>
+
+        <section class="architecture-card">
+            <h2>The Deterministic Execution Loop</h2>
+            <p>
+                Traditional SoftPLCs introduce overhead through intermediate virtual machines or interpretation layers.
+                <strong>undoPLC</strong> will bypass this by executing native C++ binaries compiled directly from Structured Text by <strong>st2cpp</strong> — no VM, no interpreter.
+            </p>
+            <p>
+                When paired with <strong>undoOS</strong> (a Linux Preempt-RT kernel configuration), real-time tasks will be pinned to isolated CPU cores using FIFO scheduling priorities. Fieldbus communication via <strong>undoBUS</strong> (IgH EtherCAT Master) will run deterministically in user-space alongside the PLC runtime.
+            </p>
+            <p>
+                Today, the generated C++ from st2cpp can already be compiled and run standalone on any C++17-capable platform — the RT integration is the next step, not a prerequisite for using the compiler.
+            </p>
+        </section>
+
+        <section class="architecture-card">
+            <h2>Legacy Migration via undoImport</h2>
+            <p>
+                <strong>undoImport</strong> will ingest existing commercial IDE configurations — TwinCAT (.tmc/.tpy) and CODESYS projects — extracting POU logic and variable declarations, then routing them directly into the st2cpp pipeline.
+            </p>
+            <p>
+                This makes undoRT immediately useful for teams with existing automation code, without requiring a full manual rewrite.
             </p>
         </section>
     </main>
