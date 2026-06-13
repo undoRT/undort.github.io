@@ -1,0 +1,5 @@
+<map id="ParameterInfo" name="ParameterInfo">
+<area shape="rect" id="Node000001" title="Information about a function / FB parameter." alt="" coords="5,233,136,379"/>
+<area shape="rect" id="Node000002" href="$struct_type_ref.html" title="Reference to a data type (base type, array, pointer, etc.)" alt="" coords="22,5,119,171"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="73,171,73,217,68,217,68,171"/>
+</map>

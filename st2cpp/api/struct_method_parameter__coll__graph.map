@@ -1,0 +1,5 @@
+<map id="MethodParameter" name="MethodParameter">
+<area shape="rect" id="Node000001" title="Parameter declaration inside a method (INPUT, OUTPUT, IN_OUT)" alt="" coords="5,233,136,339"/>
+<area shape="rect" id="Node000002" href="$struct_type_ref.html" title="Reference to a data type (base type, array, pointer, etc.)" alt="" coords="22,5,119,171"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="73,171,73,217,68,217,68,171"/>
+</map>

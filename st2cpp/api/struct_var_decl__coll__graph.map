@@ -1,0 +1,5 @@
+<map id="VarDecl" name="VarDecl">
+<area shape="rect" id="Node000001" title="Declaration of a variable inside a VAR section." alt="" coords="5,233,107,399"/>
+<area shape="rect" id="Node000002" href="$struct_type_ref.html" title="Reference to a data type (base type, array, pointer, etc.)" alt="" coords="7,5,105,171"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="59,171,59,217,53,217,53,171"/>
+</map>
