@@ -28,6 +28,7 @@
             color: var(--text);
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             line-height: 1.7;
+            scroll-behavior: smooth;
         }
 
         /* ── Top bar ── */
@@ -39,7 +40,7 @@
             border-bottom: 1px solid rgba(255,255,255,.05);
             display: flex; align-items: center;
             padding: 0 24px; gap: 24px;
-            z-index: 100;
+            z-index: 1000;
         }
 
         .topbar-logo { height: 28px; }
@@ -53,6 +54,7 @@
             font-size: .9rem; font-weight: 700;
             color: var(--cyan);
             text-decoration: none;
+            white-space: nowrap;
         }
 
         .topbar-version {
@@ -63,8 +65,10 @@
             color: var(--cyan);
             border: 1px solid rgba(0,180,216,.2);
             font-weight: 600;
+            white-space: nowrap;
         }
 
+        /* ── Topbar links (desktop: inline row / mobile: dropdown panel) ── */
         .topbar-links {
             margin-left: auto;
             display: flex; gap: 20px; align-items: center;
@@ -90,6 +94,182 @@
             background: var(--lavender);
             color: var(--bg-main);
         }
+
+        /* ── "Docs" dropdown ── */
+        .nav-dropdown {
+            position: relative;
+        }
+
+        .nav-dropdown-toggle {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: none;
+            border: none;
+            font-family: inherit;
+            color: var(--text-muted);
+            font-size: .85rem;
+            font-weight: 400;
+            cursor: pointer;
+            padding: 0;
+            transition: color .2s ease;
+        }
+
+        .nav-dropdown-toggle:hover,
+        .nav-dropdown.dropdown-open .nav-dropdown-toggle {
+            color: var(--text);
+        }
+
+        .nav-dropdown-toggle .chevron {
+            width: 11px;
+            height: 11px;
+            transition: transform .2s ease;
+            flex-shrink: 0;
+        }
+
+        .nav-dropdown.dropdown-open .nav-dropdown-toggle .chevron {
+            transform: rotate(180deg);
+        }
+
+        .nav-dropdown-menu {
+            position: absolute;
+            top: calc(100% + 16px);
+            right: 0;
+            min-width: 220px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(-6px);
+            transition: opacity .18s ease, transform .18s ease;
+            box-shadow: 0 12px 32px rgba(0,0,0,.45);
+            z-index: 1001;
+        }
+
+        .nav-dropdown.dropdown-open .nav-dropdown-menu {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateY(0);
+        }
+
+        .nav-dropdown-menu a {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            padding: 10px 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text-muted);
+        }
+
+        .nav-dropdown-menu a strong {
+            font-size: .86rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .nav-dropdown-menu a span {
+            font-size: .75rem;
+            color: var(--text-muted);
+        }
+
+        .nav-dropdown-menu a:hover {
+            background: rgba(255,255,255,.04);
+        }
+
+        .nav-dropdown-menu a:hover strong {
+            color: var(--cyan);
+        }
+
+        .nav-dropdown-menu a.current strong::after {
+            content: 'Current';
+            margin-left: 8px;
+            font-size: .65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .5px;
+            color: var(--green);
+            background: rgba(52,211,153,.1);
+            border: 1px solid rgba(52,211,153,.25);
+            padding: 2px 6px;
+            border-radius: 8px;
+            vertical-align: middle;
+        }
+
+        .nav-dropdown-soon {
+            padding: 10px 12px 6px;
+            font-size: .74rem;
+            color: #4b5563;
+            font-style: italic;
+        }
+
+        /* ── Mobile-only action buttons (hidden on desktop) ── */
+        .topbar-actions {
+            display: none;
+            margin-left: auto;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toc-toggle,
+        .nav-toggle {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255,255,255,.04);
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            font-family: inherit;
+            font-size: .78rem;
+            font-weight: 600;
+            padding: 7px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .toc-toggle:hover, .toc-toggle.active,
+        .nav-toggle:hover, .nav-toggle.active {
+            color: var(--text);
+            border-color: var(--cyan);
+        }
+
+        .toc-toggle .chevron {
+            width: 10px; height: 10px;
+            transition: transform .2s ease;
+        }
+
+        .toc-toggle.active .chevron {
+            transform: rotate(180deg);
+        }
+
+        /* Hamburger icon */
+        .nav-toggle {
+            flex-direction: column;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            padding: 0;
+            gap: 4px;
+        }
+
+        .nav-toggle-bar {
+            display: block;
+            width: 16px;
+            height: 2px;
+            background: var(--text-muted);
+            border-radius: 2px;
+            transition: transform .25s ease, opacity .25s ease, background .2s ease;
+        }
+
+        .nav-toggle.active .nav-toggle-bar { background: var(--text); }
+        .nav-toggle.active .nav-toggle-bar:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+        .nav-toggle.active .nav-toggle-bar:nth-child(2) { opacity: 0; }
+        .nav-toggle.active .nav-toggle-bar:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 
         /* ── Layout ── */
         .layout {
@@ -292,11 +472,112 @@
             margin-top: 1px;
         }
 
-        /* ── Responsive ── */
         @media (max-width: 768px) {
-            .sidebar { display: none; }
+            .topbar { padding: 0 16px; gap: 12px; }
+            .topbar-sep { display: none; }
+
             .content { padding: 32px 24px 80px; }
             .feature-list { grid-template-columns: 1fr; }
+
+            /* Show the mobile action buttons (Contents + hamburger) */
+            .topbar-actions { display: flex; }
+
+            /* ── "On this page" sidebar becomes a collapsible panel ── */
+            .sidebar {
+                display: block;
+                position: fixed;
+                top: var(--header-h);
+                left: 0;
+                right: 0;
+                width: auto;
+                height: auto;
+                max-height: 0;
+                overflow-y: hidden;
+                border-right: none;
+                border-bottom: 1px solid var(--border);
+                background: var(--bg-sidebar);
+                transition: max-height .3s ease;
+                z-index: 999;
+                padding: 0;
+            }
+
+            .sidebar.toc-open {
+                max-height: 70vh;
+                overflow-y: auto;
+                padding: 16px 0 24px;
+            }
+
+            /* ── Topbar links become a dropdown panel ── */
+            .topbar-links {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                margin-left: 0;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                background: rgba(3,7,18,.97);
+                backdrop-filter: blur(12px);
+                border-bottom: 1px solid var(--border);
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height .3s ease;
+            }
+
+            .topbar-links.nav-open {
+                max-height: 70vh;
+                overflow-y: auto;
+            }
+
+            .topbar-links > a,
+            .topbar-links > .nav-dropdown > .nav-dropdown-toggle {
+                width: 100%;
+                padding: 14px 24px;
+                font-size: .95rem;
+                border-bottom: 1px solid rgba(255,255,255,.04);
+                justify-content: space-between;
+            }
+
+            .topbar-links > a.gh {
+                margin: 12px 24px 16px;
+                width: auto;
+                text-align: center;
+                justify-content: center;
+                border-bottom: none;
+            }
+
+            /* Docs dropdown becomes an inline accordion on mobile */
+            .nav-dropdown { width: 100%; }
+
+            .nav-dropdown-menu {
+                position: static;
+                opacity: 1;
+                pointer-events: auto;
+                transform: none;
+                max-height: 0;
+                overflow: hidden;
+                border: none;
+                border-radius: 0;
+                padding: 0;
+                background: rgba(255,255,255,.02);
+                box-shadow: none;
+                transition: max-height .25s ease;
+            }
+
+            .nav-dropdown.dropdown-open .nav-dropdown-menu {
+                max-height: 220px;
+                padding: 4px 0 8px 24px;
+            }
+
+            .nav-dropdown-menu a, .nav-dropdown-soon {
+                padding: 10px 24px 10px 0;
+                border-bottom: none;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .topbar-version { display: none; }
         }
     </style>
 </head>
@@ -310,18 +591,51 @@
     <div class="topbar-sep"></div>
     <a href="index.html" class="topbar-product">st2cpp</a>
     <span class="topbar-version">v0.1.2</span>
-    <nav class="topbar-links">
+
+    <!-- Mobile-only buttons -->
+    <div class="topbar-actions">
+        <button class="toc-toggle" aria-label="Toggle table of contents" aria-expanded="false">
+            <span>Contents</span>
+            <svg class="chevron" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+
+    <nav class="topbar-links" id="topbar-links">
         <a href="../index.html">Home</a>
         <a href="../architecture.html">Architecture</a>
-        <a href="api/" >API Reference</a>
+
+        <div class="nav-dropdown">
+            <button class="nav-dropdown-toggle" aria-expanded="false">
+                Docs
+                <svg class="chevron" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <div class="nav-dropdown-menu">
+                <a href="index.html" class="current">
+                    <strong>st2cpp</strong>
+                    <span>ST → C++ transpiler docs</span>
+                </a>
+                <span class="nav-dropdown-soon">More products coming soon</span>
+            </div>
+        </div>
+
+        <a href="api/">API Reference</a>
         <a href="https://github.com/undoRT/st2cpp" target="_blank" class="gh">GitHub</a>
     </nav>
 </header>
 
 <div class="layout">
 
-    <!-- Sidebar -->
-    <nav class="sidebar">
+    <!-- Sidebar / On-this-page TOC -->
+    <nav class="sidebar" id="sidebar">
         <div class="sidebar-section-title">Getting Started</div>
         <a href="#overview" class="active">Overview</a>
         <a href="#installation">Installation</a>
@@ -684,21 +998,101 @@ void MAIN::run() {
 </div>
 
 <script>
-    // Highlight active sidebar link on scroll
-    const headings = document.querySelectorAll('.content h2[id], .content h3[id]');
-    const links = document.querySelectorAll('.sidebar a[href^="#"]');
+    (function () {
+        var navToggle   = document.querySelector('.nav-toggle');
+        var topbarLinks = document.getElementById('topbar-links');
+        var docsDrop    = document.querySelector('.nav-dropdown');
+        var docsBtn     = document.querySelector('.nav-dropdown-toggle');
+        var tocToggle   = document.querySelector('.toc-toggle');
+        var sidebar     = document.getElementById('sidebar');
 
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                links.forEach(l => l.classList.remove('active'));
-                const active = document.querySelector(`.sidebar a[href="#${entry.target.id}"]`);
-                if (active) active.classList.add('active');
+        // Hamburger: open/close the topbar links panel
+        navToggle.addEventListener('click', function () {
+            var isOpen = topbarLinks.classList.toggle('nav-open');
+            navToggle.classList.toggle('active', isOpen);
+            navToggle.setAttribute('aria-expanded', isOpen);
+            if (!isOpen) {
+                docsDrop.classList.remove('dropdown-open');
+                docsBtn.setAttribute('aria-expanded', 'false');
+            }
+            // Close TOC if open
+            sidebar.classList.remove('toc-open');
+            tocToggle.classList.remove('active');
+            tocToggle.setAttribute('aria-expanded', 'false');
+        });
+
+        // "Docs" toggle: opens dropdown (desktop) / accordion (mobile)
+        docsBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            var isOpen = docsDrop.classList.toggle('dropdown-open');
+            docsBtn.setAttribute('aria-expanded', isOpen);
+        });
+
+        // "Contents" toggle: open/close the on-this-page TOC (mobile)
+        tocToggle.addEventListener('click', function () {
+            var isOpen = sidebar.classList.toggle('toc-open');
+            tocToggle.classList.toggle('active', isOpen);
+            tocToggle.setAttribute('aria-expanded', isOpen);
+            // Close nav links panel if open
+            topbarLinks.classList.remove('nav-open');
+            navToggle.classList.remove('active');
+            navToggle.setAttribute('aria-expanded', 'false');
+            docsDrop.classList.remove('dropdown-open');
+        });
+
+        // Click outside closes all panels
+        document.addEventListener('click', function (e) {
+            if (!docsDrop.contains(e.target)) {
+                docsDrop.classList.remove('dropdown-open');
+                docsBtn.setAttribute('aria-expanded', 'false');
+            }
+            if (!topbarLinks.contains(e.target) && !navToggle.contains(e.target)) {
+                topbarLinks.classList.remove('nav-open');
+                navToggle.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
+            }
+            if (!sidebar.contains(e.target) && !tocToggle.contains(e.target)) {
+                sidebar.classList.remove('toc-open');
+                tocToggle.classList.remove('active');
+                tocToggle.setAttribute('aria-expanded', 'false');
             }
         });
-    }, { rootMargin: '-20% 0px -70% 0px' });
 
-    headings.forEach(h => observer.observe(h));
+        // Close topbar panel after tapping a normal link
+        topbarLinks.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                topbarLinks.classList.remove('nav-open');
+                navToggle.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
+                docsDrop.classList.remove('dropdown-open');
+            });
+        });
+
+        // Close TOC panel after tapping a section link
+        sidebar.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                sidebar.classList.remove('toc-open');
+                tocToggle.classList.remove('active');
+                tocToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Highlight active sidebar link on scroll
+        var headings = document.querySelectorAll('.content h2[id], .content h3[id]');
+        var sideLinks = document.querySelectorAll('.sidebar a[href^="#"]');
+
+        var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    sideLinks.forEach(function (l) { l.classList.remove('active'); });
+                    var active = document.querySelector('.sidebar a[href="#' + entry.target.id + '"]');
+                    if (active) active.classList.add('active');
+                }
+            });
+        }, { rootMargin: '-20% 0px -70% 0px' });
+
+        headings.forEach(function (h) { observer.observe(h); });
+    })();
 </script>
 
 </body>

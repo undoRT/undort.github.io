@@ -23,6 +23,7 @@
             padding: 0;
             box-sizing: border-box;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            scroll-behavior: smooth;
         }
 
         body {
@@ -51,13 +52,14 @@
             width: auto;
         }
 
-        header nav {
+        /* ── Main nav (desktop: inline row / mobile: dropdown panel) ── */
+        .main-nav {
             display: flex;
             align-items: center;
             gap: 30px;
         }
 
-        header nav a {
+        .main-nav a {
             color: var(--text-muted);
             text-decoration: none;
             font-size: 0.9rem;
@@ -65,7 +67,153 @@
             transition: color 0.2s ease;
         }
 
-        header nav a:hover { color: var(--text-primary); }
+        .main-nav a:hover { color: var(--text-primary); }
+
+        .main-nav a.github-link {
+            color: var(--lavender);
+            border: 1px solid rgba(176, 168, 204, 0.3);
+            padding: 6px 16px;
+            border-radius: 20px;
+            background-color: rgba(176, 168, 204, 0.03);
+        }
+
+        .main-nav a.github-link:hover {
+            background-color: var(--lavender);
+            color: var(--bg-main);
+        }
+
+        /* ── "Docs" dropdown ── */
+        .nav-dropdown {
+            position: relative;
+        }
+
+        .nav-dropdown-toggle {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: none;
+            border: none;
+            font-family: inherit;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            padding: 0;
+            transition: color 0.2s ease;
+        }
+
+        .nav-dropdown-toggle:hover,
+        .nav-dropdown.dropdown-open .nav-dropdown-toggle {
+            color: var(--text-primary);
+        }
+
+        .nav-dropdown-toggle .chevron {
+            width: 11px;
+            height: 11px;
+            transition: transform 0.2s ease;
+            flex-shrink: 0;
+        }
+
+        .nav-dropdown.dropdown-open .nav-dropdown-toggle .chevron {
+            transform: rotate(180deg);
+        }
+
+        .nav-dropdown-menu {
+            position: absolute;
+            top: calc(100% + 16px);
+            right: 0;
+            min-width: 220px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-glow);
+            border-radius: 12px;
+            padding: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(-6px);
+            transition: opacity 0.18s ease, transform 0.18s ease;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+            z-index: 1001;
+        }
+
+        .nav-dropdown.dropdown-open .nav-dropdown-menu {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateY(0);
+        }
+
+        .nav-dropdown-menu a {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            padding: 10px 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text-muted);
+        }
+
+        .nav-dropdown-menu a strong {
+            font-size: 0.86rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .nav-dropdown-menu a span {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .nav-dropdown-menu a:hover {
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .nav-dropdown-menu a:hover strong {
+            color: var(--cyan-primary);
+        }
+
+        .nav-dropdown-soon {
+            padding: 10px 12px 6px;
+            font-size: 0.74rem;
+            color: #4b5563;
+            font-style: italic;
+        }
+
+        /* ── Hamburger toggle (hidden on desktop) ── */
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            width: 38px;
+            height: 38px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            flex-shrink: 0;
+        }
+
+        .nav-toggle-bar {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: var(--text-primary);
+            border-radius: 2px;
+            transition: transform 0.25s ease, opacity 0.25s ease;
+        }
+
+        .nav-toggle.active .nav-toggle-bar:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+        .nav-toggle.active .nav-toggle-bar:nth-child(2) {
+            opacity: 0;
+        }
+        .nav-toggle.active .nav-toggle-bar:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
 
         main {
             padding-top: 140px;
@@ -184,6 +332,81 @@
             font-size: 0.85rem;
             margin-top: 100px;
         }
+
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: flex;
+            }
+
+            .main-nav {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                background: rgba(3, 7, 18, 0.97);
+                backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+            }
+
+            .main-nav.nav-open {
+                max-height: 70vh;
+                overflow-y: auto;
+            }
+
+            .main-nav > a,
+            .main-nav > .nav-dropdown > .nav-dropdown-toggle {
+                width: 100%;
+                padding: 16px 5%;
+                font-size: 1rem;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+                justify-content: space-between;
+            }
+
+            .main-nav > a.github-link {
+                margin: 14px 5% 16px;
+                width: auto;
+                text-align: center;
+                justify-content: center;
+                border-bottom: none;
+            }
+
+            .nav-dropdown {
+                width: 100%;
+            }
+
+            .nav-dropdown-menu {
+                position: static;
+                opacity: 1;
+                pointer-events: auto;
+                transform: none;
+                max-height: 0;
+                overflow: hidden;
+                border: none;
+                border-radius: 0;
+                padding: 0;
+                background: rgba(255, 255, 255, 0.02);
+                box-shadow: none;
+                transition: max-height 0.25s ease;
+            }
+
+            .nav-dropdown.dropdown-open .nav-dropdown-menu {
+                max-height: 220px;
+                padding: 4px 0 8px 5%;
+            }
+
+            .nav-dropdown-menu a,
+            .nav-dropdown-soon {
+                padding: 10px 5% 10px 0;
+                border-bottom: none;
+            }
+        }
     </style>
 </head>
 <body>
@@ -192,10 +415,36 @@
         <div class="logo-container">
             <a href="index.html"><img src="assets/undoRT_logo.png" alt="undoRT Logo" class="nav-logo"></a>
         </div>
-        <nav>
+
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+
+        <nav class="main-nav" id="main-nav">
             <a href="index.html">Home</a>
+            <a href="index.html#ecosystem">Ecosystem</a>
             <a href="architecture.html" style="color: var(--cyan-primary);">Architecture</a>
-            <a href="https://github.com/undoRT" target="_blank">GitHub Org</a>
+            <a href="index.html#roadmap">Roadmap</a>
+
+            <div class="nav-dropdown">
+                <button class="nav-dropdown-toggle" aria-expanded="false">
+                    Docs
+                    <svg class="chevron" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="nav-dropdown-menu">
+                    <a href="st2cpp/">
+                        <strong>st2cpp</strong>
+                        <span>ST → C++ transpiler docs</span>
+                    </a>
+                    <span class="nav-dropdown-soon">More products coming soon</span>
+                </div>
+            </div>
+
+            <a href="https://github.com/undoRT" target="_blank" class="github-link">GitHub Org</a>
         </nav>
     </header>
 
@@ -270,6 +519,56 @@
     <footer>
         <p>&copy; 2026 undoRT Open Source Project. Built for the future of industrial automation.</p>
     </footer>
+
+    <script>
+        (function () {
+            var navToggle = document.querySelector('.nav-toggle');
+            var mainNav   = document.querySelector('.main-nav');
+            var docsDrop  = document.querySelector('.nav-dropdown');
+            var docsBtn   = document.querySelector('.nav-dropdown-toggle');
+
+            // Hamburger: open/close the mobile nav panel
+            navToggle.addEventListener('click', function () {
+                var isOpen = mainNav.classList.toggle('nav-open');
+                navToggle.classList.toggle('active', isOpen);
+                navToggle.setAttribute('aria-expanded', isOpen);
+                if (!isOpen) {
+                    docsDrop.classList.remove('dropdown-open');
+                    docsBtn.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            // "Docs" toggle: opens dropdown (desktop) / accordion (mobile)
+            docsBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                var isOpen = docsDrop.classList.toggle('dropdown-open');
+                docsBtn.setAttribute('aria-expanded', isOpen);
+            });
+
+            // Click outside closes both menus
+            document.addEventListener('click', function (e) {
+                if (!docsDrop.contains(e.target)) {
+                    docsDrop.classList.remove('dropdown-open');
+                    docsBtn.setAttribute('aria-expanded', 'false');
+                }
+                if (!mainNav.contains(e.target) && !navToggle.contains(e.target)) {
+                    mainNav.classList.remove('nav-open');
+                    navToggle.classList.remove('active');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            // Close the mobile panel after tapping a normal link
+            mainNav.querySelectorAll('a').forEach(function (link) {
+                link.addEventListener('click', function () {
+                    mainNav.classList.remove('nav-open');
+                    navToggle.classList.remove('active');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                    docsDrop.classList.remove('dropdown-open');
+                });
+            });
+        })();
+    </script>
 
 </body>
 </html>
