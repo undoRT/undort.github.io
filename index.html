@@ -488,6 +488,17 @@
         }
         .status-pill.in-development::before {
             background: #fbbf24;
+            box-shadow: 0 0 6px #fbbf24;
+        }
+
+        .status-pill.next-release {
+            background: rgba(174, 0, 255, 0.1);
+            color: #f975e9;
+            border: 1px solid rgba(243, 9, 255, 0.2);
+        }
+        .status-pill.next-release::before {
+            background: #f975e9;
+            box-shadow: 0 0 6px #f975e9;
         }
 
         /* ── Roadmap section ── */
@@ -528,6 +539,10 @@
             border-color: rgba(52, 211, 153, 0.3);
         }
 
+        .roadmap-item.next-release  {
+            border-color: rgba(243, 9, 255, 0.2);
+        }
+
         .roadmap-step {
             font-size: 0.72rem;
             font-weight: 700;
@@ -540,6 +555,10 @@
 
         .roadmap-item.active .roadmap-step {
             color: #34d399;
+        }
+
+        .roadmap-item.next-release .roadmap-step {
+            color: #f975e9;
         }
 
         .roadmap-body h3 {
@@ -674,6 +693,10 @@
                         <strong>st2cpp</strong>
                         <span>ST → C++ transpiler docs</span>
                     </a>
+                    <a href="undoPLC/">
+                        <strong>undoPLC</strong>
+                        <span>Multi-threading PLC infrastructure</span>
+                    </a>
                     <span class="nav-dropdown-soon">More products coming soon</span>
                 </div>
             </div>
@@ -689,7 +712,7 @@
             <p class="tagline">An open-source stack for industrial automation where C++ performance, IEC 61131-3 compatibility, and Linux real-time scheduling converge.</p>
 
             <div class="dev-notice">
-                <span>undoRT is in active early development. Currently, <a href="https://github.com/undoRT/st2cpp">st2cpp</a> is the only released component. The rest of the ecosystem is being built in the open — contributions welcome.</span>
+                <span>undoRT is in active early development. Currently, <a href="st2cpp/">st2cpp</a> is the only released component. The rest of the ecosystem is being built in the open — contributions welcome.</span>
             </div>
 
             <div class="hero-buttons">
@@ -715,13 +738,13 @@
                 <span class="status-pill available">Released · v0.1.2</span>
             </a>
 
-            <a href="https://github.com/undoRT/undoPLC" target="_blank" class="feature-card planned">
+            <a href="undoPLC/" class="feature-card planned">
                 <div class="product-logo-container">
                     <img src="assets/undoPLC_logo.png" alt="undoPLC Logo" class="product-card-logo">
                 </div>
                 <span class="product-badge runtime">Runtime</span>
                 <p>A multi-threaded SoftPLC runtime that executes C++ binaries compiled by st2cpp. Designed from scratch to run natively on undoOS with no intermediate VM.</p>
-                <span class="status-pill in-development">In Development</span>
+                <span class="status-pill next-release">Next Release</span>
             </a>
 
             <a href="https://github.com/undoRT/undoOS" target="_blank" class="feature-card planned">
@@ -767,8 +790,15 @@
                     <p>ST → C++17 transpiler with full POU support, modular project generation, and a header-only runtime. Public release with GPL-3.0 license.</p>
                 </div>
             </div>
-            <div class="roadmap-item">
+            <div class="roadmap-item next-release">
                 <span class="roadmap-step">Next</span>
+                <div class="roadmap-body">
+                    <h3>undoPLC — Multi-threading PLC infrastructure</h3>
+                    <p>Open source multi-threaded PLC infrastructure designed for the undoRT ecosystem.</p>
+                </div>
+            </div>
+            <div class="roadmap-item">
+                <span class="roadmap-step">Later</span>
                 <div class="roadmap-body">
                     <h3>st2cpp v0.2 — Semantic analysis + standard library</h3>
                     <p>Type checking, better error messages with source locations, and support for IEC 61131-3 standard functions (TON, CTU, ABS, MAX…).</p>
