@@ -20,6 +20,8 @@
             --text:           #f3f4f6;
             --text-muted:     #9ca3af;
             --green:          #34d399;
+            --yellow:         #fbbf24;
+            --red:            #f87171;
             --sidebar-width:  260px;
             --header-h:       56px;
         }
@@ -34,7 +36,6 @@
             scroll-behavior: smooth;
         }
 
-        /* ── Top bar ── */
         .topbar {
             position: fixed; top: 0; left: 0; right: 0;
             height: var(--header-h);
@@ -71,7 +72,6 @@
             white-space: nowrap;
         }
 
-        /* ── Topbar links (desktop: inline row / mobile: dropdown panel) ── */
         .topbar-links {
             margin-left: auto;
             display: flex; gap: 20px; align-items: center;
@@ -98,7 +98,6 @@
             color: var(--bg-main);
         }
 
-        /* ── "Docs" dropdown ── */
         .nav-dropdown {
             position: relative;
         }
@@ -211,7 +210,6 @@
             font-style: italic;
         }
 
-        /* ── Mobile-only action buttons (hidden on desktop) ── */
         .topbar-actions {
             display: none;
             margin-left: auto;
@@ -250,7 +248,6 @@
             transform: rotate(180deg);
         }
 
-        /* Hamburger icon */
         .nav-toggle {
             flex-direction: column;
             justify-content: center;
@@ -274,14 +271,12 @@
         .nav-toggle.active .nav-toggle-bar:nth-child(2) { opacity: 0; }
         .nav-toggle.active .nav-toggle-bar:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 
-        /* ── Layout ── */
         .layout {
             display: flex;
             padding-top: var(--header-h);
             min-height: 100vh;
         }
 
-        /* ── Sidebar ── */
         .sidebar {
             width: var(--sidebar-width);
             flex-shrink: 0;
@@ -319,7 +314,6 @@
         .sidebar a:hover { color: var(--text); background: rgba(255,255,255,.03); }
         .sidebar a.active { color: var(--cyan); border-left-color: var(--cyan); background: var(--cyan-dim); }
 
-        /* ── Main content ── */
         .content {
             flex: 1;
             max-width: 860px;
@@ -327,7 +321,6 @@
             min-width: 0;
         }
 
-        /* ── Typography ── */
         .content h1 {
             font-size: 2.2rem; font-weight: 800;
             margin-bottom: 12px; color: #fff;
@@ -355,7 +348,6 @@
         .content a { color: var(--cyan); text-decoration: none; }
         .content a:hover { text-decoration: underline; }
 
-        /* ── Lead / intro ── */
         .lead {
             font-size: 1.1rem;
             color: var(--text-muted);
@@ -364,7 +356,6 @@
             margin-bottom: 36px;
         }
 
-        /* ── Code ── */
         pre {
             background: #060e1e;
             border: 1px solid var(--border);
@@ -379,6 +370,7 @@
         code {
             font-family: "JetBrains Mono", "Fira Code", "Cascadia Code", monospace;
             font-size: .9em;
+            color: #d4d4d4;
         }
 
         p code, li code {
@@ -389,7 +381,6 @@
             color: var(--cyan);
         }
 
-        /* ── Tables ── */
         table {
             width: 100%;
             border-collapse: collapse;
@@ -416,7 +407,6 @@
         td:first-child { color: var(--text); font-weight: 500; }
         tr:last-child td { border-bottom: none; }
 
-        /* ── Callout boxes ── */
         .callout {
             padding: 14px 18px;
             border-radius: 8px;
@@ -436,7 +426,12 @@
             color: #fcd34d;
         }
 
-        /* ── Status pill ── */
+        .callout.success {
+            background: rgba(52,211,153,.07);
+            border: 1px solid rgba(52,211,153,.2);
+            color: var(--green);
+        }
+
         .status-pill {
             display: inline-flex; align-items: center; gap: 6px;
             font-size: .72rem; font-weight: 600;
@@ -453,24 +448,6 @@
             box-shadow: 0 0 5px var(--green);
         }
 
-        .status-pill.next-release{
-            display: inline-flex; align-items: center; gap: 6px;
-            font-size: .72rem; font-weight: 600;
-            padding: 3px 10px; border-radius: 20px;
-            background: rgba(174, 0, 255, 0.1);
-            border: 1px solid rgba(243, 9, 255, 0.2);
-            color: #f975e9;
-            margin-left: 10px; vertical-align: middle;
-        }
-
-        .status-pill.next-release::before {
-            content: ''; width: 6px; height: 6px;
-            border-radius: 50%; background: rgba(174, 0, 255, 0.1);
-            color: #f975e9;
-            box-shadow: 0 0 5px #f975e9;
-        }
-
-        /* ── Feature list ── */
         .feature-list {
             list-style: none;
             display: grid;
@@ -499,10 +476,8 @@
             .content { padding: 32px 24px 80px; }
             .feature-list { grid-template-columns: 1fr; }
 
-            /* Show the mobile action buttons (Contents + hamburger) */
             .topbar-actions { display: flex; }
 
-            /* ── "On this page" sidebar becomes a collapsible panel ── */
             .sidebar {
                 display: block;
                 position: fixed;
@@ -527,7 +502,6 @@
                 padding: 16px 0 24px;
             }
 
-            /* ── Topbar links become a dropdown panel ── */
             .topbar-links {
                 position: absolute;
                 top: 100%;
@@ -567,7 +541,6 @@
                 border-bottom: none;
             }
 
-            /* Docs dropdown becomes an inline accordion on mobile */
             .nav-dropdown { width: 100%; }
 
             .nav-dropdown-menu {
@@ -603,7 +576,6 @@
 </head>
 <body>
 
-<!-- Top bar -->
 <header class="topbar">
     <a href="index.html">
         <img src="../assets/undoPLC_logo.png" alt="undoPLC" class="topbar-logo">
@@ -612,7 +584,6 @@
     <a href="index.html" class="topbar-product">undoPLC</a>
     <span class="topbar-version">v0.1.0</span>
 
-    <!-- Mobile-only buttons -->
     <div class="topbar-actions">
         <button class="toc-toggle" aria-label="Toggle table of contents" aria-expanded="false">
             <span>Contents</span>
@@ -658,31 +629,317 @@
 
 <div class="layout">
 
-    <!-- Sidebar / On-this-page TOC -->
     <nav class="sidebar" id="sidebar">
-        <div class="sidebar-section-title">Getting Started</div>
-        <a href="#overview" class="active">Overview</a>
-        <a href="api/">API Reference (Doxygen) ↗</a>
+        <div class="sidebar-section-title">Documentation</div>
+        <a href="#overview">Overview</a>
+        <a href="#features">Features</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#cycle-time">Cycle Time Management</a>
+        <a href="#test-application">Test Application</a>
+        <a href="#api">API Reference</a>
     </nav>
 
-    <!-- Content -->
     <main class="content">
 
-        <h1>undoPLC <span class="status-pill next-release">Next Release</span></h1>
+        <h1>undoPLC <span class="status-pill">Stable</span></h1>
         <p class="lead">
             Open source multi-threaded PLC infrastructure designed for the <a href="../index.html">undoRT ecosystem</a>.
+            Provides deterministic Master/Worker synchronization with real-time guarantees.
         </p>
 
-        <!-- Overview -->
         <h2 id="overview">Overview</h2>
         <p>
-            Coming soon...
+            <strong>undoPLC</strong> is a C++20 framework that implements a deterministic fork-join execution model
+            for real-time control applications. It provides:
         </p>
-        
+
+        <ul class="feature-list">
+            <li>Lock-free deferred logging (<code>undoLog</code>)</li>
+            <li>CPU isolation and frequency management (<code>undoSystem</code>)</li>
+            <li>Priority inheritance mutexes (<code>undoMutex</code>)</li>
+            <li>Master/Worker task synchronization (<code>undoTasks</code>)</li>
+            <li>Aligned cycle time management</li>
+            <li>SCHED_FIFO real-time scheduling</li>
+        </ul>
+
+        <div class="callout info">
+            <strong>💡 Real-time ready:</strong> Designed for PREEMPT_RT kernels with isolated CPU cores.
+            Requires at least 2 isolated cores (1 for Master, 1+ for Workers).
+        </div>
+
+        <h2 id="features">Key Features</h2>
+
+        <h3>1. Master/Worker Fork-Join Model</h3>
+        <p>
+            The <code>UndoMasterTaskBase</code> orchestrates the execution cycle:
+        </p>
+        <ul>
+            <li><strong>Fork phase:</strong> Master wakes all workers simultaneously</li>
+            <li><strong>Execution phase:</strong> Workers run user logic in parallel</li>
+            <li><strong>Join phase:</strong> Master waits for all workers to complete</li>
+            <li><strong>Watchdog:</strong> Detects cycle overruns and triggers safe stop</li>
+        </ul>
+
+        <h3>2. Cycle Time Management</h3>
+        <p>
+            The system maintains an <strong>aligned absolute cycle time</strong> that is:
+        </p>
+        <ul>
+            <li>Independent of system jitter</li>
+            <li>Incremented deterministically at each cycle</li>
+            <li>Shared consistently between Master and all Workers</li>
+            <li>Available in ns, µs, and ms units</li>
+        </ul>
+
+        <pre><code>// Master provides aligned cycle time to workers
+uint64_t cycleTimeMs = master.getCurrentCycleTimeMs();
+uint64_t cycleTimeNs = master.getCurrentCycleTimeNs();</code></pre>
+
+        <h3>3. Startup Delay</h3>
+        <p>
+            The Master task starts with a <strong>5-cycle delay</strong> to ensure:
+        </p>
+        <ul>
+            <li>All Workers are fully initialized</li>
+            <li>The system has time to stabilize</li>
+            <li>No race conditions at startup</li>
+        </ul>
+
+        <h2 id="architecture">Architecture</h2>
+
+        <h3>Core Components</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Component</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>UndoMasterTaskBase</code></td>
+                    <td>Orchestrates the execution cycle, reads/writes fieldbus I/O</td>
+                </tr>
+                <tr>
+                    <td><code>UndoWorkerTaskBase</code></td>
+                    <td>Executes user PRG logic in parallel on isolated cores</td>
+                </tr>
+                <tr>
+                    <td><code>UndoLog</code></td>
+                    <td>Lock-free deferred logging with thread-local queues</td>
+                </tr>
+                <tr>
+                    <td><code>UndoSys</code></td>
+                    <td>CPU isolation, frequency management, TSC utilities</td>
+                </tr>
+                <tr>
+                    <td><code>UndoMutex</code></td>
+                    <td>Pthread mutex with <code>PTHREAD_PRIO_INHERIT</code></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Execution Flow</h3>
+        <pre><code>// 1. Master thread runs with SCHED_FIFO
+while (running) {
+    // Wait for next aligned cycle
+    clock_nanosleep(...);
+
+    // Update absolute cycle time
+    _currentCycleTimeNs += _cycleTimeNs;
+
+    // Read fieldbus inputs
+    readInputBus();
+
+    // Fork: wake all workers
+    workerCv.notify_all();
+
+    // Join: wait for workers with timeout
+    masterCv.wait_for(...);
+
+    // Write fieldbus outputs
+    writeOutputBus();
+}
+
+// 2. Worker threads run with SCHED_FIFO (lower priority)
+while (running) {
+    // Wait for master signal
+    workerCv.wait(...);
+
+    // Copy master's cycle time
+    _currentCycleTimeNs = master.getCurrentCycleTimeNs();
+
+    // Execute user logic
+    runWork();
+
+    // Notify master of completion
+    activeWorkers.fetch_sub(1);
+}</code></pre>
+
+        <h2 id="cycle-time">Cycle Time Management</h2>
+
+        <p>
+            The <strong>aligned cycle time</strong> is a key feature that provides deterministic timing
+            independent of system jitter. Here's how it works:
+        </p>
+
+        <h3>Initialization</h3>
+        <pre><code>// In UndoMasterTaskBase::run()
+struct timespec baseTime;
+clock_gettime(CLOCK_MONOTONIC, &baseTime);
+
+uint64_t baseNs = baseTime.tv_sec * 1000000000ULL + baseTime.tv_nsec;
+
+// Align to next multiple of cycle time
+uint64_t alignNs = _cycleTimeNs - (baseNs % _cycleTimeNs);
+if (alignNs == _cycleTimeNs) alignNs = 0;
+baseNs += alignNs;
+
+// Add 5-cycle startup delay for safety
+baseNs += (_cycleTimeNs * _STARTUP_DELAY_CYCLES);
+
+_currentCycleTimeNs.store(baseNs, std::memory_order_release);</code></pre>
+
+        <h3>Cycle Update</h3>
+        <pre><code>// Each cycle increment is deterministic
+uint64_t currentAbsoluteNs = _currentCycleTimeNs.load(std::memory_order_acquire) + _cycleTimeNs;
+_currentCycleTimeNs.store(currentAbsoluteNs, std::memory_order_release);</code></pre>
+
+        <h3>Worker Synchronization</h3>
+        <pre><code>// Worker copies master's cycle time
+_cycleTimeNs = _master->getCycleNs();
+_currentCycleTimeNs = _master->getCurrentCycleTimeNs();</code></pre>
+
+        <div class="callout success">
+            <strong>✓ Benefits:</strong> All workers see the <em>exact same</em> absolute timestamp for each cycle,
+            enabling precise coordination and logging.
+        </div>
+
+        <h2 id="test-application">Test Application</h2>
+
+        <p>
+            The <a href="https://github.com/undoRT/undoPLC/blob/main/main.cpp"><code>main.cpp</code></a>
+            demonstrates the complete infrastructure with a real-time test:
+        </p>
+
+        <h3>Demo Worker</h3>
+        <p>
+            Simulates a PRG block with deterministic busy-wait:
+        </p>
+        <pre><code>class DemoWorkerTask : public UndoWorkerTaskBase
+{
+   protected:
+      bool runWork() override
+      {
+         // Simulate fixed computational workload
+         UndoSys::getInstance().busyWait(_workNs);
+         ++_cycleCount;
+         return true;
+      }
+};</code></pre>
+
+        <h3>Demo Master</h3>
+        <p>
+            Drives the execution cycle and logs diagnostics every second:
+        </p>
+        <pre><code>class DemoMasterTask : public UndoMasterTaskBase
+{
+   protected:
+      void writeOutputBus() override
+      {
+         if (++_cycleCount % 1000 == 0) {
+            const DiagVars& d = getDiagVars();
+            UndoLog::getInstance().logRT(
+               LogDomain::PLC, LOG_INFO,
+               "cycle %llu (%lu mS)| exec[min=%u max=%u]us jitter[min=%u max=%u]us",
+               _cycleCount, getCurrentCycleTimeMs(),
+               d.execMin, d.execMax, d.jitterMin, d.jitterMax
+            );
+         }
+      }
+};</code></pre>
+
+        <h3>Running the Test</h3>
+        <pre><code># Build and run with PREEMPT_RT kernel
+$ make
+$ sudo ./undoPLC --log2console
+
+# Expected output:
+# [INFO] undoPLC: Starting with 5 cycles delay
+# [INFO] undoPLC: Master on core 4 | 2 worker(s) spawned
+# [INFO] undoPLC: cycle 1000 (1000 mS)| exec[min=98 max=102]us jitter[min=0 max=5]us</code></pre>
+
+        <div class="callout warn">
+            <strong>⚠️ Requirements:</strong>
+            <ul style="margin: 8px 0 0 20px; color: #fcd34d;">
+                <li>PREEMPT_RT kernel</li>
+                <li>At least 2 isolated CPU cores (<code>isolcpus=</code> in GRUB)</li>
+                <li>Root privileges for CPU frequency management</li>
+            </ul>
+        </div>
+
+        <h3>Configuration Example</h3>
+        <pre><code># GRUB configuration (/etc/default/grub)
+GRUB_CMDLINE_LINUX="... isolcpus=4,5,6,7 nohz_full=4,5,6,7 rcu_nocbs=4,5,6,7"
+
+# Update GRUB
+$ sudo update-grub
+
+# Reboot and verify
+$ cat /sys/devices/system/cpu/isolated
+4-7</code></pre>
+
+        <h2 id="api">API Reference</h2>
         <p>
             Full API documentation is generated with Doxygen:
-            <a href="api/"> Browse API Reference</a>
+            <a href="api/">Browse API Reference</a>
         </p>
+
+        <h3>Key Classes</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Class</th>
+                    <th>Key Methods</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>UndoMasterTaskBase</code></td>
+                    <td>
+                        <code>start()</code>, <code>stop()</code>, <code>getCurrentCycleTimeNs()</code>,
+                        <code>getCurrentCycleTimeMs()</code>, <code>registerWorker()</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>UndoWorkerTaskBase</code></td>
+                    <td>
+                        <code>start()</code>, <code>stop()</code>, <code>runWork()</code>,
+                        <code>getCurrentCycleTimeNs()</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>UndoLog</code></td>
+                    <td>
+                        <code>logRT()</code>, <code>registerThread()</code>, <code>init()</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>UndoSys</code></td>
+                    <td>
+                        <code>getIsolatedCpu()</code>, <code>getSharedCpu()</code>,
+                        <code>setCpuNominalFrequency()</code>, <code>tsc2Ns()</code>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="callout info">
+            <strong>📖 More documentation:</strong> Visit the
+            <a href="https://github.com/undoRT/undoPLC">GitHub repository</a>
+            for build instructions, examples, and contributing guidelines.
+        </div>
 
     </main>
 </div>
@@ -696,7 +953,6 @@
         var tocToggle   = document.querySelector('.toc-toggle');
         var sidebar     = document.getElementById('sidebar');
 
-        // Hamburger: open/close the topbar links panel
         navToggle.addEventListener('click', function () {
             var isOpen = topbarLinks.classList.toggle('nav-open');
             navToggle.classList.toggle('active', isOpen);
@@ -705,32 +961,27 @@
                 docsDrop.classList.remove('dropdown-open');
                 docsBtn.setAttribute('aria-expanded', 'false');
             }
-            // Close TOC if open
             sidebar.classList.remove('toc-open');
             tocToggle.classList.remove('active');
             tocToggle.setAttribute('aria-expanded', 'false');
         });
 
-        // "Docs" toggle: opens dropdown (desktop) / accordion (mobile)
         docsBtn.addEventListener('click', function (e) {
             e.preventDefault();
             var isOpen = docsDrop.classList.toggle('dropdown-open');
             docsBtn.setAttribute('aria-expanded', isOpen);
         });
 
-        // "Contents" toggle: open/close the on-this-page TOC (mobile)
         tocToggle.addEventListener('click', function () {
             var isOpen = sidebar.classList.toggle('toc-open');
             tocToggle.classList.toggle('active', isOpen);
             tocToggle.setAttribute('aria-expanded', isOpen);
-            // Close nav links panel if open
             topbarLinks.classList.remove('nav-open');
             navToggle.classList.remove('active');
             navToggle.setAttribute('aria-expanded', 'false');
             docsDrop.classList.remove('dropdown-open');
         });
 
-        // Click outside closes all panels
         document.addEventListener('click', function (e) {
             if (!docsDrop.contains(e.target)) {
                 docsDrop.classList.remove('dropdown-open');
@@ -748,7 +999,6 @@
             }
         });
 
-        // Close topbar panel after tapping a normal link
         topbarLinks.querySelectorAll('a').forEach(function (link) {
             link.addEventListener('click', function () {
                 topbarLinks.classList.remove('nav-open');
@@ -758,7 +1008,6 @@
             });
         });
 
-        // Close TOC panel after tapping a section link
         sidebar.querySelectorAll('a').forEach(function (link) {
             link.addEventListener('click', function () {
                 sidebar.classList.remove('toc-open');
@@ -767,7 +1016,6 @@
             });
         });
 
-        // Highlight active sidebar link on scroll
         var headings = document.querySelectorAll('.content h2[id], .content h3[id]');
         var sideLinks = document.querySelectorAll('.sidebar a[href^="#"]');
 
