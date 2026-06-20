@@ -1,0 +1,7 @@
+<map id="include/undoMutex.hpp" name="include/undoMutex.hpp">
+<area shape="rect" id="Node000001" title="C++ style wrapper to use pthread_mutext_t like std::mutex, to have PTHREAD_PRIO_INHERIT." alt="" coords="5,5,180,31"/>
+<area shape="rect" id="Node000002" href="$undo_tasks_8hpp.html" title="Core real&#45;time task framework for Master and Worker synchronization." alt="" coords="8,79,177,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,44,95,79,90,79,90,44"/>
+<area shape="rect" id="Node000003" href="$undo_tasks_8cpp.html" title="Implementation of deterministic Master/Worker synchronized execution loops." alt="" coords="23,152,163,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="95,118,95,152,90,152,90,118"/>
+</map>

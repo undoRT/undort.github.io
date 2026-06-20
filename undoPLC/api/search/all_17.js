@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['undolog_0',['undolog',['../class_undo_log.html',1,'UndoLog'],['../class_undo_log.html#a5709c54fce110e21d00e6c8c1f82d28d',1,'UndoLog::UndoLog()'],['../class_undo_log.html#a563f6fee23ee6bba67d707018c94662c',1,'UndoLog::UndoLog(UndoLog &amp;&amp;)=delete'],['../class_undo_log.html#a36827304f0a649fb5e84fb9fc71f5623',1,'UndoLog::UndoLog(const UndoLog &amp;)=delete']]],
+  ['undolog_2ecpp_1',['undoLog.cpp',['../undo_log_8cpp.html',1,'']]],
+  ['undolog_2ehpp_2',['undoLog.hpp',['../undo_log_8hpp.html',1,'']]],
+  ['undomastertaskbase_3',['undomastertaskbase',['../class_undo_master_task_base.html',1,'UndoMasterTaskBase'],['../class_undo_master_task_base.html#a18ebeb9a02995671ec543a5f2a4788e3',1,'UndoMasterTaskBase::UndoMasterTaskBase()'],['../class_undo_worker_task_base.html#a387c8742681c202f1c00ccb186214ded',1,'UndoWorkerTaskBase::UndoMasterTaskBase']]],
+  ['undomutex_4',['undomutex',['../class_undo_mutex.html#a842ad0598fbdf6739b8a44158c5060d7',1,'UndoMutex::UndoMutex()'],['../class_undo_mutex.html#a8ba23ffe263aa3b830641afeb5f7aa6c',1,'UndoMutex::UndoMutex(const UndoMutex &amp;)=delete'],['../class_undo_mutex.html',1,'UndoMutex']]],
+  ['undomutex_2ehpp_5',['undoMutex.hpp',['../undo_mutex_8hpp.html',1,'']]],
+  ['undoplc_6',['UndoPLC',['../md__r_e_a_d_m_e.html',1,'']]],
+  ['undoplc_5fbuild_5fdate_7',['UNDOPLC_BUILD_DATE',['../version_8hpp.html#aa975fea37ade144b6e9ed662e5f2044d',1,'version.hpp']]],
+  ['undoplc_5fcompiler_8',['UNDOPLC_COMPILER',['../version_8hpp.html#ae15748cc9cc65a3320f1763a8e1ad973',1,'version.hpp']]],
+  ['undoplc_5fstringify_9',['UNDOPLC_STRINGIFY',['../version_8hpp.html#ac77696ec8022db656486173d76665460',1,'version.hpp']]],
+  ['undoplc_5fstringify_5fimpl_10',['UNDOPLC_STRINGIFY_IMPL',['../version_8hpp.html#a5cab8b664a327249fbc407944a2e0eff',1,'version.hpp']]],
+  ['undoplc_5fversion_5fmajor_11',['UNDOPLC_VERSION_MAJOR',['../version_8hpp.html#ae5299ea7fe53b1de4f332301920ab80d',1,'version.hpp']]],
+  ['undoplc_5fversion_5fminor_12',['UNDOPLC_VERSION_MINOR',['../version_8hpp.html#ad2a49af4f730a662fed6c316dbc95719',1,'version.hpp']]],
+  ['undoplc_5fversion_5fpatch_13',['UNDOPLC_VERSION_PATCH',['../version_8hpp.html#afccc761e3eb7306e98aa4b61d7d11d15',1,'version.hpp']]],
+  ['undoplc_5fversion_5fprerel_14',['UNDOPLC_VERSION_PREREL',['../version_8hpp.html#aa66591e732f4a694bac41820c13b0d78',1,'version.hpp']]],
+  ['undoplc_5fversion_5fstring_15',['UNDOPLC_VERSION_STRING',['../version_8hpp.html#a009d6911b1e9a6e50a087233db4e5923',1,'version.hpp']]],
+  ['undosys_16',['undosys',['../class_undo_sys.html',1,'UndoSys'],['../class_undo_sys.html#a1842ceeec76650084b7d1e4614f0e484',1,'UndoSys::UndoSys(const UndoSys &amp;)=delete'],['../class_undo_sys.html#acf9cdd0be4fa4140c13df39990287ca8',1,'UndoSys::UndoSys(UndoSys &amp;&amp;)=delete'],['../class_undo_sys.html#a804e0bcf14b65cbebff1dd1ebecb3ab8',1,'UndoSys::UndoSys()']]],
+  ['undosystem_2ecpp_17',['undoSystem.cpp',['../undo_system_8cpp.html',1,'']]],
+  ['undosystem_2ehpp_18',['undoSystem.hpp',['../undo_system_8hpp.html',1,'']]],
+  ['undotasks_2ecpp_19',['undoTasks.cpp',['../undo_tasks_8cpp.html',1,'']]],
+  ['undotasks_2ehpp_20',['undoTasks.hpp',['../undo_tasks_8hpp.html',1,'']]],
+  ['undoworkertaskbase_21',['undoworkertaskbase',['../class_undo_worker_task_base.html#af66ac9816900fe9bdbfd40eafce10ee4',1,'UndoWorkerTaskBase::UndoWorkerTaskBase()'],['../class_undo_worker_task_base.html',1,'UndoWorkerTaskBase']]],
+  ['unlock_22',['unlock',['../class_undo_mutex.html#a1511601c180402c4006598bd74427353',1,'UndoMutex']]]
+];

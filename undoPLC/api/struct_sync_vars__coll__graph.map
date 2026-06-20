@@ -1,0 +1,5 @@
+<map id="SyncVars" name="SyncVars">
+<area shape="rect" id="Node000001" title=" " alt="" coords="10,273,131,419"/>
+<area shape="rect" id="Node000002" href="$class_undo_mutex.html" title="Wrapper class for the usage of pthread_mutex with PTHREAD_PRIO_INHERIT Since std::mutex is not PTHREA..." alt="" coords="5,5,136,211"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="73,211,73,257,68,257,68,211"/>
+</map>

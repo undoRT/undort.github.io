@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['getcpuid_0',['getcpuid',['../class_undo_worker_task_base.html#ad0a4036c3ccf9d3745005426b7adf392',1,'UndoWorkerTaskBase::getCpuId()'],['../class_undo_master_task_base.html#a3b752983f1702c09d89cf8c6a142b720',1,'UndoMasterTaskBase::getCpuId()']]],
+  ['getcurrentcycletimems_1',['getcurrentcycletimems',['../class_undo_master_task_base.html#a7cdb640f2977f9e3491a84def6191cee',1,'UndoMasterTaskBase::getCurrentCycleTimeMs()'],['../class_undo_worker_task_base.html#ad728b9f6b29ebb499ba668ce7af972c1',1,'UndoWorkerTaskBase::getCurrentCycleTimeMs()']]],
+  ['getcurrentcycletimens_2',['getcurrentcycletimens',['../class_undo_master_task_base.html#aaad0539ef7d9dbd5b961590cd741f935',1,'UndoMasterTaskBase::getCurrentCycleTimeNs()'],['../class_undo_worker_task_base.html#a5e5bca38f723860b8288c15a0de6a853',1,'UndoWorkerTaskBase::getCurrentCycleTimeNs()']]],
+  ['getcurrentcycletimeus_3',['getcurrentcycletimeus',['../class_undo_master_task_base.html#a2da295e3cb2782dcfc64722553548708',1,'UndoMasterTaskBase::getCurrentCycleTimeUs()'],['../class_undo_worker_task_base.html#a2fe17663364f00dfdf48dcd2cb36b0ab',1,'UndoWorkerTaskBase::getCurrentCycleTimeUs()']]],
+  ['getcyclens_4',['getcyclens',['../class_undo_master_task_base.html#a90c0f24e6315c603528ef22e9844e6b3',1,'UndoMasterTaskBase::getCycleNs()'],['../class_undo_worker_task_base.html#a5e54f3d93279e50f22a29183632ee7ad',1,'UndoWorkerTaskBase::getCycleNs()']]],
+  ['getcycleus_5',['getcycleus',['../class_undo_master_task_base.html#abfb39525030383cff873725396c7de2e',1,'UndoMasterTaskBase::getCycleUs()'],['../class_undo_worker_task_base.html#a69f6e07680c9594a346a30512d70b04c',1,'UndoWorkerTaskBase::getCycleUs()']]],
+  ['getdiagvars_6',['getdiagvars',['../class_undo_master_task_base.html#a5027250e5cb023effc0ca1ed01124eb7',1,'UndoMasterTaskBase::getDiagVars()'],['../class_undo_worker_task_base.html#a34485529e60dc7189c5ff226999cc6f7',1,'UndoWorkerTaskBase::getDiagVars()']]],
+  ['getfullversion_7',['getFullVersion',['../version_8hpp.html#a59e2277be2bbc561afb450d0517721a6',1,'version.hpp']]],
+  ['getinstance_8',['getinstance',['../class_undo_log.html#a46ae20674be94fa6f6910fa1f6517312',1,'UndoLog::getInstance()'],['../class_undo_sys.html#a4124805d8c810934fa6ea6e287698705',1,'UndoSys::getInstance()']]],
+  ['getisolatedcpu_9',['getIsolatedCpu',['../class_undo_sys.html#a4f0276fe4d922319da18d4ed798b3a88',1,'UndoSys']]],
+  ['getname_10',['getname',['../class_undo_master_task_base.html#a6d83c46e987442030614cd476850bdf1',1,'UndoMasterTaskBase::getName()'],['../class_undo_worker_task_base.html#ab890aa51de0803f63035c38083a3bf50',1,'UndoWorkerTaskBase::getName()']]],
+  ['getonlinecpu_11',['getOnlineCpu',['../class_undo_sys.html#a92079a7a48fcc0b3ee16bc030dcb6fba',1,'UndoSys']]],
+  ['getprio_12',['getprio',['../class_undo_master_task_base.html#ada94dc82a94d166c9f96b2db4da9e222',1,'UndoMasterTaskBase::getPrio()'],['../class_undo_worker_task_base.html#ad5216027c5f436b791cd2543c8265f1a',1,'UndoWorkerTaskBase::getPrio()']]],
+  ['getsharedcpu_13',['getSharedCpu',['../class_undo_sys.html#ad2f22d2a40544c206fe1c404072788bc',1,'UndoSys']]],
+  ['getsyncvars_14',['getSyncVars',['../class_undo_master_task_base.html#a0dc242bd5d79f7bd70db62350b082e61',1,'UndoMasterTaskBase']]],
+  ['gettotalcpu_15',['getTotalCpu',['../class_undo_sys.html#a9aba3d2110e9f1d4f4756b65597a40ca',1,'UndoSys']]],
+  ['getversion_16',['getVersion',['../version_8hpp.html#aee3bd62c6c84d746802c115f5d4c1519',1,'version.hpp']]],
+  ['getversionnumbers_17',['getVersionNumbers',['../version_8hpp.html#a4570a4512c40bad2915fbedee8e5241d',1,'version.hpp']]]
+];
