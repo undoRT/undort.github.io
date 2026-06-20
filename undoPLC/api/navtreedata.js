@@ -28,16 +28,16 @@ var NAVTREE =
     [ "UndoPLC", "md__r_e_a_d_m_e.html", [
       [ "Features", "md__r_e_a_d_m_e.html#autotoc_md2", null ],
       [ "Requirements", "md__r_e_a_d_m_e.html#autotoc_md3", null ],
-      [ "Quick Start", "md__r_e_a_d_m_e.html#autotoc_md4", [
-        [ "1. Build", "md__r_e_a_d_m_e.html#autotoc_md5", null ],
-        [ "2. Configure System", "md__r_e_a_d_m_e.html#autotoc_md6", null ],
-        [ "3. Run Test", "md__r_e_a_d_m_e.html#autotoc_md7", null ]
+      [ "Download", "md__r_e_a_d_m_e.html#autotoc_md4", null ],
+      [ "Quick Start", "md__r_e_a_d_m_e.html#autotoc_md5", [
+        [ "1. Build", "md__r_e_a_d_m_e.html#autotoc_md6", null ],
+        [ "2. Configure System", "md__r_e_a_d_m_e.html#autotoc_md7", null ],
+        [ "3. Run Test", "md__r_e_a_d_m_e.html#autotoc_md8", null ]
       ] ],
-      [ "Key Components", "md__r_e_a_d_m_e.html#autotoc_md8", null ],
-      [ "Build & Installation", "md__r_e_a_d_m_e.html#autotoc_md9", [
-        [ "Release Assets", "md__r_e_a_d_m_e.html#autotoc_md10", null ],
-        [ "Running from Release", "md__r_e_a_d_m_e.html#autotoc_md11", null ]
+      [ "Key Components", "md__r_e_a_d_m_e.html#autotoc_md9", [
+        [ "Running from Release", "md__r_e_a_d_m_e.html#autotoc_md10", null ]
       ] ],
+      [ "Build From Source", "md__r_e_a_d_m_e.html#autotoc_md11", null ],
       [ "Documentation", "md__r_e_a_d_m_e.html#autotoc_md12", null ],
       [ "License", "md__r_e_a_d_m_e.html#autotoc_md13", null ]
     ] ],

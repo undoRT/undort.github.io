@@ -93,129 +93,103 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizab
   <div class="headertitle"><div class="title">UndoPLC</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md0"></a> <a href="https://isocpp.org/"><img src="https://img.shields.io/badge/C%252B%2B017-blue.svg" alt="C++17" style="pointer-events: none;" class="inline"/></a> <a href="https://www.gnu.org/licenses/gpl-3.0"><img src="https://img.shields.io/badge/License-GSLv3-blue.svg" alt="License: GSL v3" style="pointer-events: none;" class="inline"/></a> <a href="https://github.com/undoRT/st2cpp/actions/workflow/build.yml"><img src="https://img.shields.io/github/actions/workflow/status/undoRT/st2cpp/build.yml/badge.svg" alt="Build" style="pointer-events: none;" class="inline"/></a> <a href="https://undort.com/undoPLC/api/"><img src="https://img.shields.io/badge/docs-doxygen-blue.svg" alt="Documentation" style="pointer-events: none;" class="inline"/></a></p>
+<div class="textblock"><p><a class="anchor" id="autotoc_md0"></a> <a href="https://isocpp.org/"><img src="https://img.shields.io/badge/C%252B%2B017-blue.svg" alt="C++17" style="pointer-events: none;" class="inline"/></a> <a href="https://www.gnu.org/licenses/gpl-3.0"><img src="https://img.shields.io/badge/License-GSLv3-blue.svg" alt="License: GSL v3" style="pointer-events: none;" class="inline"/></a> <a href="https://undort.com/undoPLC/api/"><img src="https://img.shields.io/badge/docs-doxygen-blue.svg" alt="Documentation" style="pointer-events: none;" class="inline"/></a></p>
 <p>Multi-threaded PLC infrastructure with deterministic real-time execution.</p>
 <hr  />
-<p><b>undoPLC</b> provides a real-time framework for industrial automation with a deterministic fork-join execution model, CPU isolation, and lock-free logging.</p>
+<p><b>UndoPLC</b> provides a real-time framework for industrial automation with a deterministic fork-join execution model, CPU isolation, and lock-free logging.</p>
 <h1><a class="anchor" id="autotoc_md2"></a>
 Features</h1>
 <ul>
-<li><b>Master/Worker Fork"Join&lt;/strong&gt; – Deterministic parallel execution on isolated CPU cores
-- &lt;strong&gt;Real-time Scheduling&lt;/strong&gt; – SCHED_FIFO with priority inheritance mutexes
-- &lt;strong&gt;Lock-free Logging&lt;/strong&gt; – Thread-local lock-free queues with deferred syslog
-- &lt;strong&gt;CPU Isolation&lt;/strong&gt; – Automatic detection of isolated cores and frequency management
-- &lt;strong&gt;Aligned Cycle Time&lt;/strong&gt; – Deterministic absolute cycle time independent of system jitter
-- &lt;strong&gt;Watchdog&lt;/strong&gt; – Cycle overrun detection with safe stop handler
-
-@section autotoc_md3 Requirements
-
-- Linux kernel with &lt;strong&gt;PREEMPT_RT&lt;/strong&gt; patch
-- At least &lt;strong&gt;2 isolated CPU cores&lt;/strong&gt; (1 for Master + 1+ for Workers)
-- &lt;tt&gt;isolcpus=&lt;/tt&gt;, &lt;tt&gt;nozh_full=&lt;/tt&gt;, &lt;tt&gt;rcu_nocbs=&lt;/tt&gt; in GRUB
-- Root privileges for CPU frequency management
-
-@section autotoc_md4 Quick Start
-
-@subsection autotoc_md5 1. Build
-
-@icode{bash} 
-git clone https://github.com/undoRT/undoPLC.git
-cd undoPLC
-mkdir build &amp;&amp; cd build
-cmake -.
-profile=1
-make -j$(nproc)
-@endicode 
-
-@subsection autotoc_md6 2. Configure System
-
-Add to &lt;tt&gt;/etc/default/grub&lt;/tt&gt;:
-
-@icode{bash} 
-GRUB_CMDLINE_LINUX="... isolcpus=4,5 nozz_full=4,5 rcu_nocbs=4,5"
-@endicode 
-
-Update and reboot:
-
-@icode{bash} 
-sudo update-grub
-sudo reboot
-@endicode 
-
-@subsection autotoc_md7 3. Run Test
-
-@icode{bash} 
-sudo ./undoPLC --log2console
-@endicode 
-
-Expected output:
-
-@icode{bash} 
-[INFO] undoPLC: Starting with 5 cycles delay
-[INFO] undoPLC: Master on core 4 | 2 worker(s) spawned
-[INFO] undoPLC: cycle 1000 (1000 mS)} exec[min=98 max=102]us jitter[min=0 max=5]us
-@endicode 
-
-@section autotoc_md8 Key Components
-
-&lt;table class="markdownTable"&gt;
-  &lt;tr class="markdownTableHead"&gt;    &lt;th class="markdownTableHeadNone"&gt; Component   </b></li>
+<li><b>Master/Worker Fork-Join</b> – Deterministic parallel execution on isolated CPU cores</li>
+<li><b>Real-time Scheduling</b> – SCHED_FIFO with priority inheritance mutexes</li>
+<li><b>Lock-free Logging</b> – Thread-local lock-free queues with deferred syslog</li>
+<li><b>CPU Isolation</b> – Automatic detection of isolated cores and frequency management</li>
+<li><b>Aligned Cycle Time</b> – Deterministic absolute cycle time independent of system jitter</li>
+<li><b>Watchdog</b> – Cycle overrun detection with safe stop handler</li>
 </ul>
-<p><b> Description    </b></p>
-<p><b> </b></p>
-<p><b> <a class="el" href="class_undo_master_task_base.html" title="Base class responsible for fieldbus orchestration and worker synchronization.">UndoMasterTaskBase</a>   </b></p>
-<p><b> Orchestrates execution cycle, I/O handling    </b></p>
-<p><b> </b></p>
-<p><b> <a class="el" href="class_undo_worker_task_base.html" title="Base class for concurrent execution units (PRGs).">UndoWorkerTaskBase</a>   </b></p>
-<p><b> Parallel execution of PRG logic    </b></p>
-<p><b> </b></p>
-<p><b> <a class="el" href="class_undo_log.html">UndoLog</a>   </b></p>
-<p><b> Lock-free deferred logging    </b></p>
-<p><b> </b></p>
-<p><b> <a class="el" href="class_undo_sys.html" title="Manages low-level system configurations for real-time operations.">UndoSys</a>   </b></p>
-<p><b> CPU isolation, frequency, TSC utilities    </b></p>
-<p><b> </b></p>
-<p><b> <a class="el" href="class_undo_mutex.html" title="Wrapper class for the usage of pthread_mutex with PTHREAD_PRIO_INHERIT Since std::mutex is not PTHREA...">UndoMutex</a>   </b></p>
-<p><b> Priority inheritance mutex   </b></p>
-<p><b></b></p>
-<p><b></b></p>
-<h1><a class="anchor" id="autotoc_md9"></a>
-Build &amp; Installation</h1>
-<p><b></b></p>
-<p><b></b></p>
+<h1><a class="anchor" id="autotoc_md3"></a>
+Requirements</h1>
+<ul>
+<li>Linux kernel with <b>PREEMPT_RT</b> patch</li>
+<li>At least <b>2 isolated CPU cores</b> (1 for Master + 1+ for Workers)</li>
+<li><code>isolcpus=</code>, <code>nozh_full=</code>, <code>rcu_nocbs=</code> in GRUB</li>
+<li>Root privileges for CPU frequency management</li>
+</ul>
+<p>Example of grub basic option (if you don't use undoOS):</p>
+<div class="fragment"><div class="line">GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet splash systemd.unit=multi-user.target isolcpus=domain,managed_irq,&lt;cpuList&gt; nohz_full=&lt;cpuList&gt; rcu_nocbs=&lt;cpuList&gt; intel_idle.max_cstate=1 processor.max_cstate=1 intel_pstate=passive nowatchdog nmi_watchdog=0 transparent_hugepage=never skew_tick=1&quot;</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md4"></a>
+Download</h1>
+<p>Grab the latest binary from <a href="https://github.com/undoRT/undoPLC/releases"><b>GitHub Releases</b></a>:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Platform   </th><th class="markdownTableHeadNone">File    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Linux x64   </td><td class="markdownTableBodyNone"><code>undoPLC-ver.tar.gz</code>   </td></tr>
+</table>
+<div class="fragment"><div class="line"># Linux</div>
+<div class="line">tar -xzf undoPLC-*.tar.gz</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md5"></a>
+Quick Start</h1>
+<h2><a class="anchor" id="autotoc_md6"></a>
+1. Build</h2>
+<div class="fragment"><div class="line">git clone https://github.com/undoRT/undoPLC.git</div>
+<div class="line">cd undoPLC</div>
+<div class="line">mkdir build &amp;&amp; cd build</div>
+<div class="line">cmake -.</div>
+<div class="line">profile=1</div>
+<div class="line">make -j$(nproc)</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md7"></a>
+2. Configure System</h2>
+<p>Add to <code>/etc/default/grub</code>:</p>
+<div class="fragment"><div class="line">GRUB_CMDLINE_LINUX=&quot;... isolcpus=&lt;cpuList&gt; nohz_full=&lt;cpuList&gt; rcu_nocbs=&lt;cpuList&gt;&quot;</div>
+</div><!-- fragment --><p>Notice that &lt;cpuList&gt; is in the format:</p>
+<div class="fragment"><div class="line">10,11 # If I want to isolate 10 and 11</div>
+</div><!-- fragment --><p>Update and reboot:</p>
+<div class="fragment"><div class="line">sudo update-grub</div>
+<div class="line">sudo reboot</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md8"></a>
+3. Run Test</h2>
+<div class="fragment"><div class="line">sudo ./undoPLC --log2console</div>
+</div><!-- fragment --><p>Expected output:</p>
+<div class="fragment"><div class="line">[INFO] undoPLC: Starting with 5 cycles delay</div>
+<div class="line">[INFO] undoPLC: Master on core 4 | 2 worker(s) spawned</div>
+<div class="line">[INFO] undoPLC: cycle 1000 (1000 mS)} exec[min=98 max=102]us jitter[min=0 max=5]us</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md9"></a>
+Key Components</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Component   </th><th class="markdownTableHeadNone">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a class="el" href="class_undo_master_task_base.html" title="Base class responsible for fieldbus orchestration and worker synchronization.">UndoMasterTaskBase</a>   </td><td class="markdownTableBodyNone">Orchestrates execution cycle, I/O handling    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a class="el" href="class_undo_worker_task_base.html" title="Base class for concurrent execution units (PRGs).">UndoWorkerTaskBase</a>   </td><td class="markdownTableBodyNone">Parallel execution of PRG logic    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a class="el" href="class_undo_log.html">UndoLog</a>   </td><td class="markdownTableBodyNone">Lock-free deferred logging    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a class="el" href="class_undo_sys.html" title="Manages low-level system configurations for real-time operations.">UndoSys</a>   </td><td class="markdownTableBodyNone">CPU isolation, frequency, TSC utilities    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a class="el" href="class_undo_mutex.html" title="Wrapper class for the usage of pthread_mutex with PTHREAD_PRIO_INHERIT Since std::mutex is not PTHREA...">UndoMutex</a>   </td><td class="markdownTableBodyNone">Priority inheritance mutex   </td></tr>
+</table>
 <h2><a class="anchor" id="autotoc_md10"></a>
-Release Assets</h2>
-<p><b></b></p>
-<p><b>Download the latest release from <a href="https://github.com/undoRT/undoPLC/releases">GitHub Releases</a>:</b></p>
-<p><b></p><div class="fragment"><div class="line">wget https://github.com/undoRT/undoPLC/releases/download/v1.0.0/undoPLC-release-1.0.0.tar.gz</div>
-<div class="line">tar xz undoPLC-release-1.0.0.tar.gz</div>
-<div class="line">cd undoPLC-release-1.0.0.0</div>
-</div><!-- fragment --><p></b></p>
-<p><b></b></p>
-<h2><a class="anchor" id="autotoc_md11"></a>
 Running from Release</h2>
-<p><b></b></p>
-<p><b></p><div class="fragment"><div class="line"># Set PTH to include Boost</div>
-<div class="line">export PTH=${PTH}:/path/to/release/include/third_party</div>
+<div class="fragment"><div class="line"># Set PTH to include Boost</div>
+<div class="line">export PTH=${PTH}:/path/to/release/third_party</div>
 <div class="line"> </div>
 <div class="line"># Run the executable</div>
 <div class="line">./bin/undoPLC --log2console</div>
-</div><!-- fragment --><p></b></p>
-<p><b></b></p>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md11"></a>
+Build From Source</h1>
+<p>The project can also be built from source by cloning the repository and following the steps above.</p>
 <h1><a class="anchor" id="autotoc_md12"></a>
 Documentation</h1>
-<p><b></b></p>
-<p><b></p><ul>
+<ul>
 <li><a href="https://undort.com/undoPLC/api/">API Reference</a> – Doxygen-generated</li>
 <li><a href="https://github.com/undoRT/undoPLC">Source Code</a></li>
 </ul>
-<p></b></p>
-<p><b></b></p>
 <h1><a class="anchor" id="autotoc_md13"></a>
 License</h1>
-<p><b></b></p>
-<p><b>Copyright © 2026 undoRT - GPL-3.0-or-later</b></p>
-<p><b>See [LICENSE](LICENSE) for details. </b></p>
+<p>Copyright © 2026 undoRT - GPL-3.0-or-later</p>
+<p>See [LICENSE](LICENSE) for details. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
