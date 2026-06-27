@@ -195,6 +195,21 @@
             color: var(--cyan-primary);
         }
 
+        .nav-dropdown-menu a.current strong::after {
+            content: 'Current';
+            margin-left: 8px;
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #34d399;
+            background: rgba(52, 211, 153, 0.1);
+            border: 1px solid rgba(52, 211, 153, 0.25);
+            padding: 2px 6px;
+            border-radius: 8px;
+            vertical-align: middle;
+        }
+
         .nav-dropdown-soon {
             padding: 10px 12px 6px;
             font-size: 0.74rem;
@@ -393,12 +408,10 @@
             box-shadow: 0 10px 30px rgba(0, 180, 216, 0.05);
         }
 
-        /* Released card gets a slightly warmer border */
         .feature-card.released {
             border-color: rgba(0, 180, 216, 0.25);
         }
 
-        /* Planned cards are slightly dimmed */
         .feature-card.planned {
             opacity: 0.75;
         }
@@ -436,6 +449,7 @@
         .product-badge.fieldbus   { background-color: rgba(6, 182, 212, 0.1);   color: #22d3ee; border: 1px solid rgba(6, 182, 212, 0.2); }
         .product-badge.compiler   { background-color: rgba(245, 158, 11, 0.1);  color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.2); }
         .product-badge.utility    { background-color: rgba(176, 168, 204, 0.1); color: #c3bcdf; border: 1px solid rgba(176, 168, 204, 0.2); }
+        .product-badge.foundation { background-color: rgba(0, 180, 216, 0.1);   color: var(--cyan-primary); border: 1px solid rgba(0, 180, 216, 0.2); }
 
         .feature-card p {
             color: var(--text-muted);
@@ -590,7 +604,6 @@
                 display: flex;
             }
 
-            /* The nav becomes a dropdown panel anchored under the header */
             .main-nav {
                 position: absolute;
                 top: 100%;
@@ -630,7 +643,6 @@
                 border-bottom: none;
             }
 
-            /* Docs dropdown becomes an inline accordion on mobile */
             .nav-dropdown {
                 width: 100%;
             }
@@ -693,9 +705,17 @@
                         <strong>st2cpp</strong>
                         <span>ST → C++ transpiler docs</span>
                     </a>
+                    <a href="undoCore/">
+                        <strong>undoCore</strong>
+                        <span>Header-only core infrastructure</span>
+                    </a>
                     <a href="undoPLC/">
                         <strong>undoPLC</strong>
                         <span>Multi-threading PLC infrastructure</span>
+                    </a>
+                    <a href="undoBUS/">
+                        <strong>undoBUS</strong>
+                        <span>Fieldbus master implementations</span>
                     </a>
                     <span class="nav-dropdown-soon">More products coming soon</span>
                 </div>
@@ -707,12 +727,12 @@
 
     <section class="hero">
         <div class="hero-content">
-            <span class="badge">Next-Generation Open Source Automation (Early Development)</span>
+            <span class="badge">Next-Generation Open Source Automation</span>
             <h1>Deterministic Real-Time Control Platform</h1>
             <p class="tagline">An open-source stack for industrial automation where C++ performance, IEC 61131-3 compatibility, and Linux real-time scheduling converge.</p>
 
             <div class="dev-notice">
-                <span>undoRT is in active early development. Currently, <a href="st2cpp/">st2cpp</a> is the only released component. The rest of the ecosystem is being built in the open — contributions welcome.</span>
+                <span>🚀 <strong>v0.2.0 released!</strong> <a href="undoPLC/">undoPLC</a> now integrates <a href="undoCore/">undoCore</a> as its shared core library.</span>
             </div>
 
             <div class="hero-buttons">
@@ -725,7 +745,7 @@
 
     <section id="ecosystem" class="features-section">
         <h2>The undoRT Ecosystem</h2>
-        <p class="section-subtitle">Five components, one pipeline — from hardware OS to legacy migration.</p>
+        <p class="section-subtitle">Six components, one pipeline — from hardware OS to legacy migration.</p>
         
         <div class="features-grid">
 
@@ -735,7 +755,16 @@
                 </div>
                 <span class="product-badge compiler">Compiler</span>
                 <p>Transpiles IEC 61131-3 Structured Text into clean, native C++17. Supports Function Blocks, structs, enums, arrays, inheritance, and modular project generation.</p>
-                <span class="status-pill available">Released · v0.1</span>
+                <span class="status-pill available">Released · v0.1.2</span>
+            </a>
+
+            <a href="undoCore/" class="feature-card released">
+                <div class="product-logo-container">
+                    <img src="assets/undoCore_logo.png" alt="undoCore Logo" class="product-card-logo">
+                </div>
+                <span class="product-badge foundation">Foundation</span>
+                <p>Header-only C++20 core infrastructure shared across all undoRT projects. Provides <code>IoBus</code> interface, <code>ProcessImage</code>, IEC 61131-3 type mapping, and <code>STArray</code>.</p>
+                <span class="status-pill available">Released · v0.1.0</span>
             </a>
 
             <a href="undoPLC/" class="feature-card released">
@@ -744,7 +773,7 @@
                 </div>
                 <span class="product-badge runtime">Runtime</span>
                 <p>A multi-threaded SoftPLC runtime that executes C++ code generated by st2cpp. Designed from scratch to run natively on undoOS with no intermediate VM.</p>
-                <span class="status-pill available">Released · v0.1</span>
+                <span class="status-pill available">Released · v0.2.0</span>
             </a>
 
             <a href="https://github.com/undoRT/undoOS" target="_blank" class="feature-card planned">
@@ -793,22 +822,29 @@
             <div class="roadmap-item active">
                 <span class="roadmap-step">Now</span>
                 <div class="roadmap-body">
-                    <h3>undoPLC v0.1 — Multi-threading PLC infrastructure</h3>
-                    <p>Open source multi-threaded PLC infrastructure designed for the undoRT ecosystem.</p>
+                    <h3>undoCore v0.1 — Shared core infrastructure</h3>
+                    <p>Header-only library providing <code>IoBus</code>, <code>ProcessImage</code>, and IEC 61131-3 type mapping for all undoRT projects.</p>
+                </div>
+            </div>
+            <div class="roadmap-item active">
+                <span class="roadmap-step">Now</span>
+                <div class="roadmap-body">
+                    <h3>undoPLC v0.2 — Integrated with undoCore</h3>
+                    <p>Multi-threaded PLC infrastructure now uses undoCore for process image management and fieldbus interfaces.</p>
                 </div>
             </div>
             <div class="roadmap-item next-release">
                 <span class="roadmap-step">Next</span>
                 <div class="roadmap-body">
                     <h3>undoBUS — Fieldbus wrapper (EtherCAT)</h3>
-                    <p>Open source wrapper to use Etherlab Master EtherCAT.</p>
+                    <p>Open source wrapper to use Etherlab Master EtherCAT, built on undoCore's <code>IoBus</code> interface.</p>
                 </div>
             </div>
             <div class="roadmap-item">
                 <span class="roadmap-step">Later</span>
                 <div class="roadmap-body">
-                    <h3>st2cpp v0.2 — Semantic analysis + standard library</h3>
-                    <p>Type checking, better error messages with source locations, and support for IEC 61131-3 standard functions (TON, CTU, ABS, MAX…).</p>
+                    <h3>st2cpp v0.2 — Integration with Process Image (undoCore) + standard library</h3>
+                    <p>Type checking, better error messages with source locations, support for process image variables (undoCore) and support for IEC 61131-3 standard functions (TON, CTU, ABS, MAX…).</p>
                 </div>
             </div>
             <div class="roadmap-item">
@@ -839,7 +875,6 @@
             var docsDrop  = document.querySelector('.nav-dropdown');
             var docsBtn   = document.querySelector('.nav-dropdown-toggle');
 
-            // Hamburger: open/close the mobile nav panel
             navToggle.addEventListener('click', function () {
                 var isOpen = mainNav.classList.toggle('nav-open');
                 navToggle.classList.toggle('active', isOpen);
@@ -850,14 +885,12 @@
                 }
             });
 
-            // "Docs" toggle: opens dropdown (desktop) / accordion (mobile)
             docsBtn.addEventListener('click', function (e) {
                 e.preventDefault();
                 var isOpen = docsDrop.classList.toggle('dropdown-open');
                 docsBtn.setAttribute('aria-expanded', isOpen);
             });
 
-            // Click outside closes both menus
             document.addEventListener('click', function (e) {
                 if (!docsDrop.contains(e.target)) {
                     docsDrop.classList.remove('dropdown-open');
@@ -870,7 +903,6 @@
                 }
             });
 
-            // Close the mobile panel after tapping a normal link
             mainNav.querySelectorAll('a').forEach(function (link) {
                 link.addEventListener('click', function () {
                     mainNav.classList.remove('nav-open');

@@ -582,7 +582,7 @@
     </a>
     <div class="topbar-sep"></div>
     <a href="index.html" class="topbar-product">undoPLC</a>
-    <span class="topbar-version">v0.1.1</span>
+    <span class="topbar-version">v0.2.0</span>
 
     <div class="topbar-actions">
         <button class="toc-toggle" aria-label="Toggle table of contents" aria-expanded="false">
@@ -614,9 +614,17 @@
                     <strong>st2cpp</strong>
                     <span>ST → C++ transpiler docs</span>
                 </a>
+                <a href="../undoCore/">
+                    <strong>undoCore</strong>
+                    <span>Header-only core infrastructure</span>
+                </a>
+                <a href="../undoBUS/">
+                    <strong>undoBUS</strong>
+                    <span>Fieldbus master implementations</span>
+                    </a>
                 <a href="index.html" class="current">
-                        <strong>undoPLC</strong>
-                        <span>Multi-threading PLC infrastructure</span>
+                    <strong>undoPLC</strong>
+                    <span>Multi-threading PLC infrastructure</span>
                 </a>
                 <span class="nav-dropdown-soon">More products coming soon</span>
             </div>
@@ -641,11 +649,16 @@
 
     <main class="content">
 
-        <h1>undoPLC <span class="status-pill">Released</span></h1>
+        <h1>undoPLC <span class="status-pill">Released · v0.2.0</span></h1>
         <p class="lead">
             Open source multi-threaded PLC infrastructure designed for the <a href="../index.html">undoRT ecosystem</a>.
             Provides deterministic Master/Worker synchronization with real-time guarantees.
         </p>
+
+        <div class="callout info">
+            <strong>🔄 v0.2.0 Update:</strong> This release integrates <a href="../undoCore/">undoCore</a> as the shared foundation library,
+            providing <code>ProcessImage</code> for I/O management and <code>IoBus</code> as the fieldbus contract.
+        </div>
 
         <h2 id="overview">Overview</h2>
         <p>
@@ -660,6 +673,7 @@
             <li>Master/Worker task synchronization (<code>undoTasks</code>)</li>
             <li>Aligned cycle time management</li>
             <li>SCHED_FIFO real-time scheduling</li>
+            <li><strong>NEW:</strong> Integrated with <code>undoCore</code> for I/O management</li>
         </ul>
 
         <div class="callout info">
@@ -678,6 +692,7 @@
             <li><strong>Execution phase:</strong> Workers run user logic in parallel</li>
             <li><strong>Join phase:</strong> Master waits for all workers to complete</li>
             <li><strong>Watchdog:</strong> Detects cycle overruns and triggers safe stop</li>
+            <li><strong>NEW:</strong> Uses <code>undoCore::ProcessImage</code> for I/O management</li>
         </ul>
 
         <h3>2. Cycle Time Management</h3>
@@ -719,7 +734,7 @@ uint64_t cycleTimeNs = master.getCurrentCycleTimeNs();</code></pre>
             <tbody>
                 <tr>
                     <td><code>UndoMasterTaskBase</code></td>
-                    <td>Orchestrates the execution cycle, reads/writes fieldbus I/O</td>
+                    <td>Orchestrates the execution cycle, reads/writes fieldbus I/O via <code>undoCore::IoBus</code></td>
                 </tr>
                 <tr>
                     <td><code>UndoWorkerTaskBase</code></td>
@@ -737,8 +752,21 @@ uint64_t cycleTimeNs = master.getCurrentCycleTimeNs();</code></pre>
                     <td><code>UndoMutex</code></td>
                     <td>Pthread mutex with <code>PTHREAD_PRIO_INHERIT</code></td>
                 </tr>
+                <tr>
+                    <td><code>undoCore::ProcessImage</code></td>
+                    <td>Double-buffered IEC 61131-3 memory layout (%I, %Q, %M)</td>
+                </tr>
+                <tr>
+                    <td><code>undoCore::IoBus</code></td>
+                    <td>Abstract fieldbus master interface (implemented by undoBUS)</td>
+                </tr>
             </tbody>
         </table>
+
+        <div class="callout success">
+            <strong>✅ Shared Foundation:</strong> undoPLC now uses <code>undoCore</code> as a submodule,
+            ensuring seamless interoperability with undoBUS and other undoRT components.
+        </div>
 
         <h3>Execution Flow</h3>
         <pre><code>// 1. Master thread runs with SCHED_FIFO
@@ -749,8 +777,8 @@ while (running) {
     // Update absolute cycle time
     _currentCycleTimeNs += _cycleTimeNs;
 
-    // Read fieldbus inputs
-    readInputBus();
+    // Read fieldbus inputs (via undoCore::IoBus)
+    readInputBus();  // calls bus->waitCycle() -> processImage.copyIn()
 
     // Fork: wake all workers
     workerCv.notify_all();
@@ -758,8 +786,8 @@ while (running) {
     // Join: wait for workers with timeout
     masterCv.wait_for(...);
 
-    // Write fieldbus outputs
-    writeOutputBus();
+    // Write fieldbus outputs (via undoCore::IoBus)
+    writeOutputBus(); // calls bus->notifyDone() -> processImage.copyOut()
 }
 
 // 2. Worker threads run with SCHED_FIFO (lower priority)
@@ -909,7 +937,8 @@ $ cat /sys/devices/system/cpu/isolated
                     <td><code>UndoMasterTaskBase</code></td>
                     <td>
                         <code>start()</code>, <code>stop()</code>, <code>getCurrentCycleTimeNs()</code>,
-                        <code>getCurrentCycleTimeMs()</code>, <code>registerWorker()</code>
+                        <code>getCurrentCycleTimeMs()</code>, <code>registerWorker()</code>,
+                        <code>readInputBus()</code>, <code>writeOutputBus()</code>
                     </td>
                 </tr>
                 <tr>

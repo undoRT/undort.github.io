@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>st2cpp — Documentation | undoRT</title>
+    <title>undoBUS — Documentation | undoRT</title>
     <link rel="icon" type="image/png" href="../assets/undoRT_logo.png">
     <link rel="manifest" href="../assets/manifest.json">
     <link rel="apple-touch-icon" href="../assets/undoRT_logo.png">
@@ -20,6 +20,7 @@
             --text:           #f3f4f6;
             --text-muted:     #9ca3af;
             --green:          #34d399;
+            --yellow:         #fbbf24;
             --sidebar-width:  260px;
             --header-h:       56px;
         }
@@ -68,6 +69,12 @@
             border: 1px solid rgba(0,180,216,.2);
             font-weight: 600;
             white-space: nowrap;
+        }
+
+        .topbar-version.placeholder {
+            background: rgba(156,163,175,.1);
+            color: var(--text-muted);
+            border-color: rgba(156,163,175,.2);
         }
 
         .topbar-links {
@@ -430,36 +437,41 @@
             color: var(--green);
         }
 
+        .callout.placeholder {
+            background: rgba(156,163,175,.05);
+            border: 1px dashed rgba(156,163,175,.25);
+            color: var(--text-muted);
+        }
+
         .status-pill {
             display: inline-flex; align-items: center; gap: 6px;
             font-size: .72rem; font-weight: 600;
             padding: 3px 10px; border-radius: 20px;
+            margin-left: 10px; vertical-align: middle;
+        }
+
+        .status-pill.in-development {
+            background: rgba(245,158,11,.1);
+            border: 1px solid rgba(245,158,11,.2);
+            color: #fbbf24;
+        }
+
+        .status-pill.in-development::before {
+            content: ''; width: 6px; height: 6px;
+            border-radius: 50%; background: #fbbf24;
+            box-shadow: 0 0 5px #fbbf24;
+        }
+
+        .status-pill.available {
             background: rgba(52,211,153,.1);
             border: 1px solid rgba(52,211,153,.25);
             color: var(--green);
-            margin-left: 10px; vertical-align: middle;
         }
 
-        .status-pill::before {
+        .status-pill.available::before {
             content: ''; width: 6px; height: 6px;
             border-radius: 50%; background: var(--green);
             box-shadow: 0 0 5px var(--green);
-        }
-
-        .status-pill.next-release{
-            display: inline-flex; align-items: center; gap: 6px;
-            font-size: .72rem; font-weight: 600;
-            padding: 3px 10px; border-radius: 20px;
-            background: rgba(174, 0, 255, 0.1);
-            border: 1px solid rgba(243, 9, 255, 0.2);
-            color: #f975e9;
-            margin-left: 10px; vertical-align: middle;
-        }
-
-        .status-pill.next-release::before {
-            content: ''; width: 6px; height: 6px;
-            border-radius: 50%; background: #f975e9;
-            box-shadow: 0 0 5px #f975e9;
         }
 
         .feature-list {
@@ -481,6 +493,36 @@
             font-weight: 700;
             flex-shrink: 0;
             margin-top: 1px;
+        }
+
+        /* ── Coming soon overlay ── */
+        .coming-soon-banner {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: rgba(245,158,11,.06);
+            border: 1px solid rgba(245,158,11,.15);
+            border-radius: 12px;
+            padding: 20px 28px;
+            margin: 32px 0 24px;
+        }
+
+        .coming-soon-banner-icon {
+            font-size: 2.2rem;
+            flex-shrink: 0;
+        }
+
+        .coming-soon-banner h3 {
+            color: #fbbf24;
+            font-size: 1rem;
+            font-weight: 700;
+            margin: 0 0 4px 0;
+        }
+
+        .coming-soon-banner p {
+            color: var(--text-muted);
+            font-size: .9rem;
+            margin: 0;
         }
 
         @media (max-width: 768px) {
@@ -592,11 +634,11 @@
 
 <header class="topbar">
     <a href="index.html">
-        <img src="../assets/st2cpp_logo.png" alt="st2cpp" class="topbar-logo">
+        <img src="../assets/undoBUS_logo.png" alt="undoBUS" class="topbar-logo">
     </a>
     <div class="topbar-sep"></div>
-    <a href="index.html" class="topbar-product">st2cpp</a>
-    <span class="topbar-version">v0.1.2</span>
+    <a href="index.html" class="topbar-product">undoBUS</a>
+    <span class="topbar-version placeholder">Coming Soon</span>
 
     <div class="topbar-actions">
         <button class="toc-toggle" aria-label="Toggle table of contents" aria-expanded="false">
@@ -624,7 +666,7 @@
                 </svg>
             </button>
             <div class="nav-dropdown-menu">
-                <a href="index.html" class="current">
+                <a href="../st2cpp/">
                     <strong>st2cpp</strong>
                     <span>ST → C++ transpiler docs</span>
                 </a>
@@ -636,7 +678,7 @@
                     <strong>undoPLC</strong>
                     <span>Multi-threading PLC infrastructure</span>
                 </a>
-                <a href="../undoBUS/">
+                <a href="index.html" class="current">
                     <strong>undoBUS</strong>
                     <span>Fieldbus master implementations</span>
                 </a>
@@ -645,373 +687,303 @@
         </div>
 
         <a href="api/">API Reference</a>
-        <a href="https://github.com/undoRT/st2cpp" target="_blank" class="gh">GitHub</a>
+        <a href="https://github.com/undoRT/undoBUS" target="_blank" class="gh">GitHub</a>
     </nav>
 </header>
 
 <div class="layout">
 
     <nav class="sidebar" id="sidebar">
-        <div class="sidebar-section-title">Getting Started</div>
+        <div class="sidebar-section-title">Overview</div>
         <a href="#overview" class="active">Overview</a>
-        <a href="#installation">Installation</a>
-        <a href="#quick-start">Quick Start</a>
-
-        <div class="sidebar-section-title">Usage</div>
-        <a href="#cli">CLI Reference</a>
-        <a href="#single-file">Single File Mode</a>
-        <a href="#project-mode">Project Mode</a>
-        <a href="#example">Full Example</a>
-
-        <div class="sidebar-section-title">Language</div>
-        <a href="#supported">Supported Constructs</a>
-        <a href="#type-mapping">Type Mapping</a>
-        <a href="#function-calls">Function Calls</a>
-        <a href="#limitations">Known Limitations</a>
-
-        <div class="sidebar-section-title">Internals</div>
         <a href="#architecture">Architecture</a>
-        <a href="#project-layout">Project Layout</a>
-        <a href="api/">API Reference (Doxygen) ↗</a>
+
+        <div class="sidebar-section-title">Protocols</div>
+        <a href="#ethercat">EtherCAT</a>
+        <a href="#profibus">Profibus</a>
+        <a href="#others">Other Protocols</a>
+
+        <div class="sidebar-section-title">Integration</div>
+        <a href="#undo-core">Integration with undoCore</a>
+        <a href="#undo-plc">Integration with undoPLC</a>
+
+        <div class="sidebar-section-title">Status</div>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#api">API Reference</a>
     </nav>
 
     <main class="content">
 
-        <h1>st2cpp <span class="status-pill">Released</span></h1>
+        <h1>undoBUS <span class="status-pill in-development">In Development</span></h1>
         <p class="lead">
-            A transpiler that compiles IEC 61131-3 Structured Text into clean, native C++17.
-            No virtual machine, no interpreter — just standard C++ you can compile, debug, and integrate anywhere.
+            Fieldbus master implementations for the undoRT ecosystem — built on <a href="../undoCore/">undoCore</a>'s <code>IoBus</code> interface.
         </p>
+
+        <!-- ─── Coming Soon Banner ─── -->
+        <div class="coming-soon-banner">
+            <div class="coming-soon-banner-icon">🚧</div>
+            <div>
+                <h3>In Active Development</h3>
+                <p>
+                    undoBUS is the next major component of the undoRT ecosystem.
+                    Follow the <a href="https://github.com/undoRT/undoBUS" target="_blank">GitHub repository</a>
+                    for progress updates.
+                </p>
+            </div>
+        </div>
 
         <h2 id="overview">Overview</h2>
         <p>
-            st2cpp is the compiler component of the <a href="../index.html">undoRT ecosystem</a>.
-            It takes <code>.st</code> source files as input and produces <code>.hpp</code> / <code>.cpp</code> pairs
-            that can be compiled with any C++17-capable toolchain.
-        </p>
-        <p>
-            Function Blocks become C++ structs. Programs become classes with a <code>run()</code> method.
-            The output is readable and auditable — not obfuscated machine code.
+            <strong>undoBUS</strong> provides fieldbus master implementations that integrate seamlessly with
+            the undoRT ecosystem. Built on the <code>IoBus</code> interface defined in
+            <a href="../undoCore/">undoCore</a>, undoBUS will offer deterministic, real-time fieldbus
+            communication for industrial automation.
         </p>
 
+        <div class="callout info">
+            <strong>💡 Design Philosophy:</strong> undoBUS implements the <code>IoBus</code> contract,
+            ensuring that any fieldbus protocol can be used interchangeably with undoPLC.
+            The bus drives the cycle timing — undoPLC is always the follower.
+        </div>
+
+        <h2 id="architecture">Architecture</h2>
+
+        <p>
+            undoBUS follows the <code>IoBus</code> synchronization protocol defined in undoCore:
+        </p>
+
+        <pre><code>/**
+ * Synchronization protocol:
+ *
+ *   [Bus]  cycleStart()  → copyIn() → notifyPlc()
+ *   [PLC]                                          → execute() → notifyBus()
+ *   [Bus]  copyOut() → sendFrame()
+ */</code></pre>
+
+        <h3>Core Components</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Component</th>
+                    <th>Description</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>EtherCATMaster</code></td>
+                    <td>IgH EtherCAT Master wrapper with real-time scheduling</td>
+                    <td><span style="color: #fbbf24;">● Planned</span></td>
+                </tr>
+                <tr>
+                    <td><code>ProfibusMaster</code></td>
+                    <td>Profibus DP master implementation</td>
+                    <td><span style="color: #4b5563;">● Future</span></td>
+                </tr>
+                <tr>
+                    <td><code>SimulatedBus</code></td>
+                    <td>Simulated fieldbus for testing and development</td>
+                    <td><span style="color: #fbbf24;">● Planned</span></td>
+                </tr>
+                <tr>
+                    <td><code>IoBusAdapter</code></td>
+                    <td>Adapter for custom fieldbus implementations</td>
+                    <td><span style="color: #fbbf24;">● Planned</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 id="ethercat">EtherCAT</h2>
+
+        <p>
+            The first fieldbus protocol to be supported by undoBUS is <strong>EtherCAT</strong>,
+            using the <a href="https://www.etherlab.org/en/ethercat/" target="_blank">IgH EtherCAT Master</a>
+            as the underlying stack.
+        </p>
+
+        <h3>Key Features (Planned)</h3>
         <ul class="feature-list">
-            <li>All IEC 61131-3 elementary types</li>
-            <li>STRUCT, ENUM, arrays, pointers</li>
-            <li>FUNCTION, FUNCTION_BLOCK, PROGRAM</li>
-            <li>FB inheritance with SUPER^ access</li>
-            <li>Named and positional call syntax</li>
-            <li>VAR_OUTPUT binding via =></li>
-            <li>Modular project generation</li>
-            <li>Automatic dependency sorting</li>
-            <li>Header-only runtime (zero deps)</li>
-            <li>Single binary, no install required</li>
+            <li>Real-time user-space operation</li>
+            <li>Process Image mapping via <code>undoCore::ProcessImage</code></li>
+            <li>Distributed Clock (DC) synchronization</li>
+            <li>Hot-connect / dynamic PDO mapping</li>
+            <li>Diagnostic counters and error reporting</li>
+            <li>Watchdog with safe-state handling</li>
+        </ul>
+
+        <div class="callout warn">
+            <strong>⚠️ Requirements:</strong>
+            <ul style="margin: 8px 0 0 20px; color: #fcd34d;">
+                <li>IgH EtherCAT Master kernel module</li>
+                <li>PREEMPT_RT kernel</li>
+                <li>Root privileges for real-time scheduling</li>
+            </ul>
+        </div>
+
+        <h3>Anticipated API</h3>
+        <pre><code>#include <undoBUS/EtherCATMaster.hpp>
+#include <undoCore/undoCore.hpp>
+
+using namespace undoCore;
+using namespace undoBUS;
+
+// 1024 inputs, 512 outputs
+ProcessImage<1024, 512> pi;
+
+// Configure and start EtherCAT master
+EtherCATMaster bus("eth0", "/path/to/eni.xml", pi);
+bus.start();
+
+// PLC cycle — bus drives the timing
+while (running) {
+    // Bus waits for cycle and copies inputs (copyIn)
+    if (!bus.waitCycle(1000)) {
+        // Watchdog timeout
+        break;
+    }
+
+    // PLC executes user logic (reads from pi, writes to pi)
+    plc.run();
+
+    // Notify bus that PLC is done
+    bus.notifyDone();  // bus calls copyOut() and sends frame
+}</code></pre>
+
+        <h2 id="profibus">Profibus</h2>
+
+        <p>
+            Profibus DP master support is planned as a future extension. The implementation will follow
+            the same <code>IoBus</code> contract, ensuring protocol-agnostic integration with undoPLC.
+        </p>
+
+        <div class="callout placeholder">
+            <strong>📋 Planned:</strong> Profibus DP master with configurable baud rates,
+            slave parameterization, and diagnostic support.
+        </div>
+
+        <h2 id="others">Other Protocols</h2>
+
+        <p>
+            Additional fieldbus protocols are under evaluation based on community interest and industrial
+            demand. Potential candidates include:
+        </p>
+
+        <ul style="color: var(--text-muted); list-style: none; padding: 0;">
+            <li style="margin-bottom: 4px;">• <strong>PROFINET</strong> — Industrial Ethernet standard</li>
+            <li style="margin-bottom: 4px;">• <strong>Modbus TCP/RTU</strong> — Widely used serial protocol</li>
+            <li style="margin-bottom: 4px;">• <strong>CANopen</strong> — CAN-based fieldbus</li>
+            <li style="margin-bottom: 4px;">• <strong>EtherNet/IP</strong> — ODVA industrial protocol</li>
         </ul>
 
         <div class="callout info">
-            <strong>💡 Integration:</strong> The generated C++ code is designed to work seamlessly with
-            <a href="../undoCore/">undoCore</a> and <a href="../undoPLC/">undoPLC</a>.
-            Use <code>ProcessImage</code> and <code>IoBus</code> for I/O management.
+            <strong>🔌 Extensible Design:</strong> The <code>IoBus</code> interface makes it straightforward
+            to add support for any fieldbus protocol. Contributions are welcome!
         </div>
 
-        <h2 id="installation">Installation</h2>
+        <h2 id="undo-core">Integration with undoCore</h2>
 
-        <h3>Download pre-built binary</h3>
         <p>
-            Grab the latest release from
-            <a href="https://github.com/undoRT/st2cpp/releases" target="_blank">GitHub Releases</a>:
+            undoBUS is built on <a href="../undoCore/">undoCore</a>, using:
         </p>
-        <table>
-            <thead><tr><th>Platform</th><th>File</th></tr></thead>
-            <tbody>
-                <tr><td>Linux x64</td><td><code>st2cpp-linux-x64.tar.gz</code></td></tr>
-                <tr><td>Linux ARM64</td><td><code>st2cpp-linux-arm64.tar.gz</code></td></tr>
-                <tr><td>macOS ARM64</td><td><code>st2cpp-macos-arm64.tar.gz</code></td></tr>
-                <tr><td>Windows x64</td><td><code>st2cpp-win-x64.zip</code></td></tr>
-            </tbody>
-        </table>
-        <pre><code># Linux / macOS
-tar -xzf st2cpp-*.tar.gz
-./st2cpp --help
 
-# Windows
-unzip st2cpp-win-x64.zip
-st2cpp.exe --help</code></pre>
+        <ul style="color: var(--text-muted); margin-left: 20px;">
+            <li><strong><code>IoBus</code></strong> — Abstract interface for all fieldbus masters</li>
+            <li><strong><code>ProcessImage</code></strong> — Double-buffered memory layout for I/O</li>
+            <li><strong><code>types.hpp</code></strong> — IEC 61131-3 type mapping</li>
+        </ul>
 
-        <h3>Build from source</h3>
-        <p>Prerequisites: GCC 7+ / Clang 5+ / MSVC 2017+, CMake 3.16+</p>
-        <pre><code>git clone https://github.com/undoRT/st2cpp.git
-cd st2cpp
-./build.sh
+        <pre><code>#include <undoCore/undoCore.hpp>
 
-# Or manually:
-mkdir build && cd build
-cmake .. -DCMAKE_BUILD_TYPE=Release
-make -j$(nproc)</code></pre>
+class EtherCATMaster : public IoBus {
+    // Implements all IoBus virtual methods
+    // Uses ProcessImage for I/O mapping
+};</code></pre>
 
-        <h2 id="quick-start">Quick Start</h2>
-        <pre><code># Transpile a single file
-./st2cpp program.st --namespace myplc
+        <h2 id="undo-plc">Integration with undoPLC</h2>
 
-# Transpile an entire workspace in project mode
-./st2cpp --workspace ./src --project-style --output-dir build --namespace myplc
-
-# Compile the generated C++
-g++ -std=c++17 -I./st2cpp_includes build/Programs/Main.cpp -o plc_main</code></pre>
-
-        <h2 id="cli">CLI Reference</h2>
-        <table>
-            <thead><tr><th>Option</th><th>Description</th><th>Default</th></tr></thead>
-            <tbody>
-                <tr><td><code>-o &lt;file&gt;</code></td><td>Output <code>.cpp</code> source file</td><td><code>&lt;input&gt;.cpp</code></td></tr>
-                <tr><td><code>-H &lt;file&gt;</code></td><td>Output <code>.hpp</code> header file</td><td><code>&lt;input&gt;.hpp</code></td></tr>
-                <tr><td><code>--namespace &lt;name&gt;</code></td><td>C++ namespace for generated code</td><td><code>st2cpp</code></td></tr>
-                <tr><td><code>--runtime &lt;file&gt;</code></td><td>Custom runtime header</td><td><code>st2cpp_types.hpp</code></td></tr>
-                <tr><td><code>--workspace &lt;path&gt;</code></td><td>Process all <code>.st</code> files recursively</td><td>—</td></tr>
-                <tr><td><code>--project-style</code></td><td>Modular output with dependency management</td><td>off</td></tr>
-                <tr><td><code>--output-dir &lt;dir&gt;</code></td><td>Output directory (workspace/project mode)</td><td><code>generated/</code></td></tr>
-                <tr><td><code>--tokens</code></td><td>Dump token stream and exit (debug)</td><td>—</td></tr>
-                <tr><td><code>-h, --help</code></td><td>Show help message</td><td>—</td></tr>
-            </tbody>
-        </table>
-
-        <h2 id="single-file">Single File Mode</h2>
         <p>
-            The default mode. Produces one <code>.hpp</code> and one <code>.cpp</code> from a single <code>.st</code> source.
-            Best for small projects or quick experiments.
+            undoPLC consumes the <code>IoBus</code> interface, making it completely agnostic to the
+            underlying fieldbus protocol:
         </p>
-        <pre><code>./st2cpp counter.st -o counter.cpp -H counter.hpp --namespace myplc</code></pre>
-        <p>
-            Include <code>st2cpp_types.hpp</code> (from the <code>st2cpp_includes/</code> folder) in your compiler's
-            include path when building the output:
-        </p>
-        <pre><code>g++ -std=c++17 -I./st2cpp_includes counter.cpp -o counter</code></pre>
 
-        <h2 id="project-mode">Project Mode</h2>
-        <p>
-            For workspaces with multiple POUs. st2cpp scans all <code>.st</code> files recursively,
-            resolves dependencies between Function Blocks via topological sort, and generates a
-            circular-dependency-safe header layout:
-        </p>
-        <pre><code>./st2cpp --workspace ./plc_src --project-style --output-dir build --namespace myplc</code></pre>
-        <pre><code>build/
-├── SimpleGVLs.hpp        # ENUMs, simple STRUCTs, simple globals
-├── FunctionBlocks.hpp    # Aggregator — includes all FB headers
-├── FunctionBlocks/       # One .hpp/.cpp per Function Block
-│   ├── Timer.hpp / .cpp
-│   └── Counter.hpp / .cpp
-├── GVLs.hpp / .cpp       # Complex globals (STRUCTs containing FBs)
-├── Functions.hpp / .cpp  # Global functions
-└── Programs/
-    └── Main.hpp / .cpp</code></pre>
-
-        <div class="callout info">
-            Use project mode for any workspace with more than 2–3 Function Blocks.
-            It enables incremental compilation and keeps each FB as a separate file in your IDE.
-        </div>
-
-        <h2 id="example">Full Example</h2>
-        <h3>Input (counter.st)</h3>
-        <pre><code>FUNCTION_BLOCK Counter
-    VAR_INPUT
-        Enable : BOOL;
-        Reset  : BOOL;
-    END_VAR
-    VAR_OUTPUT
-        Count : INT;
-    END_VAR
-
-    IF Reset THEN
-        Count := 0;
-    ELSIF Enable THEN
-        Count := Count + 1;
-    END_IF
-END_FUNCTION_BLOCK
-
-PROGRAM Main
-    VAR
-        C : Counter;
-    END_VAR
-
-    C(Enable := TRUE, Reset := FALSE);
-END_PROGRAM</code></pre>
-
-        <h3>Generated header (counter.hpp)</h3>
-        <pre><code>#pragma once
-#include "st2cpp_types.hpp"
-
-namespace myplc {
-
-// FUNCTION BLOCK COUNTER
-struct COUNTER {
-public:
-    // VAR_INPUT
-    Bool ENABLE{};
-    Bool RESET{};
-    // VAR_OUTPUT
-    Int16 COUNT{};
-
-// SETTER/GETTER
-    inline void set_ENABLE(Bool val) { ENABLE = val; }
-    inline void set_RESET(Bool val) { RESET = val; }
-    inline Int16 get_COUNT() const { return COUNT; }
-// End SETTER/GETTER
-
-    COUNTER();
-    void operator()();
-    virtual ~COUNTER() = default;
-};
-
-// PROGRAM MAIN
-struct MAIN {
-    COUNTER C{};
-
-    void run();
-};
-
-} // namespace myplc</code></pre>
-
-        <h3>Generated source (counter.cpp)</h3>
-        <pre><code>#include "counter.hpp"
-
-namespace myplc {
-
-// FUNCTION BLOCK COUNTER
-COUNTER::COUNTER() {}
-
-void COUNTER::operator()() {
-    if (RESET) {
-        COUNT = 0;
-    } else if (ENABLE) {
-        COUNT = COUNT + 1;
+        <pre><code>// In undoPLC MasterTask
+class DemoMasterTask : public UndoMasterTaskBase {
+protected:
+    void readInputBus() override {
+        // Bus waits for cycle and copies inputs
+        if (!_bus->waitCycle(1000)) {
+            // Watchdog timeout
+            handleWatchdog();
+        }
     }
-}
-// END FUNCTION BLOCK COUNTER
 
-void MAIN::run() {
-    C.set_ENABLE(true);
-    C.set_RESET(false);
-    C();
-}
+    void writeOutputBus() override {
+        // Bus copies outputs and sends frame
+        _bus->notifyDone();
+    }
+};</code></pre>
 
-} // namespace myplc</code></pre>
-
-        <h2 id="supported">Supported Constructs</h2>
-        <table>
-            <thead><tr><th>Category</th><th>Constructs</th></tr></thead>
-            <tbody>
-                <tr><td>POUs</td><td><code>FUNCTION</code>, <code>FUNCTION_BLOCK</code>, <code>PROGRAM</code></td></tr>
-                <tr><td>Variable sections</td><td><code>VAR</code>, <code>VAR_INPUT</code>, <code>VAR_OUTPUT</code>, <code>VAR_IN_OUT</code>, <code>VAR_TEMP</code>, <code>VAR_EXTERNAL</code>, <code>VAR_GLOBAL</code></td></tr>
-                <tr><td>Data types</td><td>All IEC 61131-3 elementary types (<code>BOOL</code>, <code>INT</code>, <code>DINT</code>, <code>REAL</code>, <code>LREAL</code>, <code>STRING</code>, <code>TIME</code>, …)</td></tr>
-                <tr><td>User-defined types</td><td><code>STRUCT … END_STRUCT</code>, <code>ENUM … END_ENUM</code> via <code>TYPE … END_TYPE</code></td></tr>
-                <tr><td>Arrays</td><td>Single and multi-dimensional; bounds-checked via <code>STArray&lt;T,Low,High&gt;</code> (from undoCore)</td></tr>
-                <tr><td>Pointers</td><td><code>POINTER TO</code>, <code>REF_TO</code></td></tr>
-                <tr><td>Control flow</td><td><code>IF/ELSIF/ELSE</code>, <code>FOR/TO/BY/DO</code>, <code>WHILE/DO</code>, <code>REPEAT/UNTIL</code>, <code>CASE/OF</code></td></tr>
-                <tr><td>Calls</td><td>Positional, named (<code>:=</code>), output binding (<code>=></code>), IN_OUT reference</td></tr>
-                <tr><td>Inheritance</td><td><code>FUNCTION_BLOCK B EXTENDS A</code> with <code>SUPER^</code> access</td></tr>
-                <tr><td>Initializers</td><td>Variable initializers, array literal initializers</td></tr>
-            </tbody>
-        </table>
-
-        <h2 id="type-mapping">Type Mapping</h2>
-        <p>
-            st2cpp uses <a href="../undoCore/">undoCore</a> for type definitions, ensuring
-            consistent type mapping across the entire undoRT ecosystem.
-        </p>
-        <table>
-            <thead><tr><th>ST Type</th><th>C++ Type</th><th>Notes</th></tr></thead>
-            <tbody>
-                <tr><td><code>BOOL</code></td><td><code>bool</code></td><td></td></tr>
-                <tr><td><code>SINT</code></td><td><code>int8_t</code></td><td></td></tr>
-                <tr><td><code>INT</code></td><td><code>int16_t</code></td><td></td></tr>
-                <tr><td><code>DINT</code></td><td><code>int32_t</code></td><td></td></tr>
-                <tr><td><code>LINT</code></td><td><code>int64_t</code></td><td></td></tr>
-                <tr><td><code>USINT</code></td><td><code>uint8_t</code></td><td></td></tr>
-                <tr><td><code>UINT</code></td><td><code>uint16_t</code></td><td></td></tr>
-                <tr><td><code>UDINT</code></td><td><code>uint32_t</code></td><td></td></tr>
-                <tr><td><code>ULINT</code></td><td><code>uint64_t</code></td><td></td></tr>
-                <tr><td><code>REAL</code></td><td><code>float</code></td><td></td></tr>
-                <tr><td><code>LREAL</code></td><td><code>double</code></td><td></td></tr>
-                <tr><td><code>STRING</code></td><td><code>std::string</code></td><td></td></tr>
-                <tr><td><code>TIME</code></td><td><code>uint32_t</code></td><td>milliseconds</td></tr>
-                <tr><td><code>ARRAY[L..H] OF T</code></td><td><code>STArray&lt;T, L, H&gt;</code></td><td>bounds-checked (from undoCore)</td></tr>
-                <tr><td><code>POINTER TO T</code></td><td><code>T*</code></td><td></td></tr>
-                <tr><td><code>VAR_IN_OUT T</code></td><td><code>VarInOut&lt;T&gt;</code> (= <code>T*</code>)</td><td>from undoCore</td></tr>
-            </tbody>
-        </table>
-
-        <h2 id="function-calls">Function Call Translation</h2>
-        <table>
-            <thead><tr><th>ST Syntax</th><th>C++ Output</th></tr></thead>
-            <tbody>
-                <tr><td><code>foo(10, FALSE)</code></td><td>Positional arguments mapped in declaration order</td></tr>
-                <tr><td><code>foo(a := 1, b := 2)</code></td><td>Named arguments reordered to match declaration</td></tr>
-                <tr><td><code>foo(out => myVar)</code></td><td>Output bound as <code>&amp;myVar</code>, unbound outputs get a temp variable</td></tr>
-                <tr><td><code>foo(inout := myVar)</code></td><td>IN_OUT bound as reference</td></tr>
-                <tr><td><code>FB.method()</code></td><td>Method call on FB struct member</td></tr>
-                <tr><td><code>SUPER^.method()</code></td><td>Base class method call via C++ inheritance</td></tr>
-            </tbody>
-        </table>
-
-        <h2 id="limitations">Known Limitations (Beta)</h2>
-        <div class="callout warn">
-            st2cpp is in active development. The following features are not yet supported.
+        <div class="callout success">
+            <strong>✅ Protocol Agnostic:</strong> undoPLC works with <em>any</em> fieldbus that implements
+            the <code>IoBus</code> interface — EtherCAT, Profibus, Modbus, or a simulated bus for testing.
         </div>
+
+        <h2 id="roadmap">Roadmap</h2>
+
         <table>
-            <thead><tr><th>Limitation</th><th>Status</th></tr></thead>
+            <thead>
+                <tr>
+                    <th>Milestone</th>
+                    <th>Description</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
             <tbody>
-                <tr><td>Semantic analysis / type checking</td><td>In progress</td></tr>
-                <tr><td>Error recovery (first error stops compilation)</td><td>Planned v0.2</td></tr>
-                <tr><td><code>ARRAY[*]</code> variable-length arrays</td><td>Planned</td></tr>
-                <tr><td><code>VAR_CONFIG</code></td><td>Planned</td></tr>
-                <tr><td>SFC (<code>ACTION</code>, <code>TRANSITION</code>)</td><td>Planned</td></tr>
-                <tr><td>IEC standard function library (TON, CTU, ABS…)</td><td>Planned v0.2</td></tr>
+                <tr>
+                    <td>v0.1.0</td>
+                    <td>Basic EtherCAT master wrapper with <code>IoBus</code> interface</td>
+                    <td><span style="color: #fbbf24;">● Planned</span></td>
+                </tr>
+                <tr>
+                    <td>v0.2.0</td>
+                    <td>Distributed Clock (DC) synchronization support</td>
+                    <td><span style="color: #4b5563;">● Future</span></td>
+                </tr>
+                <tr>
+                    <td>v0.3.0</td>
+                    <td>Simulated bus for testing and development</td>
+                    <td><span style="color: #4b5563;">● Future</span></td>
+                </tr>
+                <tr>
+                    <td>v1.0.0</td>
+                    <td>Production-ready EtherCAT master with full diagnostics</td>
+                    <td><span style="color: #4b5563;">● Future</span></td>
+                </tr>
+                <tr>
+                    <td>v1.1.0</td>
+                    <td>Profibus DP master implementation</td>
+                    <td><span style="color: #4b5563;">● Future</span></td>
+                </tr>
             </tbody>
         </table>
-
-        <h2 id="architecture">Architecture</h2>
-        <p>
-            st2cpp follows a classic compiler frontend pipeline. All stages are hand-written in C++17
-            with no external parser generator dependencies.
-        </p>
-        <pre><code>ST Source
-  └─▶  Lexer          (Token stream)
-         └─▶  Parser       (Recursive descent → AST)
-                └─▶  CodeGen     (AST visitor → C++17 source)</code></pre>
-
-        <p>
-            The AST uses <code>std::variant</code> for node types (<code>ExprVariant</code>, <code>StmtVariant</code>)
-            with <code>std::visit</code> dispatch in the code generator — no virtual dispatch, no
-            <code>dynamic_cast</code>.
-        </p>
 
         <div class="callout info">
-            <strong>🔗 Integration with undoCore:</strong> The generated code includes
-            <code>#include &lt;undoCore/types.hpp&gt;</code> and uses <code>STArray</code> and
-            <code>VarInOut</code> from the undoCore library.
+            <strong>📖 More information:</strong> Visit the
+            <a href="https://github.com/undoRT/undoBUS" target="_blank">GitHub repository</a>
+            for the latest development status and contributing guidelines.
         </div>
 
-        <h2 id="project-layout">Repository Layout</h2>
-        <pre><code>st2cpp/
-├── include/
-│   ├── ast/           # AST node definitions (std::variant-based)
-│   ├── lexer/         # Token types and Lexer class
-│   ├── parser/        # Parser class and helpers
-│   └── codegen/       # CodeGenerator class
-├── src/
-│   ├── lexer/         # Lexer implementation
-│   ├── parser/        # Parser + statement parser
-│   ├── codegen/       # Code generator (~3600 lines)
-│   └── cli/           # main.cpp + argument parsing
-├── st2cpp_includes/
-│   └── st2cpp_types.hpp   # Header-only runtime (zero deps)
-├── tests/             # Example .st programs + expected output
-├── scripts/           # build.sh, generate_docs.sh
-└── CMakeLists.txt</code></pre>
-
+        <h2 id="api">API Reference</h2>
         <p>
-            Full API documentation is generated with Doxygen:
+            Full API documentation will be generated with Doxygen when the first release is available:
             <a href="api/">Browse API Reference</a>
         </p>
+
+        <div class="callout placeholder">
+            <strong>📝 Documentation in Progress:</strong> API documentation will be generated
+            as the implementation is completed. Check back after the v0.1.0 release.
+        </div>
 
     </main>
 </div>

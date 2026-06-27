@@ -54,7 +54,6 @@
             width: auto;
         }
 
-        /* ── Main nav (desktop: inline row / mobile: dropdown panel) ── */
         .main-nav {
             display: flex;
             align-items: center;
@@ -84,7 +83,6 @@
             color: var(--bg-main);
         }
 
-        /* ── "Docs" dropdown ── */
         .nav-dropdown {
             position: relative;
         }
@@ -182,7 +180,6 @@
             font-style: italic;
         }
 
-        /* ── Hamburger toggle (hidden on desktop) ── */
         .nav-toggle {
             display: none;
             flex-direction: column;
@@ -257,7 +254,6 @@
             margin-bottom: 0;
         }
 
-        /* Pipeline diagram */
         .pipeline {
             display: flex;
             align-items: center;
@@ -325,6 +321,26 @@
         .dot { width: 8px; height: 8px; border-radius: 50%; }
         .dot.green { background: #34d399; }
         .dot.gray  { background: #4b5563; }
+
+        .shared-core-section {
+            background: rgba(0, 180, 216, 0.05);
+            border: 1px solid rgba(0, 180, 216, 0.15);
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin-top: 20px;
+        }
+
+        .shared-core-section h3 {
+            color: var(--cyan-primary);
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .shared-core-section p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
 
         footer {
             text-align: center;
@@ -442,10 +458,18 @@
                         <strong>st2cpp</strong>
                         <span>ST → C++ transpiler docs</span>
                     </a>
+                    <a href="undoCore/">
+                        <strong>undoCore</strong>
+                        <span>Header-only core infrastructure</span>
+                    </a>
                     <a href="undoPLC/">
                         <strong>undoPLC</strong>
                         <span>Multi-threading PLC infrastructure</span>
-                </a>
+                    </a>
+                    <a href="undoBUS/">
+                        <strong>undoBUS</strong>
+                        <span>Fieldbus master implementations</span>
+                    </a>
                     <span class="nav-dropdown-soon">More products coming soon</span>
                 </div>
             </div>
@@ -461,7 +485,7 @@
         <section class="architecture-card">
             <h2>The Integration Pipeline</h2>
             <p>
-                The full undoRT pipeline moves from Structured Text source to deterministic hardware execution in four stages. Only the first stage — the <strong>st2cpp</strong> compiler — is currently released. The remaining components are in active development.
+                The full undoRT pipeline moves from Structured Text source to deterministic hardware execution in four stages. The first two stages — the <strong>st2cpp</strong> compiler and the <strong>undoCore</strong> foundation library — are now released. The remaining components are in active development.
             </p>
 
             <div class="pipeline">
@@ -472,7 +496,7 @@
                 <span class="pipeline-arrow">→</span>
                 <div class="pipeline-node">
                     <div class="pipeline-box ready">st2cpp</div>
-                    <span class="pipeline-label">Released</span>
+                    <span class="pipeline-label">Released v0.1.2</span>
                 </div>
                 <span class="pipeline-arrow">→</span>
                 <div class="pipeline-node">
@@ -481,8 +505,13 @@
                 </div>
                 <span class="pipeline-arrow">→</span>
                 <div class="pipeline-node">
+                    <div class="pipeline-box ready">undoCore</div>
+                    <span class="pipeline-label">Released v0.1.0</span>
+                </div>
+                <span class="pipeline-arrow">→</span>
+                <div class="pipeline-node">
                     <div class="pipeline-box ready">undoPLC</div>
-                    <span class="pipeline-label">Released</span>
+                    <span class="pipeline-label">Released v0.2.0</span>
                 </div>
                 <span class="pipeline-arrow">→</span>
                 <div class="pipeline-node">
@@ -503,13 +532,34 @@
         </section>
 
         <section class="architecture-card">
+            <h2>Shared Core: undoCore</h2>
+            <p>
+                <strong>undoCore</strong> is the header-only foundation library that provides common contracts and data structures across all undoRT projects. It defines:
+            </p>
+            <ul style="color: var(--text-muted); margin: 10px 0 0 20px; list-style: none; padding: 0;">
+                <li style="margin-bottom: 6px;">• <strong><code style="color: var(--cyan-primary);">IoBus</code></strong> — Abstract interface for fieldbus master synchronization</li>
+                <li style="margin-bottom: 6px;">• <strong><code style="color: var(--cyan-primary);">ProcessImage</code></strong> — Double-buffered memory layout for IEC 61131-3 (%I, %Q, %M)</li>
+                <li style="margin-bottom: 6px;">• <strong><code style="color: var(--cyan-primary);">STArray</code></strong> — IEC 61131-3 compatible array with arbitrary bounds</li>
+                <li style="margin-bottom: 6px;">• <strong><code style="color: var(--cyan-primary);">VAR_IN_OUT</code></strong> — Reference wrapper for in-out parameters</li>
+                <li style="margin-bottom: 6px;">• <strong><code style="color: var(--cyan-primary);">IEC 61131-3 Types</code></strong> — Complete set of elementary types mapped to C++20</li>
+            </ul>
+
+            <div class="shared-core-section">
+                <h3>📦 Integrated with undoPLC v0.2.0</h3>
+                <p>
+                    undoPLC now uses undoCore as a submodule, leveraging <code>ProcessImage</code> for I/O management and <code>IoBus</code> as the contract for fieldbus communication. This ensures seamless interoperability between undoPLC and future undoBUS implementations.
+                </p>
+            </div>
+        </section>
+
+        <section class="architecture-card">
             <h2>The Deterministic Execution Loop</h2>
             <p>
                 Traditional SoftPLCs introduce overhead through intermediate virtual machines or interpretation layers.
-                <strong>undoPLC</strong> will bypass this by executing native C++ binaries compiled directly from Structured Text by <strong>st2cpp</strong> — no VM, no interpreter.
+                <strong>undoPLC</strong> bypasses this by executing native C++ binaries compiled directly from Structured Text by <strong>st2cpp</strong> — no VM, no interpreter.
             </p>
             <p>
-                When paired with <strong>undoOS</strong> (a Linux Preempt-RT kernel configuration), real-time tasks will be pinned to isolated CPU cores using FIFO scheduling priorities. Fieldbus communication via <strong>undoBUS</strong> (IgH EtherCAT Master) will run deterministically in user-space alongside the PLC runtime.
+                When paired with <strong>undoOS</strong> (a Linux Preempt-RT kernel configuration), real-time tasks are pinned to isolated CPU cores using FIFO scheduling priorities. Fieldbus communication via <strong>undoBUS</strong> (IgH EtherCAT Master) runs deterministically in user-space alongside the PLC runtime, using the <code>IoBus</code> interface defined in undoCore.
             </p>
             <p>
                 Today, the generated C++ from st2cpp can already be compiled and run standalone on any C++17-capable platform — the RT integration is the next step, not a prerequisite for using the compiler.
@@ -538,7 +588,6 @@
             var docsDrop  = document.querySelector('.nav-dropdown');
             var docsBtn   = document.querySelector('.nav-dropdown-toggle');
 
-            // Hamburger: open/close the mobile nav panel
             navToggle.addEventListener('click', function () {
                 var isOpen = mainNav.classList.toggle('nav-open');
                 navToggle.classList.toggle('active', isOpen);
@@ -549,14 +598,12 @@
                 }
             });
 
-            // "Docs" toggle: opens dropdown (desktop) / accordion (mobile)
             docsBtn.addEventListener('click', function (e) {
                 e.preventDefault();
                 var isOpen = docsDrop.classList.toggle('dropdown-open');
                 docsBtn.setAttribute('aria-expanded', isOpen);
             });
 
-            // Click outside closes both menus
             document.addEventListener('click', function (e) {
                 if (!docsDrop.contains(e.target)) {
                     docsDrop.classList.remove('dropdown-open');
@@ -569,7 +616,6 @@
                 }
             });
 
-            // Close the mobile panel after tapping a normal link
             mainNav.querySelectorAll('a').forEach(function (link) {
                 link.addEventListener('click', function () {
                     mainNav.classList.remove('nav-open');
