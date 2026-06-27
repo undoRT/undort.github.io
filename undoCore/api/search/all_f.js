@@ -1,11 +1,25 @@
 var searchData=
 [
-  ['lastcycletimeus_0',['lastCycleTimeUs',['../classundoCore_1_1IoBus.html#a9621afd2612ee3a9265fcee8165ad7b5',1,'undoCore::IoBus']]],
-  ['lasterror_1',['lastError',['../classundoCore_1_1IoBus.html#a163246efad4b800c4de44a3f1df93ddf',1,'undoCore::IoBus']]],
-  ['library_2',['1. Include the Library',['../md_README.html#autotoc_md6',1,'']]],
-  ['lint_3',['LINT',['../namespaceundoCore.html#a4c206a9fd36e3e23d2bb8fb9cb05f793',1,'undoCore']]],
-  ['literals_4',['Time Literals',['../md_README.html#autotoc_md16',1,'']]],
-  ['low_5',['low',['../classundoCore_1_1STArray.html#a4131742e816abe628a9cd2b917c3d6d4',1,'undoCore::STArray']]],
-  ['lreal_6',['LREAL',['../namespaceundoCore.html#aab5cdfb5271a2d131c0a942c68ba8dd8',1,'undoCore']]],
-  ['lword_7',['lword',['../namespaceundoCore.html#a8049ce3dcf306bfc49340f6fb20dcf00',1,'undoCore::Lword'],['../namespaceundoCore.html#af58b8f3aafb16b4e4ced33cb1a820762',1,'undoCore::LWORD']]]
+  ['iec_2061131_203_20type_20mapping_0',['3. IEC 61131-3 Type Mapping',['../md_README.html#autotoc_md15',1,'']]],
+  ['iec_2061131_203_20types_1',['4. Use IEC 61131-3 Types',['../md_README.html#autotoc_md9',1,'']]],
+  ['image_2',['image',['../md_README.html#autotoc_md7',1,'2. Define a Process Image'],['../md_README.html#autotoc_md13',1,'2. Process Image']]],
+  ['image_20usage_3',['Example 1: Basic Process Image Usage',['../md_README.html#autotoc_md20',1,'']]],
+  ['implement_20an_20iobus_4',['3. Implement an IoBus',['../md_README.html#autotoc_md8',1,'']]],
+  ['implementation_5',['Example 2: Custom IoBus Implementation',['../md_README.html#autotoc_md21',1,'']]],
+  ['include_20the_20library_6',['1. Include the Library',['../md_README.html#autotoc_md6',1,'']]],
+  ['inputbytes_7',['inputBytes',['../classundoCore_1_1ProcessImage.html#a2a0b5288587b92f14f684591c5b1a5f1',1,'undoCore::ProcessImage']]],
+  ['int_8',['INT',['../namespaceundoCore.html#ab4e8ed0290ae51996942043690648dfb',1,'undoCore']]],
+  ['int16_9',['Int16',['../namespaceundoCore.html#a8c9557af6e7be8c8f32856a99abc75a3',1,'undoCore']]],
+  ['int32_10',['Int32',['../namespaceundoCore.html#a023bcc7b901a76f91940574bacb387b5',1,'undoCore']]],
+  ['int64_11',['Int64',['../namespaceundoCore.html#a68c9b7f6f94530f6d52ee60c580b82d3',1,'undoCore']]],
+  ['int8_12',['Int8',['../namespaceundoCore.html#a03c786f58285c3611563063a65116fde',1,'undoCore']]],
+  ['integrate_20with_20cmake_13',['5. Integrate with CMake',['../md_README.html#autotoc_md10',1,'']]],
+  ['integration_20examples_14',['Integration Examples',['../md_README.html#autotoc_md19',1,'']]],
+  ['interface_15',['1. IoBus Interface',['../md_README.html#autotoc_md12',1,'']]],
+  ['iobus_16',['iobus',['../md_README.html#autotoc_md8',1,'3. Implement an IoBus'],['../classundoCore_1_1IoBus.html#a7dbfdd0956fb82e81c572832631ff377',1,'undoCore::IoBus::IoBus()=default'],['../classundoCore_1_1IoBus.html#aceae59c78d1ef2a9ef4b5368cf9af7c3',1,'undoCore::IoBus::IoBus(const IoBus &amp;)=delete'],['../classundoCore_1_1IoBus.html#a6d5ff84fe7d42c94153375c17fd51cb2',1,'undoCore::IoBus::IoBus(IoBus &amp;&amp;)=delete'],['../classundoCore_1_1IoBus.html',1,'undoCore::IoBus']]],
+  ['iobus_20implementation_17',['Example 2: Custom IoBus Implementation',['../md_README.html#autotoc_md21',1,'']]],
+  ['iobus_20interface_18',['1. IoBus Interface',['../md_README.html#autotoc_md12',1,'']]],
+  ['iobus_2ehpp_19',['ioBus.hpp',['../ioBus_8hpp.html',1,'']]],
+  ['isrunning_20',['isRunning',['../classundoCore_1_1IoBus.html#a9a74cce6631adae2240775a5a44a5328',1,'undoCore::IoBus']]],
+  ['iterator_21',['iterator',['../classundoCore_1_1STArray.html#a10215e47a1d6b016559302c6ac838965',1,'undoCore::STArray']]]
 ];

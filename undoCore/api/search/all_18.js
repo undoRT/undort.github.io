@@ -1,15 +1,13 @@
 var searchData=
 [
-  ['udint_0',['UDINT',['../namespaceundoCore.html#a2a910e6e1be0db2ee2dcab4a1f29d09f',1,'undoCore']]],
-  ['uint_1',['UINT',['../namespaceundoCore.html#a20f0f9bed33d08f4d693ae90b1fca2d3',1,'undoCore']]],
-  ['uint16_2',['UInt16',['../namespaceundoCore.html#a4b1b473e157dbafdf87407c90f3955e4',1,'undoCore']]],
-  ['uint32_3',['UInt32',['../namespaceundoCore.html#aed400ea7c786118f54a26699219adba9',1,'undoCore']]],
-  ['uint64_4',['UInt64',['../namespaceundoCore.html#a3f894d6033dc1a235d258e2d46e8c0c1',1,'undoCore']]],
-  ['uint8_5',['UInt8',['../namespaceundoCore.html#aecaa9ea7b0f80a4edaa9ca66538278af',1,'undoCore']]],
-  ['ulint_6',['ULINT',['../namespaceundoCore.html#a09a8ba639a6080454ba653cb59b41621',1,'undoCore']]],
-  ['undocore_7',['undocore',['../namespaceundoCore.html',1,'undoCore'],['../md_README.html',1,'undoCore']]],
-  ['undocore_2ehpp_8',['undoCore.hpp',['../undoCore_8hpp.html',1,'']]],
-  ['usage_9',['Example 1: Basic Process Image Usage',['../md_README.html#autotoc_md20',1,'']]],
-  ['use_20iec_2061131_203_20types_10',['4. Use IEC 61131-3 Types',['../md_README.html#autotoc_md9',1,'']]],
-  ['usint_11',['USINT',['../namespaceundoCore.html#ac9749c65984b7bac2e990a7887cfb4bb',1,'undoCore']]]
+  ['tests_0',['Building Tests',['../md_README.html#autotoc_md18',1,'']]],
+  ['the_20library_1',['1. Include the Library',['../md_README.html#autotoc_md6',1,'']]],
+  ['time_2',['time',['../namespaceundoCore.html#a7515e2423a08fab8adfbe4cdc5e6d7d7',1,'undoCore::TIME'],['../namespaceundoCore.html#a53f0af64c7949575011658a8d386b04b',1,'undoCore::Time']]],
+  ['time_20literals_3',['Time Literals',['../md_README.html#autotoc_md16',1,'']]],
+  ['time_5fliteral_4',['TIME_LITERAL',['../namespaceundoCore.html#ac24164a22fd8d3e0862dbb202d180a8f',1,'undoCore']]],
+  ['tod_5',['tod',['../namespaceundoCore.html#afecd31ae413b683b963502f54dde32ee',1,'undoCore::TOD'],['../namespaceundoCore.html#a1917631c83b7de25b67099e09808f49d',1,'undoCore::Tod']]],
+  ['tostring_6',['toString',['../structVersion.html#ac90b3ac66d4b768a11883711878b1b43',1,'Version']]],
+  ['type_20mapping_7',['3. IEC 61131-3 Type Mapping',['../md_README.html#autotoc_md15',1,'']]],
+  ['types_8',['4. Use IEC 61131-3 Types',['../md_README.html#autotoc_md9',1,'']]],
+  ['types_2ehpp_9',['types.hpp',['../types_8hpp.html',1,'']]]
 ];

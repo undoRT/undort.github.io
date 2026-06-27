@@ -1,7 +1,25 @@
 var searchData=
 [
-  ['value_5ftype_0',['value_type',['../classundoCore_1_1STArray.html#a09c2f9c96910e66da66fd3548653ec72',1,'undoCore::STArray']]],
-  ['var_5finout_1',['VAR_INOUT',['../namespaceundoCore.html#a1f44d1141b61ee217fcc8a45e012ee83',1,'undoCore']]],
-  ['varinout_2',['varinout',['../structundoCore_1_1VarInOut.html',1,'undoCore::VarInOut&lt; T &gt;'],['../structundoCore_1_1VarInOut.html#acc18835f10a068ee5829ec84c0479f71',1,'undoCore::VarInOut::VarInOut(T &amp;ref)'],['../structundoCore_1_1VarInOut.html#aff2e7c10b251cf8f91aa18ed56661c3a',1,'undoCore::VarInOut::VarInOut()']]],
-  ['void_3',['Void',['../namespaceundoCore.html#a66c8fa195360e258e2de0b4f2a586427',1,'undoCore']]]
+  ['udint_0',['UDINT',['../namespaceundoCore.html#a2a910e6e1be0db2ee2dcab4a1f29d09f',1,'undoCore']]],
+  ['uint_1',['UINT',['../namespaceundoCore.html#a20f0f9bed33d08f4d693ae90b1fca2d3',1,'undoCore']]],
+  ['uint16_2',['UInt16',['../namespaceundoCore.html#a4b1b473e157dbafdf87407c90f3955e4',1,'undoCore']]],
+  ['uint32_3',['UInt32',['../namespaceundoCore.html#aed400ea7c786118f54a26699219adba9',1,'undoCore']]],
+  ['uint64_4',['UInt64',['../namespaceundoCore.html#a3f894d6033dc1a235d258e2d46e8c0c1',1,'undoCore']]],
+  ['uint8_5',['UInt8',['../namespaceundoCore.html#aecaa9ea7b0f80a4edaa9ca66538278af',1,'undoCore']]],
+  ['ulint_6',['ULINT',['../namespaceundoCore.html#a09a8ba639a6080454ba653cb59b41621',1,'undoCore']]],
+  ['undocore_7',['undocore',['../md_README.html',1,'undoCore'],['../namespaceundoCore.html',1,'undoCore']]],
+  ['undocore_2ehpp_8',['undoCore.hpp',['../undoCore_8hpp.html',1,'']]],
+  ['undocore_5fbuild_5fdate_9',['UNDOCORE_BUILD_DATE',['../undoCoreVer_8hpp.html#a8010917223855391198acfa0d377e7c8',1,'undoCoreVer.hpp']]],
+  ['undocore_5fcompiler_10',['UNDOCORE_COMPILER',['../undoCoreVer_8hpp.html#af0df130069a2b1cfa562673ca01a460d',1,'undoCoreVer.hpp']]],
+  ['undocore_5fstringify_11',['UNDOCORE_STRINGIFY',['../undoCoreVer_8hpp.html#a2ac0613f1252d7bf5e4b5365e85c94c7',1,'undoCoreVer.hpp']]],
+  ['undocore_5fstringify_5fimpl_12',['UNDOCORE_STRINGIFY_IMPL',['../undoCoreVer_8hpp.html#a39ccd4d3bb2bff103645ed05b1a705e8',1,'undoCoreVer.hpp']]],
+  ['undocore_5fversion_5fmajor_13',['UNDOCORE_VERSION_MAJOR',['../undoCoreVer_8hpp.html#a3210330b10161e2aaefcad9b8715018e',1,'undoCoreVer.hpp']]],
+  ['undocore_5fversion_5fminor_14',['UNDOCORE_VERSION_MINOR',['../undoCoreVer_8hpp.html#acb5d91943696bffb56a9904ddb801a21',1,'undoCoreVer.hpp']]],
+  ['undocore_5fversion_5fpatch_15',['UNDOCORE_VERSION_PATCH',['../undoCoreVer_8hpp.html#a58020d8fc3098c2a3ee019c8f97d2589',1,'undoCoreVer.hpp']]],
+  ['undocore_5fversion_5fprerel_16',['UNDOCORE_VERSION_PREREL',['../undoCoreVer_8hpp.html#ac1e41aab8257e432354728a41442da01',1,'undoCoreVer.hpp']]],
+  ['undocore_5fversion_5fstring_17',['UNDOCORE_VERSION_STRING',['../undoCoreVer_8hpp.html#a4ad46c6459dcf2e1a04b901f17c44e69',1,'undoCoreVer.hpp']]],
+  ['undocorever_2ehpp_18',['undoCoreVer.hpp',['../undoCoreVer_8hpp.html',1,'']]],
+  ['usage_19',['Example 1: Basic Process Image Usage',['../md_README.html#autotoc_md20',1,'']]],
+  ['use_20iec_2061131_203_20types_20',['4. Use IEC 61131-3 Types',['../md_README.html#autotoc_md9',1,'']]],
+  ['usint_21',['USINT',['../namespaceundoCore.html#ac9749c65984b7bac2e990a7887cfb4bb',1,'undoCore']]]
 ];

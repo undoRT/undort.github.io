@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['lastcycletimeus_0',['lastCycleTimeUs',['../classundoCore_1_1IoBus.html#a9621afd2612ee3a9265fcee8165ad7b5',1,'undoCore::IoBus']]],
-  ['lasterror_1',['lastError',['../classundoCore_1_1IoBus.html#a163246efad4b800c4de44a3f1df93ddf',1,'undoCore::IoBus']]],
-  ['low_2',['low',['../classundoCore_1_1STArray.html#a4131742e816abe628a9cd2b917c3d6d4',1,'undoCore::STArray']]]
+  ['iobus_0',['iobus',['../classundoCore_1_1IoBus.html#aceae59c78d1ef2a9ef4b5368cf9af7c3',1,'undoCore::IoBus::IoBus(const IoBus &amp;)=delete'],['../classundoCore_1_1IoBus.html#a6d5ff84fe7d42c94153375c17fd51cb2',1,'undoCore::IoBus::IoBus(IoBus &amp;&amp;)=delete'],['../classundoCore_1_1IoBus.html#a7dbfdd0956fb82e81c572832631ff377',1,'undoCore::IoBus::IoBus()=default']]],
+  ['isrunning_1',['isRunning',['../classundoCore_1_1IoBus.html#a9a74cce6631adae2240775a5a44a5328',1,'undoCore::IoBus']]]
 ];

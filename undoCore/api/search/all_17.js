@@ -1,12 +1,10 @@
 var searchData=
 [
-  ['tests_0',['Building Tests',['../md_README.html#autotoc_md18',1,'']]],
-  ['the_20library_1',['1. Include the Library',['../md_README.html#autotoc_md6',1,'']]],
-  ['time_2',['time',['../namespaceundoCore.html#a53f0af64c7949575011658a8d386b04b',1,'undoCore::Time'],['../namespaceundoCore.html#a7515e2423a08fab8adfbe4cdc5e6d7d7',1,'undoCore::TIME']]],
-  ['time_20literals_3',['Time Literals',['../md_README.html#autotoc_md16',1,'']]],
-  ['time_5fliteral_4',['TIME_LITERAL',['../namespaceundoCore.html#ac24164a22fd8d3e0862dbb202d180a8f',1,'undoCore']]],
-  ['tod_5',['tod',['../namespaceundoCore.html#a1917631c83b7de25b67099e09808f49d',1,'undoCore::Tod'],['../namespaceundoCore.html#afecd31ae413b683b963502f54dde32ee',1,'undoCore::TOD']]],
-  ['type_20mapping_6',['3. IEC 61131-3 Type Mapping',['../md_README.html#autotoc_md15',1,'']]],
-  ['types_7',['4. Use IEC 61131-3 Types',['../md_README.html#autotoc_md9',1,'']]],
-  ['types_2ehpp_8',['types.hpp',['../types_8hpp.html',1,'']]]
+  ['sint_0',['SINT',['../namespaceundoCore.html#af8bf014dec0207dd697e7645db7d7972',1,'undoCore']]],
+  ['size_1',['size',['../classundoCore_1_1STArray.html#a87a8972df0d7b7c331db1f417ec0c709',1,'undoCore::STArray::SIZE'],['../classundoCore_1_1STArray.html#ad0c4a28195c61c20e4b9574396b62d7d',1,'undoCore::STArray::size()']]],
+  ['starray_2',['starray',['../classundoCore_1_1STArray.html',1,'undoCore::STArray&lt; T, Low, High &gt;'],['../classundoCore_1_1STArray.html#adbd7f211f3f5fc8283e0aacf39d94658',1,'undoCore::STArray::STArray()=default'],['../classundoCore_1_1STArray.html#a715b6123f5aa2b9a95d448c3742eda1b',1,'undoCore::STArray::STArray(std::initializer_list&lt; T &gt; init)']]],
+  ['start_3',['start',['../md_README.html#autotoc_md5',1,'Quick Start'],['../classundoCore_1_1IoBus.html#a96ba2ffb34f5603964b81dec9e188f91',1,'undoCore::IoBus::start()=0']]],
+  ['stop_4',['stop',['../classundoCore_1_1IoBus.html#a699be45374d8ed666a92f13f96420ae1',1,'undoCore::IoBus']]],
+  ['string_5',['string',['../namespaceundoCore.html#a92e6570c3373d88a5a4d8766b6ba3658',1,'undoCore::String'],['../namespaceundoCore.html#a3731d2301d1ad0837e07aef43576745c',1,'undoCore::STRING']]],
+  ['structure_6',['Project Structure',['../md_README.html#autotoc_md17',1,'']]]
 ];

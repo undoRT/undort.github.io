@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['varinout_0',['varinout',['../structundoCore_1_1VarInOut.html#acc18835f10a068ee5829ec84c0479f71',1,'undoCore::VarInOut::VarInOut(T &amp;ref)'],['../structundoCore_1_1VarInOut.html#aff2e7c10b251cf8f91aa18ed56661c3a',1,'undoCore::VarInOut::VarInOut()']]]
+  ['time_5fliteral_0',['TIME_LITERAL',['../namespaceundoCore.html#ac24164a22fd8d3e0862dbb202d180a8f',1,'undoCore']]],
+  ['tostring_1',['toString',['../structVersion.html#ac90b3ac66d4b768a11883711878b1b43',1,'Version']]]
 ];

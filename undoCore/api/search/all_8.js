@@ -6,5 +6,5 @@ var searchData=
   ['building_20tests_3',['Building Tests',['../md_README.html#autotoc_md18',1,'']]],
   ['businputptr_4',['busInputPtr',['../classundoCore_1_1ProcessImage.html#a9a34e2a03713ec67bd9305a7c8032254',1,'undoCore::ProcessImage']]],
   ['busoutputptr_5',['busOutputPtr',['../classundoCore_1_1ProcessImage.html#aceeb3d7497578c8273fb032d23927ec6',1,'undoCore::ProcessImage']]],
-  ['byte_6',['byte',['../namespaceundoCore.html#a2c8fe031ce4e621a72d0e99bb760a212',1,'undoCore::BYTE'],['../namespaceundoCore.html#a7d141ea7f8bb6d76b69f8d3ebe23af4f',1,'undoCore::Byte']]]
+  ['byte_6',['byte',['../namespaceundoCore.html#a7d141ea7f8bb6d76b69f8d3ebe23af4f',1,'undoCore::Byte'],['../namespaceundoCore.html#a2c8fe031ce4e621a72d0e99bb760a212',1,'undoCore::BYTE']]]
 ];
