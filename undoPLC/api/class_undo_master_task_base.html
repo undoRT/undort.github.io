@@ -24,6 +24,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="undoPLC_logo.png"/></td>
   <td id="projectalign">
    <div id="projectname">undoPLC
    </div>
@@ -111,13 +112,13 @@ Collaboration diagram for UndoMasterTaskBase:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_undo_master_task_base__coll__graph.png" border="0" usemap="#a_undo_master_task_base_coll__map" alt="Collaboration graph"/></div>
 <map name="a_undo_master_task_base_coll__map" id="a_undo_master_task_base_coll__map">
-<area shape="rect" title="Base class responsible for fieldbus orchestration and worker synchronization." alt="" coords="36,481,233,1067"/>
+<area shape="rect" title="Base class responsible for fieldbus orchestration and worker synchronization." alt="" coords="36,481,233,1107"/>
 <area shape="rect" href="struct_sync_vars.html" title=" " alt="" coords="10,273,131,419"/>
-<area shape="poly" title=" " alt="" coords="84,419,91,465,86,465,79,419"/>
+<area shape="poly" title=" " alt="" coords="84,419,90,464,85,465,78,419"/>
 <area shape="rect" href="class_undo_mutex.html" title="Wrapper class for the usage of pthread_mutex with PTHREAD_PRIO_INHERIT Since std::mutex is not PTHREA..." alt="" coords="5,5,136,211"/>
 <area shape="poly" title=" " alt="" coords="73,211,73,257,68,257,68,211"/>
 <area shape="rect" href="struct_diag_vars.html" title="Basic struct to make some diag." alt="" coords="156,283,244,409"/>
-<area shape="poly" title=" " alt="" coords="193,409,185,465,179,465,188,408"/>
+<area shape="poly" title=" " alt="" coords="194,409,185,465,180,465,188,408"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -164,13 +165,20 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a253a75ac5cf5abf9d0d06486d49b987f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10bbf938e30d12c219da833b7501cdb3" id="r_a10bbf938e30d12c219da833b7501cdb3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_undo_master_task_base.html#a10bbf938e30d12c219da833b7501cdb3">countDownRegistration</a> ()</td></tr>
 <tr class="separator:a10bbf938e30d12c219da833b7501cdb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcd0d8db9cfabaa27392cfafff12b3ca" id="r_adcd0d8db9cfabaa27392cfafff12b3ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_undo_master_task_base.html#adcd0d8db9cfabaa27392cfafff12b3ca">setIoBus</a> (undoCore::IoBus *ioBus)</td></tr>
+<tr class="separator:adcd0d8db9cfabaa27392cfafff12b3ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a78aa52b3082c4eb0305ddb68bd21d9da" id="r_a78aa52b3082c4eb0305ddb68bd21d9da"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_undo_master_task_base.html#a78aa52b3082c4eb0305ddb68bd21d9da">readInputBus</a> ()=0</td></tr>
-<tr class="separator:a78aa52b3082c4eb0305ddb68bd21d9da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac144493f47ca070808cfa1d63d95e960" id="r_ac144493f47ca070808cfa1d63d95e960"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_undo_master_task_base.html#ac144493f47ca070808cfa1d63d95e960">writeOutputBus</a> ()=0</td></tr>
-<tr class="separator:ac144493f47ca070808cfa1d63d95e960"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a184015afe9acf84e15ea512e393be3ec" id="r_a184015afe9acf84e15ea512e393be3ec"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_undo_master_task_base.html#a184015afe9acf84e15ea512e393be3ec">waitCycle</a> (timespec &amp;nextWakeup)</td></tr>
+<tr class="memdesc:a184015afe9acf84e15ea512e393be3ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method used to wait until the next cycle.  <br /></td></tr>
+<tr class="separator:a184015afe9acf84e15ea512e393be3ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a552ff072f44847aafcdca5ce366a0b4b" id="r_a552ff072f44847aafcdca5ce366a0b4b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_undo_master_task_base.html#a552ff072f44847aafcdca5ce366a0b4b">readInputBus</a> ()</td></tr>
+<tr class="memdesc:a552ff072f44847aafcdca5ce366a0b4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual method to implement if _ioBus (undoCore::IoBus) member is not implemented.  <br /></td></tr>
+<tr class="separator:a552ff072f44847aafcdca5ce366a0b4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a045056d99e98639111a4b8dd960a74" id="r_a6a045056d99e98639111a4b8dd960a74"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_undo_master_task_base.html#a6a045056d99e98639111a4b8dd960a74">writeOutputBus</a> ()</td></tr>
+<tr class="memdesc:a6a045056d99e98639111a4b8dd960a74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual method to implement if _ioBus (undoCore::IoBus) member is not implemented.  <br /></td></tr>
+<tr class="separator:a6a045056d99e98639111a4b8dd960a74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af73035c8f87be4acaec523551ff529e9" id="r_af73035c8f87be4acaec523551ff529e9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_undo_master_task_base.html#af73035c8f87be4acaec523551ff529e9">safeStopHandler</a> ()=0</td></tr>
 <tr class="separator:af73035c8f87be4acaec523551ff529e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69164853c42c79c30352b9fc4d3cefc3" id="r_a69164853c42c79c30352b9fc4d3cefc3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_undo_master_task_base.html#a69164853c42c79c30352b9fc4d3cefc3">onCycleTimeout</a> ()</td></tr>
@@ -181,7 +189,7 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a2cc6c0b9911184eff74bf85df37c595b" id="r_a2cc6c0b9911184eff74bf85df37c595b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_undo_master_task_base.html#a2cc6c0b9911184eff74bf85df37c595b">runFinish</a> ()</td></tr>
 <tr class="separator:a2cc6c0b9911184eff74bf85df37c595b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f7a22421ac9aa1092a83068050062d1" id="r_a3f7a22421ac9aa1092a83068050062d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_undo_master_task_base.html#a3f7a22421ac9aa1092a83068050062d1">shutdownAndJoin</a> ()</td></tr>
-<tr class="memdesc:a3f7a22421ac9aa1092a83068050062d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">DEVE essere chiamato dalla classe più derivata, come PRIMA istruzione del proprio distruttore, prima che qualunque membro derivato venga distrutto.  <br /></td></tr>
+<tr class="memdesc:a3f7a22421ac9aa1092a83068050062d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">This MUST be called by the most derived class as the FIRST statement in its own destructor, before any derived members are destroyed.  <br /></td></tr>
 <tr class="separator:a3f7a22421ac9aa1092a83068050062d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
@@ -203,6 +211,8 @@ Private Member Functions</h2></td></tr>
 Private Attributes</h2></td></tr>
 <tr class="memitem:abdad8fee9357e1d327855ea7f637ce91" id="r_abdad8fee9357e1d327855ea7f637ce91"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_undo_master_task_base.html#abdad8fee9357e1d327855ea7f637ce91">_cycleTimeNs</a></td></tr>
 <tr class="separator:abdad8fee9357e1d327855ea7f637ce91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17ba79ed6b7328bb315ea7642358c67e" id="r_a17ba79ed6b7328bb315ea7642358c67e"><td class="memItemLeft" align="right" valign="top">undoCore::IoBus *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_undo_master_task_base.html#a17ba79ed6b7328bb315ea7642358c67e">_ioBus</a> {nullptr}</td></tr>
+<tr class="separator:a17ba79ed6b7328bb315ea7642358c67e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c055deeceebd9a7d0cb9636e2bfb5b4" id="r_a2c055deeceebd9a7d0cb9636e2bfb5b4"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_undo_master_task_base.html#a2c055deeceebd9a7d0cb9636e2bfb5b4">_running</a> {false}</td></tr>
 <tr class="separator:a2c055deeceebd9a7d0cb9636e2bfb5b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c94da0d3d7a2c39a9f479ddb2c44a25" id="r_a3c94da0d3d7a2c39a9f479ddb2c44a25"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_sync_vars.html">SyncVars</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_undo_master_task_base.html#a3c94da0d3d7a2c39a9f479ddb2c44a25">_syncVars</a></td></tr>
@@ -580,8 +590,8 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a78aa52b3082c4eb0305ddb68bd21d9da" name="a78aa52b3082c4eb0305ddb68bd21d9da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a78aa52b3082c4eb0305ddb68bd21d9da">&#9670;&#160;</a></span>readInputBus()</h2>
+<a id="a552ff072f44847aafcdca5ce366a0b4b" name="a552ff072f44847aafcdca5ce366a0b4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a552ff072f44847aafcdca5ce366a0b4b">&#9670;&#160;</a></span>readInputBus()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -590,7 +600,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void UndoMasterTaskBase::readInputBus </td>
+          <td class="memname">void UndoMasterTaskBase::readInputBus </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -598,10 +608,13 @@ Static Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Virtual method to implement if _ioBus (undoCore::IoBus) member is not implemented. </p>
+<p>If there is an implemention of _ioBus, then this method should be not override. This becuase it is supposed that _ioBus implements the copyIn in the waitCycle function. </p>
 
 </div>
 </div>
@@ -758,6 +771,32 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="adcd0d8db9cfabaa27392cfafff12b3ca" name="adcd0d8db9cfabaa27392cfafff12b3ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcd0d8db9cfabaa27392cfafff12b3ca">&#9670;&#160;</a></span>setIoBus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UndoMasterTaskBase::setIoBus </td>
+          <td>(</td>
+          <td class="paramtype">undoCore::IoBus *&#160;</td>
+          <td class="paramname"><em>ioBus</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a3f7a22421ac9aa1092a83068050062d1" name="a3f7a22421ac9aa1092a83068050062d1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3f7a22421ac9aa1092a83068050062d1">&#9670;&#160;</a></span>shutdownAndJoin()</h2>
 
@@ -781,9 +820,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>DEVE essere chiamato dalla classe più derivata, come PRIMA istruzione del proprio distruttore, prima che qualunque membro derivato venga distrutto. </p>
-<p>Il thread RT chiama funzioni virtuali su <code>this</code> per tutta la sua vita. Se è ancora in esecuzione quando <a class="el" href="class_undo_master_task_base.html#a8e02fe5edae310b203532398a68cf781" title="Destroy the Undo Master Task:: Undo Master Task object.">~UndoMasterTaskBase()</a> viene eseguito, il tipo dinamico dell'oggetto è GIA' regredito a <a class="el" href="class_undo_master_task_base.html" title="Base class responsible for fieldbus orchestration and worker synchronization.">UndoMasterTaskBase</a> (regola di distruzione C++), quindi una chiamata virtuale concorrente atterra su uno stub pure-virtual.</p>
-<p>This MUST be called by the most derived class as the FIRST statement in its own destructor, before any derived members are destroyed.</p>
+<p>This MUST be called by the most derived class as the FIRST statement in its own destructor, before any derived members are destroyed. </p>
 <p>The RT thread calls virtual functions on 'this' for the lifetime of the object. If it is still running when <a class="el" href="class_undo_master_task_base.html#a8e02fe5edae310b203532398a68cf781" title="Destroy the Undo Master Task:: Undo Master Task object.">~UndoMasterTaskBase()</a> executes, the object's dynamic type has already reverted to <a class="el" href="class_undo_master_task_base.html" title="Base class responsible for fieldbus orchestration and worker synchronization.">UndoMasterTaskBase</a> (C++ destruction rule), so a concurrent virtual call lands on a pure-virtual stub. </p>
 
 </div>
@@ -858,8 +895,8 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ac144493f47ca070808cfa1d63d95e960" name="ac144493f47ca070808cfa1d63d95e960"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac144493f47ca070808cfa1d63d95e960">&#9670;&#160;</a></span>writeOutputBus()</h2>
+<a id="a184015afe9acf84e15ea512e393be3ec" name="a184015afe9acf84e15ea512e393be3ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a184015afe9acf84e15ea512e393be3ec">&#9670;&#160;</a></span>waitCycle()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -868,7 +905,42 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void UndoMasterTaskBase::writeOutputBus </td>
+          <td class="memname">int UndoMasterTaskBase::waitCycle </td>
+          <td>(</td>
+          <td class="paramtype">timespec &amp;&#160;</td>
+          <td class="paramname"><em>nextWakeup</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Method used to wait until the next cycle. </p>
+<p>If the _ioBus (undoCore::IoBus) member is implemented, then it is used this way to wait the next cycle, in order to wait according the bus rule. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nextWakeup</td><td>Useful only if IoBus memeber is not implemented. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An error code if something got wrong, 0 otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a6a045056d99e98639111a4b8dd960a74" name="a6a045056d99e98639111a4b8dd960a74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a045056d99e98639111a4b8dd960a74">&#9670;&#160;</a></span>writeOutputBus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UndoMasterTaskBase::writeOutputBus </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -876,10 +948,13 @@ Static Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Virtual method to implement if _ioBus (undoCore::IoBus) member is not implemented. </p>
+<p>If there is an implemention of _ioBus, then this method should be not override. </p>
 
 </div>
 </div>
@@ -961,6 +1036,28 @@ Static Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="struct_diag_vars.html">DiagVars</a> UndoMasterTaskBase::_diagVars</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a17ba79ed6b7328bb315ea7642358c67e" name="a17ba79ed6b7328bb315ea7642358c67e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17ba79ed6b7328bb315ea7642358c67e">&#9670;&#160;</a></span>_ioBus</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">undoCore::IoBus* UndoMasterTaskBase::_ioBus {nullptr}</td>
         </tr>
       </table>
   </td>

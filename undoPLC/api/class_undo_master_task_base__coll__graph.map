@@ -1,9 +1,9 @@
 <map id="UndoMasterTaskBase" name="UndoMasterTaskBase">
-<area shape="rect" id="Node000001" title="Base class responsible for fieldbus orchestration and worker synchronization." alt="" coords="36,481,233,1067"/>
+<area shape="rect" id="Node000001" title="Base class responsible for fieldbus orchestration and worker synchronization." alt="" coords="36,481,233,1107"/>
 <area shape="rect" id="Node000002" href="$struct_sync_vars.html" title=" " alt="" coords="10,273,131,419"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,419,91,465,86,465,79,419"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,419,90,464,85,465,78,419"/>
 <area shape="rect" id="Node000003" href="$class_undo_mutex.html" title="Wrapper class for the usage of pthread_mutex with PTHREAD_PRIO_INHERIT Since std::mutex is not PTHREA..." alt="" coords="5,5,136,211"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="73,211,73,257,68,257,68,211"/>
 <area shape="rect" id="Node000004" href="$struct_diag_vars.html" title="Basic struct to make some diag." alt="" coords="156,283,244,409"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="193,409,185,465,179,465,188,408"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="194,409,185,465,180,465,188,408"/>
 </map>
