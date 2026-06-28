@@ -1,9 +1,8 @@
 /**
  * undoRT.css - Shared stylesheet for project documentation pages
  * Version: 1.0.0
- * 
- * Used by: st2cpp, undoCore, undoPLC, undoBUS documentation pages
- * Features: Dark theme, responsive, dropdown menus, code blocks, tables
+ * Used by: st2cpp, undoCore, undoPLC, undoBUS
+ * Self-contained - does not depend on any other CSS
  */
 
 /* ============================================================================
@@ -587,6 +586,17 @@ tr:last-child td {
 .status-pill.in-development::before {
     background: #fbbf24;
     box-shadow: 0 0 5px #fbbf24;
+}
+
+.status-pill.release {
+    background: rgba(52, 211, 153, 0.1);
+    color: #34d399;
+    border: 1px solid rgba(52, 211, 153, 0.25);
+}
+
+.status-pill.release::before {
+    background: #34d399;
+    box-shadow: 0 0 5px #34d399;
 }
 
 .status-pill.next-release {
