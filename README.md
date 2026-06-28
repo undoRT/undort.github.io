@@ -8,14 +8,16 @@ The **undoRT** project is a fully integrated, open-source software stack enginee
 
 The ecosystem is modular, consisting of specialized repositories designed to work seamlessly together:
 
-* **[undoOS](https://github.com/undoRT/undoOS)** `Core OS`  
-  A highly optimized Linux Preempt-RT distribution tailored for multi-platform industrial hardware, eliminating non-deterministic latencies.
+* **[undoCore](https://github.com/undoRT/undoCore)** `Core Libs`  
+  Header-only C++20 core infrastructure providing fundamental contracts and data structures for the undoRT ecosystem.
 * **[undoPLC](https://github.com/undoRT/undoPLC)** `Runtime`  
   A custom, high-performance multi-threaded SoftPLC runtime infrastructure built from scratch to leverage the full power of undoOS.
 * **[undoBUS](https://github.com/undoRT/undoBUS)** `Fieldbus`  
   Ultra-precise fieldbus management with native user-space support for **EtherCAT Master** (powered by IgH EtherLab technology).
 * **[st2cpp](https://github.com/undoRT/st2cpp)** `Compiler`  
   The core translation engine. A powerful transpiler that compiles standard IEC 61131-3 Structured Text (ST) into optimized, native C++ code.
+* **[undoOS](https://github.com/undoRT/undoOS)** `Core OS`  
+  A highly optimized Linux Preempt-RT distribution tailored for multi-platform industrial hardware, eliminating non-deterministic latencies.
 * **[undoImport](https://github.com/undoRT/undoImport)** `Migration`  
   A suite of migration utilities designed to ingest legacy commercial projects (TwinCAT, CODESYS) and port them into the undoRT pipeline.
 
