@@ -17,14 +17,15 @@ var class_undo_sys =
     [ "readTsc", "class_undo_sys.html#a0ebc4e47690ab20917bf56054e2f46bc", null ],
     [ "readTsc", "class_undo_sys.html#aafddd4a5dc334fdad3c7978fa3de3008", null ],
     [ "resetCpuFrequency", "class_undo_sys.html#a5479993a190032ff3817c9ced105c307", null ],
-    [ "setCpuNominalFrequency", "class_undo_sys.html#a687cb38d31f440effbbf3dfff2af9d66", null ],
+    [ "setCpuNominalFrequency", "class_undo_sys.html#aa6d708740faa5b5abb896d3648015996", null ],
     [ "tsc2Ns", "class_undo_sys.html#a16f015d0342dfff85b2994c65f42c17e", null ],
     [ "writeSysfsAttribute", "class_undo_sys.html#aa517dd7581d3dba5c39e7faefa7ef3ed", null ],
+    [ "_isNominalFreqPossible", "class_undo_sys.html#ae358dd5ee1a5ebee605acb988f885ad0", null ],
     [ "_isolatedCores", "class_undo_sys.html#a6949b42f7bcf4e1da2d55e6fb5b1fd4c", null ],
     [ "_isolatedCoresChecked", "class_undo_sys.html#a04a336fcc66885ff9b389864c52fa43a", null ],
     [ "_onlineCores", "class_undo_sys.html#afbe0e9c7cdf27851a891ea0db29871ab", null ],
     [ "_sharedCores", "class_undo_sys.html#a6c707eae684d6425d3ec033f26a881de", null ],
     [ "_sharedCoresChecked", "class_undo_sys.html#aaf62f8b66e24cdd23b32a1b90b31e20d", null ],
-    [ "_totNumCores", "class_undo_sys.html#a5e8569c13e1c3292cfc3b3d02c0eb0a0", null ],
+    [ "_totNumCores", "class_undo_sys.html#a2a721550f0be642ac28aeb0aa32b2694", null ],
     [ "_tscFrequencyHz", "class_undo_sys.html#a5fd76a97a7828ec992ed9869285be48e", null ]
 ];

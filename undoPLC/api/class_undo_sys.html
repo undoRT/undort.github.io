@@ -111,7 +111,7 @@ Collaboration diagram for UndoSys:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_undo_sys__coll__graph.png" border="0" usemap="#a_undo_sys_coll__map" alt="Collaboration graph"/></div>
 <map name="a_undo_sys_coll__map" id="a_undo_sys_coll__map">
-<area shape="rect" title="Manages low&#45;level system configurations for real&#45;time operations." alt="" coords="5,5,211,471"/>
+<area shape="rect" title="Manages low&#45;level system configurations for real&#45;time operations." alt="" coords="5,5,211,491"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -125,9 +125,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:acf9cdd0be4fa4140c13df39990287ca8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23fd162840316a6f5602303e8b03eea6" id="r_a23fd162840316a6f5602303e8b03eea6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_undo_sys.html">UndoSys</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_undo_sys.html#a23fd162840316a6f5602303e8b03eea6">operator=</a> (<a class="el" href="class_undo_sys.html">UndoSys</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:a23fd162840316a6f5602303e8b03eea6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a687cb38d31f440effbbf3dfff2af9d66" id="r_a687cb38d31f440effbbf3dfff2af9d66"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_undo_sys.html#a687cb38d31f440effbbf3dfff2af9d66">setCpuNominalFrequency</a> (const std::vector&lt; int &gt; &amp;cores)</td></tr>
-<tr class="memdesc:a687cb38d31f440effbbf3dfff2af9d66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configures specific CPU cores to run at their nominal frequency using the performance governor.  <br /></td></tr>
-<tr class="separator:a687cb38d31f440effbbf3dfff2af9d66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6d708740faa5b5abb896d3648015996" id="r_aa6d708740faa5b5abb896d3648015996"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_undo_sys.html#aa6d708740faa5b5abb896d3648015996">setCpuNominalFrequency</a> (const std::vector&lt; int &gt; &amp;cores)</td></tr>
+<tr class="memdesc:aa6d708740faa5b5abb896d3648015996"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configures the specified CPU cores to run at their nominal frequency using the performance governor.  <br /></td></tr>
+<tr class="separator:aa6d708740faa5b5abb896d3648015996"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5479993a190032ff3817c9ced105c307" id="r_a5479993a190032ff3817c9ced105c307"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_undo_sys.html#a5479993a190032ff3817c9ced105c307">resetCpuFrequency</a> (const std::vector&lt; int &gt; &amp;cores)</td></tr>
 <tr class="memdesc:a5479993a190032ff3817c9ced105c307"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restores specific CPU cores to their default powersave governor and unlocks maximum hardware frequency.  <br /></td></tr>
 <tr class="separator:a5479993a190032ff3817c9ced105c307"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -186,10 +186,12 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a6c707eae684d6425d3ec033f26a881de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04a336fcc66885ff9b389864c52fa43a" id="r_a04a336fcc66885ff9b389864c52fa43a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_undo_sys.html#a04a336fcc66885ff9b389864c52fa43a">_isolatedCoresChecked</a> {false}</td></tr>
 <tr class="separator:a04a336fcc66885ff9b389864c52fa43a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e8569c13e1c3292cfc3b3d02c0eb0a0" id="r_a5e8569c13e1c3292cfc3b3d02c0eb0a0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_undo_sys.html#a5e8569c13e1c3292cfc3b3d02c0eb0a0">_totNumCores</a> {-1}</td></tr>
-<tr class="separator:a5e8569c13e1c3292cfc3b3d02c0eb0a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a721550f0be642ac28aeb0aa32b2694" id="r_a2a721550f0be642ac28aeb0aa32b2694"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_undo_sys.html#a2a721550f0be642ac28aeb0aa32b2694">_totNumCores</a> {-1}</td></tr>
+<tr class="separator:a2a721550f0be642ac28aeb0aa32b2694"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf62f8b66e24cdd23b32a1b90b31e20d" id="r_aaf62f8b66e24cdd23b32a1b90b31e20d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_undo_sys.html#aaf62f8b66e24cdd23b32a1b90b31e20d">_sharedCoresChecked</a> {false}</td></tr>
 <tr class="separator:aaf62f8b66e24cdd23b32a1b90b31e20d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae358dd5ee1a5ebee605acb988f885ad0" id="r_ae358dd5ee1a5ebee605acb988f885ad0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_undo_sys.html#ae358dd5ee1a5ebee605acb988f885ad0">_isNominalFreqPossible</a> {false}</td></tr>
+<tr class="separator:ae358dd5ee1a5ebee605acb988f885ad0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fd76a97a7828ec992ed9869285be48e" id="r_a5fd76a97a7828ec992ed9869285be48e"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_undo_sys.html#a5fd76a97a7828ec992ed9869285be48e">_tscFrequencyHz</a> {0}</td></tr>
 <tr class="separator:a5fd76a97a7828ec992ed9869285be48e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -604,14 +606,14 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a687cb38d31f440effbbf3dfff2af9d66" name="a687cb38d31f440effbbf3dfff2af9d66"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a687cb38d31f440effbbf3dfff2af9d66">&#9670;&#160;</a></span>setCpuNominalFrequency()</h2>
+<a id="aa6d708740faa5b5abb896d3648015996" name="aa6d708740faa5b5abb896d3648015996"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6d708740faa5b5abb896d3648015996">&#9670;&#160;</a></span>setCpuNominalFrequency()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool UndoSys::setCpuNominalFrequency </td>
+          <td class="memname">int UndoSys::setCpuNominalFrequency </td>
           <td>(</td>
           <td class="paramtype">const std::vector&lt; int &gt; &amp;&#160;</td>
           <td class="paramname"><em>cores</em></td><td>)</td>
@@ -620,14 +622,21 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Configures specific CPU cores to run at their nominal frequency using the performance governor. </p>
+<p>Configures the specified CPU cores to run at their nominal frequency using the performance governor. </p>
+<p>This function enforces a STRICT determinism contract: all requested cores must support frequency locking via base_frequency.</p>
+<p>The caller MUST only pass cores that are expected to be fully controllable.</p>
+<p>This is NOT a best-effort API:</p><ul>
+<li>if any core does not expose base_frequency, the operation is aborted</li>
+<li>if any sysfs operation fails, the function fails immediately</li>
+</ul>
+<p>The goal is to guarantee deterministic CPU frequency behavior on all configured cores, which is required for real-time workloads.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cores</td><td>Vector of CPU core IDs to be configured. </td></tr>
+    <tr><td class="paramname">cores</td><td>Vector of CPU core IDs to be configured (STRICT SET).</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true if configuration succeeded for all specified cores, false otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>1 = success (all cores successfully locked to nominal frequency) 0 = unsupported platform or missing base_frequency for requested cores -1 = runtime error during configuration (sysfs/governor failure) </dd></dl>
 
 </div>
 </div>
@@ -705,6 +714,28 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="ae358dd5ee1a5ebee605acb988f885ad0" name="ae358dd5ee1a5ebee605acb988f885ad0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae358dd5ee1a5ebee605acb988f885ad0">&#9670;&#160;</a></span>_isNominalFreqPossible</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UndoSys::_isNominalFreqPossible {false}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a6949b42f7bcf4e1da2d55e6fb5b1fd4c" name="a6949b42f7bcf4e1da2d55e6fb5b1fd4c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6949b42f7bcf4e1da2d55e6fb5b1fd4c">&#9670;&#160;</a></span>_isolatedCores</h2>
 
@@ -815,8 +846,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a5e8569c13e1c3292cfc3b3d02c0eb0a0" name="a5e8569c13e1c3292cfc3b3d02c0eb0a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e8569c13e1c3292cfc3b3d02c0eb0a0">&#9670;&#160;</a></span>_totNumCores</h2>
+<a id="a2a721550f0be642ac28aeb0aa32b2694" name="a2a721550f0be642ac28aeb0aa32b2694"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a721550f0be642ac28aeb0aa32b2694">&#9670;&#160;</a></span>_totNumCores</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -825,7 +856,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int UndoSys::_totNumCores {-1}</td>
+          <td class="memname">int8_t UndoSys::_totNumCores {-1}</td>
         </tr>
       </table>
   </td>

@@ -1,7 +1,7 @@
 var searchData=
 [
   ['safestophandler_0',['safeStopHandler',['../class_undo_master_task_base.html#af73035c8f87be4acaec523551ff529e9',1,'UndoMasterTaskBase']]],
-  ['setcpunominalfrequency_1',['setCpuNominalFrequency',['../class_undo_sys.html#a687cb38d31f440effbbf3dfff2af9d66',1,'UndoSys']]],
+  ['setcpunominalfrequency_1',['setCpuNominalFrequency',['../class_undo_sys.html#aa6d708740faa5b5abb896d3648015996',1,'UndoSys']]],
   ['setiobus_2',['setIoBus',['../class_undo_master_task_base.html#adcd0d8db9cfabaa27392cfafff12b3ca',1,'UndoMasterTaskBase']]],
   ['setrunning_3',['setRunning',['../class_undo_worker_task_base.html#ad1ef432636a79999811a928198d29f95',1,'UndoWorkerTaskBase']]],
   ['shutdownandjoin_4',['shutdownandjoin',['../class_undo_master_task_base.html#a3f7a22421ac9aa1092a83068050062d1',1,'UndoMasterTaskBase::shutdownAndJoin()'],['../class_undo_worker_task_base.html#aeadcc9d9df82c4434ea1fb510ce445a0',1,'UndoWorkerTaskBase::shutdownAndJoin()']]],
