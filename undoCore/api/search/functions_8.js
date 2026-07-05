@@ -2,5 +2,18 @@ var searchData=
 [
   ['lastcycletimeus_0',['lastCycleTimeUs',['../classundoCore_1_1IoBus.html#a9621afd2612ee3a9265fcee8165ad7b5',1,'undoCore::IoBus']]],
   ['lasterror_1',['lastError',['../classundoCore_1_1IoBus.html#a163246efad4b800c4de44a3f1df93ddf',1,'undoCore::IoBus']]],
-  ['low_2',['low',['../classundoCore_1_1STArray.html#a4131742e816abe628a9cd2b917c3d6d4',1,'undoCore::STArray']]]
+  ['lint_5fto_5fdint_2',['LINT_TO_DINT',['../namespaceundoCore.html#a1fce07211dac8d09909a792224a5d670',1,'undoCore']]],
+  ['lint_5fto_5flreal_3',['LINT_TO_LREAL',['../namespaceundoCore.html#a455e284daa986fc2518302a4638c1b9e',1,'undoCore']]],
+  ['lint_5fto_5flword_4',['LINT_TO_LWORD',['../namespaceundoCore.html#a3d305225551379d82fd7b7427c16dbba',1,'undoCore']]],
+  ['lint_5fto_5freal_5',['LINT_TO_REAL',['../namespaceundoCore.html#a820a07a14b2818c5ac96f572ac76df85',1,'undoCore']]],
+  ['lint_5fto_5fsint_6',['LINT_TO_SINT',['../namespaceundoCore.html#ad8572928ff3d0faacc74c36010514a0b',1,'undoCore']]],
+  ['lint_5fto_5fstring_7',['LINT_TO_STRING',['../namespaceundoCore.html#af674e2e8606efde4a670402e3fccf73d',1,'undoCore']]],
+  ['low_8',['low',['../classundoCore_1_1STArray.html#a4131742e816abe628a9cd2b917c3d6d4',1,'undoCore::STArray']]],
+  ['lreal_5fto_5fdint_9',['LREAL_TO_DINT',['../namespaceundoCore.html#af53a0996a6a8e40963034f30837450fb',1,'undoCore']]],
+  ['lreal_5fto_5fint_10',['LREAL_TO_INT',['../namespaceundoCore.html#aee0f595a30b771638c791644015982c3',1,'undoCore']]],
+  ['lreal_5fto_5flint_11',['LREAL_TO_LINT',['../namespaceundoCore.html#a9aa54d75ae54751cf802d3bed3739e88',1,'undoCore']]],
+  ['lreal_5fto_5freal_12',['LREAL_TO_REAL',['../namespaceundoCore.html#a2416be3e6168860022685ad52cd5b264',1,'undoCore']]],
+  ['lreal_5fto_5fsint_13',['LREAL_TO_SINT',['../namespaceundoCore.html#a4d8c49f9f28237abc813ffd84a89ec80',1,'undoCore']]],
+  ['lreal_5fto_5fstring_14',['LREAL_TO_STRING',['../namespaceundoCore.html#a403ecae27e87679ed8d2c375a410a895',1,'undoCore']]],
+  ['lword_5fto_5flint_15',['LWORD_TO_LINT',['../namespaceundoCore.html#ac69da67deedfb97b4e3bf5fb6638cc71',1,'undoCore']]]
 ];

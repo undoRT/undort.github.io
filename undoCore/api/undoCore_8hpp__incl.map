@@ -1,31 +1,48 @@
 <map id="include/undoCore/undoCore.hpp" name="include/undoCore/undoCore.hpp">
-<area shape="rect" id="Node000001" title=" " alt="" coords="310,5,539,31"/>
-<area shape="rect" id="Node000002" href="$undoCoreVer_8hpp.html" title="Version information for undoCore." alt="" coords="5,79,204,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="374,33,170,78,169,73,373,28"/>
-<area shape="rect" id="Node000004" href="$types_8hpp.html" title="Support library for basic types." alt="" coords="247,79,399,104"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="410,33,353,73,350,68,407,28"/>
-<area shape="rect" id="Node000011" href="$processImage_8hpp.html" title="Process Image for IEC 61131&#45;3 PLC execution." alt="" coords="424,79,631,104"/>
-<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="443,28,501,68,498,73,440,33"/>
-<area shape="rect" id="Node000012" href="$ioBus_8hpp.html" title="Abstract interface for fieldbus masters in the undoRT ecosystem." alt="" coords="655,79,807,104"/>
-<area shape="poly" id="edge16_Node000001_Node000012" title=" " alt="" coords="475,28,669,73,668,78,473,33"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="55,152,114,177"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="104,105,94,140,89,138,99,104"/>
-<area shape="poly" id="edge6_Node000004_Node000003" title=" " alt="" coords="286,107,128,153,127,148,284,101"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="665,152,731,177"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="395,101,651,149,650,154,394,107"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="494,152,561,177"/>
-<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="357,102,482,145,481,150,355,107"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="585,152,641,177"/>
-<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="375,101,572,149,571,154,373,107"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="138,152,223,177"/>
-<area shape="poly" id="edge8_Node000004_Node000008" title=" " alt="" coords="302,106,217,148,215,143,299,102"/>
-<area shape="rect" id="Node000009" title=" " alt="" coords="248,152,359,177"/>
-<area shape="poly" id="edge9_Node000004_Node000009" title=" " alt="" coords="323,105,313,140,308,138,317,104"/>
-<area shape="rect" id="Node000010" title=" " alt="" coords="383,152,469,177"/>
-<area shape="poly" id="edge10_Node000004_Node000010" title=" " alt="" coords="341,102,399,142,396,146,338,106"/>
-<area shape="poly" id="edge13_Node000011_Node000005" title=" " alt="" coords="556,102,659,144,657,149,554,106"/>
-<area shape="poly" id="edge14_Node000011_Node000006" title=" " alt="" coords="530,104,530,138,525,138,525,104"/>
-<area shape="poly" id="edge12_Node000011_Node000007" title=" " alt="" coords="543,102,590,141,587,145,539,106"/>
-<area shape="poly" id="edge15_Node000011_Node000010" title=" " alt="" coords="513,106,455,146,452,142,510,102"/>
-<area shape="poly" id="edge17_Node000012_Node000005" title=" " alt="" coords="728,105,712,141,707,139,723,103"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="457,5,687,31"/>
+<area shape="rect" id="Node000002" href="$undoCoreVer_8hpp.html" title="Version information for undoCore." alt="" coords="941,79,1139,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="648,28,951,74,950,79,647,33"/>
+<area shape="rect" id="Node000004" href="$types_8hpp.html" title="Support library for basic types." alt="" coords="843,152,995,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="601,28,880,144,878,149,599,33"/>
+<area shape="rect" id="Node000011" href="$processImage_8hpp.html" title="Process Image for IEC 61131&#45;3 PLC execution." alt="" coords="66,152,273,177"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="541,33,215,150,213,145,539,28"/>
+<area shape="rect" id="Node000012" href="$ioBus_8hpp.html" title="Abstract interface for fieldbus masters in the undoRT ecosystem." alt="" coords="13,79,165,104"/>
+<area shape="poly" id="edge16_Node000001_Node000012" title=" " alt="" coords="495,33,179,80,179,74,494,28"/>
+<area shape="rect" id="Node000013" href="$conversions_8hpp.html" title="IEC 61131&#45;3 standard type conversion functions." alt="" coords="475,79,669,104"/>
+<area shape="poly" id="edge18_Node000001_Node000013" title=" " alt="" coords="575,31,575,65,569,65,569,31"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="1003,225,1061,251"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="1046,104,1053,137,1053,178,1044,213,1039,212,1048,177,1048,137,1041,105"/>
+<area shape="poly" id="edge6_Node000004_Node000003" title=" " alt="" coords="938,175,1003,216,1001,220,935,180"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="65,225,132,251"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="843,179,831,180,491,209,146,236,145,230,490,204,830,175,842,173"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="277,225,344,251"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="843,179,831,180,358,234,357,229,830,175,842,173"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="641,225,697,251"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="879,180,711,228,710,222,878,175"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="755,225,840,251"/>
+<area shape="poly" id="edge8_Node000004_Node000008" title=" " alt="" coords="900,180,830,221,827,216,898,175"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="865,225,975,251"/>
+<area shape="poly" id="edge9_Node000004_Node000009" title=" " alt="" coords="922,178,922,212,917,212,916,178"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="495,225,582,251"/>
+<area shape="poly" id="edge10_Node000004_Node000010" title=" " alt="" coords="858,180,596,229,595,223,857,175"/>
+<area shape="poly" id="edge13_Node000011_Node000005" title=" " alt="" coords="159,180,122,218,118,214,156,176"/>
+<area shape="poly" id="edge14_Node000011_Node000006" title=" " alt="" coords="193,175,277,217,274,221,191,180"/>
+<area shape="poly" id="edge12_Node000011_Node000007" title=" " alt="" coords="253,175,595,223,628,228,627,233,594,228,252,180"/>
+<area shape="poly" id="edge15_Node000011_Node000010" title=" " alt="" coords="229,175,482,223,481,228,228,180"/>
+<area shape="poly" id="edge17_Node000012_Node000005" title=" " alt="" coords="65,106,42,120,21,137,9,156,8,166,12,176,31,200,57,217,54,222,28,204,7,179,3,166,4,154,17,133,39,115,62,102"/>
+<area shape="poly" id="edge24_Node000013_Node000003" title=" " alt="" coords="670,91,763,96,862,106,950,123,984,135,1008,150,1020,163,1027,179,1034,211,1029,212,1022,181,1015,166,1005,154,981,140,948,128,861,111,762,101,669,97"/>
+<area shape="poly" id="edge28_Node000013_Node000004" title=" " alt="" coords="628,101,850,147,849,152,627,107"/>
+<area shape="poly" id="edge20_Node000013_Node000005" title=" " alt="" coords="475,100,353,107,221,118,111,134,74,144,55,154,49,168,53,183,63,199,76,214,72,218,59,203,48,185,44,167,51,150,72,139,110,129,220,113,352,102,474,94"/>
+<area shape="poly" id="edge22_Node000013_Node000006" title=" " alt="" coords="475,98,439,104,402,115,368,131,338,154,328,167,321,181,314,212,309,211,316,180,323,164,334,150,365,127,400,110,437,99,474,93"/>
+<area shape="poly" id="edge25_Node000013_Node000010" title=" " alt="" coords="572,105,547,213,542,211,567,104"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="349,152,411,177"/>
+<area shape="poly" id="edge19_Node000013_Node000014" title=" " alt="" coords="542,107,425,149,423,144,540,102"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="435,152,501,177"/>
+<area shape="poly" id="edge21_Node000013_Node000015" title=" " alt="" coords="557,106,498,146,495,142,554,102"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="576,152,635,177"/>
+<area shape="poly" id="edge23_Node000013_Node000016" title=" " alt="" coords="580,103,597,139,592,141,575,105"/>
+<area shape="rect" id="Node000017" title=" " alt="" coords="659,152,733,177"/>
+<area shape="poly" id="edge26_Node000013_Node000017" title=" " alt="" coords="593,102,665,143,663,147,591,106"/>
+<area shape="rect" id="Node000018" title=" " alt="" coords="757,152,819,177"/>
+<area shape="poly" id="edge27_Node000013_Node000018" title=" " alt="" coords="607,101,745,146,743,152,606,107"/>
 </map>

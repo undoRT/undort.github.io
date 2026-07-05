@@ -40,7 +40,16 @@ var menudata={children:[
 {text:"u",url:"namespacemembers.html#index_u"},
 {text:"v",url:"namespacemembers.html#index_v"},
 {text:"w",url:"namespacemembers.html#index_w"}]},
-{text:"Functions",url:"namespacemembers_func.html"},
+{text:"Functions",url:"namespacemembers_func.html",children:[
+{text:"b",url:"namespacemembers_func.html#index_b"},
+{text:"d",url:"namespacemembers_func.html#index_d"},
+{text:"i",url:"namespacemembers_func.html#index_i"},
+{text:"l",url:"namespacemembers_func.html#index_l"},
+{text:"r",url:"namespacemembers_func.html#index_r"},
+{text:"s",url:"namespacemembers_func.html#index_s"},
+{text:"t",url:"namespacemembers_func.html#index_t"},
+{text:"u",url:"namespacemembers_func.html#index_u"},
+{text:"w",url:"namespacemembers_func.html#index_w"}]},
 {text:"Typedefs",url:"namespacemembers_type.html",children:[
 {text:"b",url:"namespacemembers_type.html#index_b"},
 {text:"d",url:"namespacemembers_type.html#index_d"},
