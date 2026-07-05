@@ -123,18 +123,33 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab6431c68a64d1d0b32931ebfce57d33c" id="r_ab6431c68a64d1d0b32931ebfce57d33c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classundoCore_1_1ProcessImage.html#ab6431c68a64d1d0b32931ebfce57d33c">copyOut</a> () noexcept</td></tr>
 <tr class="memdesc:ab6431c68a64d1d0b32931ebfce57d33c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy-out: push PLC outputs to bus-side output buffer. Called by undoBUS (or MasterTask) at the end of each PLC cycle.  <br /></td></tr>
 <tr class="separator:ab6431c68a64d1d0b32931ebfce57d33c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ca14e99c777a8cb6b27e92de1baae1f" id="r_a3ca14e99c777a8cb6b27e92de1baae1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classundoCore_1_1ProcessImage.html#a3ca14e99c777a8cb6b27e92de1baae1f">writeInputBit</a> (size_t byteOffset, uint8_t bitOffset, bool value)</td></tr>
+<tr class="memdesc:a3ca14e99c777a8cb6b27e92de1baae1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write input bit: AT IX&lt;byteOffset&gt;.&lt;bitOffset&gt;  <br /></td></tr>
+<tr class="separator:a3ca14e99c777a8cb6b27e92de1baae1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdc6d0f862e0c8cd321fbf52df903a92" id="r_acdc6d0f862e0c8cd321fbf52df903a92"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classundoCore_1_1ProcessImage.html#acdc6d0f862e0c8cd321fbf52df903a92">readInputBit</a> (size_t byteOffset, uint8_t bitOffset) const</td></tr>
 <tr class="memdesc:acdc6d0f862e0c8cd321fbf52df903a92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read input bit: AT IX&lt;byteOffset&gt;.&lt;bitOffset&gt;  <br /></td></tr>
 <tr class="separator:acdc6d0f862e0c8cd321fbf52df903a92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21ff964519489655dd7efc24285d0dee" id="r_a21ff964519489655dd7efc24285d0dee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classundoCore_1_1ProcessImage.html#a21ff964519489655dd7efc24285d0dee">writeInputByte</a> (size_t byteOffset, uint8_t value)</td></tr>
+<tr class="memdesc:a21ff964519489655dd7efc24285d0dee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write input byte: AT IB&lt;byteOffset&gt;  <br /></td></tr>
+<tr class="separator:a21ff964519489655dd7efc24285d0dee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ac64b7d2cf40f129290bfbb0add88a5" id="r_a0ac64b7d2cf40f129290bfbb0add88a5"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classundoCore_1_1ProcessImage.html#a0ac64b7d2cf40f129290bfbb0add88a5">readInputByte</a> (size_t byteOffset) const</td></tr>
 <tr class="memdesc:a0ac64b7d2cf40f129290bfbb0add88a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read input byte: AT IB&lt;byteOffset&gt;  <br /></td></tr>
 <tr class="separator:a0ac64b7d2cf40f129290bfbb0add88a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd9490fd40a50d9f46aee93e00d4ea62" id="r_acd9490fd40a50d9f46aee93e00d4ea62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classundoCore_1_1ProcessImage.html#acd9490fd40a50d9f46aee93e00d4ea62">writeInputWord</a> (size_t byteOffset, uint16_t value)</td></tr>
+<tr class="memdesc:acd9490fd40a50d9f46aee93e00d4ea62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write input word (16-bit): AT IW&lt;byteOffset&gt;  <br /></td></tr>
+<tr class="separator:acd9490fd40a50d9f46aee93e00d4ea62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71c7dc58ae606fc59920d92209e18bed" id="r_a71c7dc58ae606fc59920d92209e18bed"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classundoCore_1_1ProcessImage.html#a71c7dc58ae606fc59920d92209e18bed">readInputWord</a> (size_t byteOffset) const</td></tr>
 <tr class="memdesc:a71c7dc58ae606fc59920d92209e18bed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read input word (16-bit): AT IW&lt;byteOffset&gt;  <br /></td></tr>
 <tr class="separator:a71c7dc58ae606fc59920d92209e18bed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a814821f4b601f15855e616ce61522931" id="r_a814821f4b601f15855e616ce61522931"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classundoCore_1_1ProcessImage.html#a814821f4b601f15855e616ce61522931">writeInputDword</a> (size_t byteOffset, uint32_t value)</td></tr>
+<tr class="memdesc:a814821f4b601f15855e616ce61522931"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write input dword (32-bit): AT ID&lt;byteOffset&gt;  <br /></td></tr>
+<tr class="separator:a814821f4b601f15855e616ce61522931"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c154a19b73523688a928694817799b8" id="r_a9c154a19b73523688a928694817799b8"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classundoCore_1_1ProcessImage.html#a9c154a19b73523688a928694817799b8">readInputDword</a> (size_t byteOffset) const</td></tr>
 <tr class="memdesc:a9c154a19b73523688a928694817799b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read input dword (32-bit): AT ID&lt;byteOffset&gt;  <br /></td></tr>
 <tr class="separator:a9c154a19b73523688a928694817799b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a609d349988bef74fb834f8c4eb34722a" id="r_a609d349988bef74fb834f8c4eb34722a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classundoCore_1_1ProcessImage.html#a609d349988bef74fb834f8c4eb34722a">writeInputLword</a> (size_t byteOffset, uint64_t value)</td></tr>
+<tr class="memdesc:a609d349988bef74fb834f8c4eb34722a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write input lword (64-bit): AT IL&lt;byteOffset&gt;  <br /></td></tr>
+<tr class="separator:a609d349988bef74fb834f8c4eb34722a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad31880c6371bc70ef007540a69b5007f" id="r_ad31880c6371bc70ef007540a69b5007f"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classundoCore_1_1ProcessImage.html#ad31880c6371bc70ef007540a69b5007f">readInputLword</a> (size_t byteOffset) const</td></tr>
 <tr class="memdesc:ad31880c6371bc70ef007540a69b5007f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read input lword (64-bit): AT IL&lt;byteOffset&gt;  <br /></td></tr>
 <tr class="separator:ad31880c6371bc70ef007540a69b5007f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -991,6 +1006,212 @@ template&lt;size_t InputBytes, size_t OutputBytes, size_t MarkerBytes = 0&gt; </
 </div><div class="memdoc">
 
 <p>Read output word. </p>
+
+</div>
+</div>
+<a id="a3ca14e99c777a8cb6b27e92de1baae1f" name="a3ca14e99c777a8cb6b27e92de1baae1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ca14e99c777a8cb6b27e92de1baae1f">&#9670;&#160;</a></span>writeInputBit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t InputBytes, size_t OutputBytes, size_t MarkerBytes = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classundoCore_1_1ProcessImage.html">undoCore::ProcessImage</a>&lt; InputBytes, OutputBytes, MarkerBytes &gt;::writeInputBit </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>byteOffset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>bitOffset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Write input bit: AT IX&lt;byteOffset&gt;.&lt;bitOffset&gt; </p>
+
+</div>
+</div>
+<a id="a21ff964519489655dd7efc24285d0dee" name="a21ff964519489655dd7efc24285d0dee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21ff964519489655dd7efc24285d0dee">&#9670;&#160;</a></span>writeInputByte()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t InputBytes, size_t OutputBytes, size_t MarkerBytes = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classundoCore_1_1ProcessImage.html">undoCore::ProcessImage</a>&lt; InputBytes, OutputBytes, MarkerBytes &gt;::writeInputByte </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>byteOffset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Write input byte: AT IB&lt;byteOffset&gt; </p>
+
+</div>
+</div>
+<a id="a814821f4b601f15855e616ce61522931" name="a814821f4b601f15855e616ce61522931"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a814821f4b601f15855e616ce61522931">&#9670;&#160;</a></span>writeInputDword()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t InputBytes, size_t OutputBytes, size_t MarkerBytes = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classundoCore_1_1ProcessImage.html">undoCore::ProcessImage</a>&lt; InputBytes, OutputBytes, MarkerBytes &gt;::writeInputDword </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>byteOffset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Write input dword (32-bit): AT ID&lt;byteOffset&gt; </p>
+
+</div>
+</div>
+<a id="a609d349988bef74fb834f8c4eb34722a" name="a609d349988bef74fb834f8c4eb34722a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a609d349988bef74fb834f8c4eb34722a">&#9670;&#160;</a></span>writeInputLword()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t InputBytes, size_t OutputBytes, size_t MarkerBytes = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classundoCore_1_1ProcessImage.html">undoCore::ProcessImage</a>&lt; InputBytes, OutputBytes, MarkerBytes &gt;::writeInputLword </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>byteOffset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Write input lword (64-bit): AT IL&lt;byteOffset&gt; </p>
+
+</div>
+</div>
+<a id="acd9490fd40a50d9f46aee93e00d4ea62" name="acd9490fd40a50d9f46aee93e00d4ea62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd9490fd40a50d9f46aee93e00d4ea62">&#9670;&#160;</a></span>writeInputWord()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t InputBytes, size_t OutputBytes, size_t MarkerBytes = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classundoCore_1_1ProcessImage.html">undoCore::ProcessImage</a>&lt; InputBytes, OutputBytes, MarkerBytes &gt;::writeInputWord </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>byteOffset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Write input word (16-bit): AT IW&lt;byteOffset&gt; </p>
 
 </div>
 </div>

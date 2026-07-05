@@ -7,7 +7,7 @@ var searchData=
   ['sint_5fto_5flint_4',['SINT_TO_LINT',['../namespaceundoCore.html#a35a55c1f13281d1c30da738710006c56',1,'undoCore']]],
   ['sint_5fto_5flreal_5',['SINT_TO_LREAL',['../namespaceundoCore.html#a787164c227617937ee9b5a2b6e1e16d1',1,'undoCore']]],
   ['sint_5fto_5freal_6',['SINT_TO_REAL',['../namespaceundoCore.html#a10bd9928b7c70102d76943554bea780d',1,'undoCore']]],
-  ['size_7',['size',['../classundoCore_1_1STArray.html#a87a8972df0d7b7c331db1f417ec0c709',1,'undoCore::STArray::SIZE'],['../classundoCore_1_1STArray.html#ad0c4a28195c61c20e4b9574396b62d7d',1,'undoCore::STArray::size()']]],
+  ['size_7',['size',['../classundoCore_1_1STArray.html#ad0c4a28195c61c20e4b9574396b62d7d',1,'undoCore::STArray::size()'],['../classundoCore_1_1STArray.html#a87a8972df0d7b7c331db1f417ec0c709',1,'undoCore::STArray::SIZE']]],
   ['starray_8',['starray',['../classundoCore_1_1STArray.html#a715b6123f5aa2b9a95d448c3742eda1b',1,'undoCore::STArray::STArray(std::initializer_list&lt; T &gt; init)'],['../classundoCore_1_1STArray.html#adbd7f211f3f5fc8283e0aacf39d94658',1,'undoCore::STArray::STArray()=default'],['../classundoCore_1_1STArray.html',1,'undoCore::STArray&lt; T, Low, High &gt;']]],
   ['start_9',['start',['../md_README.html#autotoc_md5',1,'Quick Start'],['../classundoCore_1_1IoBus.html#a96ba2ffb34f5603964b81dec9e188f91',1,'undoCore::IoBus::start()=0']]],
   ['stop_10',['stop',['../classundoCore_1_1IoBus.html#a699be45374d8ed666a92f13f96420ae1',1,'undoCore::IoBus']]],
