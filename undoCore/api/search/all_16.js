@@ -23,7 +23,7 @@ var searchData=
   ['real_5fto_5flreal_20',['REAL_TO_LREAL',['../namespaceundoCore.html#a5415cda3ddd91ad3e2321cd4b64354c0',1,'undoCore']]],
   ['real_5fto_5fsint_21',['REAL_TO_SINT',['../namespaceundoCore.html#a5f0c41ce2771706d5ca10ea72e3f79ef',1,'undoCore']]],
   ['real_5fto_5fstring_22',['REAL_TO_STRING',['../namespaceundoCore.html#a31eb47cc0f60d366fec146a1fc21d5b6',1,'undoCore']]],
-  ['reference_23',['reference',['../classundoCore_1_1STArray.html#abe435987a287251827bfc8acfe20d346',1,'undoCore::STArray']]],
+  ['reference_23',['reference',['../structundoCore_1_1STArray.html#abe435987a287251827bfc8acfe20d346',1,'undoCore::STArray']]],
   ['related_20projects_24',['Related Projects',['../md_README.html#autotoc_md24',1,'']]],
   ['requirements_25',['Requirements',['../md_README.html#autotoc_md3',1,'']]]
 ];

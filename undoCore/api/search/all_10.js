@@ -11,7 +11,7 @@ var searchData=
   ['lint_5fto_5fsint_8',['LINT_TO_SINT',['../namespaceundoCore.html#ad8572928ff3d0faacc74c36010514a0b',1,'undoCore']]],
   ['lint_5fto_5fstring_9',['LINT_TO_STRING',['../namespaceundoCore.html#af674e2e8606efde4a670402e3fccf73d',1,'undoCore']]],
   ['literals_10',['Time Literals',['../md_README.html#autotoc_md16',1,'']]],
-  ['low_11',['low',['../classundoCore_1_1STArray.html#a4131742e816abe628a9cd2b917c3d6d4',1,'undoCore::STArray']]],
+  ['low_11',['low',['../structundoCore_1_1STArray.html#a4131742e816abe628a9cd2b917c3d6d4',1,'undoCore::STArray']]],
   ['lreal_12',['LREAL',['../namespaceundoCore.html#aab5cdfb5271a2d131c0a942c68ba8dd8',1,'undoCore']]],
   ['lreal_5fto_5fdint_13',['LREAL_TO_DINT',['../namespaceundoCore.html#af53a0996a6a8e40963034f30837450fb',1,'undoCore']]],
   ['lreal_5fto_5fint_14',['LREAL_TO_INT',['../namespaceundoCore.html#aee0f595a30b771638c791644015982c3',1,'undoCore']]],

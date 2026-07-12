@@ -31,5 +31,5 @@ var searchData=
   ['iobus_20interface_28',['1. IoBus Interface',['../md_README.html#autotoc_md12',1,'']]],
   ['iobus_2ehpp_29',['ioBus.hpp',['../ioBus_8hpp.html',1,'']]],
   ['isrunning_30',['isRunning',['../classundoCore_1_1IoBus.html#a9a74cce6631adae2240775a5a44a5328',1,'undoCore::IoBus']]],
-  ['iterator_31',['iterator',['../classundoCore_1_1STArray.html#a10215e47a1d6b016559302c6ac838965',1,'undoCore::STArray']]]
+  ['iterator_31',['iterator',['../structundoCore_1_1STArray.html#a10215e47a1d6b016559302c6ac838965',1,'undoCore::STArray']]]
 ];

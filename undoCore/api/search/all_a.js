@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['data_0',['data',['../classundoCore_1_1STArray.html#a7c14e6254a114c8abaae3d715ce944d3',1,'undoCore::STArray']]],
-  ['data_5fptr_1',['data_ptr',['../classundoCore_1_1STArray.html#a1ce692784efe20b6540fa87ae25339ff',1,'undoCore::STArray::data_ptr()'],['../classundoCore_1_1STArray.html#af9c5bd80a72e9cafe02af102877af3d2',1,'undoCore::STArray::data_ptr() const']]],
+  ['data_0',['data',['../structundoCore_1_1STArray.html#a7c14e6254a114c8abaae3d715ce944d3',1,'undoCore::STArray']]],
+  ['data_5fptr_1',['data_ptr',['../structundoCore_1_1STArray.html#a1ce692784efe20b6540fa87ae25339ff',1,'undoCore::STArray::data_ptr()'],['../structundoCore_1_1STArray.html#af9c5bd80a72e9cafe02af102877af3d2',1,'undoCore::STArray::data_ptr() const']]],
   ['date_2',['date',['../namespaceundoCore.html#ae8fccd19fd73b5e1c6318decd772daf5',1,'undoCore::DATE'],['../namespaceundoCore.html#aadda1907a7f56a91f1009760a43449aa',1,'undoCore::Date']]],
   ['date_5fto_5fdt_3',['DATE_TO_DT',['../namespaceundoCore.html#a85ecc1d0ae8b3126b9fe3f6a11823e58',1,'undoCore']]],
   ['date_5fto_5fstring_4',['DATE_TO_STRING',['../namespaceundoCore.html#a5d8e20056b8cc34e5325b25c886f2ea3',1,'undoCore']]],

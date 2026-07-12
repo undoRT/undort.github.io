@@ -5,7 +5,7 @@ var namespaceundoCore =
     ] ],
     [ "IoBus", "classundoCore_1_1IoBus.html", "classundoCore_1_1IoBus" ],
     [ "ProcessImage", "classundoCore_1_1ProcessImage.html", "classundoCore_1_1ProcessImage" ],
-    [ "STArray", "classundoCore_1_1STArray.html", "classundoCore_1_1STArray" ],
+    [ "STArray", "structundoCore_1_1STArray.html", "structundoCore_1_1STArray" ],
     [ "VarInOut", "structundoCore_1_1VarInOut.html", "structundoCore_1_1VarInOut" ],
     [ "Bool", "namespaceundoCore.html#a2b0a8d0b2f081f5ea29df6ef91ea5e30", null ],
     [ "BOOL", "namespaceundoCore.html#add79b28cb51c37169bd6264f3059efb6", null ],

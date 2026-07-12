@@ -8,7 +8,7 @@ var searchData=
   ['lint_5fto_5freal_5',['LINT_TO_REAL',['../namespaceundoCore.html#a820a07a14b2818c5ac96f572ac76df85',1,'undoCore']]],
   ['lint_5fto_5fsint_6',['LINT_TO_SINT',['../namespaceundoCore.html#ad8572928ff3d0faacc74c36010514a0b',1,'undoCore']]],
   ['lint_5fto_5fstring_7',['LINT_TO_STRING',['../namespaceundoCore.html#af674e2e8606efde4a670402e3fccf73d',1,'undoCore']]],
-  ['low_8',['low',['../classundoCore_1_1STArray.html#a4131742e816abe628a9cd2b917c3d6d4',1,'undoCore::STArray']]],
+  ['low_8',['low',['../structundoCore_1_1STArray.html#a4131742e816abe628a9cd2b917c3d6d4',1,'undoCore::STArray']]],
   ['lreal_5fto_5fdint_9',['LREAL_TO_DINT',['../namespaceundoCore.html#af53a0996a6a8e40963034f30837450fb',1,'undoCore']]],
   ['lreal_5fto_5fint_10',['LREAL_TO_INT',['../namespaceundoCore.html#aee0f595a30b771638c791644015982c3',1,'undoCore']]],
   ['lreal_5fto_5flint_11',['LREAL_TO_LINT',['../namespaceundoCore.html#a9aa54d75ae54751cf802d3bed3739e88',1,'undoCore']]],

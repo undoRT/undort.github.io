@@ -204,18 +204,18 @@ Quick Start</h1>
 <div class="line"><a class="code hl_typedef" href="namespaceundoCore.html#a7515e2423a08fab8adfbe4cdc5e6d7d7">TIME</a> timeout = TIME_LITERAL(<span class="stringliteral">&quot;T#5s&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Arrays with arbitrary bounds</span></div>
-<div class="line"><a class="code hl_class" href="classundoCore_1_1STArray.html">STArray&lt;INT, 1, 10&gt;</a> values;  <span class="comment">// indices 1..10</span></div>
-<div class="line"><a class="code hl_class" href="classundoCore_1_1STArray.html">STArray&lt;STArray&lt;REAL, 0, 4&gt;</a>, 0, 1&gt; matrix;  <span class="comment">// 2x5 matrix</span></div>
+<div class="line"><a class="code hl_struct" href="structundoCore_1_1STArray.html">STArray&lt;INT, 1, 10&gt;</a> values;  <span class="comment">// indices 1..10</span></div>
+<div class="line"><a class="code hl_struct" href="structundoCore_1_1STArray.html">STArray&lt;STArray&lt;REAL, 0, 4&gt;</a>, 0, 1&gt; matrix;  <span class="comment">// 2x5 matrix</span></div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// VAR_IN_OUT parameters</span></div>
 <div class="line"><span class="keywordtype">void</span> process(<a class="code hl_struct" href="structundoCore_1_1VarInOut.html">VAR_INOUT&lt;DINT&gt;</a> value) {</div>
 <div class="line">    *value += 1;</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassundoCore_1_1STArray_html"><div class="ttname"><a href="classundoCore_1_1STArray.html">undoCore::STArray</a></div><div class="ttdoc">Array template compatible with IEC 61131-3 array semantics.</div><div class="ttdef"><b>Definition</b> types.hpp:125</div></div>
-<div class="ttc" id="anamespaceundoCore_html_a1424845ddfa42d341337ab925b984e33"><div class="ttname"><a href="namespaceundoCore.html#a1424845ddfa42d341337ab925b984e33">undoCore::DINT</a></div><div class="ttdeci">Int32 DINT</div><div class="ttdef"><b>Definition</b> types.hpp:242</div></div>
-<div class="ttc" id="anamespaceundoCore_html_a7515e2423a08fab8adfbe4cdc5e6d7d7"><div class="ttname"><a href="namespaceundoCore.html#a7515e2423a08fab8adfbe4cdc5e6d7d7">undoCore::TIME</a></div><div class="ttdeci">Time TIME</div><div class="ttdef"><b>Definition</b> types.hpp:256</div></div>
-<div class="ttc" id="anamespaceundoCore_html_a8560bdc133362ed6b956a7087767987a"><div class="ttname"><a href="namespaceundoCore.html#a8560bdc133362ed6b956a7087767987a">undoCore::REAL</a></div><div class="ttdeci">Float REAL</div><div class="ttdef"><b>Definition</b> types.hpp:248</div></div>
-<div class="ttc" id="anamespaceundoCore_html_add79b28cb51c37169bd6264f3059efb6"><div class="ttname"><a href="namespaceundoCore.html#add79b28cb51c37169bd6264f3059efb6">undoCore::BOOL</a></div><div class="ttdeci">Bool BOOL</div><div class="ttdef"><b>Definition</b> types.hpp:239</div></div>
+<div class="ttc" id="anamespaceundoCore_html_a1424845ddfa42d341337ab925b984e33"><div class="ttname"><a href="namespaceundoCore.html#a1424845ddfa42d341337ab925b984e33">undoCore::DINT</a></div><div class="ttdeci">Int32 DINT</div><div class="ttdef"><b>Definition</b> types.hpp:329</div></div>
+<div class="ttc" id="anamespaceundoCore_html_a7515e2423a08fab8adfbe4cdc5e6d7d7"><div class="ttname"><a href="namespaceundoCore.html#a7515e2423a08fab8adfbe4cdc5e6d7d7">undoCore::TIME</a></div><div class="ttdeci">Time TIME</div><div class="ttdef"><b>Definition</b> types.hpp:343</div></div>
+<div class="ttc" id="anamespaceundoCore_html_a8560bdc133362ed6b956a7087767987a"><div class="ttname"><a href="namespaceundoCore.html#a8560bdc133362ed6b956a7087767987a">undoCore::REAL</a></div><div class="ttdeci">Float REAL</div><div class="ttdef"><b>Definition</b> types.hpp:335</div></div>
+<div class="ttc" id="anamespaceundoCore_html_add79b28cb51c37169bd6264f3059efb6"><div class="ttname"><a href="namespaceundoCore.html#add79b28cb51c37169bd6264f3059efb6">undoCore::BOOL</a></div><div class="ttdeci">Bool BOOL</div><div class="ttdef"><b>Definition</b> types.hpp:326</div></div>
+<div class="ttc" id="astructundoCore_1_1STArray_html"><div class="ttname"><a href="structundoCore_1_1STArray.html">undoCore::STArray</a></div><div class="ttdoc">Array template compatible with IEC 61131-3 array semantics.</div><div class="ttdef"><b>Definition</b> types.hpp:130</div></div>
 <div class="ttc" id="astructundoCore_1_1VarInOut_html"><div class="ttname"><a href="structundoCore_1_1VarInOut.html">undoCore::VarInOut</a></div><div class="ttdoc">Wrapper for VAR_IN_OUT parameters.</div><div class="ttdef"><b>Definition</b> types.hpp:80</div></div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md10"></a>
 5. Integrate with CMake</h2>

@@ -1,7 +1,7 @@
 var types_8hpp =
 [
     [ "undoCore::VarInOut< T >", "structundoCore_1_1VarInOut.html", "structundoCore_1_1VarInOut" ],
-    [ "undoCore::STArray< T, Low, High >", "classundoCore_1_1STArray.html", "classundoCore_1_1STArray" ],
+    [ "undoCore::STArray< T, Low, High >", "structundoCore_1_1STArray.html", "structundoCore_1_1STArray" ],
     [ "Bool", "types_8hpp.html#a2b0a8d0b2f081f5ea29df6ef91ea5e30", null ],
     [ "BOOL", "types_8hpp.html#add79b28cb51c37169bd6264f3059efb6", null ],
     [ "Byte", "types_8hpp.html#a7d141ea7f8bb6d76b69f8d3ebe23af4f", null ],
