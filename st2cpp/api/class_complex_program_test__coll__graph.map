@@ -1,0 +1,7 @@
+<map id="ComplexProgramTest" name="ComplexProgramTest">
+<area shape="rect" id="Node000001" title=" " alt="" coords="24,153,208,339"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,15,99,81"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="69,93,89,152,83,154,64,94"/>
+<area shape="rect" id="Node000003" href="$struct_generated_code.html" title=" " alt="" coords="123,5,237,91"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="169,92,154,139,149,137,164,90"/>
+</map>

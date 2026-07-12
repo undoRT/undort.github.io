@@ -26,27 +26,24 @@ var NAVTREE =
 [
   [ "st2cpp", "index.html", [
     [ "st2cpp — Structured Text to C++ Transpiler", "md__r_e_a_d_m_e.html", [
-      [ "Download", "md__r_e_a_d_m_e.html#autotoc_md2", null ],
-      [ "Quick Start", "md__r_e_a_d_m_e.html#autotoc_md4", [
-        [ "Build from source", "md__r_e_a_d_m_e.html#autotoc_md5", null ],
-        [ "Transpile a file", "md__r_e_a_d_m_e.html#autotoc_md6", null ],
-        [ "Example", "md__r_e_a_d_m_e.html#autotoc_md7", null ]
+      [ "Installation", "md__r_e_a_d_m_e.html#autotoc_md1", null ],
+      [ "Quick Start", "md__r_e_a_d_m_e.html#autotoc_md2", [
+        [ "Build from source", "md__r_e_a_d_m_e.html#autotoc_md3", null ],
+        [ "Build Requirements", "md__r_e_a_d_m_e.html#autotoc_md4", null ],
+        [ "Optional: Install globally", "md__r_e_a_d_m_e.html#autotoc_md5", null ],
+        [ "Transpile a file", "md__r_e_a_d_m_e.html#autotoc_md7", null ]
       ] ],
-      [ "CLI Reference", "md__r_e_a_d_m_e.html#autotoc_md9", null ],
-      [ "What's Supported", "md__r_e_a_d_m_e.html#autotoc_md11", null ],
-      [ "Known Limitations (Beta)", "md__r_e_a_d_m_e.html#autotoc_md13", null ],
-      [ "Contributing", "md__r_e_a_d_m_e.html#autotoc_md15", null ],
-      [ "License", "md__r_e_a_d_m_e.html#autotoc_md17", null ],
-      [ "Acknowledgments", "md__r_e_a_d_m_e.html#autotoc_md19", null ]
+      [ "Example", "md__r_e_a_d_m_e.html#autotoc_md8", null ],
+      [ "CLI Reference", "md__r_e_a_d_m_e.html#autotoc_md10", null ],
+      [ "What's Supported", "md__r_e_a_d_m_e.html#autotoc_md12", null ],
+      [ "Testing", "md__r_e_a_d_m_e.html#autotoc_md14", null ],
+      [ "Known Limitations (Beta)", "md__r_e_a_d_m_e.html#autotoc_md15", null ],
+      [ "Contributing", "md__r_e_a_d_m_e.html#autotoc_md17", null ],
+      [ "Testing Checklist", "md__r_e_a_d_m_e.html#autotoc_md19", null ],
+      [ "License", "md__r_e_a_d_m_e.html#autotoc_md20", null ],
+      [ "Acknowledgements", "md__r_e_a_d_m_e.html#autotoc_md21", null ]
     ] ],
-    [ "Namespaces", "namespaces.html", [
-      [ "Namespace List", "namespaces.html", "namespaces_dup" ],
-      [ "Namespace Members", "namespacemembers.html", [
-        [ "All", "namespacemembers.html", null ],
-        [ "Functions", "namespacemembers_func.html", null ],
-        [ "Typedefs", "namespacemembers_type.html", null ]
-      ] ]
-    ] ],
+    [ "Deprecated List", "deprecated.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -54,15 +51,15 @@ var NAVTREE =
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", null ],
-        [ "Variables", "functions_vars.html", null ],
-        [ "Typedefs", "functions_type.html", null ]
+        [ "Variables", "functions_vars.html", "functions_vars" ],
+        [ "Enumerations", "functions_enum.html", null ]
       ] ]
     ] ],
     [ "Files", "files.html", [
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
-        [ "All", "globals.html", null ],
-        [ "Functions", "globals_func.html", null ],
+        [ "All", "globals.html", "globals_dup" ],
+        [ "Functions", "globals_func.html", "globals_func" ],
         [ "Variables", "globals_vars.html", null ],
         [ "Typedefs", "globals_type.html", null ],
         [ "Enumerations", "globals_enum.html", null ],
@@ -75,9 +72,10 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_a_s_t_8h.html",
-"class_code_generator.html#ade36999beceb93f1187203a281689905",
-"st2cpp__types_8hpp.html",
-"structst2cpp_1_1_var_in_out.html#ad6da4b5042f325ac2f827b603199108f"
+"class_code_generator.html#a66a424b672e5a8c1e3be4058f73bd9d8",
+"functions_vars_f.html",
+"struct_process_image_config.html#a82d253dd50003e26399e0f25d70cd083",
+"test__process__image_8cpp.html#a9974f53facf6ecf1333b519c50ea5c05"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

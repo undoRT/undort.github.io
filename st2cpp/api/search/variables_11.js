@@ -1,7 +1,15 @@
 var searchData=
 [
-  ['targettype_0',['targetType',['../struct_cast_expr.html#ac45791fc693b95f69aa4c948b62634f2',1,'CastExpr']]],
-  ['text_1',['text',['../struct_token.html#af992ca6fb756dfdfb4cd474ef8fb6e9d',1,'Token']]],
-  ['to_2',['to',['../struct_for_stmt.html#a28f48b1c9ba18dff0b5a6ce6799abb0e',1,'ForStmt']]],
-  ['type_3',['type',['../struct_struct_member.html#af598e50e8fb93d8cbd523265286f2179',1,'StructMember::type'],['../struct_method_parameter.html#aa57f6f598a481330c7d75db118a33c40',1,'MethodParameter::type'],['../struct_var_decl.html#a7555e90a774c6c50c68d13afd8065f9c',1,'VarDecl::type'],['../struct_sizeof_expr.html#abe3a0f9ee23df8fd980aed0df68dffbf',1,'SizeofExpr::type'],['../struct_parameter_info.html#a44aeb5f44ad9dd6e4470ab91e5326473',1,'ParameterInfo::type'],['../struct_generated_file.html#abf3a7fe8cd5e8b1e14f8b674cb7a61a0',1,'GeneratedFile::type'],['../struct_token.html#a67919af9f3a80dc0b28a0ab1e6d5bf8a',1,'Token::type']]]
+  ['s_5fkeywords_0',['s_keywords',['../class_lexer.html#a4d7c32b28dfe24b7a6e899d45fd4ea6e',1,'Lexer']]],
+  ['s_5fparsedinterfaces_1',['s_parsedInterfaces',['../class_parser.html#a77219a2243ec98902453c474851da889',1,'Parser']]],
+  ['selector_2',['selector',['../struct_case_stmt.html#aa4d07447e5de68c3f2ef1706e45c1007',1,'CaseStmt']]],
+  ['size_3',['size',['../struct_address_allocator_1_1_memory_region.html#a55c713781c8479734f942c2078ccec65',1,'AddressAllocator::MemoryRegion']]],
+  ['source_4',['source',['../struct_generated_code.html#ad6b83c350246c455237578d24666cfa1',1,'GeneratedCode']]],
+  ['sourcecode_5',['sourceCode',['../struct_codegen_result.html#ac600f7fb617303b78272477889133dbf',1,'CodegenResult']]],
+  ['stpath_6',['stPath',['../struct_golden_test_param.html#a6ebb70aadfe404bf9b5b45aee4b0663d',1,'GoldenTestParam']]],
+  ['stringlen_7',['stringLen',['../struct_type_ref.html#a772c052831a448937cd532f795d05694',1,'TypeRef']]],
+  ['structs_8',['structs',['../struct_translation_unit.html#ae14e7cd1558a49b473b81154debe28a3',1,'TranslationUnit']]],
+  ['subdir_9',['subdir',['../struct_generated_file.html#acb417ead139672431ba7390e3ca9fcd6',1,'GeneratedFile']]],
+  ['success_10',['success',['../struct_address_allocator_1_1_allocation_result.html#afefae4774d0cce102201f50450f1b013',1,'AddressAllocator::AllocationResult']]],
+  ['suffix_11',['suffix',['../struct_literal_expr.html#ab416a7bde0c6dbd7ec2592c28ba809d5',1,'LiteralExpr']]]
 ];

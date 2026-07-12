@@ -108,7 +108,7 @@ Collaboration diagram for Lexer:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_lexer__coll__graph.png" border="0" usemap="#a_lexer_coll__map" alt="Collaboration graph"/></div>
 <map name="a_lexer_coll__map" id="a_lexer_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,243,371"/>
+<area shape="rect" title=" " alt="" coords="5,5,243,391"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -147,6 +147,9 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a2a118885d2bafd8fef571006c80fed77" id="r_a2a118885d2bafd8fef571006c80fed77"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_token.html">Token</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexer.html#a2a118885d2bafd8fef571006c80fed77">readTimeLiteral</a> ()</td></tr>
 <tr class="memdesc:a2a118885d2bafd8fef571006c80fed77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a time literal (T#..., TIME#...)  <br /></td></tr>
 <tr class="separator:a2a118885d2bafd8fef571006c80fed77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46f942d0271e1eb0ee429653c35bf40b" id="r_a46f942d0271e1eb0ee429653c35bf40b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_token.html">Token</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexer.html#a46f942d0271e1eb0ee429653c35bf40b">readAddress</a> ()</td></tr>
+<tr class="memdesc:a46f942d0271e1eb0ee429653c35bf40b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a process image address with optional placeholder.  <br /></td></tr>
+<tr class="separator:a46f942d0271e1eb0ee429653c35bf40b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74f5cd9404b377d8914efbc2917b6c7e" id="r_a74f5cd9404b377d8914efbc2917b6c7e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_token.html">Token</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexer.html#a74f5cd9404b377d8914efbc2917b6c7e">makeToken</a> (<a class="el" href="_token_8h.html#aa520fbf142ba1e7e659590c07da31921">TokenType</a> t, const std::string &amp;txt) const</td></tr>
 <tr class="memdesc:a74f5cd9404b377d8914efbc2917b6c7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a token at the current position.  <br /></td></tr>
 <tr class="separator:a74f5cd9404b377d8914efbc2917b6c7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -360,6 +363,38 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a46f942d0271e1eb0ee429653c35bf40b" name="a46f942d0271e1eb0ee429653c35bf40b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46f942d0271e1eb0ee429653c35bf40b">&#9670;&#160;</a></span>readAddress()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_token.html">Token</a> Lexer::readAddress </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Read a process image address with optional placeholder. </p>
+<p>Handles:</p><ul>
+<li>IX0.0, QW2, MW10 (fixed addresses)</li>
+<li>IX*, QW*, MD* (addresses with placeholder)</li>
+</ul>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="struct_token.html">Token</a> of type ADDRESS_* or ADDRESS_*_PLACEHOLDER </dd></dl>
+
+</div>
+</div>
 <a id="abff80ff007ec17371d5ba0a440697212" name="abff80ff007ec17371d5ba0a440697212"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abff80ff007ec17371d5ba0a440697212">&#9670;&#160;</a></span>readIdentifierOrKeyword()</h2>
 
@@ -416,6 +451,8 @@ Static Private Attributes</h2></td></tr>
 <p>Handles:</p><ul>
 <li>Decimal integers (123)</li>
 <li>Hex literals (16#FF)</li>
+<li>Binary literals (2#1010)</li>
+<li>Octal literals (8#1234)</li>
 <li>Real numbers (123.456, 1.2e-3)</li>
 </ul>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="struct_token.html">Token</a> of type INT_LITERAL or REAL_LITERAL </dd></dl>

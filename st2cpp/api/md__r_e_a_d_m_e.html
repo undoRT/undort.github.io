@@ -96,12 +96,10 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizab
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="autotoc_md0"></a> <a href="https://isocpp.org/"><img src="https://img.shields.io/badge/C%2B%2B-17-blue.svg" alt="C++17" style="pointer-events: none;" class="inline"/></a> <a href="https://www.gnu.org/licenses/gpl-3.0"><img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="License: GPL v3" style="pointer-events: none;" class="inline"/></a> <a href="https://github.com/undoRT/st2cpp/actions/workflows/build.yml"><img src="https://github.com/undoRT/st2cpp/actions/workflows/build.yml/badge.svg" alt="Build" style="pointer-events: none;" class="inline"/></a> <a href="https://www.undort.com/st2cpp/api/"><img src="https://img.shields.io/badge/docs-doxygen-blue.svg" alt="Documentation" style="pointer-events: none;" class="inline"/></a></p>
-<p>Part of the <a href="https://www.undort.com/"><b>undoRT</b></a> open-source automation platform.</p>
-<p><b><a class="el" href="namespacest2cpp.html">st2cpp</a></b> translates IEC 61131-3 Structured Text into clean, native C++17. No VM, no runtime overhead — just standard C++ you can compile, debug, and integrate anywhere.</p>
+<p>Part of the <a href="https://www.undort.com/"><b>undoRT</b></a> open-source automation platform. <b>st2cpp</b> translates IEC 61131-3 Structured Text into clean, native C++17. No VM, no runtime overhead — just standard C++ you can compile, debug, and integrate anywhere.</p>
 <p><b><a href="https://www.undort.com/st2cpp">Full documentation undort.com/st2cpp</a></b></p>
-<hr  />
-<h1><a class="anchor" id="autotoc_md2"></a>
-Download</h1>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Installation</h1>
 <p>Grab the latest binary from <a href="https://github.com/undoRT/st2cpp/releases"><b>GitHub Releases</b></a>:</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -111,7 +109,7 @@ Download</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">Linux ARM64   </td><td class="markdownTableBodyNone"><code>st2cpp-linux-arm64.tar.gz</code>    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">macOS ARM64   </td><td class="markdownTableBodyNone"><code>st2cpp-macos-arm64.tar.gz</code>    </td></tr>
+<td class="markdownTableBodyNone">MacOS ARM64   </td><td class="markdownTableBodyNone"><code>st2cpp-macos-arm64.tar.gz</code>    </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">Windows x64   </td><td class="markdownTableBodyNone"><code>st2cpp-win-x64.zip</code>   </td></tr>
 </table>
@@ -119,24 +117,49 @@ Download</h1>
 <div class="line">tar -xzf st2cpp-*.tar.gz &amp;&amp; ./st2cpp --help</div>
 <div class="line"> </div>
 <div class="line"># Windows</div>
-<div class="line">unzip st2cpp-win-x64.zip &amp;&amp; st2cpp.exe --help</div>
-</div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md4"></a>
+<div class="line">nmzip st2cpp-win-x64.zip &amp;&amp; st2cpp.exe --help</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md2"></a>
 Quick Start</h1>
-<h2><a class="anchor" id="autotoc_md5"></a>
+<h2><a class="anchor" id="autotoc_md3"></a>
 Build from source</h2>
+<h2><a class="anchor" id="autotoc_md4"></a>
+Build Requirements</h2>
+<ul>
+<li>C++17 compiler (gcc+ 11 + or clang 15 +)</li>
+<li>CMake 3.16 +</li>
+<li>Google Test (for building tests)</li>
+</ul>
 <div class="fragment"><div class="line">git clone https://github.com/undoRT/st2cpp.git</div>
 <div class="line">cd st2cpp</div>
-<div class="line">./build.sh          # or: mkdir build &amp;&amp; cd build &amp;&amp; cmake .. &amp;&amp; make -j$(nproc)</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md6"></a>
+<div class="line"> </div>
+<div class="line"># Build the compiler only</div>
+<div class="line">cmake -B build -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTS=OFF .</div>
+<div class="line">cmake --build build --j|| $(nproc)</div>
+<div class="line"> </div>
+<div class="line"># Build with tests (recommended for development)</div>
+<div class="line">cmake -B build -DCMAKE_BUILD_TYPE=Debug -DBUILD_TESTS=ON .</div>
+<div class="line">cmake --build build --j|| $(nproc)</div>
+<div class="line"> </div>
+<div class="line"># Run tests</div>
+<div class="line">cd build</div>
+<div class="line">ctest --output-on-failure --verbose</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md5"></a>
+Optional: Install globally</h2>
+<div class="fragment"><div class="line"># Linux/MacOS</div>
+<div class="line">sudo cp build/st2cpp /usr/local/bin/</div>
+<div class="line"> </div>
+<div class="line">cd /share/st2cpp/includes</div>
+<div class="line"># Or add ./st2cpp_includes to your project&#39;s include path</div>
+</div><!-- fragment --><hr  />
+<h2><a class="anchor" id="autotoc_md7"></a>
 Transpile a file</h2>
 <div class="fragment"><div class="line"># Single file</div>
 <div class="line">./st2cpp program.st --namespace myplc</div>
 <div class="line"> </div>
 <div class="line"># Entire workspace (modular project output)</div>
 <div class="line">./st2cpp --workspace ./src --project-style --output-dir build --namespace myplc</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md7"></a>
-Example</h2>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md8"></a>
+Example</h1>
 <p><b>Input</b> (<code>counter.st</code>):</p>
 <div class="fragment"><div class="line">FUNCTION_BLOCK Counter</div>
 <div class="line">    VAR_INPUT</div>
@@ -152,47 +175,94 @@ Example</h2>
 <div class="line">        Count := Count + 1;</div>
 <div class="line">    END_IF</div>
 <div class="line">END_FUNCTION_BLOCK</div>
-</div><!-- fragment --><p><b>Generated</b> (<code>counter.hpp</code> / <code>counter.cpp</code>) — a plain C++ struct with <code>operator()()</code>, getters, and setters. See <a href="https://www.undort.com/st2cpp/#example">full output example</a></p>
-<hr  />
-<h1><a class="anchor" id="autotoc_md9"></a>
+</div><!-- fragment --><p><b>Generated</b> (<code>counter.hpp</code> / <code>counter.cpp</code>) — a plain C++ struct with <code>operator()</code> c, getters, and setters. See <a href="https://www.undort.com/st2cpp/#example">full output example</a>.</p>
+<div class="fragment"><div class="line"><span class="keyword">struct </span>Counter {</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    <span class="comment">// VAR_INPUT</span></div>
+<div class="line">    Bool Enable{ };</div>
+<div class="line">    Bool Reset{};</div>
+<div class="line">    <span class="comment">// VAR_OUTPUT</span></div>
+<div class="line">    Int16 Count{};</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Setters/Getters</span></div>
+<div class="line">    <span class="keyword">inline</span> <span class="keywordtype">void</span> set_Enable(Bool val) { Enable = val; }</div>
+<div class="line">    <span class="keyword">inline</span> Bool get_Enable()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> Enable; }</div>
+<div class="line">    <span class="comment">// ...</span></div>
+<div class="line"> </div>
+<div class="line">    Counter();</div>
+<div class="line">    <span class="keywordtype">void</span> operator()();</div>
+<div class="line">};</div>
+</div><!-- fragment --><hr  />
+<h1><a class="anchor" id="autotoc_md10"></a>
 CLI Reference</h1>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Option   </th><th class="markdownTableHeadNone">Description    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><code>-o &lt;file&gt;</code>   </td><td class="markdownTableBodyNone">Output <code>.cpp</code> file (default: <code>&lt;input&gt;.cpp</code>)    </td></tr>
+<td class="markdownTableBodyNone"><code>-o &lt;output.cpp&gt;</code>   </td><td class="markdownTableBodyNone">Output C++ source file (default: <code>&lt;input&gt;.cpp</code>)    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><code>-H &lt;file&gt;</code>   </td><td class="markdownTableBodyNone">Output <code>.hpp</code> file (default: <code>&lt;input&gt;.hpp</code>)    </td></tr>
+<td class="markdownTableBodyNone"><code>-H &lt;output.hpp&gt;</code>   </td><td class="markdownTableBodyNone">Output C++ header file (default: <code>&lt;input&gt;.hpp</code>)    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><code>--namespace &lt;name&gt;</code>   </td><td class="markdownTableBodyNone">C++ namespace for generated code (default: <code><a class="el" href="namespacest2cpp.html">st2cpp</a></code>)    </td></tr>
+<td class="markdownTableBodyNone"><code>--namespace &lt;name&gt;</code>   </td><td class="markdownTableBodyNone">Set C++ namespace for generated code (default: undoCore)    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><code>--runtime &lt;file&gt;</code>   </td><td class="markdownTableBodyNone">Custom runtime header (default: <code><a class="el" href="st2cpp__types_8hpp.html">st2cpp_types.hpp</a></code>)    </td></tr>
+<td class="markdownTableBodyNone"><code>--runtime &lt;file&gt;</code>   </td><td class="markdownTableBodyNone">Custom runtime header file (default: undoCore/undoCore.hpp)    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><code>--workspace &lt;path&gt;</code>   </td><td class="markdownTableBodyNone">Process all <code>.st</code> files recursively    </td></tr>
+<td class="markdownTableBodyNone"><code>--tokens</code>   </td><td class="markdownTableBodyNone">Dump token list and exit    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><code>--project-style</code>   </td><td class="markdownTableBodyNone">Modular output with dependency management (requires <code>--workspace</code>)    </td></tr>
+<td class="markdownTableBodyNone"><code>--caseSensitive</code>   </td><td class="markdownTableBodyNone">Preserve original case (default: convert to uppercase)    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><code>--output-dir &lt;dir&gt;</code>   </td><td class="markdownTableBodyNone">Output directory for workspace/project mode    </td></tr>
+<td class="markdownTableBodyNone"><code>--workspace &lt;path&gt;</code>   </td><td class="markdownTableBodyNone">Process all .st files in workspace (recursive)    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><code>--tokens</code>   </td><td class="markdownTableBodyNone">Dump token stream and exit (debugging)    </td></tr>
+<td class="markdownTableBodyNone"><code>--project-style</code>   </td><td class="markdownTableBodyNone">Generate modular project structure (separate files for each FB)    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><code>-h, --help</code>   </td><td class="markdownTableBodyNone">Show help   </td></tr>
+<td class="markdownTableBodyNone"><code>--output-dir &lt;dir&gt;</code>   </td><td class="markdownTableBodyNone">Output directory (default: generated)    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>--pi-auto</code>   </td><td class="markdownTableBodyNone">Auto-detect Process Image sizes (default)    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>--pi-no-auto</code>   </td><td class="markdownTableBodyNone">Disable auto-detection, use manual sizes    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>--pi-input &lt;bytes&gt;</code>   </td><td class="markdownTableBodyNone">Process Image Input size in bytes (default: 1024)    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>--pi-output &lt;bytes&gt;</code>   </td><td class="markdownTableBodyNone">Process Image Output size in bytes (default: 1024)    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>--pi-marker &lt;bytes&gt;</code>   </td><td class="markdownTableBodyNone">Process Image Marker size in bytes (default: 1024)    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>-v, --verbose</code>   </td><td class="markdownTableBodyNone">Print detailed processing information    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>-h, --help</code>   </td><td class="markdownTableBodyNone">Show this help   </td></tr>
 </table>
 <hr  />
-<h1><a class="anchor" id="autotoc_md11"></a>
+<h1><a class="anchor" id="autotoc_md12"></a>
 What's Supported</h1>
 <ul>
 <li><b>POUs</b>: <code>FUNCTION</code>, <code>FUNCTION_BLOCK</code>, <code>PROGRAM</code></li>
 <li><b>Variable sections</b>: <code>VAR</code>, <code>VAR_INPUT</code>, <code>VAR_OUTPUT</code>, <code>VAR_IN_OUT</code>, <code>VAR_TEMP</code>, <code>VAR_EXTERNAL</code>, <code>VAR_GLOBAL</code></li>
-<li><b>Types</b>: All IEC 61131-3 elementary types, <code>STRUCT</code>, <code>ENUM</code>, arrays, <code>POINTER TO</code>, <code>REF_TO</code></li>
+<li><b>Types</b>: All IEC 61131-3 elementary types, <code>STRUCT</code>, <code>ENUM</code>, arrays, <code>POINTER_TO</code>, <code>REF_TO</code></li>
 <li><b>Control flow</b>: <code>IF/ELSIF/ELSE</code>, <code>FOR/TO/BY</code>, <code>WHILE</code>, <code>REPEAT/UNTIL</code>, <code>CASE/OF</code></li>
-<li><b>Calls</b>: Positional, named (<code>:=</code>), output binding (<code>=&gt;</code>), IN_OUT references</li>
-<li><b>FB inheritance</b>: <code>EXTENDS</code> with <code>SUPER^</code> method access</li>
+<li><b>Calls</b>: Positional, named, output binding (=&gt;), IN_OUT references</li>
+<li><b>FB Namespaces</b></li>
+<li><b>Fbinheritance</b>: <code>EXTENDS</code> with <code>SUPER^</code> method access</li>
+<li><b>Calls</b>: Positional, named (:=<code>�, output binding (=&gt;</code>), IN_OUT references</li>
+<li><b>FB Methods</b>: with <code>UAR_INPUT</code>, <code>VAR_OUTPUT</code>VAR_TEMP locals</li>
 <li><b>Project mode</b>: Topological dependency sort, circular-dependency-safe header layout</li>
+<li><b>Supported Language</b>: Full coverage of IEC 61131-3 details at <a href="https://www.undort.com/st2cpp/#supported">docs</a></li>
+<li><b>Circular-dependency</b>: Detected and reported with clear error messages</li>
 </ul>
-<p>Full language coverage details: <a href="https://www.undort.com/st2cpp/#supported">st2cpp language</a></p>
 <hr  />
-<h1><a class="anchor" id="autotoc_md13"></a>
+<h1><a class="anchor" id="autotoc_md14"></a>
+Testing</h1>
+<p>The project includes a comprehensive test suite using Google Test. Tests cover:</p>
+<ul>
+<li><b>From the legacy repository</b>: around 20 tests covering lexing, parsing, and code generation for the core IEC 61131-3 constructs.</li>
+<li><b>Newly added</b>: 14 comprehensive tests covering arrays, enums, structs, function blocks with methods, inheritance, and <code>SUPER^</code> calls.</li>
+</ul>
+<p>To build and run tests:</p>
+<div class="fragment"><div class="line">cmake -B build -DBUILD_TESTS=ON .</div>
+<div class="line">cmake --build build --j|| $(nproc)</div>
+<div class="line">cd build</div>
+<div class="line">ctest --output-on-failure --verbose</div>
+</div><!-- fragment --><p>All tests are automatically executed in the CI/CD pipeline on every pull request and commit to main. Test results are available in the [Actions] tab(<a href="https://github.com/undoRT/st2cpp/actions">https://github.com/undoRT/st2cpp/actions</a>) of the GitHub repository.</p>
+<h1><a class="anchor" id="autotoc_md15"></a>
 Known Limitations (Beta)</h1>
 <ul>
 <li>No semantic analysis / type checking yet</li>
@@ -201,7 +271,7 @@ Known Limitations (Beta)</h1>
 <li><code>VAR_CONFIG</code> and SFC (<code>ACTION</code>, <code>TRANSITION</code>) not yet implemented</li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md15"></a>
+<h1><a class="anchor" id="autotoc_md17"></a>
 Contributing</h1>
 <ol type="1">
 <li>Fork the repo and create a feature branch</li>
@@ -210,13 +280,19 @@ Contributing</h1>
 </ol>
 <p>Core standards: C++17, RAII, Doxygen on all public APIs.</p>
 <hr  />
-<h1><a class="anchor" id="autotoc_md17"></a>
-License</h1>
-<p>GPL-3.0 — see [LICENSE](LICENSE). <br  />
- The runtime library <code><a class="el" href="st2cpp__types_8hpp.html">st2cpp_types.hpp</a></code> carries a linking exception — see <a href="COPYING.ST2CPP_TYPES">COPYING.ST2CPP_TYPES</a>.</p>
-<hr  />
 <h1><a class="anchor" id="autotoc_md19"></a>
-Acknowledgments</h1>
+Testing Checklist</h1>
+<p>Before submitting a PR, ensure that:</p>
+<ul>
+<li>[ ] All tests pass locally (<code>ctest</code>)</li>
+<li>[ ] No regression test failures</li>
+<li>[ ] Code is documented with Doxygen comments</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md20"></a>
+License</h1>
+<p>GPL-3.0 &ndash; see [LICENSE](LICENSE).</p>
+<h1><a class="anchor" id="autotoc_md21"></a>
+Acknowledgements</h1>
 <p>Architecture inspired by <a href="https://github.com/Autonomy-Logic/STruCpp">STruCpp</a> (TypeScript). No code was copied or ported. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->

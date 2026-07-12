@@ -174,6 +174,9 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:aa5f129fd5dbf511c5bc447fd0ede30cb" id="r_aa5f129fd5dbf511c5bc447fd0ede30cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_var_section.html">VarSection</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser.html#aa5f129fd5dbf511c5bc447fd0ede30cb">parseMethodVarSection</a> (<a class="el" href="_a_s_t_8h.html#ae07efc6cf0618fdada2cb81c9d54d6a4">VarKind</a> kind)</td></tr>
 <tr class="memdesc:aa5f129fd5dbf511c5bc447fd0ede30cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a variable section inside a METHOD.  <br /></td></tr>
 <tr class="separator:aa5f129fd5dbf511c5bc447fd0ede30cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acec15aad9600530855d16718cbec190f" id="r_acec15aad9600530855d16718cbec190f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_struct_init_expr.html">StructInitExpr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser.html#acec15aad9600530855d16718cbec190f">parseStructInitBody</a> ()</td></tr>
+<tr class="memdesc:acec15aad9600530855d16718cbec190f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a struct initialization body: (member := value, ...)  <br /></td></tr>
+<tr class="separator:acec15aad9600530855d16718cbec190f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5c056d6923a3084a95b88d1dbb255f2" id="r_ad5c056d6923a3084a95b88d1dbb255f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_var_section.html">VarSection</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser.html#ad5c056d6923a3084a95b88d1dbb255f2">parseVarSection</a> (<a class="el" href="_a_s_t_8h.html#ae07efc6cf0618fdada2cb81c9d54d6a4">VarKind</a> kind)</td></tr>
 <tr class="memdesc:ad5c056d6923a3084a95b88d1dbb255f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a standard variable section.  <br /></td></tr>
 <tr class="separator:ad5c056d6923a3084a95b88d1dbb255f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -231,6 +234,9 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:addafd9e4124acf4b095f20a56d7aa21d" id="r_addafd9e4124acf4b095f20a56d7aa21d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_call_expr_1_1_arg.html">CallExpr::Arg</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser.html#addafd9e4124acf4b095f20a56d7aa21d">parseCallArg</a> ()</td></tr>
 <tr class="memdesc:addafd9e4124acf4b095f20a56d7aa21d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a single function/method call argument.  <br /></td></tr>
 <tr class="separator:addafd9e4124acf4b095f20a56d7aa21d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85657efb1e44f7a5fa8e65edc19d5f49" id="r_a85657efb1e44f7a5fa8e65edc19d5f49"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="struct_expr.html">Expr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser.html#a85657efb1e44f7a5fa8e65edc19d5f49">parseAddressExpression</a> (const <a class="el" href="struct_token.html">Token</a> &amp;tok)</td></tr>
+<tr class="memdesc:a85657efb1e44f7a5fa8e65edc19d5f49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a process image address token into an <a class="el" href="struct_address_expr.html" title="Represents an IEC 61131-3 address (e.g., IX0.0, QB10, MW5)">AddressExpr</a>.  <br /></td></tr>
+<tr class="separator:a85657efb1e44f7a5fa8e65edc19d5f49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca0221ff266606b52fd252874a42a999" id="r_aca0221ff266606b52fd252874a42a999"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser.html#aca0221ff266606b52fd252874a42a999">isVarSectionStart</a> () const</td></tr>
 <tr class="memdesc:aca0221ff266606b52fd252874a42a999"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the current position starts a variable section.  <br /></td></tr>
 <tr class="separator:aca0221ff266606b52fd252874a42a999"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -682,6 +688,42 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if token was matched and consumed </dd></dl>
+
+</div>
+</div>
+<a id="a85657efb1e44f7a5fa8e65edc19d5f49" name="a85657efb1e44f7a5fa8e65edc19d5f49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85657efb1e44f7a5fa8e65edc19d5f49">&#9670;&#160;</a></span>parseAddressExpression()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="struct_expr.html">Expr</a> &gt; Parser::parseAddressExpression </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_token.html">Token</a> &amp;&#160;</td>
+          <td class="paramname"><em>tok</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parse a process image address token into an <a class="el" href="struct_address_expr.html" title="Represents an IEC 61131-3 address (e.g., IX0.0, QB10, MW5)">AddressExpr</a>. </p>
+<p>Handles both fixed addresses (e.g., IX0.0) and placeholder addresses (e.g., IX*)</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tok</td><td>The token from the lexer (ADDRESS_INPUT, ADDRESS_INPUT_PLACEHOLDER, etc.) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::shared_ptr&lt;Expr&gt; containing the <a class="el" href="struct_address_expr.html" title="Represents an IEC 61131-3 address (e.g., IX0.0, QB10, MW5)">AddressExpr</a> </dd></dl>
 
 </div>
 </div>
@@ -1285,6 +1327,34 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Vector of statement AST nodes </dd></dl>
+
+</div>
+</div>
+<a id="acec15aad9600530855d16718cbec190f" name="acec15aad9600530855d16718cbec190f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acec15aad9600530855d16718cbec190f">&#9670;&#160;</a></span>parseStructInitBody()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_struct_init_expr.html">StructInitExpr</a> Parser::parseStructInitBody </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parse a struct initialization body: (member := value, ...) </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="struct_struct_init_expr.html">StructInitExpr</a> AST node </dd></dl>
 
 </div>
 </div>

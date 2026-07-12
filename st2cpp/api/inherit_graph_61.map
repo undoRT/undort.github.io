@@ -1,0 +1,11 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,80,107,105"/>
+<area shape="rect" id="Node000001" href="$class_compilation_test.html" title="Test fixture for compilation tests." alt="" coords="172,5,299,31"/>
+<area shape="poly" id="edge2_Node000000_Node000001" title=" " alt="" coords="90,71,154,40,186,28,187,33,156,44,92,76"/>
+<area shape="rect" id="Node000002" href="$class_complex_program_test.html" title=" " alt="" coords="155,55,316,80"/>
+<area shape="poly" id="edge3_Node000000_Node000002" title=" " alt="" coords="120,81,154,76,155,81,121,86"/>
+<area shape="rect" id="Node000003" href="$class_generation_test.html" title="Test fixture for code generation tests." alt="" coords="175,104,295,129"/>
+<area shape="poly" id="edge4_Node000000_Node000003" title=" " alt="" coords="121,99,176,106,175,111,120,104"/>
+<area shape="rect" id="Node000004" href="$class_process_image_test.html" title=" " alt="" coords="166,153,305,179"/>
+<area shape="poly" id="edge5_Node000000_Node000004" title=" " alt="" coords="94,110,156,138,191,151,189,156,154,143,92,114"/>
+</map>

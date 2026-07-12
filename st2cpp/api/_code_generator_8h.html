@@ -148,11 +148,30 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="_code_generator_8h__dep__incl.png" border="0" usemap="#ainclude_2codegen_2_code_generator_8hdep" alt=""/></div>
 <map name="ainclude_2codegen_2_code_generator_8hdep" id="ainclude_2codegen_2_code_generator_8hdep">
-<area shape="rect" title="Code generator interface for translating AST to C++ code." alt="" coords="47,5,288,31"/>
+<area shape="rect" title="Code generator interface for translating AST to C++ code." alt="" coords="365,5,607,31"/>
 <area shape="rect" href="main_8cpp.html" title="Command&#45;line driver for the st2cpp transpiler." alt="" coords="5,79,129,104"/>
-<area shape="poly" title=" " alt="" coords="142,41,85,81,82,76,139,36"/>
+<area shape="poly" title=" " alt="" coords="406,36,130,82,129,77,405,30"/>
 <area shape="rect" href="_code_generator_8cpp.html" title="Implementation of the code generator that emits C++ from the AST." alt="" coords="153,79,381,104"/>
-<area shape="poly" title=" " alt="" coords="196,36,253,76,249,81,193,41"/>
+<area shape="poly" title=" " alt="" coords="439,37,304,81,302,76,437,32"/>
+<area shape="rect" href="_test_helper_8cpp.html" title="Implementation of helper class for tests." alt="" coords="31,159,237,185"/>
+<area shape="poly" title=" " alt="" coords="469,43,436,76,394,106,357,121,304,136,192,162,191,157,303,131,355,116,391,102,433,72,466,40"/>
+<area shape="rect" href="_test_helper_8h.html" title="Header of helper class for tests." alt="" coords="457,79,648,104"/>
+<area shape="poly" title=" " alt="" coords="508,39,544,77,540,80,505,43"/>
+<area shape="rect" href="test__allocator_8cpp.html" title="Implementation of test cases for the AddressAllocator." alt="" coords="673,79,846,104"/>
+<area shape="poly" title=" " alt="" coords="544,32,716,76,714,81,542,37"/>
+<area shape="rect" href="test__scope_8cpp.html" title="Implementation of test cases for the ScopeManager." alt="" coords="870,79,1025,104"/>
+<area shape="poly" title=" " alt="" coords="574,30,873,76,873,81,573,35"/>
+<area shape="poly" title=" " alt="" coords="479,109,195,162,194,157,478,104"/>
+<area shape="rect" href="test__compilation_8cpp.html" title="Implementation of test cases for compilation of generated code." alt="" coords="261,159,455,185"/>
+<area shape="poly" title=" " alt="" coords="513,112,387,162,385,157,511,107"/>
+<area shape="rect" href="test__complex__program_8cpp.html" title="Implementation of test cases for complex ST programs." alt="" coords="479,152,626,192"/>
+<area shape="poly" title=" " alt="" coords="555,118,555,152,550,152,550,118"/>
+<area shape="rect" href="test__generation_8cpp.html" title="Implementation of test cases for the CodeGenerator." alt="" coords="650,159,837,185"/>
+<area shape="poly" title=" " alt="" coords="594,107,717,157,715,162,592,112"/>
+<area shape="rect" href="test__golden_8cpp.html" title="Golden tests for st2cpp &#45; compares generated C++ against expected output." alt="" coords="861,159,1023,185"/>
+<area shape="poly" title=" " alt="" coords="623,104,886,157,885,162,622,109"/>
+<area shape="rect" href="test__process__image_8cpp.html" title="Implementation of test cases for Process Image functionality." alt="" coords="1047,152,1187,192"/>
+<area shape="poly" title=" " alt="" coords="662,102,868,126,1036,149,1047,151,1046,157,1035,155,867,132,661,107"/>
 </map>
 </div>
 </div>
@@ -163,6 +182,22 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_parameter_info.html">ParameterInfo</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Information about a function / FB parameter.  <a href="struct_parameter_info.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_address_allocator.html">AddressAllocator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manages allocation of AT addresses with placeholder '*'.  <a href="class_address_allocator.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_address_allocator_1_1_allocation_result.html">AddressAllocator::AllocationResult</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result of an address allocation.  <a href="struct_address_allocator_1_1_allocation_result.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_address_allocator_1_1_memory_region.html">AddressAllocator::MemoryRegion</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Information about a memory region.  <a href="struct_address_allocator_1_1_memory_region.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scope_manager.html">ScopeManager</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manages the symbol scope stack for code generation.  <a href="class_scope_manager.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_scope_manager_1_1_var_info.html">ScopeManager::VarInfo</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_scope_manager_1_1_scope.html">ScopeManager::Scope</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_function_signature.html">FunctionSignature</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simplified signature representation for functions and FBs.  <a href="struct_function_signature.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -172,8 +207,16 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_generated_file.html">GeneratedFile</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Information about a generated file.  <a href="struct_generated_file.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_process_image_config.html">ProcessImageConfig</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration for Process Image sizing.  <a href="struct_process_image_config.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_code_generator.html">CodeGenerator</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emit C++ code from the parsed AST.  <a href="class_code_generator.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_process_image_analyzer.html">ProcessImageAnalyzer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Analyzer for detecting Process Image sizes from AST.  <a href="class_process_image_analyzer.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_process_image_analyzer_1_1_address_info.html">ProcessImageAnalyzer::AddressInfo</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
@@ -197,7 +240,7 @@ Enumerations</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Code generator interface for translating AST to C++ code. </p>
-<p>This header declares the <code><a class="el" href="class_code_generator.html" title="Emit C++ code from the parsed AST.">CodeGenerator</a></code> class which emits C++ header and source strings from a parsed Structured Text <code><a class="el" href="struct_translation_unit.html">TranslationUnit</a></code>. The implementation produces a minimal runtime-compatible C++ output using the header-only st2cpp_types in <code><a class="el" href="st2cpp__types_8hpp.html">st2cpp_includes/st2cpp_types.hpp</a></code>.</p>
+<p>This header declares the <code><a class="el" href="class_code_generator.html" title="Emit C++ code from the parsed AST.">CodeGenerator</a></code> class which emits C++ header and source strings from a parsed Structured Text <code><a class="el" href="struct_translation_unit.html">TranslationUnit</a></code>. The implementation produces a minimal runtime-compatible C++ output using the header-only types.hpp in <code>st2cpp_includes/undoCore/include/undoCore/types.hpp</code>.</p>
 <dl class="section author"><dt>Author</dt><dd>Salvatore Bamundo </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>June 2026 SPDX-License-Identifier: GPL-3.0-or-later SPDX-FileCopyrightText: Copyright (c) 2026 undoRT </dd></dl>
 </div><h2 class="groupheader">Typedef Documentation</h2>

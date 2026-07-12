@@ -1,0 +1,43 @@
+<map id="tests/test_golden.cpp" name="tests/test_golden.cpp">
+<area shape="rect" id="Node000001" title="Golden tests for st2cpp &#45; compares generated C++ against expected output." alt="" coords="363,5,525,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,109,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="382,33,123,81,122,75,381,28"/>
+<area shape="rect" id="Node000003" href="$_test_helper_8h.html" title="Header of helper class for tests." alt="" coords="367,79,521,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="447,31,447,65,441,65,441,31"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="169,372,228,397"/>
+<area shape="poly" id="edge23_Node000001_Node000006" title=" " alt="" coords="364,27,293,40,257,50,223,64,194,82,170,104,155,131,149,164,149,239,153,273,162,305,187,359,182,361,157,307,148,274,144,239,144,163,150,129,166,101,190,78,221,59,255,45,292,34,363,22"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="797,372,859,397"/>
+<area shape="poly" id="edge22_Node000001_Node000007" title=" " alt="" coords="525,27,634,45,750,73,801,91,843,112,871,135,879,149,881,163,881,239,878,274,868,307,844,361,839,359,863,305,872,273,876,239,876,164,874,151,867,139,840,116,799,96,748,78,633,50,524,32"/>
+<area shape="rect" id="Node000018" title=" " alt="" coords="916,79,1007,104"/>
+<area shape="poly" id="edge21_Node000001_Node000018" title=" " alt="" coords="525,26,898,76,903,77,902,82,897,81,524,31"/>
+<area shape="rect" id="Node000004" href="$_code_generator_8h.html" title="Code generator interface for translating AST to C++ code." alt="" coords="349,152,539,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="447,104,447,138,441,138,441,104"/>
+<area shape="poly" id="edge19_Node000003_Node000006" title=" " alt="" coords="420,107,380,127,338,154,298,187,265,227,242,262,225,300,207,359,202,357,220,298,237,259,261,224,294,183,334,150,377,122,417,102"/>
+<area shape="poly" id="edge20_Node000003_Node000007" title=" " alt="" coords="522,96,591,109,668,132,706,149,742,169,776,194,805,224,823,256,832,293,835,328,834,358,829,358,830,329,827,294,818,258,801,227,772,198,740,174,704,153,666,137,590,114,521,102"/>
+<area shape="rect" id="Node000005" href="$_a_s_t_8h.html" title="Abstract Syntax Tree nodes for Structured Text." alt="" coords="384,299,467,324"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="350,180,308,198,290,211,276,227,270,240,271,252,279,262,292,272,329,287,371,298,370,303,327,292,289,276,275,266,266,254,264,239,271,224,287,207,306,193,348,175"/>
+<area shape="rect" id="Node000011" href="$_parser_8h.html" title="Recursive&#45;descent parser for Structured Text (ST) tokens." alt="" coords="385,225,503,251"/>
+<area shape="poly" id="edge10_Node000004_Node000011" title=" " alt="" coords="447,178,447,212,441,212,441,178"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="285,225,360,251"/>
+<area shape="poly" id="edge16_Node000004_Node000015" title=" " alt="" coords="426,180,355,221,353,216,423,175"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="527,225,651,251"/>
+<area shape="poly" id="edge17_Node000004_Node000016" title=" " alt="" coords="469,175,555,217,552,222,466,180"/>
+<area shape="rect" id="Node000017" title=" " alt="" coords="676,225,791,251"/>
+<area shape="poly" id="edge18_Node000004_Node000017" title=" " alt="" coords="491,175,674,219,673,225,490,180"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="390,327,242,373,240,368,388,321"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="468,319,479,321,784,374,783,379,478,327,467,324"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="344,372,421,397"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="421,326,399,362,394,359,416,323"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="446,372,514,397"/>
+<area shape="poly" id="edge8_Node000005_Node000009" title=" " alt="" coords="436,323,465,360,461,363,432,326"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="539,372,613,397"/>
+<area shape="poly" id="edge9_Node000005_Node000010" title=" " alt="" coords="451,322,540,364,538,368,448,326"/>
+<area shape="poly" id="edge14_Node000011_Node000005" title=" " alt="" coords="443,252,434,286,429,285,438,250"/>
+<area shape="rect" id="Node000012" href="$_token_8h.html" title="Token definitions for the ST lexer." alt="" coords="235,299,341,324"/>
+<area shape="poly" id="edge11_Node000011_Node000012" title=" " alt="" coords="420,253,327,295,325,290,418,248"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="491,299,578,324"/>
+<area shape="poly" id="edge15_Node000011_Node000014" title=" " alt="" coords="460,249,511,288,507,292,457,253"/>
+<area shape="poly" id="edge12_Node000012_Node000006" title=" " alt="" coords="275,326,226,365,222,361,272,322"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="253,372,320,397"/>
+<area shape="poly" id="edge13_Node000012_Node000013" title=" " alt="" coords="290,324,290,359,284,358,285,324"/>
+</map>

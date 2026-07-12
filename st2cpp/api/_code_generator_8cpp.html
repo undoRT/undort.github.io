@@ -150,6 +150,9 @@ Include dependency graph for CodeGenerator.cpp:</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:aa3eb3a235940c1e15e3053160acf4706" id="r_aa3eb3a235940c1e15e3053160acf4706"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_code_generator_8cpp.html#aa3eb3a235940c1e15e3053160acf4706">parseAddressString</a> (const std::string &amp;addrStr, <a class="el" href="struct_address_expr.html">AddressExpr</a> &amp;out)</td></tr>
+<tr class="memdesc:aa3eb3a235940c1e15e3053160acf4706"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to parse an IEC address string into an <a class="el" href="struct_address_expr.html" title="Represents an IEC 61131-3 address (e.g., IX0.0, QB10, MW5)">AddressExpr</a>.  <br /></td></tr>
+<tr class="separator:aa3eb3a235940c1e15e3053160acf4706"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9b643abeed02dd72cbf107c5d7baf81" id="r_ad9b643abeed02dd72cbf107c5d7baf81"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_code_generator_8cpp.html#ad9b643abeed02dd72cbf107c5d7baf81">extractArrayElementType</a> (const std::string &amp;arrayType)</td></tr>
 <tr class="memdesc:ad9b643abeed02dd72cbf107c5d7baf81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract the element type from an STArray template string.  <br /></td></tr>
 <tr class="separator:ad9b643abeed02dd72cbf107c5d7baf81"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -222,6 +225,44 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="aa3eb3a235940c1e15e3053160acf4706" name="aa3eb3a235940c1e15e3053160acf4706"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3eb3a235940c1e15e3053160acf4706">&#9670;&#160;</a></span>parseAddressString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool parseAddressString </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>addrStr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_address_expr.html">AddressExpr</a> &amp;&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Helper function to parse an IEC address string into an <a class="el" href="struct_address_expr.html" title="Represents an IEC 61131-3 address (e.g., IX0.0, QB10, MW5)">AddressExpr</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">addrStr</td><td>The address string (e.g., "%IX0.0", "%QW2", "%MW10", "%IX*") </td></tr>
+    <tr><td class="paramname">out</td><td>The <a class="el" href="struct_address_expr.html" title="Represents an IEC 61131-3 address (e.g., IX0.0, QB10, MW5)">AddressExpr</a> to fill </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if parsing succeeded, false otherwise </dd></dl>
 
 </div>
 </div>

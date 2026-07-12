@@ -1,3 +1,9 @@
 <map id="CodeGenerator" name="CodeGenerator">
-<area shape="rect" id="Node000001" title="Emit C++ code from the parsed AST." alt="" coords="5,5,216,585"/>
+<area shape="rect" id="Node000001" title="Emit C++ code from the parsed AST." alt="" coords="175,393,386,1013"/>
+<area shape="rect" id="Node000002" href="$class_scope_manager.html" title="Manages the symbol scope stack for code generation." alt="" coords="5,5,183,331"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="153,330,172,385,167,387,148,332"/>
+<area shape="rect" id="Node000003" href="$struct_process_image_config.html" title="Configuration for Process Image sizing." alt="" coords="207,85,354,251"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="283,251,283,376,278,376,278,251"/>
+<area shape="rect" id="Node000004" href="$class_address_allocator.html" title="Manages allocation of AT addresses with placeholder &#39;*&#39;." alt="" coords="379,55,559,281"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="432,282,394,389,389,387,427,280"/>
 </map>

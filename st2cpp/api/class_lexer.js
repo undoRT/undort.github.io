@@ -5,6 +5,7 @@ var class_lexer =
     [ "makeToken", "class_lexer.html#a74f5cd9404b377d8914efbc2917b6c7e", null ],
     [ "match", "class_lexer.html#a1ae163f94b38ab0e4c88951e9a810859", null ],
     [ "peek", "class_lexer.html#a8046cb5f85ddfa26ec0cdfc27adc3a34", null ],
+    [ "readAddress", "class_lexer.html#a46f942d0271e1eb0ee429653c35bf40b", null ],
     [ "readIdentifierOrKeyword", "class_lexer.html#abff80ff007ec17371d5ba0a440697212", null ],
     [ "readNumber", "class_lexer.html#a2b585c85066216591020e104032c563b", null ],
     [ "readString", "class_lexer.html#abe162c65e854ea040cb5fc20a94e582f", null ],

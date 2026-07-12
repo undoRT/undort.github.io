@@ -1,7 +1,13 @@
 <map id="include/lexer/Lexer.h" name="include/lexer/Lexer.h">
-<area shape="rect" id="Node000001" title="Lexical analyzer for Structured Text." alt="" coords="69,5,223,31"/>
+<area shape="rect" id="Node000001" title="Lexical analyzer for Structured Text." alt="" coords="346,5,501,31"/>
 <area shape="rect" id="Node000002" href="$main_8cpp.html" title="Command&#45;line driver for the st2cpp transpiler." alt="" coords="5,79,129,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,42,82,80,78,76,121,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="353,36,125,81,124,76,352,31"/>
 <area shape="rect" id="Node000003" href="$_lexer_8cpp.html" title="Lexical analyzer implementation for Structured Text." alt="" coords="153,79,296,104"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="171,38,214,76,210,80,167,42"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="379,38,258,81,256,76,378,33"/>
+<area shape="rect" id="Node000004" href="$_test_helper_8cpp.html" title="Implementation of helper class for tests." alt="" coords="321,79,526,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="426,44,426,79,421,79,421,44"/>
+<area shape="rect" id="Node000005" href="$test__lexer_8cpp.html" title="Implementation of test cases for the Lexer." alt="" coords="551,79,699,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="470,33,593,76,591,81,468,38"/>
+<area shape="rect" id="Node000006" href="$test__parser_8cpp.html" title="Implementation of test cases for the Parser." alt="" coords="723,79,881,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="498,31,741,76,740,81,497,36"/>
 </map>
