@@ -20,7 +20,7 @@
     </a>
     <div class="topbar-sep"></div>
     <a href="index.html" class="topbar-product">st2cpp</a>
-    <span class="topbar-version">v0.1.2</span>
+    <span class="topbar-version">v0.2.0</span>
 
     <div class="topbar-actions">
         <button class="toc-toggle" aria-label="Toggle table of contents" aria-expanded="false">
@@ -96,6 +96,7 @@
         <div class="sidebar-section-title">Internals</div>
         <a href="#architecture">Architecture</a>
         <a href="#project-layout">Project Layout</a>
+        <a href="#testing">Testing</a>  
         <a href="api/">API Reference (Doxygen) ↗</a>
     </nav>
 
@@ -391,6 +392,77 @@ void MAIN::run() {
                 <tr><td>IEC standard function library (TON, CTU, ABS…)</td><td>Planned v0.2</td></tr>
             </tbody>
         </table>
+
+        <h2 id="testing">Testing</h2>
+        <p>
+            st2cpp includes a comprehensive test suite built with
+            <a href="https://github.com/google/googletest" target="_blank">Google Test</a>.
+            The suite covers every stage of the compiler pipeline and ensures correctness of
+            the generated code. All tests are executed automatically on every commit.
+        </p>
+
+        <table>
+            <thead>
+                <tr><th>Test Category</th><th>Description</th><th>Tests</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Lexer</td>
+                    <td>Tokenization of all IEC 61131‑3 tokens (keywords, addresses, literals, operators)</td>
+                    <td>20+</td>
+                </tr>
+                <tr>
+                    <td>Parser</td>
+                    <td>AST construction for POUs, types, variables, control flow, arrays, interfaces</td>
+                    <td>20+</td>
+                </tr>
+                <tr>
+                    <td>Code Generator</td>
+                    <td>Translation from AST to C++: functions, FBs, programs, arrays, structs, enums</td>
+                    <td>20+</td>
+                </tr>
+                <tr>
+                    <td>Address Allocator</td>
+                    <td>Fixed and placeholder address allocation, alignment, region growth</td>
+                    <td>15+</td>
+                </tr>
+                <tr>
+                    <td>Process Image</td>
+                    <td>Accessor generation for <code>%I</code>, <code>%Q</code>, <code>%M</code> addresses with bit/byte/word/dword access</td>
+                    <td>20+</td>
+                </tr>
+                <tr>
+                    <td>Scope Manager</td>
+                    <td>Variable lookup, shadowing, function‑local flags, temporary counters</td>
+                    <td>15+</td>
+                </tr>
+                <tr>
+                    <td>Compilation</td>
+                    <td>Compilation of generated C++ code with a real compiler (<code>g++</code>)</td>
+                    <td>15+</td>
+                </tr>
+                <tr>
+                    <td>Complex Programs</td>
+                    <td>Integration tests with arrays, inheritance, interfaces, <code>SUPER^</code></td>
+                    <td>20+</td>
+                </tr>
+                <tr>
+                    <td>Golden Tests</td>
+                    <td>Comparison against pre‑approved output for sample <code>.st</code> files</td>
+                    <td>10+</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="callout success">
+            <strong>✅ Total:</strong> Over <strong>170</strong> tests are run on every commit to ensure
+            reliability and prevent regressions.
+        </div>
+
+        <p>
+            The test suite is located in the <code>tests/</code> directory and can be built and run
+            with <code>make test</code> or <code>ctest</code> after compiling the project.
+        </p>
 
         <h2 id="architecture">Architecture</h2>
         <p>

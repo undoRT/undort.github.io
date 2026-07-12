@@ -20,7 +20,7 @@
     </a>
     <div class="topbar-sep"></div>
     <a href="index.html" class="topbar-product">undoCore</a>
-    <span class="topbar-version">v0.1.0</span>
+    <span class="topbar-version">v0.2</span>
 
     <div class="topbar-actions">
         <button class="toc-toggle" aria-label="Toggle table of contents" aria-expanded="false">
@@ -88,6 +88,8 @@
         <a href="#types">IEC 61131-3 Types</a>
         <a href="#starray">STArray</a>
         <a href="#var-inout">VAR_IN_OUT</a>
+        <a href="#conversions">Conversions</a>
+        <a href="#version">Version Info</a>
 
         <div class="sidebar-section-title">Integration</div>
         <a href="#cmake">CMake Integration</a>
@@ -102,7 +104,7 @@
 
         <h1>undoCore <span class="status-pill release">Released</span></h1>
         <p class="lead">
-            Header-only C++20 core infrastructure providing fundamental contracts and data structures
+            Header-only C++17 core infrastructure providing fundamental contracts and data structures
             for the <a href="../index.html">undoRT ecosystem</a>.
         </p>
 
@@ -115,8 +117,8 @@
         </p>
 
         <div class="callout info">
-            <strong>💡 Header-only:</strong> Zero compilation overhead — just include and use.
-            Perfect for integrating into any C++20 project with minimal friction.
+            <strong>Header-only:</strong> Zero compilation overhead — just include and use.
+            Perfect for integrating into any C++17 project with minimal friction.
         </div>
 
         <h2 id="features">Key Features</h2>
@@ -128,7 +130,7 @@
             <li><strong>STArray</strong> — Bounds-checked arrays with arbitrary indices</li>
             <li><strong>VAR_IN_OUT</strong> — Reference wrapper for in-out parameters</li>
             <li><strong>Time Literals</strong> — IEC-style T# parsing (T#10s, T#100ms)</li>
-            <li><strong>Zero Dependencies</strong> — Standard C++20 only</li>
+            <li><strong>Zero Dependencies</strong> — Standard C++17 only</li>
             <li><strong>CMake Integration</strong> — find_package(undoCore) support</li>
         </ul>
 
@@ -303,6 +305,109 @@ matrix[2][3] = 3.14;</code></pre>
 DINT counter = 0;
 process(counter);  // counter becomes 1</code></pre>
 
+        <h2 id="conversions">Conversions</h2>
+
+        <p>
+            <code>conversions.hpp</code> provides the complete set of IEC 61131-3 standard type conversion
+            functions (Table 3 of the standard). All conversions are implemented as inline functions for
+            zero overhead.
+        </p>
+
+        <h3>Rounding Convention</h3>
+        <p>
+            Conversions from floating-point to integer types follow IEC 61131-3 semantics:
+            <strong>round to nearest, ties away from zero</strong>. This differs from a plain C++
+            <code>static_cast</code>, which truncates toward zero. Use the <code>TRUNC</code> variants
+            when truncation is explicitly required.
+        </p>
+
+        <h3>Date / Time Convention</h3>
+        <p>
+            All calendar decomposition is performed in <strong>UTC</strong> using <code>gmtime_r</code>,
+            never local time. This guarantees deterministic conversions across different host timezones.
+        </p>
+
+        <h3>Function Categories</h3>
+        <table>
+            <thead>
+                <tr><th>Category</th><th>Example Functions</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Integer → Integer</td><td><code>INT_TO_DINT</code>, <code>DINT_TO_INT</code>, <code>DINT_TO_LINT</code></td></tr>
+                <tr><td>Integer → Floating-point</td><td><code>INT_TO_REAL</code>, <code>DINT_TO_LREAL</code></td></tr>
+                <tr><td>Floating-point → Integer (IEC rounding)</td><td><code>REAL_TO_INT</code>, <code>LREAL_TO_DINT</code></td></tr>
+                <tr><td>Floating-point → Integer (truncation)</td><td><code>TRUNC</code> (explicit)</td></tr>
+                <tr><td>Boolean ↔ Integer</td><td><code>BOOL_TO_INT</code>, <code>INT_TO_BOOL</code></td></tr>
+                <tr><td>Bit string ↔ Integer</td><td><code>WORD_TO_INT</code>, <code>DWORD_TO_DINT</code></td></tr>
+                <tr><td>BCD</td><td><code>BCD_TO_USINT</code>, <code>USINT_TO_BCD</code>, <code>BCD_TO_INT</code></td></tr>
+                <tr><td>String ↔ Numeric</td><td><code>INT_TO_STRING</code>, <code>STRING_TO_REAL</code>, <code>BOOL_TO_STRING</code></td></tr>
+                <tr><td>STRING ↔ WSTRING</td><td><code>WSTRING_TO_STRING</code>, <code>STRING_TO_WSTRING</code></td></tr>
+                <tr><td>Time / Date</td><td><code>DT_TO_DATE</code>, <code>DT_TO_TOD</code>, <code>DATE_TOD_TO_DT</code>, <code>TIME_TO_STRING</code></td></tr>
+            </tbody>
+        </table>
+
+        <h3>Example</h3>
+        <pre><code>DINT val = 123;
+REAL f = DINT_TO_REAL(val);           // f = 123.0f
+
+REAL pi = 3.14159f;
+DINT rounded = REAL_TO_DINT(pi);      // 3 (ties away from zero)
+DINT truncated = TRUNC(pi);           // 3 (truncation)
+
+BYTE bcd = USINT_TO_BCD(42);          // 0x42 (0100 0010)
+USINT dec = BCD_TO_USINT(0x42);       // 42
+
+STRING s = INT_TO_STRING(val);        // "123"
+INT i = STRING_TO_INT(s);             // 123
+
+DT now = static_cast<DT>(time(nullptr));
+DATE d = DT_TO_DATE(now);             // midnight UTC
+TOD tod = DT_TO_TOD(now);             // milliseconds since midnight
+STRING dateStr = DATE_TO_STRING(d);   // "2026-07-12"</code></pre>
+
+        <div class="callout info">
+            <strong>Note:</strong> BCD functions throw <code>std::invalid_argument</code> on invalid BCD digits
+            and <code>std::out_of_range</code> for out-of-range values.
+        </div>
+
+        <h2 id="version">Version Info</h2>
+
+        <p>
+            <code>undoCoreVer.hpp</code> provides compile-time and runtime version information.
+        </p>
+
+        <h3>Macros</h3>
+        <table>
+            <thead>
+                <tr><th>Macro</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><code>UNDOCORE_VERSION_MAJOR</code></td><td>Major version number</td></tr>
+                <tr><td><code>UNDOCORE_VERSION_MINOR</code></td><td>Minor version number</td></tr>
+                <tr><td><code>UNDOCORE_VERSION_PATCH</code></td><td>Patch version number</td></tr>
+                <tr><td><code>UNDOCORE_VERSION_STRING</code></td><td>Version as a string (e.g., <code>"0.2.2"</code>)</td></tr>
+                <tr><td><code>UNDOCORE_BUILD_DATE</code></td><td>Date and time of compilation</td></tr>
+                <tr><td><code>UNDOCORE_COMPILER</code></td><td>Compiler name and version</td></tr>
+            </tbody>
+        </table>
+
+        <h3>Runtime Functions</h3>
+        <pre><code>#include <undoCore/undoCore.hpp>
+
+// Get version string
+std::string ver = getVersion();           // "X.Y.Z"
+
+// Get full details
+std::string full = getFullVersion();
+
+// Structured version numbers
+Version v = getVersionNumbers();
+std::cout << v.major << "." << v.minor << "." << v.patch;</code></pre>
+
+        <div class="callout success">
+            <strong>Useful for:</strong> Runtime diagnostics, logging, and feature detection.
+        </div>
+
         <h2 id="cmake">CMake Integration</h2>
 
         <p>
@@ -370,6 +475,9 @@ public:
                 <tr><td><code>STArray</code></td><td>Bounds-checked array with arbitrary indices</td></tr>
                 <tr><td><code>VarInOut</code></td><td>Reference wrapper for in-out parameters</td></tr>
                 <tr><td><code>types.hpp</code></td><td>Complete IEC 61131-3 type mapping</td></tr>
+                <tr><td><code>conversions.hpp</code></td><td>IEC 61131-3 standard type conversions</td></tr>
+                <tr><td><code>undoCoreVer.hpp</code></td><td>Version and build information</td></tr>
+                <tr><td><code>undoCore.hpp</code></td><td>Aggregator header - include this for everything</td></tr>
             </tbody>
         </table>
 
