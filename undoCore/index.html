@@ -417,7 +417,7 @@ STRING dateStr = DATE_TO_STRING(d);   // "2026-07-12"</code></pre>
         <h2 id="math">Math Functions (New in v0.2.1)</h2>
 
         <p>
-            <code>math.hpp</code> provides the complete set of IEC 61131-3 standard mathematical
+            <code>undoMath.hpp</code> provides the complete set of IEC 61131-3 standard mathematical
             and bitwise operations, implemented as inline functions for zero overhead.
         </p>
 
@@ -441,7 +441,7 @@ STRING dateStr = DATE_TO_STRING(d);   // "2026-07-12"</code></pre>
         </table>
 
         <h3>Examples</h3>
-        <pre><code>#include &lt;undoCore/math.hpp&gt;
+        <pre><code>#include &lt;undoCore/undoMath.hpp&gt;
 
 // Absolute value
 DINT a = ABS(-42);                    // 42
@@ -588,7 +588,7 @@ public:
                 <tr><td><code>VAR_INOUT</code></td><td>Reference wrapper for in-out parameters</td></tr>
                 <tr><td><code>types.hpp</code></td><td>Complete IEC 61131-3 type mapping</td></tr>
                 <tr><td><code>conversions.hpp</code></td><td>IEC 61131-3 standard type conversions + generic TO_*</td></tr>
-                <tr><td><code>math.hpp</code></td><td>IEC 61131-3 math and bitwise operations</td></tr>
+                <tr><td><code>undoMath.hpp</code></td><td>IEC 61131-3 math and bitwise operations</td></tr>
                 <tr><td><code>undoCoreVer.hpp</code></td><td>Version and build information</td></tr>
                 <tr><td><code>undoCore.hpp</code></td><td>Aggregator header - include this for everything</td></tr>
             </tbody>
