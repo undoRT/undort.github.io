@@ -23,7 +23,16 @@ var searchData=
   ['real_5fto_5flreal_20',['REAL_TO_LREAL',['../namespaceundoCore.html#a5415cda3ddd91ad3e2321cd4b64354c0',1,'undoCore']]],
   ['real_5fto_5fsint_21',['REAL_TO_SINT',['../namespaceundoCore.html#a5f0c41ce2771706d5ca10ea72e3f79ef',1,'undoCore']]],
   ['real_5fto_5fstring_22',['REAL_TO_STRING',['../namespaceundoCore.html#a31eb47cc0f60d366fec146a1fc21d5b6',1,'undoCore']]],
-  ['reference_23',['reference',['../structundoCore_1_1STArray.html#abe435987a287251827bfc8acfe20d346',1,'undoCore::STArray']]],
-  ['related_20projects_24',['Related Projects',['../md_README.html#autotoc_md24',1,'']]],
-  ['requirements_25',['Requirements',['../md_README.html#autotoc_md3',1,'']]]
+  ['real_5fto_5fudint_23',['REAL_TO_UDINT',['../namespaceundoCore.html#a391cbfd56ceef9a1bb4839b9be231482',1,'undoCore']]],
+  ['real_5fto_5fuint_24',['REAL_TO_UINT',['../namespaceundoCore.html#a695850ccefb13d88b6cd46b2d4e3814d',1,'undoCore']]],
+  ['real_5fto_5fulint_25',['REAL_TO_ULINT',['../namespaceundoCore.html#a353d8ddf14c4356d9f4e795caa2d4b41',1,'undoCore']]],
+  ['real_5fto_5fusint_26',['REAL_TO_USINT',['../namespaceundoCore.html#a12e66fe297b86f2929a463592ec390ee',1,'undoCore']]],
+  ['reference_27',['reference',['../structundoCore_1_1STArray.html#abe435987a287251827bfc8acfe20d346',1,'undoCore::STArray']]],
+  ['related_20projects_28',['Related Projects',['../md_README.html#autotoc_md24',1,'']]],
+  ['requirements_29',['Requirements',['../md_README.html#autotoc_md3',1,'']]],
+  ['rol_30',['rol',['../namespaceundoCore.html#a8ebfb93f166b31bb41effee846b82e7c',1,'undoCore::ROL(T x, int n)'],['../namespaceundoCore.html#a573e822050615e6399707e21cb134059',1,'undoCore::ROL']]],
+  ['rol_5fint_31',['ROL_INT',['../namespaceundoCore.html#aae5f4d660b79ed13ba23403874166891',1,'undoCore']]],
+  ['ror_32',['ror',['../namespaceundoCore.html#ab95d81a7497be2bab451e5954a4a85dd',1,'undoCore::ROR'],['../namespaceundoCore.html#a70bf0d83fe9a6c2ae40f1b90570e29d0',1,'undoCore::ROR(T x, int n)']]],
+  ['ror_5fint_33',['ROR_INT',['../namespaceundoCore.html#aefbd8c881ee65ff804605bf613bdd479',1,'undoCore']]],
+  ['round_34',['round',['../namespaceundoCore.html#a71c5f1729d3cc18746bba7178cc96302',1,'undoCore::ROUND(T x)'],['../namespaceundoCore.html#aeff575d45cfcbd0132943ed89218c977',1,'undoCore::ROUND(LREAL x)']]]
 ];

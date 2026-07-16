@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['operator_20t_26_0',['operator T&amp;',['../structundoCore_1_1VarInOut.html#a7733129ea7a1618860fd433ddadbda9f',1,'undoCore::VarInOut']]],
-  ['operator_2a_1',['operator*',['../structundoCore_1_1VarInOut.html#a604f275df6272e5d1ed7d4e79215634b',1,'undoCore::VarInOut']]],
-  ['operator_2d_3e_2',['operator-&gt;',['../structundoCore_1_1VarInOut.html#a56b9e7f2acb77fb60873f533ef891b38',1,'undoCore::VarInOut']]],
-  ['operator_3d_3',['operator=',['../classundoCore_1_1IoBus.html#af7ecb04518279aa22fd50fc4374e3f70',1,'undoCore::IoBus::operator=(const IoBus &amp;)=delete'],['../classundoCore_1_1IoBus.html#aed6e1fcfdc12305567ae3c212f252556',1,'undoCore::IoBus::operator=(IoBus &amp;&amp;)=delete'],['../structundoCore_1_1VarInOut.html#a0967a4c396ee2c6efb1139fdc4ce4628',1,'undoCore::VarInOut::operator=()'],['../structundoCore_1_1STArray.html#a1252973c05b4d73703867582857434ab',1,'undoCore::STArray::operator=(const STArray &amp;)=default'],['../structundoCore_1_1STArray.html#a2b8f38ea5c4e34ba345d2e035946c24a',1,'undoCore::STArray::operator=(STArray &amp;&amp;)=default']]],
-  ['operator_5b_5d_4',['operator[]',['../structundoCore_1_1STArray.html#a40000f44cfac964d2e7e3dd12c4d5494',1,'undoCore::STArray::operator[](int index)'],['../structundoCore_1_1STArray.html#a37fd74af19930dba641b9c17f907da2c',1,'undoCore::STArray::operator[](int index) const']]]
+  ['max_0',['max',['../namespaceundoCore.html#a472447bef7091318698797dfdb4bf526',1,'undoCore::MAX(T x, T y)'],['../namespaceundoCore.html#a8fcbf67fea6a320c1098589269b45e80',1,'undoCore::MAX(T first, Args... args)']]],
+  ['min_1',['min',['../namespaceundoCore.html#a811088b89f6524bfa81f47dd3dc0d76b',1,'undoCore::MIN(T x, T y)'],['../namespaceundoCore.html#a9225599045c2fd7a00828a54092e1649',1,'undoCore::MIN(T first, Args... args)']]],
+  ['mod_2',['MOD',['../namespaceundoCore.html#aadb3a9e7b679e1c5c60c25730b1c3fef',1,'undoCore']]],
+  ['mux_3',['mux',['../namespaceundoCore.html#ae3f47087415c9b642c7d3022ba55cf6d',1,'undoCore::MUX(int k, T first, Args... args)'],['../namespaceundoCore.html#a63fc737211bd968ae16a22f3a746841d',1,'undoCore::MUX(int k, T value)']]]
 ];

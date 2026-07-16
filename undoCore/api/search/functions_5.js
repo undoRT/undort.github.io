@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['getfullversion_0',['getFullVersion',['../undoCoreVer_8hpp.html#a59e2277be2bbc561afb450d0517721a6',1,'undoCoreVer.hpp']]],
-  ['getversion_1',['getVersion',['../undoCoreVer_8hpp.html#aee3bd62c6c84d746802c115f5d4c1519',1,'undoCoreVer.hpp']]],
-  ['getversionnumbers_2',['getVersionNumbers',['../undoCoreVer_8hpp.html#a4570a4512c40bad2915fbedee8e5241d',1,'undoCoreVer.hpp']]]
+  ['fill_0',['fill',['../structundoCore_1_1STArray.html#af730cf6ff50cb0ea101ebe380eaf1496',1,'undoCore::STArray']]],
+  ['floor_1',['floor',['../namespaceundoCore.html#a8d81d0d3e02bdcfe10cd895c10f3bf87',1,'undoCore::FLOOR(T x)'],['../namespaceundoCore.html#a5a36fca73141db098d35a45811bd949e',1,'undoCore::FLOOR(LREAL x)']]]
 ];

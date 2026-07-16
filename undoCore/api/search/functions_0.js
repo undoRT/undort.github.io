@@ -1,12 +1,10 @@
 var searchData=
 [
-  ['bcd_5fto_5fint_0',['BCD_TO_INT',['../namespaceundoCore.html#a3b77b9d2e6e6ee097a055e5a9baa31b1',1,'undoCore']]],
-  ['bcd_5fto_5fusint_1',['BCD_TO_USINT',['../namespaceundoCore.html#addeb4410f86a5c0eb3ebc78611238c8a',1,'undoCore']]],
-  ['begin_2',['begin',['../structundoCore_1_1STArray.html#acfd037248916172c76126d6bab4bd22d',1,'undoCore::STArray::begin()'],['../structundoCore_1_1STArray.html#a495f2844f5535fb71d32195b65c50aa8',1,'undoCore::STArray::begin() const']]],
-  ['bool_5fto_5fdint_3',['BOOL_TO_DINT',['../namespaceundoCore.html#a87080c37c2c86ab7b672b554712f7c16',1,'undoCore']]],
-  ['bool_5fto_5fint_4',['BOOL_TO_INT',['../namespaceundoCore.html#a71d55691d30805399d10b22fbbe637db',1,'undoCore']]],
-  ['bool_5fto_5fstring_5',['BOOL_TO_STRING',['../namespaceundoCore.html#a1839761659945b93f0f43ccae22ae3ac',1,'undoCore']]],
-  ['businputptr_6',['busInputPtr',['../classundoCore_1_1ProcessImage.html#a9a34e2a03713ec67bd9305a7c8032254',1,'undoCore::ProcessImage']]],
-  ['busoutputptr_7',['busOutputPtr',['../classundoCore_1_1ProcessImage.html#aceeb3d7497578c8273fb032d23927ec6',1,'undoCore::ProcessImage']]],
-  ['byte_5fto_5fsint_8',['BYTE_TO_SINT',['../namespaceundoCore.html#abe21c828b6c643d192cd61670b6719df',1,'undoCore']]]
+  ['abs_0',['abs',['../namespaceundoCore.html#a022abe703a87fe57805c1adcbae61377',1,'undoCore::ABS(T x)'],['../namespaceundoCore.html#a66090b20bdfd7d80fed5c47b35b1d688',1,'undoCore::ABS(LREAL x)']]],
+  ['acos_1',['acos',['../namespaceundoCore.html#a4bcf89495c62a9e719896705bd283369',1,'undoCore::ACOS(T x)'],['../namespaceundoCore.html#ac822982c7c65ee9f572e83a6163717ac',1,'undoCore::ACOS(LREAL x)']]],
+  ['allbits_2',['allBits',['../namespaceundoCore_1_1detail.html#a3a9c9466f3a1c17dbc3a129190e68c2c',1,'undoCore::detail']]],
+  ['and_3',['AND',['../namespaceundoCore.html#a9771c45f49565afd65f2607a00fac839',1,'undoCore']]],
+  ['asin_4',['asin',['../namespaceundoCore.html#ad6142928d2a2b2d8a47bfa6f546c2b41',1,'undoCore::ASIN(T x)'],['../namespaceundoCore.html#a9090b7784047ccf4e2b744a3a2c73b22',1,'undoCore::ASIN(LREAL x)']]],
+  ['atan_5',['atan',['../namespaceundoCore.html#a06537729cc45026d269771e3f9c7795e',1,'undoCore::ATAN(T x)'],['../namespaceundoCore.html#a42954f4dfb20d27aefa47a6ec803d741',1,'undoCore::ATAN(LREAL x)']]],
+  ['atan2_6',['atan2',['../namespaceundoCore.html#ad629d1e22057d9f6bafca82d4a141d05',1,'undoCore::ATAN2(T y, T x)'],['../namespaceundoCore.html#a2c6813634903e7dc3449aea901bb7cf7',1,'undoCore::ATAN2(LREAL y, LREAL x)']]]
 ];

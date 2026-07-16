@@ -1,24 +1,9 @@
 var searchData=
 [
-  ['readinputbit_0',['readInputBit',['../classundoCore_1_1ProcessImage.html#acdc6d0f862e0c8cd321fbf52df903a92',1,'undoCore::ProcessImage']]],
-  ['readinputbyte_1',['readInputByte',['../classundoCore_1_1ProcessImage.html#a0ac64b7d2cf40f129290bfbb0add88a5',1,'undoCore::ProcessImage']]],
-  ['readinputdword_2',['readInputDword',['../classundoCore_1_1ProcessImage.html#a9c154a19b73523688a928694817799b8',1,'undoCore::ProcessImage']]],
-  ['readinputlword_3',['readInputLword',['../classundoCore_1_1ProcessImage.html#ad31880c6371bc70ef007540a69b5007f',1,'undoCore::ProcessImage']]],
-  ['readinputword_4',['readInputWord',['../classundoCore_1_1ProcessImage.html#a71c7dc58ae606fc59920d92209e18bed',1,'undoCore::ProcessImage']]],
-  ['readmarkerbit_5',['readMarkerBit',['../classundoCore_1_1ProcessImage.html#a30c9fe7222dfbb61573e0fb5ac31a70f',1,'undoCore::ProcessImage']]],
-  ['readmarkerbyte_6',['readMarkerByte',['../classundoCore_1_1ProcessImage.html#a2d03f28239b2cd127b1e45471b5229a3',1,'undoCore::ProcessImage']]],
-  ['readmarkerdword_7',['readMarkerDword',['../classundoCore_1_1ProcessImage.html#af7c729075e7d4dd048fa7b9576f2d5f6',1,'undoCore::ProcessImage']]],
-  ['readmarkerlword_8',['readMarkerLword',['../classundoCore_1_1ProcessImage.html#a4df452cb939efe049e14bda38f5f5236',1,'undoCore::ProcessImage']]],
-  ['readmarkerword_9',['readMarkerWord',['../classundoCore_1_1ProcessImage.html#a1ada72a137522da0fa195ca61c8f5195',1,'undoCore::ProcessImage']]],
-  ['readoutputbit_10',['readOutputBit',['../classundoCore_1_1ProcessImage.html#a5ca1be2756106b0de29096d40fc7c53d',1,'undoCore::ProcessImage']]],
-  ['readoutputbyte_11',['readOutputByte',['../classundoCore_1_1ProcessImage.html#a68f18117dc8756e2f693042021415651',1,'undoCore::ProcessImage']]],
-  ['readoutputdword_12',['readOutputDword',['../classundoCore_1_1ProcessImage.html#ad5bcfd122216e5b61c0e74dde0c55042',1,'undoCore::ProcessImage']]],
-  ['readoutputlword_13',['readOutputLword',['../classundoCore_1_1ProcessImage.html#a89efb106fcb0e9de00d5a83d84e89643',1,'undoCore::ProcessImage']]],
-  ['readoutputword_14',['readOutputWord',['../classundoCore_1_1ProcessImage.html#a7e33b6289b6cd4e864bd10cbaef4fb1c',1,'undoCore::ProcessImage']]],
-  ['real_5fto_5fdint_15',['REAL_TO_DINT',['../namespaceundoCore.html#aca4a77d941d9bff750677cc7e9ceda28',1,'undoCore']]],
-  ['real_5fto_5fint_16',['REAL_TO_INT',['../namespaceundoCore.html#aea3ac08f81a61de115668998900685ac',1,'undoCore']]],
-  ['real_5fto_5flint_17',['REAL_TO_LINT',['../namespaceundoCore.html#a04ccfe15b76b3fa1faf5a11ad6b4a1df',1,'undoCore']]],
-  ['real_5fto_5flreal_18',['REAL_TO_LREAL',['../namespaceundoCore.html#a5415cda3ddd91ad3e2321cd4b64354c0',1,'undoCore']]],
-  ['real_5fto_5fsint_19',['REAL_TO_SINT',['../namespaceundoCore.html#a5f0c41ce2771706d5ca10ea72e3f79ef',1,'undoCore']]],
-  ['real_5fto_5fstring_20',['REAL_TO_STRING',['../namespaceundoCore.html#a31eb47cc0f60d366fec146a1fc21d5b6',1,'undoCore']]]
+  ['operator_20t_26_0',['operator T&amp;',['../structundoCore_1_1VarInOut.html#a7733129ea7a1618860fd433ddadbda9f',1,'undoCore::VarInOut']]],
+  ['operator_2a_1',['operator*',['../structundoCore_1_1VarInOut.html#a604f275df6272e5d1ed7d4e79215634b',1,'undoCore::VarInOut']]],
+  ['operator_2d_3e_2',['operator-&gt;',['../structundoCore_1_1VarInOut.html#a56b9e7f2acb77fb60873f533ef891b38',1,'undoCore::VarInOut']]],
+  ['operator_3d_3',['operator=',['../classundoCore_1_1IoBus.html#af7ecb04518279aa22fd50fc4374e3f70',1,'undoCore::IoBus::operator=(const IoBus &amp;)=delete'],['../classundoCore_1_1IoBus.html#aed6e1fcfdc12305567ae3c212f252556',1,'undoCore::IoBus::operator=(IoBus &amp;&amp;)=delete'],['../structundoCore_1_1VarInOut.html#a0967a4c396ee2c6efb1139fdc4ce4628',1,'undoCore::VarInOut::operator=()'],['../structundoCore_1_1STArray.html#a1252973c05b4d73703867582857434ab',1,'undoCore::STArray::operator=(const STArray &amp;)=default'],['../structundoCore_1_1STArray.html#a2b8f38ea5c4e34ba345d2e035946c24a',1,'undoCore::STArray::operator=(STArray &amp;&amp;)=default']]],
+  ['operator_5b_5d_4',['operator[]',['../structundoCore_1_1STArray.html#a40000f44cfac964d2e7e3dd12c4d5494',1,'undoCore::STArray::operator[](int index)'],['../structundoCore_1_1STArray.html#a37fd74af19930dba641b9c17f907da2c',1,'undoCore::STArray::operator[](int index) const']]],
+  ['or_5',['OR',['../namespaceundoCore.html#a6e1a67cd3d737975cef9ef2d355481bb',1,'undoCore']]]
 ];
