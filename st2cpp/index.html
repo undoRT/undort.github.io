@@ -20,7 +20,7 @@
     </a>
     <div class="topbar-sep"></div>
     <a href="index.html" class="topbar-product">st2cpp</a>
-    <span class="topbar-version">v0.2.0</span>
+    <span class="topbar-version">v0.2</span>
 
     <div class="topbar-actions">
         <button class="toc-toggle" aria-label="Toggle table of contents" aria-expanded="false">
@@ -91,6 +91,7 @@
         <a href="#supported">Supported Constructs</a>
         <a href="#type-mapping">Type Mapping</a>
         <a href="#function-calls">Function Calls</a>
+        <a href="#method-visibility">Method Visibility</a>
         <a href="#limitations">Known Limitations</a>
 
         <div class="sidebar-section-title">Internals</div>
@@ -128,6 +129,7 @@
             <li>VAR_OUTPUT binding via =></li>
             <li>Modular project generation</li>
             <li>Automatic dependency sorting</li>
+            <li>Method visibility (PRIVATE, PROTECTED, PUBLIC)</li>
             <li>Header-only runtime (zero deps)</li>
             <li>Single binary, no install required</li>
         </ul>
@@ -333,7 +335,10 @@ void MAIN::run() {
                 <tr><td>Control flow</td><td><code>IF/ELSIF/ELSE</code>, <code>FOR/TO/BY/DO</code>, <code>WHILE/DO</code>, <code>REPEAT/UNTIL</code>, <code>CASE/OF</code></td></tr>
                 <tr><td>Calls</td><td>Positional, named (<code>:=</code>), output binding (<code>=></code>), IN_OUT reference</td></tr>
                 <tr><td>Inheritance</td><td><code>FUNCTION_BLOCK B EXTENDS A</code> with <code>SUPER^</code> access</td></tr>
+                <tr><td>Method visibility</td><td><code>METHOD PRIVATE</code>, <code>METHOD PROTECTED</code>, <code>METHOD PUBLIC</code></td></tr>
                 <tr><td>Initializers</td><td>Variable initializers, array literal initializers</td></tr>
+                <tr><td>Typed literals</td><td><code>UDINT#123</code>, <code>ULINT#16#9E3779B9</code>, <code>LREAL#3.14159</code></td></tr>
+                <tr><td><code>SIZEOF</code></td><td><code>SIZEOF(type)</code> and <code>SIZEOF(expression)</code> (extension)</td></tr>
             </tbody>
         </table>
 
@@ -360,7 +365,7 @@ void MAIN::run() {
                 <tr><td><code>TIME</code></td><td><code>uint32_t</code></td><td>milliseconds</td></tr>
                 <tr><td><code>ARRAY[L..H] OF T</code></td><td><code>STArray&lt;T, L, H&gt;</code></td><td>bounds-checked (from undoCore)</td></tr>
                 <tr><td><code>POINTER TO T</code></td><td><code>T*</code></td><td></td></tr>
-                <tr><td><code>VAR_IN_OUT T</code></td><td><code>VarInOut&lt;T&gt;</code> (= <code>T*</code>)</td><td>from undoCore</td></tr>
+                <tr><td><code>VAR_IN_OUT T</code></td><td><code>VAR_INOUT&lt;T&gt;</code> (reference wrapper)</td><td>from undoCore</td></tr>
             </tbody>
         </table>
 
@@ -377,6 +382,60 @@ void MAIN::run() {
             </tbody>
         </table>
 
+        <h2 id="method-visibility">Method Visibility (New in v0.2.1)</h2>
+        <p>
+            st2cpp now supports <code>PRIVATE</code>, <code>PROTECTED</code>, and <code>PUBLIC</code> visibility
+            modifiers for methods inside FUNCTION_BLOCK.
+        </p>
+
+        <h3>ST Syntax</h3>
+        <pre><code>FUNCTION_BLOCK MyFB
+    VAR
+        counter : INT;
+    END_VAR
+
+    METHOD PRIVATE splitMix : UDINT
+        VAR_IN_OUT state : UDINT; END_VAR
+        // ...
+    END_METHOD
+
+    METHOD PROTECTED init : BOOL
+        // ...
+    END_METHOD
+
+    METHOD PUBLIC exec : UDINT
+        VAR_INPUT N : UDINT; END_VAR
+        // ...
+    END_METHOD
+END_FUNCTION_BLOCK</code></pre>
+
+        <h3>Generated C++</h3>
+        <pre><code>struct MYFB {
+public:
+    // Variables...
+    // SETTER/GETTER...
+
+    // --- PRIVATE METHODS ---
+private:
+    virtual UInt32 SPLITMIX(UInt32& STATE);
+
+    // --- PROTECTED METHODS ---
+protected:
+    virtual Bool INIT();
+
+    // --- PUBLIC METHODS ---
+public:
+    MYFB();
+    void operator()();
+    virtual UInt32 EXEC(Int16 N);
+    virtual ~MYFB() = default;
+};</code></pre>
+
+        <div class="callout info">
+            <strong>Default visibility:</strong> Methods without explicit visibility default to <code>PUBLIC</code>.
+            Constructor, <code>operator()</code>, and destructor are always <code>PUBLIC</code>.
+        </div>
+
         <h2 id="limitations">Known Limitations (Beta)</h2>
         <div class="callout warn">
             st2cpp is in active development. The following features are not yet supported.
@@ -385,11 +444,11 @@ void MAIN::run() {
             <thead><tr><th>Limitation</th><th>Status</th></tr></thead>
             <tbody>
                 <tr><td>Semantic analysis / type checking</td><td>In progress</td></tr>
-                <tr><td>Error recovery (first error stops compilation)</td><td>Planned v0.2</td></tr>
+                <tr><td>Error recovery (first error stops compilation)</td><td>Planned v0.3</td></tr>
                 <tr><td><code>ARRAY[*]</code> variable-length arrays</td><td>Planned</td></tr>
                 <tr><td><code>VAR_CONFIG</code></td><td>Planned</td></tr>
                 <tr><td>SFC (<code>ACTION</code>, <code>TRANSITION</code>)</td><td>Planned</td></tr>
-                <tr><td>IEC standard function library (TON, CTU, ABS…)</td><td>Planned v0.2</td></tr>
+                <tr><td>IEC standard function library (TON, CTU, ABS…)</td><td>Planned v0.3</td></tr>
             </tbody>
         </table>
 
@@ -409,42 +468,42 @@ void MAIN::run() {
                 <tr>
                     <td>Lexer</td>
                     <td>Tokenization of all IEC 61131‑3 tokens (keywords, addresses, literals, operators)</td>
-                    <td>20+</td>
+                    <td>42</td>
                 </tr>
                 <tr>
                     <td>Parser</td>
                     <td>AST construction for POUs, types, variables, control flow, arrays, interfaces</td>
-                    <td>20+</td>
+                    <td>30</td>
                 </tr>
                 <tr>
                     <td>Code Generator</td>
                     <td>Translation from AST to C++: functions, FBs, programs, arrays, structs, enums</td>
-                    <td>20+</td>
+                    <td>35</td>
                 </tr>
                 <tr>
                     <td>Address Allocator</td>
                     <td>Fixed and placeholder address allocation, alignment, region growth</td>
-                    <td>15+</td>
+                    <td>20</td>
                 </tr>
                 <tr>
                     <td>Process Image</td>
                     <td>Accessor generation for <code>%I</code>, <code>%Q</code>, <code>%M</code> addresses with bit/byte/word/dword access</td>
-                    <td>20+</td>
+                    <td>20</td>
                 </tr>
                 <tr>
                     <td>Scope Manager</td>
                     <td>Variable lookup, shadowing, function‑local flags, temporary counters</td>
-                    <td>15+</td>
+                    <td>20</td>
                 </tr>
                 <tr>
                     <td>Compilation</td>
                     <td>Compilation of generated C++ code with a real compiler (<code>g++</code>)</td>
-                    <td>15+</td>
+                    <td>31</td>
                 </tr>
                 <tr>
                     <td>Complex Programs</td>
                     <td>Integration tests with arrays, inheritance, interfaces, <code>SUPER^</code></td>
-                    <td>20+</td>
+                    <td>19</td>
                 </tr>
                 <tr>
                     <td>Golden Tests</td>
@@ -455,7 +514,7 @@ void MAIN::run() {
         </table>
 
         <div class="callout success">
-            <strong>✅ Total:</strong> Over <strong>170</strong> tests are run on every commit to ensure
+            <strong>✅ Total:</strong> Over <strong>217</strong> tests are run on every commit to ensure
             reliability and prevent regressions.
         </div>
 
@@ -482,8 +541,8 @@ void MAIN::run() {
 
         <div class="callout info">
             <strong>🔗 Integration with undoCore:</strong> The generated code includes
-            <code>#include &lt;undoCore/types.hpp&gt;</code> and uses <code>STArray</code> and
-            <code>VarInOut</code> from the undoCore library.
+            <code>#include &lt;undoCore/types.hpp&gt;</code> and uses <code>STArray</code>,
+            <code>VAR_INOUT</code>, and conversion functions from the undoCore library.
         </div>
 
         <h2 id="project-layout">Repository Layout</h2>
@@ -499,8 +558,8 @@ void MAIN::run() {
 │   ├── codegen/       # Code generator (~3600 lines)
 │   └── cli/           # main.cpp + argument parsing
 ├── st2cpp_includes/
-│   └── st2cpp_types.hpp   # Header-only runtime (zero deps)
-├── tests/             # Example .st programs + expected output
+│   └── undoCore/      # undoCore submodule (types, conversions, math)
+├── tests/             # 217+ tests
 ├── scripts/           # build.sh, generate_docs.sh
 └── CMakeLists.txt</code></pre>
 
