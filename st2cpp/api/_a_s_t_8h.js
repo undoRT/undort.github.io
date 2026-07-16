@@ -74,6 +74,11 @@ var _a_s_t_8h =
       [ "VOID", "_a_s_t_8h.html#ae96315ee246bd4a509133af84c88c5e1a6d0c9fc747131795e6e5d0c5119f12cb", null ],
       [ "NAMED", "_a_s_t_8h.html#ae96315ee246bd4a509133af84c88c5e1a76fb73ba78ce9cd3159dd3ce315223be", null ]
     ] ],
+    [ "MethodVisibility", "_a_s_t_8h.html#a238fe813936f04a4152de91f00e16139", [
+      [ "PRIVATE", "_a_s_t_8h.html#a238fe813936f04a4152de91f00e16139a84c6d22cfdf3772e66b07bde636e0571", null ],
+      [ "PROTECTED", "_a_s_t_8h.html#a238fe813936f04a4152de91f00e16139a0c2448254108d59f7400d1c96f31d751", null ],
+      [ "PUBLIC", "_a_s_t_8h.html#a238fe813936f04a4152de91f00e16139acd0c6092d6a6874f379fe4827ed1db8b", null ]
+    ] ],
     [ "POUKind", "_a_s_t_8h.html#a4857e08983709574ed6a4e1e22566cf1", [
       [ "FUNCTION_BLOCK", "_a_s_t_8h.html#a4857e08983709574ed6a4e1e22566cf1ab8b753187b0bc646ba64f9ec3025fb6a", null ],
       [ "FUNCTION", "_a_s_t_8h.html#a4857e08983709574ed6a4e1e22566cf1a6a72a6a776662a244f82d31e9274a07b", null ],

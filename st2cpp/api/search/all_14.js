@@ -12,5 +12,6 @@ var searchData=
   ['verbose_9',['verbose',['../main_8cpp.html#ab3f078684998b83967d507d0f453f454',1,'main.cpp']]],
   ['version_10',['Version',['../struct_version.html',1,'']]],
   ['version_2ehpp_11',['version.hpp',['../version_8hpp.html',1,'']]],
-  ['void_12',['VOID',['../_a_s_t_8h.html#ae96315ee246bd4a509133af84c88c5e1a6d0c9fc747131795e6e5d0c5119f12cb',1,'AST.h']]]
+  ['visibility_12',['visibility',['../struct_method.html#a05bf63cb0e2f44332cbc62d9eb5ac3cd',1,'Method']]],
+  ['void_13',['VOID',['../_a_s_t_8h.html#ae96315ee246bd4a509133af84c88c5e1a6d0c9fc747131795e6e5d0c5119f12cb',1,'AST.h']]]
 ];

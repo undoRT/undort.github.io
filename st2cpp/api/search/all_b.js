@@ -62,6 +62,7 @@ var searchData=
   ['methodname_59',['methodName',['../struct_super_call_expr.html#af9070b90711e812a368bfa4bdaa12a03',1,'SuperCallExpr']]],
   ['methodparameter_60',['MethodParameter',['../struct_method_parameter.html',1,'']]],
   ['methods_61',['methods',['../struct_interface.html#a6242c20109e9d46fa2f3ccdec6ce3dfc',1,'Interface::methods'],['../struct_p_o_u.html#a4836821edb21518b173bb6e57a3f246a',1,'POU::methods']]],
-  ['minor_62',['minor',['../struct_version.html#a381004ee1011e3e93eb1bd183327c84f',1,'Version']]],
-  ['modular_63',['MODULAR',['../_code_generator_8h.html#a772b17a70e583b4fc9acfa108bdcc499a6874e4e58a75cccc515883930ef336b8',1,'CodeGenerator.h']]]
+  ['methodvisibility_62',['MethodVisibility',['../_a_s_t_8h.html#a238fe813936f04a4152de91f00e16139',1,'AST.h']]],
+  ['minor_63',['minor',['../struct_version.html#a381004ee1011e3e93eb1bd183327c84f',1,'Version']]],
+  ['modular_64',['MODULAR',['../_code_generator_8h.html#a772b17a70e583b4fc9acfa108bdcc499a6874e4e58a75cccc515883930ef336b8',1,'CodeGenerator.h']]]
 ];

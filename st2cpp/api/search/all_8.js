@@ -36,7 +36,8 @@ var searchData=
   ['isrefto_33',['isRefTo',['../struct_type_ref.html#ade4b9346b0a332cb29c1854c237169a5',1,'TypeRef']]],
   ['isretain_34',['isRetain',['../struct_var_decl.html#a85dbd9cc608842717b76e82e4ef78494',1,'VarDecl']]],
   ['isstructinit_35',['isStructInit',['../struct_call_expr.html#a6298c0254f6ab6ad7978bed7d0afa787',1,'CallExpr']]],
-  ['istypekeyword_36',['isTypeKeyword',['../class_parser.html#a4849db7de40a18a2ee0374f16298fb02',1,'Parser']]],
-  ['isvarsectionstart_37',['isVarSectionStart',['../class_parser.html#aca0221ff266606b52fd252874a42a999',1,'Parser']]],
-  ['isvoidtype_38',['isVoidType',['../class_code_generator.html#a7b9a6dac54e5811afe38508c520d975d',1,'CodeGenerator']]]
+  ['istype_36',['isType',['../struct_sizeof_expr.html#a8a1750dbc0b08bf4fc6fe3726c7cf445',1,'SizeofExpr']]],
+  ['istypekeyword_37',['isTypeKeyword',['../class_parser.html#a4849db7de40a18a2ee0374f16298fb02',1,'Parser']]],
+  ['isvarsectionstart_38',['isVarSectionStart',['../class_parser.html#aca0221ff266606b52fd252874a42a999',1,'Parser']]],
+  ['isvoidtype_39',['isVoidType',['../class_code_generator.html#a7b9a6dac54e5811afe38508c520d975d',1,'CodeGenerator']]]
 ];

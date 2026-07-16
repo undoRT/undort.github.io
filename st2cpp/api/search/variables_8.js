@@ -8,7 +8,7 @@ var searchData=
   ['interfaces_5',['interfaces',['../struct_translation_unit.html#abd0f25ba0d40b806cae000385148fef3',1,'TranslationUnit']]],
   ['isabstract_6',['isabstract',['../struct_method.html#aca09d585d182a90d4ca55ec57e9a1fed',1,'Method::isAbstract'],['../struct_p_o_u.html#a2b475d17c80e7564ced4d188a70c1902',1,'POU::isAbstract']]],
   ['isconstant_7',['isConstant',['../struct_var_decl.html#ac9b968b57fde6deeef6ee96cd842e9bb',1,'VarDecl']]],
-  ['isfinal_8',['isfinal',['../struct_p_o_u.html#a0c7bd00f034088cd9799de32e93cfa5a',1,'POU::isFinal'],['../struct_method.html#a98f1f38f5179e53b3d60ef05f723fb8f',1,'Method::isFinal']]],
+  ['isfinal_8',['isfinal',['../struct_method.html#a98f1f38f5179e53b3d60ef05f723fb8f',1,'Method::isFinal'],['../struct_p_o_u.html#a0c7bd00f034088cd9799de32e93cfa5a',1,'POU::isFinal']]],
   ['isfunctionlocal_9',['isFunctionLocal',['../struct_scope_manager_1_1_var_info.html#a864727971b34df79ef861b9f8dee5285',1,'ScopeManager::VarInfo']]],
   ['isfunctionscope_10',['isFunctionScope',['../struct_scope_manager_1_1_scope.html#a7e435c9a754b5d8d8d5ad8c728abe272',1,'ScopeManager::Scope']]],
   ['isinput_11',['isInput',['../struct_parameter_info.html#a313ac255b972ca86f8d26ce4c094aa50',1,'ParameterInfo']]],
@@ -20,5 +20,6 @@ var searchData=
   ['ispointer_17',['isPointer',['../struct_type_ref.html#a60a3ce14fa0ee7cc918c2311121d9bbf',1,'TypeRef']]],
   ['isrefto_18',['isRefTo',['../struct_type_ref.html#ade4b9346b0a332cb29c1854c237169a5',1,'TypeRef']]],
   ['isretain_19',['isRetain',['../struct_var_decl.html#a85dbd9cc608842717b76e82e4ef78494',1,'VarDecl']]],
-  ['isstructinit_20',['isStructInit',['../struct_call_expr.html#a6298c0254f6ab6ad7978bed7d0afa787',1,'CallExpr']]]
+  ['isstructinit_20',['isStructInit',['../struct_call_expr.html#a6298c0254f6ab6ad7978bed7d0afa787',1,'CallExpr']]],
+  ['istype_21',['isType',['../struct_sizeof_expr.html#a8a1750dbc0b08bf4fc6fe3726c7cf445',1,'SizeofExpr']]]
 ];

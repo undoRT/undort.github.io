@@ -8,5 +8,6 @@ var struct_method =
     [ "localVars", "struct_method.html#ab38c9a41c7a64e55251b5b25f452a549", null ],
     [ "name", "struct_method.html#a8648aeee4e6ebb1adc52522ac26ac523", null ],
     [ "parameters", "struct_method.html#a3479e994e6f74e82b0d4e2f609c9ade8", null ],
-    [ "returnType", "struct_method.html#a939a46fe0477cbb9549b5f150040370f", null ]
+    [ "returnType", "struct_method.html#a939a46fe0477cbb9549b5f150040370f", null ],
+    [ "visibility", "struct_method.html#a05bf63cb0e2f44332cbc62d9eb5ac3cd", null ]
 ];

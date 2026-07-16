@@ -237,6 +237,9 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a85657efb1e44f7a5fa8e65edc19d5f49" id="r_a85657efb1e44f7a5fa8e65edc19d5f49"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="struct_expr.html">Expr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser.html#a85657efb1e44f7a5fa8e65edc19d5f49">parseAddressExpression</a> (const <a class="el" href="struct_token.html">Token</a> &amp;tok)</td></tr>
 <tr class="memdesc:a85657efb1e44f7a5fa8e65edc19d5f49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a process image address token into an <a class="el" href="struct_address_expr.html" title="Represents an IEC 61131-3 address (e.g., IX0.0, QB10, MW5)">AddressExpr</a>.  <br /></td></tr>
 <tr class="separator:a85657efb1e44f7a5fa8e65edc19d5f49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98117937fd10ef4a5fd5a76d6f15ad28" id="r_a98117937fd10ef4a5fd5a76d6f15ad28"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="struct_expr.html">Expr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser.html#a98117937fd10ef4a5fd5a76d6f15ad28">parseSizeof</a> ()</td></tr>
+<tr class="memdesc:a98117937fd10ef4a5fd5a76d6f15ad28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a SIZEOF expression.  <br /></td></tr>
+<tr class="separator:a98117937fd10ef4a5fd5a76d6f15ad28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca0221ff266606b52fd252874a42a999" id="r_aca0221ff266606b52fd252874a42a999"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser.html#aca0221ff266606b52fd252874a42a999">isVarSectionStart</a> () const</td></tr>
 <tr class="memdesc:aca0221ff266606b52fd252874a42a999"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the current position starts a variable section.  <br /></td></tr>
 <tr class="separator:aca0221ff266606b52fd252874a42a999"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1262,7 +1265,38 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Parse a REPEAT-UNTIL loop statement. </p>
-<dl class="section return"><dt>Returns</dt><dd>Statement AST node (<a class="el" href="struct_repeat_stmt.html">RepeatStmt</a>) </dd></dl>
+<p>It handles REPEAT instruction like:</p>
+<p>REPEAT &lt;body&gt; UNTIL &lt;condition&gt; END_REPEAT;</p>
+<p>The ending ";" is optional. </p><dl class="section return"><dt>Returns</dt><dd>Statement AST node (<a class="el" href="struct_repeat_stmt.html">RepeatStmt</a>) </dd></dl>
+
+</div>
+</div>
+<a id="a98117937fd10ef4a5fd5a76d6f15ad28" name="a98117937fd10ef4a5fd5a76d6f15ad28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98117937fd10ef4a5fd5a76d6f15ad28">&#9670;&#160;</a></span>parseSizeof()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="struct_expr.html">Expr</a> &gt; Parser::parseSizeof </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parse a SIZEOF expression. </p>
+<p>Supports both IEC standard SIZEOF(type) and extension SIZEOF(expression). First tries to parse as type, if fails, parses as expression.</p>
+<dl class="section return"><dt>Returns</dt><dd>Expression AST node (<a class="el" href="struct_sizeof_expr.html">SizeofExpr</a>) </dd></dl>
 
 </div>
 </div>

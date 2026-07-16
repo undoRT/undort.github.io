@@ -282,7 +282,7 @@ Private Member Functions</h2></td></tr>
 <tr class="memdesc:ab81226291b7dd8b240702602deba9c87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate master FunctionBlocks.hpp aggregator.  <br /></td></tr>
 <tr class="separator:ab81226291b7dd8b240702602deba9c87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a399078d1ae352a654d73af5269469fe9" id="r_a399078d1ae352a654d73af5269469fe9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_code_generator.html#a399078d1ae352a654d73af5269469fe9">generateFBHeader</a> (const <a class="el" href="struct_p_o_u.html">POU</a> &amp;pou, const std::unordered_set&lt; std::string &gt; &amp;dependencies)</td></tr>
-<tr class="memdesc:a399078d1ae352a654d73af5269469fe9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate single function block header.  <br /></td></tr>
+<tr class="memdesc:a399078d1ae352a654d73af5269469fe9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate single function block header (modular mode)  <br /></td></tr>
 <tr class="separator:a399078d1ae352a654d73af5269469fe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf366dce9e368ab6eb5533a696827c0e" id="r_adf366dce9e368ab6eb5533a696827c0e"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, <a class="el" href="struct_p_o_u.html">POU</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_code_generator.html#adf366dce9e368ab6eb5533a696827c0e">collectFunctionBlocks</a> (const <a class="el" href="struct_translation_unit.html">TranslationUnit</a> &amp;tu)</td></tr>
 <tr class="memdesc:adf366dce9e368ab6eb5533a696827c0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collect all function blocks from translation unit.  <br /></td></tr>
@@ -965,11 +965,18 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Generate single function block header. </p>
+<p>Generate single function block header (modular mode) </p>
+<p>This function generates the header file for a single Function Block in modular project mode. The header contains:</p><ul>
+<li>The FB struct definition with all variables</li>
+<li>Setter/getter methods for VAR_INPUT, VAR_OUTPUT, and VAR_IN_OUT</li>
+<li>AT address getter/setter methods for variables with AT addresses</li>
+<li>Constructor, operator(), and method declarations grouped by visibility</li>
+</ul>
+<p>Methods are grouped into PUBLIC, PROTECTED, and PRIVATE sections according to their visibility modifier in the ST source.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pou</td><td>FB <a class="el" href="struct_p_o_u.html">POU</a> </td></tr>
-    <tr><td class="paramname">dependencies</td><td>Set of FB names this FB depends on </td></tr>
+    <tr><td class="paramname">pou</td><td>The FB <a class="el" href="struct_p_o_u.html">POU</a> to generate header for </td></tr>
+    <tr><td class="paramname">dependencies</td><td>Set of FB names this FB depends on (for includes) </td></tr>
   </table>
   </dd>
 </dl>
@@ -2110,7 +2117,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Generate C++ do-while loop. </p>
-<p>Converts a REPEAT-UNTIL loop into a C++ do-while loop. Note that REPEAT executes until condition is true, so the condition is negated in the do-while.</p>
+<p>Converts a REPEAT-UNTIL loop into a C++ do-while loop. Note that REPEAT executes until condition is true, so the condition is negated in the do-while. ST syntax: REPEAT &lt;body&gt; UNTIL &lt;condition&gt; END_REPEAT</p>
+<p>In C++ do-while: do { &lt;body&gt; } while (!(&lt;condition&gt;));</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">s</td><td><a class="el" href="struct_repeat_stmt.html">RepeatStmt</a> AST node to generate </td></tr>

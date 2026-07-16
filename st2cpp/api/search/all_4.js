@@ -21,7 +21,7 @@ var searchData=
   ['expectnotregex_18',['expectNotRegex',['../class_generation_test.html#a0be6a898f3dcc9879c0203920eb77e89',1,'GenerationTest']]],
   ['expectregex_19',['expectregex',['../class_generation_test.html#a4618bd29cb7dde2a0e5d355be848724d',1,'GenerationTest::expectRegex()'],['../class_complex_program_test.html#ad82d15a23dc629fda07262279112e558',1,'ComplexProgramTest::expectRegex(const std::string &amp;pattern, const std::string &amp;msg=&quot;&quot;)']]],
   ['expectregexsource_20',['expectRegexSource',['../class_complex_program_test.html#af9737a2b93a59c7a838ea090a83e5e81',1,'ComplexProgramTest']]],
-  ['expr_21',['expr',['../struct_expr.html#a203ee809bfe0344291e61abbad803312',1,'Expr::Expr()'],['../struct_expr_stmt.html#af16d0cd7a99142f6fda2a1e85da4b44c',1,'ExprStmt::expr'],['../struct_expr.html',1,'Expr']]],
+  ['expr_21',['expr',['../struct_expr.html#a203ee809bfe0344291e61abbad803312',1,'Expr::Expr()'],['../struct_sizeof_expr.html#a92fcff74e86cb83ef4f2b1ec606afa86',1,'SizeofExpr::expr'],['../struct_expr_stmt.html#af16d0cd7a99142f6fda2a1e85da4b44c',1,'ExprStmt::expr'],['../struct_expr.html',1,'Expr']]],
   ['exprstmt_22',['ExprStmt',['../struct_expr_stmt.html',1,'']]],
   ['exprvariant_23',['ExprVariant',['../_a_s_t_8h.html#aac0f3bdcdf5297a28d16d136c18e938e',1,'AST.h']]],
   ['extends_24',['extends',['../struct_p_o_u.html#a2bfc4ae85b337a22f03b21be7bc9d5f6',1,'POU']]],

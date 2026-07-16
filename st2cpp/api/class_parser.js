@@ -32,6 +32,7 @@ var class_parser =
     [ "parsePOU", "class_parser.html#a18c64acff63b65a5381d37938a29bf5d", null ],
     [ "parsePrimary", "class_parser.html#a07b781cceb29d8e544458d29dde64d35", null ],
     [ "parseRepeatStmt", "class_parser.html#ae8277906760eb9572439449bd2158fa5", null ],
+    [ "parseSizeof", "class_parser.html#a98117937fd10ef4a5fd5a76d6f15ad28", null ],
     [ "parseStatement", "class_parser.html#a79d700b6551345ddc01678bda925a2c0", null ],
     [ "parseStatementList", "class_parser.html#a2ba09b30aafae0b49fb124e2ea014292", null ],
     [ "parseStructInitBody", "class_parser.html#acec15aad9600530855d16718cbec190f", null ],
