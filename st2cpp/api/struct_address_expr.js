@@ -19,6 +19,7 @@ var struct_address_expr =
     [ "byteOffset", "struct_address_expr.html#a50cbc08317e7e0387b829c9f811b8cd7", null ],
     [ "isPlaceholder", "struct_address_expr.html#afd7b042564f20452a9b85f706ff344b1", null ],
     [ "qualifier", "struct_address_expr.html#ae5b581676c4ee88988b2d71ae643b9ef", null ],
+    [ "qualifierInferred", "struct_address_expr.html#a12d165e411636ab26579806fdd3aadec", null ],
     [ "rawText", "struct_address_expr.html#a750c4e8354d8d7f5c739b5ddc6eeb0dd", null ],
     [ "type", "struct_address_expr.html#a5e88c50bd316f8ebbb9a55af4726c75f", null ]
 ];

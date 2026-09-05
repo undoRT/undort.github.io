@@ -5,6 +5,7 @@ var class_code_generator =
     [ "buildStructDependenciesForStructs", "class_code_generator.html#ab3ff4fcfcdb9e46579a8e22c2c4d6dc5", null ],
     [ "collectFunctionBlocks", "class_code_generator.html#adf366dce9e368ab6eb5533a696827c0e", null ],
     [ "collectSignature", "class_code_generator.html#ae45ef28b30990785d79dbb5065bd46fe", null ],
+    [ "deduceQualifierFromType", "class_code_generator.html#ac815903e88dd539b5e1084ff02dd5561", null ],
     [ "emitFunctionDecl", "class_code_generator.html#adef3d411e1a4123cb0df9b3f1eb6269a", null ],
     [ "genCase", "class_code_generator.html#a7a7ef6fafea4bbb9687c257924391578", null ],
     [ "genEnum", "class_code_generator.html#af36c7761a02f81364086066aa04bc8b9", null ],
