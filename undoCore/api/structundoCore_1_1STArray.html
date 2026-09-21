@@ -126,6 +126,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adbd7f211f3f5fc8283e0aacf39d94658" id="r_adbd7f211f3f5fc8283e0aacf39d94658"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structundoCore_1_1STArray.html#adbd7f211f3f5fc8283e0aacf39d94658">STArray</a> ()=default</td></tr>
 <tr class="memdesc:adbd7f211f3f5fc8283e0aacf39d94658"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor - zero-initializes the array.  <br /></td></tr>
 <tr class="separator:adbd7f211f3f5fc8283e0aacf39d94658"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a715b6123f5aa2b9a95d448c3742eda1b" id="r_a715b6123f5aa2b9a95d448c3742eda1b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structundoCore_1_1STArray.html#a715b6123f5aa2b9a95d448c3742eda1b">STArray</a> (std::initializer_list&lt; T &gt; init)</td></tr>
+<tr class="memdesc:a715b6123f5aa2b9a95d448c3742eda1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializer-list constructor (any nesting depth)  <br /></td></tr>
+<tr class="separator:a715b6123f5aa2b9a95d448c3742eda1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a374418380953a08b58795bbba7b7a9d1" id="r_a374418380953a08b58795bbba7b7a9d1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structundoCore_1_1STArray.html#a374418380953a08b58795bbba7b7a9d1">STArray</a> (const <a class="el" href="structundoCore_1_1STArray.html">STArray</a> &amp;)=default</td></tr>
 <tr class="memdesc:a374418380953a08b58795bbba7b7a9d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor - trivially copyable when T is trivially copyable.  <br /></td></tr>
 <tr class="separator:a374418380953a08b58795bbba7b7a9d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -288,7 +291,7 @@ template&lt;typename T , int Low, int High&gt; </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="adbd7f211f3f5fc8283e0aacf39d94658" name="adbd7f211f3f5fc8283e0aacf39d94658"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adbd7f211f3f5fc8283e0aacf39d94658">&#9670;&#160;</a></span>STArray() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adbd7f211f3f5fc8283e0aacf39d94658">&#9670;&#160;</a></span>STArray() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -316,8 +319,45 @@ template&lt;typename T , int Low, int High&gt; </div>
 
 </div>
 </div>
+<a id="a715b6123f5aa2b9a95d448c3742eda1b" name="a715b6123f5aa2b9a95d448c3742eda1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a715b6123f5aa2b9a95d448c3742eda1b">&#9670;&#160;</a></span>STArray() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , int Low, int High&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structundoCore_1_1STArray.html">undoCore::STArray</a>&lt; T, Low, High &gt;::STArray </td>
+          <td>(</td>
+          <td class="paramtype">std::initializer_list&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>init</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initializer-list constructor (any nesting depth) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">init</td><td>List of values; for multi-dimensional arrays each element is a row initializer list that converts to the inner <a class="el" href="structundoCore_1_1STArray.html" title="Array template compatible with IEC 61131-3 array semantics.">STArray</a> recursively.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Deliberately non-templated on T: a braced row <code>{1,2,3}</code> converts to the element type (another <a class="el" href="structundoCore_1_1STArray.html" title="Array template compatible with IEC 61131-3 array semantics.">STArray</a>) via this same constructor at each level, and IEC literals (int/float) are narrowed while filling the scalar leaves. Examples: STArray&lt;Int, 0, 5&gt; a = {1, 2, 3, 4, 5}; <a class="el" href="structundoCore_1_1STArray.html" title="Array template compatible with IEC 61131-3 array semantics.">STArray</a>&lt;STArray&lt;Int, 0, 2&gt;, 0, 1&gt; m = {{1, 2, 3}, {4, 5, 6}}; <a class="el" href="structundoCore_1_1STArray.html" title="Array template compatible with IEC 61131-3 array semantics.">STArray</a>&lt;<a class="el" href="structundoCore_1_1STArray.html" title="Array template compatible with IEC 61131-3 array semantics.">STArray</a>&lt;STArray&lt;Real, 0, 1&gt;, 2, 3&gt;, 1, 2&gt; t = {{{1,2},{3,4}},{{5,6},{7,8}}}; </p>
+
+</div>
+</div>
 <a id="a374418380953a08b58795bbba7b7a9d1" name="a374418380953a08b58795bbba7b7a9d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a374418380953a08b58795bbba7b7a9d1">&#9670;&#160;</a></span>STArray() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a374418380953a08b58795bbba7b7a9d1">&#9670;&#160;</a></span>STArray() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -347,7 +387,7 @@ template&lt;typename T , int Low, int High&gt; </div>
 </div>
 </div>
 <a id="acae8e12d16d8f755d60ff33ad1906a66" name="acae8e12d16d8f755d60ff33ad1906a66"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acae8e12d16d8f755d60ff33ad1906a66">&#9670;&#160;</a></span>STArray() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#acae8e12d16d8f755d60ff33ad1906a66">&#9670;&#160;</a></span>STArray() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

@@ -89,8 +89,8 @@ var NAVTREEINDEX =
 "annotated.html",
 "conversions_8hpp.html#a5b49adc2f459b32b5ab1754a3f08c505",
 "md_README.html#autotoc_md17",
-"namespaceundoCore.html#a706246821975319050e80b464f6a1111",
-"namespaceundoCore.html#afc684ea3872e3424b5a604dac3370bf4"
+"namespaceundoCore.html#a70c1cbdb0230bb026915a17a9221841e",
+"namespaceundoCore.html#afe9aeb7c6a8bca4bbc99665e5cb7dff7"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

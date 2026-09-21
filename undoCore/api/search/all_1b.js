@@ -31,6 +31,6 @@ var searchData=
   ['writeoutputdword_28',['writeOutputDword',['../classundoCore_1_1ProcessImage.html#a3dca8bc6d705647e99d23ae920dc2893',1,'undoCore::ProcessImage']]],
   ['writeoutputlword_29',['writeOutputLword',['../classundoCore_1_1ProcessImage.html#a6bca4c0d5be43afc36b29207394eecfd',1,'undoCore::ProcessImage']]],
   ['writeoutputword_30',['writeOutputWord',['../classundoCore_1_1ProcessImage.html#ac5dd996ba3e94fc12194db8d855771f5',1,'undoCore::ProcessImage']]],
-  ['wstring_31',['wstring',['../namespaceundoCore.html#aa99964cf36eaa14c40bc91a3b57571f0',1,'undoCore::WSTRING'],['../namespaceundoCore.html#afb8be83794b1d64f06a1bf36f175c47c',1,'undoCore::Wstring']]],
+  ['wstring_31',['wstring',['../namespaceundoCore.html#afb8be83794b1d64f06a1bf36f175c47c',1,'undoCore::Wstring'],['../namespaceundoCore.html#aa99964cf36eaa14c40bc91a3b57571f0',1,'undoCore::WSTRING']]],
   ['wstring_5fto_5fstring_32',['WSTRING_TO_STRING',['../namespaceundoCore.html#a7249e4d815d544964ae3dac86659881c',1,'undoCore']]]
 ];

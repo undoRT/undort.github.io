@@ -6,6 +6,7 @@ var structundoCore_1_1STArray =
     [ "reference", "structundoCore_1_1STArray.html#abe435987a287251827bfc8acfe20d346", null ],
     [ "value_type", "structundoCore_1_1STArray.html#a09c2f9c96910e66da66fd3548653ec72", null ],
     [ "STArray", "structundoCore_1_1STArray.html#adbd7f211f3f5fc8283e0aacf39d94658", null ],
+    [ "STArray", "structundoCore_1_1STArray.html#a715b6123f5aa2b9a95d448c3742eda1b", null ],
     [ "STArray", "structundoCore_1_1STArray.html#a374418380953a08b58795bbba7b7a9d1", null ],
     [ "STArray", "structundoCore_1_1STArray.html#acae8e12d16d8f755d60ff33ad1906a66", null ],
     [ "~STArray", "structundoCore_1_1STArray.html#afda127b3aea79d6039683ffec9d0a775", null ],

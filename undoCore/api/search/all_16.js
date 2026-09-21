@@ -30,9 +30,9 @@ var searchData=
   ['reference_27',['reference',['../structundoCore_1_1STArray.html#abe435987a287251827bfc8acfe20d346',1,'undoCore::STArray']]],
   ['related_20projects_28',['Related Projects',['../md_README.html#autotoc_md24',1,'']]],
   ['requirements_29',['Requirements',['../md_README.html#autotoc_md3',1,'']]],
-  ['rol_30',['rol',['../namespaceundoCore.html#a8ebfb93f166b31bb41effee846b82e7c',1,'undoCore::ROL(T x, int n)'],['../namespaceundoCore.html#a573e822050615e6399707e21cb134059',1,'undoCore::ROL']]],
+  ['rol_30',['ROL',['../namespaceundoCore.html#a8ebfb93f166b31bb41effee846b82e7c',1,'undoCore']]],
   ['rol_5fint_31',['ROL_INT',['../namespaceundoCore.html#aae5f4d660b79ed13ba23403874166891',1,'undoCore']]],
-  ['ror_32',['ror',['../namespaceundoCore.html#ab95d81a7497be2bab451e5954a4a85dd',1,'undoCore::ROR'],['../namespaceundoCore.html#a70bf0d83fe9a6c2ae40f1b90570e29d0',1,'undoCore::ROR(T x, int n)']]],
+  ['ror_32',['ROR',['../namespaceundoCore.html#a70bf0d83fe9a6c2ae40f1b90570e29d0',1,'undoCore']]],
   ['ror_5fint_33',['ROR_INT',['../namespaceundoCore.html#aefbd8c881ee65ff804605bf613bdd479',1,'undoCore']]],
   ['round_34',['round',['../namespaceundoCore.html#a71c5f1729d3cc18746bba7178cc96302',1,'undoCore::ROUND(T x)'],['../namespaceundoCore.html#aeff575d45cfcbd0132943ed89218c977',1,'undoCore::ROUND(LREAL x)']]]
 ];
