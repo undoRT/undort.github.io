@@ -1,0 +1,7 @@
+<map id="st2cpp::semantic::SemanticAnalyzer" name="st2cpp::semantic::SemanticAnalyzer">
+<area shape="rect" id="Node000001" title="Semantic Analyzer &#45; performs semantic analysis on TranslationUnit." alt="" coords="155,528,349,708"/>
+<area shape="rect" id="Node000002" href="$classst2cpp_1_1semantic_1_1_symbol_table.html" title=" " alt="" coords="5,5,248,465"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="205,465,220,512,215,514,200,466"/>
+<area shape="rect" id="Node000003" href="$classst2cpp_1_1semantic_1_1_diagnostics.html" title="Diagnostic collector and reporter." alt="" coords="273,93,482,378"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="333,379,289,513,284,511,328,377"/>
+</map>

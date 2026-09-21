@@ -105,15 +105,19 @@ Collaboration diagram for TestHelper:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_test_helper__coll__graph.png" border="0" usemap="#a_test_helper_coll__map" alt="Collaboration graph"/></div>
 <map name="a_test_helper_coll__map" id="a_test_helper_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,204,191"/>
+<area shape="rect" title=" " alt="" coords="5,5,249,231"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a49a77a4e792056f8c60030a6896368b0" id="r_a49a77a4e792056f8c60030a6896368b0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_translation_unit.html">TranslationUnit</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_test_helper.html#a49a77a4e792056f8c60030a6896368b0">parseST</a> (const std::string &amp;stCode, const std::string &amp;filename=&quot;&lt;test&gt;&quot;)</td></tr>
+<tr class="separator:a49a77a4e792056f8c60030a6896368b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac18dc7dbeb57a1152fcddc8094f94c39" id="r_ac18dc7dbeb57a1152fcddc8094f94c39"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_generated_code.html">GeneratedCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_test_helper.html#ac18dc7dbeb57a1152fcddc8094f94c39">generateFromST</a> (const std::string &amp;stCode, const std::string &amp;headerName=&quot;test.hpp&quot;, const std::string &amp;namespaceName=&quot;undoCore&quot;, bool caseSensitive=false)</td></tr>
-<tr class="memdesc:ac18dc7dbeb57a1152fcddc8094f94c39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper class to call the transpiler st2cpp generation functions.  <br /></td></tr>
+<tr class="memdesc:ac18dc7dbeb57a1152fcddc8094f94c39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper class to call the transpiler <a class="el" href="namespacest2cpp.html">st2cpp</a> generation functions.  <br /></td></tr>
 <tr class="separator:ac18dc7dbeb57a1152fcddc8094f94c39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7518ac04611488258f32b02b9d60fc82" id="r_a7518ac04611488258f32b02b9d60fc82"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_generated_code.html">GeneratedCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_test_helper.html#a7518ac04611488258f32b02b9d60fc82">generateFromSTWithSemantics</a> (const std::string &amp;stCode, const std::string &amp;headerName=&quot;test.hpp&quot;, const std::string &amp;namespaceName=&quot;undoCore&quot;, bool caseSensitive=false)</td></tr>
+<tr class="separator:a7518ac04611488258f32b02b9d60fc82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af910b336d99ebd3fdeef81769dc3579e" id="r_af910b336d99ebd3fdeef81769dc3579e"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="struct_generated_file.html">GeneratedFile</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_test_helper.html#af910b336d99ebd3fdeef81769dc3579e">generateModularFromST</a> (const std::string &amp;stCode, const std::string &amp;outputDir=&quot;generated&quot;)</td></tr>
 <tr class="memdesc:af910b336d99ebd3fdeef81769dc3579e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like generateFromST but in project-style.  <br /></td></tr>
 <tr class="separator:af910b336d99ebd3fdeef81769dc3579e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -285,7 +289,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Helper class to call the transpiler st2cpp generation functions. </p>
+<p>Helper class to call the transpiler <a class="el" href="namespacest2cpp.html">st2cpp</a> generation functions. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">stCode</td><td>ST code as input, to transform </td></tr>
@@ -296,6 +300,55 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="struct_generated_code.html">GeneratedCode</a> Header and source file in cpp </dd></dl>
+
+</div>
+</div>
+<a id="a7518ac04611488258f32b02b9d60fc82" name="a7518ac04611488258f32b02b9d60fc82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7518ac04611488258f32b02b9d60fc82">&#9670;&#160;</a></span>generateFromSTWithSemantics()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_generated_code.html">GeneratedCode</a> TestHelper::generateFromSTWithSemantics </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>stCode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>headerName</em> = <code>&quot;test.hpp&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>namespaceName</em> = <code>&quot;undoCore&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>caseSensitive</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Like generateFromST but attaches the semantic analysis output to the <a class="el" href="class_code_generator.html" title="Emit C++ code from the parsed AST.">CodeGenerator</a> so that the semantic-driven codegen paths are exercised. </p>
 
 </div>
 </div>
@@ -342,6 +395,42 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::vector&lt;GeneratedFile&gt; vecotr of generated codes </dd></dl>
+
+</div>
+</div>
+<a id="a49a77a4e792056f8c60030a6896368b0" name="a49a77a4e792056f8c60030a6896368b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49a77a4e792056f8c60030a6896368b0">&#9670;&#160;</a></span>parseST()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_translation_unit.html">TranslationUnit</a> TestHelper::parseST </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>stCode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em> = <code>&quot;&lt;test&gt;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

@@ -7,7 +7,8 @@ var searchData=
   ['allocationresult_4',['AllocationResult',['../struct_address_allocator_1_1_allocation_result.html',1,'AddressAllocator']]],
   ['arg_5',['Arg',['../struct_call_expr_1_1_arg.html',1,'CallExpr']]],
   ['arraydim_6',['ArrayDim',['../struct_array_dim.html',1,'']]],
-  ['arrayinitexpr_7',['ArrayInitExpr',['../struct_array_init_expr.html',1,'']]],
-  ['assignstmt_8',['AssignStmt',['../struct_assign_stmt.html',1,'']]],
-  ['attribute_9',['Attribute',['../struct_attribute.html',1,'']]]
+  ['arraydiminfo_7',['ArrayDimInfo',['../structst2cpp_1_1semantic_1_1_array_dim_info.html',1,'st2cpp::semantic']]],
+  ['arrayinitexpr_8',['ArrayInitExpr',['../struct_array_init_expr.html',1,'']]],
+  ['assignstmt_9',['AssignStmt',['../struct_assign_stmt.html',1,'']]],
+  ['attribute_10',['Attribute',['../struct_attribute.html',1,'']]]
 ];

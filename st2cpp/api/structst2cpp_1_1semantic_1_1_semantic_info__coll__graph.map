@@ -1,0 +1,9 @@
+<map id="st2cpp::semantic::SemanticInfo" name="st2cpp::semantic::SemanticInfo">
+<area shape="rect" id="Node000001" title="Result of semantic analysis, passed to CodeGenerator." alt="" coords="227,353,446,519"/>
+<area shape="rect" id="Node000002" href="$classst2cpp_1_1semantic_1_1_diagnostics.html" title="Diagnostic collector and reporter." alt="" coords="5,5,215,291"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="214,289,244,328,254,339,249,343,240,331,210,293"/>
+<area shape="rect" id="Node000003" href="$structst2cpp_1_1semantic_1_1_semantic_info_1_1_process_image_config.html" title=" " alt="" coords="239,78,434,218"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="339,218,339,336,334,336,334,218"/>
+<area shape="rect" id="Node000004" href="$structst2cpp_1_1semantic_1_1_preserved_semantics.html" title="Preserved&#45;semantics record (Fase 6)" alt="" coords="459,78,657,218"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="507,220,412,342,408,338,503,216"/>
+</map>

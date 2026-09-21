@@ -96,8 +96,8 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizab
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="autotoc_md0"></a> <a href="https://isocpp.org/"><img src="https://img.shields.io/badge/C%2B%2B-17-blue.svg" alt="C++17" style="pointer-events: none;" class="inline"/></a> <a href="https://www.gnu.org/licenses/gpl-3.0"><img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="License: GPL v3" style="pointer-events: none;" class="inline"/></a> <a href="https://github.com/undoRT/st2cpp/actions/workflows/build.yml"><img src="https://github.com/undoRT/st2cpp/actions/workflows/build.yml/badge.svg" alt="Build" style="pointer-events: none;" class="inline"/></a> <a href="https://www.undort.com/st2cpp/api/"><img src="https://img.shields.io/badge/docs-doxygen-blue.svg" alt="Documentation" style="pointer-events: none;" class="inline"/></a></p>
-<p>This is the official, original upstream repository for st2cpp by undoRT.</p>
-<p>Part of the <a href="https://www.undort.com/"><b>undoRT</b></a> open-source automation platform. <b>st2cpp</b> translates IEC 61131-3 Structured Text into clean, native C++17. No VM, no runtime overhead — just standard C++ you can compile, debug, and integrate anywhere.</p>
+<p>This is the official, original upstream repository for <a class="el" href="namespacest2cpp.html">st2cpp</a> by undoRT.</p>
+<p>Part of the <a href="https://www.undort.com/"><b>undoRT</b></a> open-source automation platform. <b><a class="el" href="namespacest2cpp.html">st2cpp</a></b> translates IEC 61131-3 Structured Text into clean, native C++17. No VM, no runtime overhead — just standard C++ you can compile, debug, and integrate anywhere.</p>
 <p><b><a href="https://www.undort.com/st2cpp">Full documentation undort.com/st2cpp</a></b></p>
 <h1><a class="anchor" id="autotoc_md1"></a>
 Installation</h1>
@@ -195,6 +195,25 @@ Example</h1>
 <div class="line">};</div>
 </div><!-- fragment --><hr  />
 <h1><a class="anchor" id="autotoc_md10"></a>
+Semantic Analysis</h1>
+<p><a class="el" href="namespacest2cpp.html">st2cpp</a> ships with a full semantic analysis stage that validates Structured Text before code generation. It builds a symbol table with case-insensitive identifier resolution (IEC 61131-3 identifiers are case-insensitive), resolves type references across scopes, and checks assignments, calls, array indices, and member access for type compatibility.</p>
+<p>Key capabilities:</p>
+<ul>
+<li><b>Scope and symbol management</b>: <a class="el" href="struct_p_o_u.html">POU</a> scopes (functions, function blocks, programs), struct scopes, and method scopes; nested scope-chain lookup (<code>LOCAL → <a class="el" href="struct_p_o_u.html">POU</a> → GLOBAL → BUILTIN</code>); duplicate declarations detected.</li>
+<li><b>Type checking</b>: assignments, literals, operator operands, function/FB parameters, struct member access, array indices (bounds and rank), pointer dereferences.</li>
+<li><b>Inheritance and interfaces</b>: <code>EXTENDS</code> / <code>SUPER^</code> method resolution; <code>IMPLEMENTS</code> interface contract verification (abstract method presence, override checks).</li>
+<li><b>Enum support</b>: enumerators are typed with the enum type rather than plain <code>INT</code>, and can be used in assignments and comparisons.</li>
+<li><b>Struct field resolution</b>: member access on struct and function block instances (including through interfaces), with nested access like <code>A.B.C</code>.</li>
+<li><b>Process image globals</b>: <code>AT I…</code>, <code>AT Q…</code>, <code>AT M…</code> variables are resolved and validated against the configured process image layout.</li>
+<li><b>Error reporting</b>: diagnostics carry error/warning codes, human-readable messages, and precise source locations (<code><a href="file:line:col">file:line:col</a></code>).</li>
+</ul>
+<p>Analysis runs in two passes — first every enum, struct, interface and <a class="el" href="struct_p_o_u.html">POU</a> header is registered (name and type entry, with a stable type id), then bodies are resolved — so forward reference between types (a STRUCT or FUNCTION_BLOCK that uses another struct, FB, enum or interface declared later, <code>ARRAY OF</code> / <code>POINTER TO</code> / <code>REF TO</code> of later types, later FUNCTION return types) and mutual recursion resolve correctly, and the result is independent of the ST declaration order inside a file or after workspace merge. By-value containment cycles (<code>A</code> contains <code>B</code> contains <code>A</code>, or a function block containing itself) are reported as <code>CircularDependency</code>; pointer/<code>REF_TO</code>-based cycles stay legal.</p>
+<h2><a class="anchor" id="autotoc_md11"></a>
+Strict vs. Permissive mode</h2>
+<p>By default the analyzer runs in <b>Permissive</b> mode: diagnostics are collected and surfaced (see <code>--verbose</code> / <code>--strict</code>), but generation proceeds even when errors exist, gracefully falling back to legacy syntactic inference for unresolvable constructs. This eases incremental adoption on existing codebases.</p>
+<p>With <code>--strict</code>, the analyzer runs in <b>Strict</b> mode: all diagnostics are printed and generation is <b>blocked</b> as soon as any error is found — a fail-fast workflow suited to CI pipelines and production builds.</p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md13"></a>
 CLI Reference</h1>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -230,10 +249,12 @@ CLI Reference</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><code>-v, --verbose</code>   </td><td class="markdownTableBodyNone">Print detailed processing information    </td></tr>
 <tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>--strict</code>   </td><td class="markdownTableBodyNone">Strict IEC 61131-3 mode: block generation on semantic errors    </td></tr>
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><code>-h, --help</code>   </td><td class="markdownTableBodyNone">Show this help   </td></tr>
 </table>
 <hr  />
-<h1><a class="anchor" id="autotoc_md12"></a>
+<h1><a class="anchor" id="autotoc_md15"></a>
 What's Supported</h1>
 <ul>
 <li><b>POUs</b>: <code>FUNCTION</code>, <code>FUNCTION_BLOCK</code>, <code>PROGRAM</code></li>
@@ -250,12 +271,13 @@ What's Supported</h1>
 <li><b>Circular-dependency</b>: Detected and reported with clear error messages</li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md14"></a>
+<h1><a class="anchor" id="autotoc_md17"></a>
 Testing</h1>
-<p>The project includes a comprehensive test suite using Google Test. Tests cover:</p>
+<p>The project includes a comprehensive test suite using Google Test (470+ tests), covering:</p>
 <ul>
-<li><b>From the legacy repository</b>: around 20 tests covering lexing, parsing, and code generation for the core IEC 61131-3 constructs.</li>
-<li><b>Newly added</b>: 14 comprehensive tests covering arrays, enums, structs, function blocks with methods, inheritance, and <code>SUPER^</code> calls.</li>
+<li><b>Lexing and parsing</b> of all IEC 61131-3 constructs</li>
+<li><b>Semantic analysis</b>: symbol resolution, type checking, scope chains, enums, structs, arrays, interfaces, inheritance, method overriding, forward type references and by-value dependency cycles, and process image globals</li>
+<li><b>Code generation</b> for single-file and modular project output</li>
 </ul>
 <p>To build and run tests:</p>
 <div class="fragment"><div class="line">cmake -B build -DBUILD_TESTS=ON .</div>
@@ -263,16 +285,14 @@ Testing</h1>
 <div class="line">cd build</div>
 <div class="line">ctest --output-on-failure --verbose</div>
 </div><!-- fragment --><p>All tests are automatically executed in the CI/CD pipeline on every pull request and commit to main. Test results are available in the [Actions] tab(<a href="https://github.com/undoRT/st2cpp/actions">https://github.com/undoRT/st2cpp/actions</a>) of the GitHub repository.</p>
-<h1><a class="anchor" id="autotoc_md15"></a>
+<h1><a class="anchor" id="autotoc_md18"></a>
 Known Limitations (Beta)</h1>
 <ul>
-<li>No semantic analysis / type checking yet</li>
-<li>First parse error stops compilation (no error recovery)</li>
 <li><code>ARRAY[*]</code> (variable-length arrays) not supported</li>
 <li><code>VAR_CONFIG</code> and SFC (<code>ACTION</code>, <code>TRANSITION</code>) not yet implemented</li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md17"></a>
+<h1><a class="anchor" id="autotoc_md20"></a>
 Contributing</h1>
 <ol type="1">
 <li>Fork the repo and create a feature branch</li>
@@ -281,7 +301,7 @@ Contributing</h1>
 </ol>
 <p>Core standards: C++17, RAII, Doxygen on all public APIs.</p>
 <hr  />
-<h1><a class="anchor" id="autotoc_md19"></a>
+<h1><a class="anchor" id="autotoc_md22"></a>
 Testing Checklist</h1>
 <p>Before submitting a PR, ensure that:</p>
 <ul>
@@ -289,10 +309,10 @@ Testing Checklist</h1>
 <li>[ ] No regression test failures</li>
 <li>[ ] Code is documented with Doxygen comments</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md20"></a>
+<h1><a class="anchor" id="autotoc_md23"></a>
 License</h1>
 <p>GPL-3.0 &ndash; see [LICENSE](LICENSE).</p>
-<h1><a class="anchor" id="autotoc_md21"></a>
+<h1><a class="anchor" id="autotoc_md24"></a>
 Acknowledgements</h1>
 <p>Architecture inspired by <a href="https://github.com/Autonomy-Logic/STruCpp">STruCpp</a> (TypeScript). No code was copied or ported. </p>
 </div></div><!-- contents -->

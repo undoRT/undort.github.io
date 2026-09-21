@@ -1,5 +1,5 @@
 <map id="SizeofExpr" name="SizeofExpr">
-<area shape="rect" id="Node000001" title=" " alt="" coords="13,233,95,319"/>
-<area shape="rect" id="Node000002" href="$struct_type_ref.html" title="Reference to a data type (base type, array, pointer, etc.)" alt="" coords="5,5,103,171"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="57,171,57,217,51,217,51,171"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="27,253,110,339"/>
+<area shape="rect" id="Node000002" href="$struct_type_ref.html" title="Reference to a data type (base type, array, pointer, etc.)" alt="" coords="5,5,132,191"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="71,191,71,237,66,237,66,191"/>
 </map>

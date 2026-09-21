@@ -123,8 +123,10 @@ Classes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a13277832e0ff51e2680fea72b215d42a" id="r_a13277832e0ff51e2680fea72b215d42a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_process_image_analyzer.html#a13277832e0ff51e2680fea72b215d42a">analyze</a> (const <a class="el" href="struct_translation_unit.html">TranslationUnit</a> &amp;tu)</td></tr>
+<tr class="memdesc:a13277832e0ff51e2680fea72b215d42a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Analyze a translation unit to detect address usage.  <br /></td></tr>
 <tr class="separator:a13277832e0ff51e2680fea72b215d42a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac616176a020eeb6c2f40ad3b02039dcd" id="r_ac616176a020eeb6c2f40ad3b02039dcd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_process_image_config.html">ProcessImageConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_process_image_analyzer.html#ac616176a020eeb6c2f40ad3b02039dcd">getRecommendedConfig</a> () const</td></tr>
+<tr class="memdesc:ac616176a020eeb6c2f40ad3b02039dcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the recommended process image configuration.  <br /></td></tr>
 <tr class="separator:ac616176a020eeb6c2f40ad3b02039dcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a899a8fe117aec82b9c7559a5463bf8e2" id="r_a899a8fe117aec82b9c7559a5463bf8e2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_process_image_analyzer.html#a899a8fe117aec82b9c7559a5463bf8e2">hasAddresses</a> () const</td></tr>
 <tr class="separator:a899a8fe117aec82b9c7559a5463bf8e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -132,12 +134,16 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:ae563be5300d970f20575f0859baaeba7" id="r_ae563be5300d970f20575f0859baaeba7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_process_image_analyzer.html#ae563be5300d970f20575f0859baaeba7">findAddresses</a> (const std::shared_ptr&lt; <a class="el" href="struct_stmt.html">Stmt</a> &gt; &amp;stmt)</td></tr>
+<tr class="memdesc:ae563be5300d970f20575f0859baaeba7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recursively find address expressions inside a statement.  <br /></td></tr>
 <tr class="separator:ae563be5300d970f20575f0859baaeba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa48c9173f069bf6dcd62d8e3b3590293" id="r_aa48c9173f069bf6dcd62d8e3b3590293"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_process_image_analyzer.html#aa48c9173f069bf6dcd62d8e3b3590293">findAddressesInExpr</a> (const std::shared_ptr&lt; <a class="el" href="struct_expr.html">Expr</a> &gt; &amp;expr)</td></tr>
+<tr class="memdesc:aa48c9173f069bf6dcd62d8e3b3590293"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recursively find address expressions inside an expression.  <br /></td></tr>
 <tr class="separator:aa48c9173f069bf6dcd62d8e3b3590293"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ad5f1cb7e13d09a5b0f437e2c7073e2" id="r_a0ad5f1cb7e13d09a5b0f437e2c7073e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_process_image_analyzer.html#a0ad5f1cb7e13d09a5b0f437e2c7073e2">updateMaxOffset</a> (const <a class="el" href="struct_address_expr.html">AddressExpr</a> &amp;addr)</td></tr>
+<tr class="memdesc:a0ad5f1cb7e13d09a5b0f437e2c7073e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the maximum byte and bit offsets for an address's memory area.  <br /></td></tr>
 <tr class="separator:a0ad5f1cb7e13d09a5b0f437e2c7073e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8143bfc4aceb0b9cea1ab0b3207a8f80" id="r_a8143bfc4aceb0b9cea1ab0b3207a8f80"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_process_image_analyzer.html#a8143bfc4aceb0b9cea1ab0b3207a8f80">nextPowerOfTwo</a> (size_t n) const</td></tr>
+<tr class="memdesc:a8143bfc4aceb0b9cea1ab0b3207a8f80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Round a value up to the next power of two.  <br /></td></tr>
 <tr class="separator:a8143bfc4aceb0b9cea1ab0b3207a8f80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
@@ -166,6 +172,15 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Analyze a translation unit to detect address usage. </p>
+<p>Resets the analyzer state and scans all <a class="el" href="struct_p_o_u.html">POU</a> bodies and global AT declarations to determine the required process image sizes.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tu</td><td>The translation unit to analyze </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="ae563be5300d970f20575f0859baaeba7" name="ae563be5300d970f20575f0859baaeba7"></a>
@@ -191,6 +206,14 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Recursively find address expressions inside a statement. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stmt</td><td>The statement to scan </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -218,6 +241,14 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Recursively find address expressions inside an expression. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">expr</td><td>The expression to scan </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="ac616176a020eeb6c2f40ad3b02039dcd" name="ac616176a020eeb6c2f40ad3b02039dcd"></a>
@@ -234,6 +265,10 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Compute the recommended process image configuration. </p>
+<p>Sizes each memory area to the largest offset used, rounded up to a power of two, with a minimum of 1024 bytes per area.</p>
+<dl class="section return"><dt>Returns</dt><dd>Recommended <a class="el" href="struct_process_image_config.html" title="Configuration for Process Image sizing.">ProcessImageConfig</a> </dd></dl>
 
 </div>
 </div>
@@ -286,6 +321,15 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Round a value up to the next power of two. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>The value to round up </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>size_t The smallest power of two greater than or equal to n </dd></dl>
+
 </div>
 </div>
 <a id="a0ad5f1cb7e13d09a5b0f437e2c7073e2" name="a0ad5f1cb7e13d09a5b0f437e2c7073e2"></a>
@@ -311,6 +355,14 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Update the maximum byte and bit offsets for an address's memory area. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">addr</td><td>The address expression to record </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

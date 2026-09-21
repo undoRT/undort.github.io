@@ -1,0 +1,36 @@
+<map id="include/semantic/SymbolTable.h" name="include/semantic/SymbolTable.h">
+<area shape="rect" id="Node000001" title="Symbol table with scope management for semantic analysis." alt="" coords="335,5,567,31"/>
+<area shape="rect" id="Node000002" href="$_type_system_8h.html" title="Type system for semantic analysis: TypeInfo, TypeKind, compatibility." alt="" coords="246,79,359,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="428,33,340,75,338,70,426,28"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="236,225,295,251"/>
+<area shape="poly" id="edge16_Node000001_Node000004" title=" " alt="" coords="335,27,265,39,193,62,159,79,128,99,100,124,77,153,73,165,77,175,131,195,223,222,222,227,129,200,73,179,67,165,72,151,96,120,124,95,156,74,191,58,264,34,334,22"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="319,225,382,251"/>
+<area shape="poly" id="edge17_Node000001_Node000005" title=" " alt="" coords="448,32,364,213,359,211,443,30"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="439,79,563,104"/>
+<area shape="poly" id="edge18_Node000001_Node000012" title=" " alt="" coords="461,29,487,66,483,69,457,33"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="587,79,674,104"/>
+<area shape="poly" id="edge19_Node000001_Node000013" title=" " alt="" coords="481,28,590,71,588,76,479,33"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="698,79,763,104"/>
+<area shape="poly" id="edge20_Node000001_Node000014" title=" " alt="" coords="497,28,685,76,684,81,496,33"/>
+<area shape="rect" id="Node000003" href="$_a_s_t_8h.html" title="Abstract Syntax Tree nodes for Structured Text." alt="" coords="439,152,521,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="332,102,440,144,438,149,330,106"/>
+<area shape="poly" id="edge13_Node000002_Node000004" title=" " alt="" coords="302,105,274,213,269,211,297,104"/>
+<area shape="poly" id="edge14_Node000002_Node000005" title=" " alt="" coords="309,104,345,211,340,213,304,105"/>
+<area shape="rect" id="Node000009" href="$_diagnostics_8h.html" title="Diagnostic reporting system for semantic analysis." alt="" coords="87,152,262,177"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="283,106,209,147,207,143,281,102"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="5,225,72,251"/>
+<area shape="poly" id="edge15_Node000002_Node000011" title=" " alt="" coords="246,96,205,101,160,112,116,128,77,154,56,181,46,212,41,210,52,179,73,150,113,124,158,106,204,96,245,91"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="446,180,309,225,307,220,445,175"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="460,180,385,221,383,216,458,175"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="505,225,583,251"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="493,176,527,213,523,217,489,179"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="607,225,675,251"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="507,175,604,217,601,222,505,180"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="407,225,481,251"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="476,179,458,214,454,212,472,176"/>
+<area shape="poly" id="edge9_Node000009_Node000004" title=" " alt="" coords="191,175,241,214,238,219,188,179"/>
+<area shape="poly" id="edge10_Node000009_Node000005" title=" " alt="" coords="204,175,310,218,308,222,202,180"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="135,225,211,251"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="177,178,176,212,171,212,172,178"/>
+<area shape="poly" id="edge12_Node000009_Node000011" title=" " alt="" coords="154,180,74,221,72,217,152,175"/>
+</map>

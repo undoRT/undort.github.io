@@ -6,5 +6,6 @@ var struct_var_decl =
     [ "isRetain", "struct_var_decl.html#a85dbd9cc608842717b76e82e4ef78494", null ],
     [ "line", "struct_var_decl.html#a18ff4ee7dad3f003766d684c81253259", null ],
     [ "name", "struct_var_decl.html#a02eebb3ee00a1d5fc88c56a3f1cf8aa5", null ],
+    [ "symbolId", "struct_var_decl.html#a2ff6490c88f7af26f6fc6432723a0cd4", null ],
     [ "type", "struct_var_decl.html#a7555e90a774c6c50c68d13afd8065f9c", null ]
 ];

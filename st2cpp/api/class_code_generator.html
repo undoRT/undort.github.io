@@ -110,13 +110,21 @@ Collaboration diagram for CodeGenerator:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_code_generator__coll__graph.png" border="0" usemap="#a_code_generator_coll__map" alt="Collaboration graph"/></div>
 <map name="a_code_generator_coll__map" id="a_code_generator_coll__map">
-<area shape="rect" title="Emit C++ code from the parsed AST." alt="" coords="175,393,386,1013"/>
-<area shape="rect" href="class_scope_manager.html" title="Manages the symbol scope stack for code generation." alt="" coords="5,5,183,331"/>
-<area shape="poly" title=" " alt="" coords="153,330,172,385,167,387,148,332"/>
-<area shape="rect" href="struct_process_image_config.html" title="Configuration for Process Image sizing." alt="" coords="207,85,354,251"/>
-<area shape="poly" title=" " alt="" coords="283,251,283,376,278,376,278,251"/>
-<area shape="rect" href="class_address_allocator.html" title="Manages allocation of AT addresses with placeholder &#39;*&#39;." alt="" coords="379,55,559,281"/>
-<area shape="poly" title=" " alt="" coords="432,282,394,389,389,387,427,280"/>
+<area shape="rect" title="Emit C++ code from the parsed AST." alt="" coords="365,741,575,1381"/>
+<area shape="rect" href="class_scope_manager.html" title="Manages the symbol scope stack for code generation." alt="" coords="25,353,203,679"/>
+<area shape="poly" title=" " alt="" coords="205,658,218,677,358,889,353,892,213,680,201,661"/>
+<area shape="rect" href="structst2cpp_1_1semantic_1_1_semantic_info.html" title="Result of semantic analysis, passed to CodeGenerator." alt="" coords="227,433,446,599"/>
+<area shape="poly" title=" " alt="" coords="359,599,390,724,385,726,354,600"/>
+<area shape="rect" href="classst2cpp_1_1semantic_1_1_diagnostics.html" title="Diagnostic collector and reporter." alt="" coords="5,5,215,291"/>
+<area shape="poly" title=" " alt="" coords="200,290,280,418,275,421,196,293"/>
+<area shape="rect" href="structst2cpp_1_1semantic_1_1_semantic_info_1_1_process_image_config.html" title=" " alt="" coords="239,78,434,218"/>
+<area shape="poly" title=" " alt="" coords="339,218,339,416,334,416,334,218"/>
+<area shape="rect" href="structst2cpp_1_1semantic_1_1_preserved_semantics.html" title="Preserved&#45;semantics record (Fase 6)" alt="" coords="459,78,657,218"/>
+<area shape="poly" title=" " alt="" coords="519,219,397,420,392,417,514,217"/>
+<area shape="rect" href="struct_process_image_config.html" title="Configuration for Process Image sizing." alt="" coords="470,433,617,599"/>
+<area shape="poly" title=" " alt="" coords="535,600,518,725,513,725,530,599"/>
+<area shape="rect" href="class_address_allocator.html" title="Manages allocation of AT addresses with placeholder &#39;*&#39;." alt="" coords="641,403,821,629"/>
+<area shape="poly" title=" " alt="" coords="680,630,585,827,580,825,675,628"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -138,6 +146,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae1af498b3b7c5c8db14194a1f118d862"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09cba58886829e5940d7134e178d5be7" id="r_a09cba58886829e5940d7134e178d5be7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_code_generator.html#a09cba58886829e5940d7134e178d5be7">setProcessImageGlobal</a> (bool isGlobal)</td></tr>
 <tr class="separator:a09cba58886829e5940d7134e178d5be7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a420640b478f86c7522a09116930f87" id="r_a7a420640b478f86c7522a09116930f87"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_code_generator.html#a7a420640b478f86c7522a09116930f87">setSemanticInfo</a> (const <a class="el" href="structst2cpp_1_1semantic_1_1_semantic_info.html">st2cpp::semantic::SemanticInfo</a> *info)</td></tr>
+<tr class="separator:a7a420640b478f86c7522a09116930f87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -203,6 +213,36 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a7b9a6dac54e5811afe38508c520d975d" id="r_a7b9a6dac54e5811afe38508c520d975d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_code_generator.html#a7b9a6dac54e5811afe38508c520d975d">isVoidType</a> (const <a class="el" href="struct_type_ref.html">TypeRef</a> &amp;tr) const</td></tr>
 <tr class="memdesc:a7b9a6dac54e5811afe38508c520d975d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a type reference represents void.  <br /></td></tr>
 <tr class="separator:a7b9a6dac54e5811afe38508c520d975d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a690074689f9b7ca856b66ab90e8c1cbd" id="r_a690074689f9b7ca856b66ab90e8c1cbd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_code_generator.html#a690074689f9b7ca856b66ab90e8c1cbd">semanticAvailable</a> () const</td></tr>
+<tr class="memdesc:a690074689f9b7ca856b66ab90e8c1cbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether semantic analysis data is available.  <br /></td></tr>
+<tr class="separator:a690074689f9b7ca856b66ab90e8c1cbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45674f96ba5b6d8a230f8bb6adb4c4e5" id="r_a45674f96ba5b6d8a230f8bb6adb4c4e5"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html">st2cpp::semantic::SymbolTable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_code_generator.html#a45674f96ba5b6d8a230f8bb6adb4c4e5">semanticSymTab</a> () const</td></tr>
+<tr class="memdesc:a45674f96ba5b6d8a230f8bb6adb4c4e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the semantic symbol table.  <br /></td></tr>
+<tr class="separator:a45674f96ba5b6d8a230f8bb6adb4c4e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22d0587e01d548741f99dec16142c1e1" id="r_a22d0587e01d548741f99dec16142c1e1"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_code_generator.html#a22d0587e01d548741f99dec16142c1e1">mapTypeId</a> (<a class="el" href="namespacest2cpp_1_1semantic.html#a1ce5cfb2039b7cc4b3a96b0b0b8e9341">st2cpp::semantic::TypeId</a> typeId) const</td></tr>
+<tr class="memdesc:a22d0587e01d548741f99dec16142c1e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map a semantic TypeId to its C++ type string (central type mapper).  <br /></td></tr>
+<tr class="separator:a22d0587e01d548741f99dec16142c1e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac427831daa9e7a152905d681a80d4987" id="r_ac427831daa9e7a152905d681a80d4987"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_code_generator.html#ac427831daa9e7a152905d681a80d4987">isSemanticBoolType</a> (<a class="el" href="namespacest2cpp_1_1semantic.html#a1ce5cfb2039b7cc4b3a96b0b0b8e9341">st2cpp::semantic::TypeId</a> typeId) const</td></tr>
+<tr class="memdesc:ac427831daa9e7a152905d681a80d4987"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decide logical vs bitwise operators using the decorated resolvedTypeId.  <br /></td></tr>
+<tr class="separator:ac427831daa9e7a152905d681a80d4987"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4d7df3062b73f7bdfad78913419ddd1" id="r_ab4d7df3062b73f7bdfad78913419ddd1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_code_generator.html#ab4d7df3062b73f7bdfad78913419ddd1">isSemanticEnumType</a> (<a class="el" href="namespacest2cpp_1_1semantic.html#a1ce5cfb2039b7cc4b3a96b0b0b8e9341">st2cpp::semantic::TypeId</a> typeId) const</td></tr>
+<tr class="memdesc:ab4d7df3062b73f7bdfad78913419ddd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if the resolved type is an ENUM (member access uses '::' not '.').  <br /></td></tr>
+<tr class="separator:ab4d7df3062b73f7bdfad78913419ddd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5aed8c5152080ef98dd66c801a5705e0" id="r_a5aed8c5152080ef98dd66c801a5705e0"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_code_generator.html#a5aed8c5152080ef98dd66c801a5705e0">semanticEnumNameForEnumerator</a> (<a class="el" href="namespacest2cpp_1_1semantic.html#a04ded7b7fa589f2e5fa9ae2e7a22b3a3">st2cpp::semantic::SymbolId</a> enumeratorId) const</td></tr>
+<tr class="memdesc:a5aed8c5152080ef98dd66c801a5705e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Qualified enum name for an enumerator symbol (semantic replacement of m_enumeratorToEnum).  <br /></td></tr>
+<tr class="separator:a5aed8c5152080ef98dd66c801a5705e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcab230fbe22b6be3feaa3af69523a7e" id="r_adcab230fbe22b6be3feaa3af69523a7e"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="struct_function_signature.html">FunctionSignature</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_code_generator.html#adcab230fbe22b6be3feaa3af69523a7e">semanticSignatureForCall</a> (const <a class="el" href="struct_call_expr.html">CallExpr</a> &amp;call) const</td></tr>
+<tr class="memdesc:adcab230fbe22b6be3feaa3af69523a7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rebuild a call signature from calleeSymbolId + SymbolTable::params.  <br /></td></tr>
+<tr class="separator:adcab230fbe22b6be3feaa3af69523a7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad16c541f9b0c155f0c635e10115a5a66" id="r_ad16c541f9b0c155f0c635e10115a5a66"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_code_generator.html#ad16c541f9b0c155f0c635e10115a5a66">applySemanticAssignmentCast</a> (const <a class="el" href="struct_expr.html">Expr</a> &amp;lhs, const <a class="el" href="struct_expr.html">Expr</a> &amp;rhs, const std::string &amp;rhsCode) const</td></tr>
+<tr class="memdesc:ad16c541f9b0c155f0c635e10115a5a66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emit a static_cast when the semantic types of lhs/rhs differ (assignment/RETURN).  <br /></td></tr>
+<tr class="separator:ad16c541f9b0c155f0c635e10115a5a66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45e26122b12648cf213bf6f770b2d6e2" id="r_a45e26122b12648cf213bf6f770b2d6e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacest2cpp_1_1semantic.html#a04ded7b7fa589f2e5fa9ae2e7a22b3a3">st2cpp::semantic::SymbolId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_code_generator.html#a45e26122b12648cf213bf6f770b2d6e2">semanticFbSymbolId</a> (const <a class="el" href="struct_p_o_u.html">POU</a> &amp;pou) const</td></tr>
+<tr class="memdesc:a45e26122b12648cf213bf6f770b2d6e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolve a FB's symbol id from the semantic symbol table by name.  <br /></td></tr>
+<tr class="separator:a45e26122b12648cf213bf6f770b2d6e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3466320313dddcc237b08cf14b0ef583" id="r_a3466320313dddcc237b08cf14b0ef583"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_code_generator.html#a3466320313dddcc237b08cf14b0ef583">semanticBaseForFb</a> (const <a class="el" href="struct_p_o_u.html">POU</a> &amp;pou) const</td></tr>
+<tr class="memdesc:a3466320313dddcc237b08cf14b0ef583"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolve a FB's base-class name.  <br /></td></tr>
+<tr class="separator:a3466320313dddcc237b08cf14b0ef583"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade36999beceb93f1187203a281689905" id="r_ade36999beceb93f1187203a281689905"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_code_generator.html#ade36999beceb93f1187203a281689905">normalize</a> (const std::string &amp;str) const</td></tr>
 <tr class="memdesc:ade36999beceb93f1187203a281689905"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalize a string based on case sensitivity setting.  <br /></td></tr>
 <tr class="separator:ade36999beceb93f1187203a281689905"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -266,6 +306,9 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a29d4dfc41922f83e94c9258e735bdd28" id="r_a29d4dfc41922f83e94c9258e735bdd28"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_code_generator.html#a29d4dfc41922f83e94c9258e735bdd28">topologicalSort</a> (const std::unordered_map&lt; std::string, std::unordered_set&lt; std::string &gt; &gt; &amp;dependencies)</td></tr>
 <tr class="memdesc:a29d4dfc41922f83e94c9258e735bdd28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Topological sort of function blocks (Kahn's algorithm)  <br /></td></tr>
 <tr class="separator:a29d4dfc41922f83e94c9258e735bdd28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8ee472bc7f6d5e953ce9dc750074df3" id="r_af8ee472bc7f6d5e953ce9dc750074df3"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_code_generator.html#af8ee472bc7f6d5e953ce9dc750074df3">orderedFbNamesFromSemantic</a> ()</td></tr>
+<tr class="memdesc:af8ee472bc7f6d5e953ce9dc750074df3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map the semantic fbTopoOrder (SymbolIds) to codegen FB names.  <br /></td></tr>
+<tr class="separator:af8ee472bc7f6d5e953ce9dc750074df3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4064f7498b47431c6a5d2fc081fbe56" id="r_ad4064f7498b47431c6a5d2fc081fbe56"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="struct_generated_file.html">GeneratedFile</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_code_generator.html#ad4064f7498b47431c6a5d2fc081fbe56">generateModular</a> (const <a class="el" href="struct_translation_unit.html">TranslationUnit</a> &amp;tu, const std::string &amp;outputDir)</td></tr>
 <tr class="memdesc:ad4064f7498b47431c6a5d2fc081fbe56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate code in modular project style.  <br /></td></tr>
 <tr class="separator:ad4064f7498b47431c6a5d2fc081fbe56"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -330,7 +373,11 @@ Private Member Functions</h2></td></tr>
 <tr class="memdesc:a273fd807dc161638ded7bceb35101635"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ordina i membri di una <a class="el" href="struct_struct_init_expr.html">StructInitExpr</a> secondo l'ordine di dichiarazione della struct.  <br /></td></tr>
 <tr class="separator:a273fd807dc161638ded7bceb35101635"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8eaac6adddc78881a08a51f62333f68c" id="r_a8eaac6adddc78881a08a51f62333f68c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_code_generator.html#a8eaac6adddc78881a08a51f62333f68c">generateOrderedStructInit</a> (const <a class="el" href="struct_type_ref.html">TypeRef</a> &amp;type, const std::shared_ptr&lt; <a class="el" href="struct_expr.html">Expr</a> &gt; &amp;initExpr)</td></tr>
+<tr class="memdesc:a8eaac6adddc78881a08a51f62333f68c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate an initializer with struct members in declaration order.  <br /></td></tr>
 <tr class="separator:a8eaac6adddc78881a08a51f62333f68c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a365b6b8e1b34302046092eee5b5b0039" id="r_a365b6b8e1b34302046092eee5b5b0039"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_code_generator.html#a365b6b8e1b34302046092eee5b5b0039">isBoolExpression</a> (const std::shared_ptr&lt; <a class="el" href="struct_expr.html">Expr</a> &gt; &amp;expr) const</td></tr>
+<tr class="memdesc:a365b6b8e1b34302046092eee5b5b0039"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if an expression is likely BOOL-typed.  <br /></td></tr>
+<tr class="separator:a365b6b8e1b34302046092eee5b5b0039"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0a60d0baa4a2ad432cc0b45ace6a12d" id="r_ae0a60d0baa4a2ad432cc0b45ace6a12d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_code_generator.html#ae0a60d0baa4a2ad432cc0b45ace6a12d">generateHeaderComment</a> () const</td></tr>
 <tr class="memdesc:ae0a60d0baa4a2ad432cc0b45ace6a12d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate the header comment for all generated files.  <br /></td></tr>
 <tr class="separator:ae0a60d0baa4a2ad432cc0b45ace6a12d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -363,6 +410,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:adaa455f77e3a9a3cb220d3f57a2e41ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2dc0e6bdb6ee38bf1d53f4d7f6d3f5e7" id="r_a2dc0e6bdb6ee38bf1d53f4d7f6d3f5e7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_scope_manager.html">ScopeManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_code_generator.html#a2dc0e6bdb6ee38bf1d53f4d7f6d3f5e7">m_scope</a></td></tr>
 <tr class="separator:a2dc0e6bdb6ee38bf1d53f4d7f6d3f5e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23fe3776d7a7de7f1ee794b5e78a0185" id="r_a23fe3776d7a7de7f1ee794b5e78a0185"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structst2cpp_1_1semantic_1_1_semantic_info.html">st2cpp::semantic::SemanticInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_code_generator.html#a23fe3776d7a7de7f1ee794b5e78a0185">m_semanticInfo</a> = nullptr</td></tr>
+<tr class="separator:a23fe3776d7a7de7f1ee794b5e78a0185"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acfd09b9181ee1d7e19f42f8c871a0fd6" id="r_acfd09b9181ee1d7e19f42f8c871a0fd6"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, <a class="el" href="struct_function_signature.html">FunctionSignature</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_code_generator.html#acfd09b9181ee1d7e19f42f8c871a0fd6">m_signatures</a></td></tr>
 <tr class="separator:acfd09b9181ee1d7e19f42f8c871a0fd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad22afbe0cdc52e68669a38944ae47f00" id="r_ad22afbe0cdc52e68669a38944ae47f00"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, std::unordered_set&lt; std::string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_code_generator.html#ad22afbe0cdc52e68669a38944ae47f00">m_enumValues</a></td></tr>
@@ -400,6 +449,61 @@ Private Attributes</h2></td></tr>
 <div class="textblock"><p>Emit C++ code from the parsed AST. </p>
 <p>The <code><a class="el" href="class_code_generator.html" title="Emit C++ code from the parsed AST.">CodeGenerator</a></code> visits the <code><a class="el" href="struct_translation_unit.html">TranslationUnit</a></code> and produces a pair of strings: a C++ header and a C++ source. The generator targets the small <code>mpscpp</code> runtime provided in <code>undoCore/include/undoCore/types.hpp</code>. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad16c541f9b0c155f0c635e10115a5a66" name="ad16c541f9b0c155f0c635e10115a5a66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad16c541f9b0c155f0c635e10115a5a66">&#9670;&#160;</a></span>applySemanticAssignmentCast()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string CodeGenerator::applySemanticAssignmentCast </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_expr.html">Expr</a> &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_expr.html">Expr</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>rhsCode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Emit a static_cast when the semantic types of lhs/rhs differ (assignment/RETURN). </p>
+<p>Emit an explicit static_cast for RHS of an assignment/RETURN when the semantic types of lhs and rhs differ.</p>
+<p>The semantic analysis already validated the assignment; the runtime types are C++ primitives, so the cast only makes the intended conversion explicit (IEC 61131-3 allows widening between numerics). No cast is emitted when the mode is disabled, types match, or the target is not numeric elementary.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lhs</td><td>LHS expression (decorated) </td></tr>
+    <tr><td class="paramname">rhs</td><td>RHS expression (decorated) </td></tr>
+    <tr><td class="paramname">rhsCode</td><td>Already generated C++ text of the RHS </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>RHS text, possibly wrapped in static_cast </dd></dl>
+
+</div>
+</div>
 <a id="ad17eb152d08a53e93cac7baef0b8936a" name="ad17eb152d08a53e93cac7baef0b8936a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad17eb152d08a53e93cac7baef0b8936a">&#9670;&#160;</a></span>buildFBDependencies()</h2>
 
@@ -1489,6 +1593,17 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Generate an initializer with struct members in declaration order. </p>
+<p>When the type is a known struct, reorders the initializer members to match the struct's declaration order before generating the C++ text.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>The type being initialized </td></tr>
+    <tr><td class="paramname">initExpr</td><td>The initializer expression </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>C++ initializer text </dd></dl>
+
 </div>
 </div>
 <a id="ac864ca74a52f6a4726a585183b9e1559" name="ac864ca74a52f6a4726a585183b9e1559"></a>
@@ -1777,7 +1892,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Generate C++ for loop. </p>
-<p>Converts a FOR loop with from, to, and optional by step into a C++ for loop. Currently assumes positive step.</p>
+<p>Converts a FOR loop with from, to, and optional by step into a C++ for loop. Handles both positive and negative steps.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">s</td><td><a class="el" href="struct_for_stmt.html">ForStmt</a> AST node to generate </td></tr>
@@ -2507,6 +2622,106 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a365b6b8e1b34302046092eee5b5b0039" name="a365b6b8e1b34302046092eee5b5b0039"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a365b6b8e1b34302046092eee5b5b0039">&#9670;&#160;</a></span>isBoolExpression()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CodeGenerator::isBoolExpression </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="struct_expr.html">Expr</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>expr</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if an expression is likely BOOL-typed. </p>
+<p>This is a heuristic used to decide between logical (&amp;&amp;, ||) and bitwise (&amp;, |) operators for AND/OR/XOR in IEC 61131-3.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">expr</td><td>Expression to check </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the expression is likely BOOL-typed </dd></dl>
+
+</div>
+</div>
+<a id="ac427831daa9e7a152905d681a80d4987" name="ac427831daa9e7a152905d681a80d4987"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac427831daa9e7a152905d681a80d4987">&#9670;&#160;</a></span>isSemanticBoolType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CodeGenerator::isSemanticBoolType </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacest2cpp_1_1semantic.html#a1ce5cfb2039b7cc4b3a96b0b0b8e9341">st2cpp::semantic::TypeId</a>&#160;</td>
+          <td class="paramname"><em>typeId</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Decide logical vs bitwise operators using the decorated resolvedTypeId. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">typeId</td><td>Resolved type of an operand </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true only when the type is the canonical BOOL </dd></dl>
+
+</div>
+</div>
+<a id="ab4d7df3062b73f7bdfad78913419ddd1" name="ab4d7df3062b73f7bdfad78913419ddd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4d7df3062b73f7bdfad78913419ddd1">&#9670;&#160;</a></span>isSemanticEnumType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CodeGenerator::isSemanticEnumType </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacest2cpp_1_1semantic.html#a1ce5cfb2039b7cc4b3a96b0b0b8e9341">st2cpp::semantic::TypeId</a>&#160;</td>
+          <td class="paramname"><em>typeId</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>True if the resolved type is an ENUM (member access uses '::' not '.'). </p>
+<p>Check if a resolved type is an ENUM (member access must use '::' not '.') </p>
+
+</div>
+</div>
 <a id="a7b9a6dac54e5811afe38508c520d975d" name="a7b9a6dac54e5811afe38508c520d975d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7b9a6dac54e5811afe38508c520d975d">&#9670;&#160;</a></span>isVoidType()</h2>
 
@@ -2611,6 +2826,43 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Complete C++ type string </dd></dl>
+
+</div>
+</div>
+<a id="a22d0587e01d548741f99dec16142c1e1" name="a22d0587e01d548741f99dec16142c1e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22d0587e01d548741f99dec16142c1e1">&#9670;&#160;</a></span>mapTypeId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string CodeGenerator::mapTypeId </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacest2cpp_1_1semantic.html#a1ce5cfb2039b7cc4b3a96b0b0b8e9341">st2cpp::semantic::TypeId</a>&#160;</td>
+          <td class="paramname"><em>typeId</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Map a semantic TypeId to its C++ type string (central type mapper). </p>
+<p>Map a semantic TypeId to its complete C++ type string.</p>
+<p>Central semantic type mapper: resolves the C++ spelling from the canonical TypeInfo instead of re-deriving it from the syntactic <a class="el" href="struct_type_ref.html" title="Reference to a data type (base type, array, pointer, etc.)">TypeRef</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">typeId</td><td>Canonical type id from the semantic analysis </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Complete C++ type string (empty if the id is not decodable) </dd></dl>
 
 </div>
 </div>
@@ -2756,6 +3008,34 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Normalized type name </dd></dl>
+
+</div>
+</div>
+<a id="af8ee472bc7f6d5e953ce9dc750074df3" name="af8ee472bc7f6d5e953ce9dc750074df3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8ee472bc7f6d5e953ce9dc750074df3">&#9670;&#160;</a></span>orderedFbNamesFromSemantic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::string &gt; CodeGenerator::orderedFbNamesFromSemantic </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Map the semantic fbTopoOrder (SymbolIds) to codegen FB names. </p>
+<p>Only names of FB symbols that exist in the current m_fbMap are kept; names are normalized exactly like the legacy path (normalizeType). The semantic order already accounts for inheritance and composition dependencies. </p>
 
 </div>
 </div>
@@ -2905,6 +3185,209 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a690074689f9b7ca856b66ab90e8c1cbd" name="a690074689f9b7ca856b66ab90e8c1cbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a690074689f9b7ca856b66ab90e8c1cbd">&#9670;&#160;</a></span>semanticAvailable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CodeGenerator::semanticAvailable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check whether semantic analysis data is available. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if SemanticInfo is attached and contains a symbol table, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a3466320313dddcc237b08cf14b0ef583" name="a3466320313dddcc237b08cf14b0ef583"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3466320313dddcc237b08cf14b0ef583">&#9670;&#160;</a></span>semanticBaseForFb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string CodeGenerator::semanticBaseForFb </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_p_o_u.html">POU</a> &amp;&#160;</td>
+          <td class="paramname"><em>pou</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resolve a FB's base-class name. </p>
+<p>Base-class name of a FB: prefers the semantic fbBaseClass record, falls back to the AST syntax (pou.extends) when semantics are unavailable.</p>
+<p>Prefers the canonical semantic record (SemanticInfo::fbBaseClass, keyed by the FB symbol) over the AST syntax <code>pou.extends</code>. When the FB is not in the symbol table (no semantics attached), the legacy spelling is used so the degradation path stays byte-identical.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pou</td><td>The FB <a class="el" href="struct_p_o_u.html">POU</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Normalized base-class name, or empty when the FB has no base </dd></dl>
+
+</div>
+</div>
+<a id="a5aed8c5152080ef98dd66c801a5705e0" name="a5aed8c5152080ef98dd66c801a5705e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5aed8c5152080ef98dd66c801a5705e0">&#9670;&#160;</a></span>semanticEnumNameForEnumerator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string CodeGenerator::semanticEnumNameForEnumerator </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacest2cpp_1_1semantic.html#a04ded7b7fa589f2e5fa9ae2e7a22b3a3">st2cpp::semantic::SymbolId</a>&#160;</td>
+          <td class="paramname"><em>enumeratorId</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Qualified enum name for an enumerator symbol (semantic replacement of m_enumeratorToEnum). </p>
+<p>Qualified enum name for an enumerator symbol.</p>
+<p>Replaces the name-based m_enumeratorToEnum map: walks the system symbols to find the ENUM type symbol that owns the given enumerator.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enumeratorId</td><td>Symbol id of the ENUMERATOR </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Normalized enum type name, or empty if not found </dd></dl>
+
+</div>
+</div>
+<a id="a45e26122b12648cf213bf6f770b2d6e2" name="a45e26122b12648cf213bf6f770b2d6e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45e26122b12648cf213bf6f770b2d6e2">&#9670;&#160;</a></span>semanticFbSymbolId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacest2cpp_1_1semantic.html#a04ded7b7fa589f2e5fa9ae2e7a22b3a3">st2cpp::semantic::SymbolId</a> CodeGenerator::semanticFbSymbolId </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_p_o_u.html">POU</a> &amp;&#160;</td>
+          <td class="paramname"><em>pou</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resolve a FB's symbol id from the semantic symbol table by name. </p>
+<p>FB symbol id resolved from the semantic symbol table by name (0 when no SemanticInfo is attached or the FB is not registered).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pou</td><td>The FB <a class="el" href="struct_p_o_u.html">POU</a> to resolve </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>SymbolId of the FB symbol, or 0 when no SemanticInfo is attached or the FB is not registered (caller degrades to the legacy syntax) </dd></dl>
+
+</div>
+</div>
+<a id="adcab230fbe22b6be3feaa3af69523a7e" name="adcab230fbe22b6be3feaa3af69523a7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcab230fbe22b6be3feaa3af69523a7e">&#9670;&#160;</a></span>semanticSignatureForCall()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; <a class="el" href="struct_function_signature.html">FunctionSignature</a> &gt; CodeGenerator::semanticSignatureForCall </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_call_expr.html">CallExpr</a> &amp;&#160;</td>
+          <td class="paramname"><em>call</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Rebuild a call signature from calleeSymbolId + SymbolTable::params. </p>
+<p>Function/method signature rebuilt from calleeSymbolId + SymbolTable::params (semantic replacement of collectSignature's m_signatures for call emission).</p>
+<p>Replaces the name-based m_signatures lookup for call emission. The callee may be a FUNCTION/FB symbol (params were registered by DeclVisitor) or an FB instance, whose variable type is resolved back to the FB symbol.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">call</td><td>The call expression being generated </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Signature with ordered parameters, or nullopt when semantic data is unavailable / unhelpful (caller falls back to m_signatures) </dd></dl>
+
+</div>
+</div>
+<a id="a45674f96ba5b6d8a230f8bb6adb4c4e5" name="a45674f96ba5b6d8a230f8bb6adb4c4e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45674f96ba5b6d8a230f8bb6adb4c4e5">&#9670;&#160;</a></span>semanticSymTab()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html">st2cpp::semantic::SymbolTable</a> * CodeGenerator::semanticSymTab </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the semantic symbol table. </p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the symbol table, or nullptr when no SemanticInfo is attached </dd></dl>
+
+</div>
+</div>
 <a id="a93f1e252abeadd58ac84b257daa12852" name="a93f1e252abeadd58ac84b257daa12852"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a93f1e252abeadd58ac84b257daa12852">&#9670;&#160;</a></span>setCaseSensitive()</h2>
 
@@ -3032,6 +3515,33 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7a420640b478f86c7522a09116930f87" name="a7a420640b478f86c7522a09116930f87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a420640b478f86c7522a09116930f87">&#9670;&#160;</a></span>setSemanticInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CodeGenerator::setSemanticInfo </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structst2cpp_1_1semantic_1_1_semantic_info.html">st2cpp::semantic::SemanticInfo</a> *&#160;</td>
+          <td class="paramname"><em>info</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Attach the output of the semantic analysis (optional). When present, the generator consumes the decorated AST (<a class="el" href="struct_expr.html#a528087cc47f0a98001159b7906ee19bf">Expr::resolvedTypeId</a>, <a class="el" href="struct_expr.html#a2d6d83aa55493c0101200cc5cd20e264">Expr::symbolId</a>, <a class="el" href="struct_call_expr.html#a1dcf1be725d6153e0cf77baa43b57d0c">CallExpr::calleeSymbolId</a>) and the SymbolTable instead of re-inferring names, types and signatures from the syntax. </p>
 
 </div>
 </div>
@@ -3637,6 +4147,28 @@ Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="class_scope_manager.html">ScopeManager</a> CodeGenerator::m_scope</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a23fe3776d7a7de7f1ee794b5e78a0185" name="a23fe3776d7a7de7f1ee794b5e78a0185"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23fe3776d7a7de7f1ee794b5e78a0185">&#9670;&#160;</a></span>m_semanticInfo</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structst2cpp_1_1semantic_1_1_semantic_info.html">st2cpp::semantic::SemanticInfo</a>* CodeGenerator::m_semanticInfo = nullptr</td>
         </tr>
       </table>
   </td>

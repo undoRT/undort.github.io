@@ -1,0 +1,7 @@
+<map id="st2cpp::semantic::DeclVisitor" name="st2cpp::semantic::DeclVisitor">
+<area shape="rect" id="Node000001" title="Visitor for declaration phase (Sprint 2)" alt="" coords="150,528,354,1093"/>
+<area shape="rect" id="Node000002" href="$classst2cpp_1_1semantic_1_1_symbol_table.html" title=" " alt="" coords="5,5,248,465"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,465,190,512,184,513,174,466"/>
+<area shape="rect" id="Node000003" href="$classst2cpp_1_1semantic_1_1_diagnostics.html" title="Diagnostic collector and reporter." alt="" coords="273,93,482,378"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="349,379,320,513,314,511,344,378"/>
+</map>

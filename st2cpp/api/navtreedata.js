@@ -34,23 +34,35 @@ var NAVTREE =
         [ "Transpile a file", "md__r_e_a_d_m_e.html#autotoc_md7", null ]
       ] ],
       [ "Example", "md__r_e_a_d_m_e.html#autotoc_md8", null ],
-      [ "CLI Reference", "md__r_e_a_d_m_e.html#autotoc_md10", null ],
-      [ "What's Supported", "md__r_e_a_d_m_e.html#autotoc_md12", null ],
-      [ "Testing", "md__r_e_a_d_m_e.html#autotoc_md14", null ],
-      [ "Known Limitations (Beta)", "md__r_e_a_d_m_e.html#autotoc_md15", null ],
-      [ "Contributing", "md__r_e_a_d_m_e.html#autotoc_md17", null ],
-      [ "Testing Checklist", "md__r_e_a_d_m_e.html#autotoc_md19", null ],
-      [ "License", "md__r_e_a_d_m_e.html#autotoc_md20", null ],
-      [ "Acknowledgements", "md__r_e_a_d_m_e.html#autotoc_md21", null ]
+      [ "Semantic Analysis", "md__r_e_a_d_m_e.html#autotoc_md10", [
+        [ "Strict vs. Permissive mode", "md__r_e_a_d_m_e.html#autotoc_md11", null ]
+      ] ],
+      [ "CLI Reference", "md__r_e_a_d_m_e.html#autotoc_md13", null ],
+      [ "What's Supported", "md__r_e_a_d_m_e.html#autotoc_md15", null ],
+      [ "Testing", "md__r_e_a_d_m_e.html#autotoc_md17", null ],
+      [ "Known Limitations (Beta)", "md__r_e_a_d_m_e.html#autotoc_md18", null ],
+      [ "Contributing", "md__r_e_a_d_m_e.html#autotoc_md20", null ],
+      [ "Testing Checklist", "md__r_e_a_d_m_e.html#autotoc_md22", null ],
+      [ "License", "md__r_e_a_d_m_e.html#autotoc_md23", null ],
+      [ "Acknowledgements", "md__r_e_a_d_m_e.html#autotoc_md24", null ]
     ] ],
     [ "Deprecated List", "deprecated.html", null ],
+    [ "Namespaces", "namespaces.html", [
+      [ "Namespace List", "namespaces.html", "namespaces_dup" ],
+      [ "Namespace Members", "namespacemembers.html", [
+        [ "All", "namespacemembers.html", null ],
+        [ "Functions", "namespacemembers_func.html", null ],
+        [ "Typedefs", "namespacemembers_type.html", null ],
+        [ "Enumerations", "namespacemembers_enum.html", null ]
+      ] ]
+    ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
-        [ "Functions", "functions_func.html", null ],
+        [ "Functions", "functions_func.html", "functions_func" ],
         [ "Variables", "functions_vars.html", "functions_vars" ],
         [ "Enumerations", "functions_enum.html", null ]
       ] ]
@@ -72,10 +84,15 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_a_s_t_8h.html",
-"class_code_generator.html#a5f52185fa29b7f2287a9c362ccec8c48",
-"functions_t.html",
-"struct_parameter_info.html#a313ac255b972ca86f8d26ce4c094aa50",
-"test__lexer_8cpp.html#af09eb12f1912f7f62fda7adf3457ab5d"
+"_token_8h.html#aa520fbf142ba1e7e659590c07da31921a92295d1c400fcb1f0ccfc529d8418e75",
+"class_compilation_test.html#ac94c8960ea52f2026f8d39e23303d8d4",
+"classst2cpp_1_1semantic_1_1_body_visitor.html#ae32e5621448313faf69a0bceda0c4efe",
+"dir_68267d1309a1af8e8297ef4c3efbcdba.html",
+"namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8af4fc33bdefa1f7f42a9759921ba2c587",
+"struct_struct_type.html",
+"structst2cpp_1_1semantic_1_1_type_info.html#a85a6b97b59d202f4cb50285e3baa10ff",
+"test__compilation_8cpp.html#a8668cff9b441b40bab2f16e3d9bcf80d",
+"test__symbol__table_8cpp.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

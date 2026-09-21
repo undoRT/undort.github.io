@@ -53,6 +53,7 @@ var _token_8h =
       [ "KW_END_CASE", "_token_8h.html#aa520fbf142ba1e7e659590c07da31921aa7089fcf464d415d2457c268a0f55906", null ],
       [ "KW_EXIT", "_token_8h.html#aa520fbf142ba1e7e659590c07da31921ad5ccb3c685cfeb155e7258b1c4584916", null ],
       [ "KW_RETURN", "_token_8h.html#aa520fbf142ba1e7e659590c07da31921a3a387a428e7d6557200c4c5eea812c11", null ],
+      [ "KW_CONTINUE", "_token_8h.html#aa520fbf142ba1e7e659590c07da31921a026211868397e2588955ca1e02ecc4f7", null ],
       [ "KW_BOOL", "_token_8h.html#aa520fbf142ba1e7e659590c07da31921aa5045d788f01ba73df4e6703358019c3", null ],
       [ "KW_SINT", "_token_8h.html#aa520fbf142ba1e7e659590c07da31921a3df79d84f675156c7c40000307319c6a", null ],
       [ "KW_INT", "_token_8h.html#aa520fbf142ba1e7e659590c07da31921a9b923ef080af641bbda2f3109cd033b2", null ],

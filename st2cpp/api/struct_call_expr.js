@@ -3,5 +3,6 @@ var struct_call_expr =
     [ "Arg", "struct_call_expr_1_1_arg.html", "struct_call_expr_1_1_arg" ],
     [ "args", "struct_call_expr.html#a2f3cec8b1a0d09c170f1e06b3915fa10", null ],
     [ "callee", "struct_call_expr.html#aef1d5144704632a13402d21e83f12658", null ],
+    [ "calleeSymbolId", "struct_call_expr.html#a1dcf1be725d6153e0cf77baa43b57d0c", null ],
     [ "isStructInit", "struct_call_expr.html#a6298c0254f6ab6ad7978bed7d0afa787", null ]
 ];

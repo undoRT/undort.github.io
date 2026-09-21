@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['lexer_2ecpp_0',['Lexer.cpp',['../_lexer_8cpp.html',1,'']]],
-  ['lexer_2eh_1',['Lexer.h',['../_lexer_8h.html',1,'']]]
+  ['codegenerator_2ecpp_0',['CodeGenerator.cpp',['../_code_generator_8cpp.html',1,'']]],
+  ['codegenerator_2eh_1',['CodeGenerator.h',['../_code_generator_8h.html',1,'']]]
 ];

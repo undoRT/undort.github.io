@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['genfiletype_0',['GenFileType',['../_code_generator_8h.html#a84721c86da52dffb04ec35ed711ea09e',1,'CodeGenerator.h']]]
+  ['compatcontext_0',['CompatContext',['../namespacest2cpp_1_1semantic.html#aa34427fbc91a858a452ac2b3a0add980',1,'st2cpp::semantic']]],
+  ['conversiongroup_1',['ConversionGroup',['../namespacest2cpp_1_1semantic.html#a027967a77f4e509cefb599ab86d945e7',1,'st2cpp::semantic']]]
 ];

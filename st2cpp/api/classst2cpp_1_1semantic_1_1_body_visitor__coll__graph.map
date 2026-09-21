@@ -1,0 +1,7 @@
+<map id="st2cpp::semantic::BodyVisitor" name="st2cpp::semantic::BodyVisitor">
+<area shape="rect" id="Node000001" title="Visitor for body analysis phase (Sprint 2B)" alt="" coords="148,528,356,1013"/>
+<area shape="rect" id="Node000002" href="$classst2cpp_1_1semantic_1_1_symbol_table.html" title=" " alt="" coords="5,5,248,465"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="183,465,194,511,189,512,178,466"/>
+<area shape="rect" id="Node000003" href="$classst2cpp_1_1semantic_1_1_diagnostics.html" title="Diagnostic collector and reporter." alt="" coords="273,93,482,378"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="347,379,315,513,310,512,341,377"/>
+</map>

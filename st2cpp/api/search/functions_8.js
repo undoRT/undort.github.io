@@ -2,10 +2,19 @@ var searchData=
 [
   ['ind_0',['ind',['../class_code_generator.html#aeaad937c6fe6a646da7c74f2cc29a465',1,'CodeGenerator']]],
   ['instantiate_5ftest_5fsuite_5fp_1',['INSTANTIATE_TEST_SUITE_P',['../test__golden_8cpp.html#a362b0a588d803688861050c77b553990',1,'test_golden.cpp']]],
-  ['iscaselabelahead_2',['isCaseLabelAhead',['../class_parser.html#a504143cceec2e3038e1da261ecd0144f',1,'Parser']]],
-  ['isfunctionscope_3',['isFunctionScope',['../class_scope_manager.html#a447d1b6ac669ffdbc3a570a09a9f0b19',1,'ScopeManager']]],
-  ['islocaltofunction_4',['isLocalToFunction',['../class_scope_manager.html#ac1e4becc948610fcf8f9ad17b77e7117',1,'ScopeManager']]],
-  ['istypekeyword_5',['isTypeKeyword',['../class_parser.html#a4849db7de40a18a2ee0374f16298fb02',1,'Parser']]],
-  ['isvarsectionstart_6',['isVarSectionStart',['../class_parser.html#aca0221ff266606b52fd252874a42a999',1,'Parser']]],
-  ['isvoidtype_7',['isVoidType',['../class_code_generator.html#a7b9a6dac54e5811afe38508c520d975d',1,'CodeGenerator']]]
+  ['isassignablefrom_2',['isAssignableFrom',['../structst2cpp_1_1semantic_1_1_type_info.html#ab66fb693a063e222ed4a0fda7a1d575d',1,'st2cpp::semantic::TypeInfo']]],
+  ['isboolexpression_3',['isBoolExpression',['../class_code_generator.html#a365b6b8e1b34302046092eee5b5b0039',1,'CodeGenerator']]],
+  ['isbooltype_4',['isBoolType',['../namespacest2cpp_1_1semantic_1_1_type_checker.html#aa5aa0e3792203dc4f1239a2a6c3282ff',1,'st2cpp::semantic::TypeChecker']]],
+  ['iscaselabelahead_5',['isCaseLabelAhead',['../class_parser.html#a504143cceec2e3038e1da261ecd0144f',1,'Parser']]],
+  ['iscompatiblewith_6',['isCompatibleWith',['../structst2cpp_1_1semantic_1_1_type_info.html#aea758bd42bf0a25261eb6da2e409dff4',1,'st2cpp::semantic::TypeInfo']]],
+  ['isfunctionscope_7',['isFunctionScope',['../class_scope_manager.html#a447d1b6ac669ffdbc3a570a09a9f0b19',1,'ScopeManager']]],
+  ['isimplicitlyconvertiblefrom_8',['isImplicitlyConvertibleFrom',['../structst2cpp_1_1semantic_1_1_type_info.html#a11e607e59f9d01088b068bed1d36c478',1,'st2cpp::semantic::TypeInfo']]],
+  ['islocaltofunction_9',['isLocalToFunction',['../class_scope_manager.html#ac1e4becc948610fcf8f9ad17b77e7117',1,'ScopeManager']]],
+  ['issemanticbooltype_10',['isSemanticBoolType',['../class_code_generator.html#ac427831daa9e7a152905d681a80d4987',1,'CodeGenerator']]],
+  ['issemanticenumtype_11',['isSemanticEnumType',['../class_code_generator.html#ab4d7df3062b73f7bdfad78913419ddd1',1,'CodeGenerator']]],
+  ['isstrict_12',['isStrict',['../classst2cpp_1_1semantic_1_1_body_visitor.html#a689fa14c40d10f1998669472a189dba3',1,'st2cpp::semantic::BodyVisitor']]],
+  ['istypekeyword_13',['isTypeKeyword',['../class_parser.html#a4849db7de40a18a2ee0374f16298fb02',1,'Parser']]],
+  ['isvalid_14',['isValid',['../structst2cpp_1_1semantic_1_1_source_location.html#a91156a3bcd8d37f919bc03b5727f577d',1,'st2cpp::semantic::SourceLocation']]],
+  ['isvarsectionstart_15',['isVarSectionStart',['../class_parser.html#aca0221ff266606b52fd252874a42a999',1,'Parser']]],
+  ['isvoidtype_16',['isVoidType',['../class_code_generator.html#a7b9a6dac54e5811afe38508c520d975d',1,'CodeGenerator']]]
 ];
