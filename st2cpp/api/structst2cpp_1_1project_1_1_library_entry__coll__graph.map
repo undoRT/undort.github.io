@@ -1,0 +1,5 @@
+<map id="st2cpp::project::LibraryEntry" name="st2cpp::project::LibraryEntry">
+<area shape="rect" id="Node000001" title="One library referenced by a project." alt="" coords="5,208,168,348"/>
+<area shape="rect" id="Node000002" href="$structst2cpp_1_1library_1_1_version_constraint.html" title="A version constraint attached to a dependency." alt="" coords="5,5,168,145"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="89,145,89,191,84,191,84,145"/>
+</map>

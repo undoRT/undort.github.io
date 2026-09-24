@@ -106,15 +106,15 @@ Collaboration diagram for Stmt:</div>
 <div class="dyncontent">
 <div class="center"><img src="struct_stmt__coll__graph.png" border="0" usemap="#a_stmt_coll__map" alt="Collaboration graph"/></div>
 <map name="a_stmt_coll__map" id="a_stmt_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,75,91"/>
+<area shape="rect" title=" " alt="" coords="5,5,75,111"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1646654f045fec87711b82a54273254e" id="r_a1646654f045fec87711b82a54273254e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a1646654f045fec87711b82a54273254e"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="struct_stmt.html#a1646654f045fec87711b82a54273254e">Stmt</a> (T &amp;&amp;v, uint32_t ln=0)</td></tr>
-<tr class="separator:a1646654f045fec87711b82a54273254e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad40fc57241488e8aa959c3ec338ab0ec" id="r_ad40fc57241488e8aa959c3ec338ab0ec"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ad40fc57241488e8aa959c3ec338ab0ec"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="struct_stmt.html#ad40fc57241488e8aa959c3ec338ab0ec">Stmt</a> (T &amp;&amp;v, uint32_t ln=0, uint32_t cl=0)</td></tr>
+<tr class="separator:ad40fc57241488e8aa959c3ec338ab0ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -122,10 +122,12 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a6ef3bdcc770d6c271dca696bbc120fce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e553a1540b4632857b2d146b9fa77dd" id="r_a3e553a1540b4632857b2d146b9fa77dd"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_stmt.html#a3e553a1540b4632857b2d146b9fa77dd">line</a> = 0</td></tr>
 <tr class="separator:a3e553a1540b4632857b2d146b9fa77dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10f1d4652c150c7e79c5224c0691b807" id="r_a10f1d4652c150c7e79c5224c0691b807"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_stmt.html#a10f1d4652c150c7e79c5224c0691b807">col</a> = 0</td></tr>
+<tr class="separator:a10f1d4652c150c7e79c5224c0691b807"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a1646654f045fec87711b82a54273254e" name="a1646654f045fec87711b82a54273254e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1646654f045fec87711b82a54273254e">&#9670;&#160;</a></span>Stmt()</h2>
+<a id="ad40fc57241488e8aa959c3ec338ab0ec" name="ad40fc57241488e8aa959c3ec338ab0ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad40fc57241488e8aa959c3ec338ab0ec">&#9670;&#160;</a></span>Stmt()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -145,7 +147,13 @@ template&lt;typename T &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>ln</em> = <code>0</code>&#160;</td>
+          <td class="paramname"><em>ln</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>cl</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -163,6 +171,20 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a10f1d4652c150c7e79c5224c0691b807" name="a10f1d4652c150c7e79c5224c0691b807"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10f1d4652c150c7e79c5224c0691b807">&#9670;&#160;</a></span>col</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t Stmt::col = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a3e553a1540b4632857b2d146b9fa77dd" name="a3e553a1540b4632857b2d146b9fa77dd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3e553a1540b4632857b2d146b9fa77dd">&#9670;&#160;</a></span>line</h2>
 

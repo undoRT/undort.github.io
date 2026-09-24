@@ -12,6 +12,7 @@ var _code_generator_8h =
     [ "GeneratedFile", "struct_generated_file.html", "struct_generated_file" ],
     [ "ProcessImageConfig", "struct_process_image_config.html", "struct_process_image_config" ],
     [ "CodeGenerator", "class_code_generator.html", "class_code_generator" ],
+    [ "CodeGenerator::ExternalFbCallInfo", "struct_code_generator_1_1_external_fb_call_info.html", "struct_code_generator_1_1_external_fb_call_info" ],
     [ "ProcessImageAnalyzer", "class_process_image_analyzer.html", "class_process_image_analyzer" ],
     [ "ProcessImageAnalyzer::AddressInfo", "struct_process_image_analyzer_1_1_address_info.html", "struct_process_image_analyzer_1_1_address_info" ],
     [ "BuildStructDepType", "_code_generator_8h.html#af90a7e8655169488650b2f51405d31fe", null ],

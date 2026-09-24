@@ -6,6 +6,7 @@ var _a_s_t_8h =
     [ "StructType", "struct_struct_type.html", "struct_struct_type" ],
     [ "EnumEnumerator", "struct_enum_enumerator.html", "struct_enum_enumerator" ],
     [ "EnumType", "struct_enum_type.html", "struct_enum_type" ],
+    [ "TypeAlias", "struct_type_alias.html", "struct_type_alias" ],
     [ "MethodParameter", "struct_method_parameter.html", "struct_method_parameter" ],
     [ "Method", "struct_method.html", "struct_method" ],
     [ "VarDecl", "struct_var_decl.html", "struct_var_decl" ],

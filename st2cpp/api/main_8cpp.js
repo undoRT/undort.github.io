@@ -8,7 +8,7 @@ var main_8cpp =
     [ "printVersion", "main_8cpp.html#ac1832783e1e213b53c0598652d788926", null ],
     [ "processSingleFile", "main_8cpp.html#a46f4e7bb1480bbf26cf6523dbc826878", null ],
     [ "readFile", "main_8cpp.html#a813127d3dabbeedd4a747d91bc84cdf5", null ],
-    [ "runSemanticAnalysis", "main_8cpp.html#aaa60b1f8d115a85aba8d72c7d4cfe172", null ],
+    [ "runSemanticAnalysis", "main_8cpp.html#a82f590923059bdf410f085daf4ef3eb0", null ],
     [ "sameEnum", "main_8cpp.html#a11587737cb6b05349ef738048f82ab26", null ],
     [ "sameInterface", "main_8cpp.html#a2a7de2eb4b92151f60acf9b426a8bfb7", null ],
     [ "samePou", "main_8cpp.html#a4bffb5caa9c6253968e1e951e88e9507", null ],

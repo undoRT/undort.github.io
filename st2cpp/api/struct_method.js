@@ -1,6 +1,7 @@
 var struct_method =
 [
     [ "body", "struct_method.html#a4471eaa1dc1d16eeb9ab2f06202c7409", null ],
+    [ "col", "struct_method.html#a09e04f437e7806a07fa2efbc895e11c3", null ],
     [ "isAbstract", "struct_method.html#aca09d585d182a90d4ca55ec57e9a1fed", null ],
     [ "isFinal", "struct_method.html#a98f1f38f5179e53b3d60ef05f723fb8f", null ],
     [ "isOverride", "struct_method.html#a9427afb137a791072c2ccfe4c6a23d92", null ],

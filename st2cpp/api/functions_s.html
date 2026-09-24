@@ -97,6 +97,9 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 <h3><a id="index_s" name="index_s"></a>- s -</h3><ul>
 <li>s_keywords&#160;:&#160;<a class="el" href="class_lexer.html#a4d7c32b28dfe24b7a6e899d45fd4ea6e">Lexer</a></li>
 <li>s_parsedInterfaces&#160;:&#160;<a class="el" href="class_parser.html#a77219a2243ec98902453c474851da889">Parser</a></li>
+<li>scalar&#160;:&#160;<a class="el" href="structst2cpp_1_1library_1_1_init_value.html#af85f1d46338490a040b427143259118c">st2cpp::library::InitValue</a></li>
+<li>schemaVersion&#160;:&#160;<a class="el" href="classst2cpp_1_1library_1_1_library_descriptor.html#a947b9fd1e0e9d78f841bb3938afbbee6">st2cpp::library::LibraryDescriptor</a>, <a class="el" href="structst2cpp_1_1project_1_1_project_config.html#aecd7ed59e8185b8493af84587c9f3f2b">st2cpp::project::ProjectConfig</a></li>
+<li>scope&#160;:&#160;<a class="el" href="structst2cpp_1_1library_1_1_global_variable.html#aa6066a2d80a508ee32be1fe9b8ba189a">st2cpp::library::GlobalVariable</a></li>
 <li>scopeId&#160;:&#160;<a class="el" href="structst2cpp_1_1semantic_1_1_body_visitor_1_1_context.html#af637951ff2c7924aa8db3355d83519c5">st2cpp::semantic::BodyVisitor::Context</a>, <a class="el" href="structst2cpp_1_1semantic_1_1_symbol.html#a49372816e19534ccaa3440f1f823376a">st2cpp::semantic::Symbol</a></li>
 <li>scopes_&#160;:&#160;<a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#ad1639d09be494a9d7ab20ba04a248412">st2cpp::semantic::SymbolTable</a></li>
 <li>scopeStack_&#160;:&#160;<a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#ab9fa3dbc0561086096f30b20dbbd79ca">st2cpp::semantic::SymbolTable</a></li>
@@ -104,11 +107,17 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 <li>SemanticAnalyzer()&#160;:&#160;<a class="el" href="classst2cpp_1_1semantic_1_1_semantic_analyzer.html#aa03329a870e17aa8cc52841460132928">st2cpp::semantic::SemanticAnalyzer</a></li>
 <li>semanticAvailable()&#160;:&#160;<a class="el" href="class_code_generator.html#a690074689f9b7ca856b66ab90e8c1cbd">CodeGenerator</a></li>
 <li>semanticBaseForFb()&#160;:&#160;<a class="el" href="class_code_generator.html#a3466320313dddcc237b08cf14b0ef583">CodeGenerator</a></li>
+<li>semanticCallTargetName()&#160;:&#160;<a class="el" href="class_code_generator.html#abf1a15edf699697d8b5656b8d59f1b15">CodeGenerator</a></li>
+<li>semanticDescriptorFor()&#160;:&#160;<a class="el" href="class_code_generator.html#a15f2b6db201393ce2d127e0bfd4994c4">CodeGenerator</a></li>
+<li>semanticEnumeratorCppName()&#160;:&#160;<a class="el" href="class_code_generator.html#aa5ac594e26f28aa01ec71e9b4d94a42d">CodeGenerator</a></li>
 <li>semanticEnumNameForEnumerator()&#160;:&#160;<a class="el" href="class_code_generator.html#a5aed8c5152080ef98dd66c801a5705e0">CodeGenerator</a></li>
+<li>semanticFbCallInfo()&#160;:&#160;<a class="el" href="class_code_generator.html#a7f027b00fe972a16887fae39cca8a184">CodeGenerator</a></li>
 <li>semanticFbSymbolId()&#160;:&#160;<a class="el" href="class_code_generator.html#a45e26122b12648cf213bf6f770b2d6e2">CodeGenerator</a></li>
 <li>semanticModeApplied&#160;:&#160;<a class="el" href="structst2cpp_1_1semantic_1_1_preserved_semantics.html#aeddfca6595b50643e2b06c5c3fa611cf">st2cpp::semantic::PreservedSemantics</a></li>
 <li>semanticSignatureForCall()&#160;:&#160;<a class="el" href="class_code_generator.html#adcab230fbe22b6be3feaa3af69523a7e">CodeGenerator</a></li>
 <li>semanticSymTab()&#160;:&#160;<a class="el" href="class_code_generator.html#a45674f96ba5b6d8a230f8bb6adb4c4e5">CodeGenerator</a></li>
+<li>semanticTypeCppName()&#160;:&#160;<a class="el" href="class_code_generator.html#aefb7e1156b2a82bde94f686ceb37e338">CodeGenerator</a></li>
+<li>semanticVariableBinding()&#160;:&#160;<a class="el" href="class_code_generator.html#a604526eb4ffb074473c4112baafc5b5e">CodeGenerator</a></li>
 <li>setBaseClass()&#160;:&#160;<a class="el" href="class_scope_manager.html#acfd7a3d37714d6b2929e55ca992afa95">ScopeManager</a></li>
 <li>setCaseSensitive()&#160;:&#160;<a class="el" href="class_code_generator.html#a93f1e252abeadd58ac84b257daa12852">CodeGenerator</a></li>
 <li>setFunctionScope()&#160;:&#160;<a class="el" href="class_scope_manager.html#a0d91225ae2d8c734e0c725cd3d2339a7">ScopeManager</a></li>
@@ -117,16 +126,26 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 <li>setProcessImageConfig()&#160;:&#160;<a class="el" href="class_code_generator.html#ae1af498b3b7c5c8db14194a1f118d862">CodeGenerator</a></li>
 <li>setProcessImageGlobal()&#160;:&#160;<a class="el" href="class_code_generator.html#a09cba58886829e5940d7134e178d5be7">CodeGenerator</a></li>
 <li>setRuntimeHeader()&#160;:&#160;<a class="el" href="class_code_generator.html#aaf0eca03ac9709feafea50e1ca393d16">CodeGenerator</a></li>
-<li>setSemanticInfo()&#160;:&#160;<a class="el" href="class_code_generator.html#a7a420640b478f86c7522a09116930f87">CodeGenerator</a></li>
+<li>setSemanticInfo()&#160;:&#160;<a class="el" href="class_code_generator.html#a7f9a4eac479a78f73420a0e9947c6433">CodeGenerator</a></li>
+<li>setSourceName()&#160;:&#160;<a class="el" href="classst2cpp_1_1semantic_1_1_diagnostics.html#a0525f06f8f49c5c2c448cc784979be4a">st2cpp::semantic::Diagnostics</a>, <a class="el" href="classst2cpp_1_1semantic_1_1_semantic_analyzer.html#a242186bca300ef7649423c8d4e5ece45">st2cpp::semantic::SemanticAnalyzer</a></li>
+<li>setSourceText()&#160;:&#160;<a class="el" href="classst2cpp_1_1semantic_1_1_diagnostics.html#a4952755afbb24e6e9400ef981169798a">st2cpp::semantic::Diagnostics</a></li>
 <li>setStrict()&#160;:&#160;<a class="el" href="classst2cpp_1_1semantic_1_1_body_visitor.html#a8afa2abdb85fe8938480622a70a45183">st2cpp::semantic::BodyVisitor</a></li>
 <li>SetUp()&#160;:&#160;<a class="el" href="class_body_visitor_test.html#a82a97a2ba466c57c3967b2d57fcd57e1">BodyVisitorTest</a>, <a class="el" href="class_compilation_test.html#aeb74bf1c524efbf7011f3af90894b5ee">CompilationTest</a>, <a class="el" href="class_complex_program_test.html#aff41116f0e7d57840b8108af4edd0949">ComplexProgramTest</a>, <a class="el" href="class_decl_visitor_test.html#a9009170cfce2e644642e5fbd99397184">DeclVisitorTest</a>, <a class="el" href="class_golden_test.html#acb7f7347d060fd85812a014d9d95f9e8">GoldenTest</a>, <a class="el" href="class_process_image_test.html#a151a08d575127bb2dc1658db9f6bd736">ProcessImageTest</a>, <a class="el" href="class_symbol_table_test.html#a03ba0de1411816c297647efd2a593f87">SymbolTableTest</a></li>
 <li>severity&#160;:&#160;<a class="el" href="structst2cpp_1_1semantic_1_1_diagnostic.html#ab1a406d0d7de9a478013a11677fb1a29">st2cpp::semantic::Diagnostic</a></li>
-<li>size&#160;:&#160;<a class="el" href="struct_address_allocator_1_1_memory_region.html#a55c713781c8479734f942c2078ccec65">AddressAllocator::MemoryRegion</a></li>
+<li>severityName()&#160;:&#160;<a class="el" href="classst2cpp_1_1semantic_1_1_diagnostics.html#ae23e77457382a259900612cefbc58583">st2cpp::semantic::Diagnostics</a></li>
+<li>size&#160;:&#160;<a class="el" href="struct_address_allocator_1_1_memory_region.html#a55c713781c8479734f942c2078ccec65">AddressAllocator::MemoryRegion</a>, <a class="el" href="classst2cpp_1_1library_1_1_library_registry.html#a9aea776997cae01faac3d526af8aaa76">st2cpp::library::LibraryRegistry</a></li>
 <li>sizeInBytes&#160;:&#160;<a class="el" href="structst2cpp_1_1semantic_1_1_type_info.html#a703f81824259519f0efa2c9c6b95753b">st2cpp::semantic::TypeInfo</a></li>
 <li>skipWhitespaceAndComments()&#160;:&#160;<a class="el" href="class_lexer.html#ab64fdeed412c541f90756d2e440bed5c">Lexer</a></li>
 <li>source&#160;:&#160;<a class="el" href="struct_generated_code.html#ad6b83c350246c455237578d24666cfa1">GeneratedCode</a></li>
 <li>sourceCode&#160;:&#160;<a class="el" href="struct_codegen_result.html#ac600f7fb617303b78272477889133dbf">CodegenResult</a></li>
-<li>Stmt()&#160;:&#160;<a class="el" href="struct_stmt.html#a1646654f045fec87711b82a54273254e">Stmt</a></li>
+<li>sourceFileName()&#160;:&#160;<a class="el" href="classst2cpp_1_1semantic_1_1_diagnostics.html#a0224dacf6392e32b984e51c2da6f3826">st2cpp::semantic::Diagnostics</a></li>
+<li>sourceLine()&#160;:&#160;<a class="el" href="classst2cpp_1_1semantic_1_1_diagnostics.html#a159773726b42b072916125f5b7df45ed">st2cpp::semantic::Diagnostics</a></li>
+<li>sourceName_&#160;:&#160;<a class="el" href="classst2cpp_1_1semantic_1_1_diagnostics.html#ad6a55c36c3ad5488fe62dc358afb85c3">st2cpp::semantic::Diagnostics</a>, <a class="el" href="classst2cpp_1_1semantic_1_1_semantic_analyzer.html#a6fa5fa58e5f41b73bff0d4e4015159d3">st2cpp::semantic::SemanticAnalyzer</a></li>
+<li>sourceText()&#160;:&#160;<a class="el" href="classst2cpp_1_1semantic_1_1_diagnostics.html#aaf1df917da07bb170176528418ac4a78">st2cpp::semantic::Diagnostics</a></li>
+<li>sourceText_&#160;:&#160;<a class="el" href="classst2cpp_1_1semantic_1_1_diagnostics.html#a6523285420e1df74f8de9743e29f40a1">st2cpp::semantic::Diagnostics</a></li>
+<li>st&#160;:&#160;<a class="el" href="structst2cpp_1_1semantic_1_1_library_descriptor_builder_1_1_impl.html#aea4790704270c2efa0b5ec799b139308">st2cpp::semantic::LibraryDescriptorBuilder::Impl</a></li>
+<li>step&#160;:&#160;<a class="el" href="struct_code_generator_1_1_external_fb_call_info.html#a342a26cf70f56a85ae0bf86452f9f2fa">CodeGenerator::ExternalFbCallInfo</a></li>
+<li>Stmt()&#160;:&#160;<a class="el" href="struct_stmt.html#ad40fc57241488e8aa959c3ec338ab0ec">Stmt</a></li>
 <li>stPath&#160;:&#160;<a class="el" href="struct_golden_test_param.html#a6ebb70aadfe404bf9b5b45aee4b0663d">GoldenTestParam</a></li>
 <li>strict_&#160;:&#160;<a class="el" href="classst2cpp_1_1semantic_1_1_body_visitor.html#a61fba300907e238ba001ab8fd6795e51">st2cpp::semantic::BodyVisitor</a></li>
 <li>strictness&#160;:&#160;<a class="el" href="structst2cpp_1_1semantic_1_1_preserved_semantics.html#a9e763dfb9cd31f6d4f5ab261bd576774">st2cpp::semantic::PreservedSemantics</a></li>
@@ -141,13 +160,14 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 <li>success&#160;:&#160;<a class="el" href="struct_address_allocator_1_1_allocation_result.html#afefae4774d0cce102201f50450f1b013">AddressAllocator::AllocationResult</a></li>
 <li>suffix&#160;:&#160;<a class="el" href="struct_literal_expr.html#ab416a7bde0c6dbd7ec2592c28ba809d5">LiteralExpr</a></li>
 <li>suggestion&#160;:&#160;<a class="el" href="structst2cpp_1_1semantic_1_1_diagnostic.html#a51be977684ae30ebc2e04234d989175d">st2cpp::semantic::Diagnostic</a></li>
+<li>symbol&#160;:&#160;<a class="el" href="structst2cpp_1_1library_1_1_function_cpp_binding.html#a44ca1509e04efff3777a01277cb0fea9">st2cpp::library::FunctionCppBinding</a>, <a class="el" href="structst2cpp_1_1library_1_1_symbol_cpp_binding.html#a273ae47adfa5f7b95f534e4f60f0e538">st2cpp::library::SymbolCppBinding</a></li>
 <li>symbolId&#160;:&#160;<a class="el" href="struct_expr.html#a2d6d83aa55493c0101200cc5cd20e264">Expr</a>, <a class="el" href="struct_ident_expr.html#a4517728291122bb95d70d220f694b526">IdentExpr</a>, <a class="el" href="struct_member_expr.html#a19b84c4f719c37af2764d59e4fc44a53">MemberExpr</a>, <a class="el" href="struct_p_o_u.html#a4df7fa38a346ff53a085c6d376f57aa4">POU</a>, <a class="el" href="structst2cpp_1_1semantic_1_1_type_checker_1_1_member_result.html#a4dca14c8216999d8112d44904058d14e">st2cpp::semantic::TypeChecker::MemberResult</a>, <a class="el" href="structst2cpp_1_1semantic_1_1_type_info.html#a5656dde69ff7efb19d6ad9b87a273341">st2cpp::semantic::TypeInfo</a>, <a class="el" href="struct_var_decl.html#a2ff6490c88f7af26f6fc6432723a0cd4">VarDecl</a></li>
 <li>symbols&#160;:&#160;<a class="el" href="structst2cpp_1_1semantic_1_1_scope.html#ab9e2363ad3685e48cfeb849894e39d61">st2cpp::semantic::Scope</a></li>
 <li>symbols_&#160;:&#160;<a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#a6b0ea79dfd65af977d1a9e0565fceef4">st2cpp::semantic::SymbolTable</a></li>
 <li>symbolTable&#160;:&#160;<a class="el" href="structst2cpp_1_1semantic_1_1_semantic_info.html#a258f3d2158e0124830ae45fe82007ce2">st2cpp::semantic::SemanticInfo</a></li>
 <li>SymbolTable()&#160;:&#160;<a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#a2fdb06efb33173a3f12fd91fbb44dad2">st2cpp::semantic::SymbolTable</a></li>
 <li>symTab&#160;:&#160;<a class="el" href="class_symbol_table_test.html#ae1c903d496935e16ff0583631d70090c">SymbolTableTest</a>, <a class="el" href="class_type_system_test.html#a52790676733d7bcc0ec474e1e097a75e">TypeSystemTest</a></li>
-<li>symTab_&#160;:&#160;<a class="el" href="classst2cpp_1_1semantic_1_1_body_visitor.html#a1bbfa326e2d1ee995bf8c2d90878b3cc">st2cpp::semantic::BodyVisitor</a>, <a class="el" href="classst2cpp_1_1semantic_1_1_decl_visitor.html#a611197e74d5728830f581f20c1b1e717">st2cpp::semantic::DeclVisitor</a>, <a class="el" href="classst2cpp_1_1semantic_1_1_semantic_analyzer.html#a8fc1ff3a6504ecee836505657b1d6798">st2cpp::semantic::SemanticAnalyzer</a></li>
+<li>symTab_&#160;:&#160;<a class="el" href="classst2cpp_1_1semantic_1_1_body_visitor.html#a1bbfa326e2d1ee995bf8c2d90878b3cc">st2cpp::semantic::BodyVisitor</a>, <a class="el" href="classst2cpp_1_1semantic_1_1_decl_visitor.html#a611197e74d5728830f581f20c1b1e717">st2cpp::semantic::DeclVisitor</a>, <a class="el" href="classst2cpp_1_1semantic_1_1_library_symbol_importer.html#a3c018f93cba0b9c417be5add70f4f47d">st2cpp::semantic::LibrarySymbolImporter</a>, <a class="el" href="classst2cpp_1_1semantic_1_1_semantic_analyzer.html#a8fc1ff3a6504ecee836505657b1d6798">st2cpp::semantic::SemanticAnalyzer</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

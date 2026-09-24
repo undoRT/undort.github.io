@@ -108,7 +108,7 @@ Collaboration diagram for st2cpp::semantic::SymbolTable:</div>
 <div class="dyncontent">
 <div class="center"><img src="classst2cpp_1_1semantic_1_1_symbol_table__coll__graph.png" border="0" usemap="#ast2cpp_1_1semantic_1_1_symbol_table_coll__map" alt="Collaboration graph"/></div>
 <map name="ast2cpp_1_1semantic_1_1_symbol_table_coll__map" id="ast2cpp_1_1semantic_1_1_symbol_table_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,248,465"/>
+<area shape="rect" title=" " alt="" coords="5,5,248,485"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -116,7 +116,7 @@ Collaboration diagram for st2cpp::semantic::SymbolTable:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a2fdb06efb33173a3f12fd91fbb44dad2" id="r_a2fdb06efb33173a3f12fd91fbb44dad2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#a2fdb06efb33173a3f12fd91fbb44dad2">SymbolTable</a> ()</td></tr>
 <tr class="separator:a2fdb06efb33173a3f12fd91fbb44dad2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e6eed3ebdffec180ce89b46d3a8807a" id="r_a1e6eed3ebdffec180ce89b46d3a8807a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacest2cpp_1_1semantic.html#a858c422b099cad80709b821042555486">ScopeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#a1e6eed3ebdffec180ce89b46d3a8807a">pushScope</a> (const std::string &amp;name)</td></tr>
+<tr class="memitem:a1e6eed3ebdffec180ce89b46d3a8807a" id="r_a1e6eed3ebdffec180ce89b46d3a8807a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacest2cpp_1_1semantic.html#a858c422b099cad80709b821042555486">ScopeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#a1e6eed3ebdffec180ce89b46d3a8807a">pushScope</a> (const std::string &amp;<a class="el" href="_library_loader_8cpp.html#a9b45b3e13bd9167aab02e17e08916231">name</a>)</td></tr>
 <tr class="separator:a1e6eed3ebdffec180ce89b46d3a8807a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab95f1e2f1e08f22b382a73ae3fd15f9e" id="r_ab95f1e2f1e08f22b382a73ae3fd15f9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#ab95f1e2f1e08f22b382a73ae3fd15f9e">popScope</a> ()</td></tr>
 <tr class="separator:ab95f1e2f1e08f22b382a73ae3fd15f9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -126,9 +126,21 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a09d37f4f74582007cda1bf5aa731d43b" id="r_a09d37f4f74582007cda1bf5aa731d43b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#a09d37f4f74582007cda1bf5aa731d43b">exitScope</a> ()</td></tr>
 <tr class="memdesc:a09d37f4f74582007cda1bf5aa731d43b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restore the scope active before the matching enterScope.  <br /></td></tr>
 <tr class="separator:a09d37f4f74582007cda1bf5aa731d43b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31555ffa0225cc5b1c346a462459ae45" id="r_a31555ffa0225cc5b1c346a462459ae45"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacest2cpp_1_1semantic.html#a04ded7b7fa589f2e5fa9ae2e7a22b3a3">SymbolId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#a31555ffa0225cc5b1c346a462459ae45">lookupGlobal</a> (const std::string &amp;name) const</td></tr>
+<tr class="memitem:a31555ffa0225cc5b1c346a462459ae45" id="r_a31555ffa0225cc5b1c346a462459ae45"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacest2cpp_1_1semantic.html#a04ded7b7fa589f2e5fa9ae2e7a22b3a3">SymbolId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#a31555ffa0225cc5b1c346a462459ae45">lookupGlobal</a> (const std::string &amp;<a class="el" href="_library_loader_8cpp.html#a9b45b3e13bd9167aab02e17e08916231">name</a>) const</td></tr>
 <tr class="memdesc:a31555ffa0225cc5b1c346a462459ae45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Look up a name only in the global scope (the type namespace).  <br /></td></tr>
 <tr class="separator:a31555ffa0225cc5b1c346a462459ae45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d63ca01bba680cf6a97b0ccbbdfdc81" id="r_a8d63ca01bba680cf6a97b0ccbbdfdc81"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacest2cpp_1_1semantic.html#a858c422b099cad80709b821042555486">ScopeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#a8d63ca01bba680cf6a97b0ccbbdfdc81">externalScope</a> () const</td></tr>
+<tr class="memdesc:a8d63ca01bba680cf6a97b0ccbbdfdc81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Id of the external scope that holds library-imported symbols.  <br /></td></tr>
+<tr class="separator:a8d63ca01bba680cf6a97b0ccbbdfdc81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97388be0bdef33c55b227a589cceb959" id="r_a97388be0bdef33c55b227a589cceb959"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacest2cpp_1_1semantic.html#a04ded7b7fa589f2e5fa9ae2e7a22b3a3">SymbolId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#a97388be0bdef33c55b227a589cceb959">declareExternal</a> (const std::string &amp;<a class="el" href="_library_loader_8cpp.html#a9b45b3e13bd9167aab02e17e08916231">name</a>, <a class="el" href="namespacest2cpp_1_1semantic.html#a7939b4cd3a2f8b9a4c88cee73175a841">SymbolKind</a> kind, <a class="el" href="namespacest2cpp_1_1semantic.html#a1ce5cfb2039b7cc4b3a96b0b0b8e9341">TypeId</a> typeId=0, const std::string &amp;libraryId=&quot;&quot;)</td></tr>
+<tr class="memdesc:a97388be0bdef33c55b227a589cceb959"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declare a symbol in the external (library) scope.  <br /></td></tr>
+<tr class="separator:a97388be0bdef33c55b227a589cceb959"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c1bb1ee8fe3896338929d94e53e0482" id="r_a8c1bb1ee8fe3896338929d94e53e0482"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacest2cpp_1_1semantic.html#a04ded7b7fa589f2e5fa9ae2e7a22b3a3">SymbolId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#a8c1bb1ee8fe3896338929d94e53e0482">lookupExternal</a> (const std::string &amp;<a class="el" href="_library_loader_8cpp.html#a9b45b3e13bd9167aab02e17e08916231">name</a>) const</td></tr>
+<tr class="memdesc:a8c1bb1ee8fe3896338929d94e53e0482"><td class="mdescLeft">&#160;</td><td class="mdescRight">Look up a name in the external (library) scope only.  <br /></td></tr>
+<tr class="separator:a8c1bb1ee8fe3896338929d94e53e0482"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9432af2f407535746380d72f0290677" id="r_ab9432af2f407535746380d72f0290677"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacest2cpp_1_1semantic.html#a858c422b099cad80709b821042555486">ScopeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#ab9432af2f407535746380d72f0290677">pushExternalScope</a> (const std::string &amp;<a class="el" href="_library_loader_8cpp.html#a9b45b3e13bd9167aab02e17e08916231">name</a>)</td></tr>
+<tr class="memdesc:ab9432af2f407535746380d72f0290677"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a child scope of the external scope (STRUCT_&lt;n&gt;, FUNC_&lt;n&gt;, FB_&lt;n&gt;) where the current scope is saved and restored by <a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#a09d37f4f74582007cda1bf5aa731d43b" title="Restore the scope active before the matching enterScope.">exitScope()</a>.  <br /></td></tr>
+<tr class="separator:ab9432af2f407535746380d72f0290677"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac074a55798624c4c31d073937dffcb0b" id="r_ac074a55798624c4c31d073937dffcb0b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacest2cpp_1_1semantic.html#a858c422b099cad80709b821042555486">ScopeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#ac074a55798624c4c31d073937dffcb0b">currentScope</a> () const</td></tr>
 <tr class="separator:ac074a55798624c4c31d073937dffcb0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac520aec4f08621f92cbffde958247da5" id="r_ac520aec4f08621f92cbffde958247da5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacest2cpp_1_1semantic.html#a858c422b099cad80709b821042555486">ScopeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#ac520aec4f08621f92cbffde958247da5">globalScope</a> () const</td></tr>
@@ -137,11 +149,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a270699d071a5c354f45c08fbc66c6f3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0aeeda70b2f09989e145b057ba1cd33b" id="r_a0aeeda70b2f09989e145b057ba1cd33b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structst2cpp_1_1semantic_1_1_scope.html">Scope</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#a0aeeda70b2f09989e145b057ba1cd33b">getScope</a> (<a class="el" href="namespacest2cpp_1_1semantic.html#a858c422b099cad80709b821042555486">ScopeId</a> id)</td></tr>
 <tr class="separator:a0aeeda70b2f09989e145b057ba1cd33b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5484fdb66d93d05d81319baa735adb99" id="r_a5484fdb66d93d05d81319baa735adb99"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacest2cpp_1_1semantic.html#a04ded7b7fa589f2e5fa9ae2e7a22b3a3">SymbolId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#a5484fdb66d93d05d81319baa735adb99">declare</a> (const std::string &amp;name, <a class="el" href="namespacest2cpp_1_1semantic.html#a7939b4cd3a2f8b9a4c88cee73175a841">SymbolKind</a> kind, <a class="el" href="namespacest2cpp_1_1semantic.html#a1ce5cfb2039b7cc4b3a96b0b0b8e9341">TypeId</a> typeId=0)</td></tr>
+<tr class="memitem:a5484fdb66d93d05d81319baa735adb99" id="r_a5484fdb66d93d05d81319baa735adb99"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacest2cpp_1_1semantic.html#a04ded7b7fa589f2e5fa9ae2e7a22b3a3">SymbolId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#a5484fdb66d93d05d81319baa735adb99">declare</a> (const std::string &amp;<a class="el" href="_library_loader_8cpp.html#a9b45b3e13bd9167aab02e17e08916231">name</a>, <a class="el" href="namespacest2cpp_1_1semantic.html#a7939b4cd3a2f8b9a4c88cee73175a841">SymbolKind</a> kind, <a class="el" href="namespacest2cpp_1_1semantic.html#a1ce5cfb2039b7cc4b3a96b0b0b8e9341">TypeId</a> typeId=0)</td></tr>
 <tr class="separator:a5484fdb66d93d05d81319baa735adb99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aebbc6cb3d08447cd03eaa1cd4b79a8a9" id="r_aebbc6cb3d08447cd03eaa1cd4b79a8a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacest2cpp_1_1semantic.html#a04ded7b7fa589f2e5fa9ae2e7a22b3a3">SymbolId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#aebbc6cb3d08447cd03eaa1cd4b79a8a9">lookup</a> (const std::string &amp;name) const</td></tr>
+<tr class="memitem:aebbc6cb3d08447cd03eaa1cd4b79a8a9" id="r_aebbc6cb3d08447cd03eaa1cd4b79a8a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacest2cpp_1_1semantic.html#a04ded7b7fa589f2e5fa9ae2e7a22b3a3">SymbolId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#aebbc6cb3d08447cd03eaa1cd4b79a8a9">lookup</a> (const std::string &amp;<a class="el" href="_library_loader_8cpp.html#a9b45b3e13bd9167aab02e17e08916231">name</a>) const</td></tr>
 <tr class="separator:aebbc6cb3d08447cd03eaa1cd4b79a8a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41f67cf2252a71aa2ad1c408a1ac1776" id="r_a41f67cf2252a71aa2ad1c408a1ac1776"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacest2cpp_1_1semantic.html#a04ded7b7fa589f2e5fa9ae2e7a22b3a3">SymbolId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#a41f67cf2252a71aa2ad1c408a1ac1776">lookupRecursive</a> (const std::string &amp;name) const</td></tr>
+<tr class="memitem:a41f67cf2252a71aa2ad1c408a1ac1776" id="r_a41f67cf2252a71aa2ad1c408a1ac1776"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacest2cpp_1_1semantic.html#a04ded7b7fa589f2e5fa9ae2e7a22b3a3">SymbolId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#a41f67cf2252a71aa2ad1c408a1ac1776">lookupRecursive</a> (const std::string &amp;<a class="el" href="_library_loader_8cpp.html#a9b45b3e13bd9167aab02e17e08916231">name</a>) const</td></tr>
 <tr class="separator:a41f67cf2252a71aa2ad1c408a1ac1776"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab341b5fe0f26b4de390823bec8d3d09b" id="r_ab341b5fe0f26b4de390823bec8d3d09b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacest2cpp_1_1semantic.html#a1ce5cfb2039b7cc4b3a96b0b0b8e9341">TypeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#ab341b5fe0f26b4de390823bec8d3d09b">registerArrayType</a> (const <a class="el" href="structst2cpp_1_1semantic_1_1_type_info.html">TypeInfo</a> &amp;type)</td></tr>
 <tr class="separator:ab341b5fe0f26b4de390823bec8d3d09b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -151,6 +163,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a332ed3f21288e50bba9a6c84880107b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3bc9ff04d717a762b074a30021f766ee" id="r_a3bc9ff04d717a762b074a30021f766ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacest2cpp_1_1semantic.html#a1ce5cfb2039b7cc4b3a96b0b0b8e9341">TypeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#a3bc9ff04d717a762b074a30021f766ee">registerType</a> (const <a class="el" href="structst2cpp_1_1semantic_1_1_type_info.html">TypeInfo</a> &amp;type)</td></tr>
 <tr class="separator:a3bc9ff04d717a762b074a30021f766ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5e46a792df3706f264272a55b02f7e2" id="r_ad5e46a792df3706f264272a55b02f7e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacest2cpp_1_1semantic.html#a1ce5cfb2039b7cc4b3a96b0b0b8e9341">TypeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#ad5e46a792df3706f264272a55b02f7e2">registerTypeAlias</a> (const std::string &amp;<a class="el" href="_library_loader_8cpp.html#a9b45b3e13bd9167aab02e17e08916231">name</a>, <a class="el" href="namespacest2cpp_1_1semantic.html#a1ce5cfb2039b7cc4b3a96b0b0b8e9341">TypeId</a> typeId)</td></tr>
+<tr class="memdesc:ad5e46a792df3706f264272a55b02f7e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a named type alias (TYPE Name : &lt;type&gt;; END_TYPE).  <br /></td></tr>
+<tr class="separator:ad5e46a792df3706f264272a55b02f7e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fc98a7645703d609c315fcf6e7820b7" id="r_a5fc98a7645703d609c315fcf6e7820b7"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structst2cpp_1_1semantic_1_1_symbol.html">Symbol</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#a5fc98a7645703d609c315fcf6e7820b7">get</a> (<a class="el" href="namespacest2cpp_1_1semantic.html#a04ded7b7fa589f2e5fa9ae2e7a22b3a3">SymbolId</a> id) const</td></tr>
 <tr class="separator:a5fc98a7645703d609c315fcf6e7820b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1eb21a2030f8abc07bfb1b019cdb6f69" id="r_a1eb21a2030f8abc07bfb1b019cdb6f69"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structst2cpp_1_1semantic_1_1_symbol.html">Symbol</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#a1eb21a2030f8abc07bfb1b019cdb6f69">get</a> (<a class="el" href="namespacest2cpp_1_1semantic.html#a04ded7b7fa589f2e5fa9ae2e7a22b3a3">SymbolId</a> id)</td></tr>
@@ -159,7 +174,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6df594bf9caa89eedd090aaab8833bbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c3e18775a7d7397e052f757aa8f579f" id="r_a5c3e18775a7d7397e052f757aa8f579f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structst2cpp_1_1semantic_1_1_type_info.html">TypeInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#a5c3e18775a7d7397e052f757aa8f579f">getType</a> (<a class="el" href="namespacest2cpp_1_1semantic.html#a1ce5cfb2039b7cc4b3a96b0b0b8e9341">TypeId</a> id)</td></tr>
 <tr class="separator:a5c3e18775a7d7397e052f757aa8f579f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92ffda2bacea48cc341a4d113bf46b1d" id="r_a92ffda2bacea48cc341a4d113bf46b1d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacest2cpp_1_1semantic.html#a1ce5cfb2039b7cc4b3a96b0b0b8e9341">TypeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#a92ffda2bacea48cc341a4d113bf46b1d">getTypeIdByName</a> (const std::string &amp;name) const</td></tr>
+<tr class="memitem:a92ffda2bacea48cc341a4d113bf46b1d" id="r_a92ffda2bacea48cc341a4d113bf46b1d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacest2cpp_1_1semantic.html#a1ce5cfb2039b7cc4b3a96b0b0b8e9341">TypeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#a92ffda2bacea48cc341a4d113bf46b1d">getTypeIdByName</a> (const std::string &amp;<a class="el" href="_library_loader_8cpp.html#a9b45b3e13bd9167aab02e17e08916231">name</a>) const</td></tr>
 <tr class="separator:a92ffda2bacea48cc341a4d113bf46b1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36f35ce99ca3288f13ce7880f5a1d3ab" id="r_a36f35ce99ca3288f13ce7880f5a1d3ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#a36f35ce99ca3288f13ce7880f5a1d3ab">forEachSymbol</a> (std::function&lt; void(const <a class="el" href="structst2cpp_1_1semantic_1_1_symbol.html">Symbol</a> &amp;)&gt; fn) const</td></tr>
 <tr class="separator:a36f35ce99ca3288f13ce7880f5a1d3ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -180,7 +195,7 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ade46e481225c2665fcb791e497c60ae4" id="r_ade46e481225c2665fcb791e497c60ae4"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#ade46e481225c2665fcb791e497c60ae4">normalizeKey</a> (const std::string &amp;name)</td></tr>
+<tr class="memitem:ade46e481225c2665fcb791e497c60ae4" id="r_ade46e481225c2665fcb791e497c60ae4"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#ade46e481225c2665fcb791e497c60ae4">normalizeKey</a> (const std::string &amp;<a class="el" href="_library_loader_8cpp.html#a9b45b3e13bd9167aab02e17e08916231">name</a>)</td></tr>
 <tr class="memdesc:ade46e481225c2665fcb791e497c60ae4"><td class="mdescLeft">&#160;</td><td class="mdescRight">IEC 61131-3 identifiers are case-insensitive Normalizes a name to an uppercase key so declarations and lookups match regardless of spelling (e.g. <code>Name</code> vs <code>name</code>).  <br /></td></tr>
 <tr class="separator:ade46e481225c2665fcb791e497c60ae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -208,6 +223,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a45867438b480d4e5895158eaab221434"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a303f144a4f5f0f288aa0d504a303475b" id="r_a303f144a4f5f0f288aa0d504a303475b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacest2cpp_1_1semantic.html#a858c422b099cad80709b821042555486">ScopeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#a303f144a4f5f0f288aa0d504a303475b">currentScopeId_</a> = 1</td></tr>
 <tr class="separator:a303f144a4f5f0f288aa0d504a303475b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad57eea75b4ce72d76a03f9004225ab6c" id="r_ad57eea75b4ce72d76a03f9004225ab6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacest2cpp_1_1semantic.html#a858c422b099cad80709b821042555486">ScopeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#ad57eea75b4ce72d76a03f9004225ab6c">externalScopeId_</a> = 2</td></tr>
+<tr class="separator:ad57eea75b4ce72d76a03f9004225ab6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a2fdb06efb33173a3f12fd91fbb44dad2" name="a2fdb06efb33173a3f12fd91fbb44dad2"></a>
@@ -328,6 +345,66 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a97388be0bdef33c55b227a589cceb959" name="a97388be0bdef33c55b227a589cceb959"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97388be0bdef33c55b227a589cceb959">&#9670;&#160;</a></span>declareExternal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacest2cpp_1_1semantic.html#a04ded7b7fa589f2e5fa9ae2e7a22b3a3">SymbolId</a> st2cpp::semantic::SymbolTable::declareExternal </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacest2cpp_1_1semantic.html#a7939b4cd3a2f8b9a4c88cee73175a841">SymbolKind</a>&#160;</td>
+          <td class="paramname"><em>kind</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacest2cpp_1_1semantic.html#a1ce5cfb2039b7cc4b3a96b0b0b8e9341">TypeId</a>&#160;</td>
+          <td class="paramname"><em>typeId</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>libraryId</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Declare a symbol in the external (library) scope. </p>
+<p>Used by the library-symbol importer. The symbol is flagged isExternal and never shadows a project-local declaration (local lookups do not reach this scope). Returns 0 when the name is already present (two libraries exporting the same symbol), leaving the existing entry untouched. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>The symbol name </td></tr>
+    <tr><td class="paramname">kind</td><td>The symbol kind </td></tr>
+    <tr><td class="paramname">typeId</td><td>The symbol type </td></tr>
+    <tr><td class="paramname">libraryId</td><td>The id of the owning library descriptor </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The new SymbolId, or 0 on duplicate </dd></dl>
+
+</div>
+</div>
 <a id="a8adc4544b2f5aa579832a61f1823d7cf" name="a8adc4544b2f5aa579832a61f1823d7cf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8adc4544b2f5aa579832a61f1823d7cf">&#9670;&#160;</a></span>enterScope()</h2>
 
@@ -388,6 +465,34 @@ Private Attributes</h2></td></tr>
 
 <p>Restore the scope active before the matching enterScope. </p>
 <dl class="section return"><dt>Returns</dt><dd>true when a scope was restored </dd></dl>
+
+</div>
+</div>
+<a id="a8d63ca01bba680cf6a97b0ccbbdfdc81" name="a8d63ca01bba680cf6a97b0ccbbdfdc81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d63ca01bba680cf6a97b0ccbbdfdc81">&#9670;&#160;</a></span>externalScope()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacest2cpp_1_1semantic.html#a858c422b099cad80709b821042555486">ScopeId</a> st2cpp::semantic::SymbolTable::externalScope </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Id of the external scope that holds library-imported symbols. </p>
+<p>The external scope is never part of the local/global lookup chain; it is consulted explicitly as the final fallback so that project-local symbols always shadow external ones. </p>
 
 </div>
 </div>
@@ -776,6 +881,35 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a8c1bb1ee8fe3896338929d94e53e0482" name="a8c1bb1ee8fe3896338929d94e53e0482"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c1bb1ee8fe3896338929d94e53e0482">&#9670;&#160;</a></span>lookupExternal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacest2cpp_1_1semantic.html#a04ded7b7fa589f2e5fa9ae2e7a22b3a3">SymbolId</a> st2cpp::semantic::SymbolTable::lookupExternal </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Look up a name in the external (library) scope only. </p>
+<dl class="section return"><dt>Returns</dt><dd>The resolved SymbolId, or 0 when not found </dd></dl>
+
+</div>
+</div>
 <a id="a31555ffa0225cc5b1c346a462459ae45" name="a31555ffa0225cc5b1c346a462459ae45"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a31555ffa0225cc5b1c346a462459ae45">&#9670;&#160;</a></span>lookupGlobal()</h2>
 
@@ -887,6 +1021,41 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab9432af2f407535746380d72f0290677" name="ab9432af2f407535746380d72f0290677"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9432af2f407535746380d72f0290677">&#9670;&#160;</a></span>pushExternalScope()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacest2cpp_1_1semantic.html#a858c422b099cad80709b821042555486">ScopeId</a> st2cpp::semantic::SymbolTable::pushExternalScope </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Open a child scope of the external scope (STRUCT_&lt;n&gt;, FUNC_&lt;n&gt;, FB_&lt;n&gt;) where the current scope is saved and restored by <a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#a09d37f4f74582007cda1bf5aa731d43b" title="Restore the scope active before the matching enterScope.">exitScope()</a>. </p>
+<p>Mirrors enterScope semantics: the caller must balance it with <a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#a09d37f4f74582007cda1bf5aa731d43b" title="Restore the scope active before the matching enterScope.">exitScope()</a>. Members and parameters declared inside such scopes are not reachable from flat lookups, only through their owning symbol. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>The scope name </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The new ScopeId </dd></dl>
 
 </div>
 </div>
@@ -1099,6 +1268,52 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ad5e46a792df3706f264272a55b02f7e2" name="ad5e46a792df3706f264272a55b02f7e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5e46a792df3706f264272a55b02f7e2">&#9670;&#160;</a></span>registerTypeAlias()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacest2cpp_1_1semantic.html#a1ce5cfb2039b7cc4b3a96b0b0b8e9341">TypeId</a> st2cpp::semantic::SymbolTable::registerTypeAlias </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacest2cpp_1_1semantic.html#a1ce5cfb2039b7cc4b3a96b0b0b8e9341">TypeId</a>&#160;</td>
+          <td class="paramname"><em>typeId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Register a named type alias (TYPE Name : &lt;type&gt;; END_TYPE). </p>
+<p>An alias is not a type of its own: its name resolves to the SAME canonical TypeId of the underlying type, so every semantic check and the code generator treat <code>Name</code> exactly as the aliased type. Duplicate alias names simply overwrite this lookup (the duplicate declaration itself is reported by the caller); keep this in sync with the alias <a class="el" href="structst2cpp_1_1semantic_1_1_symbol.html">Symbol</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>The alias name </td></tr>
+    <tr><td class="paramname">typeId</td><td>The canonical TypeId it resolves to </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the aliased TypeId </dd></dl>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="a303f144a4f5f0f288aa0d504a303475b" name="a303f144a4f5f0f288aa0d504a303475b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a303f144a4f5f0f288aa0d504a303475b">&#9670;&#160;</a></span>currentScopeId_</h2>
@@ -1111,6 +1326,28 @@ Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="namespacest2cpp_1_1semantic.html#a858c422b099cad80709b821042555486">ScopeId</a> st2cpp::semantic::SymbolTable::currentScopeId_ = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad57eea75b4ce72d76a03f9004225ab6c" name="ad57eea75b4ce72d76a03f9004225ab6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad57eea75b4ce72d76a03f9004225ab6c">&#9670;&#160;</a></span>externalScopeId_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacest2cpp_1_1semantic.html#a858c422b099cad80709b821042555486">ScopeId</a> st2cpp::semantic::SymbolTable::externalScopeId_ = 2</td>
         </tr>
       </table>
   </td>

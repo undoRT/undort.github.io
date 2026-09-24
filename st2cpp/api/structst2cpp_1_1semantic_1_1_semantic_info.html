@@ -110,13 +110,15 @@ Collaboration diagram for st2cpp::semantic::SemanticInfo:</div>
 <div class="dyncontent">
 <div class="center"><img src="structst2cpp_1_1semantic_1_1_semantic_info__coll__graph.png" border="0" usemap="#ast2cpp_1_1semantic_1_1_semantic_info_coll__map" alt="Collaboration graph"/></div>
 <map name="ast2cpp_1_1semantic_1_1_semantic_info_coll__map" id="ast2cpp_1_1semantic_1_1_semantic_info_coll__map">
-<area shape="rect" title="Result of semantic analysis, passed to CodeGenerator." alt="" coords="227,353,446,519"/>
-<area shape="rect" href="classst2cpp_1_1semantic_1_1_diagnostics.html" title="Diagnostic collector and reporter." alt="" coords="5,5,215,291"/>
-<area shape="poly" title=" " alt="" coords="214,289,244,328,254,339,249,343,240,331,210,293"/>
-<area shape="rect" href="structst2cpp_1_1semantic_1_1_semantic_info_1_1_process_image_config.html" title=" " alt="" coords="239,78,434,218"/>
-<area shape="poly" title=" " alt="" coords="339,218,339,336,334,336,334,218"/>
-<area shape="rect" href="structst2cpp_1_1semantic_1_1_preserved_semantics.html" title="Preserved&#45;semantics record (Fase 6)" alt="" coords="459,78,657,218"/>
-<area shape="poly" title=" " alt="" coords="507,220,412,342,408,338,503,216"/>
+<area shape="rect" title="Result of semantic analysis, passed to CodeGenerator." alt="" coords="338,473,557,639"/>
+<area shape="rect" href="classst2cpp_1_1semantic_1_1_diagnostics.html" title="Diagnostic collector and reporter." alt="" coords="5,5,215,411"/>
+<area shape="poly" title=" " alt="" coords="217,395,229,409,275,450,326,486,323,490,272,454,225,413,213,399"/>
+<area shape="rect" href="structst2cpp_1_1semantic_1_1_semantic_info_1_1_process_image_config.html" title=" " alt="" coords="239,138,434,278"/>
+<area shape="poly" title=" " alt="" coords="361,278,419,457,414,458,356,279"/>
+<area shape="rect" href="structst2cpp_1_1semantic_1_1_preserved_semantics.html" title="Preserved&#45;semantics record (Fase 6)" alt="" coords="459,138,657,278"/>
+<area shape="poly" title=" " alt="" coords="541,279,489,450,486,459,481,457,483,449,536,278"/>
+<area shape="rect" href="classst2cpp_1_1library_1_1_library_registry.html" title="Contains the registered libraries, retrievable by id (case&#45;insensitive, IEC 61131&#45;3 style)." alt="" coords="682,68,863,348"/>
+<area shape="poly" title=" " alt="" coords="721,350,688,404,647,451,611,479,573,503,570,498,608,475,643,447,684,400,717,347"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -150,6 +152,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:ac94661b7b2f57bc6cf787ba3e6b25c33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69d77ccfdf104a4cf5a37cd7dfb4555c" id="r_a69d77ccfdf104a4cf5a37cd7dfb4555c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structst2cpp_1_1semantic_1_1_preserved_semantics.html">PreservedSemantics</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structst2cpp_1_1semantic_1_1_semantic_info.html#a69d77ccfdf104a4cf5a37cd7dfb4555c">preservedSemantics</a></td></tr>
 <tr class="separator:a69d77ccfdf104a4cf5a37cd7dfb4555c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab673017ec2316ff03de740371d1bac63" id="r_ab673017ec2316ff03de740371d1bac63"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classst2cpp_1_1library_1_1_library_registry.html">st2cpp::library::LibraryRegistry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structst2cpp_1_1semantic_1_1_semantic_info.html#ab673017ec2316ff03de740371d1bac63">libraryRegistry</a> = nullptr</td></tr>
+<tr class="separator:ab673017ec2316ff03de740371d1bac63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Result of semantic analysis, passed to <a class="el" href="class_code_generator.html" title="Emit C++ code from the parsed AST.">CodeGenerator</a>. </p>
@@ -231,6 +235,20 @@ Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">std::vector&lt;<a class="el" href="namespacest2cpp_1_1semantic.html#a04ded7b7fa589f2e5fa9ae2e7a22b3a3">SymbolId</a>&gt; st2cpp::semantic::SemanticInfo::fbTopoOrder</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab673017ec2316ff03de740371d1bac63" name="ab673017ec2316ff03de740371d1bac63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab673017ec2316ff03de740371d1bac63">&#9670;&#160;</a></span>libraryRegistry</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classst2cpp_1_1library_1_1_library_registry.html">st2cpp::library::LibraryRegistry</a>* st2cpp::semantic::SemanticInfo::libraryRegistry = nullptr</td>
         </tr>
       </table>
 </div><div class="memdoc">

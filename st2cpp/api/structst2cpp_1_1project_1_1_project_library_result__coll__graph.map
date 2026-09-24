@@ -1,0 +1,5 @@
+<map id="st2cpp::project::ProjectLibraryResult" name="st2cpp::project::ProjectLibraryResult">
+<area shape="rect" id="Node000001" title="Result of loading the configured libraries." alt="" coords="15,348,177,428"/>
+<area shape="rect" id="Node000002" href="$classst2cpp_1_1library_1_1_library_registry.html" title="Contains the registered libraries, retrievable by id (case&#45;insensitive, IEC 61131&#45;3 style)." alt="" coords="5,5,187,285"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="99,286,99,332,93,332,93,286"/>
+</map>

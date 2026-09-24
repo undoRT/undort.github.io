@@ -1,0 +1,5 @@
+<map id="st2cpp::library::Dependency" name="st2cpp::library::Dependency">
+<area shape="rect" id="Node000001" title="A dependency on another external library." alt="" coords="5,208,200,273"/>
+<area shape="rect" id="Node000002" href="$structst2cpp_1_1library_1_1_version_constraint.html" title="A version constraint attached to a dependency." alt="" coords="21,5,184,145"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,146,105,192,100,192,100,146"/>
+</map>

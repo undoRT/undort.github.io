@@ -1,0 +1,3 @@
+<map id="st2cpp::library::LibraryRegistry" name="st2cpp::library::LibraryRegistry">
+<area shape="rect" id="Node000001" title="Contains the registered libraries, retrievable by id (case&#45;insensitive, IEC 61131&#45;3 style)." alt="" coords="5,5,187,285"/>
+</map>

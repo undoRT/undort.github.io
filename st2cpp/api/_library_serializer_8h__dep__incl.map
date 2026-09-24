@@ -1,0 +1,9 @@
+<map id="include/library/LibrarySerializer.h" name="include/library/LibrarySerializer.h">
+<area shape="rect" id="Node000001" title="Serializes a LibraryDescriptor back to JSON." alt="" coords="205,5,441,31"/>
+<area shape="rect" id="Node000002" href="$_library_serializer_8cpp.html" title="LibrarySerializer implementation." alt="" coords="5,93,228,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="284,38,146,96,144,91,282,34"/>
+<area shape="rect" id="Node000003" href="$test__library__descriptor__builder_8cpp.html" title="Tests for LibraryDescriptorBuilder: ST + SemanticInfo &#45;&gt; semantic&#45;only LibraryDescriptor &#45;&gt; JSON &#45;&gt; r..." alt="" coords="252,79,395,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="326,44,326,79,321,79,321,44"/>
+<area shape="rect" id="Node000004" href="$test__library__loader_8cpp.html" title="Tests for LibraryLoader: JSON &#45;&gt; LibraryDescriptor &#45;&gt; validation." alt="" coords="419,86,564,126"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="359,35,455,83,453,88,357,39"/>
+</map>

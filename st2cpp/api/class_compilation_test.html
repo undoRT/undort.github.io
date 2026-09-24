@@ -107,9 +107,9 @@ Inheritance diagram for CompilationTest:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_compilation_test__inherit__graph.png" border="0" usemap="#a_compilation_test_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_compilation_test_inherit__map" id="a_compilation_test_inherit__map">
-<area shape="rect" title="Test fixture for compilation tests." alt="" coords="5,119,164,304"/>
-<area shape="rect" title=" " alt="" coords="38,5,131,71"/>
-<area shape="poly" title=" " alt="" coords="87,85,87,119,82,119,82,85"/>
+<area shape="rect" title="Test fixture for compilation tests." alt="" coords="5,119,211,324"/>
+<area shape="rect" title=" " alt="" coords="61,5,155,71"/>
+<area shape="poly" title=" " alt="" coords="111,84,111,119,105,119,105,84"/>
 </map>
 </div>
 <div class="dynheader">
@@ -117,9 +117,9 @@ Collaboration diagram for CompilationTest:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_compilation_test__coll__graph.png" border="0" usemap="#a_compilation_test_coll__map" alt="Collaboration graph"/></div>
 <map name="a_compilation_test_coll__map" id="a_compilation_test_coll__map">
-<area shape="rect" title="Test fixture for compilation tests." alt="" coords="5,119,164,304"/>
-<area shape="rect" title=" " alt="" coords="38,5,131,71"/>
-<area shape="poly" title=" " alt="" coords="87,85,87,119,82,119,82,85"/>
+<area shape="rect" title="Test fixture for compilation tests." alt="" coords="5,119,211,324"/>
+<area shape="rect" title=" " alt="" coords="61,5,155,71"/>
+<area shape="poly" title=" " alt="" coords="111,84,111,119,105,119,105,84"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -138,12 +138,15 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a65089d14576c80d95b125f474f131956" id="r_a65089d14576c80d95b125f474f131956"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_compilation_test.html#a65089d14576c80d95b125f474f131956">compileGenerated</a> (const std::string &amp;header, const std::string &amp;source, bool isCpp20=false)</td></tr>
 <tr class="memdesc:a65089d14576c80d95b125f474f131956"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write generated files to disk and compile them.  <br /></td></tr>
 <tr class="separator:a65089d14576c80d95b125f474f131956"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9d27c1908c0b0edf6235baa14dde09c" id="r_ae9d27c1908c0b0edf6235baa14dde09c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_compilation_test.html#ae9d27c1908c0b0edf6235baa14dde09c">compileST</a> (const std::string &amp;st)</td></tr>
+<tr class="memitem:ae9d27c1908c0b0edf6235baa14dde09c" id="r_ae9d27c1908c0b0edf6235baa14dde09c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_compilation_test.html#ae9d27c1908c0b0edf6235baa14dde09c">compileST</a> (const std::string &amp;<a class="el" href="_library_loader_8cpp.html#a6784506f372ded40897489dd25aab449">st</a>)</td></tr>
 <tr class="memdesc:ae9d27c1908c0b0edf6235baa14dde09c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile ST source code directly.  <br /></td></tr>
 <tr class="separator:ae9d27c1908c0b0edf6235baa14dde09c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a789e37d68f01f0c53aca36986da3af76" id="r_a789e37d68f01f0c53aca36986da3af76"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_compilation_test.html#a789e37d68f01f0c53aca36986da3af76">listGeneratedFiles</a> ()</td></tr>
 <tr class="memdesc:a789e37d68f01f0c53aca36986da3af76"><td class="mdescLeft">&#160;</td><td class="mdescRight">List all generated files for debugging.  <br /></td></tr>
 <tr class="separator:a789e37d68f01f0c53aca36986da3af76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0783dbd6518e85b7149dc1c6543881eb" id="r_a0783dbd6518e85b7149dc1c6543881eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_compilation_test.html#a0783dbd6518e85b7149dc1c6543881eb">writeMockLibraryHeaders</a> ()</td></tr>
+<tr class="memdesc:a0783dbd6518e85b7149dc1c6543881eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write minimal mock headers for the external library fixtures.  <br /></td></tr>
+<tr class="separator:a0783dbd6518e85b7149dc1c6543881eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -341,6 +344,34 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0783dbd6518e85b7149dc1c6543881eb" name="a0783dbd6518e85b7149dc1c6543881eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0783dbd6518e85b7149dc1c6543881eb">&#9670;&#160;</a></span>writeMockLibraryHeaders()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CompilationTest::writeMockLibraryHeaders </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Write minimal mock headers for the external library fixtures. </p>
+<p>The generated C++ references the bound library symbols directly (e.g. <code>examplelib::Channel</code>, <code>clamp(...)</code>, <code>TON.process()</code>). These small headers declare exactly those symbols so the generated code can be compiled against them, mirroring the descriptor cppBinding of the fixtures. </p>
 
 </div>
 </div>

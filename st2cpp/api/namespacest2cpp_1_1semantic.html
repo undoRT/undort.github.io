@@ -114,16 +114,31 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array dimension information (semantic, not syntactic)  <a href="structst2cpp_1_1semantic_1_1_array_dim_info.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_body_visitor.html">BodyVisitor</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visitor for body analysis phase (Sprint 2B)  <a href="classst2cpp_1_1semantic_1_1_body_visitor.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visitor for body analysis phase.  <a href="classst2cpp_1_1semantic_1_1_body_visitor.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_decl_visitor.html">DeclVisitor</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visitor for declaration phase (Sprint 2)  <a href="classst2cpp_1_1semantic_1_1_decl_visitor.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visitor for declaration phase.  <a href="classst2cpp_1_1semantic_1_1_decl_visitor.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structst2cpp_1_1semantic_1_1_diagnostic.html">Diagnostic</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Single diagnostic entry.  <a href="structst2cpp_1_1semantic_1_1_diagnostic.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_diagnostics.html">Diagnostics</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structst2cpp_1_1semantic_1_1_diagnostic.html" title="Single diagnostic entry.">Diagnostic</a> collector and reporter.  <a href="classst2cpp_1_1semantic_1_1_diagnostics.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_library_descriptor_builder.html">LibraryDescriptorBuilder</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_translation_unit.html">TranslationUnit</a> + <a class="el" href="structst2cpp_1_1semantic_1_1_semantic_info.html" title="Result of semantic analysis, passed to CodeGenerator.">SemanticInfo</a> -&gt; LibraryDescriptor converter.  <a href="classst2cpp_1_1semantic_1_1_library_descriptor_builder.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structst2cpp_1_1semantic_1_1_library_export_error.html">LibraryExportError</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A single export error.  <a href="structst2cpp_1_1semantic_1_1_library_export_error.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structst2cpp_1_1semantic_1_1_library_export_options.html">LibraryExportOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Options controlling a library export.  <a href="structst2cpp_1_1semantic_1_1_library_export_options.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structst2cpp_1_1semantic_1_1_library_export_result.html">LibraryExportResult</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result of an export attempt.  <a href="structst2cpp_1_1semantic_1_1_library_export_result.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_library_symbol_importer.html">LibrarySymbolImporter</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imports library symbols into a <a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html">SymbolTable</a>'s external scope.  <a href="classst2cpp_1_1semantic_1_1_library_symbol_importer.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structst2cpp_1_1semantic_1_1_preserved_semantics.html">PreservedSemantics</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Preserved-semantics record (Fase 6)  <a href="structst2cpp_1_1semantic_1_1_preserved_semantics.html#details">More...</a><br /></td></tr>
@@ -176,52 +191,56 @@ Enumerations</h2></td></tr>
 , <a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8af2dcfc7fa16a4307b88998404be025ab">MissingStructMember</a> = 1008
 , <br />
 &#160;&#160;<a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8aa7322e5a4431c87bdf7cce02f764d4a4">CircularDependency</a> = 1009
+, <a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8acc359c7cc2f6c9f8b5f03b41b9caa5e5">ExternalSymbolCollision</a> = 1010
+, <a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8aa33d9daa9fe07e33f8196b89ee6a46c8">ExternalBindingIncomplete</a> = 1011
 , <a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a2782c4707c245684aa95545098e1b70b">TypeMismatch</a> = 2001
-, <a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a8abf9417dbb7dc3e34a94d71e63f4c24">IncompatibleTypes</a> = 2002
+, <br />
+&#160;&#160;<a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a8abf9417dbb7dc3e34a94d71e63f4c24">IncompatibleTypes</a> = 2002
 , <a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a1f182dad8af3f88d1cf044533eb1ee3c">InvalidAssignment</a> = 2003
-, <br />
-&#160;&#160;<a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8abb6956b0508a4c805bc97d13861a2289">InvalidArgumentType</a> = 2004
+, <a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8abb6956b0508a4c805bc97d13861a2289">InvalidArgumentType</a> = 2004
 , <a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a472291498a8aff770408d257c952c89c">InvalidReturnType</a> = 2005
-, <a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a9f26b6a98bd277e307be63c2e06531c5">InvalidArrayIndex</a> = 2006
+, <br />
+&#160;&#160;<a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a9f26b6a98bd277e307be63c2e06531c5">InvalidArrayIndex</a> = 2006
 , <a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a3903817946378f826c8dc2f9061336fd">InvalidStructMember</a> = 2007
-, <br />
-&#160;&#160;<a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a68b0f4a0add821acc95fd01117f1507a">InvalidEnumerator</a> = 2008
+, <a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a68b0f4a0add821acc95fd01117f1507a">InvalidEnumerator</a> = 2008
 , <a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8ada66609b056305273eea3d09d1233b17">NonBooleanCondition</a> = 2009
-, <a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a54e08512d4a4ec7ea74f68041f4aa77d">InvalidForControlVariable</a> = 2010
+, <br />
+&#160;&#160;<a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a54e08512d4a4ec7ea74f68041f4aa77d">InvalidForControlVariable</a> = 2010
 , <a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a4c508a318f1a0443f580e48dfcf92b34">ForBoundsTypeMismatch</a> = 2011
-, <br />
-&#160;&#160;<a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a1eb6234dbdfeaf454f8c2ed3d853558c">CaseSelectorTypeMismatch</a> = 2012
+, <a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a1eb6234dbdfeaf454f8c2ed3d853558c">CaseSelectorTypeMismatch</a> = 2012
 , <a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a6ab30c3021b292668e7d754c8ab02343">CaseDuplicateValue</a> = 2013
-, <a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a2110c9c5052f38a2491fb076459b38ff">WrongArgumentCount</a> = 3001
+, <br />
+&#160;&#160;<a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a2110c9c5052f38a2491fb076459b38ff">WrongArgumentCount</a> = 3001
 , <a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a008be5c875c4478438f746e5a9188af1">MissingRequiredArgument</a> = 3002
-, <br />
-&#160;&#160;<a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a04310f0facddf3fd0f8f540a9b4b0ca5">DuplicateNamedArgument</a> = 3003
+, <a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a04310f0facddf3fd0f8f540a9b4b0ca5">DuplicateNamedArgument</a> = 3003
 , <a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8af4fc33bdefa1f7f42a9759921ba2c587">UnknownNamedArgument</a> = 3004
-, <a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a6f25654b7e75a79888f12f411ebc18f1">OutputArgumentNotLValue</a> = 3005
+, <br />
+&#160;&#160;<a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a6f25654b7e75a79888f12f411ebc18f1">OutputArgumentNotLValue</a> = 3005
 , <a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a9b91ceb705164f356707fab8aa99311e">InOutArgumentNotLValue</a> = 3006
-, <br />
-&#160;&#160;<a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a8a90fc6c315d8b2ec491cd5ba7e92654">InvalidUnaryOperand</a> = 5001
+, <a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a8a90fc6c315d8b2ec491cd5ba7e92654">InvalidUnaryOperand</a> = 5001
 , <a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a2537edd5054e0ed18e359b26ba8c3c6f">InvalidBinaryOperands</a> = 5002
-, <a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a34e540e6594987eef203290f0a593bd2">DivisionByZero</a> = 5003
+, <br />
+&#160;&#160;<a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a34e540e6594987eef203290f0a593bd2">DivisionByZero</a> = 5003
 , <a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a89f4eab75fbed85ed1c22f3e4f0525b6">DuplicateStructMemberInit</a> = 6001
-, <br />
-&#160;&#160;<a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a7aa24f10c11582dcf59e34fac037788a">ArrayDimensionMismatch</a> = 6002
+, <a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a7aa24f10c11582dcf59e34fac037788a">ArrayDimensionMismatch</a> = 6002
 , <a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a4799acab0574855f80f35e2dda33bb7a">ArrayBoundsNotConstant</a> = 6003
-, <a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8acbb246d48ab6a398e11e8edc7bf3da32">InvalidPointerDereference</a> = 7001
+, <br />
+&#160;&#160;<a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8acbb246d48ab6a398e11e8edc7bf3da32">InvalidPointerDereference</a> = 7001
 , <a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a24b32f3b5c179bdbe08a5df681af78e9">InvalidRefToUsage</a> = 7002
-, <br />
-&#160;&#160;<a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a50e771b9ce9f79a2c9b40640f550af09">AdrOfNonLValue</a> = 7003
+, <a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a50e771b9ce9f79a2c9b40640f550af09">AdrOfNonLValue</a> = 7003
 , <a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a952bb1861a435d15ec2c7d6fb29158f6">OverrideMismatch</a> = 8001
-, <a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a91b6fb09ca051fa57707dd9c5d030d14">FinalMethodOverride</a> = 8002
+, <br />
+&#160;&#160;<a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a91b6fb09ca051fa57707dd9c5d030d14">FinalMethodOverride</a> = 8002
 , <a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8ab0bc268cf280805231fcfa99c1c0796d">AbstractMethodNotImplemented</a> = 8003
-, <br />
-&#160;&#160;<a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a3110ccf82f5b54ea8a1fe79392dd5962">SuperCallNoBase</a> = 8004
+, <a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a3110ccf82f5b54ea8a1fe79392dd5962">SuperCallNoBase</a> = 8004
 , <a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a5993c4cdc571be8318e430f3a900b480">UninitializedVariable</a> = 9001
-, <a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a90f0c9de35bea8fe8bb7e996f83c998e">UnusedVariable</a> = 9002
-, <a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a34a31a1a0613641ef52984e676975da2">DeprecatedFeature</a> = 9003
 , <br />
-&#160;&#160;<a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a7c30de64029ecd08bcb8a74378950b1e">UnsupportedConstruct</a> = 9004
-, <a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a8462b58246e70e5c83e5b939a9332cb5">InternalError</a> = 9999
+&#160;&#160;<a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a90f0c9de35bea8fe8bb7e996f83c998e">UnusedVariable</a> = 9002
+, <a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a34a31a1a0613641ef52984e676975da2">DeprecatedFeature</a> = 9003
+, <a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a7c30de64029ecd08bcb8a74378950b1e">UnsupportedConstruct</a> = 9004
+, <a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a985db17aa485c5b9857ace42127ce030">InvalidTimeLiteral</a> = 9005
+, <br />
+&#160;&#160;<a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a8462b58246e70e5c83e5b939a9332cb5">InternalError</a> = 9999
 <br />
  }</td></tr>
 <tr class="memdesc:aa0c07614d70294cc051420d48b97f3d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standardized diagnostic codes.  <a href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8">More...</a><br /></td></tr>
@@ -305,6 +324,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a25047140bd4ea2082e760bf4675fc12d" id="r_a25047140bd4ea2082e760bf4675fc12d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacest2cpp_1_1semantic.html#a25047140bd4ea2082e760bf4675fc12d">diagnosticCodeToString</a> (<a class="el" href="namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8">DiagnosticCode</a> code)</td></tr>
 <tr class="memdesc:a25047140bd4ea2082e760bf4675fc12d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert DiagnosticCode to string for display.  <br /></td></tr>
 <tr class="separator:a25047140bd4ea2082e760bf4675fc12d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52fd612aa75d5676c51c64af98c31707" id="r_a52fd612aa75d5676c51c64af98c31707"><td class="memItemLeft" align="right" valign="top">std::optional&lt; int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacest2cpp_1_1semantic.html#a52fd612aa75d5676c51c64af98c31707">iecTimeLiteralToMilliseconds</a> (const std::string &amp;text)</td></tr>
+<tr class="memdesc:a52fd612aa75d5676c51c64af98c31707"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse an IEC 61131-3 TIME literal into its total value in milliseconds.  <br /></td></tr>
+<tr class="separator:a52fd612aa75d5676c51c64af98c31707"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="a858c422b099cad80709b821042555486" name="a858c422b099cad80709b821042555486"></a>
@@ -480,6 +502,8 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="aa0c07614d70294cc051420d48b97f3d8a506613fe35d536edfe5dbd9c76797e77" name="aa0c07614d70294cc051420d48b97f3d8a506613fe35d536edfe5dbd9c76797e77"></a>DuplicateEnumValue&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="aa0c07614d70294cc051420d48b97f3d8af2dcfc7fa16a4307b88998404be025ab" name="aa0c07614d70294cc051420d48b97f3d8af2dcfc7fa16a4307b88998404be025ab"></a>MissingStructMember&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="aa0c07614d70294cc051420d48b97f3d8aa7322e5a4431c87bdf7cce02f764d4a4" name="aa0c07614d70294cc051420d48b97f3d8aa7322e5a4431c87bdf7cce02f764d4a4"></a>CircularDependency&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa0c07614d70294cc051420d48b97f3d8acc359c7cc2f6c9f8b5f03b41b9caa5e5" name="aa0c07614d70294cc051420d48b97f3d8acc359c7cc2f6c9f8b5f03b41b9caa5e5"></a>ExternalSymbolCollision&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa0c07614d70294cc051420d48b97f3d8aa33d9daa9fe07e33f8196b89ee6a46c8" name="aa0c07614d70294cc051420d48b97f3d8aa33d9daa9fe07e33f8196b89ee6a46c8"></a>ExternalBindingIncomplete&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="aa0c07614d70294cc051420d48b97f3d8a2782c4707c245684aa95545098e1b70b" name="aa0c07614d70294cc051420d48b97f3d8a2782c4707c245684aa95545098e1b70b"></a>TypeMismatch&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="aa0c07614d70294cc051420d48b97f3d8a8abf9417dbb7dc3e34a94d71e63f4c24" name="aa0c07614d70294cc051420d48b97f3d8a8abf9417dbb7dc3e34a94d71e63f4c24"></a>IncompatibleTypes&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="aa0c07614d70294cc051420d48b97f3d8a1f182dad8af3f88d1cf044533eb1ee3c" name="aa0c07614d70294cc051420d48b97f3d8a1f182dad8af3f88d1cf044533eb1ee3c"></a>InvalidAssignment&#160;</td><td class="fielddoc"></td></tr>
@@ -516,6 +540,7 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="aa0c07614d70294cc051420d48b97f3d8a90f0c9de35bea8fe8bb7e996f83c998e" name="aa0c07614d70294cc051420d48b97f3d8a90f0c9de35bea8fe8bb7e996f83c998e"></a>UnusedVariable&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="aa0c07614d70294cc051420d48b97f3d8a34a31a1a0613641ef52984e676975da2" name="aa0c07614d70294cc051420d48b97f3d8a34a31a1a0613641ef52984e676975da2"></a>DeprecatedFeature&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="aa0c07614d70294cc051420d48b97f3d8a7c30de64029ecd08bcb8a74378950b1e" name="aa0c07614d70294cc051420d48b97f3d8a7c30de64029ecd08bcb8a74378950b1e"></a>UnsupportedConstruct&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa0c07614d70294cc051420d48b97f3d8a985db17aa485c5b9857ace42127ce030" name="aa0c07614d70294cc051420d48b97f3d8a985db17aa485c5b9857ace42127ce030"></a>InvalidTimeLiteral&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="aa0c07614d70294cc051420d48b97f3d8a8462b58246e70e5c83e5b939a9332cb5" name="aa0c07614d70294cc051420d48b97f3d8a8462b58246e70e5c83e5b939a9332cb5"></a>InternalError&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
@@ -677,6 +702,41 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Convert DiagnosticCode to string for display. </p>
+
+</div>
+</div>
+<a id="a52fd612aa75d5676c51c64af98c31707" name="a52fd612aa75d5676c51c64af98c31707"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52fd612aa75d5676c51c64af98c31707">&#9670;&#160;</a></span>iecTimeLiteralToMilliseconds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; int64_t &gt; st2cpp::semantic::iecTimeLiteralToMilliseconds </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>text</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parse an IEC 61131-3 TIME literal into its total value in milliseconds. </p>
+<p>Accepts the forms produced by the lexer: an optional <code>T#</code>, <code>t#</code>, <code>TIME#</code> or <code>time#</code> prefix followed by one or more <code>&lt;value&gt;&lt;unit&gt;</code> concatenated segments (IEC short form), e.g. <code>T#5s</code>, <code>TIME#100ms</code>, <code>T#1d2h3m4s5ms</code>, <code>T#2.5s</code>, <code>T#-30m</code>. The prefix is optional for leniency. Units: d (day), h (hour), m (minute), s (second), ms (millisecond), matched case-insensitively. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>The TIME literal text as tokenized by the lexer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The total value in milliseconds, or std::nullopt when the literal is malformed (empty body, unknown unit, missing number, stray characters). </dd></dl>
 
 </div>
 </div>

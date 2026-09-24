@@ -1,0 +1,25 @@
+<map id="include/library/LibraryRegistry.h" name="include/library/LibraryRegistry.h">
+<area shape="rect" id="Node000001" title="Registry of loaded libraries keyed by normalized id." alt="" coords="5,5,233,31"/>
+<area shape="rect" id="Node000002" href="$_library_descriptor_8h.html" title="Data model of a Library Descriptor (JSON &#45;&gt; C++ object model)" alt="" coords="91,79,281,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,29,168,67,164,70,128,33"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="10,225,69,251"/>
+<area shape="poly" id="edge12_Node000001_Node000004" title=" " alt="" coords="108,33,89,53,71,80,58,114,50,150,43,212,37,211,45,149,53,113,66,77,84,50,104,29"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="93,225,156,251"/>
+<area shape="poly" id="edge14_Node000001_Node000005" title=" " alt="" coords="110,33,94,53,81,79,77,115,83,152,97,185,111,212,107,215,92,187,78,153,71,116,75,78,89,51,106,29"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="305,79,429,104"/>
+<area shape="poly" id="edge13_Node000001_Node000009" title=" " alt="" coords="160,28,315,72,313,77,158,33"/>
+<area shape="rect" id="Node000003" href="$_a_s_t_8h.html" title="Abstract Syntax Tree nodes for Structured Text." alt="" coords="191,152,274,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="196,103,220,139,215,142,191,106"/>
+<area shape="poly" id="edge10_Node000002_Node000004" title=" " alt="" coords="176,106,62,218,59,214,172,103"/>
+<area shape="poly" id="edge11_Node000002_Node000005" title=" " alt="" coords="183,105,137,214,133,211,179,103"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="273,225,350,251"/>
+<area shape="poly" id="edge8_Node000002_Node000006" title=" " alt="" coords="219,102,255,121,288,150,304,180,311,211,306,212,299,182,284,154,252,125,216,106"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="374,225,449,251"/>
+<area shape="poly" id="edge9_Node000002_Node000008" title=" " alt="" coords="217,102,264,122,314,150,357,182,392,213,388,217,353,186,311,154,262,127,215,107"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="203,180,83,224,81,219,201,175"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="217,180,155,220,152,215,214,175"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="247,175,290,214,287,218,244,179"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="180,225,248,251"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="232,178,223,213,218,212,227,177"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="262,175,371,218,369,223,260,180"/>
+</map>

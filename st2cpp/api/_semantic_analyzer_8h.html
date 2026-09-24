@@ -104,6 +104,7 @@ $(document).ready(function(){initNavTree('_semantic_analyzer_8h.html',''); initR
 <div class="textblock"><code>#include &quot;<a class="el" href="_symbol_table_8h_source.html">semantic/SymbolTable.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_diagnostics_8h_source.html">semantic/Diagnostics.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_semantic_info_8h_source.html">semantic/SemanticInfo.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_library_registry_8h_source.html">library/LibraryRegistry.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_a_s_t_8h_source.html">ast/AST.h</a>&quot;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;unordered_map&gt;</code><br />
@@ -112,54 +113,67 @@ Include dependency graph for SemanticAnalyzer.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="_semantic_analyzer_8h__incl.png" border="0" usemap="#ainclude_2semantic_2_semantic_analyzer_8h" alt=""/></div>
 <map name="ainclude_2semantic_2_semantic_analyzer_8h" id="ainclude_2semantic_2_semantic_analyzer_8h">
-<area shape="rect" title="Semantic Analyzer &#45; performs semantic analysis on TranslationUnit." alt="" coords="539,5,738,45"/>
-<area shape="rect" href="_symbol_table_8h.html" title="Symbol table with scope management for semantic analysis." alt="" coords="245,167,427,192"/>
-<area shape="poly" title=" " alt="" coords="578,48,519,69,460,96,407,128,362,160,359,156,404,124,457,91,517,64,576,43"/>
-<area shape="rect" href="_a_s_t_8h.html" title="Abstract Syntax Tree nodes for Structured Text." alt="" coords="736,313,819,339"/>
-<area shape="poly" title=" " alt="" coords="721,43,757,62,773,76,786,92,799,118,807,146,809,204,801,259,789,301,784,299,795,257,804,204,801,147,794,120,782,95,769,79,754,67,718,48"/>
-<area shape="rect" title=" " alt="" coords="509,387,571,412"/>
-<area shape="poly" title=" " alt="" coords="660,44,696,85,731,140,745,171,752,203,752,236,741,267,710,308,669,342,625,367,586,385,583,380,623,363,666,337,706,305,736,264,746,235,747,204,740,173,727,143,691,88,656,48"/>
-<area shape="rect" href="_diagnostics_8h.html" title="Diagnostic reporting system for semantic analysis." alt="" coords="62,313,237,339"/>
-<area shape="poly" title=" " alt="" coords="539,41,446,57,337,82,224,119,168,142,116,169,80,189,50,210,40,222,34,234,34,248,41,264,64,289,94,306,91,310,61,293,36,267,29,249,29,233,35,219,46,206,77,185,113,164,166,137,222,114,336,77,445,52,538,35"/>
-<area shape="rect" title=" " alt="" coords="603,240,727,265"/>
-<area shape="poly" title=" " alt="" coords="652,45,669,93,674,129,675,165,671,227,666,226,670,165,669,129,664,94,647,47"/>
-<area shape="rect" href="_semantic_info_8h.html" title="Semantic analysis output passed to CodeGenerator." alt="" coords="471,93,655,119"/>
-<area shape="poly" title=" " alt="" coords="622,47,586,85,582,81,618,44"/>
-<area shape="rect" href="_type_system_8h.html" title="Type system for semantic analysis: TypeInfo, TypeKind, compatibility." alt="" coords="313,240,426,265"/>
-<area shape="poly" title=" " alt="" coords="344,191,361,227,356,229,339,193"/>
-<area shape="rect" title=" " alt="" coords="333,387,392,412"/>
-<area shape="poly" title=" " alt="" coords="329,194,314,215,303,241,301,253,303,265,324,325,350,374,346,376,319,327,297,266,295,253,297,239,310,212,324,191"/>
-<area shape="poly" title=" " alt="" coords="364,190,401,210,439,238,469,272,495,308,531,373,527,375,490,311,465,275,436,242,399,214,362,194"/>
-<area shape="poly" title=" " alt="" coords="389,189,599,234,598,240,388,195"/>
-<area shape="rect" title=" " alt="" coords="61,240,147,265"/>
-<area shape="poly" title=" " alt="" coords="300,195,155,239,154,233,298,189"/>
-<area shape="rect" title=" " alt="" coords="171,240,237,265"/>
-<area shape="poly" title=" " alt="" coords="316,194,239,236,236,231,314,190"/>
-<area shape="poly" title=" " alt="" coords="427,261,723,313,722,318,426,266"/>
-<area shape="poly" title=" " alt="" coords="371,266,366,373,361,373,366,266"/>
-<area shape="poly" title=" " alt="" coords="385,264,517,375,514,380,382,268"/>
-<area shape="poly" title=" " alt="" coords="335,268,198,312,197,307,333,263"/>
-<area shape="rect" title=" " alt="" coords="5,387,72,412"/>
-<area shape="poly" title=" " alt="" coords="313,264,155,287,86,301,63,309,51,315,43,328,39,342,37,373,32,373,33,341,38,325,48,311,61,304,85,296,155,282,312,258"/>
-<area shape="poly" title=" " alt="" coords="736,337,406,393,405,388,735,332"/>
-<area shape="poly" title=" " alt="" coords="740,341,585,387,584,382,738,336"/>
-<area shape="rect" title=" " alt="" coords="833,387,911,412"/>
-<area shape="poly" title=" " alt="" coords="794,337,847,376,844,380,791,341"/>
-<area shape="rect" title=" " alt="" coords="642,387,710,412"/>
-<area shape="poly" title=" " alt="" coords="763,341,705,381,702,376,760,336"/>
-<area shape="rect" title=" " alt="" coords="735,387,809,412"/>
-<area shape="poly" title=" " alt="" coords="779,339,777,373,771,373,774,339"/>
-<area shape="poly" title=" " alt="" coords="184,336,321,381,320,387,183,341"/>
-<area shape="poly" title=" " alt="" coords="213,336,495,387,494,392,212,341"/>
-<area shape="rect" title=" " alt="" coords="111,387,187,412"/>
-<area shape="poly" title=" " alt="" coords="152,339,152,373,147,373,147,339"/>
-<area shape="poly" title=" " alt="" coords="133,341,70,381,67,377,130,336"/>
-<area shape="poly" title=" " alt="" coords="527,121,387,165,385,160,525,116"/>
-<area shape="poly" title=" " alt="" coords="557,120,381,377,376,374,553,117"/>
-<area shape="poly" title=" " alt="" coords="564,119,545,373,539,373,559,119"/>
-<area shape="poly" title=" " alt="" coords="585,117,634,146,700,190,770,246,833,312,852,342,866,372,861,374,847,345,829,315,766,250,696,194,631,150,583,121"/>
-<area shape="poly" title=" " alt="" coords="471,119,355,136,227,161,168,177,116,196,76,218,50,242,46,251,46,260,57,277,77,293,103,306,101,310,75,297,53,281,41,261,41,250,46,238,73,213,114,191,166,172,226,156,354,130,470,114"/>
-<area shape="poly" title=" " alt="" coords="573,118,651,227,647,230,569,121"/>
+<area shape="rect" title="Semantic Analyzer &#45; performs semantic analysis on TranslationUnit." alt="" coords="360,5,558,45"/>
+<area shape="rect" href="_symbol_table_8h.html" title="Symbol table with scope management for semantic analysis." alt="" coords="240,167,422,192"/>
+<area shape="poly" title=" " alt="" coords="445,48,352,158,348,154,441,44"/>
+<area shape="rect" href="_a_s_t_8h.html" title="Abstract Syntax Tree nodes for Structured Text." alt="" coords="878,313,960,339"/>
+<area shape="poly" title=" " alt="" coords="559,27,676,42,741,56,808,77,873,104,934,140,988,184,1032,239,1037,251,1036,262,1023,282,1000,298,972,311,970,306,997,294,1020,278,1031,261,1032,252,1027,241,984,188,931,144,871,109,806,82,740,62,675,47,558,32"/>
+<area shape="rect" title=" " alt="" coords="434,387,497,412"/>
+<area shape="poly" title=" " alt="" coords="360,39,237,61,173,80,113,103,63,133,43,150,27,169,15,190,9,213,9,237,15,265,34,307,47,322,68,336,96,348,135,359,232,376,335,387,421,393,420,398,335,392,231,381,134,364,94,354,66,341,44,326,29,310,10,266,4,238,4,212,10,188,22,166,39,146,60,129,111,98,171,75,236,56,359,34"/>
+<area shape="rect" href="_diagnostics_8h.html" title="Diagnostic reporting system for semantic analysis." alt="" coords="80,313,254,339"/>
+<area shape="poly" title=" " alt="" coords="360,41,267,62,217,78,168,99,121,126,78,158,42,196,15,241,11,253,12,264,25,282,50,297,81,307,80,312,48,301,22,286,7,266,6,253,10,239,38,193,74,154,118,121,165,95,215,73,266,57,359,36"/>
+<area shape="rect" title=" " alt="" coords="476,240,600,265"/>
+<area shape="poly" title=" " alt="" coords="466,45,487,118,530,226,525,228,482,120,461,46"/>
+<area shape="rect" href="_semantic_info_8h.html" title="Semantic analysis output passed to CodeGenerator." alt="" coords="496,93,680,119"/>
+<area shape="poly" title=" " alt="" coords="492,43,559,84,556,88,489,48"/>
+<area shape="rect" href="_library_registry_8h.html" title="Registry of loaded libraries keyed by normalized id." alt="" coords="626,167,804,192"/>
+<area shape="poly" title=" " alt="" coords="559,30,595,38,631,50,665,68,694,91,704,105,711,121,717,152,712,153,706,123,700,108,690,95,662,72,629,55,593,43,558,36"/>
+<area shape="rect" href="_type_system_8h.html" title="Type system for semantic analysis: TypeInfo, TypeKind, compatibility." alt="" coords="236,240,349,265"/>
+<area shape="poly" title=" " alt="" coords="327,194,307,229,303,227,322,191"/>
+<area shape="rect" title=" " alt="" coords="710,387,768,412"/>
+<area shape="poly" title=" " alt="" coords="349,190,400,224,464,263,593,329,701,379,699,384,591,334,462,268,397,228,346,194"/>
+<area shape="poly" title=" " alt="" coords="341,191,454,373,449,376,336,194"/>
+<area shape="poly" title=" " alt="" coords="365,189,492,233,490,238,363,195"/>
+<area shape="rect" title=" " alt="" coords="125,240,212,265"/>
+<area shape="poly" title=" " alt="" coords="306,194,209,237,206,232,304,190"/>
+<area shape="rect" title=" " alt="" coords="36,240,101,265"/>
+<area shape="poly" title=" " alt="" coords="289,195,115,242,114,236,288,189"/>
+<area shape="poly" title=" " alt="" coords="349,258,864,316,864,321,349,263"/>
+<area shape="poly" title=" " alt="" coords="329,263,697,382,696,387,327,268"/>
+<area shape="poly" title=" " alt="" coords="296,265,305,300,314,320,326,337,348,355,372,368,422,387,420,392,370,373,345,359,322,340,309,322,300,302,291,266"/>
+<area shape="poly" title=" " alt="" coords="273,268,201,309,198,304,271,263"/>
+<area shape="rect" title=" " alt="" coords="23,387,90,412"/>
+<area shape="poly" title=" " alt="" coords="236,268,133,292,90,305,69,315,61,328,57,343,55,373,50,373,51,342,56,326,65,311,88,300,131,287,235,263"/>
+<area shape="poly" title=" " alt="" coords="891,341,782,384,780,379,889,336"/>
+<area shape="poly" title=" " alt="" coords="878,336,511,394,510,388,877,331"/>
+<area shape="rect" title=" " alt="" coords="1034,387,1111,412"/>
+<area shape="poly" title=" " alt="" coords="945,336,1036,378,1034,383,943,341"/>
+<area shape="rect" title=" " alt="" coords="842,387,910,412"/>
+<area shape="poly" title=" " alt="" coords="914,340,892,376,888,374,910,338"/>
+<area shape="rect" title=" " alt="" coords="935,387,1010,412"/>
+<area shape="poly" title=" " alt="" coords="930,337,958,374,953,377,926,341"/>
+<area shape="poly" title=" " alt="" coords="255,335,696,390,696,395,254,341"/>
+<area shape="poly" title=" " alt="" coords="216,336,422,385,420,390,214,341"/>
+<area shape="rect" title=" " alt="" coords="129,387,205,412"/>
+<area shape="poly" title=" " alt="" coords="170,339,170,373,164,373,164,339"/>
+<area shape="poly" title=" " alt="" coords="151,341,88,381,85,377,148,336"/>
+<area shape="poly" title=" " alt="" coords="548,121,386,166,385,160,546,116"/>
+<area shape="poly" title=" " alt="" coords="674,116,760,135,795,149,817,165,823,183,823,206,806,265,780,326,754,376,750,373,775,324,801,263,817,206,818,183,813,168,792,153,758,140,673,121"/>
+<area shape="poly" title=" " alt="" coords="594,118,612,193,617,236,613,266,597,286,565,316,492,380,488,376,561,313,593,283,609,264,611,236,606,194,589,119"/>
+<area shape="poly" title=" " alt="" coords="681,106,766,115,860,137,908,154,953,176,995,204,1032,238,1053,270,1066,307,1072,342,1075,373,1070,373,1067,343,1061,308,1048,273,1028,242,992,208,950,181,906,159,859,142,765,121,680,111"/>
+<area shape="poly" title=" " alt="" coords="496,117,369,132,226,156,159,173,100,192,54,215,25,242,20,253,20,263,25,272,34,281,61,296,95,307,94,312,59,301,31,285,21,275,15,264,15,252,21,238,51,211,98,188,157,168,225,151,368,126,496,112"/>
+<area shape="poly" title=" " alt="" coords="587,120,549,228,544,226,582,118"/>
+<area shape="poly" title=" " alt="" coords="610,116,684,157,681,162,607,121"/>
+<area shape="poly" title=" " alt="" coords="719,192,739,372,734,373,714,193"/>
+<area shape="poly" title=" " alt="" coords="711,194,689,228,658,267,619,303,577,334,501,382,498,377,574,330,616,299,654,264,685,225,706,191"/>
+<area shape="poly" title=" " alt="" coords="687,194,580,237,578,232,686,190"/>
+<area shape="rect" href="_library_descriptor_8h.html" title="Data model of a Library Descriptor (JSON &#45;&gt; C++ object model)" alt="" coords="828,240,1018,265"/>
+<area shape="poly" title=" " alt="" coords="749,189,877,233,875,238,748,195"/>
+<area shape="poly" title=" " alt="" coords="925,266,923,300,918,300,920,266"/>
+<area shape="poly" title=" " alt="" coords="910,268,766,380,763,376,906,264"/>
+<area shape="poly" title=" " alt="" coords="888,268,511,387,509,382,886,263"/>
+<area shape="poly" title=" " alt="" coords="940,264,995,311,1055,374,1052,378,992,315,936,268"/>
+<area shape="poly" title=" " alt="" coords="939,264,959,285,975,312,981,344,979,373,974,373,975,344,970,314,954,288,935,267"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -167,19 +181,25 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="_semantic_analyzer_8h__dep__incl.png" border="0" usemap="#ainclude_2semantic_2_semantic_analyzer_8hdep" alt=""/></div>
 <map name="ainclude_2semantic_2_semantic_analyzer_8hdep" id="ainclude_2semantic_2_semantic_analyzer_8hdep">
-<area shape="rect" title="Semantic Analyzer &#45; performs semantic analysis on TranslationUnit." alt="" coords="535,5,733,45"/>
+<area shape="rect" title="Semantic Analyzer &#45; performs semantic analysis on TranslationUnit." alt="" coords="877,5,1076,45"/>
 <area shape="rect" href="main_8cpp.html" title="Command&#45;line driver for the st2cpp transpiler." alt="" coords="5,101,129,126"/>
-<area shape="poly" title=" " alt="" coords="521,41,343,63,143,96,110,103,109,98,141,91,342,58,520,36"/>
-<area shape="rect" href="_semantic_analyzer_8cpp.html" title="Semantic analyzer implementation (Sprint 2B &#45; DeclVisitor + BodyVisitor integration)" alt="" coords="154,101,407,126"/>
-<area shape="poly" title=" " alt="" coords="544,51,328,103,327,98,543,46"/>
-<area shape="rect" href="_test_helper_8cpp.html" title="Implementation of helper class for tests." alt="" coords="431,101,637,126"/>
-<area shape="poly" title=" " alt="" coords="603,56,550,102,546,98,600,52"/>
-<area shape="rect" href="test__body__visitor_8cpp.html" title="Tests for BodyVisitor &#45; Name Resolution and AST Decoration." alt="" coords="661,93,807,133"/>
-<area shape="poly" title=" " alt="" coords="668,52,714,91,710,95,665,56"/>
-<area shape="rect" href="test__codegen__semantic_8cpp.html" title="Tests verifying the semantic&#45;driven CodeGenerator migration." alt="" coords="831,93,1010,133"/>
-<area shape="poly" title=" " alt="" coords="711,47,859,91,857,96,709,52"/>
-<area shape="rect" href="test__decl__visitor_8cpp.html" title="Tests for DeclVisitor &#45; Declaration Phase of Semantic Analysis." alt="" coords="1034,93,1181,133"/>
-<area shape="poly" title=" " alt="" coords="747,42,1022,91,1034,93,1033,98,1022,96,746,47"/>
+<area shape="poly" title=" " alt="" coords="863,32,719,39,538,51,340,69,142,96,108,103,107,98,142,91,340,64,538,45,718,34,863,27"/>
+<area shape="rect" href="_semantic_analyzer_8cpp.html" title="Semantic analyzer implementation (DeclVisitor + BodyVisitor integration)" alt="" coords="154,101,407,126"/>
+<area shape="poly" title=" " alt="" coords="864,42,420,96,364,103,363,98,419,91,863,37"/>
+<area shape="rect" href="test__codegen__external__library_8cpp.html" title="C++ generation of external library C++ bindings." alt="" coords="431,93,650,133"/>
+<area shape="poly" title=" " alt="" coords="868,51,637,96,636,91,867,45"/>
+<area shape="rect" href="_test_helper_8cpp.html" title="Implementation of helper class for tests." alt="" coords="674,101,879,126"/>
+<area shape="poly" title=" " alt="" coords="921,53,804,103,802,98,919,48"/>
+<area shape="rect" href="test__body__visitor_8cpp.html" title="Tests for BodyVisitor &#45; Name Resolution and AST Decoration." alt="" coords="903,93,1050,133"/>
+<area shape="poly" title=" " alt="" coords="979,59,979,93,974,93,974,59"/>
+<area shape="rect" href="test__codegen__semantic_8cpp.html" title="Tests verifying the semantic&#45;driven CodeGenerator migration." alt="" coords="1074,93,1253,133"/>
+<area shape="poly" title=" " alt="" coords="1031,49,1124,91,1121,96,1029,53"/>
+<area shape="rect" href="test__decl__visitor_8cpp.html" title="Tests for DeclVisitor &#45; Declaration Phase of Semantic Analysis." alt="" coords="1277,93,1423,133"/>
+<area shape="poly" title=" " alt="" coords="1072,46,1277,93,1276,98,1071,51"/>
+<area shape="rect" href="test__semantic__library_8cpp.html" title="Semantic integration tests: LibraryRegistry &#45;&gt; SemanticAnalyzer." alt="" coords="1447,93,1610,133"/>
+<area shape="poly" title=" " alt="" coords="1090,39,1436,91,1448,93,1447,98,1435,96,1089,44"/>
+<area shape="rect" href="test__compilation_8cpp.html" title="Implementation of test cases for compilation of generated code." alt="" coords="1634,101,1829,126"/>
+<area shape="poly" title=" " alt="" coords="1090,33,1335,57,1622,91,1669,98,1669,103,1622,96,1334,62,1090,39"/>
 </map>
 </div>
 </div>

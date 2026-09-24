@@ -2,6 +2,6 @@
 <area shape="rect" id="Node000001" title="Declaration visitor: registers types, POU, variables, methods in symbol table." alt="" coords="126,5,345,31"/>
 <area shape="rect" id="Node000002" href="$_decl_visitor_8cpp.html" title="Declaration visitor implementation for semantic analysis." alt="" coords="5,79,212,104"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="204,40,131,81,128,76,202,35"/>
-<area shape="rect" id="Node000003" href="$_semantic_analyzer_8cpp.html" title="Semantic analyzer implementation (Sprint 2B &#45; DeclVisitor + BodyVisitor integration)" alt="" coords="237,79,490,104"/>
+<area shape="rect" id="Node000003" href="$_semantic_analyzer_8cpp.html" title="Semantic analyzer implementation (DeclVisitor + BodyVisitor integration)" alt="" coords="237,79,490,104"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="269,35,344,76,341,81,267,40"/>
 </map>

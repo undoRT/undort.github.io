@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['tokentype_0',['TokenType',['../_token_8h.html#aa520fbf142ba1e7e659590c07da31921',1,'Token.h']]],
-  ['typekind_1',['TypeKind',['../namespacest2cpp_1_1semantic.html#a8051146c25044e8f73171d0e7dff77bf',1,'st2cpp::semantic']]]
+  ['methodvisibility_0',['MethodVisibility',['../_a_s_t_8h.html#a238fe813936f04a4152de91f00e16139',1,'AST.h']]]
 ];

@@ -1,0 +1,9 @@
+<map id="st2cpp::library::EnumTypeDef" name="st2cpp::library::EnumTypeDef">
+<area shape="rect" id="Node000001" title="An ENUM type defined by the library." alt="" coords="199,273,403,399"/>
+<area shape="rect" id="Node000002" href="$structst2cpp_1_1library_1_1_symbol_cpp_binding.html" title="C++ binding for entities mapped to a plain C++ symbol (constants, enums, struct types,..." alt="" coords="5,68,193,148"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="129,147,166,196,209,248,221,260,217,263,205,251,162,199,124,150"/>
+<area shape="rect" id="Node000003" href="$structst2cpp_1_1library_1_1_type_ref.html" title="Structured type reference." alt="" coords="217,15,384,201"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="303,201,303,257,298,257,298,201"/>
+<area shape="rect" id="Node000004" href="$structst2cpp_1_1library_1_1_init_value.html" title="A typed initializer tree." alt="" coords="409,5,579,211"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="418,213,385,251,375,263,371,259,381,248,414,209"/>
+</map>

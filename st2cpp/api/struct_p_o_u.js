@@ -2,6 +2,7 @@ var struct_p_o_u =
 [
     [ "baseClassSymbolId", "struct_p_o_u.html#ad4ed657625a083b209964f4a5aa32938", null ],
     [ "body", "struct_p_o_u.html#a0a25bf93c188404115485082ad53708b", null ],
+    [ "col", "struct_p_o_u.html#a3e87e3ec6cf4e8f8285e85c4ae008aac", null ],
     [ "extends", "struct_p_o_u.html#a2bfc4ae85b337a22f03b21be7bc9d5f6", null ],
     [ "implements", "struct_p_o_u.html#ac2304d3733cea95acabe1ea61961edfd", null ],
     [ "interfaceSymbolIds", "struct_p_o_u.html#a120e804011e6acacb90a38f17548b05f", null ],

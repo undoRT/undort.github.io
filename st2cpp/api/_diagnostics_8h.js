@@ -13,6 +13,8 @@ var _diagnostics_8h =
       [ "DuplicateEnumValue", "_diagnostics_8h.html#aa0c07614d70294cc051420d48b97f3d8a506613fe35d536edfe5dbd9c76797e77", null ],
       [ "MissingStructMember", "_diagnostics_8h.html#aa0c07614d70294cc051420d48b97f3d8af2dcfc7fa16a4307b88998404be025ab", null ],
       [ "CircularDependency", "_diagnostics_8h.html#aa0c07614d70294cc051420d48b97f3d8aa7322e5a4431c87bdf7cce02f764d4a4", null ],
+      [ "ExternalSymbolCollision", "_diagnostics_8h.html#aa0c07614d70294cc051420d48b97f3d8acc359c7cc2f6c9f8b5f03b41b9caa5e5", null ],
+      [ "ExternalBindingIncomplete", "_diagnostics_8h.html#aa0c07614d70294cc051420d48b97f3d8aa33d9daa9fe07e33f8196b89ee6a46c8", null ],
       [ "TypeMismatch", "_diagnostics_8h.html#aa0c07614d70294cc051420d48b97f3d8a2782c4707c245684aa95545098e1b70b", null ],
       [ "IncompatibleTypes", "_diagnostics_8h.html#aa0c07614d70294cc051420d48b97f3d8a8abf9417dbb7dc3e34a94d71e63f4c24", null ],
       [ "InvalidAssignment", "_diagnostics_8h.html#aa0c07614d70294cc051420d48b97f3d8a1f182dad8af3f88d1cf044533eb1ee3c", null ],
@@ -49,6 +51,7 @@ var _diagnostics_8h =
       [ "UnusedVariable", "_diagnostics_8h.html#aa0c07614d70294cc051420d48b97f3d8a90f0c9de35bea8fe8bb7e996f83c998e", null ],
       [ "DeprecatedFeature", "_diagnostics_8h.html#aa0c07614d70294cc051420d48b97f3d8a34a31a1a0613641ef52984e676975da2", null ],
       [ "UnsupportedConstruct", "_diagnostics_8h.html#aa0c07614d70294cc051420d48b97f3d8a7c30de64029ecd08bcb8a74378950b1e", null ],
+      [ "InvalidTimeLiteral", "_diagnostics_8h.html#aa0c07614d70294cc051420d48b97f3d8a985db17aa485c5b9857ace42127ce030", null ],
       [ "InternalError", "_diagnostics_8h.html#aa0c07614d70294cc051420d48b97f3d8a8462b58246e70e5c83e5b939a9332cb5", null ]
     ] ],
     [ "DiagnosticSeverity", "_diagnostics_8h.html#a9884b36d7a4558b2df56061f8b59c167", [

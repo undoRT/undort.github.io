@@ -1,0 +1,3 @@
+<map id="st2cpp::library::Version" name="st2cpp::library::Version">
+<area shape="rect" id="Node000001" title="Semantic version (semver core): MAJOR.MINOR.PATCH[&#45;prerelease][+build]." alt="" coords="5,5,168,211"/>
+</map>

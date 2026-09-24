@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['operator_21_3d_0',['operator!=',['../structst2cpp_1_1semantic_1_1_array_dim_info.html#a954851afe06c10f097720c8524b68930',1,'st2cpp::semantic::ArrayDimInfo']]],
-  ['operator_3d_3d_1',['operator==',['../structst2cpp_1_1semantic_1_1_array_dim_info.html#a0a3b1d577c8269e119636ecb05a0f422',1,'st2cpp::semantic::ArrayDimInfo']]],
-  ['orderedfbnamesfromsemantic_2',['orderedFbNamesFromSemantic',['../class_code_generator.html#af8ee472bc7f6d5e953ce9dc750074df3',1,'CodeGenerator']]],
-  ['orderstructmembers_3',['orderStructMembers',['../class_code_generator.html#a273fd807dc161638ded7bceb35101635',1,'CodeGenerator']]]
+  ['nextpoweroftwo_0',['nextPowerOfTwo',['../class_process_image_analyzer.html#a8143bfc4aceb0b9cea1ab0b3207a8f80',1,'ProcessImageAnalyzer']]],
+  ['normalize_1',['normalize',['../class_code_generator.html#ade36999beceb93f1187203a281689905',1,'CodeGenerator']]],
+  ['normalizedkey_2',['normalizedKey',['../main_8cpp.html#a9ec84536f9f7951c773f3953bbfe36f0',1,'main.cpp']]],
+  ['normalizeident_3',['normalizeIdent',['../class_code_generator.html#a062ca702baf1fd2210e3628b015171e9',1,'CodeGenerator']]],
+  ['normalizekey_4',['normalizeKey',['../classst2cpp_1_1semantic_1_1_symbol_table.html#ade46e481225c2665fcb791e497c60ae4',1,'st2cpp::semantic::SymbolTable']]],
+  ['normalizetype_5',['normalizeType',['../class_code_generator.html#af16b124ebe8bbf08b3e275e6c9d53a77',1,'CodeGenerator']]]
 ];

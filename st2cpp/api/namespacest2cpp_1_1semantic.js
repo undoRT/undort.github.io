@@ -6,6 +6,11 @@ var namespacest2cpp_1_1semantic =
     [ "DeclVisitor", "classst2cpp_1_1semantic_1_1_decl_visitor.html", "classst2cpp_1_1semantic_1_1_decl_visitor" ],
     [ "Diagnostic", "structst2cpp_1_1semantic_1_1_diagnostic.html", "structst2cpp_1_1semantic_1_1_diagnostic" ],
     [ "Diagnostics", "classst2cpp_1_1semantic_1_1_diagnostics.html", "classst2cpp_1_1semantic_1_1_diagnostics" ],
+    [ "LibraryDescriptorBuilder", "classst2cpp_1_1semantic_1_1_library_descriptor_builder.html", "classst2cpp_1_1semantic_1_1_library_descriptor_builder" ],
+    [ "LibraryExportError", "structst2cpp_1_1semantic_1_1_library_export_error.html", "structst2cpp_1_1semantic_1_1_library_export_error" ],
+    [ "LibraryExportOptions", "structst2cpp_1_1semantic_1_1_library_export_options.html", "structst2cpp_1_1semantic_1_1_library_export_options" ],
+    [ "LibraryExportResult", "structst2cpp_1_1semantic_1_1_library_export_result.html", "structst2cpp_1_1semantic_1_1_library_export_result" ],
+    [ "LibrarySymbolImporter", "classst2cpp_1_1semantic_1_1_library_symbol_importer.html", "classst2cpp_1_1semantic_1_1_library_symbol_importer" ],
     [ "PreservedSemantics", "structst2cpp_1_1semantic_1_1_preserved_semantics.html", "structst2cpp_1_1semantic_1_1_preserved_semantics" ],
     [ "Scope", "structst2cpp_1_1semantic_1_1_scope.html", "structst2cpp_1_1semantic_1_1_scope" ],
     [ "SemanticAnalyzer", "classst2cpp_1_1semantic_1_1_semantic_analyzer.html", "classst2cpp_1_1semantic_1_1_semantic_analyzer" ],
@@ -51,6 +56,8 @@ var namespacest2cpp_1_1semantic =
       [ "DuplicateEnumValue", "namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a506613fe35d536edfe5dbd9c76797e77", null ],
       [ "MissingStructMember", "namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8af2dcfc7fa16a4307b88998404be025ab", null ],
       [ "CircularDependency", "namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8aa7322e5a4431c87bdf7cce02f764d4a4", null ],
+      [ "ExternalSymbolCollision", "namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8acc359c7cc2f6c9f8b5f03b41b9caa5e5", null ],
+      [ "ExternalBindingIncomplete", "namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8aa33d9daa9fe07e33f8196b89ee6a46c8", null ],
       [ "TypeMismatch", "namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a2782c4707c245684aa95545098e1b70b", null ],
       [ "IncompatibleTypes", "namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a8abf9417dbb7dc3e34a94d71e63f4c24", null ],
       [ "InvalidAssignment", "namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a1f182dad8af3f88d1cf044533eb1ee3c", null ],
@@ -87,6 +94,7 @@ var namespacest2cpp_1_1semantic =
       [ "UnusedVariable", "namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a90f0c9de35bea8fe8bb7e996f83c998e", null ],
       [ "DeprecatedFeature", "namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a34a31a1a0613641ef52984e676975da2", null ],
       [ "UnsupportedConstruct", "namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a7c30de64029ecd08bcb8a74378950b1e", null ],
+      [ "InvalidTimeLiteral", "namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a985db17aa485c5b9857ace42127ce030", null ],
       [ "InternalError", "namespacest2cpp_1_1semantic.html#aa0c07614d70294cc051420d48b97f3d8a8462b58246e70e5c83e5b939a9332cb5", null ]
     ] ],
     [ "DiagnosticSeverity", "namespacest2cpp_1_1semantic.html#a9884b36d7a4558b2df56061f8b59c167", [
@@ -124,5 +132,6 @@ var namespacest2cpp_1_1semantic =
       [ "Void", "namespacest2cpp_1_1semantic.html#a8051146c25044e8f73171d0e7dff77bfa81ceb48a978444906d80119200aa358d", null ],
       [ "Unknown", "namespacest2cpp_1_1semantic.html#a8051146c25044e8f73171d0e7dff77bfa88183b946cc5f0e8c96b2e66e1c74a7e", null ]
     ] ],
-    [ "diagnosticCodeToString", "namespacest2cpp_1_1semantic.html#a25047140bd4ea2082e760bf4675fc12d", null ]
+    [ "diagnosticCodeToString", "namespacest2cpp_1_1semantic.html#a25047140bd4ea2082e760bf4675fc12d", null ],
+    [ "iecTimeLiteralToMilliseconds", "namespacest2cpp_1_1semantic.html#a52fd612aa75d5676c51c64af98c31707", null ]
 ];

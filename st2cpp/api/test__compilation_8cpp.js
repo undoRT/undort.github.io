@@ -7,6 +7,7 @@ var test__compilation_8cpp =
     [ "TEST_F", "test__compilation_8cpp.html#a154337b858dbf860d9d57f50d6ce9780", null ],
     [ "TEST_F", "test__compilation_8cpp.html#a290bc7aeff6f80b70957e628af5391f7", null ],
     [ "TEST_F", "test__compilation_8cpp.html#aa3a656a6f85fb168ba3a1318e55d8406", null ],
+    [ "TEST_F", "test__compilation_8cpp.html#acb15c6c873e7b5aad031f499bb801a55", null ],
     [ "TEST_F", "test__compilation_8cpp.html#ac244a51c748fdea860d7baf3fe1215f4", null ],
     [ "TEST_F", "test__compilation_8cpp.html#a3dae62f12e32c0260fff5e79625b8a87", null ],
     [ "TEST_F", "test__compilation_8cpp.html#a8668cff9b441b40bab2f16e3d9bcf80d", null ],

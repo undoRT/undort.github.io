@@ -1,0 +1,24 @@
+<map id="include/project/ProjectConfig.h" name="include/project/ProjectConfig.h">
+<area shape="rect" id="Node000001" title="Data model of a Project Configuration (JSON &#45;&gt; C++ object model)" alt="" coords="27,5,247,31"/>
+<area shape="rect" id="Node000002" href="$_library_descriptor_8h.html" title="Data model of a Library Descriptor (JSON &#45;&gt; C++ object model)" alt="" coords="110,79,301,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,29,187,67,183,70,147,33"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,225,64,251"/>
+<area shape="poly" id="edge13_Node000001_Node000004" title=" " alt="" coords="127,33,108,54,90,80,60,150,43,212,38,211,55,149,86,77,104,51,123,29"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="89,225,151,251"/>
+<area shape="poly" id="edge14_Node000001_Node000005" title=" " alt="" coords="129,33,113,53,100,79,94,115,97,151,113,212,108,213,92,152,89,115,95,78,108,51,124,29"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="369,225,444,251"/>
+<area shape="poly" id="edge12_Node000001_Node000008" title=" " alt="" coords="206,28,261,46,289,60,314,77,345,108,369,145,401,211,396,213,365,147,340,112,310,81,286,64,259,51,204,33"/>
+<area shape="rect" id="Node000003" href="$_a_s_t_8h.html" title="Abstract Syntax Tree nodes for Structured Text." alt="" coords="187,152,269,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="212,104,223,138,218,140,207,105"/>
+<area shape="poly" id="edge10_Node000002_Node000004" title=" " alt="" coords="193,106,61,218,57,214,190,102"/>
+<area shape="poly" id="edge11_Node000002_Node000005" title=" " alt="" coords="201,106,136,215,132,212,196,103"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="268,225,345,251"/>
+<area shape="poly" id="edge8_Node000002_Node000006" title=" " alt="" coords="228,102,257,122,284,150,298,181,306,211,301,213,293,183,279,154,253,126,225,106"/>
+<area shape="poly" id="edge9_Node000002_Node000008" title=" " alt="" coords="229,102,308,150,386,213,382,218,305,154,226,106"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="198,180,78,224,76,219,196,175"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="212,180,151,220,148,215,209,175"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="242,175,286,214,282,218,239,179"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="175,225,243,251"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="227,178,218,213,213,212,222,177"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="258,175,366,218,364,223,256,180"/>
+</map>

@@ -95,6 +95,7 @@ $(document).ready(function(){initNavTree('classst2cpp_1_1semantic_1_1_semantic_a
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classst2cpp_1_1semantic_1_1_semantic_analyzer-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">st2cpp::semantic::SemanticAnalyzer Class Reference</div></div>
@@ -110,11 +111,11 @@ Collaboration diagram for st2cpp::semantic::SemanticAnalyzer:</div>
 <div class="dyncontent">
 <div class="center"><img src="classst2cpp_1_1semantic_1_1_semantic_analyzer__coll__graph.png" border="0" usemap="#ast2cpp_1_1semantic_1_1_semantic_analyzer_coll__map" alt="Collaboration graph"/></div>
 <map name="ast2cpp_1_1semantic_1_1_semantic_analyzer_coll__map" id="ast2cpp_1_1semantic_1_1_semantic_analyzer_coll__map">
-<area shape="rect" title="Semantic Analyzer &#45; performs semantic analysis on TranslationUnit." alt="" coords="155,528,349,708"/>
-<area shape="rect" href="classst2cpp_1_1semantic_1_1_symbol_table.html" title=" " alt="" coords="5,5,248,465"/>
-<area shape="poly" title=" " alt="" coords="205,465,220,512,215,514,200,466"/>
-<area shape="rect" href="classst2cpp_1_1semantic_1_1_diagnostics.html" title="Diagnostic collector and reporter." alt="" coords="273,93,482,378"/>
-<area shape="poly" title=" " alt="" coords="333,379,289,513,284,511,328,377"/>
+<area shape="rect" title="Semantic Analyzer &#45; performs semantic analysis on TranslationUnit." alt="" coords="155,548,349,788"/>
+<area shape="rect" href="classst2cpp_1_1semantic_1_1_symbol_table.html" title=" " alt="" coords="5,5,248,485"/>
+<area shape="poly" title=" " alt="" coords="200,485,214,531,209,533,195,486"/>
+<area shape="rect" href="classst2cpp_1_1semantic_1_1_diagnostics.html" title="Diagnostic collector and reporter." alt="" coords="273,43,482,448"/>
+<area shape="poly" title=" " alt="" coords="320,449,295,533,290,531,315,447"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -132,6 +133,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a66e939cfe3749240b0c3f95e121a4caf" id="r_a66e939cfe3749240b0c3f95e121a4caf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structst2cpp_1_1semantic_1_1_semantic_info.html">SemanticInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_semantic_analyzer.html#a66e939cfe3749240b0c3f95e121a4caf">analyze</a> (const <a class="el" href="struct_translation_unit.html">TranslationUnit</a> &amp;tu, <a class="el" href="classst2cpp_1_1semantic_1_1_semantic_analyzer.html#aeb9ed253f07ac2e2cb37b5d0d170ac16">Strictness</a> strictness=<a class="el" href="classst2cpp_1_1semantic_1_1_semantic_analyzer.html#aeb9ed253f07ac2e2cb37b5d0d170ac16ab351533598ed6f88cea50ee3dfdb11ca">Strictness::Permissive</a>)</td></tr>
 <tr class="memdesc:a66e939cfe3749240b0c3f95e121a4caf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Analyze a translation unit.  <br /></td></tr>
 <tr class="separator:a66e939cfe3749240b0c3f95e121a4caf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43ea1b784aadda0f6025ddbc648f1058" id="r_a43ea1b784aadda0f6025ddbc648f1058"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structst2cpp_1_1semantic_1_1_semantic_info.html">SemanticInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_semantic_analyzer.html#a43ea1b784aadda0f6025ddbc648f1058">analyze</a> (const <a class="el" href="struct_translation_unit.html">TranslationUnit</a> &amp;tu, const <a class="el" href="classst2cpp_1_1library_1_1_library_registry.html">st2cpp::library::LibraryRegistry</a> &amp;registry, <a class="el" href="classst2cpp_1_1semantic_1_1_semantic_analyzer.html#aeb9ed253f07ac2e2cb37b5d0d170ac16">Strictness</a> strictness=<a class="el" href="classst2cpp_1_1semantic_1_1_semantic_analyzer.html#aeb9ed253f07ac2e2cb37b5d0d170ac16ab351533598ed6f88cea50ee3dfdb11ca">Strictness::Permissive</a>)</td></tr>
+<tr class="memdesc:a43ea1b784aadda0f6025ddbc648f1058"><td class="mdescLeft">&#160;</td><td class="mdescRight">Analyze a translation unit whose identifier resolution may fall back to an external library registry.  <br /></td></tr>
+<tr class="separator:a43ea1b784aadda0f6025ddbc648f1058"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d5492625dee19b70a1360d077b1d0e2" id="r_a2d5492625dee19b70a1360d077b1d0e2"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html">SymbolTable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_semantic_analyzer.html#a2d5492625dee19b70a1360d077b1d0e2">getSymbolTable</a> () const</td></tr>
 <tr class="separator:a2d5492625dee19b70a1360d077b1d0e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab54bc44fdfd85b789597e29b5197fd60" id="r_ab54bc44fdfd85b789597e29b5197fd60"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html">SymbolTable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_semantic_analyzer.html#ab54bc44fdfd85b789597e29b5197fd60">getSymbolTable</a> ()</td></tr>
@@ -140,6 +144,15 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a245a8fc97d049b74a2fb89eb31bdd11f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebb855f977fcb935a4dfeb8eefb4991a" id="r_aebb855f977fcb935a4dfeb8eefb4991a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classst2cpp_1_1semantic_1_1_diagnostics.html">Diagnostics</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_semantic_analyzer.html#aebb855f977fcb935a4dfeb8eefb4991a">getDiagnostics</a> ()</td></tr>
 <tr class="separator:aebb855f977fcb935a4dfeb8eefb4991a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a242186bca300ef7649423c8d4e5ece45" id="r_a242186bca300ef7649423c8d4e5ece45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_semantic_analyzer.html#a242186bca300ef7649423c8d4e5ece45">setSourceName</a> (const std::string &amp;<a class="el" href="_library_loader_8cpp.html#a9b45b3e13bd9167aab02e17e08916231">name</a>)</td></tr>
+<tr class="memdesc:a242186bca300ef7649423c8d4e5ece45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the source file name attached to every reported diagnostic.  <br /></td></tr>
+<tr class="separator:a242186bca300ef7649423c8d4e5ece45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a992bf1e1c4f886c29d623161819d30eb" id="r_a992bf1e1c4f886c29d623161819d30eb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structst2cpp_1_1semantic_1_1_semantic_info.html">SemanticInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_semantic_analyzer.html#a992bf1e1c4f886c29d623161819d30eb">analyzeCore</a> (const <a class="el" href="struct_translation_unit.html">TranslationUnit</a> &amp;tu, <a class="el" href="classst2cpp_1_1semantic_1_1_semantic_analyzer.html#aeb9ed253f07ac2e2cb37b5d0d170ac16">Strictness</a> strictness)</td></tr>
+<tr class="memdesc:a992bf1e1c4f886c29d623161819d30eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shared analysis pipeline; assumes symTab_/diagnostics_ are reset.  <br /></td></tr>
+<tr class="separator:a992bf1e1c4f886c29d623161819d30eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -147,6 +160,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a8fc1ff3a6504ecee836505657b1d6798"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d0221509e61c0172428c3c1e36b88d4" id="r_a2d0221509e61c0172428c3c1e36b88d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classst2cpp_1_1semantic_1_1_diagnostics.html">Diagnostics</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_semantic_analyzer.html#a2d0221509e61c0172428c3c1e36b88d4">diagnostics_</a></td></tr>
 <tr class="separator:a2d0221509e61c0172428c3c1e36b88d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fa5fa58e5f41b73bff0d4e4015159d3" id="r_a6fa5fa58e5f41b73bff0d4e4015159d3"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_semantic_analyzer.html#a6fa5fa58e5f41b73bff0d4e4015159d3">sourceName_</a> = &quot;&lt;input&gt;&quot;</td></tr>
+<tr class="separator:a6fa5fa58e5f41b73bff0d4e4015159d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Semantic Analyzer - performs semantic analysis on <a class="el" href="struct_translation_unit.html">TranslationUnit</a>. </p>
@@ -205,8 +220,63 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a43ea1b784aadda0f6025ddbc648f1058" name="a43ea1b784aadda0f6025ddbc648f1058"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43ea1b784aadda0f6025ddbc648f1058">&#9670;&#160;</a></span>analyze() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structst2cpp_1_1semantic_1_1_semantic_info.html">SemanticInfo</a> st2cpp::semantic::SemanticAnalyzer::analyze </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_translation_unit.html">TranslationUnit</a> &amp;&#160;</td>
+          <td class="paramname"><em>tu</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classst2cpp_1_1library_1_1_library_registry.html">st2cpp::library::LibraryRegistry</a> &amp;&#160;</td>
+          <td class="paramname"><em>registry</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classst2cpp_1_1semantic_1_1_semantic_analyzer.html#aeb9ed253f07ac2e2cb37b5d0d170ac16">Strictness</a>&#160;</td>
+          <td class="paramname"><em>strictness</em> = <code><a class="el" href="classst2cpp_1_1semantic_1_1_semantic_analyzer.html#aeb9ed253f07ac2e2cb37b5d0d170ac16ab351533598ed6f88cea50ee3dfdb11ca">Strictness::Permissive</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Analyze a translation unit whose identifier resolution may fall back to an external library registry. </p>
+<p>Analyze a translation unit with external library symbols imported.</p>
+<p>The external symbols are imported into the analyzer's symbol table (dedicated external scope) before the declaration pass runs. Project-local declarations always shadow external symbols regardless of the registry contents. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tu</td><td>Translation unit to analyze </td></tr>
+    <tr><td class="paramname">registry</td><td>Loaded library registry (may be empty) </td></tr>
+    <tr><td class="paramname">strictness</td><td>Error handling mode (default: Permissive for migration) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structst2cpp_1_1semantic_1_1_semantic_info.html" title="Result of semantic analysis, passed to CodeGenerator.">SemanticInfo</a> with symbol table, diagnostics, and pre-computed data</dd></dl>
+<p>Imports every registered library into the symbol table's external scope (deterministic order; project-local declarations still win) and then runs the regular semantic pipeline. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tu</td><td>The translation unit to analyze </td></tr>
+    <tr><td class="paramname">registry</td><td>The library registry whose symbols become resolvable </td></tr>
+    <tr><td class="paramname">strictness</td><td>The strictness mode controlling IEC compliance checks </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The populated <a class="el" href="structst2cpp_1_1semantic_1_1_semantic_info.html" title="Result of semantic analysis, passed to CodeGenerator.">SemanticInfo</a> for the translation unit </dd></dl>
+
+</div>
+</div>
 <a id="a66e939cfe3749240b0c3f95e121a4caf" name="a66e939cfe3749240b0c3f95e121a4caf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a66e939cfe3749240b0c3f95e121a4caf">&#9670;&#160;</a></span>analyze()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a66e939cfe3749240b0c3f95e121a4caf">&#9670;&#160;</a></span>analyze() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -232,7 +302,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Analyze a translation unit. </p>
-<p>Run the full semantic analysis pipeline over a translation unit.</p>
+<p>Run the semantic pipeline over a translation unit assuming the symbol table and diagnostics have already been reset.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">tu</td><td>Translation unit to analyze </td></tr>
@@ -241,7 +311,16 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="structst2cpp_1_1semantic_1_1_semantic_info.html" title="Result of semantic analysis, passed to CodeGenerator.">SemanticInfo</a> with symbol table, diagnostics, and pre-computed data</dd></dl>
-<p>Executes the header-registration pass (<a class="el" href="classst2cpp_1_1semantic_1_1_decl_visitor.html" title="Visitor for declaration phase (Sprint 2)">DeclVisitor</a>) followed by the body-visiting pass (<a class="el" href="classst2cpp_1_1semantic_1_1_body_visitor.html" title="Visitor for body analysis phase (Sprint 2B)">BodyVisitor</a>), then assembles the <a class="el" href="structst2cpp_1_1semantic_1_1_semantic_info.html" title="Result of semantic analysis, passed to CodeGenerator.">SemanticInfo</a> result. Records the preserved-semantics evidence (mode, strictness and resolved identifier counts) and the AT placement addresses consumed by the <a class="el" href="class_code_generator.html" title="Emit C++ code from the parsed AST.">CodeGenerator</a>, keyed as "FBName::varName" for <a class="el" href="struct_p_o_u.html">POU</a> locals and "varName" for globals, skipping method-local variables. </p><dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tu</td><td>The translation unit to analyze </td></tr>
+    <tr><td class="paramname">strictness</td><td>The strictness mode controlling IEC compliance checks </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The populated <a class="el" href="structst2cpp_1_1semantic_1_1_semantic_info.html" title="Result of semantic analysis, passed to CodeGenerator.">SemanticInfo</a> for the translation unit</dd></dl>
+<p>Run the full semantic analysis pipeline over a translation unit.</p>
+<p>Executes the header-registration pass (<a class="el" href="classst2cpp_1_1semantic_1_1_decl_visitor.html" title="Visitor for declaration phase.">DeclVisitor</a>) followed by the body-visiting pass (<a class="el" href="classst2cpp_1_1semantic_1_1_body_visitor.html" title="Visitor for body analysis phase.">BodyVisitor</a>), then assembles the <a class="el" href="structst2cpp_1_1semantic_1_1_semantic_info.html" title="Result of semantic analysis, passed to CodeGenerator.">SemanticInfo</a> result. Records the preserved-semantics evidence (mode, strictness and resolved identifier counts) and the AT placement addresses consumed by the <a class="el" href="class_code_generator.html" title="Emit C++ code from the parsed AST.">CodeGenerator</a>, keyed as "FBName::varName" for <a class="el" href="struct_p_o_u.html">POU</a> locals and "varName" for globals, skipping method-local variables. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">tu</td><td>The translation unit to analyze </td></tr>
     <tr><td class="paramname">strictness</td><td>The strictness mode controlling IEC compliance checks </td></tr>
@@ -249,6 +328,44 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The populated <a class="el" href="structst2cpp_1_1semantic_1_1_semantic_info.html" title="Result of semantic analysis, passed to CodeGenerator.">SemanticInfo</a> for the translation unit </dd></dl>
+
+</div>
+</div>
+<a id="a992bf1e1c4f886c29d623161819d30eb" name="a992bf1e1c4f886c29d623161819d30eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a992bf1e1c4f886c29d623161819d30eb">&#9670;&#160;</a></span>analyzeCore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structst2cpp_1_1semantic_1_1_semantic_info.html">SemanticInfo</a> st2cpp::semantic::SemanticAnalyzer::analyzeCore </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_translation_unit.html">TranslationUnit</a> &amp;&#160;</td>
+          <td class="paramname"><em>tu</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classst2cpp_1_1semantic_1_1_semantic_analyzer.html#aeb9ed253f07ac2e2cb37b5d0d170ac16">Strictness</a>&#160;</td>
+          <td class="paramname"><em>strictness</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Shared analysis pipeline; assumes symTab_/diagnostics_ are reset. </p>
 
 </div>
 </div>
@@ -352,6 +469,40 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a242186bca300ef7649423c8d4e5ece45" name="a242186bca300ef7649423c8d4e5ece45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a242186bca300ef7649423c8d4e5ece45">&#9670;&#160;</a></span>setSourceName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void st2cpp::semantic::SemanticAnalyzer::setSourceName </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the source file name attached to every reported diagnostic. </p>
+<p>Used by the CLI/tools so diagnostics point at the real input file instead of the default "&lt;input&gt;" placeholder. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>The source file name (may be a path) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="a2d0221509e61c0172428c3c1e36b88d4" name="a2d0221509e61c0172428c3c1e36b88d4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2d0221509e61c0172428c3c1e36b88d4">&#9670;&#160;</a></span>diagnostics_</h2>
@@ -364,6 +515,28 @@ Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classst2cpp_1_1semantic_1_1_diagnostics.html">Diagnostics</a> st2cpp::semantic::SemanticAnalyzer::diagnostics_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6fa5fa58e5f41b73bff0d4e4015159d3" name="a6fa5fa58e5f41b73bff0d4e4015159d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fa5fa58e5f41b73bff0d4e4015159d3">&#9670;&#160;</a></span>sourceName_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string st2cpp::semantic::SemanticAnalyzer::sourceName_ = &quot;&lt;input&gt;&quot;</td>
         </tr>
       </table>
   </td>

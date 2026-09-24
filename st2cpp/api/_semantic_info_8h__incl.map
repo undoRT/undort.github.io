@@ -1,43 +1,55 @@
 <map id="include/semantic/SemanticInfo.h" name="include/semantic/SemanticInfo.h">
-<area shape="rect" id="Node000001" title="Semantic analysis output passed to CodeGenerator." alt="" coords="351,5,550,45"/>
-<area shape="rect" id="Node000002" href="$_symbol_table_8h.html" title="Symbol table with scope management for semantic analysis." alt="" coords="424,93,605,119"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="468,44,498,81,494,84,464,47"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="5,313,64,339"/>
-<area shape="poly" id="edge26_Node000001_Node000005" title=" " alt="" coords="352,47,267,71,221,88,176,109,132,135,92,165,56,201,28,241,23,255,22,270,27,300,22,301,16,270,17,254,23,239,52,197,88,161,129,131,173,105,219,83,265,66,350,42"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="355,313,418,339"/>
-<area shape="poly" id="edge23_Node000001_Node000006" title=" " alt="" coords="439,47,426,69,415,94,401,150,393,208,389,300,383,299,387,207,395,149,409,92,421,66,435,44"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="725,313,803,339"/>
-<area shape="poly" id="edge25_Node000001_Node000007" title=" " alt="" coords="551,31,620,45,693,70,728,87,761,109,789,135,813,165,821,183,823,202,817,239,802,275,784,304,779,301,797,272,812,238,818,202,816,184,808,168,785,138,757,113,725,92,691,75,619,50,550,37"/>
-<area shape="rect" id="Node000010" href="$_diagnostics_8h.html" title="Diagnostic reporting system for semantic analysis." alt="" coords="73,240,247,265"/>
-<area shape="poly" id="edge22_Node000001_Node000010" title=" " alt="" coords="409,48,318,97,267,130,221,169,195,199,175,229,170,226,190,196,217,165,264,126,315,92,407,43"/>
-<area shape="rect" id="Node000013" title=" " alt="" coords="675,167,799,192"/>
-<area shape="poly" id="edge24_Node000001_Node000013" title=" " alt="" coords="508,43,562,64,619,91,670,123,714,156,711,160,667,128,616,96,560,69,506,48"/>
-<area shape="rect" id="Node000003" href="$_type_system_8h.html" title="Type system for semantic analysis: TypeInfo, TypeKind, compatibility." alt="" coords="231,167,345,192"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="479,121,339,165,337,160,477,116"/>
-<area shape="poly" id="edge17_Node000002_Node000005" title=" " alt="" coords="428,121,321,139,205,165,150,181,103,200,66,220,42,242,35,255,32,270,32,299,27,299,27,269,30,253,38,238,63,215,101,195,149,176,203,160,320,134,427,116"/>
-<area shape="poly" id="edge18_Node000002_Node000006" title=" " alt="" coords="505,121,465,168,426,239,398,301,394,299,421,237,460,165,501,117"/>
-<area shape="poly" id="edge19_Node000002_Node000013" title=" " alt="" coords="551,116,689,160,688,165,550,121"/>
-<area shape="rect" id="Node000014" title=" " alt="" coords="475,167,562,192"/>
-<area shape="poly" id="edge20_Node000002_Node000014" title=" " alt="" coords="518,119,520,153,515,153,513,119"/>
-<area shape="rect" id="Node000015" title=" " alt="" coords="586,167,651,192"/>
-<area shape="poly" id="edge21_Node000002_Node000015" title=" " alt="" coords="533,116,592,156,589,161,530,121"/>
-<area shape="rect" id="Node000004" href="$_a_s_t_8h.html" title="Abstract Syntax Tree nodes for Structured Text." alt="" coords="475,240,557,265"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="325,189,467,233,465,238,324,195"/>
-<area shape="poly" id="edge14_Node000003_Node000005" title=" " alt="" coords="231,183,189,188,144,197,100,215,62,242,52,255,45,269,38,300,33,299,40,268,47,252,58,238,97,210,143,192,189,182,231,178"/>
-<area shape="poly" id="edge15_Node000003_Node000006" title=" " alt="" coords="298,191,373,300,369,303,294,194"/>
-<area shape="poly" id="edge9_Node000003_Node000010" title=" " alt="" coords="269,194,194,235,192,231,266,190"/>
-<area shape="rect" id="Node000012" title=" " alt="" coords="237,313,304,339"/>
-<area shape="poly" id="edge16_Node000003_Node000012" title=" " alt="" coords="289,193,276,300,271,299,284,192"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="475,263,110,316,78,321,77,316,109,311,474,257"/>
-<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="496,268,421,309,419,304,494,263"/>
-<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="557,263,713,307,711,312,555,268"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="559,313,627,339"/>
-<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="530,263,572,302,569,306,527,267"/>
-<area shape="rect" id="Node000009" title=" " alt="" coords="460,313,535,339"/>
-<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="515,266,506,301,501,300,510,265"/>
-<area shape="poly" id="edge10_Node000010_Node000005" title=" " alt="" coords="141,268,68,309,66,304,139,263"/>
-<area shape="poly" id="edge11_Node000010_Node000006" title=" " alt="" coords="197,263,343,308,341,313,196,268"/>
-<area shape="rect" id="Node000011" title=" " alt="" coords="122,313,198,339"/>
-<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="163,266,163,300,157,300,157,266"/>
-<area shape="poly" id="edge13_Node000010_Node000012" title=" " alt="" coords="179,263,242,303,239,308,176,268"/>
+<area shape="rect" id="Node000001" title="Semantic analysis output passed to CodeGenerator." alt="" coords="482,5,681,45"/>
+<area shape="rect" id="Node000002" href="$_symbol_table_8h.html" title="Symbol table with scope management for semantic analysis." alt="" coords="619,93,800,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="614,43,680,84,678,88,611,48"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="400,313,459,339"/>
+<area shape="poly" id="edge36_Node000001_Node000005" title=" " alt="" coords="482,46,404,67,374,80,355,95,343,120,339,148,343,176,352,205,381,259,412,301,408,304,377,262,347,207,337,177,334,148,338,119,351,92,371,76,403,62,481,41"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="739,313,802,339"/>
+<area shape="poly" id="edge33_Node000001_Node000006" title=" " alt="" coords="682,40,784,60,893,88,944,105,988,123,1023,143,1046,165,1051,179,1046,194,1013,217,951,249,812,310,810,306,948,244,1011,213,1042,190,1046,179,1042,168,1020,148,985,128,942,110,892,93,783,66,681,45"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="5,313,83,339"/>
+<area shape="poly" id="edge35_Node000001_Node000007" title=" " alt="" coords="482,30,388,39,336,48,282,62,229,80,178,103,131,132,89,168,68,199,55,234,48,270,46,300,41,299,43,269,50,233,63,197,85,165,127,128,175,98,227,75,281,56,335,43,387,34,482,24"/>
+<area shape="rect" id="Node000010" href="$_diagnostics_8h.html" title="Diagnostic reporting system for semantic analysis." alt="" coords="982,240,1157,265"/>
+<area shape="poly" id="edge22_Node000001_Node000010" title=" " alt="" coords="681,30,800,39,928,53,1035,70,1071,80,1091,91,1102,107,1107,125,1107,162,1098,199,1085,229,1080,227,1092,197,1102,161,1102,126,1097,110,1088,95,1069,85,1034,75,927,58,800,45,681,35"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="467,167,591,192"/>
+<area shape="poly" id="edge34_Node000001_Node000013" title=" " alt="" coords="579,46,557,120,543,155,538,153,552,118,574,45"/>
+<area shape="rect" id="Node000016" href="$_library_registry_8h.html" title="Registry of loaded libraries keyed by normalized id." alt="" coords="366,93,543,119"/>
+<area shape="poly" id="edge23_Node000001_Node000016" title=" " alt="" coords="552,48,486,88,483,84,549,43"/>
+<area shape="rect" id="Node000003" href="$_type_system_8h.html" title="Type system for semantic analysis: TypeInfo, TypeKind, compatibility." alt="" coords="809,167,922,192"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="735,116,828,158,826,163,733,121"/>
+<area shape="poly" id="edge17_Node000002_Node000005" title=" " alt="" coords="697,121,604,194,457,307,454,303,601,190,693,117"/>
+<area shape="poly" id="edge18_Node000002_Node000006" title=" " alt="" coords="720,118,734,139,747,166,764,238,772,299,767,300,759,239,741,168,729,142,716,120"/>
+<area shape="poly" id="edge19_Node000002_Node000013" title=" " alt="" coords="681,121,572,164,570,159,679,116"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="946,167,1033,192"/>
+<area shape="poly" id="edge20_Node000002_Node000014" title=" " alt="" coords="755,116,933,161,932,166,754,121"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="667,167,733,192"/>
+<area shape="poly" id="edge21_Node000002_Node000015" title=" " alt="" coords="710,119,706,154,701,153,705,119"/>
+<area shape="rect" id="Node000004" href="$_a_s_t_8h.html" title="Abstract Syntax Tree nodes for Structured Text." alt="" coords="157,240,240,265"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="809,189,254,248,254,243,808,184"/>
+<area shape="poly" id="edge14_Node000003_Node000005" title=" " alt="" coords="832,195,473,313,471,308,830,190"/>
+<area shape="poly" id="edge15_Node000003_Node000006" title=" " alt="" coords="860,194,788,303,784,300,855,191"/>
+<area shape="poly" id="edge9_Node000003_Node000010" title=" " alt="" coords="899,190,1024,233,1023,238,897,195"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="1147,313,1213,339"/>
+<area shape="poly" id="edge16_Node000003_Node000012" title=" " alt="" coords="923,188,1077,217,1170,238,1179,252,1184,268,1186,299,1181,300,1179,269,1174,254,1166,242,1075,222,922,194"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="237,263,387,309,386,314,235,268"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="241,256,726,316,725,322,240,262"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="175,268,83,310,81,305,173,263"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="206,313,274,339"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="208,264,229,300,224,303,203,267"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="107,313,181,339"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="192,267,163,304,159,301,188,264"/>
+<area shape="poly" id="edge10_Node000010_Node000005" title=" " alt="" coords="982,266,473,323,472,317,981,261"/>
+<area shape="poly" id="edge11_Node000010_Node000006" title=" " alt="" coords="1022,268,816,317,815,312,1021,263"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="1031,313,1107,339"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="1072,266,1072,300,1067,300,1067,266"/>
+<area shape="poly" id="edge13_Node000010_Node000012" title=" " alt="" coords="1089,263,1152,303,1149,308,1086,268"/>
+<area shape="poly" id="edge30_Node000016_Node000005" title=" " alt="" coords="445,120,427,141,413,168,407,203,408,239,423,300,418,301,403,239,402,202,408,166,423,138,441,117"/>
+<area shape="poly" id="edge32_Node000016_Node000006" title=" " alt="" coords="454,119,448,154,450,173,457,191,483,222,514,247,549,268,587,285,662,307,726,318,725,324,661,313,585,290,547,273,511,252,479,225,452,193,445,174,443,154,448,118"/>
+<area shape="poly" id="edge31_Node000016_Node000013" title=" " alt="" coords="468,117,509,155,505,159,465,121"/>
+<area shape="rect" id="Node000017" href="$_library_descriptor_8h.html" title="Data model of a Library Descriptor (JSON &#45;&gt; C++ object model)" alt="" coords="99,167,290,192"/>
+<area shape="poly" id="edge24_Node000016_Node000017" title=" " alt="" coords="414,121,251,166,249,160,412,116"/>
+<area shape="poly" id="edge25_Node000017_Node000004" title=" " alt="" coords="198,192,200,226,195,227,193,192"/>
+<area shape="poly" id="edge28_Node000017_Node000005" title=" " alt="" coords="210,190,254,224,311,263,392,305,389,310,308,268,251,229,207,194"/>
+<area shape="poly" id="edge29_Node000017_Node000006" title=" " alt="" coords="241,189,726,311,725,316,240,195"/>
+<area shape="poly" id="edge26_Node000017_Node000007" title=" " alt="" coords="184,194,68,306,64,302,180,191"/>
+<area shape="poly" id="edge27_Node000017_Node000009" title=" " alt="" coords="183,194,163,215,148,241,142,271,143,300,137,300,137,270,143,239,159,211,179,190"/>
 </map>

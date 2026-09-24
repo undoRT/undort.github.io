@@ -102,7 +102,7 @@ $(document).ready(function(){initNavTree('classst2cpp_1_1semantic_1_1_body_visit
 </div><!--header-->
 <div class="contents">
 
-<p>Visitor for body analysis phase (Sprint 2B)  
+<p>Visitor for body analysis phase.  
  <a href="classst2cpp_1_1semantic_1_1_body_visitor.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_body_visitor_8h_source.html">BodyVisitor.h</a>&gt;</code></p>
@@ -111,11 +111,11 @@ Collaboration diagram for st2cpp::semantic::BodyVisitor:</div>
 <div class="dyncontent">
 <div class="center"><img src="classst2cpp_1_1semantic_1_1_body_visitor__coll__graph.png" border="0" usemap="#ast2cpp_1_1semantic_1_1_body_visitor_coll__map" alt="Collaboration graph"/></div>
 <map name="ast2cpp_1_1semantic_1_1_body_visitor_coll__map" id="ast2cpp_1_1semantic_1_1_body_visitor_coll__map">
-<area shape="rect" title="Visitor for body analysis phase (Sprint 2B)" alt="" coords="148,528,356,1013"/>
-<area shape="rect" href="classst2cpp_1_1semantic_1_1_symbol_table.html" title=" " alt="" coords="5,5,248,465"/>
-<area shape="poly" title=" " alt="" coords="183,465,194,511,189,512,178,466"/>
-<area shape="rect" href="classst2cpp_1_1semantic_1_1_diagnostics.html" title="Diagnostic collector and reporter." alt="" coords="273,93,482,378"/>
-<area shape="poly" title=" " alt="" coords="347,379,315,513,310,512,341,377"/>
+<area shape="rect" title="Visitor for body analysis phase." alt="" coords="148,548,356,1033"/>
+<area shape="rect" href="classst2cpp_1_1semantic_1_1_symbol_table.html" title=" " alt="" coords="5,5,248,485"/>
+<area shape="poly" title=" " alt="" coords="184,485,195,531,190,532,179,486"/>
+<area shape="rect" href="classst2cpp_1_1semantic_1_1_diagnostics.html" title="Diagnostic collector and reporter." alt="" coords="273,43,482,448"/>
+<area shape="poly" title=" " alt="" coords="333,449,314,533,309,532,328,448"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -156,18 +156,18 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a932aacc5d51e685125380ef15b2e1016" id="r_a932aacc5d51e685125380ef15b2e1016"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_body_visitor.html#a932aacc5d51e685125380ef15b2e1016">visitStatement</a> (const <a class="el" href="struct_stmt.html">Stmt</a> &amp;stmt)</td></tr>
 <tr class="memdesc:a932aacc5d51e685125380ef15b2e1016"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispatch a statement to its specific visitor by variant type.  <br /></td></tr>
 <tr class="separator:a932aacc5d51e685125380ef15b2e1016"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99812c40927987fa2e065081a6cbb9aa" id="r_a99812c40927987fa2e065081a6cbb9aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_body_visitor.html#a99812c40927987fa2e065081a6cbb9aa">visitAssignStmt</a> (const <a class="el" href="struct_assign_stmt.html">AssignStmt</a> &amp;stmt, uint32_t line)</td></tr>
-<tr class="memdesc:a99812c40927987fa2e065081a6cbb9aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visit an assignment statement and type-check it.  <br /></td></tr>
-<tr class="separator:a99812c40927987fa2e065081a6cbb9aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6c32a8d45ff5191f1cb5099fa7f4d98" id="r_ad6c32a8d45ff5191f1cb5099fa7f4d98"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_body_visitor.html#ad6c32a8d45ff5191f1cb5099fa7f4d98">visitAssignStmt</a> (const <a class="el" href="struct_assign_stmt.html">AssignStmt</a> &amp;stmt, uint32_t line, uint32_t col)</td></tr>
+<tr class="memdesc:ad6c32a8d45ff5191f1cb5099fa7f4d98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visit an assignment statement and type-check it.  <br /></td></tr>
+<tr class="separator:ad6c32a8d45ff5191f1cb5099fa7f4d98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ed2e14c281bf33ca7e1bb9dcb304dc5" id="r_a9ed2e14c281bf33ca7e1bb9dcb304dc5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_body_visitor.html#a9ed2e14c281bf33ca7e1bb9dcb304dc5">visitExprStmt</a> (const <a class="el" href="struct_expr_stmt.html">ExprStmt</a> &amp;stmt)</td></tr>
 <tr class="memdesc:a9ed2e14c281bf33ca7e1bb9dcb304dc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visit an expression statement.  <br /></td></tr>
 <tr class="separator:a9ed2e14c281bf33ca7e1bb9dcb304dc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae32e5621448313faf69a0bceda0c4efe" id="r_ae32e5621448313faf69a0bceda0c4efe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_body_visitor.html#ae32e5621448313faf69a0bceda0c4efe">visitIfStmt</a> (const <a class="el" href="struct_if_stmt.html">IfStmt</a> &amp;stmt)</td></tr>
 <tr class="memdesc:ae32e5621448313faf69a0bceda0c4efe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visit an IF statement, checking that every condition is a BOOL.  <br /></td></tr>
 <tr class="separator:ae32e5621448313faf69a0bceda0c4efe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc24f68c132be2ac4970328ce5e6f313" id="r_abc24f68c132be2ac4970328ce5e6f313"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_body_visitor.html#abc24f68c132be2ac4970328ce5e6f313">visitForStmt</a> (const <a class="el" href="struct_for_stmt.html">ForStmt</a> &amp;stmt, uint32_t line)</td></tr>
-<tr class="memdesc:abc24f68c132be2ac4970328ce5e6f313"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visit a FOR loop, tracking loop nesting and checking control variable compatibility.  <br /></td></tr>
-<tr class="separator:abc24f68c132be2ac4970328ce5e6f313"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67506730126b823454f27fe8d39be00f" id="r_a67506730126b823454f27fe8d39be00f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_body_visitor.html#a67506730126b823454f27fe8d39be00f">visitForStmt</a> (const <a class="el" href="struct_for_stmt.html">ForStmt</a> &amp;stmt, uint32_t line, uint32_t col)</td></tr>
+<tr class="memdesc:a67506730126b823454f27fe8d39be00f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visit a FOR loop, tracking loop nesting and checking control variable compatibility.  <br /></td></tr>
+<tr class="separator:a67506730126b823454f27fe8d39be00f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6316ecc6aec4d99db8d6cfcac64d554a" id="r_a6316ecc6aec4d99db8d6cfcac64d554a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_body_visitor.html#a6316ecc6aec4d99db8d6cfcac64d554a">visitWhileStmt</a> (const <a class="el" href="struct_while_stmt.html">WhileStmt</a> &amp;stmt)</td></tr>
 <tr class="memdesc:a6316ecc6aec4d99db8d6cfcac64d554a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visit a WHILE loop, checking that its condition is a BOOL.  <br /></td></tr>
 <tr class="separator:a6316ecc6aec4d99db8d6cfcac64d554a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -240,10 +240,10 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a2b79409aa842b72fe9a55adcf0c89ce0" id="r_a2b79409aa842b72fe9a55adcf0c89ce0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_body_visitor.html#a2b79409aa842b72fe9a55adcf0c89ce0">visitStructInitExpr</a> (<a class="el" href="struct_struct_init_expr.html">StructInitExpr</a> &amp;expr)</td></tr>
 <tr class="memdesc:a2b79409aa842b72fe9a55adcf0c89ce0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visit a struct initializer, resolving each member value.  <br /></td></tr>
 <tr class="separator:a2b79409aa842b72fe9a55adcf0c89ce0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51290812783fde305a62b263c1996175" id="r_a51290812783fde305a62b263c1996175"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacest2cpp_1_1semantic.html#a04ded7b7fa589f2e5fa9ae2e7a22b3a3">SymbolId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_body_visitor.html#a51290812783fde305a62b263c1996175">resolveIdentifier</a> (const std::string &amp;name)</td></tr>
+<tr class="memitem:a51290812783fde305a62b263c1996175" id="r_a51290812783fde305a62b263c1996175"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacest2cpp_1_1semantic.html#a04ded7b7fa589f2e5fa9ae2e7a22b3a3">SymbolId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_body_visitor.html#a51290812783fde305a62b263c1996175">resolveIdentifier</a> (const std::string &amp;<a class="el" href="_library_loader_8cpp.html#a9b45b3e13bd9167aab02e17e08916231">name</a>)</td></tr>
 <tr class="memdesc:a51290812783fde305a62b263c1996175"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolve an identifier to a SymbolId via the scope chain.  <br /></td></tr>
 <tr class="separator:a51290812783fde305a62b263c1996175"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acdca9475ef88e7dc55cfaaa4765d4dc9" id="r_acdca9475ef88e7dc55cfaaa4765d4dc9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacest2cpp_1_1semantic.html#a04ded7b7fa589f2e5fa9ae2e7a22b3a3">SymbolId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_body_visitor.html#acdca9475ef88e7dc55cfaaa4765d4dc9">lookupInScopeChain</a> (const std::string &amp;name) const</td></tr>
+<tr class="memitem:acdca9475ef88e7dc55cfaaa4765d4dc9" id="r_acdca9475ef88e7dc55cfaaa4765d4dc9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacest2cpp_1_1semantic.html#a04ded7b7fa589f2e5fa9ae2e7a22b3a3">SymbolId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_body_visitor.html#acdca9475ef88e7dc55cfaaa4765d4dc9">lookupInScopeChain</a> (const std::string &amp;<a class="el" href="_library_loader_8cpp.html#a9b45b3e13bd9167aab02e17e08916231">name</a>) const</td></tr>
 <tr class="memdesc:acdca9475ef88e7dc55cfaaa4765d4dc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Look up an identifier through the context scope chain and the global scope.  <br /></td></tr>
 <tr class="separator:acdca9475ef88e7dc55cfaaa4765d4dc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac72ea6a8edded3cb2ef54601752c9bfe" id="r_ac72ea6a8edded3cb2ef54601752c9bfe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacest2cpp_1_1semantic.html#a1ce5cfb2039b7cc4b3a96b0b0b8e9341">TypeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_body_visitor.html#ac72ea6a8edded3cb2ef54601752c9bfe">arrayRowType</a> (const <a class="el" href="structst2cpp_1_1semantic_1_1_type_info.html">TypeInfo</a> &amp;arrayType)</td></tr>
@@ -303,16 +303,16 @@ Private Attributes</h2></td></tr>
 <tr class="separator:aadc00db195f6d7f34d58a91af8d4da62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Visitor for body analysis phase (Sprint 2B) </p>
-<p>Second pass: resolves names and decorates AST with semantic information. Handles: name resolution, shadowing, scope traversal. Does NOT perform type checking of expressions/statements (Sprint 3).</p>
+<div class="textblock"><p>Visitor for body analysis phase. </p>
+<p>Second pass: resolves names and decorates AST with semantic information. Handles: name resolution, shadowing, scope traversal. Does NOT perform type checking of expressions/statements.</p>
 <p>AST Decoration Model:</p><ul>
 <li><a class="el" href="struct_expr.html#a2d6d83aa55493c0101200cc5cd20e264">Expr::symbolId</a> is populated with the resolved SymbolId</li>
 <li><a class="el" href="struct_expr.html#a528087cc47f0a98001159b7906ee19bf">Expr::resolvedTypeId</a> is populated with the resolved TypeId</li>
 <li><a class="el" href="struct_ident_expr.html#a4517728291122bb95d70d220f694b526">IdentExpr::symbolId</a> is populated with the resolved SymbolId</li>
 <li><a class="el" href="struct_call_expr.html#a1dcf1be725d6153e0cf77baa43b57d0c">CallExpr::calleeSymbolId</a> is populated with the resolved callee SymbolId</li>
-<li><a class="el" href="struct_member_expr.html#a19b84c4f719c37af2764d59e4fc44a53">MemberExpr::symbolId</a> is populated when type information is available (Sprint 2C)</li>
+<li><a class="el" href="struct_member_expr.html#a19b84c4f719c37af2764d59e4fc44a53">MemberExpr::symbolId</a> is populated when type information is available</li>
 </ul>
-<p>The AST is decorated in-place during traversal, making the results directly accessible to downstream phases (Sprint 2C+, <a class="el" href="class_code_generator.html" title="Emit C++ code from the parsed AST.">CodeGenerator</a>). </p>
+<p>The AST is decorated in-place during traversal, making the results directly accessible to downstream phases (<a class="el" href="class_code_generator.html" title="Emit C++ code from the parsed AST.">CodeGenerator</a>). </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a050a799ba5f9e0f1bd86c38be727ff7c" name="a050a799ba5f9e0f1bd86c38be727ff7c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a050a799ba5f9e0f1bd86c38be727ff7c">&#9670;&#160;</a></span>BodyVisitor()</h2>
@@ -655,7 +655,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Look up an identifier through the context scope chain and the global scope. </p>
-<p>Walks the innermost-to-outermost contexts and their parent scopes, then the base-class chain of the enclosing FB, and finally falls back to a recursive symbol table lookup. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Walks the innermost-to-outermost contexts and their parent scopes, then the base-class chain of the enclosing FB, and finally falls back to a recursive symbol table lookup followed by the external (library) scope. Project-local identifiers always win over external library symbols, which are only reachable when no local/global declaration exists. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>The identifier name to look up </td></tr>
   </table>
@@ -1084,8 +1084,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a99812c40927987fa2e065081a6cbb9aa" name="a99812c40927987fa2e065081a6cbb9aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99812c40927987fa2e065081a6cbb9aa">&#9670;&#160;</a></span>visitAssignStmt()</h2>
+<a id="ad6c32a8d45ff5191f1cb5099fa7f4d98" name="ad6c32a8d45ff5191f1cb5099fa7f4d98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6c32a8d45ff5191f1cb5099fa7f4d98">&#9670;&#160;</a></span>visitAssignStmt()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1103,7 +1103,13 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>line</em>&#160;</td>
+          <td class="paramname"><em>line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>col</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1503,8 +1509,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="abc24f68c132be2ac4970328ce5e6f313" name="abc24f68c132be2ac4970328ce5e6f313"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc24f68c132be2ac4970328ce5e6f313">&#9670;&#160;</a></span>visitForStmt()</h2>
+<a id="a67506730126b823454f27fe8d39be00f" name="a67506730126b823454f27fe8d39be00f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67506730126b823454f27fe8d39be00f">&#9670;&#160;</a></span>visitForStmt()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1522,7 +1528,13 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>line</em>&#160;</td>
+          <td class="paramname"><em>line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>col</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

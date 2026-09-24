@@ -1,6 +1,47 @@
 var annotated_dup =
 [
     [ "st2cpp", "namespacest2cpp.html", [
+      [ "json", "namespacest2cpp_1_1json.html", [
+        [ "JsonParseError", "classst2cpp_1_1json_1_1_json_parse_error.html", "classst2cpp_1_1json_1_1_json_parse_error" ],
+        [ "JsonValue", "structst2cpp_1_1json_1_1_json_value.html", "structst2cpp_1_1json_1_1_json_value" ]
+      ] ],
+      [ "library", "namespacest2cpp_1_1library.html", [
+        [ "Constant", "structst2cpp_1_1library_1_1_constant.html", "structst2cpp_1_1library_1_1_constant" ],
+        [ "Dependency", "structst2cpp_1_1library_1_1_dependency.html", "structst2cpp_1_1library_1_1_dependency" ],
+        [ "EnumMember", "structst2cpp_1_1library_1_1_enum_member.html", "structst2cpp_1_1library_1_1_enum_member" ],
+        [ "EnumTypeDef", "structst2cpp_1_1library_1_1_enum_type_def.html", "structst2cpp_1_1library_1_1_enum_type_def" ],
+        [ "FbCppBinding", "structst2cpp_1_1library_1_1_fb_cpp_binding.html", "structst2cpp_1_1library_1_1_fb_cpp_binding" ],
+        [ "FunctionBlockDef", "structst2cpp_1_1library_1_1_function_block_def.html", "structst2cpp_1_1library_1_1_function_block_def" ],
+        [ "FunctionCppBinding", "structst2cpp_1_1library_1_1_function_cpp_binding.html", "structst2cpp_1_1library_1_1_function_cpp_binding" ],
+        [ "FunctionDef", "structst2cpp_1_1library_1_1_function_def.html", "structst2cpp_1_1library_1_1_function_def" ],
+        [ "FunParam", "structst2cpp_1_1library_1_1_fun_param.html", "structst2cpp_1_1library_1_1_fun_param" ],
+        [ "GlobalVariable", "structst2cpp_1_1library_1_1_global_variable.html", "structst2cpp_1_1library_1_1_global_variable" ],
+        [ "InitValue", "structst2cpp_1_1library_1_1_init_value.html", "structst2cpp_1_1library_1_1_init_value" ],
+        [ "LibraryCppBinding", "structst2cpp_1_1library_1_1_library_cpp_binding.html", "structst2cpp_1_1library_1_1_library_cpp_binding" ],
+        [ "LibraryDescriptor", "classst2cpp_1_1library_1_1_library_descriptor.html", "classst2cpp_1_1library_1_1_library_descriptor" ],
+        [ "LibraryLoader", "classst2cpp_1_1library_1_1_library_loader.html", "classst2cpp_1_1library_1_1_library_loader" ],
+        [ "LibraryLoadError", "structst2cpp_1_1library_1_1_library_load_error.html", "structst2cpp_1_1library_1_1_library_load_error" ],
+        [ "LibraryLoadResult", "structst2cpp_1_1library_1_1_library_load_result.html", "structst2cpp_1_1library_1_1_library_load_result" ],
+        [ "LibraryRegistry", "classst2cpp_1_1library_1_1_library_registry.html", "classst2cpp_1_1library_1_1_library_registry" ],
+        [ "LibrarySerializer", "classst2cpp_1_1library_1_1_library_serializer.html", "classst2cpp_1_1library_1_1_library_serializer" ],
+        [ "StructField", "structst2cpp_1_1library_1_1_struct_field.html", "structst2cpp_1_1library_1_1_struct_field" ],
+        [ "StructTypeDef", "structst2cpp_1_1library_1_1_struct_type_def.html", "structst2cpp_1_1library_1_1_struct_type_def" ],
+        [ "SymbolCppBinding", "structst2cpp_1_1library_1_1_symbol_cpp_binding.html", "structst2cpp_1_1library_1_1_symbol_cpp_binding" ],
+        [ "TypeRef", "structst2cpp_1_1library_1_1_type_ref.html", "structst2cpp_1_1library_1_1_type_ref" ],
+        [ "Version", "structst2cpp_1_1library_1_1_version.html", "structst2cpp_1_1library_1_1_version" ],
+        [ "VersionClause", "structst2cpp_1_1library_1_1_version_clause.html", "structst2cpp_1_1library_1_1_version_clause" ],
+        [ "VersionConstraint", "structst2cpp_1_1library_1_1_version_constraint.html", "structst2cpp_1_1library_1_1_version_constraint" ]
+      ] ],
+      [ "project", "namespacest2cpp_1_1project.html", [
+        [ "LibraryEntry", "structst2cpp_1_1project_1_1_library_entry.html", "structst2cpp_1_1project_1_1_library_entry" ],
+        [ "ProjectConfig", "structst2cpp_1_1project_1_1_project_config.html", "structst2cpp_1_1project_1_1_project_config" ],
+        [ "ProjectConfigError", "structst2cpp_1_1project_1_1_project_config_error.html", "structst2cpp_1_1project_1_1_project_config_error" ],
+        [ "ProjectConfigLoader", "classst2cpp_1_1project_1_1_project_config_loader.html", "classst2cpp_1_1project_1_1_project_config_loader" ],
+        [ "ProjectConfigLoadResult", "structst2cpp_1_1project_1_1_project_config_load_result.html", "structst2cpp_1_1project_1_1_project_config_load_result" ],
+        [ "ProjectLibraryError", "structst2cpp_1_1project_1_1_project_library_error.html", "structst2cpp_1_1project_1_1_project_library_error" ],
+        [ "ProjectLibraryResult", "structst2cpp_1_1project_1_1_project_library_result.html", "structst2cpp_1_1project_1_1_project_library_result" ],
+        [ "ProjectLoader", "classst2cpp_1_1project_1_1_project_loader.html", "classst2cpp_1_1project_1_1_project_loader" ]
+      ] ],
       [ "semantic", "namespacest2cpp_1_1semantic.html", [
         [ "TypeChecker", "namespacest2cpp_1_1semantic_1_1_type_checker.html", [
           [ "IndexResult", "structst2cpp_1_1semantic_1_1_type_checker_1_1_index_result.html", "structst2cpp_1_1semantic_1_1_type_checker_1_1_index_result" ],
@@ -12,6 +53,11 @@ var annotated_dup =
         [ "DeclVisitor", "classst2cpp_1_1semantic_1_1_decl_visitor.html", "classst2cpp_1_1semantic_1_1_decl_visitor" ],
         [ "Diagnostic", "structst2cpp_1_1semantic_1_1_diagnostic.html", "structst2cpp_1_1semantic_1_1_diagnostic" ],
         [ "Diagnostics", "classst2cpp_1_1semantic_1_1_diagnostics.html", "classst2cpp_1_1semantic_1_1_diagnostics" ],
+        [ "LibraryDescriptorBuilder", "classst2cpp_1_1semantic_1_1_library_descriptor_builder.html", "classst2cpp_1_1semantic_1_1_library_descriptor_builder" ],
+        [ "LibraryExportError", "structst2cpp_1_1semantic_1_1_library_export_error.html", "structst2cpp_1_1semantic_1_1_library_export_error" ],
+        [ "LibraryExportOptions", "structst2cpp_1_1semantic_1_1_library_export_options.html", "structst2cpp_1_1semantic_1_1_library_export_options" ],
+        [ "LibraryExportResult", "structst2cpp_1_1semantic_1_1_library_export_result.html", "structst2cpp_1_1semantic_1_1_library_export_result" ],
+        [ "LibrarySymbolImporter", "classst2cpp_1_1semantic_1_1_library_symbol_importer.html", "classst2cpp_1_1semantic_1_1_library_symbol_importer" ],
         [ "PreservedSemantics", "structst2cpp_1_1semantic_1_1_preserved_semantics.html", "structst2cpp_1_1semantic_1_1_preserved_semantics" ],
         [ "Scope", "structst2cpp_1_1semantic_1_1_scope.html", "structst2cpp_1_1semantic_1_1_scope" ],
         [ "SemanticAnalyzer", "classst2cpp_1_1semantic_1_1_semantic_analyzer.html", "classst2cpp_1_1semantic_1_1_semantic_analyzer" ],
@@ -38,6 +84,7 @@ var annotated_dup =
     [ "CaseValue", "struct_case_value.html", "struct_case_value" ],
     [ "CastExpr", "struct_cast_expr.html", "struct_cast_expr" ],
     [ "CodeGenerator", "class_code_generator.html", "class_code_generator" ],
+    [ "CodegenExternalLibraryTest", "class_codegen_external_library_test.html", "class_codegen_external_library_test" ],
     [ "CodegenResult", "struct_codegen_result.html", "struct_codegen_result" ],
     [ "CodegenSemanticTest", "class_codegen_semantic_test.html", "class_codegen_semantic_test" ],
     [ "CompilationTest", "class_compilation_test.html", "class_compilation_test" ],
@@ -78,6 +125,7 @@ var annotated_dup =
     [ "RepeatStmt", "struct_repeat_stmt.html", "struct_repeat_stmt" ],
     [ "ReturnStmt", "struct_return_stmt.html", "struct_return_stmt" ],
     [ "ScopeManager", "class_scope_manager.html", "class_scope_manager" ],
+    [ "SemanticLibraryTest", "class_semantic_library_test.html", "class_semantic_library_test" ],
     [ "SizeofExpr", "struct_sizeof_expr.html", "struct_sizeof_expr" ],
     [ "Stmt", "struct_stmt.html", "struct_stmt" ],
     [ "StructInitExpr", "struct_struct_init_expr.html", "struct_struct_init_expr" ],
@@ -88,6 +136,7 @@ var annotated_dup =
     [ "TestHelper", "class_test_helper.html", "class_test_helper" ],
     [ "Token", "struct_token.html", "struct_token" ],
     [ "TranslationUnit", "struct_translation_unit.html", "struct_translation_unit" ],
+    [ "TypeAlias", "struct_type_alias.html", "struct_type_alias" ],
     [ "TypeRef", "struct_type_ref.html", "struct_type_ref" ],
     [ "TypeSystemTest", "class_type_system_test.html", "class_type_system_test" ],
     [ "UnaryExpr", "struct_unary_expr.html", "struct_unary_expr" ],

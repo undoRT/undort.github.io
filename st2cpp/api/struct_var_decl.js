@@ -1,6 +1,7 @@
 var struct_var_decl =
 [
     [ "atAddress", "struct_var_decl.html#a797dc61277bcd2ae1af13fb00e3f60bc", null ],
+    [ "col", "struct_var_decl.html#a4b28b642bafea74567897923a1987942", null ],
     [ "initialValue", "struct_var_decl.html#aea7bd4968da416b120b7813ec2da3056", null ],
     [ "isConstant", "struct_var_decl.html#ac9b968b57fde6deeef6ee96cd842e9bb", null ],
     [ "isRetain", "struct_var_decl.html#a85dbd9cc608842717b76e82e4ef78494", null ],

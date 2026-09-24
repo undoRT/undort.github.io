@@ -97,6 +97,7 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 <h3><a id="index_a" name="index_a"></a>- a -</h3><ul>
 <li>add()&#160;:&#160;<a class="el" href="classst2cpp_1_1semantic_1_1_diagnostics.html#af9ea476771709611b872d27ff83fec13">st2cpp::semantic::Diagnostics</a></li>
 <li>addATVariable()&#160;:&#160;<a class="el" href="class_scope_manager.html#a1501c164959e7be87dceaedcd83094e5">ScopeManager</a></li>
+<li>addDependency()&#160;:&#160;<a class="el" href="structst2cpp_1_1semantic_1_1_library_descriptor_builder_1_1_impl.html#a38ef387cdbb939fd1826ac258dac2a98">st2cpp::semantic::LibraryDescriptorBuilder::Impl</a></li>
 <li>addError()&#160;:&#160;<a class="el" href="classst2cpp_1_1semantic_1_1_diagnostics.html#a63725b22dfdfe43f2e7fb6fe54a213e4">st2cpp::semantic::Diagnostics</a></li>
 <li>addNote()&#160;:&#160;<a class="el" href="classst2cpp_1_1semantic_1_1_diagnostics.html#aa5dec620ee22e024caf542da483e2f7b">st2cpp::semantic::Diagnostics</a></li>
 <li>AddressAllocator()&#160;:&#160;<a class="el" href="class_address_allocator.html#a16dd1f02524d9e906486e0a671b8cb53">AddressAllocator</a></li>
@@ -107,16 +108,22 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 <li>advance()&#160;:&#160;<a class="el" href="class_lexer.html#a462cdbb4a984f06a9b6e39e483255bd5">Lexer</a>, <a class="el" href="class_parser.html#a5d45a4dc5c1599c27136a4981cb92f45">Parser</a></li>
 <li>alignment&#160;:&#160;<a class="el" href="structst2cpp_1_1semantic_1_1_type_info.html#af948825217037d5547341da21c5c62f9">st2cpp::semantic::TypeInfo</a></li>
 <li>alignUp()&#160;:&#160;<a class="el" href="class_address_allocator.html#ac4e12c7650ecf674820f97378ccdfa4b">AddressAllocator</a></li>
-<li>all()&#160;:&#160;<a class="el" href="classst2cpp_1_1semantic_1_1_diagnostics.html#a43a3e80da270edbfdf81f943b3915942">st2cpp::semantic::Diagnostics</a></li>
+<li>all()&#160;:&#160;<a class="el" href="classst2cpp_1_1library_1_1_library_registry.html#a2d8dd9e454f427cf9070d10309df7e0b">st2cpp::library::LibraryRegistry</a>, <a class="el" href="classst2cpp_1_1semantic_1_1_diagnostics.html#a43a3e80da270edbfdf81f943b3915942">st2cpp::semantic::Diagnostics</a></li>
 <li>allocatePlaceholder()&#160;:&#160;<a class="el" href="class_address_allocator.html#ae27c36fb8abcca6bd5873d718998b1dc">AddressAllocator</a></li>
-<li>analyze()&#160;:&#160;<a class="el" href="class_body_visitor_test.html#ae1627e5de0c884620121b4b81cfaac0a">BodyVisitorTest</a>, <a class="el" href="class_decl_visitor_test.html#aa003ab1097acaa3cdf70216b15dd3a92">DeclVisitorTest</a>, <a class="el" href="class_process_image_analyzer.html#a13277832e0ff51e2680fea72b215d42a">ProcessImageAnalyzer</a>, <a class="el" href="classst2cpp_1_1semantic_1_1_semantic_analyzer.html#a66e939cfe3749240b0c3f95e121a4caf">st2cpp::semantic::SemanticAnalyzer</a></li>
+<li>allOrdered()&#160;:&#160;<a class="el" href="classst2cpp_1_1library_1_1_library_registry.html#a164fa751537d656d4e0e646989b6f983">st2cpp::library::LibraryRegistry</a></li>
+<li>analyze()&#160;:&#160;<a class="el" href="class_body_visitor_test.html#ae1627e5de0c884620121b4b81cfaac0a">BodyVisitorTest</a>, <a class="el" href="class_decl_visitor_test.html#aa003ab1097acaa3cdf70216b15dd3a92">DeclVisitorTest</a>, <a class="el" href="class_process_image_analyzer.html#a13277832e0ff51e2680fea72b215d42a">ProcessImageAnalyzer</a>, <a class="el" href="class_semantic_library_test.html#a8137340744ef513f0a833abac315743f">SemanticLibraryTest</a>, <a class="el" href="classst2cpp_1_1semantic_1_1_semantic_analyzer.html#a66e939cfe3749240b0c3f95e121a4caf">st2cpp::semantic::SemanticAnalyzer</a></li>
+<li>analyzeCore()&#160;:&#160;<a class="el" href="classst2cpp_1_1semantic_1_1_semantic_analyzer.html#a992bf1e1c4f886c29d623161819d30eb">st2cpp::semantic::SemanticAnalyzer</a></li>
 <li>analyzer_&#160;:&#160;<a class="el" href="class_body_visitor_test.html#a9d447308db0cc01d63f6cd84f07a0be5">BodyVisitorTest</a>, <a class="el" href="class_decl_visitor_test.html#a70276c98bad0daef16e515aa213369f0">DeclVisitorTest</a></li>
 <li>applySemanticAssignmentCast()&#160;:&#160;<a class="el" href="class_code_generator.html#ad16c541f9b0c155f0c635e10115a5a66">CodeGenerator</a></li>
 <li>args&#160;:&#160;<a class="el" href="struct_call_expr.html#a2f3cec8b1a0d09c170f1e06b3915fa10">CallExpr</a>, <a class="el" href="struct_super_call_expr.html#a8332f1b6773bf52d276e57f712fee33e">SuperCallExpr</a></li>
-<li>array&#160;:&#160;<a class="el" href="struct_index_expr.html#a97f9cdda88624fc9ac484a7efc83c4bd">IndexExpr</a></li>
+<li>array&#160;:&#160;<a class="el" href="struct_index_expr.html#a97f9cdda88624fc9ac484a7efc83c4bd">IndexExpr</a>, <a class="el" href="structst2cpp_1_1json_1_1_json_value.html#a06df2b42d3f1a4c3ed1c6770fae14f8c">st2cpp::json::JsonValue</a></li>
 <li>arrayDims&#160;:&#160;<a class="el" href="struct_type_ref.html#a80dd3bd25b0fd6776f590befbea82bed">TypeRef</a></li>
 <li>arrayRowCache_&#160;:&#160;<a class="el" href="classst2cpp_1_1semantic_1_1_body_visitor.html#aadc00db195f6d7f34d58a91af8d4da62">st2cpp::semantic::BodyVisitor</a></li>
 <li>arrayRowType()&#160;:&#160;<a class="el" href="classst2cpp_1_1semantic_1_1_body_visitor.html#ac72ea6a8edded3cb2ef54601752c9bfe">st2cpp::semantic::BodyVisitor</a></li>
+<li>asBool()&#160;:&#160;<a class="el" href="structst2cpp_1_1json_1_1_json_value.html#a3838a006d7c65e0470a5693ef6038df6">st2cpp::json::JsonValue</a></li>
+<li>asDouble()&#160;:&#160;<a class="el" href="structst2cpp_1_1json_1_1_json_value.html#ab50881a6ca850455e27a178cea3ff361">st2cpp::json::JsonValue</a></li>
+<li>asInt64()&#160;:&#160;<a class="el" href="structst2cpp_1_1json_1_1_json_value.html#a44e0a0fdf5eb2290074ad61fed38dfd6">st2cpp::json::JsonValue</a></li>
+<li>asString()&#160;:&#160;<a class="el" href="structst2cpp_1_1json_1_1_json_value.html#abb3445b19d308e348d33a5f34feca8b0">st2cpp::json::JsonValue</a></li>
 <li>atAddress&#160;:&#160;<a class="el" href="struct_scope_manager_1_1_var_info.html#ae6f7c44816d2e13bf17ec0b5c2ef64ae">ScopeManager::VarInfo</a>, <a class="el" href="structst2cpp_1_1semantic_1_1_symbol.html#a7656704d91c207ee2989dede498b4f60">st2cpp::semantic::Symbol</a>, <a class="el" href="struct_var_decl.html#a797dc61277bcd2ae1af13fb00e3f60bc">VarDecl</a></li>
 <li>atAddrs&#160;:&#160;<a class="el" href="struct_scope_manager_1_1_scope.html#a6b8f6e6ab3c25d064790507a8c569712">ScopeManager::Scope</a></li>
 <li>atEnd()&#160;:&#160;<a class="el" href="class_parser.html#af3cd00baa15f7d0d9e491571af19708c">Parser</a></li>

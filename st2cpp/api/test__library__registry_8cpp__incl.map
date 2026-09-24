@@ -1,0 +1,50 @@
+<map id="tests/library/test_library_registry.cpp" name="tests/library/test_library_registry.cpp">
+<area shape="rect" id="Node000001" title="Tests for LibraryRegistry." alt="" coords="239,5,393,45"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,93,109,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="255,48,109,92,107,87,253,43"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="133,93,219,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="284,48,210,89,208,84,281,43"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="735,313,793,339"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="393,27,542,39,719,62,803,80,877,103,935,131,957,147,972,165,981,193,976,218,959,241,933,261,870,294,807,316,806,311,868,289,931,257,955,237,971,216,976,193,967,168,953,151,932,135,875,108,802,85,718,68,541,44,393,33"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="422,313,485,339"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="303,47,285,81,281,99,284,118,313,176,352,228,394,271,429,302,426,306,390,275,348,231,309,179,279,119,276,99,280,79,298,44"/>
+<area shape="rect" id="Node000006" href="$_library_loader_8h.html" title="Loads a LibraryDescriptor from JSON and validates it." alt="" coords="293,93,461,119"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="333,44,362,81,358,84,329,47"/>
+<area shape="rect" id="Node000016" href="$_library_registry_8h.html" title="Registry of loaded libraries keyed by normalized id." alt="" coords="633,93,810,119"/>
+<area shape="poly" id="edge27_Node000001_Node000016" title=" " alt="" coords="393,39,649,88,648,93,392,44"/>
+<area shape="poly" id="edge25_Node000006_Node000004" title=" " alt="" coords="462,108,507,115,554,125,602,142,647,164,684,195,715,232,739,269,755,300,751,302,734,271,710,235,680,199,644,169,600,146,553,130,506,120,461,114"/>
+<area shape="poly" id="edge26_Node000006_Node000005" title=" " alt="" coords="384,118,447,299,442,301,379,120"/>
+<area shape="rect" id="Node000007" href="$_json_value_8h.html" title="Minimal self&#45;contained JSON DOM, parser and serializer." alt="" coords="91,240,219,265"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="361,121,186,235,183,230,358,117"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="312,313,387,339"/>
+<area shape="poly" id="edge24_Node000006_Node000009" title=" " alt="" coords="369,121,353,142,341,167,335,203,335,239,345,300,340,301,330,239,330,202,336,166,349,139,365,117"/>
+<area shape="rect" id="Node000012" href="$_library_descriptor_8h.html" title="Data model of a Library Descriptor (JSON &#45;&gt; C++ object model)" alt="" coords="442,167,633,192"/>
+<area shape="poly" id="edge13_Node000006_Node000012" title=" " alt="" coords="404,116,500,159,498,163,402,121"/>
+<area shape="poly" id="edge10_Node000007_Node000004" title=" " alt="" coords="219,255,440,274,579,290,718,311,722,311,721,317,717,316,578,295,440,279,219,261"/>
+<area shape="poly" id="edge12_Node000007_Node000005" title=" " alt="" coords="203,263,409,312,408,317,202,268"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="20,313,87,339"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="140,268,83,307,80,303,137,263"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="187,263,306,306,304,311,185,268"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="111,313,198,339"/>
+<area shape="poly" id="edge9_Node000007_Node000010" title=" " alt="" coords="157,266,157,300,152,300,152,266"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="222,313,282,339"/>
+<area shape="poly" id="edge11_Node000007_Node000011" title=" " alt="" coords="172,263,226,303,223,307,169,268"/>
+<area shape="poly" id="edge22_Node000012_Node000004" title=" " alt="" coords="569,190,617,210,668,238,710,270,745,301,741,305,707,274,665,242,615,215,567,194"/>
+<area shape="poly" id="edge23_Node000012_Node000005" title=" " alt="" coords="529,194,493,241,465,302,460,299,488,239,525,191"/>
+<area shape="poly" id="edge21_Node000012_Node000009" title=" " alt="" coords="524,195,377,307,373,303,520,190"/>
+<area shape="rect" id="Node000013" href="$_a_s_t_8h.html" title="Abstract Syntax Tree nodes for Structured Text." alt="" coords="547,240,629,265"/>
+<area shape="poly" id="edge14_Node000012_Node000013" title=" " alt="" coords="548,191,574,227,570,230,544,194"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="628,313,705,339"/>
+<area shape="poly" id="edge20_Node000012_Node000014" title=" " alt="" coords="572,190,609,209,628,222,643,238,659,268,667,299,662,300,654,270,639,242,624,226,607,213,570,195"/>
+<area shape="poly" id="edge15_Node000013_Node000004" title=" " alt="" coords="617,263,723,306,721,310,615,268"/>
+<area shape="poly" id="edge16_Node000013_Node000005" title=" " alt="" coords="568,268,489,309,486,304,565,263"/>
+<area shape="poly" id="edge19_Node000013_Node000009" title=" " alt="" coords="550,268,401,312,399,307,549,263"/>
+<area shape="poly" id="edge17_Node000013_Node000014" title=" " alt="" coords="602,263,646,302,642,306,599,267"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="535,313,603,339"/>
+<area shape="poly" id="edge18_Node000013_Node000015" title=" " alt="" coords="587,266,578,301,573,300,582,265"/>
+<area shape="poly" id="edge29_Node000016_Node000004" title=" " alt="" coords="732,117,762,168,778,203,789,240,789,273,779,302,774,300,784,272,784,240,773,205,757,171,727,120"/>
+<area shape="poly" id="edge31_Node000016_Node000005" title=" " alt="" coords="715,121,687,156,647,194,617,211,591,219,565,226,536,242,501,273,472,304,469,301,497,269,533,238,563,222,589,214,615,206,644,190,684,153,711,118"/>
+<area shape="poly" id="edge28_Node000016_Node000012" title=" " alt="" coords="693,121,581,164,579,159,691,116"/>
+<area shape="rect" id="Node000017" title=" " alt="" coords="833,167,957,192"/>
+<area shape="poly" id="edge30_Node000016_Node000017" title=" " alt="" coords="750,116,855,159,853,164,748,121"/>
+</map>

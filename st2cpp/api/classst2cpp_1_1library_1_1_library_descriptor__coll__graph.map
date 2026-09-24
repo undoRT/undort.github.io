@@ -1,0 +1,5 @@
+<map id="st2cpp::library::LibraryDescriptor" name="st2cpp::library::LibraryDescriptor">
+<area shape="rect" id="Node000001" title="Root model of a Library Descriptor." alt="" coords="5,168,164,628"/>
+<area shape="rect" id="Node000002" href="$structst2cpp_1_1library_1_1_library_cpp_binding.html" title="C++ binding at library level (include + namespace)." alt="" coords="5,5,164,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,105,87,151,82,151,82,105"/>
+</map>

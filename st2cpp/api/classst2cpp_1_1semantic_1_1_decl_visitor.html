@@ -101,7 +101,7 @@ $(document).ready(function(){initNavTree('classst2cpp_1_1semantic_1_1_decl_visit
 </div><!--header-->
 <div class="contents">
 
-<p>Visitor for declaration phase (Sprint 2)  
+<p>Visitor for declaration phase.  
  <a href="classst2cpp_1_1semantic_1_1_decl_visitor.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_decl_visitor_8h_source.html">DeclVisitor.h</a>&gt;</code></p>
@@ -110,11 +110,11 @@ Collaboration diagram for st2cpp::semantic::DeclVisitor:</div>
 <div class="dyncontent">
 <div class="center"><img src="classst2cpp_1_1semantic_1_1_decl_visitor__coll__graph.png" border="0" usemap="#ast2cpp_1_1semantic_1_1_decl_visitor_coll__map" alt="Collaboration graph"/></div>
 <map name="ast2cpp_1_1semantic_1_1_decl_visitor_coll__map" id="ast2cpp_1_1semantic_1_1_decl_visitor_coll__map">
-<area shape="rect" title="Visitor for declaration phase (Sprint 2)" alt="" coords="150,528,354,1093"/>
-<area shape="rect" href="classst2cpp_1_1semantic_1_1_symbol_table.html" title=" " alt="" coords="5,5,248,465"/>
-<area shape="poly" title=" " alt="" coords="179,465,190,512,184,513,174,466"/>
-<area shape="rect" href="classst2cpp_1_1semantic_1_1_diagnostics.html" title="Diagnostic collector and reporter." alt="" coords="273,93,482,378"/>
-<area shape="poly" title=" " alt="" coords="349,379,320,513,314,511,344,378"/>
+<area shape="rect" title="Visitor for declaration phase." alt="" coords="150,548,354,1113"/>
+<area shape="rect" href="classst2cpp_1_1semantic_1_1_symbol_table.html" title=" " alt="" coords="5,5,248,485"/>
+<area shape="poly" title=" " alt="" coords="181,485,191,532,185,533,175,486"/>
+<area shape="rect" href="classst2cpp_1_1semantic_1_1_diagnostics.html" title="Diagnostic collector and reporter." alt="" coords="273,43,482,448"/>
+<area shape="poly" title=" " alt="" coords="337,449,319,533,313,531,331,447"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -140,12 +140,15 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a519d584dc75de7339f482ed86e3dd69c" id="r_a519d584dc75de7339f482ed86e3dd69c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_decl_visitor.html#a519d584dc75de7339f482ed86e3dd69c">registerEnumType</a> (const <a class="el" href="struct_enum_type.html">EnumType</a> &amp;et)</td></tr>
 <tr class="memdesc:a519d584dc75de7339f482ed86e3dd69c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register an enum type and its enumerators in the symbol table.  <br /></td></tr>
 <tr class="separator:a519d584dc75de7339f482ed86e3dd69c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2403d04833e088657325081f86595d41" id="r_a2403d04833e088657325081f86595d41"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_decl_visitor.html#a2403d04833e088657325081f86595d41">registerStructHeader</a> (const <a class="el" href="struct_struct_type.html">StructType</a> &amp;st)</td></tr>
+<tr class="memitem:a2403d04833e088657325081f86595d41" id="r_a2403d04833e088657325081f86595d41"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_decl_visitor.html#a2403d04833e088657325081f86595d41">registerStructHeader</a> (const <a class="el" href="struct_struct_type.html">StructType</a> &amp;<a class="el" href="_library_loader_8cpp.html#a6784506f372ded40897489dd25aab449">st</a>)</td></tr>
 <tr class="memdesc:a2403d04833e088657325081f86595d41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a struct type name (Pass A), with no member resolution.  <br /></td></tr>
 <tr class="separator:a2403d04833e088657325081f86595d41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc928397505855f8a67ef3c4b5522657" id="r_afc928397505855f8a67ef3c4b5522657"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_decl_visitor.html#afc928397505855f8a67ef3c4b5522657">registerStructBody</a> (const <a class="el" href="struct_struct_type.html">StructType</a> &amp;st)</td></tr>
+<tr class="memitem:afc928397505855f8a67ef3c4b5522657" id="r_afc928397505855f8a67ef3c4b5522657"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_decl_visitor.html#afc928397505855f8a67ef3c4b5522657">registerStructBody</a> (const <a class="el" href="struct_struct_type.html">StructType</a> &amp;<a class="el" href="_library_loader_8cpp.html#a6784506f372ded40897489dd25aab449">st</a>)</td></tr>
 <tr class="memdesc:afc928397505855f8a67ef3c4b5522657"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolve and register a struct type's members (Pass B).  <br /></td></tr>
 <tr class="separator:afc928397505855f8a67ef3c4b5522657"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab22eb6d4b697d500f5c553ba4a5adde7" id="r_ab22eb6d4b697d500f5c553ba4a5adde7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_decl_visitor.html#ab22eb6d4b697d500f5c553ba4a5adde7">registerTypeAlias</a> (const <a class="el" href="struct_type_alias.html">TypeAlias</a> &amp;alias)</td></tr>
+<tr class="memdesc:ab22eb6d4b697d500f5c553ba4a5adde7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a named type alias (TYPE Name : &lt;TypeRef&gt;; END_TYPE).  <br /></td></tr>
+<tr class="separator:ab22eb6d4b697d500f5c553ba4a5adde7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76553a24cba11a3e3946e38086fc339c" id="r_a76553a24cba11a3e3946e38086fc339c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_decl_visitor.html#a76553a24cba11a3e3946e38086fc339c">registerInterfaceHeader</a> (const <a class="el" href="struct_interface.html">Interface</a> &amp;iface)</td></tr>
 <tr class="memdesc:a76553a24cba11a3e3946e38086fc339c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register an interface type name (Pass A), with no method resolution.  <br /></td></tr>
 <tr class="separator:a76553a24cba11a3e3946e38086fc339c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -176,12 +179,15 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a81c31ce049d52d0c29943e5a287d7da4" id="r_a81c31ce049d52d0c29943e5a287d7da4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_decl_visitor.html#a81c31ce049d52d0c29943e5a287d7da4">resolveInheritance</a> ()</td></tr>
 <tr class="memdesc:a81c31ce049d52d0c29943e5a287d7da4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolve the pending EXTENDS/IMPLEMENTS clauses against registered symbols.  <br /></td></tr>
 <tr class="separator:a81c31ce049d52d0c29943e5a287d7da4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8960bab24659bc82d7b72366daf04387" id="r_a8960bab24659bc82d7b72366daf04387"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacest2cpp_1_1semantic.html#a04ded7b7fa589f2e5fa9ae2e7a22b3a3">SymbolId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_decl_visitor.html#a8960bab24659bc82d7b72366daf04387">resolveTypeName</a> (const std::string &amp;name)</td></tr>
+<tr class="memitem:a8960bab24659bc82d7b72366daf04387" id="r_a8960bab24659bc82d7b72366daf04387"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacest2cpp_1_1semantic.html#a1ce5cfb2039b7cc4b3a96b0b0b8e9341">TypeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_decl_visitor.html#a8960bab24659bc82d7b72366daf04387">resolveTypeName</a> (const std::string &amp;<a class="el" href="_library_loader_8cpp.html#a9b45b3e13bd9167aab02e17e08916231">name</a>)</td></tr>
 <tr class="memdesc:a8960bab24659bc82d7b72366daf04387"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolve a type name to its type symbol.  <br /></td></tr>
 <tr class="separator:a8960bab24659bc82d7b72366daf04387"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fc20cb24078f020fc04e96f683c0771" id="r_a0fc20cb24078f020fc04e96f683c0771"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_decl_visitor.html#a0fc20cb24078f020fc04e96f683c0771">wouldCreateCycle</a> (<a class="el" href="namespacest2cpp_1_1semantic.html#a04ded7b7fa589f2e5fa9ae2e7a22b3a3">SymbolId</a> derived, <a class="el" href="namespacest2cpp_1_1semantic.html#a04ded7b7fa589f2e5fa9ae2e7a22b3a3">SymbolId</a> base)</td></tr>
+<tr class="memitem:a0fc20cb24078f020fc04e96f683c0771" id="r_a0fc20cb24078f020fc04e96f683c0771"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_decl_visitor.html#a0fc20cb24078f020fc04e96f683c0771">wouldCreateCycle</a> (<a class="el" href="namespacest2cpp_1_1semantic.html#a04ded7b7fa589f2e5fa9ae2e7a22b3a3">SymbolId</a> derived, <a class="el" href="namespacest2cpp_1_1semantic.html#a04ded7b7fa589f2e5fa9ae2e7a22b3a3">SymbolId</a> <a class="el" href="_library_loader_8cpp.html#a3d77a3ecaf02989b9864283f281ba5d3">base</a>)</td></tr>
 <tr class="memdesc:a0fc20cb24078f020fc04e96f683c0771"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether deriving from base would create a circular inheritance chain.  <br /></td></tr>
 <tr class="separator:a0fc20cb24078f020fc04e96f683c0771"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab123d121a9b2abad8279deb298f6df18" id="r_ab123d121a9b2abad8279deb298f6df18"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacest2cpp_1_1semantic.html#a1ce5cfb2039b7cc4b3a96b0b0b8e9341">TypeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_decl_visitor.html#ab123d121a9b2abad8279deb298f6df18">resolveNamedTypeSilent</a> (const std::string &amp;<a class="el" href="_library_loader_8cpp.html#a9b45b3e13bd9167aab02e17e08916231">name</a>)</td></tr>
+<tr class="memdesc:ab123d121a9b2abad8279deb298f6df18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolve a user-defined named type to its TypeId.  <br /></td></tr>
+<tr class="separator:ab123d121a9b2abad8279deb298f6df18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af42c27ed7726b1772add0b6f80702504" id="r_af42c27ed7726b1772add0b6f80702504"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_decl_visitor.html#af42c27ed7726b1772add0b6f80702504">computeTopoOrders</a> ()</td></tr>
 <tr class="memdesc:af42c27ed7726b1772add0b6f80702504"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the topological orders for FBs and structs.  <br /></td></tr>
 <tr class="separator:af42c27ed7726b1772add0b6f80702504"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -200,17 +206,16 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a99d65f435c16eac72cf9f94dce18de12" id="r_a99d65f435c16eac72cf9f94dce18de12"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacest2cpp_1_1semantic.html#a04ded7b7fa589f2e5fa9ae2e7a22b3a3">SymbolId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_decl_visitor.html#a99d65f435c16eac72cf9f94dce18de12">valuePayloadSymbol</a> (<a class="el" href="namespacest2cpp_1_1semantic.html#a1ce5cfb2039b7cc4b3a96b0b0b8e9341">TypeId</a> typeId) const</td></tr>
 <tr class="memdesc:a99d65f435c16eac72cf9f94dce18de12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the symbol that a resolved type holds by value, or 0.  <br /></td></tr>
 <tr class="separator:a99d65f435c16eac72cf9f94dce18de12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9cde37ee262c8d3899ff415f2f245dc0" id="r_a9cde37ee262c8d3899ff415f2f245dc0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacest2cpp_1_1semantic.html#a1ce5cfb2039b7cc4b3a96b0b0b8e9341">TypeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_decl_visitor.html#a9cde37ee262c8d3899ff415f2f245dc0">resolveTypeRef</a> (const <a class="el" href="struct_type_ref.html">TypeRef</a> &amp;typeRef, uint32_t line=0)</td></tr>
-<tr class="memdesc:a9cde37ee262c8d3899ff415f2f245dc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolve a type reference to a TypeId.  <br /></td></tr>
-<tr class="separator:a9cde37ee262c8d3899ff415f2f245dc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9855ccf58bbffb9310b101131fb06b88" id="r_a9855ccf58bbffb9310b101131fb06b88"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacest2cpp_1_1semantic.html#a1ce5cfb2039b7cc4b3a96b0b0b8e9341">TypeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_decl_visitor.html#a9855ccf58bbffb9310b101131fb06b88">resolveTypeRef</a> (const <a class="el" href="struct_type_ref.html">TypeRef</a> &amp;typeRef, uint32_t line=0, uint32_t col=0)</td></tr>
+<tr class="memdesc:a9855ccf58bbffb9310b101131fb06b88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolve a type reference to a TypeId.  <br /></td></tr>
+<tr class="separator:a9855ccf58bbffb9310b101131fb06b88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa01f8857e9296dc342d25a06143f5eb8" id="r_aa01f8857e9296dc342d25a06143f5eb8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacest2cpp_1_1semantic.html#a1ce5cfb2039b7cc4b3a96b0b0b8e9341">TypeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_decl_visitor.html#aa01f8857e9296dc342d25a06143f5eb8">resolveBaseType</a> (<a class="el" href="_a_s_t_8h.html#ae96315ee246bd4a509133af84c88c5e1">BaseType</a> baseType)</td></tr>
 <tr class="memdesc:aa01f8857e9296dc342d25a06143f5eb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolve an elementary base type to its registered TypeId.  <br /></td></tr>
 <tr class="separator:aa01f8857e9296dc342d25a06143f5eb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5619320fefc1e5a8c5efd5e675890ef4" id="r_a5619320fefc1e5a8c5efd5e675890ef4"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_decl_visitor.html#a5619320fefc1e5a8c5efd5e675890ef4">baseTypeName</a> (<a class="el" href="_a_s_t_8h.html#ae96315ee246bd4a509133af84c88c5e1">BaseType</a> baseType)</td></tr>
 <tr class="memdesc:a5619320fefc1e5a8c5efd5e675890ef4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the canonical ST name of an elementary base type.  <br /></td></tr>
 <tr class="separator:a5619320fefc1e5a8c5efd5e675890ef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb466984e721ee2edbb6c4053f61fab1" id="r_adb466984e721ee2edbb6c4053f61fab1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacest2cpp_1_1semantic.html#a1ce5cfb2039b7cc4b3a96b0b0b8e9341">TypeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_decl_visitor.html#adb466984e721ee2edbb6c4053f61fab1">resolveNamedType</a> (const std::string &amp;name, uint32_t line=0)</td></tr>
-<tr class="memdesc:adb466984e721ee2edbb6c4053f61fab1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolve a user-defined named type to its TypeId.  <br /></td></tr>
+<tr class="memitem:adb466984e721ee2edbb6c4053f61fab1" id="r_adb466984e721ee2edbb6c4053f61fab1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacest2cpp_1_1semantic.html#a1ce5cfb2039b7cc4b3a96b0b0b8e9341">TypeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_decl_visitor.html#adb466984e721ee2edbb6c4053f61fab1">resolveNamedType</a> (const std::string &amp;<a class="el" href="_library_loader_8cpp.html#a9b45b3e13bd9167aab02e17e08916231">name</a>, uint32_t line=0)</td></tr>
 <tr class="separator:adb466984e721ee2edbb6c4053f61fab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf592d2bfe4780336b2a5ca7ed0948c8" id="r_adf592d2bfe4780336b2a5ca7ed0948c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structst2cpp_1_1semantic_1_1_source_location.html">SourceLocation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_decl_visitor.html#adf592d2bfe4780336b2a5ca7ed0948c8">makeLocation</a> (uint32_t line, uint32_t col=0) const</td></tr>
 <tr class="memdesc:adf592d2bfe4780336b2a5ca7ed0948c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build a <a class="el" href="structst2cpp_1_1semantic_1_1_source_location.html" title="Source location information.">SourceLocation</a> tagged as coming from the input file.  <br /></td></tr>
@@ -250,7 +255,7 @@ Private Attributes</h2></td></tr>
 <tr class="separator:ab301d6e8ba63caeb20cf5b9fef6eca40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Visitor for declaration phase (Sprint 2) </p>
+<div class="textblock"><p>Visitor for declaration phase. </p>
 <p>First pass: registers all declarations in symbol table. Handles: user-defined types, interfaces, <a class="el" href="struct_p_o_u.html">POU</a>, variables, methods. Supports forward references by doing two sub-passes:</p><ol type="1">
 <li>Register all type/POU/interface declarations (headers only)</li>
 <li>Register variables, methods, inheritance links </li>
@@ -958,6 +963,40 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ab22eb6d4b697d500f5c553ba4a5adde7" name="ab22eb6d4b697d500f5c553ba4a5adde7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab22eb6d4b697d500f5c553ba4a5adde7">&#9670;&#160;</a></span>registerTypeAlias()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void st2cpp::semantic::DeclVisitor::registerTypeAlias </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_type_alias.html">TypeAlias</a> &amp;&#160;</td>
+          <td class="paramname"><em>alias</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Register a named type alias (TYPE Name : &lt;TypeRef&gt;; END_TYPE). </p>
+<p>Resolves the underlying type reference and binds the alias name to its canonical TypeId: the alias gets a Type symbol (so variables may use it, including as an array element) and the <a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html">SymbolTable</a> name lookup registers the name against the canonical type. Alias-to-alias chains resolve when the referenced alias is declared earlier and already resolved; unknown or not yet resolvable targets are reported here (once). </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">alias</td><td>The alias to register </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a5222ecc305825e7fd605c761f4ab2955" name="a5222ecc305825e7fd605c761f4ab2955"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5222ecc305825e7fd605c761f4ab2955">&#9670;&#160;</a></span>registerVarDecl()</h2>
 
@@ -1277,8 +1316,35 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+</div>
+</div>
+<a id="ab123d121a9b2abad8279deb298f6df18" name="ab123d121a9b2abad8279deb298f6df18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab123d121a9b2abad8279deb298f6df18">&#9670;&#160;</a></span>resolveNamedTypeSilent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacest2cpp_1_1semantic.html#a1ce5cfb2039b7cc4b3a96b0b0b8e9341">TypeId</a> st2cpp::semantic::DeclVisitor::resolveNamedTypeSilent </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
 <p>Resolve a user-defined named type to its TypeId. </p>
-<p>Searches only the global (type) namespace via lookupGlobal so a member variable or struct field with the same name (case-insensitive) can never shadow a type. Accepts Type, FunctionBlock, Program and <a class="el" href="struct_interface.html">Interface</a> symbols as valid type declarations; unknown names are reported as an InvalidTypeName diagnostic, pointing at the declaration that referenced the type when a line is available. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Searches only the global (type) namespace via lookupGlobal so a member variable or struct field with the same name (case-insensitive) can never shadow a type. Accepts Type, FunctionBlock, Program and <a class="el" href="struct_interface.html">Interface</a> symbols as valid type declarations; unknown names are reported as an InvalidTypeName diagnostic, pointing at the declaration that referenced the type when a line is available.</p>
+<p>When importer has loaded external libraries, a second step consults the external scope (library-provided enum/struct/FB types); project-local types always win, external ones are a pure fallback. External symbols are never reported as "unknown" errors here. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>The type name to resolve </td></tr>
     <tr><td class="paramname">line</td><td>The source line of the referencing declaration (0 when unknown) </td></tr>
@@ -1324,8 +1390,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a9cde37ee262c8d3899ff415f2f245dc0" name="a9cde37ee262c8d3899ff415f2f245dc0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9cde37ee262c8d3899ff415f2f245dc0">&#9670;&#160;</a></span>resolveTypeRef()</h2>
+<a id="a9855ccf58bbffb9310b101131fb06b88" name="a9855ccf58bbffb9310b101131fb06b88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9855ccf58bbffb9310b101131fb06b88">&#9670;&#160;</a></span>resolveTypeRef()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1343,7 +1409,13 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>line</em> = <code>0</code>&#160;</td>
+          <td class="paramname"><em>line</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>col</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>

@@ -1,0 +1,25 @@
+<map id="st2cpp::semantic::LibraryDescriptorBuilder::Impl" name="st2cpp::semantic::LibraryDescriptorBuilder::Impl">
+<area shape="rect" id="Node000001" title="Internal state shared by every export step." alt="" coords="723,1016,916,1296"/>
+<area shape="rect" id="Node000002" href="$struct_translation_unit.html" title=" " alt="" coords="202,631,314,796"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="266,796,273,836,285,877,303,916,328,952,368,990,413,1023,462,1052,512,1076,614,1112,707,1135,706,1140,613,1118,510,1081,459,1057,410,1028,365,994,324,955,299,919,280,879,268,837,261,797"/>
+<area shape="rect" id="Node000003" href="$structst2cpp_1_1semantic_1_1_semantic_info.html" title="Result of semantic analysis, passed to CodeGenerator." alt="" coords="338,631,557,796"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="481,795,519,874,544,914,571,952,603,987,638,1021,711,1080,707,1084,634,1025,599,991,567,955,539,917,515,876,476,797"/>
+<area shape="rect" id="Node000004" href="$classst2cpp_1_1semantic_1_1_diagnostics.html" title="Diagnostic collector and reporter." alt="" coords="5,5,215,411"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="217,395,229,409,254,429,278,439,302,450,328,471,355,505,378,541,415,614,410,617,373,544,350,508,324,475,299,455,276,444,252,433,226,413,213,399"/>
+<area shape="rect" id="Node000005" href="$structst2cpp_1_1semantic_1_1_semantic_info_1_1_process_image_config.html" title=" " alt="" coords="239,138,434,278"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="354,278,428,614,423,615,349,279"/>
+<area shape="rect" id="Node000006" href="$structst2cpp_1_1semantic_1_1_preserved_semantics.html" title="Preserved&#45;semantics record (Fase 6)" alt="" coords="459,138,657,278"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="545,279,471,615,466,614,540,278"/>
+<area shape="rect" id="Node000007" href="$classst2cpp_1_1library_1_1_library_registry.html" title="Contains the registered libraries, retrievable by id (case&#45;insensitive, IEC 61131&#45;3 style)." alt="" coords="682,68,863,348"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="735,350,704,404,685,429,662,452,638,463,615,464,593,465,570,476,540,505,515,541,494,578,478,616,473,614,489,576,510,538,536,502,567,471,592,460,615,459,637,458,659,447,681,426,700,402,730,347"/>
+<area shape="rect" id="Node000008" href="$classst2cpp_1_1semantic_1_1_symbol_table.html" title=" " alt="" coords="581,473,823,953"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="768,953,781,999,775,1001,763,954"/>
+<area shape="rect" id="Node000009" href="$structst2cpp_1_1semantic_1_1_library_export_options.html" title="Options controlling a library export." alt="" coords="847,633,1026,793"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="918,795,863,1001,858,999,913,793"/>
+<area shape="rect" id="Node000010" href="$structst2cpp_1_1semantic_1_1_library_export_result.html" title="Result of an export attempt." alt="" coords="1050,663,1229,763"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="1128,764,1094,856,1069,907,1040,955,988,1017,930,1072,927,1068,984,1014,1036,952,1065,904,1089,854,1123,763"/>
+<area shape="rect" id="Node000011" href="$classst2cpp_1_1library_1_1_library_descriptor.html" title="Root model of a Library Descriptor." alt="" coords="1253,483,1412,943"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="1255,940,1243,955,1209,987,1172,1016,1091,1065,1009,1102,933,1129,931,1124,1007,1097,1089,1060,1169,1012,1206,983,1239,952,1251,937"/>
+<area shape="rect" id="Node000012" href="$structst2cpp_1_1library_1_1_library_cpp_binding.html" title="C++ binding at library level (include + namespace)." alt="" coords="1253,158,1412,258"/>
+<area shape="poly" id="edge11_Node000011_Node000012" title=" " alt="" coords="1335,258,1335,467,1330,467,1330,258"/>
+</map>

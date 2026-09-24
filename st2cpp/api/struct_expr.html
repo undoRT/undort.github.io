@@ -106,15 +106,15 @@ Collaboration diagram for Expr:</div>
 <div class="dyncontent">
 <div class="center"><img src="struct_expr__coll__graph.png" border="0" usemap="#a_expr_coll__map" alt="Collaboration graph"/></div>
 <map name="a_expr_coll__map" id="a_expr_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,132,131"/>
+<area shape="rect" title=" " alt="" coords="5,5,132,151"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a203ee809bfe0344291e61abbad803312" id="r_a203ee809bfe0344291e61abbad803312"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a203ee809bfe0344291e61abbad803312"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="struct_expr.html#a203ee809bfe0344291e61abbad803312">Expr</a> (T &amp;&amp;v, uint32_t ln=0)</td></tr>
-<tr class="separator:a203ee809bfe0344291e61abbad803312"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7849ba8ed851558dea57573e7a0644a3" id="r_a7849ba8ed851558dea57573e7a0644a3"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a7849ba8ed851558dea57573e7a0644a3"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="struct_expr.html#a7849ba8ed851558dea57573e7a0644a3">Expr</a> (T &amp;&amp;v, uint32_t ln=0, uint32_t cl=0)</td></tr>
+<tr class="separator:a7849ba8ed851558dea57573e7a0644a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -122,14 +122,16 @@ Public Attributes</h2></td></tr>
 <tr class="separator:ae25b0c51f1df1122a092005f7acad04c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44cb1cb18774e56c06581a2a17736e31" id="r_a44cb1cb18774e56c06581a2a17736e31"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_expr.html#a44cb1cb18774e56c06581a2a17736e31">line</a> = 0</td></tr>
 <tr class="separator:a44cb1cb18774e56c06581a2a17736e31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a014fb1c28ad3594fdd9ba09c8a62fb6d" id="r_a014fb1c28ad3594fdd9ba09c8a62fb6d"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_expr.html#a014fb1c28ad3594fdd9ba09c8a62fb6d">col</a> = 0</td></tr>
+<tr class="separator:a014fb1c28ad3594fdd9ba09c8a62fb6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a528087cc47f0a98001159b7906ee19bf" id="r_a528087cc47f0a98001159b7906ee19bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_a_s_t_8h.html#a125c7decc8b9d2d5620c653048cf7e4e">TypeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_expr.html#a528087cc47f0a98001159b7906ee19bf">resolvedTypeId</a> = 0</td></tr>
 <tr class="separator:a528087cc47f0a98001159b7906ee19bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d6d83aa55493c0101200cc5cd20e264" id="r_a2d6d83aa55493c0101200cc5cd20e264"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_a_s_t_8h.html#a51228067c0a884af91c0d846900e0f90">SymbolId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_expr.html#a2d6d83aa55493c0101200cc5cd20e264">symbolId</a> = 0</td></tr>
 <tr class="separator:a2d6d83aa55493c0101200cc5cd20e264"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a203ee809bfe0344291e61abbad803312" name="a203ee809bfe0344291e61abbad803312"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a203ee809bfe0344291e61abbad803312">&#9670;&#160;</a></span>Expr()</h2>
+<a id="a7849ba8ed851558dea57573e7a0644a3" name="a7849ba8ed851558dea57573e7a0644a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7849ba8ed851558dea57573e7a0644a3">&#9670;&#160;</a></span>Expr()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -149,7 +151,13 @@ template&lt;typename T &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>ln</em> = <code>0</code>&#160;</td>
+          <td class="paramname"><em>ln</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>cl</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -167,6 +175,20 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a014fb1c28ad3594fdd9ba09c8a62fb6d" name="a014fb1c28ad3594fdd9ba09c8a62fb6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a014fb1c28ad3594fdd9ba09c8a62fb6d">&#9670;&#160;</a></span>col</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t Expr::col = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a44cb1cb18774e56c06581a2a17736e31" name="a44cb1cb18774e56c06581a2a17736e31"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a44cb1cb18774e56c06581a2a17736e31">&#9670;&#160;</a></span>line</h2>
 

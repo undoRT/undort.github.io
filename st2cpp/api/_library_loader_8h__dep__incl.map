@@ -1,0 +1,25 @@
+<map id="include/library/LibraryLoader.h" name="include/library/LibraryLoader.h">
+<area shape="rect" id="Node000001" title="Loads a LibraryDescriptor from JSON and validates it." alt="" coords="929,5,1147,31"/>
+<area shape="rect" id="Node000002" href="$_project_loader_8h.html" title="Loads every configured Library Descriptor into a LibraryRegistry." alt="" coords="489,93,712,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="963,36,725,81,654,96,653,91,724,76,962,31"/>
+<area shape="rect" id="Node000009" href="$_library_loader_8cpp.html" title="LibraryLoader implementation: JSON &#45;&gt; LibraryDescriptor (validated)" alt="" coords="736,93,943,119"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="1000,39,867,96,865,91,998,34"/>
+<area shape="rect" id="Node000010" href="$test__library__descriptor__builder_8cpp.html" title="Tests for LibraryDescriptorBuilder: ST + SemanticInfo &#45;&gt; semantic&#45;only LibraryDescriptor &#45;&gt; JSON &#45;&gt; r..." alt="" coords="967,79,1109,133"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="1041,44,1041,79,1035,79,1035,44"/>
+<area shape="rect" id="Node000011" href="$test__library__loader_8cpp.html" title="Tests for LibraryLoader: JSON &#45;&gt; LibraryDescriptor &#45;&gt; validation." alt="" coords="1133,86,1279,126"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="1074,35,1170,83,1168,88,1071,39"/>
+<area shape="rect" id="Node000012" href="$test__library__registry_8cpp.html" title="Tests for LibraryRegistry." alt="" coords="1303,86,1456,126"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="1104,31,1292,76,1318,83,1317,88,1291,81,1103,36"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html" title="Command&#45;line driver for the st2cpp transpiler." alt="" coords="5,189,129,214"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="502,123,333,149,141,184,110,191,109,186,140,179,332,144,502,118"/>
+<area shape="rect" id="Node000004" href="$_project_loader_8cpp.html" title="ProjectLoader implementation." alt="" coords="153,189,363,214"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="546,125,301,191,300,186,545,120"/>
+<area shape="rect" id="Node000005" href="$test__codegen__external__library_8cpp.html" title="C++ generation of external library C++ bindings." alt="" coords="387,181,606,221"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="580,130,520,183,516,179,576,126"/>
+<area shape="rect" id="Node000006" href="$test__project__loader_8cpp.html" title="Tests for ProjectLoader: ProjectConfig &#45;&gt; LibraryRegistry." alt="" coords="631,181,779,221"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="625,126,685,179,682,183,622,130"/>
+<area shape="rect" id="Node000007" href="$test__semantic__library_8cpp.html" title="Semantic integration tests: LibraryRegistry &#45;&gt; SemanticAnalyzer." alt="" coords="803,181,966,221"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="649,120,828,179,827,184,648,126"/>
+<area shape="rect" id="Node000008" href="$test__compilation_8cpp.html" title="Implementation of test cases for compilation of generated code." alt="" coords="990,189,1185,214"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="667,119,725,131,1023,186,1022,191,724,136,666,124"/>
+</map>

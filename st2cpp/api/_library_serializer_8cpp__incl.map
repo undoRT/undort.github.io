@@ -1,0 +1,39 @@
+<map id="src/library/LibrarySerializer.cpp" name="src/library/LibrarySerializer.cpp">
+<area shape="rect" id="Node000001" title="LibrarySerializer implementation." alt="" coords="361,5,584,31"/>
+<area shape="rect" id="Node000002" href="$_library_serializer_8h.html" title="Serializes a LibraryDescriptor back to JSON." alt="" coords="231,79,416,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="450,33,361,75,359,70,448,28"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="440,79,505,104"/>
+<area shape="poly" id="edge21_Node000001_Node000014" title=" " alt="" coords="475,31,475,65,470,65,470,31"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="529,79,595,104"/>
+<area shape="poly" id="edge22_Node000001_Node000015" title=" " alt="" coords="489,29,538,68,535,72,485,33"/>
+<area shape="rect" id="Node000003" href="$_json_value_8h.html" title="Minimal self&#45;contained JSON DOM, parser and serializer." alt="" coords="158,225,286,251"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="317,106,240,216,236,213,313,103"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="293,299,351,324"/>
+<area shape="poly" id="edge20_Node000002_Node000007" title=" " alt="" coords="326,104,325,284,319,284,321,104"/>
+<area shape="rect" id="Node000010" href="$_library_descriptor_8h.html" title="Data model of a Library Descriptor (JSON &#45;&gt; C++ object model)" alt="" coords="371,152,561,177"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="347,102,432,143,429,148,345,106"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="90,299,157,324"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="208,253,152,293,149,288,205,249"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="463,299,538,324"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="267,248,451,295,450,300,266,253"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="181,299,268,324"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="225,251,226,285,221,285,220,251"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="240,249,296,288,293,293,237,253"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="5,299,65,324"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="193,253,79,296,78,291,191,248"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="376,299,439,324"/>
+<area shape="poly" id="edge8_Node000003_Node000009" title=" " alt="" coords="253,248,365,291,364,296,251,253"/>
+<area shape="poly" id="edge17_Node000010_Node000005" title=" " alt="" coords="471,177,497,285,492,286,466,178"/>
+<area shape="poly" id="edge18_Node000010_Node000007" title=" " alt="" coords="456,180,345,291,341,287,452,176"/>
+<area shape="poly" id="edge19_Node000010_Node000009" title=" " alt="" coords="464,179,420,287,415,285,459,177"/>
+<area shape="rect" id="Node000011" href="$_a_s_t_8h.html" title="Abstract Syntax Tree nodes for Structured Text." alt="" coords="513,225,595,251"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="482,175,531,214,527,219,478,179"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="655,299,733,324"/>
+<area shape="poly" id="edge16_Node000010_Node000012" title=" " alt="" coords="504,175,555,195,609,223,647,254,677,286,674,290,643,258,606,228,553,199,502,180"/>
+<area shape="poly" id="edge15_Node000011_Node000005" title=" " alt="" coords="547,253,520,289,515,286,543,249"/>
+<area shape="poly" id="edge11_Node000011_Node000007" title=" " alt="" coords="518,253,365,300,364,294,516,248"/>
+<area shape="poly" id="edge12_Node000011_Node000009" title=" " alt="" coords="532,253,445,295,442,290,529,248"/>
+<area shape="poly" id="edge13_Node000011_Node000012" title=" " alt="" coords="578,248,660,290,658,295,575,253"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="563,299,631,324"/>
+<area shape="poly" id="edge14_Node000011_Node000013" title=" " alt="" coords="563,250,585,286,581,288,559,252"/>
+</map>

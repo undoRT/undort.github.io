@@ -1,0 +1,9 @@
+<map id="include/semantic/LibrarySymbolImporter.h" name="include/semantic/LibrarySymbolImporter.h">
+<area shape="rect" id="Node000001" title="Imports external library symbols into the semantic SymbolTable." alt="" coords="267,5,450,45"/>
+<area shape="rect" id="Node000002" href="$_library_symbol_importer_8cpp.html" title="LibrarySymbolImporter implementation." alt="" coords="5,101,208,141"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="296,53,159,103,157,98,294,48"/>
+<area shape="rect" id="Node000003" href="$_semantic_analyzer_8cpp.html" title="Semantic analyzer implementation (DeclVisitor + BodyVisitor integration)" alt="" coords="232,108,485,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="361,59,361,108,356,108,356,59"/>
+<area shape="rect" id="Node000004" href="$test__library__descriptor__builder_8cpp.html" title="Tests for LibraryDescriptorBuilder: ST + SemanticInfo &#45;&gt; semantic&#45;only LibraryDescriptor &#45;&gt; JSON &#45;&gt; r..." alt="" coords="510,93,653,148"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="417,48,520,91,518,96,415,53"/>
+</map>

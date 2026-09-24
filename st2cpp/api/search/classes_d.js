@@ -1,9 +1,23 @@
 var searchData=
 [
-  ['testhelper_0',['TestHelper',['../class_test_helper.html',1,'']]],
-  ['token_1',['Token',['../struct_token.html',1,'']]],
-  ['translationunit_2',['TranslationUnit',['../struct_translation_unit.html',1,'']]],
-  ['typeinfo_3',['TypeInfo',['../structst2cpp_1_1semantic_1_1_type_info.html',1,'st2cpp::semantic']]],
-  ['typeref_4',['TypeRef',['../struct_type_ref.html',1,'']]],
-  ['typesystemtest_5',['TypeSystemTest',['../class_type_system_test.html',1,'']]]
+  ['scope_0',['scope',['../structst2cpp_1_1semantic_1_1_scope.html',1,'st2cpp::semantic::Scope'],['../struct_scope_manager_1_1_scope.html',1,'ScopeManager::Scope']]],
+  ['scopemanager_1',['ScopeManager',['../class_scope_manager.html',1,'']]],
+  ['semanticanalyzer_2',['SemanticAnalyzer',['../classst2cpp_1_1semantic_1_1_semantic_analyzer.html',1,'st2cpp::semantic']]],
+  ['semanticinfo_3',['SemanticInfo',['../structst2cpp_1_1semantic_1_1_semantic_info.html',1,'st2cpp::semantic']]],
+  ['semanticlibrarytest_4',['SemanticLibraryTest',['../class_semantic_library_test.html',1,'']]],
+  ['sizeofexpr_5',['SizeofExpr',['../struct_sizeof_expr.html',1,'']]],
+  ['sourcelocation_6',['SourceLocation',['../structst2cpp_1_1semantic_1_1_source_location.html',1,'st2cpp::semantic']]],
+  ['sparseentry_7',['SparseEntry',['../structst2cpp_1_1library_1_1_init_value_1_1_sparse_entry.html',1,'st2cpp::library::InitValue']]],
+  ['stmt_8',['Stmt',['../struct_stmt.html',1,'']]],
+  ['structentry_9',['StructEntry',['../structst2cpp_1_1library_1_1_init_value_1_1_struct_entry.html',1,'st2cpp::library::InitValue']]],
+  ['structfield_10',['StructField',['../structst2cpp_1_1library_1_1_struct_field.html',1,'st2cpp::library']]],
+  ['structinitexpr_11',['StructInitExpr',['../struct_struct_init_expr.html',1,'']]],
+  ['structmember_12',['StructMember',['../struct_struct_member.html',1,'']]],
+  ['structtype_13',['StructType',['../struct_struct_type.html',1,'']]],
+  ['structtypedef_14',['StructTypeDef',['../structst2cpp_1_1library_1_1_struct_type_def.html',1,'st2cpp::library']]],
+  ['supercallexpr_15',['SuperCallExpr',['../struct_super_call_expr.html',1,'']]],
+  ['symbol_16',['Symbol',['../structst2cpp_1_1semantic_1_1_symbol.html',1,'st2cpp::semantic']]],
+  ['symbolcppbinding_17',['SymbolCppBinding',['../structst2cpp_1_1library_1_1_symbol_cpp_binding.html',1,'st2cpp::library']]],
+  ['symboltable_18',['SymbolTable',['../classst2cpp_1_1semantic_1_1_symbol_table.html',1,'st2cpp::semantic']]],
+  ['symboltabletest_19',['SymbolTableTest',['../class_symbol_table_test.html',1,'']]]
 ];
