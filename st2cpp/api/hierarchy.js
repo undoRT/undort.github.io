@@ -121,6 +121,7 @@ var hierarchy =
     [ "st2cpp::semantic::SymbolTable", "classst2cpp_1_1semantic_1_1_symbol_table.html", null ],
     [ "testing::Test", null, [
       [ "BodyVisitorTest", "class_body_visitor_test.html", null ],
+      [ "CliExportTest", "class_cli_export_test.html", null ],
       [ "CodegenExternalLibraryTest", "class_codegen_external_library_test.html", null ],
       [ "CodegenSemanticTest", "class_codegen_semantic_test.html", null ],
       [ "CompilationTest", "class_compilation_test.html", null ],

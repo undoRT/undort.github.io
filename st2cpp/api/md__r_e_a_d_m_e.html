@@ -221,7 +221,16 @@ External Libraries</h1>
 </div><!-- fragment --><p>The libraries are loaded into a <code>LibraryRegistry</code>, injected into semantic analysis, and the generated C++ emits namespace-qualified calls, FB instance methods, and the required <code>#include</code>s automatically. Full JSON schemas: `docs/12-library-descriptor-spec.md` and `docs/13-project-configuration-spec.md`. Runnable example: <a href="examples/external_library"><code>examples/external_library</code></a>.</p>
 <h2><a class="anchor" id="autotoc_md14"></a>
 Exporting descriptors from ST</h2>
-<p>The pipeline also runs in the <b>export</b> direction: <code>LibraryDescriptorBuilder</code> turns analyzed ST directly into a valid v1.0 descriptor (semantic-only, no C++ bindings), which can be serialized to JSON and re-imported. Functions and function blocks no longer require a <code>cppBinding</code> section, so ST-originated libraries load cleanly. See `docs/15-library-descriptor-export.md`.</p>
+<p>The pipeline also runs in the <b>export</b> direction: <code>LibraryDescriptorBuilder</code> turns analyzed ST directly into a valid v1.0 descriptor (semantic-only, no C++ bindings), which can be serialized to JSON and re-imported. Functions and function blocks no longer require a <code>cppBinding</code> section, so ST-originated libraries load cleanly.</p>
+<div class="fragment"><div class="line"># Single file → reusable library descriptor</div>
+<div class="line">./st2cpp lib.st --export-descriptor lib.json \</div>
+<div class="line">    --lib-id timerlib --lib-name TimerLib --lib-version 1.0.0</div>
+<div class="line"> </div>
+<div class="line"># Whole workspace, merged as one library, resolved against external libraries</div>
+<div class="line">./st2cpp --workspace ./plc --export-descriptor mylib.json \</div>
+<div class="line">    --lib-id mylib --lib-name MyLib --lib-version 2.0.0 \</div>
+<div class="line">    --ext-libs project.json --lib-dependency timerlib=^1.0.0</div>
+</div><!-- fragment --><p>See `docs/15-library-descriptor-export.md`.</p>
 <hr  />
 <h1><a class="anchor" id="autotoc_md16"></a>
 Documentation</h1>
@@ -258,7 +267,7 @@ Documentation</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">`14-examples.md`   </td><td class="markdownTableBodyNone">Example walkthroughs    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">`15-library-descriptor-export.md`   </td><td class="markdownTableBodyNone">Descriptor import (optional bindings) and export (<code>LibraryDescriptorBuilder</code>, ST → JSON)   </td></tr>
+<td class="markdownTableBodyNone">`15-library-descriptor-export.md`   </td><td class="markdownTableBodyNone">Descriptor import (optional bindings) and export (<code>LibraryDescriptorBuilder</code>, CLI <code>--export-descriptor</code>, ST → JSON)   </td></tr>
 </table>
 <hr  />
 <h1><a class="anchor" id="autotoc_md18"></a>
@@ -297,6 +306,18 @@ CLI Reference</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><code>--pi-marker &lt;bytes&gt;</code>   </td><td class="markdownTableBodyNone">Process Image Marker size in bytes (default: 1024)    </td></tr>
 <tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>--export-descriptor &lt;file.json&gt;</code>   </td><td class="markdownTableBodyNone">Export a semantic-only JSON Library Descriptor from the analyzed ST    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>--lib-id &lt;id&gt;</code>   </td><td class="markdownTableBodyNone">Library id for <code>--export-descriptor</code> (required)    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>--lib-name &lt;name&gt;</code>   </td><td class="markdownTableBodyNone">Library name for <code>--export-descriptor</code> (required)    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>--lib-version &lt;ver&gt;</code>   </td><td class="markdownTableBodyNone">Library semver version for <code>--export-descriptor</code> (required)    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>--lib-description &lt;text&gt;</code>   </td><td class="markdownTableBodyNone">Optional library description    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>--lib-dependency &lt;id&gt;=&lt;constraint&gt;</code>   </td><td class="markdownTableBodyNone"><a class="el" href="struct_version.html" title="Get version numbers as tuple.">Version</a> policy for an external dependency (repeatable)    </td></tr>
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><code>-v, --verbose</code>   </td><td class="markdownTableBodyNone">Print detailed processing information    </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><code>--strict</code>   </td><td class="markdownTableBodyNone">Strict IEC 61131-3 mode: block generation on semantic errors    </td></tr>
@@ -323,13 +344,14 @@ What's Supported</h1>
 <hr  />
 <h1><a class="anchor" id="autotoc_md22"></a>
 Testing</h1>
-<p>The project includes a comprehensive test suite using Google Test (<b>659 tests passing, 2 disabled, 23 suites</b>), covering:</p>
+<p>The project includes a comprehensive test suite using Google Test (<b>663 tests passing, 2 disabled, 24 suites</b>), covering:</p>
 <ul>
 <li><b>Lexing and parsing</b> of all IEC 61131-3 constructs</li>
 <li><b>Semantic analysis</b>: symbol resolution, type checking, scope chains, enums, structs, arrays, interfaces, inheritance, method overriding, forward type references and by-value dependency cycles, process image globals, and <b>external-library symbol import</b></li>
 <li><b>Code generation</b> for single-file and modular project output</li>
 <li><b>JSON, Library Descriptor and Project Configuration modules</b></li>
 <li><b>Library descriptor export</b>: ST → descriptor → canonical JSON → re-import round trip, dependency policies, and representability errors</li>
+<li><b>CLI export integration</b>: <code>--export-descriptor</code> end-to-end (single file, workspace, validation and error codes)</li>
 <li><b>End-to-end compilation</b> of generated C++ with a native compiler</li>
 </ul>
 <p>To build and run tests:</p>

@@ -18,7 +18,7 @@ var searchData=
   ['bodyvisitor_2ecpp_15',['BodyVisitor.cpp',['../_body_visitor_8cpp.html',1,'']]],
   ['bodyvisitor_2eh_16',['BodyVisitor.h',['../_body_visitor_8h.html',1,'']]],
   ['bodyvisitortest_17',['BodyVisitorTest',['../class_body_visitor_test.html',1,'']]],
-  ['bool_18',['bool',['../_a_s_t_8h.html#ae96315ee246bd4a509133af84c88c5e1aa97b2c144243b2b9d2c593ec268b62f5',1,'BOOL:&#160;AST.h'],['../namespacest2cpp_1_1json.html#a49ad73664e447d63e40038d9ece72a41ac26f15e86e3de4c398a8273272aba034',1,'st2cpp::json::Bool']]],
+  ['bool_18',['bool',['../namespacest2cpp_1_1json.html#a49ad73664e447d63e40038d9ece72a41ac26f15e86e3de4c398a8273272aba034',1,'st2cpp::json::Bool'],['../_a_s_t_8h.html#ae96315ee246bd4a509133af84c88c5e1aa97b2c144243b2b9d2c593ec268b62f5',1,'BOOL:&#160;AST.h']]],
   ['bool_5fliteral_19',['BOOL_LITERAL',['../_token_8h.html#aa520fbf142ba1e7e659590c07da31921abb6ee0a7765f0e36c60fe0acfbe89ff5',1,'Token.h']]],
   ['boolean_20',['boolean',['../structst2cpp_1_1json_1_1_json_value.html#a19e9f2b05b58fb2e638bb219cdea0720',1,'st2cpp::json::JsonValue::boolean'],['../namespacest2cpp_1_1semantic.html#a027967a77f4e509cefb599ab86d945e7a27226c864bac7454a8504f8edb15d95b',1,'st2cpp::semantic::Boolean']]],
   ['boollitexpr_21',['BoolLitExpr',['../struct_bool_lit_expr.html',1,'']]],

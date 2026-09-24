@@ -83,6 +83,7 @@ var annotated_dup =
     [ "CaseStmt", "struct_case_stmt.html", "struct_case_stmt" ],
     [ "CaseValue", "struct_case_value.html", "struct_case_value" ],
     [ "CastExpr", "struct_cast_expr.html", "struct_cast_expr" ],
+    [ "CliExportTest", "class_cli_export_test.html", "class_cli_export_test" ],
     [ "CodeGenerator", "class_code_generator.html", "class_code_generator" ],
     [ "CodegenExternalLibraryTest", "class_codegen_external_library_test.html", "class_codegen_external_library_test" ],
     [ "CodegenResult", "struct_codegen_result.html", "struct_codegen_result" ],
