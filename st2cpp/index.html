@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>st2cpp - Documentation | undoRT</title>
+    <meta name="description" content="st2cpp v0.4 — IEC 61131-3 Structured Text to native C++17, validated by a full semantic analysis stage, driven by JSON library descriptors, and exportable back to JSON.">
 
     <!-- shared CSS -->
     <link rel="stylesheet" href="../assets/css/undoRT.css">
@@ -20,7 +21,7 @@
     </a>
     <div class="topbar-sep"></div>
     <a href="index.html" class="topbar-product">st2cpp</a>
-    <span class="topbar-version">v0.2</span>
+    <span class="topbar-version">v0.4</span>
 
     <div class="topbar-actions">
         <button class="toc-toggle" aria-label="Toggle table of contents" aria-expanded="false">
@@ -78,14 +79,22 @@
     <nav class="sidebar" id="sidebar">
         <div class="sidebar-section-title">Getting Started</div>
         <a href="#overview" class="active">Overview</a>
+        <a href="#whats-new">What's New in v0.4</a>
         <a href="#installation">Installation</a>
         <a href="#quick-start">Quick Start</a>
 
-        <div class="sidebar-section-title">Usage</div>
-        <a href="#cli">CLI Reference</a>
-        <a href="#single-file">Single File Mode</a>
-        <a href="#project-mode">Project Mode</a>
-        <a href="#example">Full Example</a>
+        <div class="sidebar-section-title">Semantic Analysis</div>
+        <a href="#semantic">Why It Matters</a>
+        <a href="#semantic-passes">Two-Pass Analysis</a>
+        <a href="#strict-permissive">Strict vs Permissive</a>
+        <a href="#process-image">Process Image &amp; AT</a>
+
+        <div class="sidebar-section-title">Data &amp; Libraries (JSON)</div>
+        <a href="#json">Data-Driven by Design</a>
+        <a href="#descriptor">Library Descriptor v1.0</a>
+        <a href="#project-config">Project Configuration v1.0</a>
+        <a href="#import-export">Import &amp; Export</a>
+        <a href="#ext-libs">Using External Libraries</a>
 
         <div class="sidebar-section-title">Language</div>
         <a href="#supported">Supported Constructs</a>
@@ -93,6 +102,12 @@
         <a href="#function-calls">Function Calls</a>
         <a href="#method-visibility">Method Visibility</a>
         <a href="#limitations">Known Limitations</a>
+
+        <div class="sidebar-section-title">Usage</div>
+        <a href="#cli">CLI Reference</a>
+        <a href="#single-file">Single File Mode</a>
+        <a href="#project-mode">Project Mode</a>
+        <a href="#example">Full Example</a>
 
         <div class="sidebar-section-title">Internals</div>
         <a href="#architecture">Architecture</a>
@@ -103,42 +118,92 @@
 
     <main class="content">
 
-        <h1>st2cpp <span class="status-pill release">Released</span></h1>
+        <h1>st2cpp <span class="status-pill release">Released · v0.4</span></h1>
         <p class="lead">
-            <a href="https://github.com/undoRT/st2cpp">A transpiler that compiles IEC 61131-3 Structured Text into clean, native C++17.
-            No virtual machine, no interpreter — just standard C++ you can compile, debug, and integrate anywhere</a>.
+            A transpiler that compiles IEC 61131-3 Structured Text into clean, native C++17 — validated by a
+            complete semantic analysis stage and driven by JSON-defined data and external libraries.
+            No virtual machine, no interpreter — just auditable, standard C++ you can compile, debug, and ship anywhere.
         </p>
 
         <h2 id="overview">Overview</h2>
         <p>
             st2cpp is the compiler component of the <a href="../index.html">undoRT ecosystem</a>.
-            It takes <code>.st</code> source files as input and produces <code>.hpp</code> / <code>.cpp</code> pairs
-            that can be compiled with any C++17-capable toolchain.
+            It takes <code>.st</code> source files and produces <code>.hpp</code> / <code>.cpp</code> pairs
+            that compile with any C++17-capable toolchain.
         </p>
         <p>
-            Function Blocks become C++ structs. Programs become classes with a <code>run()</code> method.
-            The output is readable and auditable — not obfuscated machine code.
+            Before any code is emitted, your program is <strong>checked</strong>, not just parsed: a two-pass
+            semantic analysis verifies symbols, scopes, types, array bounds, inheritance and interfaces, and
+            process-image addresses — catching at build time the errors that would otherwise surface on a live plant.
+        </p>
+        <p>
+            And while st2cpp reads Structured Text, it <strong>speaks JSON</strong>: libraries, data types,
+            variables, dependencies and C++ bindings are declared in standard, versioned JSON descriptors that
+            the toolchain can both <em>import</em> (external libraries, project configuration) and <em>export</em>
+            (ST → library descriptor → JSON) with a guaranteed round trip.
         </p>
 
         <ul class="feature-list">
-            <li>All IEC 61131-3 elementary types</li>
-            <li>STRUCT, ENUM, arrays, pointers</li>
-            <li>FUNCTION, FUNCTION_BLOCK, PROGRAM</li>
-            <li>FB inheritance with SUPER^ access</li>
-            <li>Named and positional call syntax</li>
-            <li>VAR_OUTPUT binding via =></li>
-            <li>Modular project generation</li>
-            <li>Automatic dependency sorting</li>
+            <li>Full semantics — two-pass analysis, IEC case-insensitive resolution, type checking</li>
+            <li>Fail-fast <code>--strict</code> mode for CI and production builds</li>
+            <li>All IEC 61131-3 elementary types, STRUCT, ENUM, arrays, pointers, interfaces</li>
+            <li>FUNCTION / FUNCTION_BLOCK / PROGRAM, FB inheritance with <code>SUPER^</code></li>
+            <li>Named &amp; positional calls, <code>VAR_OUTPUT</code> binding via <code>=></code></li>
             <li>Method visibility (PRIVATE, PROTECTED, PUBLIC)</li>
-            <li>Header-only runtime (zero deps)</li>
-            <li>Single binary, no install required</li>
+            <li>Process Image <code>%I</code>/<code>%Q</code>/<code>%M</code> with auto-detection</li>
+            <li>External libraries &amp; data in JSON — Library Descriptor v1.0</li>
+            <li>ST → JSON export: semantic-only library descriptors with round trip</li>
+            <li>Modular project generation with automatic dependency sorting</li>
+            <li>Header-only runtime (zero dependencies), single binary, no install</li>
         </ul>
 
-        <div class="callout info">
-            <strong>💡 Integration:</strong> The generated C++ code is designed to work seamlessly with
-            <a href="../undoCore/">undoCore</a> and <a href="../undoPLC/">undoPLC</a>.
-            Use <code>ProcessImage</code> and <code>IoBus</code> for I/O management.
+        <div class="callout success">
+            <strong>v0.4 highlights:</strong> semantic analysis is production-ready, external libraries and
+            project configuration are defined in versioned JSON, and the compiler now <em>exports</em> ST back to
+            JSON library descriptors. Your tests count is now <strong>663 automated tests</strong>, executed on every commit.
         </div>
+
+        <h2 id="whats-new">What's New in v0.4</h2>
+        <table>
+            <thead><tr><th>Area</th><th>Feature</th><th>Benefit</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td>Semantic analysis</td>
+                    <td>Full two-pass analyzer: symbol table, scopes, type checking, interfaces &amp; inheritance verification, circular-dependency detection</td>
+                    <td>Errors are caught before codegen — fewer surprises on the target</td>
+                </tr>
+                <tr>
+                    <td>Semantic analysis</td>
+                    <td><code>--strict</code> vs <code>--permissive</code> modes</td>
+                    <td>Choose fail-fast CI builds or incremental adoption on existing code</td>
+                </tr>
+                <tr>
+                    <td>Data (JSON)</td>
+                    <td>Library Descriptor JSON v1.0 with loader, registry, validation and canonical serializer</td>
+                    <td>Declare libraries and data as portable, versioned data — not code</td>
+                </tr>
+                <tr>
+                    <td>Data (JSON)</td>
+                    <td>Project Configuration JSON v1.0 (<code>--ext-libs</code>)</td>
+                    <td>One config file wires libraries into semantic analysis and codegen</td>
+                </tr>
+                <tr>
+                    <td>Export (JSON)</td>
+                    <td><code>LibraryDescriptorBuilder</code>: ST → semantic-only descriptor → JSON, round-trippable</td>
+                    <td>Your ST logic becomes reusable, re-importable, machine-readable data</td>
+                </tr>
+                <tr>
+                    <td>Codegen</td>
+                    <td>External-library calls, namespace-qualified symbols and automatic <code>#include</code>s</td>
+                    <td>Call native C++ (or other ST libraries) from ST, cleanly</td>
+                </tr>
+                <tr>
+                    <td>Process image</td>
+                    <td><code>--pi-auto</code> detection and manual <code>--pi-input/output/marker</code></td>
+                    <td>Zero-config I/O mapping, or full control when you need it</td>
+                </tr>
+            </tbody>
+        </table>
 
         <h2 id="installation">Installation</h2>
 
@@ -165,7 +230,7 @@ unzip st2cpp-win-x64.zip
 st2cpp.exe --help</code></pre>
 
         <h3>Build from source</h3>
-        <p>Prerequisites: GCC 7+ / Clang 5+ / MSVC 2017+, CMake 3.16+</p>
+        <p>Prerequisites: a C++17 compiler (GCC 11+, Clang 15+, or MSVC 2019+), CMake 3.16+.</p>
         <pre><code>git clone https://github.com/undoRT/st2cpp.git
 cd st2cpp
 ./build.sh
@@ -182,8 +247,294 @@ make -j$(nproc)</code></pre>
 # Transpile an entire workspace in project mode
 ./st2cpp --workspace ./src --project-style --output-dir build --namespace myplc
 
+# Wire in external libraries declared in JSON
+./st2cpp --workspace . --ext-libs project.json --namespace myplc
+
+# Fail-fast semantic validation for CI
+./st2cpp program.st --strict
+
 # Compile the generated C++
 g++ -std=c++17 -I./st2cpp_includes build/Programs/Main.cpp -o plc_main</code></pre>
+
+        <!-- ====================================================================
+             SEMANTIC ANALYSIS
+        ===================================================================== -->
+
+        <h2 id="semantic">Semantic Analysis — Code You Can Trust</h2>
+        <p>
+            St2cpp doesn't stop at parsing. Every source is <strong>analyzed</strong> before code generation:
+            the analyzer builds a full symbol table with case-insensitive IEC 61131-3 identifier resolution,
+            resolves type references across scopes, and checks assignments, calls, array indices, and member
+            accesses for type compatibility.
+        </p>
+        <p>
+            Because PLC programs run critical equipment, errors are surfaced <strong>at compile time</strong>
+            with precise <code>file:line:col</code> diagnostics and stable error codes — so a semantics failure
+            never becomes a runtime failure on your controller.
+        </p>
+
+        <h3 id="semantic-passes">Two-Pass Analysis</h3>
+        <ul class="feature-list">
+            <li><strong>First pass</strong> — registers every enum, struct, interface and POU header with a stable type id, so forward references (a struct or FB that uses a type declared later) resolve correctly.</li>
+            <li><strong>Second pass</strong> — resolves every body: names, types, expressions, calls, members.</li>
+            <li><strong>Declaration-order independent</strong> — the result is identical no matter how your files are ordered after a workspace merge.</li>
+            <li><strong>Circular dependency detection</strong> — by-value cycles (<code>A</code> contains <code>B</code> contains <code>A</code>) are reported; pointer / <code>REF_TO</code> cycles stay legal, as in IEC.</li>
+            <li><strong>Inheritance &amp; interfaces</strong> — <code>EXTENDS</code>/<code>SUPER^</code> resolution and <code>IMPLEMENTS</code> contract verification (abstract methods, overrides).</li>
+            <li><strong>Enums are typed</strong> — enumerators carry their enum type, usable in assignments and comparisons.</li>
+        </ul>
+
+        <h3 id="strict-permissive">Strict vs Permissive Modes</h3>
+        <table>
+            <thead><tr><th>Mode</th><th>Behaviour</th><th>Best for</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td><code>Permissive</code> (default)</td>
+                    <td>Collects diagnostics, surfaces them with <code>--verbose</code>, but still generates, gracefully falling back to legacy inference</td>
+                    <td>Incremental adoption on existing codebases</td>
+                </tr>
+                <tr>
+                    <td><code>Strict</code> (<code>--strict</code>)</td>
+                    <td>Prints every diagnostic and <strong>blocks</strong> generation as soon as any error is found</td>
+                    <td>CI pipelines, production and safety-critical builds</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3 id="process-image">Process Image &amp; AT Addresses</h3>
+        <p>
+            Globals mapped with <code>AT %I…</code>, <code>AT %Q…</code> and <code>AT %M…</code> are resolved and
+            validated against the configured process image layout, and accessors are generated for bit, byte, word
+            and dword sizes. <code>--pi-auto</code> detects the image size automatically; leave it on for zero-config
+            I/O, or use <code>--pi-input/output/marker</code> to pin exact sizes.
+        </p>
+
+        <!-- ====================================================================
+             JSON DATA & LIBRARIES
+        ===================================================================== -->
+
+        <h2 id="json">Data-Driven by Design — Everything Is JSON</h2>
+        <p>
+            Libraries, data types and projects are <strong>data</strong>, not code. st2cpp ships a self-contained
+            JSON engine and two versioned schemas, so your engineering data survives between tools, versions and
+            teams — and the compiler both <em>consumes</em> and <em>produces</em> it.
+        </p>
+
+        <h3 id="descriptor">Library Descriptor JSON v1.0</h3>
+        <p>
+            A Library Descriptor declares one library: identity (<code>id</code>, <code>name</code>, semver
+            <code>version</code>), <code>dependencies</code>, and the resources it exposes — <code>constants</code>,
+            <code>enums</code>, <code>types</code> (structs), <code>globalVariables</code>, <code>functions</code>
+            and <code>functionBlocks</code> — each with typed references, initializers and, when available, the
+            C++ binding to back them.
+        </p>
+        <pre><code>{
+  "$schemaVersion": "1.0",
+  "id": "io",
+  "name": "I/O Library",
+  "version": "1.0.0",
+  "enums": [{
+    "name": "AlarmMode",
+    "baseType": { "kind": "primitive", "name": "INT" },
+    "members": [
+      { "name": "Off", "value": 0 },
+      { "name": "On",  "value": 1 }
+    ]
+  }],
+  "globalVariables": [{
+    "name": "factoryAlarm",
+    "type": { "kind": "named", "name": "AlarmMode" },
+    "scope": "global"
+  }]
+}</code></pre>
+        <p>
+            The loader validates structure and cross-entity rules (unique names, resolvable references, valid
+            initializers, coherent bindings) and returns <strong>all</strong> problems at once, not just the
+            first one. A canonical serializer round-trips the descriptor to byte-identical JSON.
+        </p>
+
+        <h3 id="project-config">Project Configuration JSON v1.0</h3>
+        <p>
+            A <code>project.json</code> lists the libraries a project uses. One <code>--ext-libs</code> flag on the
+            command line loads the registry, injects the external symbols into semantic analysis, and makes the
+            code generator emit namespace-qualified calls, FB instance methods and the required
+            <code>#include</code>s automatically.
+        </p>
+        <pre><code>{
+  "$schemaVersion": "1.0",
+  "libraries": [
+    { "id": "io",       "path": "libraries/io.json" },
+    { "id": "math",     "path": "libraries/math.json" }
+  ]
+}</code></pre>
+
+        <h3 id="import-export">Import &amp; Export — a Closed Loop</h3>
+        <p>
+            The pipeline is bidirectional. Beyond <em>importing</em> JSON libraries, st2cpp <strong>exports</strong>
+            analyzed Structured Text back to a semantic-only Library Descriptor through
+            <code>LibraryDescriptorBuilder</code>:
+        </p>
+        <pre><code>ST ──▶ Parser ──▶ SemanticAnalyzer ──▶ LibraryDescriptorBuilder ──▶ JSON (v1.0)
+        ▲                                                                  │
+        └─────────────── re-import (round trip) ◀── LibraryLoader ◀────────┘</code></pre>
+        <ul class="feature-list">
+            <li>Semantic-only descriptors — valid without C++ bindings (functions and FBs may omit <code>cppBinding</code>).</li>
+            <li>Unrepresentable constructs produce explicit, named errors — never silent omissions.</li>
+            <li>Dependencies are derived from analysis and validated against version policies.</li>
+            <li>Deterministic output: same ST + same options ⇒ byte-identical JSON.</li>
+        </ul>
+        <pre><code>st2cpp lib.st --export-descriptor lib.json \
+    --lib-id timerlib --lib-name TimerLib --lib-version 1.0.0</code></pre>
+        <p>
+            The export command runs on a single <code>.st</code> file or on a whole
+            <code>--workspace</code> (merged as one library), composing with <code>--ext-libs</code> so external
+            references become real <code>dependencies</code> with explicit version policies
+            (<code>--lib-dependency &lt;id&gt;=&lt;constraint&gt;</code>). Unrepresentable constructs are reported as
+            <code>Export error</code> lines, never silently dropped.
+        </p>
+
+        <h3 id="ext-libs">External Libraries in Action</h3>
+        <pre><code>st2cpp --workspace . --ext-libs project.json --output-dir generated</code></pre>
+        <p>
+            Symbols from the declared libraries resolve during analysis, and the generated C++ calls compile against
+            the referenced C++ (or other ST libraries) with the right namespace and includes — a clean boundary
+            between your logic and third-party or native code, driven entirely by data.
+        </p>
+
+        <!-- ====================================================================
+             LANGUAGE
+        ===================================================================== -->
+
+        <h2 id="supported">Supported Constructs</h2>
+        <table>
+            <thead><tr><th>Category</th><th>Constructs</th></tr></thead>
+            <tbody>
+                <tr><td>POUs</td><td><code>FUNCTION</code>, <code>FUNCTION_BLOCK</code>, <code>PROGRAM</code></td></tr>
+                <tr><td>Variable sections</td><td><code>VAR</code>, <code>VAR_INPUT</code>, <code>VAR_OUTPUT</code>, <code>VAR_IN_OUT</code>, <code>VAR_TEMP</code>, <code>VAR_EXTERNAL</code>, <code>VAR_GLOBAL</code> (<code>CONSTANT</code>/<code>RETAIN</code>)</td></tr>
+                <tr><td>Data types</td><td>All IEC 61131-3 elementary types (<code>BOOL</code>, <code>INT</code>, <code>DINT</code>, <code>REAL</code>, <code>LREAL</code>, <code>STRING</code>, <code>TIME</code>, …)</td></tr>
+                <tr><td>User-defined types</td><td><code>STRUCT … END_STRUCT</code>, <code>ENUM … END_ENUM</code> via <code>TYPE … END_TYPE</code></td></tr>
+                <tr><td>Arrays</td><td>Single and multi-dimensional; bounds-checked via <code>STArray&lt;T,Low,High&gt;</code> (from undoCore)</td></tr>
+                <tr><td>Pointers</td><td><code>POINTER TO</code>, <code>REF_TO</code></td></tr>
+                <tr><td>Control flow</td><td><code>IF/ELSIF/ELSE</code>, <code>FOR/TO/BY/DO</code>, <code>WHILE/DO</code>, <code>REPEAT/UNTIL</code>, <code>CASE/OF</code></td></tr>
+                <tr><td>Calls</td><td>Positional, named (<code>:=</code>), output binding (<code>=></code>), IN_OUT reference</td></tr>
+                <tr><td>Inheritance &amp; interfaces</td><td><code>FUNCTION_BLOCK B EXTENDS A</code> with <code>SUPER^</code>, <code>IMPLEMENTS</code></td></tr>
+                <tr><td>Method visibility</td><td><code>METHOD PRIVATE</code>, <code>METHOD PROTECTED</code>, <code>METHOD PUBLIC</code></td></tr>
+                <tr><td>Initializers</td><td>Variable initializers, array literal and struct initializers</td></tr>
+                <tr><td>Typed literals</td><td><code>UDINT#123</code>, <code>ULINT#16#9E3779B9</code>, <code>LREAL#3.14159</code></td></tr>
+                <tr><td>Process image</td><td><code>AT %I…</code>, <code>AT %Q…</code>, <code>AT %M…</code> with <code>--pi-auto</code></td></tr>
+                <tr><td>External libraries</td><td>JSON Library Descriptor + Project Configuration via <code>--ext-libs</code></td></tr>
+                <tr><td><code>SIZEOF</code></td><td><code>SIZEOF(type)</code> and <code>SIZEOF(expression)</code> (extension)</td></tr>
+            </tbody>
+        </table>
+
+        <h2 id="type-mapping">Type Mapping</h2>
+        <p>
+            st2cpp uses <a href="../undoCore/">undoCore</a> for type definitions, ensuring
+            consistent type mapping across the entire undoRT ecosystem.
+        </p>
+        <table>
+            <thead><tr><th>ST Type</th><th>C++ Type</th><th>Notes</th></tr></thead>
+            <tbody>
+                <tr><td><code>BOOL</code></td><td><code>bool</code></td><td></td></tr>
+                <tr><td><code>SINT</code></td><td><code>int8_t</code></td><td></td></tr>
+                <tr><td><code>INT</code></td><td><code>int16_t</code></td><td></td></tr>
+                <tr><td><code>DINT</code></td><td><code>int32_t</code></td><td></td></tr>
+                <tr><td><code>LINT</code></td><td><code>int64_t</code></td><td></td></tr>
+                <tr><td><code>USINT</code></td><td><code>uint8_t</code></td><td></td></tr>
+                <tr><td><code>UINT</code></td><td><code>uint16_t</code></td><td></td></tr>
+                <tr><td><code>UDINT</code></td><td><code>uint32_t</code></td><td></td></tr>
+                <tr><td><code>ULINT</code></td><td><code>uint64_t</code></td><td></td></tr>
+                <tr><td><code>REAL</code></td><td><code>float</code></td><td></td></tr>
+                <tr><td><code>LREAL</code></td><td><code>double</code></td><td></td></tr>
+                <tr><td><code>STRING</code></td><td><code>std::string</code></td><td></td></tr>
+                <tr><td><code>TIME</code></td><td><code>uint32_t</code></td><td>milliseconds</td></tr>
+                <tr><td><code>ARRAY[L..H] OF T</code></td><td><code>STArray&lt;T, L, H&gt;</code></td><td>bounds-checked (from undoCore)</td></tr>
+                <tr><td><code>POINTER TO T</code></td><td><code>T*</code></td><td></td></tr>
+                <tr><td><code>VAR_IN_OUT T</code></td><td><code>VAR_INOUT&lt;T&gt;</code> (reference wrapper)</td><td>from undoCore</td></tr>
+            </tbody>
+        </table>
+
+        <h2 id="function-calls">Function Call Translation</h2>
+        <table>
+            <thead><tr><th>ST Syntax</th><th>C++ Output</th></tr></thead>
+            <tbody>
+                <tr><td><code>foo(10, FALSE)</code></td><td>Positional arguments mapped in declaration order</td></tr>
+                <tr><td><code>foo(a := 1, b := 2)</code></td><td>Named arguments reordered to match declaration</td></tr>
+                <tr><td><code>foo(out => myVar)</code></td><td>Output bound as <code>&amp;myVar</code>, unbound outputs get a temp variable</td></tr>
+                <tr><td><code>foo(inout := myVar)</code></td><td>IN_OUT bound as reference</td></tr>
+                <tr><td><code>FB.method()</code></td><td>Method call on FB struct member</td></tr>
+                <tr><td><code>SUPER^.method()</code></td><td>Base class method call via C++ inheritance</td></tr>
+            </tbody>
+        </table>
+
+        <h2 id="method-visibility">Method Visibility</h2>
+        <p>
+            st2cpp supports <code>PRIVATE</code>, <code>PROTECTED</code>, and <code>PUBLIC</code> visibility
+            modifiers for methods inside FUNCTION_BLOCK.
+        </p>
+
+        <h3>ST Syntax</h3>
+        <pre><code>FUNCTION_BLOCK MyFB
+    VAR
+        counter : INT;
+    END_VAR
+
+    METHOD PRIVATE splitMix : UDINT
+        VAR_IN_OUT state : UDINT; END_VAR
+        // ...
+    END_METHOD
+
+    METHOD PROTECTED init : BOOL
+        // ...
+    END_METHOD
+
+    METHOD PUBLIC exec : UDINT
+        VAR_INPUT N : UDINT; END_VAR
+        // ...
+    END_METHOD
+END_FUNCTION_BLOCK</code></pre>
+
+        <h3>Generated C++</h3>
+        <pre><code>struct MYFB {
+public:
+    // Variables...
+    // SETTER/GETTER...
+
+    // --- PRIVATE METHODS ---
+private:
+    virtual UInt32 SPLITMIX(UInt32& STATE);
+
+    // --- PROTECTED METHODS ---
+protected:
+    virtual Bool INIT();
+
+    // --- PUBLIC METHODS ---
+public:
+    MYFB();
+    void operator()();
+    virtual UInt32 EXEC(Int16 N);
+    virtual ~MYFB() = default;
+};</code></pre>
+
+        <div class="callout info">
+            <strong>Default visibility:</strong> Methods without explicit visibility default to <code>PUBLIC</code>.
+            Constructor, <code>operator()</code>, and destructor are always <code>PUBLIC</code>.
+        </div>
+
+        <h2 id="limitations">Known Limitations (v0.4)</h2>
+        <table>
+            <thead><tr><th>Area</th><th>Status</th></tr></thead>
+            <tbody>
+                <tr><td><code>ARRAY[*]</code> variable-length arrays</td><td>Planned</td></tr>
+                <tr><td><code>VAR_CONFIG</code></td><td>Planned</td></tr>
+                <tr><td>SFC (<code>ACTION</code>, <code>TRANSITION</code>)</td><td>Planned</td></tr>
+                <tr><td>IEC standard function library (TON, CTU, ABS…)</td><td>Planned</td></tr>
+                <tr><td>Multi-target / multi-version codegen profiles</td><td>Planned</td></tr>
+            </tbody>
+        </table>
+
+        <!-- ====================================================================
+             USAGE
+        ===================================================================== -->
 
         <h2 id="cli">CLI Reference</h2>
         <table>
@@ -191,12 +542,28 @@ g++ -std=c++17 -I./st2cpp_includes build/Programs/Main.cpp -o plc_main</code></p
             <tbody>
                 <tr><td><code>-o &lt;file&gt;</code></td><td>Output <code>.cpp</code> source file</td><td><code>&lt;input&gt;.cpp</code></td></tr>
                 <tr><td><code>-H &lt;file&gt;</code></td><td>Output <code>.hpp</code> header file</td><td><code>&lt;input&gt;.hpp</code></td></tr>
-                <tr><td><code>--namespace &lt;name&gt;</code></td><td>C++ namespace for generated code</td><td><code>st2cpp</code></td></tr>
-                <tr><td><code>--runtime &lt;file&gt;</code></td><td>Custom runtime header</td><td><code>st2cpp_types.hpp</code></td></tr>
+                <tr><td><code>--namespace &lt;name&gt;</code></td><td>C++ namespace for generated code</td><td><code>undoCore</code></td></tr>
+                <tr><td><code>--runtime &lt;file&gt;</code></td><td>Custom runtime header</td><td><code>undoCore/undoCore.hpp</code></td></tr>
+                <tr><td><code>--tokens</code></td><td>Dump token stream and exit (debug)</td><td>—</td></tr>
+                <tr><td><code>--caseSensitive</code></td><td>Preserve original case (IEC identifiers are otherwise normalized)</td><td>off</td></tr>
                 <tr><td><code>--workspace &lt;path&gt;</code></td><td>Process all <code>.st</code> files recursively</td><td>—</td></tr>
+                <tr><td><code>--ext-libs &lt;file.json&gt;</code></td><td>Load external libraries from a Project Configuration JSON</td><td>—</td></tr>
                 <tr><td><code>--project-style</code></td><td>Modular output with dependency management</td><td>off</td></tr>
                 <tr><td><code>--output-dir &lt;dir&gt;</code></td><td>Output directory (workspace/project mode)</td><td><code>generated/</code></td></tr>
-                <tr><td><code>--tokens</code></td><td>Dump token stream and exit (debug)</td><td>—</td></tr>
+                <tr><td><code>--pi-auto</code></td><td>Auto-detect Process Image sizes</td><td>on</td></tr>
+                <tr><td><code>--pi-no-auto</code></td><td>Disable auto-detection, use manual sizes</td><td>—</td></tr>
+                <tr><td><code>--pi-input &lt;bytes&gt;</code></td><td>Process Image Input size</td><td><code>1024</code></td></tr>
+                <tr><td><code>--pi-output &lt;bytes&gt;</code></td><td>Process Image Output size</td><td><code>1024</code></td></tr>
+                <tr><td><code>--pi-marker &lt;bytes&gt;</code></td><td>Process Image Marker size</td><td><code>1024</code></td></tr>
+                <tr><td><code>--export-descriptor &lt;file.json&gt;</code></td><td>Export ST to a semantic-only JSON Library Descriptor</td><td>—</td></tr>
+                <tr><td><code>--lib-id &lt;id&gt;</code></td><td>Library id for export (required)</td><td>—</td></tr>
+                <tr><td><code>--lib-name &lt;name&gt;</code></td><td>Library name for export (required)</td><td>—</td></tr>
+                <tr><td><code>--lib-version &lt;ver&gt;</code></td><td>Library semver version for export (required)</td><td>—</td></tr>
+                <tr><td><code>--lib-description &lt;text&gt;</code></td><td>Optional library description</td><td>—</td></tr>
+                <tr><td><code>--lib-dependency &lt;id&gt;=&lt;constraint&gt;</code></td><td>Version policy for an exported external dependency (repeatable)</td><td>—</td></tr>
+                <tr><td><code>-v, --verbose</code></td><td>Print detailed processing information (incl. diagnostics)</td><td>off</td></tr>
+                <tr><td><code>--strict</code></td><td>Strict mode: block generation on any semantic error</td><td>off</td></tr>
+                <tr><td><code>--version</code></td><td>Print version and exit</td><td>—</td></tr>
                 <tr><td><code>-h, --help</code></td><td>Show help message</td><td>—</td></tr>
             </tbody>
         </table>
@@ -208,8 +575,8 @@ g++ -std=c++17 -I./st2cpp_includes build/Programs/Main.cpp -o plc_main</code></p
         </p>
         <pre><code>./st2cpp counter.st -o counter.cpp -H counter.hpp --namespace myplc</code></pre>
         <p>
-            Include <code>st2cpp_types.hpp</code> (from the <code>st2cpp_includes/</code> folder) in your compiler's
-            include path when building the output:
+            Include the <code>undoCore/</code> runtime (shipped in the <code>st2cpp_includes/</code> folder) in your
+            compiler's include path when building the output:
         </p>
         <pre><code>g++ -std=c++17 -I./st2cpp_includes counter.cpp -o counter</code></pre>
 
@@ -264,7 +631,7 @@ END_PROGRAM</code></pre>
 
         <h3>Generated header (counter.hpp)</h3>
         <pre><code>#pragma once
-#include "st2cpp_types.hpp"
+#include "undoCore/undoCore.hpp"
 
 namespace myplc {
 
@@ -322,226 +689,62 @@ void MAIN::run() {
 
 } // namespace myplc</code></pre>
 
-        <h2 id="supported">Supported Constructs</h2>
-        <table>
-            <thead><tr><th>Category</th><th>Constructs</th></tr></thead>
-            <tbody>
-                <tr><td>POUs</td><td><code>FUNCTION</code>, <code>FUNCTION_BLOCK</code>, <code>PROGRAM</code></td></tr>
-                <tr><td>Variable sections</td><td><code>VAR</code>, <code>VAR_INPUT</code>, <code>VAR_OUTPUT</code>, <code>VAR_IN_OUT</code>, <code>VAR_TEMP</code>, <code>VAR_EXTERNAL</code>, <code>VAR_GLOBAL</code></td></tr>
-                <tr><td>Data types</td><td>All IEC 61131-3 elementary types (<code>BOOL</code>, <code>INT</code>, <code>DINT</code>, <code>REAL</code>, <code>LREAL</code>, <code>STRING</code>, <code>TIME</code>, …)</td></tr>
-                <tr><td>User-defined types</td><td><code>STRUCT … END_STRUCT</code>, <code>ENUM … END_ENUM</code> via <code>TYPE … END_TYPE</code></td></tr>
-                <tr><td>Arrays</td><td>Single and multi-dimensional; bounds-checked via <code>STArray&lt;T,Low,High&gt;</code> (from undoCore)</td></tr>
-                <tr><td>Pointers</td><td><code>POINTER TO</code>, <code>REF_TO</code></td></tr>
-                <tr><td>Control flow</td><td><code>IF/ELSIF/ELSE</code>, <code>FOR/TO/BY/DO</code>, <code>WHILE/DO</code>, <code>REPEAT/UNTIL</code>, <code>CASE/OF</code></td></tr>
-                <tr><td>Calls</td><td>Positional, named (<code>:=</code>), output binding (<code>=></code>), IN_OUT reference</td></tr>
-                <tr><td>Inheritance</td><td><code>FUNCTION_BLOCK B EXTENDS A</code> with <code>SUPER^</code> access</td></tr>
-                <tr><td>Method visibility</td><td><code>METHOD PRIVATE</code>, <code>METHOD PROTECTED</code>, <code>METHOD PUBLIC</code></td></tr>
-                <tr><td>Initializers</td><td>Variable initializers, array literal initializers</td></tr>
-                <tr><td>Typed literals</td><td><code>UDINT#123</code>, <code>ULINT#16#9E3779B9</code>, <code>LREAL#3.14159</code></td></tr>
-                <tr><td><code>SIZEOF</code></td><td><code>SIZEOF(type)</code> and <code>SIZEOF(expression)</code> (extension)</td></tr>
-            </tbody>
-        </table>
-
-        <h2 id="type-mapping">Type Mapping</h2>
-        <p>
-            st2cpp uses <a href="../undoCore/">undoCore</a> for type definitions, ensuring
-            consistent type mapping across the entire undoRT ecosystem.
-        </p>
-        <table>
-            <thead><tr><th>ST Type</th><th>C++ Type</th><th>Notes</th></tr></thead>
-            <tbody>
-                <tr><td><code>BOOL</code></td><td><code>bool</code></td><td></td></tr>
-                <tr><td><code>SINT</code></td><td><code>int8_t</code></td><td></td></tr>
-                <tr><td><code>INT</code></td><td><code>int16_t</code></td><td></td></tr>
-                <tr><td><code>DINT</code></td><td><code>int32_t</code></td><td></td></tr>
-                <tr><td><code>LINT</code></td><td><code>int64_t</code></td><td></td></tr>
-                <tr><td><code>USINT</code></td><td><code>uint8_t</code></td><td></td></tr>
-                <tr><td><code>UINT</code></td><td><code>uint16_t</code></td><td></td></tr>
-                <tr><td><code>UDINT</code></td><td><code>uint32_t</code></td><td></td></tr>
-                <tr><td><code>ULINT</code></td><td><code>uint64_t</code></td><td></td></tr>
-                <tr><td><code>REAL</code></td><td><code>float</code></td><td></td></tr>
-                <tr><td><code>LREAL</code></td><td><code>double</code></td><td></td></tr>
-                <tr><td><code>STRING</code></td><td><code>std::string</code></td><td></td></tr>
-                <tr><td><code>TIME</code></td><td><code>uint32_t</code></td><td>milliseconds</td></tr>
-                <tr><td><code>ARRAY[L..H] OF T</code></td><td><code>STArray&lt;T, L, H&gt;</code></td><td>bounds-checked (from undoCore)</td></tr>
-                <tr><td><code>POINTER TO T</code></td><td><code>T*</code></td><td></td></tr>
-                <tr><td><code>VAR_IN_OUT T</code></td><td><code>VAR_INOUT&lt;T&gt;</code> (reference wrapper)</td><td>from undoCore</td></tr>
-            </tbody>
-        </table>
-
-        <h2 id="function-calls">Function Call Translation</h2>
-        <table>
-            <thead><tr><th>ST Syntax</th><th>C++ Output</th></tr></thead>
-            <tbody>
-                <tr><td><code>foo(10, FALSE)</code></td><td>Positional arguments mapped in declaration order</td></tr>
-                <tr><td><code>foo(a := 1, b := 2)</code></td><td>Named arguments reordered to match declaration</td></tr>
-                <tr><td><code>foo(out => myVar)</code></td><td>Output bound as <code>&amp;myVar</code>, unbound outputs get a temp variable</td></tr>
-                <tr><td><code>foo(inout := myVar)</code></td><td>IN_OUT bound as reference</td></tr>
-                <tr><td><code>FB.method()</code></td><td>Method call on FB struct member</td></tr>
-                <tr><td><code>SUPER^.method()</code></td><td>Base class method call via C++ inheritance</td></tr>
-            </tbody>
-        </table>
-
-        <h2 id="method-visibility">Method Visibility (New in v0.2.1)</h2>
-        <p>
-            st2cpp now supports <code>PRIVATE</code>, <code>PROTECTED</code>, and <code>PUBLIC</code> visibility
-            modifiers for methods inside FUNCTION_BLOCK.
-        </p>
-
-        <h3>ST Syntax</h3>
-        <pre><code>FUNCTION_BLOCK MyFB
-    VAR
-        counter : INT;
-    END_VAR
-
-    METHOD PRIVATE splitMix : UDINT
-        VAR_IN_OUT state : UDINT; END_VAR
-        // ...
-    END_METHOD
-
-    METHOD PROTECTED init : BOOL
-        // ...
-    END_METHOD
-
-    METHOD PUBLIC exec : UDINT
-        VAR_INPUT N : UDINT; END_VAR
-        // ...
-    END_METHOD
-END_FUNCTION_BLOCK</code></pre>
-
-        <h3>Generated C++</h3>
-        <pre><code>struct MYFB {
-public:
-    // Variables...
-    // SETTER/GETTER...
-
-    // --- PRIVATE METHODS ---
-private:
-    virtual UInt32 SPLITMIX(UInt32& STATE);
-
-    // --- PROTECTED METHODS ---
-protected:
-    virtual Bool INIT();
-
-    // --- PUBLIC METHODS ---
-public:
-    MYFB();
-    void operator()();
-    virtual UInt32 EXEC(Int16 N);
-    virtual ~MYFB() = default;
-};</code></pre>
-
-        <div class="callout info">
-            <strong>Default visibility:</strong> Methods without explicit visibility default to <code>PUBLIC</code>.
-            Constructor, <code>operator()</code>, and destructor are always <code>PUBLIC</code>.
-        </div>
-
-        <h2 id="limitations">Known Limitations (Beta)</h2>
-        <div class="callout warn">
-            st2cpp is in active development. The following features are not yet supported.
-        </div>
-        <table>
-            <thead><tr><th>Limitation</th><th>Status</th></tr></thead>
-            <tbody>
-                <tr><td>Semantic analysis / type checking</td><td>In progress</td></tr>
-                <tr><td>Error recovery (first error stops compilation)</td><td>Planned v0.3</td></tr>
-                <tr><td><code>ARRAY[*]</code> variable-length arrays</td><td>Planned</td></tr>
-                <tr><td><code>VAR_CONFIG</code></td><td>Planned</td></tr>
-                <tr><td>SFC (<code>ACTION</code>, <code>TRANSITION</code>)</td><td>Planned</td></tr>
-                <tr><td>IEC standard function library (TON, CTU, ABS…)</td><td>Planned v0.3</td></tr>
-            </tbody>
-        </table>
-
         <h2 id="testing">Testing</h2>
         <p>
-            st2cpp includes a comprehensive test suite built with
-            <a href="https://github.com/google/googletest" target="_blank">Google Test</a>.
-            The suite covers every stage of the compiler pipeline and ensures correctness of
-            the generated code. All tests are executed automatically on every commit.
+            st2cpp ships a comprehensive suite built with
+            <a href="https://github.com/google/googletest" target="_blank">Google Test</a>,
+            covering every stage of the compiler pipeline and compiling the generated C++ with a real
+            compiler. All tests run automatically on every commit.
         </p>
 
         <table>
             <thead>
-                <tr><th>Test Category</th><th>Description</th><th>Tests</th></tr>
+                <tr><th>Category</th><th>Description</th></tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Lexer</td>
-                    <td>Tokenization of all IEC 61131‑3 tokens (keywords, addresses, literals, operators)</td>
-                    <td>42</td>
-                </tr>
-                <tr>
-                    <td>Parser</td>
-                    <td>AST construction for POUs, types, variables, control flow, arrays, interfaces</td>
-                    <td>30</td>
-                </tr>
-                <tr>
-                    <td>Code Generator</td>
-                    <td>Translation from AST to C++: functions, FBs, programs, arrays, structs, enums</td>
-                    <td>35</td>
-                </tr>
-                <tr>
-                    <td>Address Allocator</td>
-                    <td>Fixed and placeholder address allocation, alignment, region growth</td>
-                    <td>20</td>
-                </tr>
-                <tr>
-                    <td>Process Image</td>
-                    <td>Accessor generation for <code>%I</code>, <code>%Q</code>, <code>%M</code> addresses with bit/byte/word/dword access</td>
-                    <td>20</td>
-                </tr>
-                <tr>
-                    <td>Scope Manager</td>
-                    <td>Variable lookup, shadowing, function‑local flags, temporary counters</td>
-                    <td>20</td>
-                </tr>
-                <tr>
-                    <td>Compilation</td>
-                    <td>Compilation of generated C++ code with a real compiler (<code>g++</code>)</td>
-                    <td>31</td>
-                </tr>
-                <tr>
-                    <td>Complex Programs</td>
-                    <td>Integration tests with arrays, inheritance, interfaces, <code>SUPER^</code></td>
-                    <td>19</td>
-                </tr>
-                <tr>
-                    <td>Golden Tests</td>
-                    <td>Comparison against pre‑approved output for sample <code>.st</code> files</td>
-                    <td>10+</td>
-                </tr>
+                <tr><td>Lexer &amp; Parser</td><td>Tokenization and AST construction for all IEC 61131‑3 constructs</td></tr>
+                <tr><td>Semantic Analysis</td><td>Symbols, scopes, type checking, enums, structs, arrays, interfaces, inheritance, forward references, dependency cycles, process image, external-library import</td></tr>
+                <tr><td>Code Generation</td><td>Single-file and modular project output</td></tr>
+                <tr><td>JSON / Library Descriptor</td><td>JSON engine, descriptor loader &amp; validation, canonical serializer, Project Configuration</td></tr>
+                <tr><td>Descriptor Export</td><td>ST → descriptor → JSON → re-import round trip, dependency policies, representability errors</td></tr>
+                <tr><td>Compilation</td><td>End-to-end compilation of generated C++ with <code>g++</code></td></tr>
             </tbody>
         </table>
 
         <div class="callout success">
-            <strong>✅ Total:</strong> Over <strong>217</strong> tests are run on every commit to ensure
-            reliability and prevent regressions.
+            <strong>✅ Total (v0.4):</strong> <strong>663 tests</strong> from 24 suites (2 disabled) run on every
+            commit to guarantee reliability and prevent regressions.
         </div>
 
         <p>
-            The test suite is located in the <code>tests/</code> directory and can be built and run
-            with <code>make test</code> or <code>ctest</code> after compiling the project.
+            The suite lives in <code>tests/</code> and can be run with <code>ctest</code> after building
+            with <code>-DBUILD_TESTS=ON</code>.
         </p>
 
         <h2 id="architecture">Architecture</h2>
         <p>
-            st2cpp follows a classic compiler frontend pipeline. All stages are hand-written in C++17
-            with no external parser generator dependencies.
+            st2cpp follows a classic compiler frontend pipeline — hand-written in C++17, no external parser
+            generators — extended with a semantic analysis stage and a bidirectional JSON data layer:
         </p>
         <pre><code>ST Source
-  └─▶  Lexer          (Token stream)
-         └─▶  Parser       (Recursive descent → AST)
-                └─▶  CodeGen     (AST visitor → C++17 source)</code></pre>
+  └─▶  Lexer            (Token stream)
+         └─▶  Parser         (Recursive descent → AST)
+                └─▶  SemanticAnalyzer   (2 passes → symbol table, diagnostics)
+                       └─▶  CodeGen       (AST + semantics → C++17 source)
+
+JSON side:
+  Project Config / Library Descriptor (v1.0)
+    └─▶  LibraryLoader / LibraryRegistry ──▶ SemanticAnalyzer (external symbols)
+    └─▶  LibraryDescriptorBuilder ────────▶ JSON export (ST → descriptor)</code></pre>
 
         <p>
             The AST uses <code>std::variant</code> for node types (<code>ExprVariant</code>, <code>StmtVariant</code>)
-            with <code>std::visit</code> dispatch in the code generator — no virtual dispatch, no
-            <code>dynamic_cast</code>.
+            with <code>std::visit</code> dispatch — no virtual dispatch, no <code>dynamic_cast</code>.
         </p>
 
         <div class="callout info">
             <strong>🔗 Integration with undoCore:</strong> The generated code includes
-            <code>#include &lt;undoCore/types.hpp&gt;</code> and uses <code>STArray</code>,
+            <code>#include &lt;undoCore/undoCore.hpp&gt;</code> and uses <code>STArray</code>,
             <code>VAR_INOUT</code>, and conversion functions from the undoCore library.
         </div>
 
@@ -551,15 +754,23 @@ public:
 │   ├── ast/           # AST node definitions (std::variant-based)
 │   ├── lexer/         # Token types and Lexer class
 │   ├── parser/        # Parser class and helpers
+│   ├── semantic/      # SemanticAnalyzer, symbol table, global functions
+│   ├── library/       # Library Descriptor model, loader, serializer
+│   ├── project/       # Project Configuration model + loader
+│   ├── json/          # Self-contained JSON engine (DOM, parse, dump)
 │   └── codegen/       # CodeGenerator class
 ├── src/
 │   ├── lexer/         # Lexer implementation
 │   ├── parser/        # Parser + statement parser
-│   ├── codegen/       # Code generator (~3600 lines)
+│   ├── semantic/      # Analyzer + LibraryDescriptorBuilder + symbol importer
+│   ├── library/       # Loader / serializer / registry implementation
+│   ├── project/       # Project config implementation
+│   ├── json/          # JSON engine implementation
+│   ├── codegen/       # Code generator
 │   └── cli/           # main.cpp + argument parsing
 ├── st2cpp_includes/
 │   └── undoCore/      # undoCore submodule (types, conversions, math)
-├── tests/             # 217+ tests
+├── tests/             # 663 tests
 ├── scripts/           # build.sh, generate_docs.sh
 └── CMakeLists.txt</code></pre>
 

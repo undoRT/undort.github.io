@@ -81,7 +81,7 @@
                 <span class="pipeline-arrow">→</span>
                 <div class="pipeline-node">
                     <div class="pipeline-box ready">st2cpp</div>
-                    <span class="pipeline-label">Released v0.1.2</span>
+                    <span class="pipeline-label">Released v0.4</span>
                 </div>
                 <span class="pipeline-arrow">→</span>
                 <div class="pipeline-node">
@@ -114,6 +114,31 @@
                 <span><span class="dot green"></span>Available now</span>
                 <span><span class="dot gray"></span>In development</span>
             </div>
+        </section>
+
+        <section class="architecture-card">
+            <h2>st2cpp — Semantic Analysis &amp; a JSON Data Layer</h2>
+            <p>
+                Since v0.4, st2cpp is much more than a transpiler. Before generating code it runs a
+                <strong>two-pass semantic analyzer</strong> — symbol table, IEC case-insensitive resolution, type
+                checking, interface and inheritance verification, circular-dependency detection — in
+                <em>Strict</em> (fail-fast) or <em>Permissive</em> (incremental adoption) modes, so errors are
+                caught at build time rather than on the target.
+            </p>
+            <p>
+                Around the compiler sits a <strong>bidirectional JSON data layer</strong>: libraries and project
+                data are declared in versioned JSON schemas (Library Descriptor v1.0, Project Configuration v1.0),
+                imported through <code>--ext-libs</code>, resolved by the semantic analyzer, and bound by the code
+                generator. The same pipeline runs in reverse: analyzed ST is exported back to a JSON library
+                descriptor (semantic-only, round-trippable) — from the CLI via <code>--export-descriptor</code> or
+                programmatically via <code>LibraryDescriptorBuilder</code>.
+            </p>
+            <ul style="color: var(--text-muted); margin: 10px 0 0 20px; list-style: none; padding: 0;">
+                <li style="margin-bottom: 6px;">• <strong><code style="color: var(--cyan-primary);">Semantic Analysis</code></strong> — 2 passes, type checking, <code>--strict</code>/<code>--permissive</code>, process-image <code>AT</code> validation</li>
+                <li style="margin-bottom: 6px;">• <strong><code style="color: var(--cyan-primary);">External Libraries</code></strong> — JSON descriptors, registry, codegen bindings</li>
+                <li style="margin-bottom: 6px;">• <strong><code style="color: var(--cyan-primary);">JSON Export</code></strong> — ST → semantic-only descriptor → JSON, guaranteed round trip</li>
+                <li style="margin-bottom: 6px;">• <strong><code style="color: var(--cyan-primary);">663 tests</code></strong> — 24 suites, run automatically on every commit</li>
+            </ul>
         </section>
 
         <section class="architecture-card">

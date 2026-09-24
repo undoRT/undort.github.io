@@ -15,7 +15,7 @@ The ecosystem is modular, consisting of specialized repositories designed to wor
 * **[undoBUS](https://github.com/undoRT/undoBUS)** `Fieldbus`  
   Ultra-precise fieldbus management with native user-space support for **EtherCAT Master** (powered by IgH EtherLab technology).
 * **[st2cpp](https://github.com/undoRT/st2cpp)** `Compiler`  
-  The core translation engine. A powerful transpiler that compiles standard IEC 61131-3 Structured Text (ST) into optimized, native C++ code.
+  The core translation engine. A powerful transpiler that compiles standard IEC 61131-3 Structured Text (ST) into optimized, native C++ code — validated by a full semantic analysis stage (Strict/Permissive modes) and driven by a bidirectional JSON data layer: external libraries and project data in versioned JSON descriptors that st2cpp both imports and exports.
 * **[undoOS](https://github.com/undoRT/undoOS)** `Core OS`  
   A highly optimized Linux Preempt-RT distribution tailored for multi-platform industrial hardware, eliminating non-deterministic latencies.
 * **[undoImport](https://github.com/undoRT/undoImport)** `Migration`  
