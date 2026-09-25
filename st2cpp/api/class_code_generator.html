@@ -327,9 +327,9 @@ Private Member Functions</h2></td></tr>
 <tr class="separator:a005bd53f0d478b2b87fa4a6a2c03be37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a668d9f8e31da00534971f91c60653d3f" id="r_a668d9f8e31da00534971f91c60653d3f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_code_generator.html#a668d9f8e31da00534971f91c60653d3f">getUniqueTempName</a> (const std::string &amp;baseName)</td></tr>
 <tr class="separator:a668d9f8e31da00534971f91c60653d3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d60643fd793018cf12b1b97746668b3" id="r_a1d60643fd793018cf12b1b97746668b3"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_code_generator.html#a1d60643fd793018cf12b1b97746668b3">genExpr</a> (const <a class="el" href="struct_expr.html">Expr</a> &amp;expr)</td></tr>
-<tr class="memdesc:a1d60643fd793018cf12b1b97746668b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate C++ expression text from an AST expression.  <br /></td></tr>
-<tr class="separator:a1d60643fd793018cf12b1b97746668b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81d7d44642b45492dd83efae03e72a50" id="r_a81d7d44642b45492dd83efae03e72a50"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_code_generator.html#a81d7d44642b45492dd83efae03e72a50">genExpr</a> (const <a class="el" href="struct_expr.html">Expr</a> &amp;expr, <a class="el" href="_a_s_t_8h.html#ae96315ee246bd4a509133af84c88c5e1">BaseType</a> typeHint=<a class="el" href="_a_s_t_8h.html#ae96315ee246bd4a509133af84c88c5e1a6d0c9fc747131795e6e5d0c5119f12cb">BaseType::VOID</a>)</td></tr>
+<tr class="memdesc:a81d7d44642b45492dd83efae03e72a50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate C++ expression text from an AST expression.  <br /></td></tr>
+<tr class="separator:a81d7d44642b45492dd83efae03e72a50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca3bf7e72451f36423a1d95640f519ba" id="r_aca3bf7e72451f36423a1d95640f519ba"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_code_generator.html#aca3bf7e72451f36423a1d95640f519ba">generateAddressAccess</a> (const <a class="el" href="struct_address_expr.html">AddressExpr</a> &amp;addr)</td></tr>
 <tr class="memdesc:aca3bf7e72451f36423a1d95640f519ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate read access for addresses (when on LHS of assignment)  <br /></td></tr>
 <tr class="separator:aca3bf7e72451f36423a1d95640f519ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -366,6 +366,8 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a43dff760ac15d6d2ce87d54415f2dd5e" id="r_a43dff760ac15d6d2ce87d54415f2dd5e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_code_generator.html#a43dff760ac15d6d2ce87d54415f2dd5e">structContainsFB</a> (const std::string &amp;structName, const <a class="el" href="struct_translation_unit.html">TranslationUnit</a> &amp;tu) const</td></tr>
 <tr class="memdesc:a43dff760ac15d6d2ce87d54415f2dd5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a struct type contains any FB (directly or indirectly)  <br /></td></tr>
 <tr class="separator:a43dff760ac15d6d2ce87d54415f2dd5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67c2174e69a49542fc6e7894606316db" id="r_a67c2174e69a49542fc6e7894606316db"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_code_generator.html#a67c2174e69a49542fc6e7894606316db">structContainsFB</a> (const std::string &amp;structName, const <a class="el" href="struct_translation_unit.html">TranslationUnit</a> &amp;tu, std::unordered_set&lt; std::string &gt; &amp;visited) const</td></tr>
+<tr class="separator:a67c2174e69a49542fc6e7894606316db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4105081338cf002856f0de1e6e544ac7" id="r_a4105081338cf002856f0de1e6e544ac7"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_code_generator.html#a4105081338cf002856f0de1e6e544ac7">generateSimpleGVLsHeader</a> (const <a class="el" href="struct_translation_unit.html">TranslationUnit</a> &amp;tu)</td></tr>
 <tr class="memdesc:a4105081338cf002856f0de1e6e544ac7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate SimpleGVLs header file (ENUM + simple STRUCT + simple globals)  <br /></td></tr>
 <tr class="separator:a4105081338cf002856f0de1e6e544ac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2024,8 +2026,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a1d60643fd793018cf12b1b97746668b3" name="a1d60643fd793018cf12b1b97746668b3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d60643fd793018cf12b1b97746668b3">&#9670;&#160;</a></span>genExpr()</h2>
+<a id="a81d7d44642b45492dd83efae03e72a50" name="a81d7d44642b45492dd83efae03e72a50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81d7d44642b45492dd83efae03e72a50">&#9670;&#160;</a></span>genExpr()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2037,8 +2039,18 @@ Private Attributes</h2></td></tr>
           <td class="memname">std::string CodeGenerator::genExpr </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="struct_expr.html">Expr</a> &amp;&#160;</td>
-          <td class="paramname"><em>expr</em></td><td>)</td>
+          <td class="paramname"><em>expr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="_a_s_t_8h.html#ae96315ee246bd4a509133af84c88c5e1">BaseType</a>&#160;</td>
+          <td class="paramname"><em>typeHint</em> = <code><a class="el" href="_a_s_t_8h.html#ae96315ee246bd4a509133af84c88c5e1a6d0c9fc747131795e6e5d0c5119f12cb">BaseType::VOID</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -4194,7 +4206,7 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <a id="a43dff760ac15d6d2ce87d54415f2dd5e" name="a43dff760ac15d6d2ce87d54415f2dd5e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a43dff760ac15d6d2ce87d54415f2dd5e">&#9670;&#160;</a></span>structContainsFB()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a43dff760ac15d6d2ce87d54415f2dd5e">&#9670;&#160;</a></span>structContainsFB() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4236,6 +4248,48 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the struct contains any FB (directly or nested) </dd></dl>
+
+</div>
+</div>
+<a id="a67c2174e69a49542fc6e7894606316db" name="a67c2174e69a49542fc6e7894606316db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67c2174e69a49542fc6e7894606316db">&#9670;&#160;</a></span>structContainsFB() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CodeGenerator::structContainsFB </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>structName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_translation_unit.html">TranslationUnit</a> &amp;&#160;</td>
+          <td class="paramname"><em>tu</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::unordered_set&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>visited</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

@@ -17,5 +17,6 @@ var test__diagnostics_8cpp =
     [ "TEST", "test__diagnostics_8cpp.html#a5e8ccccec0cb4e1e639df9bf0d01ff18", null ],
     [ "TEST", "test__diagnostics_8cpp.html#ad7e9bf92b6a91ef7480e4b33a2a4e709", null ],
     [ "TEST", "test__diagnostics_8cpp.html#aef9597669c415ac7daf0ee71cfcec1ec", null ],
-    [ "TEST", "test__diagnostics_8cpp.html#ad5e8630c8c9e9a1a624d7e627d42b359", null ]
+    [ "TEST", "test__diagnostics_8cpp.html#ad5e8630c8c9e9a1a624d7e627d42b359", null ],
+    [ "TEST", "test__diagnostics_8cpp.html#abe975c0b12da820b80d4b2c65028cae5", null ]
 ];

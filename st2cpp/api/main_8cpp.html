@@ -281,6 +281,10 @@ Include dependency graph for main.cpp:</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a67fb01558ca69b4edc555d365b37f579" id="r_a67fb01558ca69b4edc555d365b37f579"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a67fb01558ca69b4edc555d365b37f579">hasUnresolvableCircularDependency</a> (const <a class="el" href="structst2cpp_1_1semantic_1_1_semantic_info.html">st2cpp::semantic::SemanticInfo</a> &amp;info)</td></tr>
+<tr class="separator:a67fb01558ca69b4edc555d365b37f579"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acafe332703ea6eb966bf75a1776ba06d" id="r_acafe332703ea6eb966bf75a1776ba06d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#acafe332703ea6eb966bf75a1776ba06d">reportGenerationBlocked</a> (const <a class="el" href="structst2cpp_1_1semantic_1_1_semantic_info.html">st2cpp::semantic::SemanticInfo</a> &amp;info)</td></tr>
+<tr class="separator:acafe332703ea6eb966bf75a1776ba06d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82f590923059bdf410f085daf4ef3eb0" id="r_a82f590923059bdf410f085daf4ef3eb0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structst2cpp_1_1semantic_1_1_semantic_info.html">st2cpp::semantic::SemanticInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a82f590923059bdf410f085daf4ef3eb0">runSemanticAnalysis</a> (const <a class="el" href="struct_translation_unit.html">TranslationUnit</a> &amp;tu, const <a class="el" href="classst2cpp_1_1library_1_1_library_registry.html">st2cpp::library::LibraryRegistry</a> *registry=nullptr, const std::string &amp;sourceName=&quot;&quot;, const std::string &amp;sourceText=&quot;&quot;)</td></tr>
 <tr class="memdesc:a82f590923059bdf410f085daf4ef3eb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run semantic analysis on a translation unit for codegen consumption.  <br /></td></tr>
 <tr class="separator:a82f590923059bdf410f085daf4ef3eb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -305,6 +309,8 @@ Functions</h2></td></tr>
 <tr class="memitem:a813127d3dabbeedd4a747d91bc84cdf5" id="r_a813127d3dabbeedd4a747d91bc84cdf5"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a813127d3dabbeedd4a747d91bc84cdf5">readFile</a> (const std::string &amp;path)</td></tr>
 <tr class="memdesc:a813127d3dabbeedd4a747d91bc84cdf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read an entire file into a string.  <br /></td></tr>
 <tr class="separator:a813127d3dabbeedd4a747d91bc84cdf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a809dc2b423442e6faf389443db79a205" id="r_a809dc2b423442e6faf389443db79a205"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a809dc2b423442e6faf389443db79a205">printParseError</a> (const <a class="el" href="class_parse_error.html">ParseError</a> &amp;error)</td></tr>
+<tr class="separator:a809dc2b423442e6faf389443db79a205"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32887394c5c3210a200f9f224b6d57ad" id="r_a32887394c5c3210a200f9f224b6d57ad"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a32887394c5c3210a200f9f224b6d57ad">writeFile</a> (const std::string &amp;path, const std::string &amp;content)</td></tr>
 <tr class="memdesc:a32887394c5c3210a200f9f224b6d57ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write content to a file, overwriting it if it exists.  <br /></td></tr>
 <tr class="separator:a32887394c5c3210a200f9f224b6d57ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -424,6 +430,32 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a67fb01558ca69b4edc555d365b37f579" name="a67fb01558ca69b4edc555d365b37f579"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67fb01558ca69b4edc555d365b37f579">&#9670;&#160;</a></span>hasUnresolvableCircularDependency()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool hasUnresolvableCircularDependency </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structst2cpp_1_1semantic_1_1_semantic_info.html">st2cpp::semantic::SemanticInfo</a> &amp;&#160;</td>
+          <td class="paramname"><em>info</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a0ddf1224851353fc92bfbff6f499fa97" name="a0ddf1224851353fc92bfbff6f499fa97"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0ddf1224851353fc92bfbff6f499fa97">&#9670;&#160;</a></span>main()</h2>
 
@@ -489,6 +521,32 @@ Variables</h2></td></tr>
 
 <p>Normalized (case-folded, whitespace-free) key for a type/Var name. </p>
 <p>IEC 61131-3 identifiers are case-insensitive and may be decorated with surrounding whitespace, so workspace merging must compare them ignoring case. </p>
+
+</div>
+</div>
+<a id="a809dc2b423442e6faf389443db79a205" name="a809dc2b423442e6faf389443db79a205"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a809dc2b423442e6faf389443db79a205">&#9670;&#160;</a></span>printParseError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void printParseError </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_parse_error.html">ParseError</a> &amp;&#160;</td>
+          <td class="paramname"><em>error</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -629,6 +687,32 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="acafe332703ea6eb966bf75a1776ba06d" name="acafe332703ea6eb966bf75a1776ba06d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acafe332703ea6eb966bf75a1776ba06d">&#9670;&#160;</a></span>reportGenerationBlocked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void reportGenerationBlocked </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structst2cpp_1_1semantic_1_1_semantic_info.html">st2cpp::semantic::SemanticInfo</a> &amp;&#160;</td>
+          <td class="paramname"><em>info</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

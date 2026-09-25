@@ -1,6 +1,6 @@
 var class_parser =
 [
-    [ "Parser", "class_parser.html#ac93b3201fac5ebaf8c398054c7fec2b9", null ],
+    [ "Parser", "class_parser.html#a3236c2a5679e29aa4de8818a0555137d", null ],
     [ "advance", "class_parser.html#a5d45a4dc5c1599c27136a4981cb92f45", null ],
     [ "atEnd", "class_parser.html#af3cd00baa15f7d0d9e491571af19708c", null ],
     [ "check", "class_parser.html#a356c71f23527e46e18d110093225bab2", null ],
@@ -43,6 +43,7 @@ var class_parser =
     [ "parseVarSection", "class_parser.html#ad5c056d6923a3084a95b88d1dbb255f2", null ],
     [ "parseWhileStmt", "class_parser.html#a5d68985c3833602159a4a5e525f41a25", null ],
     [ "peek", "class_parser.html#a0c675766b718959a9c52fcc490f27199", null ],
+    [ "m_fileName", "class_parser.html#a6f0859eb7824113c8f73eb6fbf21ff20", null ],
     [ "m_pos", "class_parser.html#ac32ae2673e573063e2433af141d3255a", null ],
     [ "m_tokens", "class_parser.html#a3e31029db085e07539f2f0cc965bc1b3", null ],
     [ "s_parsedInterfaces", "class_parser.html#a77219a2243ec98902453c474851da889", null ]

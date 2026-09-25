@@ -113,15 +113,15 @@ Collaboration diagram for Parser:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_parser__coll__graph.png" border="0" usemap="#a_parser_coll__map" alt="Collaboration graph"/></div>
 <map name="a_parser_coll__map" id="a_parser_coll__map">
-<area shape="rect" title="Recursive&#45;descent parser for Structured Text." alt="" coords="5,5,184,431"/>
+<area shape="rect" title="Recursive&#45;descent parser for Structured Text." alt="" coords="5,5,184,451"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac93b3201fac5ebaf8c398054c7fec2b9" id="r_ac93b3201fac5ebaf8c398054c7fec2b9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser.html#ac93b3201fac5ebaf8c398054c7fec2b9">Parser</a> (std::vector&lt; <a class="el" href="struct_token.html">Token</a> &gt; tokens)</td></tr>
-<tr class="memdesc:ac93b3201fac5ebaf8c398054c7fec2b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a parser with a token stream.  <br /></td></tr>
-<tr class="separator:ac93b3201fac5ebaf8c398054c7fec2b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3236c2a5679e29aa4de8818a0555137d" id="r_a3236c2a5679e29aa4de8818a0555137d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser.html#a3236c2a5679e29aa4de8818a0555137d">Parser</a> (std::vector&lt; <a class="el" href="struct_token.html">Token</a> &gt; tokens, const std::string &amp;fileName=&quot;&quot;)</td></tr>
+<tr class="memdesc:a3236c2a5679e29aa4de8818a0555137d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a parser with a token stream.  <br /></td></tr>
+<tr class="separator:a3236c2a5679e29aa4de8818a0555137d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeac2e3adb5bf9f56a6a300b055d734b6" id="r_aeac2e3adb5bf9f56a6a300b055d734b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_translation_unit.html">TranslationUnit</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser.html#aeac2e3adb5bf9f56a6a300b055d734b6">parseTranslationUnit</a> ()</td></tr>
 <tr class="memdesc:aeac2e3adb5bf9f56a6a300b055d734b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a complete translation unit.  <br /></td></tr>
 <tr class="separator:aeac2e3adb5bf9f56a6a300b055d734b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -261,6 +261,9 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a3e31029db085e07539f2f0cc965bc1b3" id="r_a3e31029db085e07539f2f0cc965bc1b3"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="struct_token.html">Token</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser.html#a3e31029db085e07539f2f0cc965bc1b3">m_tokens</a></td></tr>
 <tr class="memdesc:a3e31029db085e07539f2f0cc965bc1b3"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_token.html">Token</a> stream to parse.  <br /></td></tr>
 <tr class="separator:a3e31029db085e07539f2f0cc965bc1b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f0859eb7824113c8f73eb6fbf21ff20" id="r_a6f0859eb7824113c8f73eb6fbf21ff20"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser.html#a6f0859eb7824113c8f73eb6fbf21ff20">m_fileName</a></td></tr>
+<tr class="memdesc:a6f0859eb7824113c8f73eb6fbf21ff20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Source file used for diagnostics.  <br /></td></tr>
+<tr class="separator:a6f0859eb7824113c8f73eb6fbf21ff20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac32ae2673e573063e2433af141d3255a" id="r_ac32ae2673e573063e2433af141d3255a"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser.html#ac32ae2673e573063e2433af141d3255a">m_pos</a> = 0</td></tr>
 <tr class="memdesc:ac32ae2673e573063e2433af141d3255a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current parsing position.  <br /></td></tr>
 <tr class="separator:ac32ae2673e573063e2433af141d3255a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -274,8 +277,8 @@ Static Private Attributes</h2></td></tr>
 <div class="textblock"><p>Recursive-descent parser for Structured Text. </p>
 <p>Consumes tokens from the lexer and builds an Abstract Syntax Tree (AST) representing the complete translation unit. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ac93b3201fac5ebaf8c398054c7fec2b9" name="ac93b3201fac5ebaf8c398054c7fec2b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac93b3201fac5ebaf8c398054c7fec2b9">&#9670;&#160;</a></span>Parser()</h2>
+<a id="a3236c2a5679e29aa4de8818a0555137d" name="a3236c2a5679e29aa4de8818a0555137d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3236c2a5679e29aa4de8818a0555137d">&#9670;&#160;</a></span>Parser()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -287,8 +290,18 @@ Static Private Attributes</h2></td></tr>
           <td class="memname">Parser::Parser </td>
           <td>(</td>
           <td class="paramtype">std::vector&lt; <a class="el" href="struct_token.html">Token</a> &gt;&#160;</td>
-          <td class="paramname"><em>tokens</em></td><td>)</td>
+          <td class="paramname"><em>tokens</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>fileName</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -1605,6 +1618,30 @@ Static Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a6f0859eb7824113c8f73eb6fbf21ff20" name="a6f0859eb7824113c8f73eb6fbf21ff20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f0859eb7824113c8f73eb6fbf21ff20">&#9670;&#160;</a></span>m_fileName</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Parser::m_fileName</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Source file used for diagnostics. </p>
+
+</div>
+</div>
 <a id="ac32ae2673e573063e2433af141d3255a" name="ac32ae2673e573063e2433af141d3255a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac32ae2673e573063e2433af141d3255a">&#9670;&#160;</a></span>m_pos</h2>
 
