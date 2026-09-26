@@ -170,6 +170,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5fc98a7645703d609c315fcf6e7820b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1eb21a2030f8abc07bfb1b019cdb6f69" id="r_a1eb21a2030f8abc07bfb1b019cdb6f69"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structst2cpp_1_1semantic_1_1_symbol.html">Symbol</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#a1eb21a2030f8abc07bfb1b019cdb6f69">get</a> (<a class="el" href="namespacest2cpp_1_1semantic.html#a04ded7b7fa589f2e5fa9ae2e7a22b3a3">SymbolId</a> id)</td></tr>
 <tr class="separator:a1eb21a2030f8abc07bfb1b019cdb6f69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43d750b7221a9eb615398aea16ee723e" id="r_a43d750b7221a9eb615398aea16ee723e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacest2cpp_1_1semantic.html#a04ded7b7fa589f2e5fa9ae2e7a22b3a3">SymbolId</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#a43d750b7221a9eb615398aea16ee723e">effectiveParams</a> (<a class="el" href="namespacest2cpp_1_1semantic.html#a04ded7b7fa589f2e5fa9ae2e7a22b3a3">SymbolId</a> fbId) const</td></tr>
+<tr class="memdesc:a43d750b7221a9eb615398aea16ee723e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The call interface of a function block, inheritance included.  <br /></td></tr>
+<tr class="separator:a43d750b7221a9eb615398aea16ee723e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6df594bf9caa89eedd090aaab8833bbc" id="r_a6df594bf9caa89eedd090aaab8833bbc"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structst2cpp_1_1semantic_1_1_type_info.html">TypeInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#a6df594bf9caa89eedd090aaab8833bbc">getType</a> (<a class="el" href="namespacest2cpp_1_1semantic.html#a1ce5cfb2039b7cc4b3a96b0b0b8e9341">TypeId</a> id) const</td></tr>
 <tr class="separator:a6df594bf9caa89eedd090aaab8833bbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c3e18775a7d7397e052f757aa8f579f" id="r_a5c3e18775a7d7397e052f757aa8f579f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structst2cpp_1_1semantic_1_1_type_info.html">TypeInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#a5c3e18775a7d7397e052f757aa8f579f">getType</a> (<a class="el" href="namespacest2cpp_1_1semantic.html#a1ce5cfb2039b7cc4b3a96b0b0b8e9341">TypeId</a> id)</td></tr>
@@ -402,6 +405,36 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The new SymbolId, or 0 on duplicate </dd></dl>
+
+</div>
+</div>
+<a id="a43d750b7221a9eb615398aea16ee723e" name="a43d750b7221a9eb615398aea16ee723e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43d750b7221a9eb615398aea16ee723e">&#9670;&#160;</a></span>effectiveParams()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="namespacest2cpp_1_1semantic.html#a04ded7b7fa589f2e5fa9ae2e7a22b3a3">SymbolId</a> &gt; st2cpp::semantic::SymbolTable::effectiveParams </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacest2cpp_1_1semantic.html#a04ded7b7fa589f2e5fa9ae2e7a22b3a3">SymbolId</a>&#160;</td>
+          <td class="paramname"><em>fbId</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The call interface of a function block, inheritance included. </p>
+<p><code><a class="el" href="structst2cpp_1_1semantic_1_1_symbol.html#a533efecc8173d9e5725202926fd25a44">Symbol::params</a></code> holds only the parameters declared by that very block, but a block that EXTENDS another one is callable with the base's VAR_INPUT/VAR_OUTPUT too. This returns the effective interface: the parameters inherited from the base chain (root ancestor first, so the base interface stays the prefix that positional calls bind against) followed by the block's own.</p>
+<p>A parameter redeclared by a derived block replaces the inherited one instead of appearing twice. Cycles in the base chain are guarded against. </p>
 
 </div>
 </div>

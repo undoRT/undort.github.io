@@ -1,21 +1,23 @@
 <map id="include/semantic/SemanticAnalyzer.h" name="include/semantic/SemanticAnalyzer.h">
-<area shape="rect" id="Node000001" title="Semantic Analyzer &#45; performs semantic analysis on TranslationUnit." alt="" coords="877,5,1076,45"/>
+<area shape="rect" id="Node000001" title="Semantic Analyzer &#45; performs semantic analysis on TranslationUnit." alt="" coords="971,5,1169,45"/>
 <area shape="rect" id="Node000002" href="$main_8cpp.html" title="Command&#45;line driver for the st2cpp transpiler." alt="" coords="5,101,129,126"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="863,32,719,39,538,51,340,69,142,96,108,103,107,98,142,91,340,64,538,45,718,34,863,27"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="957,31,797,37,593,48,368,67,142,96,108,103,107,98,142,91,367,62,593,42,797,31,957,26"/>
 <area shape="rect" id="Node000003" href="$_semantic_analyzer_8cpp.html" title="Semantic analyzer implementation (DeclVisitor + BodyVisitor integration)" alt="" coords="154,101,407,126"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="864,42,420,96,364,103,363,98,419,91,863,37"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="957,40,420,96,362,103,361,98,419,91,956,35"/>
 <area shape="rect" id="Node000004" href="$test__codegen__external__library_8cpp.html" title="C++ generation of external library C++ bindings." alt="" coords="431,93,650,133"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="868,51,637,96,636,91,867,45"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="957,48,651,97,650,92,956,42"/>
 <area shape="rect" id="Node000005" href="$_test_helper_8cpp.html" title="Implementation of helper class for tests." alt="" coords="674,101,879,126"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="921,53,804,103,802,98,919,48"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="993,52,816,103,815,98,992,47"/>
 <area shape="rect" id="Node000006" href="$test__body__visitor_8cpp.html" title="Tests for BodyVisitor &#45; Name Resolution and AST Decoration." alt="" coords="903,93,1050,133"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="979,59,979,93,974,93,974,59"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="1041,57,999,95,996,91,1037,53"/>
 <area shape="rect" id="Node000007" href="$test__codegen__semantic_8cpp.html" title="Tests verifying the semantic&#45;driven CodeGenerator migration." alt="" coords="1074,93,1253,133"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="1031,49,1124,91,1121,96,1029,53"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="1103,53,1144,91,1141,95,1099,57"/>
 <area shape="rect" id="Node000008" href="$test__decl__visitor_8cpp.html" title="Tests for DeclVisitor &#45; Declaration Phase of Semantic Analysis." alt="" coords="1277,93,1423,133"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="1072,46,1277,93,1276,98,1071,51"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="1145,47,1289,91,1288,96,1144,52"/>
 <area shape="rect" id="Node000009" href="$test__semantic__library_8cpp.html" title="Semantic integration tests: LibraryRegistry &#45;&gt; SemanticAnalyzer." alt="" coords="1447,93,1610,133"/>
-<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="1090,39,1436,91,1448,93,1447,98,1435,96,1089,44"/>
-<area shape="rect" id="Node000010" href="$test__compilation_8cpp.html" title="Implementation of test cases for compilation of generated code." alt="" coords="1634,101,1829,126"/>
-<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="1090,33,1335,57,1622,91,1669,98,1669,103,1622,96,1334,62,1090,39"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="1183,44,1436,91,1448,93,1447,98,1435,96,1182,49"/>
+<area shape="rect" id="Node000010" href="$test__source__location_8cpp.html" title="Tests for source locations carried across a merged workspace: per&#45;entity file names,..." alt="" coords="1635,93,1793,133"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="1183,35,1388,58,1622,91,1635,93,1634,98,1622,96,1387,63,1183,40"/>
+<area shape="rect" id="Node000011" href="$test__compilation_8cpp.html" title="Implementation of test cases for compilation of generated code." alt="" coords="1818,101,2013,126"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="1184,31,1467,54,1806,91,1854,98,1853,103,1806,96,1466,59,1183,37"/>
 </map>

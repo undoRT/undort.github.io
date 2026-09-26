@@ -108,7 +108,7 @@ Collaboration diagram for st2cpp::library::FunctionBlockDef:</div>
 <div class="dyncontent">
 <div class="center"><img src="structst2cpp_1_1library_1_1_function_block_def__coll__graph.png" border="0" usemap="#ast2cpp_1_1library_1_1_function_block_def_coll__map" alt="Collaboration graph"/></div>
 <map name="ast2cpp_1_1library_1_1_function_block_def_coll__map" id="ast2cpp_1_1library_1_1_function_block_def_coll__map">
-<area shape="rect" title="A FUNCTION_BLOCK exported by the library." alt="" coords="23,153,192,293"/>
+<area shape="rect" title="A FUNCTION_BLOCK exported by the library." alt="" coords="23,153,192,413"/>
 <area shape="rect" href="structst2cpp_1_1library_1_1_fb_cpp_binding.html" title="C++ binding for a FUNCTION_BLOCK." alt="" coords="5,5,209,91"/>
 <area shape="poly" title=" " alt="" coords="110,91,110,137,105,137,105,91"/>
 </map>
@@ -124,13 +124,46 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a0379f060559a66e7022efdfda0f52a63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55f5ddac10cf2b936b8a83f6b6ee442d" id="r_a55f5ddac10cf2b936b8a83f6b6ee442d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structst2cpp_1_1library_1_1_fun_param.html">FunParam</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structst2cpp_1_1library_1_1_function_block_def.html#a55f5ddac10cf2b936b8a83f6b6ee442d">parameters</a></td></tr>
 <tr class="separator:a55f5ddac10cf2b936b8a83f6b6ee442d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78c65b5f835dcd39b19ba81aa6994f32" id="r_a78c65b5f835dcd39b19ba81aa6994f32"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structst2cpp_1_1library_1_1_function_block_def.html#a78c65b5f835dcd39b19ba81aa6994f32">baseType</a></td></tr>
+<tr class="memdesc:a78c65b5f835dcd39b19ba81aa6994f32"><td class="mdescLeft">&#160;</td><td class="mdescRight">EXTENDS target, empty when none.  <br /></td></tr>
+<tr class="separator:a78c65b5f835dcd39b19ba81aa6994f32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a687089838d725ee97e8b9064f4521109" id="r_a687089838d725ee97e8b9064f4521109"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structst2cpp_1_1library_1_1_function_block_def.html#a687089838d725ee97e8b9064f4521109">interfaces</a></td></tr>
+<tr class="memdesc:a687089838d725ee97e8b9064f4521109"><td class="mdescLeft">&#160;</td><td class="mdescRight">IMPLEMENTS targets.  <br /></td></tr>
+<tr class="separator:a687089838d725ee97e8b9064f4521109"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a079238797bcc2009223e8c161ea84967" id="r_a079238797bcc2009223e8c161ea84967"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structst2cpp_1_1library_1_1_function_block_def.html#a079238797bcc2009223e8c161ea84967">isAbstract</a> = false</td></tr>
+<tr class="separator:a079238797bcc2009223e8c161ea84967"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3be079fbd392982128cf86f1dba9337d" id="r_a3be079fbd392982128cf86f1dba9337d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structst2cpp_1_1library_1_1_function_block_def.html#a3be079fbd392982128cf86f1dba9337d">isFinal</a> = false</td></tr>
+<tr class="separator:a3be079fbd392982128cf86f1dba9337d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f6ddd0340b060ba9d5af7031af03e1a" id="r_a6f6ddd0340b060ba9d5af7031af03e1a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structst2cpp_1_1library_1_1_fb_member.html">FbMember</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structst2cpp_1_1library_1_1_function_block_def.html#a6f6ddd0340b060ba9d5af7031af03e1a">members</a></td></tr>
+<tr class="memdesc:a6f6ddd0340b060ba9d5af7031af03e1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">internal state, inherited included  <br /></td></tr>
+<tr class="separator:a6f6ddd0340b060ba9d5af7031af03e1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a7bb8fb8db42cad1d393fd1ecaf22bf" id="r_a3a7bb8fb8db42cad1d393fd1ecaf22bf"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structst2cpp_1_1library_1_1_fb_method_def.html">FbMethodDef</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structst2cpp_1_1library_1_1_function_block_def.html#a3a7bb8fb8db42cad1d393fd1ecaf22bf">methods</a></td></tr>
+<tr class="memdesc:a3a7bb8fb8db42cad1d393fd1ecaf22bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">behaviour, inherited included  <br /></td></tr>
+<tr class="separator:a3a7bb8fb8db42cad1d393fd1ecaf22bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5bddbe77399ac5af3063240aef7ebf86" id="r_a5bddbe77399ac5af3063240aef7ebf86"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structst2cpp_1_1library_1_1_function_block_def.html#a5bddbe77399ac5af3063240aef7ebf86">documentation</a></td></tr>
 <tr class="separator:a5bddbe77399ac5af3063240aef7ebf86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A FUNCTION_BLOCK exported by the library. </p>
-<p><code>cppBinding</code> is optional: a semantic-only descriptor (e.g. one produced from a Structured Text source by the LibraryDescriptorBuilder) carries no C++ binding until a later enrichment/configuration step adds it. <code>hasCppBinding</code> tells whether the binding members are meaningful. </p>
+<p><code>cppBinding</code> is optional: a semantic-only descriptor (e.g. one produced from a Structured Text source by the LibraryDescriptorBuilder) carries no C++ binding until a later enrichment/configuration step adds it. <code>hasCppBinding</code> tells whether the binding members are meaningful.</p>
+<p>A descriptor describes the <em>whole</em> block, not only its call interface: <code>members</code> carries the internal state (VAR/VAR_TEMP, inherited ones included so that a consumer can lay out an instance without walking the base chain itself) and <code>methods</code> its behaviour, while <code>parameters</code> stays the IN/OUT surface. </p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="a78c65b5f835dcd39b19ba81aa6994f32" name="a78c65b5f835dcd39b19ba81aa6994f32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78c65b5f835dcd39b19ba81aa6994f32">&#9670;&#160;</a></span>baseType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string st2cpp::library::FunctionBlockDef::baseType</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>EXTENDS target, empty when none. </p>
+
+</div>
+</div>
 <a id="aa11a2d036c5708b400610e748cc5caff" name="aa11a2d036c5708b400610e748cc5caff"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa11a2d036c5708b400610e748cc5caff">&#9670;&#160;</a></span>cppBinding</h2>
 
@@ -170,6 +203,82 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a687089838d725ee97e8b9064f4521109" name="a687089838d725ee97e8b9064f4521109"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a687089838d725ee97e8b9064f4521109">&#9670;&#160;</a></span>interfaces</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::string&gt; st2cpp::library::FunctionBlockDef::interfaces</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>IMPLEMENTS targets. </p>
+
+</div>
+</div>
+<a id="a079238797bcc2009223e8c161ea84967" name="a079238797bcc2009223e8c161ea84967"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a079238797bcc2009223e8c161ea84967">&#9670;&#160;</a></span>isAbstract</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool st2cpp::library::FunctionBlockDef::isAbstract = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3be079fbd392982128cf86f1dba9337d" name="a3be079fbd392982128cf86f1dba9337d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3be079fbd392982128cf86f1dba9337d">&#9670;&#160;</a></span>isFinal</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool st2cpp::library::FunctionBlockDef::isFinal = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6f6ddd0340b060ba9d5af7031af03e1a" name="a6f6ddd0340b060ba9d5af7031af03e1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f6ddd0340b060ba9d5af7031af03e1a">&#9670;&#160;</a></span>members</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="structst2cpp_1_1library_1_1_fb_member.html">FbMember</a>&gt; st2cpp::library::FunctionBlockDef::members</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>internal state, inherited included </p>
+
+</div>
+</div>
+<a id="a3a7bb8fb8db42cad1d393fd1ecaf22bf" name="a3a7bb8fb8db42cad1d393fd1ecaf22bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a7bb8fb8db42cad1d393fd1ecaf22bf">&#9670;&#160;</a></span>methods</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="structst2cpp_1_1library_1_1_fb_method_def.html">FbMethodDef</a>&gt; st2cpp::library::FunctionBlockDef::methods</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>behaviour, inherited included </p>
 
 </div>
 </div>

@@ -111,7 +111,7 @@ Collaboration diagram for st2cpp::semantic::Diagnostics:</div>
 <div class="dyncontent">
 <div class="center"><img src="classst2cpp_1_1semantic_1_1_diagnostics__coll__graph.png" border="0" usemap="#ast2cpp_1_1semantic_1_1_diagnostics_coll__map" alt="Collaboration graph"/></div>
 <map name="ast2cpp_1_1semantic_1_1_diagnostics_coll__map" id="ast2cpp_1_1semantic_1_1_diagnostics_coll__map">
-<area shape="rect" title="Diagnostic collector and reporter." alt="" coords="5,5,215,411"/>
+<area shape="rect" title="Diagnostic collector and reporter." alt="" coords="5,5,215,431"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -149,6 +149,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4952755afbb24e6e9400ef981169798a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf1df917da07bb170176528418ac4a78" id="r_aaf1df917da07bb170176528418ac4a78"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_diagnostics.html#aaf1df917da07bb170176528418ac4a78">sourceText</a> () const</td></tr>
 <tr class="separator:aaf1df917da07bb170176528418ac4a78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c428b7aa55a36f538f8c3c2635f26e9" id="r_a2c428b7aa55a36f538f8c3c2635f26e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_diagnostics.html#a2c428b7aa55a36f538f8c3c2635f26e9">addSourceFile</a> (const std::string &amp;<a class="el" href="_library_loader_8cpp.html#a9b45b3e13bd9167aab02e17e08916231">name</a>, const std::string &amp;text)</td></tr>
+<tr class="separator:a2c428b7aa55a36f538f8c3c2635f26e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4c5a231fe5e8290bb68c0ad6421ae72" id="r_ae4c5a231fe5e8290bb68c0ad6421ae72"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_diagnostics.html#ae4c5a231fe5e8290bb68c0ad6421ae72">textFor</a> (const <a class="el" href="structst2cpp_1_1semantic_1_1_source_location.html">SourceLocation</a> &amp;loc) const</td></tr>
+<tr class="separator:ae4c5a231fe5e8290bb68c0ad6421ae72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -170,6 +174,8 @@ Static Private Member Functions</h2></td></tr>
 Private Attributes</h2></td></tr>
 <tr class="memitem:ad73f22562dc7c6a15901b249c6854d1b" id="r_ad73f22562dc7c6a15901b249c6854d1b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structst2cpp_1_1semantic_1_1_diagnostic.html">Diagnostic</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_diagnostics.html#ad73f22562dc7c6a15901b249c6854d1b">diagnostics_</a></td></tr>
 <tr class="separator:ad73f22562dc7c6a15901b249c6854d1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee4a8859b902aa23962ba09f7a36b0bf" id="r_aee4a8859b902aa23962ba09f7a36b0bf"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_diagnostics.html#aee4a8859b902aa23962ba09f7a36b0bf">sources_</a></td></tr>
+<tr class="separator:aee4a8859b902aa23962ba09f7a36b0bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6a55c36c3ad5488fe62dc358afb85c3" id="r_ad6a55c36c3ad5488fe62dc358afb85c3"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_diagnostics.html#ad6a55c36c3ad5488fe62dc358afb85c3">sourceName_</a> = &quot;&lt;input&gt;&quot;</td></tr>
 <tr class="separator:ad6a55c36c3ad5488fe62dc358afb85c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6523285420e1df74f8de9743e29f40a1" id="r_a6523285420e1df74f8de9743e29f40a1"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_diagnostics.html#a6523285420e1df74f8de9743e29f40a1">sourceText_</a></td></tr>
@@ -295,6 +301,42 @@ Private Attributes</h2></td></tr>
           <td></td>
           <td class="paramtype">const <a class="el" href="structst2cpp_1_1semantic_1_1_source_location.html">SourceLocation</a> &amp;&#160;</td>
           <td class="paramname"><em>location</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2c428b7aa55a36f538f8c3c2635f26e9" name="a2c428b7aa55a36f538f8c3c2635f26e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c428b7aa55a36f538f8c3c2635f26e9">&#9670;&#160;</a></span>addSourceFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void st2cpp::semantic::Diagnostics::addSourceFile </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>text</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -773,6 +815,32 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ae4c5a231fe5e8290bb68c0ad6421ae72" name="ae4c5a231fe5e8290bb68c0ad6421ae72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4c5a231fe5e8290bb68c0ad6421ae72">&#9670;&#160;</a></span>textFor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string st2cpp::semantic::Diagnostics::textFor </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structst2cpp_1_1semantic_1_1_source_location.html">SourceLocation</a> &amp;&#160;</td>
+          <td class="paramname"><em>loc</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ae08bfef35fbe612d58244935a7dfae21" name="ae08bfef35fbe612d58244935a7dfae21"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae08bfef35fbe612d58244935a7dfae21">&#9670;&#160;</a></span>totalCount()</h2>
 
@@ -857,6 +925,28 @@ Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">std::string st2cpp::semantic::Diagnostics::sourceName_ = &quot;&lt;input&gt;&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aee4a8859b902aa23962ba09f7a36b0bf" name="aee4a8859b902aa23962ba09f7a36b0bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee4a8859b902aa23962ba09f7a36b0bf">&#9670;&#160;</a></span>sources_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;std::string, std::string&gt; st2cpp::semantic::Diagnostics::sources_</td>
         </tr>
       </table>
   </td>

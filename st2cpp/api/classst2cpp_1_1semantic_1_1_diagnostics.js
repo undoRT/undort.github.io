@@ -3,6 +3,7 @@ var classst2cpp_1_1semantic_1_1_diagnostics =
     [ "add", "classst2cpp_1_1semantic_1_1_diagnostics.html#af9ea476771709611b872d27ff83fec13", null ],
     [ "addError", "classst2cpp_1_1semantic_1_1_diagnostics.html#a63725b22dfdfe43f2e7fb6fe54a213e4", null ],
     [ "addNote", "classst2cpp_1_1semantic_1_1_diagnostics.html#aa5dec620ee22e024caf542da483e2f7b", null ],
+    [ "addSourceFile", "classst2cpp_1_1semantic_1_1_diagnostics.html#a2c428b7aa55a36f538f8c3c2635f26e9", null ],
     [ "addWarning", "classst2cpp_1_1semantic_1_1_diagnostics.html#aefd675d3c5eeb215b384cff33f67e847", null ],
     [ "all", "classst2cpp_1_1semantic_1_1_diagnostics.html#a43a3e80da270edbfdf81f943b3915942", null ],
     [ "caretLine", "classst2cpp_1_1semantic_1_1_diagnostics.html#aaff98e13427a9fc1ebf7db875d56c7d8", null ],
@@ -19,9 +20,11 @@ var classst2cpp_1_1semantic_1_1_diagnostics =
     [ "sourceFileName", "classst2cpp_1_1semantic_1_1_diagnostics.html#a0224dacf6392e32b984e51c2da6f3826", null ],
     [ "sourceLine", "classst2cpp_1_1semantic_1_1_diagnostics.html#a159773726b42b072916125f5b7df45ed", null ],
     [ "sourceText", "classst2cpp_1_1semantic_1_1_diagnostics.html#aaf1df917da07bb170176528418ac4a78", null ],
+    [ "textFor", "classst2cpp_1_1semantic_1_1_diagnostics.html#ae4c5a231fe5e8290bb68c0ad6421ae72", null ],
     [ "totalCount", "classst2cpp_1_1semantic_1_1_diagnostics.html#ae08bfef35fbe612d58244935a7dfae21", null ],
     [ "warningCount", "classst2cpp_1_1semantic_1_1_diagnostics.html#ae9dfc56b70047ccdefb5370787fb210e", null ],
     [ "diagnostics_", "classst2cpp_1_1semantic_1_1_diagnostics.html#ad73f22562dc7c6a15901b249c6854d1b", null ],
     [ "sourceName_", "classst2cpp_1_1semantic_1_1_diagnostics.html#ad6a55c36c3ad5488fe62dc358afb85c3", null ],
+    [ "sources_", "classst2cpp_1_1semantic_1_1_diagnostics.html#aee4a8859b902aa23962ba09f7a36b0bf", null ],
     [ "sourceText_", "classst2cpp_1_1semantic_1_1_diagnostics.html#a6523285420e1df74f8de9743e29f40a1", null ]
 ];

@@ -4,7 +4,7 @@ var searchData=
   ['baseclass_1',['baseClass',['../struct_scope_manager_1_1_scope.html#aa6bc6be881a90a2044d47275e44365bc',1,'ScopeManager::Scope']]],
   ['baseclassid_2',['baseClassId',['../structst2cpp_1_1semantic_1_1_symbol.html#a45ec0f25deb18bc4fe5fed470cb60921',1,'st2cpp::semantic::Symbol']]],
   ['baseclasssymbolid_3',['baseClassSymbolId',['../struct_p_o_u.html#ad4ed657625a083b209964f4a5aa32938',1,'POU']]],
-  ['basetype_4',['basetype',['../structst2cpp_1_1semantic_1_1_type_info.html#a75270c6d60f8066fde5a055c48bb8572',1,'st2cpp::semantic::TypeInfo::baseType'],['../structst2cpp_1_1library_1_1_enum_type_def.html#aefc4e980fe1c40129657de80ae13685e',1,'st2cpp::library::EnumTypeDef::baseType'],['../_a_s_t_8h.html#ae96315ee246bd4a509133af84c88c5e1',1,'BaseType:&#160;AST.h']]],
+  ['basetype_4',['basetype',['../structst2cpp_1_1semantic_1_1_type_info.html#a75270c6d60f8066fde5a055c48bb8572',1,'st2cpp::semantic::TypeInfo::baseType'],['../structst2cpp_1_1library_1_1_function_block_def.html#a78c65b5f835dcd39b19ba81aa6994f32',1,'st2cpp::library::FunctionBlockDef::baseType'],['../structst2cpp_1_1library_1_1_enum_type_def.html#aefc4e980fe1c40129657de80ae13685e',1,'st2cpp::library::EnumTypeDef::baseType'],['../_a_s_t_8h.html#ae96315ee246bd4a509133af84c88c5e1',1,'BaseType:&#160;AST.h']]],
   ['basetypename_5',['baseTypeName',['../classst2cpp_1_1semantic_1_1_decl_visitor.html#a5619320fefc1e5a8c5efd5e675890ef4',1,'st2cpp::semantic::DeclVisitor']]],
   ['beta_6',['Known Limitations (Beta)',['../md__r_e_a_d_m_e.html#autotoc_md23',1,'']]],
   ['binaryexpr_7',['BinaryExpr',['../struct_binary_expr.html',1,'']]],

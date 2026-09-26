@@ -110,11 +110,11 @@ Collaboration diagram for st2cpp::semantic::DeclVisitor:</div>
 <div class="dyncontent">
 <div class="center"><img src="classst2cpp_1_1semantic_1_1_decl_visitor__coll__graph.png" border="0" usemap="#ast2cpp_1_1semantic_1_1_decl_visitor_coll__map" alt="Collaboration graph"/></div>
 <map name="ast2cpp_1_1semantic_1_1_decl_visitor_coll__map" id="ast2cpp_1_1semantic_1_1_decl_visitor_coll__map">
-<area shape="rect" title="Visitor for declaration phase." alt="" coords="150,548,354,1113"/>
+<area shape="rect" title="Visitor for declaration phase." alt="" coords="150,548,354,1133"/>
 <area shape="rect" href="classst2cpp_1_1semantic_1_1_symbol_table.html" title=" " alt="" coords="5,5,248,485"/>
-<area shape="poly" title=" " alt="" coords="181,485,191,532,185,533,175,486"/>
-<area shape="rect" href="classst2cpp_1_1semantic_1_1_diagnostics.html" title="Diagnostic collector and reporter." alt="" coords="273,43,482,448"/>
-<area shape="poly" title=" " alt="" coords="337,449,319,533,313,531,331,447"/>
+<area shape="poly" title=" " alt="" coords="180,485,190,531,184,532,175,486"/>
+<area shape="rect" href="classst2cpp_1_1semantic_1_1_diagnostics.html" title="Diagnostic collector and reporter." alt="" coords="273,33,482,458"/>
+<area shape="poly" title=" " alt="" coords="335,459,320,532,314,531,330,458"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -215,8 +215,8 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a5619320fefc1e5a8c5efd5e675890ef4" id="r_a5619320fefc1e5a8c5efd5e675890ef4"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_decl_visitor.html#a5619320fefc1e5a8c5efd5e675890ef4">baseTypeName</a> (<a class="el" href="_a_s_t_8h.html#ae96315ee246bd4a509133af84c88c5e1">BaseType</a> baseType)</td></tr>
 <tr class="memdesc:a5619320fefc1e5a8c5efd5e675890ef4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the canonical ST name of an elementary base type.  <br /></td></tr>
 <tr class="separator:a5619320fefc1e5a8c5efd5e675890ef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb466984e721ee2edbb6c4053f61fab1" id="r_adb466984e721ee2edbb6c4053f61fab1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacest2cpp_1_1semantic.html#a1ce5cfb2039b7cc4b3a96b0b0b8e9341">TypeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_decl_visitor.html#adb466984e721ee2edbb6c4053f61fab1">resolveNamedType</a> (const std::string &amp;<a class="el" href="_library_loader_8cpp.html#a9b45b3e13bd9167aab02e17e08916231">name</a>, uint32_t line=0)</td></tr>
-<tr class="separator:adb466984e721ee2edbb6c4053f61fab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0bac08fdf0d9b982e909864aadb1130" id="r_ab0bac08fdf0d9b982e909864aadb1130"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacest2cpp_1_1semantic.html#a1ce5cfb2039b7cc4b3a96b0b0b8e9341">TypeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_decl_visitor.html#ab0bac08fdf0d9b982e909864aadb1130">resolveNamedType</a> (const std::string &amp;<a class="el" href="_library_loader_8cpp.html#a9b45b3e13bd9167aab02e17e08916231">name</a>, uint32_t line=0, uint32_t col=0)</td></tr>
+<tr class="separator:ab0bac08fdf0d9b982e909864aadb1130"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf592d2bfe4780336b2a5ca7ed0948c8" id="r_adf592d2bfe4780336b2a5ca7ed0948c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structst2cpp_1_1semantic_1_1_source_location.html">SourceLocation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_decl_visitor.html#adf592d2bfe4780336b2a5ca7ed0948c8">makeLocation</a> (uint32_t line, uint32_t col=0) const</td></tr>
 <tr class="memdesc:adf592d2bfe4780336b2a5ca7ed0948c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build a <a class="el" href="structst2cpp_1_1semantic_1_1_source_location.html" title="Source location information.">SourceLocation</a> tagged as coming from the input file.  <br /></td></tr>
 <tr class="separator:adf592d2bfe4780336b2a5ca7ed0948c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -253,6 +253,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:abe36d13abe9462233600cfb657f508aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab301d6e8ba63caeb20cf5b9fef6eca40" id="r_ab301d6e8ba63caeb20cf5b9fef6eca40"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacest2cpp_1_1semantic.html#a04ded7b7fa589f2e5fa9ae2e7a22b3a3">SymbolId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_decl_visitor.html#ab301d6e8ba63caeb20cf5b9fef6eca40">currentMethodId_</a> = 0</td></tr>
 <tr class="separator:ab301d6e8ba63caeb20cf5b9fef6eca40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3434559c818b6f2d35c61bf598ccf61c" id="r_a3434559c818b6f2d35c61bf598ccf61c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_decl_visitor.html#a3434559c818b6f2d35c61bf598ccf61c">currentFile_</a></td></tr>
+<tr class="separator:a3434559c818b6f2d35c61bf598ccf61c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Visitor for declaration phase. </p>
@@ -1282,8 +1284,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="adb466984e721ee2edbb6c4053f61fab1" name="adb466984e721ee2edbb6c4053f61fab1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adb466984e721ee2edbb6c4053f61fab1">&#9670;&#160;</a></span>resolveNamedType()</h2>
+<a id="ab0bac08fdf0d9b982e909864aadb1130" name="ab0bac08fdf0d9b982e909864aadb1130"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0bac08fdf0d9b982e909864aadb1130">&#9670;&#160;</a></span>resolveNamedType()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1301,7 +1303,13 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>line</em> = <code>0</code>&#160;</td>
+          <td class="paramname"><em>line</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>col</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1606,6 +1614,28 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a3434559c818b6f2d35c61bf598ccf61c" name="a3434559c818b6f2d35c61bf598ccf61c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3434559c818b6f2d35c61bf598ccf61c">&#9670;&#160;</a></span>currentFile_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string st2cpp::semantic::DeclVisitor::currentFile_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ab301d6e8ba63caeb20cf5b9fef6eca40" name="ab301d6e8ba63caeb20cf5b9fef6eca40"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab301d6e8ba63caeb20cf5b9fef6eca40">&#9670;&#160;</a></span>currentMethodId_</h2>
 

@@ -55,6 +55,7 @@ var classst2cpp_1_1semantic_1_1_body_visitor =
     [ "visitWhileStmt", "classst2cpp_1_1semantic_1_1_body_visitor.html#a6316ecc6aec4d99db8d6cfcac64d554a", null ],
     [ "arrayRowCache_", "classst2cpp_1_1semantic_1_1_body_visitor.html#aadc00db195f6d7f34d58a91af8d4da62", null ],
     [ "contextStack_", "classst2cpp_1_1semantic_1_1_body_visitor.html#afa1eadfbec9a2e3b69e49c2e98e3c7c4", null ],
+    [ "currentFile_", "classst2cpp_1_1semantic_1_1_body_visitor.html#a718dec2aa37f50043addaba7bc01bc4c", null ],
     [ "diag_", "classst2cpp_1_1semantic_1_1_body_visitor.html#afdad402967f254cfa9472882eab6c3c1", null ],
     [ "hasReturn_", "classst2cpp_1_1semantic_1_1_body_visitor.html#a4e03687c0f8ab4057fc2a367b3441e79", null ],
     [ "resolvedCount_", "classst2cpp_1_1semantic_1_1_body_visitor.html#a0d03ec7fe7d2cc87d2219bf539fb2dc4", null ],

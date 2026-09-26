@@ -1,5 +1,5 @@
 <map id="st2cpp::library::FunctionBlockDef" name="st2cpp::library::FunctionBlockDef">
-<area shape="rect" id="Node000001" title="A FUNCTION_BLOCK exported by the library." alt="" coords="23,153,192,293"/>
+<area shape="rect" id="Node000001" title="A FUNCTION_BLOCK exported by the library." alt="" coords="23,153,192,413"/>
 <area shape="rect" id="Node000002" href="$structst2cpp_1_1library_1_1_fb_cpp_binding.html" title="C++ binding for a FUNCTION_BLOCK." alt="" coords="5,5,209,91"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="110,91,110,137,105,137,105,91"/>
 </map>

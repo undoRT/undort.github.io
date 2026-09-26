@@ -24,11 +24,12 @@ var searchData=
   ['test_5fproject_5floader_2ecpp_21',['test_project_loader.cpp',['../test__project__loader_8cpp.html',1,'']]],
   ['test_5fscope_2ecpp_22',['test_scope.cpp',['../test__scope_8cpp.html',1,'']]],
   ['test_5fsemantic_5flibrary_2ecpp_23',['test_semantic_library.cpp',['../test__semantic__library_8cpp.html',1,'']]],
-  ['test_5fsymbol_5ftable_2ecpp_24',['test_symbol_table.cpp',['../test__symbol__table_8cpp.html',1,'']]],
-  ['test_5ftype_5fsystem_2ecpp_25',['test_type_system.cpp',['../test__type__system_8cpp.html',1,'']]],
-  ['testhelper_2ecpp_26',['TestHelper.cpp',['../_test_helper_8cpp.html',1,'']]],
-  ['testhelper_2eh_27',['TestHelper.h',['../_test_helper_8h.html',1,'']]],
-  ['token_2eh_28',['Token.h',['../_token_8h.html',1,'']]],
-  ['typesystem_2ecpp_29',['TypeSystem.cpp',['../_type_system_8cpp.html',1,'']]],
-  ['typesystem_2eh_30',['TypeSystem.h',['../_type_system_8h.html',1,'']]]
+  ['test_5fsource_5flocation_2ecpp_24',['test_source_location.cpp',['../test__source__location_8cpp.html',1,'']]],
+  ['test_5fsymbol_5ftable_2ecpp_25',['test_symbol_table.cpp',['../test__symbol__table_8cpp.html',1,'']]],
+  ['test_5ftype_5fsystem_2ecpp_26',['test_type_system.cpp',['../test__type__system_8cpp.html',1,'']]],
+  ['testhelper_2ecpp_27',['TestHelper.cpp',['../_test_helper_8cpp.html',1,'']]],
+  ['testhelper_2eh_28',['TestHelper.h',['../_test_helper_8h.html',1,'']]],
+  ['token_2eh_29',['Token.h',['../_token_8h.html',1,'']]],
+  ['typesystem_2ecpp_30',['TypeSystem.cpp',['../_type_system_8cpp.html',1,'']]],
+  ['typesystem_2eh_31',['TypeSystem.h',['../_type_system_8h.html',1,'']]]
 ];

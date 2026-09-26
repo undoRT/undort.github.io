@@ -5,6 +5,7 @@ var classst2cpp_1_1semantic_1_1_symbol_table =
     [ "currentScopeId", "classst2cpp_1_1semantic_1_1_symbol_table.html#a878d47b6272f338446f1c39c8ed4439f", null ],
     [ "declare", "classst2cpp_1_1semantic_1_1_symbol_table.html#a5484fdb66d93d05d81319baa735adb99", null ],
     [ "declareExternal", "classst2cpp_1_1semantic_1_1_symbol_table.html#a97388be0bdef33c55b227a589cceb959", null ],
+    [ "effectiveParams", "classst2cpp_1_1semantic_1_1_symbol_table.html#a43d750b7221a9eb615398aea16ee723e", null ],
     [ "enterScope", "classst2cpp_1_1semantic_1_1_symbol_table.html#a8adc4544b2f5aa579832a61f1823d7cf", null ],
     [ "exitScope", "classst2cpp_1_1semantic_1_1_symbol_table.html#a09d37f4f74582007cda1bf5aa731d43b", null ],
     [ "externalScope", "classst2cpp_1_1semantic_1_1_symbol_table.html#a8d63ca01bba680cf6a97b0ccbbdfdc81", null ],

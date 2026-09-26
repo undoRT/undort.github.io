@@ -6,6 +6,7 @@ var class_parser =
     [ "check", "class_parser.html#a356c71f23527e46e18d110093225bab2", null ],
     [ "clearParsedInterfaces", "class_parser.html#ad82208cda6c8e4c5a982d2322b331f4a", null ],
     [ "error", "class_parser.html#a40ecb8da1f7e7f2bcdfe907781c2ea48", null ],
+    [ "errorAtInsertionPoint", "class_parser.html#a7870a3c3f8d14587e5af4d3ab70b2f9c", null ],
     [ "expect", "class_parser.html#ae14bc43775e550bc9c0780648750e198", null ],
     [ "getBinaryPrec", "class_parser.html#a0f33bd04789e59877b24ee8821aec8a1", null ],
     [ "getParsedInterfaces", "class_parser.html#a96724ae23c0fd42c4d933fa1208cde3b", null ],

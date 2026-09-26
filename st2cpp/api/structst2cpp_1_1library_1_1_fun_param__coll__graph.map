@@ -1,7 +1,7 @@
 <map id="st2cpp::library::FunParam" name="st2cpp::library::FunParam">
-<area shape="rect" id="Node000001" title="A parameter of a function or function block." alt="" coords="95,273,274,379"/>
+<area shape="rect" id="Node000001" title="A parameter of a function or function block." alt="" coords="95,273,274,419"/>
 <area shape="rect" id="Node000002" href="$structst2cpp_1_1library_1_1_type_ref.html" title="Structured type reference." alt="" coords="5,15,172,201"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,200,157,257,153,259,127,202"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="129,200,152,257,147,259,124,202"/>
 <area shape="rect" id="Node000003" href="$structst2cpp_1_1library_1_1_init_value.html" title="A typed initializer tree." alt="" coords="197,5,367,211"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="239,212,217,259,212,257,234,210"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="242,212,223,259,218,257,238,210"/>
 </map>

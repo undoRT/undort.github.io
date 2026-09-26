@@ -1,11 +1,11 @@
 <map id="st2cpp::semantic::SemanticInfo" name="st2cpp::semantic::SemanticInfo">
-<area shape="rect" id="Node000001" title="Result of semantic analysis, passed to CodeGenerator." alt="" coords="338,473,557,639"/>
-<area shape="rect" id="Node000002" href="$classst2cpp_1_1semantic_1_1_diagnostics.html" title="Diagnostic collector and reporter." alt="" coords="5,5,215,411"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="217,395,229,409,275,450,326,486,323,490,272,454,225,413,213,399"/>
-<area shape="rect" id="Node000003" href="$structst2cpp_1_1semantic_1_1_semantic_info_1_1_process_image_config.html" title=" " alt="" coords="239,138,434,278"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="361,278,419,457,414,458,356,279"/>
-<area shape="rect" id="Node000004" href="$structst2cpp_1_1semantic_1_1_preserved_semantics.html" title="Preserved&#45;semantics record (Fase 6)" alt="" coords="459,138,657,278"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="541,279,489,450,486,459,481,457,483,449,536,278"/>
-<area shape="rect" id="Node000005" href="$classst2cpp_1_1library_1_1_library_registry.html" title="Contains the registered libraries, retrievable by id (case&#45;insensitive, IEC 61131&#45;3 style)." alt="" coords="682,68,863,348"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="721,350,688,404,647,451,611,479,573,503,570,498,608,475,643,447,684,400,717,347"/>
+<area shape="rect" id="Node000001" title="Result of semantic analysis, passed to CodeGenerator." alt="" coords="338,493,557,659"/>
+<area shape="rect" id="Node000002" href="$classst2cpp_1_1semantic_1_1_diagnostics.html" title="Diagnostic collector and reporter." alt="" coords="5,5,215,431"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="217,415,229,429,275,470,325,506,322,511,271,475,225,433,213,418"/>
+<area shape="rect" id="Node000003" href="$structst2cpp_1_1semantic_1_1_semantic_info_1_1_process_image_config.html" title=" " alt="" coords="239,148,434,288"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="361,287,420,477,415,478,356,289"/>
+<area shape="rect" id="Node000004" href="$structst2cpp_1_1semantic_1_1_preserved_semantics.html" title="Preserved&#45;semantics record (Fase 6)" alt="" coords="459,148,657,288"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="542,289,489,470,486,479,481,477,483,469,537,287"/>
+<area shape="rect" id="Node000005" href="$classst2cpp_1_1library_1_1_library_registry.html" title="Contains the registered libraries, retrievable by id (case&#45;insensitive, IEC 61131&#45;3 style)." alt="" coords="682,78,863,358"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="725,360,691,419,670,447,646,471,611,499,573,523,570,518,608,495,643,467,666,443,687,416,721,357"/>
 </map>

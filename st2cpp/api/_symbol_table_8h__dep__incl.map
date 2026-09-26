@@ -1,98 +1,100 @@
 <map id="include/semantic/SymbolTable.h" name="include/semantic/SymbolTable.h">
-<area shape="rect" id="Node000001" title="Symbol table with scope management for semantic analysis." alt="" coords="2216,5,2448,31"/>
+<area shape="rect" id="Node000001" title="Symbol table with scope management for semantic analysis." alt="" coords="2352,5,2584,31"/>
 <area shape="rect" id="Node000002" href="$_body_visitor_8h.html" title="Body visitor: name resolution and AST decoration for statement/expression bodies." alt="" coords="142,86,365,111"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="2202,24,1284,43,764,60,547,70,383,81,322,89,322,83,382,76,547,65,764,55,1284,38,2202,19"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="2338,24,1356,42,794,59,560,70,383,81,322,89,321,83,382,76,560,64,794,54,1356,37,2338,18"/>
 <area shape="rect" id="Node000003" href="$_body_visitor_8cpp.html" title="Body visitor implementation: name resolution and AST decoration." alt="" coords="5,174,216,199"/>
-<area shape="poly" id="edge53_Node000001_Node000003" title=" " alt="" coords="2202,23,1687,30,1006,41,404,59,211,69,154,75,131,81,116,102,110,127,111,174,106,174,105,127,112,99,128,76,154,70,210,64,404,53,1006,36,1687,24,2202,18"/>
-<area shape="rect" id="Node000004" href="$_semantic_analyzer_8cpp.html" title="Semantic analyzer implementation (DeclVisitor + BodyVisitor integration)" alt="" coords="220,262,473,287"/>
-<area shape="poly" id="edge55_Node000001_Node000004" title=" " alt="" coords="2203,24,1913,29,1548,40,1193,57,1047,68,935,81,842,96,770,112,700,134,613,169,581,189,548,209,465,242,391,264,389,259,464,237,545,204,578,184,611,164,698,129,769,107,841,91,934,76,1046,63,1193,52,1547,35,1913,24,2202,18"/>
+<area shape="poly" id="edge54_Node000001_Node000003" title=" " alt="" coords="2338,23,1795,29,1068,40,424,58,217,69,156,75,131,81,116,102,110,127,111,174,106,174,105,126,112,99,128,76,155,69,216,63,424,52,1068,35,1794,24,2338,18"/>
+<area shape="rect" id="Node000004" href="$_semantic_analyzer_8cpp.html" title="Semantic analyzer implementation (DeclVisitor + BodyVisitor integration)" alt="" coords="256,262,509,287"/>
+<area shape="poly" id="edge56_Node000001_Node000004" title=" " alt="" coords="2338,24,1646,42,1268,58,1111,69,992,81,883,96,798,110,716,131,613,169,580,188,547,209,477,240,415,264,414,259,475,236,544,204,577,183,611,164,714,126,797,104,882,90,992,76,1111,64,1267,53,1645,36,2338,19"/>
 <area shape="rect" id="Node000005" href="$_decl_visitor_8h.html" title="Declaration visitor: registers types, POU, variables, methods in symbol table." alt="" coords="439,86,657,111"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="2202,22,1926,24,1547,33,1115,50,893,64,676,81,617,89,616,83,676,76,893,59,1114,45,1547,27,1926,19,2202,17"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="2338,21,2041,23,1629,30,1156,49,914,63,676,81,617,89,616,83,676,76,913,58,1156,43,1629,25,2041,17,2338,16"/>
 <area shape="rect" id="Node000006" href="$_decl_visitor_8cpp.html" title="Declaration visitor implementation for semantic analysis." alt="" coords="298,174,505,199"/>
-<area shape="poly" id="edge54_Node000001_Node000006" title=" " alt="" coords="2202,22,1758,23,1183,30,908,38,674,48,506,63,454,71,428,81,413,101,405,127,403,174,397,174,399,126,408,99,425,77,453,66,505,57,674,43,908,32,1183,25,1758,18,2202,16"/>
+<area shape="poly" id="edge55_Node000001_Node000006" title=" " alt="" coords="2338,21,1865,22,1246,28,948,36,695,46,512,61,456,71,428,81,413,101,405,127,403,174,397,174,399,126,408,99,425,77,455,65,512,56,695,41,948,30,1246,23,1865,16,2338,16"/>
 <area shape="rect" id="Node000007" href="$_library_symbol_importer_8h.html" title="Imports external library symbols into the semantic SymbolTable." alt="" coords="682,167,865,207"/>
-<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="2202,23,1939,28,1614,38,1301,55,1172,67,1074,81,1001,99,930,123,815,169,813,164,928,118,1000,94,1073,76,1171,62,1300,50,1614,33,1939,23,2202,18"/>
-<area shape="rect" id="Node000010" href="$_semantic_analyzer_8h.html" title="Semantic Analyzer &#45; performs semantic analysis on TranslationUnit." alt="" coords="2233,167,2431,207"/>
-<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="2335,44,2335,166,2329,166,2329,44"/>
-<area shape="rect" id="Node000014" href="$test__body__visitor_8cpp.html" title="Tests for BodyVisitor &#45; Name Resolution and AST Decoration." alt="" coords="2461,350,2608,390"/>
-<area shape="poly" id="edge58_Node000001_Node000014" title=" " alt="" coords="2355,39,2431,128,2473,188,2509,254,2526,305,2535,349,2530,350,2521,306,2504,256,2469,191,2426,131,2351,42"/>
-<area shape="rect" id="Node000016" href="$test__decl__visitor_8cpp.html" title="Tests for DeclVisitor &#45; Declaration Phase of Semantic Analysis." alt="" coords="2632,350,2779,390"/>
-<area shape="poly" id="edge59_Node000001_Node000016" title=" " alt="" coords="2365,35,2424,77,2508,151,2585,229,2692,348,2688,352,2581,233,2504,155,2421,81,2362,40"/>
-<area shape="rect" id="Node000017" href="$test__semantic__library_8cpp.html" title="Semantic integration tests: LibraryRegistry &#45;&gt; SemanticAnalyzer." alt="" coords="2803,350,2965,390"/>
-<area shape="poly" id="edge60_Node000001_Node000017" title=" " alt="" coords="2374,34,2463,76,2583,150,2698,228,2861,348,2858,352,2695,232,2580,154,2460,81,2372,38"/>
-<area shape="rect" id="Node000019" href="$_semantic_info_8h.html" title="Semantic analysis output passed to CodeGenerator." alt="" coords="1085,79,1283,119"/>
-<area shape="poly" id="edge21_Node000001_Node000019" title=" " alt="" coords="2202,31,1284,93,1284,88,2202,26"/>
-<area shape="rect" id="Node000031" href="$_symbol_table_8cpp.html" title="Symbol table implementation." alt="" coords="2775,86,2993,111"/>
-<area shape="poly" id="edge56_Node000001_Node000031" title=" " alt="" coords="2428,30,2756,76,2807,83,2806,89,2756,81,2427,35"/>
-<area shape="rect" id="Node000032" href="$_type_system_8cpp.html" title="Type system implementation: TypeInfo factories, built&#45;in registration, compatibility." alt="" coords="3018,86,3233,111"/>
-<area shape="poly" id="edge57_Node000001_Node000032" title=" " alt="" coords="2462,26,2714,46,3006,76,3058,83,3057,89,3005,81,2714,51,2462,31"/>
-<area shape="rect" id="Node000033" href="$test__symbol__table_8cpp.html" title="Tests for SymbolTable." alt="" coords="3257,79,3404,119"/>
-<area shape="poly" id="edge61_Node000001_Node000033" title=" " alt="" coords="2462,19,2620,24,2816,35,3031,51,3246,76,3258,78,3257,83,3245,81,3031,57,2816,40,2620,30,2462,24"/>
-<area shape="rect" id="Node000034" href="$test__type__system_8cpp.html" title="Tests for TypeSystem." alt="" coords="3428,79,3575,119"/>
-<area shape="poly" id="edge62_Node000001_Node000034" title=" " alt="" coords="2462,17,2649,21,2887,30,3151,47,3416,76,3428,78,3428,83,3416,81,3151,53,2887,35,2649,26,2462,22"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="2338,24,1734,42,1410,59,1277,69,1175,81,1079,100,984,123,830,169,828,164,983,118,1078,94,1174,76,1276,64,1410,54,1734,37,2338,19"/>
+<area shape="rect" id="Node000010" href="$_semantic_analyzer_8h.html" title="Semantic Analyzer &#45; performs semantic analysis on TranslationUnit." alt="" coords="2369,167,2567,207"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="2471,44,2471,166,2465,166,2465,44"/>
+<area shape="rect" id="Node000014" href="$test__body__visitor_8cpp.html" title="Tests for BodyVisitor &#45; Name Resolution and AST Decoration." alt="" coords="2584,350,2731,390"/>
+<area shape="poly" id="edge59_Node000001_Node000014" title=" " alt="" coords="2503,35,2555,69,2618,118,2679,180,2705,215,2725,254,2730,275,2725,296,2707,327,2683,351,2680,348,2702,324,2720,294,2725,275,2720,256,2700,218,2675,183,2615,122,2552,73,2500,40"/>
+<area shape="rect" id="Node000016" href="$test__decl__visitor_8cpp.html" title="Tests for DeclVisitor &#45; Declaration Phase of Semantic Analysis." alt="" coords="2755,350,2901,390"/>
+<area shape="poly" id="edge60_Node000001_Node000016" title=" " alt="" coords="2519,33,2564,51,2609,76,2649,107,2686,143,2748,221,2794,295,2822,349,2817,351,2789,297,2743,224,2682,146,2646,111,2607,81,2562,56,2517,38"/>
+<area shape="rect" id="Node000017" href="$test__semantic__library_8cpp.html" title="Semantic integration tests: LibraryRegistry &#45;&gt; SemanticAnalyzer." alt="" coords="2925,350,3088,390"/>
+<area shape="poly" id="edge61_Node000001_Node000017" title=" " alt="" coords="2533,32,2592,50,2651,76,2705,109,2758,145,2857,223,2937,295,2991,348,2987,352,2933,299,2853,227,2755,150,2702,113,2648,81,2590,55,2532,37"/>
+<area shape="rect" id="Node000020" href="$_semantic_info_8h.html" title="Semantic analysis output passed to CodeGenerator." alt="" coords="1186,79,1385,119"/>
+<area shape="poly" id="edge22_Node000001_Node000020" title=" " alt="" coords="2339,31,1385,93,1385,88,2338,25"/>
+<area shape="rect" id="Node000032" href="$_symbol_table_8cpp.html" title="Symbol table implementation." alt="" coords="3044,86,3263,111"/>
+<area shape="poly" id="edge57_Node000001_Node000032" title=" " alt="" coords="2598,29,3026,76,3079,83,3079,89,3025,81,2598,34"/>
+<area shape="rect" id="Node000033" href="$_type_system_8cpp.html" title="Type system implementation: TypeInfo factories, built&#45;in registration, compatibility." alt="" coords="3287,86,3502,111"/>
+<area shape="poly" id="edge58_Node000001_Node000033" title=" " alt="" coords="2598,23,2907,42,3091,57,3275,76,3328,83,3327,89,3274,81,3091,63,2907,48,2598,28"/>
+<area shape="rect" id="Node000034" href="$test__symbol__table_8cpp.html" title="Tests for SymbolTable." alt="" coords="3527,79,3673,119"/>
+<area shape="poly" id="edge62_Node000001_Node000034" title=" " alt="" coords="2598,17,2779,21,3008,31,3261,48,3515,76,3527,78,3526,83,3514,81,3261,54,3007,36,2778,27,2598,23"/>
+<area shape="rect" id="Node000035" href="$test__type__system_8cpp.html" title="Tests for TypeSystem." alt="" coords="3697,79,3844,119"/>
+<area shape="poly" id="edge63_Node000001_Node000035" title=" " alt="" coords="2598,16,2807,18,3078,26,3381,45,3535,58,3686,76,3698,78,3697,83,3685,81,3534,64,3381,50,3078,32,2806,23,2598,21"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="224,121,131,176,129,171,221,116"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="260,125,270,164,288,205,311,236,335,260,331,264,307,240,283,208,265,166,255,126"/>
-<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="549,125,541,167,531,189,518,208,495,229,468,244,413,265,411,259,466,239,492,224,514,205,527,186,536,165,544,124"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="259,124,268,164,276,186,287,205,303,222,321,237,358,260,356,264,318,242,299,226,283,208,271,188,263,166,253,125"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="549,125,540,167,531,189,518,208,498,228,474,243,426,264,424,260,471,239,494,224,514,205,526,186,535,165,544,124"/>
 <area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="518,121,423,176,420,171,515,116"/>
-<area shape="poly" id="edge9_Node000007_Node000004" title=" " alt="" coords="669,212,404,265,403,259,668,206"/>
-<area shape="rect" id="Node000008" href="$_library_symbol_importer_8cpp.html" title="LibrarySymbolImporter implementation." alt="" coords="548,255,751,295"/>
-<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="736,217,678,257,675,252,733,212"/>
-<area shape="rect" id="Node000009" href="$test__library__descriptor__builder_8cpp.html" title="Tests for LibraryDescriptorBuilder: ST + SemanticInfo &#45;&gt; semantic&#45;only LibraryDescriptor &#45;&gt; JSON &#45;&gt; r..." alt="" coords="669,343,811,397"/>
-<area shape="poly" id="edge10_Node000007_Node000009" title=" " alt="" coords="675,212,587,236,554,247,538,256,530,274,531,290,542,305,560,318,612,339,669,354,668,359,610,344,558,322,539,308,527,292,524,273,534,253,552,242,585,231,674,207"/>
-<area shape="poly" id="edge13_Node000010_Node000004" title=" " alt="" coords="2219,195,1856,209,1485,221,1196,227,907,236,536,257,450,265,450,259,536,252,907,231,1196,222,1485,215,1856,204,2219,190"/>
-<area shape="rect" id="Node000011" href="$main_8cpp.html" title="Command&#45;line driver for the st2cpp transpiler." alt="" coords="1122,262,1246,287"/>
-<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="2219,195,1820,217,1569,235,1316,257,1247,266,1246,261,1316,252,1568,229,1819,211,2219,190"/>
-<area shape="rect" id="Node000012" href="$test__codegen__external__library_8cpp.html" title="C++ generation of external library C++ bindings." alt="" coords="2219,350,2437,390"/>
-<area shape="poly" id="edge14_Node000010_Node000012" title=" " alt="" coords="2407,211,2433,229,2454,253,2461,275,2454,296,2441,314,2424,330,2386,352,2383,347,2421,325,2437,311,2450,293,2456,275,2450,256,2430,233,2404,215"/>
-<area shape="rect" id="Node000013" href="$_test_helper_8cpp.html" title="Implementation of helper class for tests." alt="" coords="836,357,1041,383"/>
-<area shape="poly" id="edge15_Node000010_Node000013" title=" " alt="" coords="2219,195,1730,219,1495,237,1411,247,1362,257,1346,266,1335,276,1324,287,1306,297,1238,320,1182,329,1125,334,1054,345,988,360,987,355,1053,340,1125,329,1182,324,1237,315,1304,292,1320,283,1331,272,1343,261,1360,252,1411,242,1495,232,1730,214,2219,190"/>
-<area shape="poly" id="edge16_Node000010_Node000014" title=" " alt="" coords="2407,210,2442,228,2475,253,2495,276,2511,302,2531,349,2526,351,2506,304,2491,279,2472,257,2440,233,2404,214"/>
-<area shape="rect" id="Node000015" href="$test__codegen__semantic_8cpp.html" title="Tests verifying the semantic&#45;driven CodeGenerator migration." alt="" coords="1797,350,1976,390"/>
-<area shape="poly" id="edge17_Node000010_Node000015" title=" " alt="" coords="2320,221,2295,261,2278,281,2257,297,2221,317,2188,328,2158,334,2128,336,2065,336,2030,339,1989,345,1957,353,1956,347,1987,340,2029,333,2065,331,2128,331,2157,329,2187,323,2219,312,2255,292,2274,277,2291,258,2316,218"/>
-<area shape="poly" id="edge18_Node000010_Node000016" title=" " alt="" coords="2401,209,2508,252,2602,302,2677,347,2674,352,2599,307,2506,257,2399,214"/>
-<area shape="poly" id="edge19_Node000010_Node000017" title=" " alt="" coords="2414,208,2562,252,2834,347,2833,352,2561,257,2413,213"/>
-<area shape="rect" id="Node000018" href="$test__compilation_8cpp.html" title="Implementation of test cases for compilation of generated code." alt="" coords="2000,357,2195,383"/>
-<area shape="poly" id="edge20_Node000010_Node000018" title=" " alt="" coords="2352,219,2362,257,2361,278,2353,297,2326,308,2271,325,2142,360,2141,355,2269,320,2324,303,2349,293,2356,276,2357,258,2347,220"/>
-<area shape="poly" id="edge51_Node000019_Node000004" title=" " alt="" coords="1072,111,849,134,745,150,670,169,654,178,642,188,630,199,613,209,565,228,515,244,422,265,421,259,514,238,563,223,611,204,627,194,639,184,651,174,668,164,743,145,848,128,1071,106"/>
-<area shape="poly" id="edge49_Node000019_Node000010" title=" " alt="" coords="1297,106,2233,175,2232,181,1297,111"/>
-<area shape="poly" id="edge50_Node000019_Node000011" title=" " alt="" coords="1187,133,1187,262,1181,262,1181,133"/>
-<area shape="poly" id="edge52_Node000019_Node000013" title=" " alt="" coords="1172,133,1127,211,1096,256,1060,297,1012,334,965,360,963,355,1009,329,1057,293,1092,252,1123,209,1167,130"/>
-<area shape="rect" id="Node000020" href="$_code_generator_8h.html" title="Code generator interface for translating AST to C++ code." alt="" coords="1602,174,1843,199"/>
-<area shape="poly" id="edge22_Node000019_Node000020" title=" " alt="" coords="1297,115,1651,171,1651,177,1296,121"/>
-<area shape="rect" id="Node000029" href="$_library_descriptor_builder_8h.html" title="Builds a LibraryDescriptor from an analyzed Structured Text library." alt="" coords="889,167,1071,207"/>
-<area shape="poly" id="edge44_Node000019_Node000029" title=" " alt="" coords="1128,126,1026,169,1024,164,1126,121"/>
-<area shape="poly" id="edge23_Node000020_Node000011" title=" " alt="" coords="1616,204,1451,227,1266,257,1231,265,1230,259,1265,252,1450,221,1616,198"/>
-<area shape="poly" id="edge25_Node000020_Node000012" title=" " alt="" coords="1858,186,1975,191,2098,203,2206,222,2249,236,2280,253,2301,274,2315,300,2328,349,2323,350,2310,302,2296,277,2277,257,2247,241,2205,227,2097,208,1974,197,1857,192"/>
-<area shape="poly" id="edge26_Node000020_Node000013" title=" " alt="" coords="1589,198,1455,217,1385,234,1317,257,1300,266,1289,276,1277,287,1260,297,989,360,988,355,1258,292,1274,283,1285,272,1297,262,1315,252,1383,229,1454,212,1588,192"/>
-<area shape="poly" id="edge40_Node000020_Node000015" title=" " alt="" coords="1741,209,1809,293,1866,348,1863,352,1805,296,1737,212"/>
-<area shape="poly" id="edge42_Node000020_Node000018" title=" " alt="" coords="1857,193,1979,202,2103,215,2204,232,2239,242,2258,253,2268,271,2266,289,2255,304,2237,319,2190,342,2141,360,2139,355,2188,338,2234,314,2251,301,2261,287,2263,272,2254,257,2236,247,2203,237,2102,220,1978,208,1857,198"/>
-<area shape="rect" id="Node000021" href="$_code_generator_8cpp.html" title="Implementation of the code generator that emits C++ from the AST." alt="" coords="1818,262,2046,287"/>
-<area shape="poly" id="edge24_Node000020_Node000021" title=" " alt="" coords="1765,202,1905,259,1903,264,1763,207"/>
-<area shape="rect" id="Node000022" href="$_test_helper_8h.html" title="Header of helper class for tests." alt="" coords="1373,262,1563,287"/>
-<area shape="poly" id="edge27_Node000020_Node000022" title=" " alt="" coords="1676,206,1503,264,1501,259,1675,201"/>
-<area shape="rect" id="Node000027" href="$test__allocator_8cpp.html" title="Implementation of test cases for the AddressAllocator." alt="" coords="2071,262,2244,287"/>
-<area shape="poly" id="edge41_Node000020_Node000027" title=" " alt="" coords="1795,199,2100,259,2099,265,1794,205"/>
-<area shape="rect" id="Node000028" href="$test__scope_8cpp.html" title="Implementation of test cases for the ScopeManager." alt="" coords="1588,262,1743,287"/>
-<area shape="poly" id="edge43_Node000020_Node000028" title=" " alt="" coords="1710,212,1676,263,1671,260,1705,209"/>
-<area shape="poly" id="edge30_Node000022_Node000009" title=" " alt="" coords="1359,289,1047,319,824,345,812,348,811,343,824,340,1046,314,1358,283"/>
-<area shape="poly" id="edge28_Node000022_Node000012" title=" " alt="" coords="1542,287,1576,292,1753,308,1892,314,2030,320,2207,340,2248,347,2248,353,2206,345,2030,326,1891,319,1753,314,1576,297,1541,292"/>
-<area shape="poly" id="edge29_Node000022_Node000013" title=" " alt="" coords="1385,292,1354,297,1203,320,1054,345,987,360,985,355,1053,340,1203,314,1353,292,1384,287"/>
-<area shape="poly" id="edge31_Node000022_Node000014" title=" " alt="" coords="1540,287,1576,292,1709,304,1822,308,2014,307,2107,307,2206,310,2318,320,2450,340,2481,347,2479,353,2449,345,2317,326,2206,315,2107,312,2014,312,1822,314,1709,309,1576,297,1540,292"/>
-<area shape="poly" id="edge32_Node000022_Node000015" title=" " alt="" coords="1540,287,1786,340,1816,347,1815,353,1785,345,1539,293"/>
-<area shape="poly" id="edge33_Node000022_Node000016" title=" " alt="" coords="1540,287,1576,292,1735,305,1870,310,2099,305,2210,303,2329,306,2463,317,2620,340,2652,347,2651,353,2620,345,2462,323,2329,312,2210,309,2100,311,1870,315,1735,311,1576,297,1539,292"/>
-<area shape="poly" id="edge34_Node000022_Node000017" title=" " alt="" coords="1539,287,1576,292,1761,307,1917,312,2056,310,2185,306,2313,303,2451,305,2608,316,2791,340,2825,347,2824,353,2790,345,2607,322,2451,310,2313,308,2185,311,2056,315,1917,317,1760,312,1576,297,1538,292"/>
-<area shape="poly" id="edge35_Node000022_Node000018" title=" " alt="" coords="1544,287,1576,292,1692,306,1783,314,1873,323,1988,340,2055,355,2054,360,1988,345,1872,328,1782,319,1692,311,1576,297,1543,292"/>
-<area shape="rect" id="Node000023" href="$test__complex__program_8cpp.html" title="Implementation of test cases for complex ST programs." alt="" coords="1627,350,1773,390"/>
-<area shape="poly" id="edge36_Node000022_Node000023" title=" " alt="" coords="1510,290,1654,348,1652,352,1508,295"/>
-<area shape="rect" id="Node000024" href="$test__generation_8cpp.html" title="Implementation of test cases for the CodeGenerator." alt="" coords="1065,357,1252,383"/>
-<area shape="poly" id="edge37_Node000022_Node000024" title=" " alt="" coords="1418,294,1198,360,1196,355,1416,289"/>
-<area shape="rect" id="Node000025" href="$test__golden_8cpp.html" title="Golden tests for st2cpp &#45; compares generated C++ against expected output." alt="" coords="1277,357,1438,383"/>
-<area shape="poly" id="edge38_Node000022_Node000025" title=" " alt="" coords="1446,298,1373,359,1369,355,1442,294"/>
-<area shape="rect" id="Node000026" href="$test__process__image_8cpp.html" title="Implementation of test cases for Process Image functionality." alt="" coords="1462,350,1602,390"/>
-<area shape="poly" id="edge39_Node000022_Node000026" title=" " alt="" coords="1486,297,1521,348,1517,351,1481,300"/>
-<area shape="poly" id="edge48_Node000029_Node000009" title=" " alt="" coords="894,214,853,232,815,257,795,277,778,299,754,344,749,341,774,296,791,273,812,253,850,227,892,209"/>
-<area shape="poly" id="edge45_Node000029_Node000011" title=" " alt="" coords="1039,210,1158,260,1156,264,1037,215"/>
-<area shape="poly" id="edge47_Node000029_Node000022" title=" " alt="" coords="1086,204,1404,259,1403,265,1085,209"/>
-<area shape="rect" id="Node000030" href="$_library_descriptor_builder_8cpp.html" title="Implementation of the semantic&#45;to&#45;descriptor bridge." alt="" coords="825,255,1047,295"/>
-<area shape="poly" id="edge46_Node000029_Node000030" title=" " alt="" coords="966,220,948,256,943,253,962,218"/>
+<area shape="poly" id="edge9_Node000007_Node000004" title=" " alt="" coords="675,212,435,265,434,259,674,207"/>
+<area shape="rect" id="Node000008" href="$_library_symbol_importer_8cpp.html" title="LibrarySymbolImporter implementation." alt="" coords="533,255,736,295"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="733,216,666,257,664,252,730,211"/>
+<area shape="rect" id="Node000009" href="$test__library__descriptor__builder_8cpp.html" title="Tests for LibraryDescriptorBuilder: ST + SemanticInfo &#45;&gt; semantic&#45;only LibraryDescriptor &#45;&gt; JSON &#45;&gt; r..." alt="" coords="791,343,934,397"/>
+<area shape="poly" id="edge10_Node000007_Node000009" title=" " alt="" coords="782,219,792,256,808,293,841,341,836,344,803,296,787,258,777,221"/>
+<area shape="poly" id="edge13_Node000010_Node000004" title=" " alt="" coords="2355,195,1932,209,1535,219,1226,222,917,231,522,257,457,265,456,259,521,252,917,225,1226,216,1535,213,1932,204,2355,189"/>
+<area shape="rect" id="Node000011" href="$main_8cpp.html" title="Command&#45;line driver for the st2cpp transpiler." alt="" coords="1158,262,1282,287"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="2355,194,1913,214,1631,232,1347,257,1283,266,1282,260,1346,252,1631,227,1912,209,2355,189"/>
+<area shape="rect" id="Node000012" href="$test__codegen__external__library_8cpp.html" title="C++ generation of external library C++ bindings." alt="" coords="2341,350,2560,390"/>
+<area shape="poly" id="edge14_Node000010_Node000012" title=" " alt="" coords="2582,203,2629,217,2668,237,2681,249,2688,263,2688,279,2679,296,2659,313,2626,328,2544,352,2543,347,2624,323,2656,309,2675,293,2683,278,2683,264,2677,252,2665,241,2627,222,2580,208"/>
+<area shape="rect" id="Node000013" href="$_test_helper_8cpp.html" title="Implementation of helper class for tests." alt="" coords="959,357,1164,383"/>
+<area shape="poly" id="edge15_Node000010_Node000013" title=" " alt="" coords="2402,214,2285,257,2239,280,2218,289,2190,297,2038,326,1909,338,1793,340,1685,336,1577,330,1461,326,1330,330,1176,345,1104,360,1103,355,1176,340,1330,325,1461,321,1577,324,1685,331,1793,335,1908,333,2038,320,2189,292,2216,284,2236,275,2283,252,2400,209"/>
+<area shape="poly" id="edge16_Node000010_Node000014" title=" " alt="" coords="2582,205,2655,225,2684,238,2702,253,2709,265,2711,278,2706,305,2693,330,2677,351,2673,348,2688,327,2701,303,2705,278,2704,267,2698,256,2681,243,2653,230,2580,210"/>
+<area shape="rect" id="Node000015" href="$test__codegen__semantic_8cpp.html" title="Tests verifying the semantic&#45;driven CodeGenerator migration." alt="" coords="1920,350,2099,390"/>
+<area shape="poly" id="edge17_Node000010_Node000015" title=" " alt="" coords="2430,217,2364,258,2285,297,2081,353,2080,347,2283,292,2361,253,2428,212"/>
+<area shape="poly" id="edge18_Node000010_Node000016" title=" " alt="" coords="2582,201,2654,220,2690,235,2724,252,2754,274,2780,300,2818,348,2814,351,2776,304,2750,278,2721,257,2688,240,2652,226,2580,206"/>
+<area shape="poly" id="edge19_Node000010_Node000017" title=" " alt="" coords="2581,205,2672,225,2765,252,2881,300,2974,347,2971,352,2879,305,2763,257,2670,230,2580,210"/>
+<area shape="rect" id="Node000018" href="$test__source__location_8cpp.html" title="Tests for source locations carried across a merged workspace: per&#45;entity file names,..." alt="" coords="2506,255,2665,295"/>
+<area shape="poly" id="edge20_Node000010_Node000018" title=" " alt="" coords="2507,213,2561,252,2558,257,2504,217"/>
+<area shape="rect" id="Node000019" href="$test__compilation_8cpp.html" title="Implementation of test cases for compilation of generated code." alt="" coords="2123,357,2317,383"/>
+<area shape="poly" id="edge21_Node000010_Node000019" title=" " alt="" coords="2453,220,2424,259,2387,297,2356,318,2322,335,2260,360,2258,355,2320,330,2353,313,2384,293,2420,256,2448,217"/>
+<area shape="poly" id="edge52_Node000020_Node000004" title=" " alt="" coords="1172,108,897,129,765,147,711,157,670,169,654,178,642,188,630,198,613,209,524,243,441,265,440,259,523,238,611,204,627,194,639,184,651,173,668,164,710,152,764,142,897,124,1172,103"/>
+<area shape="poly" id="edge50_Node000020_Node000010" title=" " alt="" coords="1399,106,2369,175,2368,181,1398,111"/>
+<area shape="poly" id="edge51_Node000020_Node000011" title=" " alt="" coords="1283,133,1275,169,1262,208,1247,238,1231,263,1226,260,1242,236,1258,206,1270,168,1278,132"/>
+<area shape="poly" id="edge53_Node000020_Node000013" title=" " alt="" coords="1173,112,1099,127,1023,154,987,173,954,196,926,224,902,256,897,273,899,289,910,304,926,317,969,339,1015,355,1013,360,967,344,923,321,906,307,895,291,891,273,898,253,922,220,951,192,984,169,1021,149,1097,122,1172,106"/>
+<area shape="rect" id="Node000021" href="$_code_generator_8h.html" title="Code generator interface for translating AST to C++ code." alt="" coords="1678,174,1919,199"/>
+<area shape="poly" id="edge23_Node000020_Node000021" title=" " alt="" coords="1399,116,1731,171,1730,177,1398,121"/>
+<area shape="rect" id="Node000030" href="$_library_descriptor_builder_8h.html" title="Builds a LibraryDescriptor from an analyzed Structured Text library." alt="" coords="1065,167,1247,207"/>
+<area shape="poly" id="edge45_Node000020_Node000030" title=" " alt="" coords="1246,129,1186,169,1183,164,1244,124"/>
+<area shape="poly" id="edge24_Node000021_Node000011" title=" " alt="" coords="1679,204,1501,226,1302,257,1267,265,1266,259,1301,252,1500,221,1679,198"/>
+<area shape="poly" id="edge26_Node000021_Node000012" title=" " alt="" coords="1933,194,2082,214,2162,230,2240,252,2293,273,2344,299,2425,348,2422,352,2341,304,2291,278,2238,257,2161,235,2081,219,1932,199"/>
+<area shape="poly" id="edge27_Node000021_Node000013" title=" " alt="" coords="1664,193,1590,199,1509,211,1427,230,1348,257,1332,266,1322,276,1312,286,1296,297,1250,318,1202,336,1116,360,1114,355,1200,331,1248,313,1293,292,1308,282,1318,272,1329,262,1346,252,1425,225,1508,206,1589,194,1664,187"/>
+<area shape="poly" id="edge41_Node000021_Node000015" title=" " alt="" coords="1934,190,2011,197,2087,209,2151,227,2175,239,2191,253,2198,264,2200,274,2192,296,2174,312,2146,327,2077,352,2075,347,2143,322,2171,308,2187,293,2195,274,2193,266,2187,256,2172,243,2149,232,2086,215,2011,203,1933,196"/>
+<area shape="poly" id="edge43_Node000021_Node000019" title=" " alt="" coords="1933,189,2016,196,2099,208,2169,226,2195,238,2214,253,2228,279,2232,308,2230,336,2226,358,2221,357,2225,335,2227,308,2223,280,2210,256,2192,243,2167,231,2098,213,2016,202,1933,195"/>
+<area shape="rect" id="Node000022" href="$_code_generator_8cpp.html" title="Implementation of the code generator that emits C++ from the AST." alt="" coords="1573,262,1801,287"/>
+<area shape="poly" id="edge25_Node000021_Node000022" title=" " alt="" coords="1774,210,1704,264,1700,260,1771,206"/>
+<area shape="rect" id="Node000023" href="$_test_helper_8h.html" title="Header of helper class for tests." alt="" coords="1358,262,1549,287"/>
+<area shape="poly" id="edge28_Node000021_Node000023" title=" " alt="" coords="1740,205,1500,265,1499,259,1739,200"/>
+<area shape="rect" id="Node000028" href="$test__allocator_8cpp.html" title="Implementation of test cases for the AddressAllocator." alt="" coords="1825,262,1999,287"/>
+<area shape="poly" id="edge42_Node000021_Node000028" title=" " alt="" coords="1826,205,1898,260,1895,264,1823,210"/>
+<area shape="rect" id="Node000029" href="$test__scope_8cpp.html" title="Implementation of test cases for the ScopeManager." alt="" coords="2023,262,2177,287"/>
+<area shape="poly" id="edge44_Node000021_Node000029" title=" " alt="" coords="1853,201,2060,259,2059,264,1851,206"/>
+<area shape="poly" id="edge31_Node000023_Node000009" title=" " alt="" coords="1347,292,1110,322,947,345,935,348,934,343,946,340,1109,316,1346,286"/>
+<area shape="poly" id="edge29_Node000023_Node000012" title=" " alt="" coords="1526,287,1562,292,1678,304,1777,310,1946,313,2114,318,2213,326,2330,340,2372,347,2371,353,2329,345,2213,332,2114,324,1946,319,1777,315,1678,309,1561,297,1525,292"/>
+<area shape="poly" id="edge30_Node000023_Node000013" title=" " alt="" coords="1392,293,1110,360,1109,355,1391,288"/>
+<area shape="poly" id="edge32_Node000023_Node000014" title=" " alt="" coords="1525,287,1562,292,1715,305,1846,309,2068,306,2175,304,2290,307,2420,318,2572,340,2604,347,2603,353,2572,345,2419,323,2290,312,2175,309,2068,311,1846,315,1715,310,1561,297,1525,292"/>
+<area shape="poly" id="edge33_Node000023_Node000015" title=" " alt="" coords="1531,287,1562,292,1735,314,1811,323,1909,340,1941,347,1940,353,1907,345,1811,328,1735,319,1561,297,1530,292"/>
+<area shape="poly" id="edge34_Node000023_Node000016" title=" " alt="" coords="1524,287,1562,292,1741,306,1894,311,2028,308,2154,304,2279,301,2413,303,2565,315,2743,340,2774,347,2773,353,2742,345,2564,320,2413,309,2279,306,2154,309,2028,314,1893,316,1741,312,1561,297,1524,292"/>
+<area shape="poly" id="edge35_Node000023_Node000017" title=" " alt="" coords="1524,287,1562,292,1767,308,1941,313,2095,310,2239,305,2382,301,2536,302,2709,314,2914,340,2948,347,2947,353,2913,345,2709,319,2535,308,2382,306,2239,310,2095,316,1941,318,1767,313,1561,297,1523,292"/>
+<area shape="poly" id="edge36_Node000023_Node000019" title=" " alt="" coords="1527,287,1562,292,1716,307,1837,313,1957,320,2111,340,2179,355,2178,360,2110,345,1957,326,1836,318,1715,313,1561,297,1527,292"/>
+<area shape="rect" id="Node000024" href="$test__complex__program_8cpp.html" title="Implementation of test cases for complex ST programs." alt="" coords="1749,350,1896,390"/>
+<area shape="poly" id="edge37_Node000023_Node000024" title=" " alt="" coords="1520,288,1738,340,1764,347,1762,353,1737,345,1519,293"/>
+<area shape="rect" id="Node000025" href="$test__generation_8cpp.html" title="Implementation of test cases for the CodeGenerator." alt="" coords="1188,357,1375,383"/>
+<area shape="poly" id="edge38_Node000023_Node000025" title=" " alt="" coords="1422,296,1304,360,1301,355,1419,291"/>
+<area shape="rect" id="Node000026" href="$test__golden_8cpp.html" title="Golden tests for st2cpp &#45; compares generated C++ against expected output." alt="" coords="1399,357,1561,383"/>
+<area shape="poly" id="edge39_Node000023_Node000026" title=" " alt="" coords="1463,300,1479,356,1474,358,1458,301"/>
+<area shape="rect" id="Node000027" href="$test__process__image_8cpp.html" title="Implementation of test cases for Process Image functionality." alt="" coords="1585,350,1725,390"/>
+<area shape="poly" id="edge40_Node000023_Node000027" title=" " alt="" coords="1492,291,1615,348,1613,352,1489,296"/>
+<area shape="poly" id="edge49_Node000030_Node000009" title=" " alt="" coords="1051,195,1012,202,972,215,935,232,902,257,887,276,877,298,867,343,862,342,872,296,882,273,898,253,932,228,970,210,1011,197,1050,190"/>
+<area shape="poly" id="edge46_Node000030_Node000011" title=" " alt="" coords="1181,216,1213,260,1209,263,1176,219"/>
+<area shape="poly" id="edge48_Node000030_Node000023" title=" " alt="" coords="1235,208,1414,259,1413,265,1234,213"/>
+<area shape="rect" id="Node000031" href="$_library_descriptor_builder_8cpp.html" title="Implementation of the semantic&#45;to&#45;descriptor bridge." alt="" coords="912,255,1133,295"/>
+<area shape="poly" id="edge47_Node000030_Node000031" title=" " alt="" coords="1116,217,1054,257,1051,252,1114,212"/>
 </map>

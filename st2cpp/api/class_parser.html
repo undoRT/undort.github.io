@@ -156,6 +156,9 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a40ecb8da1f7e7f2bcdfe907781c2ea48" id="r_a40ecb8da1f7e7f2bcdfe907781c2ea48"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_parse_error.html">ParseError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser.html#a40ecb8da1f7e7f2bcdfe907781c2ea48">error</a> (const std::string &amp;msg) const</td></tr>
 <tr class="memdesc:a40ecb8da1f7e7f2bcdfe907781c2ea48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a parse error with current location information.  <br /></td></tr>
 <tr class="separator:a40ecb8da1f7e7f2bcdfe907781c2ea48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7870a3c3f8d14587e5af4d3ab70b2f9c" id="r_a7870a3c3f8d14587e5af4d3ab70b2f9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_parse_error.html">ParseError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser.html#a7870a3c3f8d14587e5af4d3ab70b2f9c">errorAtInsertionPoint</a> (const std::string &amp;msg) const</td></tr>
+<tr class="memdesc:a7870a3c3f8d14587e5af4d3ab70b2f9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a parse error pointing at the insertion point of a missing token.  <br /></td></tr>
+<tr class="separator:a7870a3c3f8d14587e5af4d3ab70b2f9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18c64acff63b65a5381d37938a29bf5d" id="r_a18c64acff63b65a5381d37938a29bf5d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_p_o_u.html">POU</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser.html#a18c64acff63b65a5381d37938a29bf5d">parsePOU</a> ()</td></tr>
 <tr class="memdesc:a18c64acff63b65a5381d37938a29bf5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a Program Organization Unit (<a class="el" href="struct_p_o_u.html">POU</a>)  <br /></td></tr>
 <tr class="separator:a18c64acff63b65a5381d37938a29bf5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -470,6 +473,43 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_parse_error.html" title="Exception thrown for parsing errors.">ParseError</a> exception </dd></dl>
+
+</div>
+</div>
+<a id="a7870a3c3f8d14587e5af4d3ab70b2f9c" name="a7870a3c3f8d14587e5af4d3ab70b2f9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7870a3c3f8d14587e5af4d3ab70b2f9c">&#9670;&#160;</a></span>errorAtInsertionPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_parse_error.html">ParseError</a> Parser::errorAtInsertionPoint </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>msg</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a parse error pointing at the insertion point of a missing token. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>Error description </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_parse_error.html" title="Exception thrown for parsing errors.">ParseError</a> exception</dd></dl>
+<p>When <a class="el" href="class_parser.html#ae14bc43775e550bc9c0780648750e198" title="Expect a specific token type, consume it, or throw error.">expect()</a> fails, the expected token is missing <em>before</em> the token that is actually there. Reporting the position of that offending token makes the diagnostic point at unrelated code, sometimes on the following line, which is far less useful than pointing at the place where the token should have been inserted (immediately after the last consumed one). This mirrors how clang reports "expected ';' at end of declaration".</p>
+<p>Falls back to the offending token when nothing has been consumed yet. </p>
 
 </div>
 </div>

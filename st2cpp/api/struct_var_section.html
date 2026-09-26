@@ -108,7 +108,7 @@ Collaboration diagram for VarSection:</div>
 <div class="dyncontent">
 <div class="center"><img src="struct_var_section__coll__graph.png" border="0" usemap="#a_var_section_coll__map" alt="Collaboration graph"/></div>
 <map name="a_var_section_coll__map" id="a_var_section_coll__map">
-<area shape="rect" title="A section of variable declarations (VAR_INPUT, VAR_OUTPUT, etc.)" alt="" coords="5,5,97,111"/>
+<area shape="rect" title="A section of variable declarations (VAR_INPUT, VAR_OUTPUT, etc.)" alt="" coords="5,5,97,171"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -120,6 +120,12 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a64dffd93c57915adcccf9d01c883e8b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad68651fdeb3dbef0cf632ca3b89473d0" id="r_ad68651fdeb3dbef0cf632ca3b89473d0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="struct_var_decl.html">VarDecl</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_var_section.html#ad68651fdeb3dbef0cf632ca3b89473d0">decls</a></td></tr>
 <tr class="separator:ad68651fdeb3dbef0cf632ca3b89473d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab62add5c73f7d2dbf859c53ec9c13d3e" id="r_ab62add5c73f7d2dbf859c53ec9c13d3e"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_var_section.html#ab62add5c73f7d2dbf859c53ec9c13d3e">line</a> = 0</td></tr>
+<tr class="separator:ab62add5c73f7d2dbf859c53ec9c13d3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8152c9a4c764786586d18bb3cc04eff3" id="r_a8152c9a4c764786586d18bb3cc04eff3"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_var_section.html#a8152c9a4c764786586d18bb3cc04eff3">col</a> = 0</td></tr>
+<tr class="separator:a8152c9a4c764786586d18bb3cc04eff3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c44babfeb69ba30f23ab49115f58fda" id="r_a2c44babfeb69ba30f23ab49115f58fda"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_var_section.html#a2c44babfeb69ba30f23ab49115f58fda">fileName</a></td></tr>
+<tr class="separator:a2c44babfeb69ba30f23ab49115f58fda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A section of variable declarations (VAR_INPUT, VAR_OUTPUT, etc.) </p>
@@ -132,6 +138,20 @@ Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">std::vector&lt;<a class="el" href="struct_attribute.html">Attribute</a>&gt; VarSection::attributes</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8152c9a4c764786586d18bb3cc04eff3" name="a8152c9a4c764786586d18bb3cc04eff3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8152c9a4c764786586d18bb3cc04eff3">&#9670;&#160;</a></span>col</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t VarSection::col = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -152,6 +172,20 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a2c44babfeb69ba30f23ab49115f58fda" name="a2c44babfeb69ba30f23ab49115f58fda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c44babfeb69ba30f23ab49115f58fda">&#9670;&#160;</a></span>fileName</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string VarSection::fileName</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a4077f55369c094ff9483942c5b5c6b85" name="a4077f55369c094ff9483942c5b5c6b85"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4077f55369c094ff9483942c5b5c6b85">&#9670;&#160;</a></span>kind</h2>
 
@@ -160,6 +194,20 @@ Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="_a_s_t_8h.html#ae07efc6cf0618fdada2cb81c9d54d6a4">VarKind</a> VarSection::kind</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab62add5c73f7d2dbf859c53ec9c13d3e" name="ab62add5c73f7d2dbf859c53ec9c13d3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab62add5c73f7d2dbf859c53ec9c13d3e">&#9670;&#160;</a></span>line</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t VarSection::line = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">

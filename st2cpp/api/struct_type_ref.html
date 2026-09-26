@@ -108,7 +108,7 @@ Collaboration diagram for TypeRef:</div>
 <div class="dyncontent">
 <div class="center"><img src="struct_type_ref__coll__graph.png" border="0" usemap="#a_type_ref_coll__map" alt="Collaboration graph"/></div>
 <map name="a_type_ref_coll__map" id="a_type_ref_coll__map">
-<area shape="rect" title="Reference to a data type (base type, array, pointer, etc.)" alt="" coords="5,5,132,191"/>
+<area shape="rect" title="Reference to a data type (base type, array, pointer, etc.)" alt="" coords="5,5,132,231"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -132,6 +132,11 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a772c052831a448937cd532f795d05694" id="r_a772c052831a448937cd532f795d05694"><td class="memItemLeft" align="right" valign="top">std::optional&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_type_ref.html#a772c052831a448937cd532f795d05694">stringLen</a></td></tr>
 <tr class="memdesc:a772c052831a448937cd532f795d05694"><td class="mdescLeft">&#160;</td><td class="mdescRight">Length for STRING[n].  <br /></td></tr>
 <tr class="separator:a772c052831a448937cd532f795d05694"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3f41f0e75809ee0d67e6f90095bcdfb" id="r_ae3f41f0e75809ee0d67e6f90095bcdfb"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_type_ref.html#ae3f41f0e75809ee0d67e6f90095bcdfb">line</a> = 0</td></tr>
+<tr class="memdesc:ae3f41f0e75809ee0d67e6f90095bcdfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Where the type name starts (0 = unknown)  <br /></td></tr>
+<tr class="separator:ae3f41f0e75809ee0d67e6f90095bcdfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3a998f202a29dd224c4371829dec48c" id="r_aa3a998f202a29dd224c4371829dec48c"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_type_ref.html#aa3a998f202a29dd224c4371829dec48c">col</a> = 0</td></tr>
+<tr class="separator:aa3a998f202a29dd224c4371829dec48c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af94b194a5da0b17a56ca9e3393b3fe77" id="r_af94b194a5da0b17a56ca9e3393b3fe77"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_a_s_t_8h.html#a125c7decc8b9d2d5620c653048cf7e4e">TypeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_type_ref.html#af94b194a5da0b17a56ca9e3393b3fe77">resolvedTypeId</a> = 0</td></tr>
 <tr class="separator:af94b194a5da0b17a56ca9e3393b3fe77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -170,6 +175,20 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="aa3a998f202a29dd224c4371829dec48c" name="aa3a998f202a29dd224c4371829dec48c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3a998f202a29dd224c4371829dec48c">&#9670;&#160;</a></span>col</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t TypeRef::col = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a60a3ce14fa0ee7cc918c2311121d9bbf" name="a60a3ce14fa0ee7cc918c2311121d9bbf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a60a3ce14fa0ee7cc918c2311121d9bbf">&#9670;&#160;</a></span>isPointer</h2>
 
@@ -199,6 +218,22 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Is this a REF_TO type? </p>
+
+</div>
+</div>
+<a id="ae3f41f0e75809ee0d67e6f90095bcdfb" name="ae3f41f0e75809ee0d67e6f90095bcdfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3f41f0e75809ee0d67e6f90095bcdfb">&#9670;&#160;</a></span>line</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t TypeRef::line = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Where the type name starts (0 = unknown) </p>
 
 </div>
 </div>

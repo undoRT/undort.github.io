@@ -44,7 +44,7 @@ var searchData=
   ['resolveinheritance_41',['resolveInheritance',['../classst2cpp_1_1semantic_1_1_decl_visitor.html#a81c31ce049d52d0c29943e5a287d7da4',1,'st2cpp::semantic::DeclVisitor']]],
   ['resolvelibrarytype_42',['resolveLibraryType',['../classst2cpp_1_1semantic_1_1_library_symbol_importer.html#a8fb62cf9b5f7676d86c193236f483ea9',1,'st2cpp::semantic::LibrarySymbolImporter']]],
   ['resolveliteraltype_43',['resolveLiteralType',['../classst2cpp_1_1semantic_1_1_body_visitor.html#ae1d840c311c815c15d8f67c263b835bf',1,'st2cpp::semantic::BodyVisitor']]],
-  ['resolvenamedtype_44',['resolveNamedType',['../classst2cpp_1_1semantic_1_1_decl_visitor.html#adb466984e721ee2edbb6c4053f61fab1',1,'st2cpp::semantic::DeclVisitor']]],
+  ['resolvenamedtype_44',['resolveNamedType',['../classst2cpp_1_1semantic_1_1_decl_visitor.html#ab0bac08fdf0d9b982e909864aadb1130',1,'st2cpp::semantic::DeclVisitor']]],
   ['resolvenamedtypesilent_45',['resolveNamedTypeSilent',['../classst2cpp_1_1semantic_1_1_decl_visitor.html#ab123d121a9b2abad8279deb298f6df18',1,'st2cpp::semantic::DeclVisitor']]],
   ['resolvepath_46',['resolvePath',['../classst2cpp_1_1project_1_1_project_config_loader.html#a11044827ea58ab8a1a8420f959868f82',1,'st2cpp::project::ProjectConfigLoader']]],
   ['resolveprimitivetype_47',['resolvePrimitiveType',['../classst2cpp_1_1semantic_1_1_library_symbol_importer.html#aab62531c193494521f9224ac0d61df19',1,'st2cpp::semantic::LibrarySymbolImporter']]],
@@ -53,5 +53,5 @@ var searchData=
   ['run_50',['run',['../structst2cpp_1_1semantic_1_1_library_descriptor_builder_1_1_impl.html#acdedcd6049299548c0d21c377aacf182',1,'st2cpp::semantic::LibraryDescriptorBuilder::Impl']]],
   ['runcommand_51',['runCommand',['../class_test_helper.html#a2f69e0294f6c5658f2ccd7527ff287f2',1,'TestHelper']]],
   ['runmetadatavalidation_52',['runMetadataValidation',['../structst2cpp_1_1semantic_1_1_library_descriptor_builder_1_1_impl.html#a736ad37d2136cd7e1af2827d6a2808be',1,'st2cpp::semantic::LibraryDescriptorBuilder::Impl']]],
-  ['runsemanticanalysis_53',['runSemanticAnalysis',['../main_8cpp.html#a82f590923059bdf410f085daf4ef3eb0',1,'main.cpp']]]
+  ['runsemanticanalysis_53',['runSemanticAnalysis',['../main_8cpp.html#aaac6427621f9c5f63e7f26ab5e2795e0',1,'main.cpp']]]
 ];

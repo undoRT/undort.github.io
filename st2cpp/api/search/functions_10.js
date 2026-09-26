@@ -38,7 +38,8 @@ var searchData=
   ['sourceline_35',['sourceLine',['../classst2cpp_1_1semantic_1_1_diagnostics.html#a159773726b42b072916125f5b7df45ed',1,'st2cpp::semantic::Diagnostics']]],
   ['sourcetext_36',['sourceText',['../classst2cpp_1_1semantic_1_1_diagnostics.html#aaf1df917da07bb170176528418ac4a78',1,'st2cpp::semantic::Diagnostics']]],
   ['stmt_37',['Stmt',['../struct_stmt.html#ad40fc57241488e8aa959c3ec338ab0ec',1,'Stmt']]],
-  ['strictblocksgeneration_38',['strictBlocksGeneration',['../main_8cpp.html#a72ebd01b87a252b4c57f2ffc3cc3063d',1,'main.cpp']]],
-  ['structcontainsfb_39',['structcontainsfb',['../class_code_generator.html#a67c2174e69a49542fc6e7894606316db',1,'CodeGenerator::structContainsFB(const std::string &amp;structName, const TranslationUnit &amp;tu, std::unordered_set&lt; std::string &gt; &amp;visited) const'],['../class_code_generator.html#a43dff760ac15d6d2ce87d54415f2dd5e',1,'CodeGenerator::structContainsFB(const std::string &amp;structName, const TranslationUnit &amp;tu) const']]],
-  ['symboltable_40',['SymbolTable',['../classst2cpp_1_1semantic_1_1_symbol_table.html#a2fdb06efb33173a3f12fd91fbb44dad2',1,'st2cpp::semantic::SymbolTable']]]
+  ['storageof_38',['storageOf',['../structst2cpp_1_1semantic_1_1_library_descriptor_builder_1_1_impl.html#a5f183dbd4d4937ae693c28c6bc327b7a',1,'st2cpp::semantic::LibraryDescriptorBuilder::Impl']]],
+  ['strictblocksgeneration_39',['strictBlocksGeneration',['../main_8cpp.html#a72ebd01b87a252b4c57f2ffc3cc3063d',1,'main.cpp']]],
+  ['structcontainsfb_40',['structcontainsfb',['../class_code_generator.html#a67c2174e69a49542fc6e7894606316db',1,'CodeGenerator::structContainsFB(const std::string &amp;structName, const TranslationUnit &amp;tu, std::unordered_set&lt; std::string &gt; &amp;visited) const'],['../class_code_generator.html#a43dff760ac15d6d2ce87d54415f2dd5e',1,'CodeGenerator::structContainsFB(const std::string &amp;structName, const TranslationUnit &amp;tu) const']]],
+  ['symboltable_41',['SymbolTable',['../classst2cpp_1_1semantic_1_1_symbol_table.html#a2fdb06efb33173a3f12fd91fbb44dad2',1,'st2cpp::semantic::SymbolTable']]]
 ];

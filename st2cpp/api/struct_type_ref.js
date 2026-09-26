@@ -2,8 +2,10 @@ var struct_type_ref =
 [
     [ "arrayDims", "struct_type_ref.html#a80dd3bd25b0fd6776f590befbea82bed", null ],
     [ "base", "struct_type_ref.html#ab18143e94ba4f96688c848f969de2870", null ],
+    [ "col", "struct_type_ref.html#aa3a998f202a29dd224c4371829dec48c", null ],
     [ "isPointer", "struct_type_ref.html#a60a3ce14fa0ee7cc918c2311121d9bbf", null ],
     [ "isRefTo", "struct_type_ref.html#ade4b9346b0a332cb29c1854c237169a5", null ],
+    [ "line", "struct_type_ref.html#ae3f41f0e75809ee0d67e6f90095bcdfb", null ],
     [ "name", "struct_type_ref.html#a70942c4dd9b1d953e5e60dd29a6be9d0", null ],
     [ "resolvedTypeId", "struct_type_ref.html#af94b194a5da0b17a56ca9e3393b3fe77", null ],
     [ "stringLen", "struct_type_ref.html#a772c052831a448937cd532f795d05694", null ]

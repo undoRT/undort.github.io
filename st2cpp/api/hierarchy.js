@@ -39,6 +39,8 @@ var hierarchy =
     [ "ExprStmt", "struct_expr_stmt.html", null ],
     [ "CodeGenerator::ExternalFbCallInfo", "struct_code_generator_1_1_external_fb_call_info.html", null ],
     [ "st2cpp::library::FbCppBinding", "structst2cpp_1_1library_1_1_fb_cpp_binding.html", null ],
+    [ "st2cpp::library::FbMember", "structst2cpp_1_1library_1_1_fb_member.html", null ],
+    [ "st2cpp::library::FbMethodDef", "structst2cpp_1_1library_1_1_fb_method_def.html", null ],
     [ "ForStmt", "struct_for_stmt.html", null ],
     [ "st2cpp::library::FunctionBlockDef", "structst2cpp_1_1library_1_1_function_block_def.html", null ],
     [ "st2cpp::library::FunctionCppBinding", "structst2cpp_1_1library_1_1_function_cpp_binding.html", null ],

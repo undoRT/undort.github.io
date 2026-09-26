@@ -11,6 +11,8 @@ var annotated_dup =
         [ "EnumMember", "structst2cpp_1_1library_1_1_enum_member.html", "structst2cpp_1_1library_1_1_enum_member" ],
         [ "EnumTypeDef", "structst2cpp_1_1library_1_1_enum_type_def.html", "structst2cpp_1_1library_1_1_enum_type_def" ],
         [ "FbCppBinding", "structst2cpp_1_1library_1_1_fb_cpp_binding.html", "structst2cpp_1_1library_1_1_fb_cpp_binding" ],
+        [ "FbMember", "structst2cpp_1_1library_1_1_fb_member.html", "structst2cpp_1_1library_1_1_fb_member" ],
+        [ "FbMethodDef", "structst2cpp_1_1library_1_1_fb_method_def.html", "structst2cpp_1_1library_1_1_fb_method_def" ],
         [ "FunctionBlockDef", "structst2cpp_1_1library_1_1_function_block_def.html", "structst2cpp_1_1library_1_1_function_block_def" ],
         [ "FunctionCppBinding", "structst2cpp_1_1library_1_1_function_cpp_binding.html", "structst2cpp_1_1library_1_1_function_cpp_binding" ],
         [ "FunctionDef", "structst2cpp_1_1library_1_1_function_def.html", "structst2cpp_1_1library_1_1_function_def" ],

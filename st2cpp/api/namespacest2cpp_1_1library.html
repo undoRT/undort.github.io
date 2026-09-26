@@ -116,6 +116,12 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structst2cpp_1_1library_1_1_fb_cpp_binding.html">FbCppBinding</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">C++ binding for a FUNCTION_BLOCK.  <a href="structst2cpp_1_1library_1_1_fb_cpp_binding.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structst2cpp_1_1library_1_1_fb_member.html">FbMember</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A state member of a function block (its internal data).  <a href="structst2cpp_1_1library_1_1_fb_member.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structst2cpp_1_1library_1_1_fb_method_def.html">FbMethodDef</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A method of a function block.  <a href="structst2cpp_1_1library_1_1_fb_method_def.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structst2cpp_1_1library_1_1_function_block_def.html">FunctionBlockDef</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A FUNCTION_BLOCK exported by the library.  <a href="structst2cpp_1_1library_1_1_function_block_def.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -223,8 +229,85 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a59686b217042bb9faa3007ecab02ad34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Direction discriminant shared by functions and function blocks.  <a href="namespacest2cpp_1_1library.html#a59686b217042bb9faa3007ecab02ad34">More...</a><br /></td></tr>
 <tr class="separator:a59686b217042bb9faa3007ecab02ad34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35c078a5649c8a4de2d31d05a0987112" id="r_a35c078a5649c8a4de2d31d05a0987112"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacest2cpp_1_1library.html#a35c078a5649c8a4de2d31d05a0987112">FbMemberStorage</a> { <a class="el" href="namespacest2cpp_1_1library.html#a35c078a5649c8a4de2d31d05a0987112a5a92344ee95acf10c31901b36418be77">Var</a>
+, <a class="el" href="namespacest2cpp_1_1library.html#a35c078a5649c8a4de2d31d05a0987112a9a438bd942f1f19e6a641028bcfb43ff">Temp</a>
+, <a class="el" href="namespacest2cpp_1_1library.html#a35c078a5649c8a4de2d31d05a0987112aafece4245269582cb2f1009d4fb52047">Retain</a>
+, <a class="el" href="namespacest2cpp_1_1library.html#a35c078a5649c8a4de2d31d05a0987112acb17869fe51048b5a5c4c6106551a255">Constant</a>
+ }</td></tr>
+<tr class="memdesc:a35c078a5649c8a4de2d31d05a0987112"><td class="mdescLeft">&#160;</td><td class="mdescRight">The storage class a function block member lives in.  <a href="namespacest2cpp_1_1library.html#a35c078a5649c8a4de2d31d05a0987112">More...</a><br /></td></tr>
+<tr class="separator:a35c078a5649c8a4de2d31d05a0987112"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a616b9b354ab10e941d7096ad78b0c4cd" id="r_a616b9b354ab10e941d7096ad78b0c4cd"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacest2cpp_1_1library.html#a616b9b354ab10e941d7096ad78b0c4cd">FbMethodVisibility</a> { <a class="el" href="namespacest2cpp_1_1library.html#a616b9b354ab10e941d7096ad78b0c4cda47f9082fc380ca62d531096aa1d110f1">Private</a>
+, <a class="el" href="namespacest2cpp_1_1library.html#a616b9b354ab10e941d7096ad78b0c4cda56f0605c9795b173abd2e34fab7fc164">Protected</a>
+, <a class="el" href="namespacest2cpp_1_1library.html#a616b9b354ab10e941d7096ad78b0c4cda3d067bedfe2f4677470dd6ccf64d05ed">Public</a>
+ }</td></tr>
+<tr class="memdesc:a616b9b354ab10e941d7096ad78b0c4cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visibility of a function block method.  <a href="namespacest2cpp_1_1library.html#a616b9b354ab10e941d7096ad78b0c4cd">More...</a><br /></td></tr>
+<tr class="separator:a616b9b354ab10e941d7096ad78b0c4cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a35c078a5649c8a4de2d31d05a0987112" name="a35c078a5649c8a4de2d31d05a0987112"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35c078a5649c8a4de2d31d05a0987112">&#9670;&#160;</a></span>FbMemberStorage</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="namespacest2cpp_1_1library.html#a35c078a5649c8a4de2d31d05a0987112">st2cpp::library::FbMemberStorage</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The storage class a function block member lives in. </p>
+<p>Mirrors the ST variable sections an FB member can be declared in. Parameters (VAR_INPUT/VAR_OUTPUT/VAR_IN_OUT) are not members: they are described by <a class="el" href="structst2cpp_1_1library_1_1_function_block_def.html#a55f5ddac10cf2b936b8a83f6b6ee442d">FunctionBlockDef::parameters</a> instead. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a35c078a5649c8a4de2d31d05a0987112a5a92344ee95acf10c31901b36418be77" name="a35c078a5649c8a4de2d31d05a0987112a5a92344ee95acf10c31901b36418be77"></a>Var&#160;</td><td class="fielddoc"><p>VAR: state that persists across calls. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a35c078a5649c8a4de2d31d05a0987112a9a438bd942f1f19e6a641028bcfb43ff" name="a35c078a5649c8a4de2d31d05a0987112a9a438bd942f1f19e6a641028bcfb43ff"></a>Temp&#160;</td><td class="fielddoc"><p>VAR_TEMP: scratch valid for the duration of one call. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a35c078a5649c8a4de2d31d05a0987112aafece4245269582cb2f1009d4fb52047" name="a35c078a5649c8a4de2d31d05a0987112aafece4245269582cb2f1009d4fb52047"></a>Retain&#160;</td><td class="fielddoc"><p>VAR RETAIN: state that survives a warm restart. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a35c078a5649c8a4de2d31d05a0987112acb17869fe51048b5a5c4c6106551a255" name="a35c078a5649c8a4de2d31d05a0987112acb17869fe51048b5a5c4c6106551a255"></a>Constant&#160;</td><td class="fielddoc"><p>VAR CONSTANT. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a616b9b354ab10e941d7096ad78b0c4cd" name="a616b9b354ab10e941d7096ad78b0c4cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a616b9b354ab10e941d7096ad78b0c4cd">&#9670;&#160;</a></span>FbMethodVisibility</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="namespacest2cpp_1_1library.html#a616b9b354ab10e941d7096ad78b0c4cd">st2cpp::library::FbMethodVisibility</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Visibility of a function block method. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a616b9b354ab10e941d7096ad78b0c4cda47f9082fc380ca62d531096aa1d110f1" name="a616b9b354ab10e941d7096ad78b0c4cda47f9082fc380ca62d531096aa1d110f1"></a>Private&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a616b9b354ab10e941d7096ad78b0c4cda56f0605c9795b173abd2e34fab7fc164" name="a616b9b354ab10e941d7096ad78b0c4cda56f0605c9795b173abd2e34fab7fc164"></a>Protected&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a616b9b354ab10e941d7096ad78b0c4cda3d067bedfe2f4677470dd6ccf64d05ed" name="a616b9b354ab10e941d7096ad78b0c4cda3d067bedfe2f4677470dd6ccf64d05ed"></a>Public&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
 <a id="a17944583362355f97900f2d0b158077f" name="a17944583362355f97900f2d0b158077f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a17944583362355f97900f2d0b158077f">&#9670;&#160;</a></span>FunctionBindingKind</h2>
 

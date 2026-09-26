@@ -5,6 +5,8 @@ var namespacest2cpp_1_1library =
     [ "EnumMember", "structst2cpp_1_1library_1_1_enum_member.html", "structst2cpp_1_1library_1_1_enum_member" ],
     [ "EnumTypeDef", "structst2cpp_1_1library_1_1_enum_type_def.html", "structst2cpp_1_1library_1_1_enum_type_def" ],
     [ "FbCppBinding", "structst2cpp_1_1library_1_1_fb_cpp_binding.html", "structst2cpp_1_1library_1_1_fb_cpp_binding" ],
+    [ "FbMember", "structst2cpp_1_1library_1_1_fb_member.html", "structst2cpp_1_1library_1_1_fb_member" ],
+    [ "FbMethodDef", "structst2cpp_1_1library_1_1_fb_method_def.html", "structst2cpp_1_1library_1_1_fb_method_def" ],
     [ "FunctionBlockDef", "structst2cpp_1_1library_1_1_function_block_def.html", "structst2cpp_1_1library_1_1_function_block_def" ],
     [ "FunctionCppBinding", "structst2cpp_1_1library_1_1_function_cpp_binding.html", "structst2cpp_1_1library_1_1_function_cpp_binding" ],
     [ "FunctionDef", "structst2cpp_1_1library_1_1_function_def.html", "structst2cpp_1_1library_1_1_function_def" ],
@@ -25,6 +27,17 @@ var namespacest2cpp_1_1library =
     [ "Version", "structst2cpp_1_1library_1_1_version.html", "structst2cpp_1_1library_1_1_version" ],
     [ "VersionClause", "structst2cpp_1_1library_1_1_version_clause.html", "structst2cpp_1_1library_1_1_version_clause" ],
     [ "VersionConstraint", "structst2cpp_1_1library_1_1_version_constraint.html", "structst2cpp_1_1library_1_1_version_constraint" ],
+    [ "FbMemberStorage", "namespacest2cpp_1_1library.html#a35c078a5649c8a4de2d31d05a0987112", [
+      [ "Var", "namespacest2cpp_1_1library.html#a35c078a5649c8a4de2d31d05a0987112a5a92344ee95acf10c31901b36418be77", null ],
+      [ "Temp", "namespacest2cpp_1_1library.html#a35c078a5649c8a4de2d31d05a0987112a9a438bd942f1f19e6a641028bcfb43ff", null ],
+      [ "Retain", "namespacest2cpp_1_1library.html#a35c078a5649c8a4de2d31d05a0987112aafece4245269582cb2f1009d4fb52047", null ],
+      [ "Constant", "namespacest2cpp_1_1library.html#a35c078a5649c8a4de2d31d05a0987112acb17869fe51048b5a5c4c6106551a255", null ]
+    ] ],
+    [ "FbMethodVisibility", "namespacest2cpp_1_1library.html#a616b9b354ab10e941d7096ad78b0c4cd", [
+      [ "Private", "namespacest2cpp_1_1library.html#a616b9b354ab10e941d7096ad78b0c4cda47f9082fc380ca62d531096aa1d110f1", null ],
+      [ "Protected", "namespacest2cpp_1_1library.html#a616b9b354ab10e941d7096ad78b0c4cda56f0605c9795b173abd2e34fab7fc164", null ],
+      [ "Public", "namespacest2cpp_1_1library.html#a616b9b354ab10e941d7096ad78b0c4cda3d067bedfe2f4677470dd6ccf64d05ed", null ]
+    ] ],
     [ "FunctionBindingKind", "namespacest2cpp_1_1library.html#a17944583362355f97900f2d0b158077f", [
       [ "FreeFunction", "namespacest2cpp_1_1library.html#a17944583362355f97900f2d0b158077fa62b98e7650747a362cbe85168f103f86", null ],
       [ "StaticMethod", "namespacest2cpp_1_1library.html#a17944583362355f97900f2d0b158077fa278ef95819fc074569c8f7fdc261abb6", null ]

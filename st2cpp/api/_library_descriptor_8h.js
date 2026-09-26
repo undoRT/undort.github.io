@@ -19,9 +19,22 @@ var _library_descriptor_8h =
     [ "st2cpp::library::GlobalVariable", "structst2cpp_1_1library_1_1_global_variable.html", "structst2cpp_1_1library_1_1_global_variable" ],
     [ "st2cpp::library::FunParam", "structst2cpp_1_1library_1_1_fun_param.html", "structst2cpp_1_1library_1_1_fun_param" ],
     [ "st2cpp::library::FunctionDef", "structst2cpp_1_1library_1_1_function_def.html", "structst2cpp_1_1library_1_1_function_def" ],
+    [ "st2cpp::library::FbMember", "structst2cpp_1_1library_1_1_fb_member.html", "structst2cpp_1_1library_1_1_fb_member" ],
+    [ "st2cpp::library::FbMethodDef", "structst2cpp_1_1library_1_1_fb_method_def.html", "structst2cpp_1_1library_1_1_fb_method_def" ],
     [ "st2cpp::library::FunctionBlockDef", "structst2cpp_1_1library_1_1_function_block_def.html", "structst2cpp_1_1library_1_1_function_block_def" ],
     [ "st2cpp::library::Dependency", "structst2cpp_1_1library_1_1_dependency.html", "structst2cpp_1_1library_1_1_dependency" ],
     [ "st2cpp::library::LibraryDescriptor", "classst2cpp_1_1library_1_1_library_descriptor.html", "classst2cpp_1_1library_1_1_library_descriptor" ],
+    [ "FbMemberStorage", "_library_descriptor_8h.html#a35c078a5649c8a4de2d31d05a0987112", [
+      [ "Var", "_library_descriptor_8h.html#a35c078a5649c8a4de2d31d05a0987112a5a92344ee95acf10c31901b36418be77", null ],
+      [ "Temp", "_library_descriptor_8h.html#a35c078a5649c8a4de2d31d05a0987112a9a438bd942f1f19e6a641028bcfb43ff", null ],
+      [ "Retain", "_library_descriptor_8h.html#a35c078a5649c8a4de2d31d05a0987112aafece4245269582cb2f1009d4fb52047", null ],
+      [ "Constant", "_library_descriptor_8h.html#a35c078a5649c8a4de2d31d05a0987112acb17869fe51048b5a5c4c6106551a255", null ]
+    ] ],
+    [ "FbMethodVisibility", "_library_descriptor_8h.html#a616b9b354ab10e941d7096ad78b0c4cd", [
+      [ "Private", "_library_descriptor_8h.html#a616b9b354ab10e941d7096ad78b0c4cda47f9082fc380ca62d531096aa1d110f1", null ],
+      [ "Protected", "_library_descriptor_8h.html#a616b9b354ab10e941d7096ad78b0c4cda56f0605c9795b173abd2e34fab7fc164", null ],
+      [ "Public", "_library_descriptor_8h.html#a616b9b354ab10e941d7096ad78b0c4cda3d067bedfe2f4677470dd6ccf64d05ed", null ]
+    ] ],
     [ "FunctionBindingKind", "_library_descriptor_8h.html#a17944583362355f97900f2d0b158077f", [
       [ "FreeFunction", "_library_descriptor_8h.html#a17944583362355f97900f2d0b158077fa62b98e7650747a362cbe85168f103f86", null ],
       [ "StaticMethod", "_library_descriptor_8h.html#a17944583362355f97900f2d0b158077fa278ef95819fc074569c8f7fdc261abb6", null ]
