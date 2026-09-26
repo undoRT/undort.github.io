@@ -100,7 +100,8 @@ var NAVTREEINDEX =
 "structst2cpp_1_1semantic_1_1_library_descriptor_builder_1_1_impl.html#ad7c30ca94bfb5b631e415e1c2cff4bb0",
 "test__allocator_8cpp.html#a00a6f6aba6327348ee0cf1a942f33619",
 "test__compilation_8cpp.html#afc63ef6404f0989be0fa74eb3a756080",
-"test__library__descriptor__builder_8cpp.html#adad66515eb159438e52f7b4a9deb71ce"
+"test__library__descriptor__builder_8cpp.html#adad66515eb159438e52f7b4a9deb71ce",
+"version_8hpp_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
