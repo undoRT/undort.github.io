@@ -50,7 +50,6 @@ var NAVTREE =
       [ "License", "md__r_e_a_d_m_e.html#autotoc_md28", null ],
       [ "Acknowledgements", "md__r_e_a_d_m_e.html#autotoc_md29", null ]
     ] ],
-    [ "Deprecated List", "deprecated.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -88,20 +87,21 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_a_s_t_8h.html",
-"_symbol_table_8h.html#a7939b4cd3a2f8b9a4c88cee73175a841a9245f05d6bec129b1974cb357f24fb5d",
-"class_code_generator.html#a365b6b8e1b34302046092eee5b5b0039",
-"class_scope_manager.html#a260c4cb3c6df3f8c77f1b25410dfe416",
-"classst2cpp_1_1semantic_1_1_body_visitor.html#ae32e5621448313faf69a0bceda0c4efe",
-"classst2cpp_1_1semantic_1_1_semantic_analyzer.html#aeb9ed253f07ac2e2cb37b5d0d170ac16ab351533598ed6f88cea50ee3dfdb11ca",
-"main_8cpp.html#a813127d3dabbeedd4a747d91bc84cdf5",
-"struct_binary_expr.html#a538e419ed00719b3c25743746124b1ca",
-"struct_var_section.html",
-"structst2cpp_1_1library_1_1_init_value_1_1_struct_entry.html#abb21b2b67059716640e38dcf01259310",
-"structst2cpp_1_1semantic_1_1_library_descriptor_builder_1_1_impl.html#ad7c30ca94bfb5b631e415e1c2cff4bb0",
-"test__allocator_8cpp.html#a00a6f6aba6327348ee0cf1a942f33619",
-"test__compilation_8cpp.html#afc63ef6404f0989be0fa74eb3a756080",
-"test__library__descriptor__builder_8cpp.html#adad66515eb159438e52f7b4a9deb71ce",
-"version_8hpp_source.html"
+"_project_loader_8h.html",
+"class_address_allocator.html#af71868f09d029a8098279e8b122cac5b",
+"classst2cpp_1_1codegen_1_1_decl_emitter.html#a5805e17ee100b2b5889950647e85f684",
+"classst2cpp_1_1library_1_1_library_descriptor.html#a729243c4e29dbae13eb33f3e737d4283",
+"classst2cpp_1_1semantic_1_1_decl_visitor.html#a7a4a61681f707a20f57f0a2acf7867fc",
+"classst2cpp_1_1semantic_1_1_symbol_table.html#a6b0ea79dfd65af977d1a9e0565fceef4",
+"md__r_e_a_d_m_e.html#autotoc_md5",
+"struct_call_expr_1_1_arg.html#af0e93ad1579aadf82c9df3d05ac1c892",
+"structst2cpp_1_1codegen_1_1_emission_context.html#a0f13355540dd862c490b427b1141effb",
+"structst2cpp_1_1json_1_1_json_value.html#a9f898a1b85b36825794d40460982cf23",
+"structst2cpp_1_1library_1_1_symbol_cpp_binding.html",
+"structst2cpp_1_1semantic_1_1_preserved_semantics.html",
+"test__body__visitor_8cpp.html#a20315beeb58d8021fac79a1a20499e6e",
+"test__complex__program_8cpp.html#aee4321cf6d1707bd952771b6d39a55d8",
+"test__library__loader_8cpp.html#a1fd627a8d309cb892de684873b353955"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

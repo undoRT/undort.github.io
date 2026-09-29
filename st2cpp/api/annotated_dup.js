@@ -1,6 +1,22 @@
 var annotated_dup =
 [
     [ "st2cpp", "namespacest2cpp.html", [
+      [ "codegen", "namespacest2cpp_1_1codegen.html", [
+        [ "BodyEmitter", "classst2cpp_1_1codegen_1_1_body_emitter.html", "classst2cpp_1_1codegen_1_1_body_emitter" ],
+        [ "CodegenResult", "structst2cpp_1_1codegen_1_1_codegen_result.html", "structst2cpp_1_1codegen_1_1_codegen_result" ],
+        [ "DeclEmitter", "classst2cpp_1_1codegen_1_1_decl_emitter.html", "classst2cpp_1_1codegen_1_1_decl_emitter" ],
+        [ "DependencyOrdering", "classst2cpp_1_1codegen_1_1_dependency_ordering.html", "classst2cpp_1_1codegen_1_1_dependency_ordering" ],
+        [ "EmissionContext", "structst2cpp_1_1codegen_1_1_emission_context.html", "structst2cpp_1_1codegen_1_1_emission_context" ],
+        [ "ExternalFbCallInfo", "structst2cpp_1_1codegen_1_1_external_fb_call_info.html", "structst2cpp_1_1codegen_1_1_external_fb_call_info" ],
+        [ "FunctionSignature", "structst2cpp_1_1codegen_1_1_function_signature.html", "structst2cpp_1_1codegen_1_1_function_signature" ],
+        [ "GeneratedFile", "structst2cpp_1_1codegen_1_1_generated_file.html", "structst2cpp_1_1codegen_1_1_generated_file" ],
+        [ "IdentifierPolicy", "structst2cpp_1_1codegen_1_1_identifier_policy.html", "structst2cpp_1_1codegen_1_1_identifier_policy" ],
+        [ "LibraryIncludeTracker", "classst2cpp_1_1codegen_1_1_library_include_tracker.html", "classst2cpp_1_1codegen_1_1_library_include_tracker" ],
+        [ "ParameterInfo", "structst2cpp_1_1codegen_1_1_parameter_info.html", "structst2cpp_1_1codegen_1_1_parameter_info" ],
+        [ "ProjectEmitter", "classst2cpp_1_1codegen_1_1_project_emitter.html", "classst2cpp_1_1codegen_1_1_project_emitter" ],
+        [ "SemanticBridge", "classst2cpp_1_1codegen_1_1_semantic_bridge.html", "classst2cpp_1_1codegen_1_1_semantic_bridge" ],
+        [ "TypeMapper", "classst2cpp_1_1codegen_1_1_type_mapper.html", "classst2cpp_1_1codegen_1_1_type_mapper" ]
+      ] ],
       [ "json", "namespacest2cpp_1_1json.html", [
         [ "JsonParseError", "classst2cpp_1_1json_1_1_json_parse_error.html", "classst2cpp_1_1json_1_1_json_parse_error" ],
         [ "JsonValue", "structst2cpp_1_1json_1_1_json_value.html", "structst2cpp_1_1json_1_1_json_value" ]
@@ -82,13 +98,13 @@ var annotated_dup =
     [ "BoolLitExpr", "struct_bool_lit_expr.html", "struct_bool_lit_expr" ],
     [ "CallExpr", "struct_call_expr.html", "struct_call_expr" ],
     [ "CaseBranch", "struct_case_branch.html", "struct_case_branch" ],
+    [ "CaseSensitivityTest", "class_case_sensitivity_test.html", "class_case_sensitivity_test" ],
     [ "CaseStmt", "struct_case_stmt.html", "struct_case_stmt" ],
     [ "CaseValue", "struct_case_value.html", "struct_case_value" ],
     [ "CastExpr", "struct_cast_expr.html", "struct_cast_expr" ],
     [ "CliExportTest", "class_cli_export_test.html", "class_cli_export_test" ],
     [ "CodeGenerator", "class_code_generator.html", "class_code_generator" ],
     [ "CodegenExternalLibraryTest", "class_codegen_external_library_test.html", "class_codegen_external_library_test" ],
-    [ "CodegenResult", "struct_codegen_result.html", "struct_codegen_result" ],
     [ "CodegenSemanticTest", "class_codegen_semantic_test.html", "class_codegen_semantic_test" ],
     [ "CompilationTest", "class_compilation_test.html", "class_compilation_test" ],
     [ "ComplexProgramTest", "class_complex_program_test.html", "class_complex_program_test" ],
@@ -102,9 +118,7 @@ var annotated_dup =
     [ "Expr", "struct_expr.html", "struct_expr" ],
     [ "ExprStmt", "struct_expr_stmt.html", "struct_expr_stmt" ],
     [ "ForStmt", "struct_for_stmt.html", "struct_for_stmt" ],
-    [ "FunctionSignature", "struct_function_signature.html", "struct_function_signature" ],
     [ "GeneratedCode", "struct_generated_code.html", "struct_generated_code" ],
-    [ "GeneratedFile", "struct_generated_file.html", "struct_generated_file" ],
     [ "GenerationTest", "class_generation_test.html", "class_generation_test" ],
     [ "GoldenTest", "class_golden_test.html", "class_golden_test" ],
     [ "GoldenTestParam", "struct_golden_test_param.html", "struct_golden_test_param" ],
@@ -118,7 +132,6 @@ var annotated_dup =
     [ "MemberExpr", "struct_member_expr.html", "struct_member_expr" ],
     [ "Method", "struct_method.html", "struct_method" ],
     [ "MethodParameter", "struct_method_parameter.html", "struct_method_parameter" ],
-    [ "ParameterInfo", "struct_parameter_info.html", "struct_parameter_info" ],
     [ "ParseError", "class_parse_error.html", "class_parse_error" ],
     [ "Parser", "class_parser.html", "class_parser" ],
     [ "POU", "struct_p_o_u.html", "struct_p_o_u" ],

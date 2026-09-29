@@ -111,11 +111,11 @@ Collaboration diagram for st2cpp::semantic::SemanticAnalyzer:</div>
 <div class="dyncontent">
 <div class="center"><img src="classst2cpp_1_1semantic_1_1_semantic_analyzer__coll__graph.png" border="0" usemap="#ast2cpp_1_1semantic_1_1_semantic_analyzer_coll__map" alt="Collaboration graph"/></div>
 <map name="ast2cpp_1_1semantic_1_1_semantic_analyzer_coll__map" id="ast2cpp_1_1semantic_1_1_semantic_analyzer_coll__map">
-<area shape="rect" title="Semantic Analyzer &#45; performs semantic analysis on TranslationUnit." alt="" coords="155,548,349,788"/>
-<area shape="rect" href="classst2cpp_1_1semantic_1_1_symbol_table.html" title=" " alt="" coords="5,5,248,485"/>
-<area shape="poly" title=" " alt="" coords="200,485,214,531,209,533,195,486"/>
-<area shape="rect" href="classst2cpp_1_1semantic_1_1_diagnostics.html" title="Diagnostic collector and reporter." alt="" coords="273,33,482,458"/>
-<area shape="poly" title=" " alt="" coords="317,459,295,533,290,531,312,458"/>
+<area shape="rect" title="Semantic Analyzer &#45; performs semantic analysis on TranslationUnit." alt="" coords="155,628,349,948"/>
+<area shape="rect" href="classst2cpp_1_1semantic_1_1_symbol_table.html" title=" " alt="" coords="5,5,248,565"/>
+<area shape="poly" title=" " alt="" coords="199,565,211,612,206,613,194,566"/>
+<area shape="rect" href="classst2cpp_1_1semantic_1_1_diagnostics.html" title="Diagnostic collector and reporter." alt="" coords="273,73,482,498"/>
+<area shape="poly" title=" " alt="" coords="327,499,298,613,293,612,322,498"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -147,12 +147,20 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a242186bca300ef7649423c8d4e5ece45" id="r_a242186bca300ef7649423c8d4e5ece45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_semantic_analyzer.html#a242186bca300ef7649423c8d4e5ece45">setSourceName</a> (const std::string &amp;<a class="el" href="_library_loader_8cpp.html#a9b45b3e13bd9167aab02e17e08916231">name</a>)</td></tr>
 <tr class="memdesc:a242186bca300ef7649423c8d4e5ece45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the source file name attached to every reported diagnostic.  <br /></td></tr>
 <tr class="separator:a242186bca300ef7649423c8d4e5ece45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9876884b6b8227b5238bb273b6bf1d15" id="r_a9876884b6b8227b5238bb273b6bf1d15"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_semantic_analyzer.html#a9876884b6b8227b5238bb273b6bf1d15">setCaseSensitive</a> (bool value)</td></tr>
+<tr class="memdesc:a9876884b6b8227b5238bb273b6bf1d15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolve identifiers case-sensitively, like C++.  <br /></td></tr>
+<tr class="separator:a9876884b6b8227b5238bb273b6bf1d15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bb08d4d827d2c1f5602a74de4a91d7b" id="r_a2bb08d4d827d2c1f5602a74de4a91d7b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_semantic_analyzer.html#a2bb08d4d827d2c1f5602a74de4a91d7b">caseSensitive</a> () const</td></tr>
+<tr class="separator:a2bb08d4d827d2c1f5602a74de4a91d7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a992bf1e1c4f886c29d623161819d30eb" id="r_a992bf1e1c4f886c29d623161819d30eb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structst2cpp_1_1semantic_1_1_semantic_info.html">SemanticInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_semantic_analyzer.html#a992bf1e1c4f886c29d623161819d30eb">analyzeCore</a> (const <a class="el" href="struct_translation_unit.html">TranslationUnit</a> &amp;tu, <a class="el" href="classst2cpp_1_1semantic_1_1_semantic_analyzer.html#aeb9ed253f07ac2e2cb37b5d0d170ac16">Strictness</a> strictness)</td></tr>
 <tr class="memdesc:a992bf1e1c4f886c29d623161819d30eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shared analysis pipeline; assumes symTab_/diagnostics_ are reset.  <br /></td></tr>
 <tr class="separator:a992bf1e1c4f886c29d623161819d30eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c7c4588d6eecf3924c7edb7192bc761" id="r_a5c7c4588d6eecf3924c7edb7192bc761"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_semantic_analyzer.html#a5c7c4588d6eecf3924c7edb7192bc761">applyCasePolicy</a> (<a class="el" href="classst2cpp_1_1semantic_1_1_semantic_analyzer.html#aeb9ed253f07ac2e2cb37b5d0d170ac16">Strictness</a> strictness)</td></tr>
+<tr class="memdesc:a5c7c4588d6eecf3924c7edb7192bc761"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply the identifier case policy to the (freshly reset) table.  <br /></td></tr>
+<tr class="separator:a5c7c4588d6eecf3924c7edb7192bc761"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -162,6 +170,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a2d0221509e61c0172428c3c1e36b88d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6fa5fa58e5f41b73bff0d4e4015159d3" id="r_a6fa5fa58e5f41b73bff0d4e4015159d3"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_semantic_analyzer.html#a6fa5fa58e5f41b73bff0d4e4015159d3">sourceName_</a> = &quot;&lt;input&gt;&quot;</td></tr>
 <tr class="separator:a6fa5fa58e5f41b73bff0d4e4015159d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2e319392b00cd04dc94a3bd9ae9104a" id="r_ab2e319392b00cd04dc94a3bd9ae9104a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_semantic_analyzer.html#ab2e319392b00cd04dc94a3bd9ae9104a">caseSensitive_</a> = false</td></tr>
+<tr class="separator:ab2e319392b00cd04dc94a3bd9ae9104a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Semantic Analyzer - performs semantic analysis on <a class="el" href="struct_translation_unit.html">TranslationUnit</a>. </p>
@@ -369,6 +379,60 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a5c7c4588d6eecf3924c7edb7192bc761" name="a5c7c4588d6eecf3924c7edb7192bc761"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c7c4588d6eecf3924c7edb7192bc761">&#9670;&#160;</a></span>applyCasePolicy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void st2cpp::semantic::SemanticAnalyzer::applyCasePolicy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classst2cpp_1_1semantic_1_1_semantic_analyzer.html#aeb9ed253f07ac2e2cb37b5d0d170ac16">Strictness</a>&#160;</td>
+          <td class="paramname"><em>strictness</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Apply the identifier case policy to the (freshly reset) table. </p>
+<p><a class="el" href="classst2cpp_1_1semantic_1_1_semantic_analyzer.html#a66e939cfe3749240b0c3f95e121a4caf" title="Analyze a translation unit.">analyze()</a> rebuilds symTab_ from scratch, so the policy has to be re-applied every time rather than set once on the table. </p>
+
+</div>
+</div>
+<a id="a2bb08d4d827d2c1f5602a74de4a91d7b" name="a2bb08d4d827d2c1f5602a74de4a91d7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bb08d4d827d2c1f5602a74de4a91d7b">&#9670;&#160;</a></span>caseSensitive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool st2cpp::semantic::SemanticAnalyzer::caseSensitive </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aebb855f977fcb935a4dfeb8eefb4991a" name="aebb855f977fcb935a4dfeb8eefb4991a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aebb855f977fcb935a4dfeb8eefb4991a">&#9670;&#160;</a></span>getDiagnostics() <span class="overload">[1/2]</span></h2>
 
@@ -469,6 +533,40 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a9876884b6b8227b5238bb273b6bf1d15" name="a9876884b6b8227b5238bb273b6bf1d15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9876884b6b8227b5238bb273b6bf1d15">&#9670;&#160;</a></span>setCaseSensitive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void st2cpp::semantic::SemanticAnalyzer::setCaseSensitive </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resolve identifiers case-sensitively, like C++. </p>
+<p>Off by default, which follows IEC 61131-3 and folds identifiers to uppercase so <code>name</code> and <code>Name</code> are the same symbol. When enabled the symbol table keys identifiers verbatim, so the two become distinct symbols and a mis-cased reference only resolves when it can fall back to the uppercase spelling. Combined with <a class="el" href="classst2cpp_1_1semantic_1_1_semantic_analyzer.html#aeb9ed253f07ac2e2cb37b5d0d170ac16a2e979835dd62324f5bfe217449ba4974">Strictness::Strict</a> no fallback is allowed, and a mis-cased reference is reported as an undeclared identifier, exactly as a C++ compiler would. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>true to enable case-sensitive identifier resolution </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a242186bca300ef7649423c8d4e5ece45" name="a242186bca300ef7649423c8d4e5ece45"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a242186bca300ef7649423c8d4e5ece45">&#9670;&#160;</a></span>setSourceName()</h2>
 
@@ -504,6 +602,28 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="ab2e319392b00cd04dc94a3bd9ae9104a" name="ab2e319392b00cd04dc94a3bd9ae9104a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2e319392b00cd04dc94a3bd9ae9104a">&#9670;&#160;</a></span>caseSensitive_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool st2cpp::semantic::SemanticAnalyzer::caseSensitive_ = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a2d0221509e61c0172428c3c1e36b88d4" name="a2d0221509e61c0172428c3c1e36b88d4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2d0221509e61c0172428c3c1e36b88d4">&#9670;&#160;</a></span>diagnostics_</h2>
 

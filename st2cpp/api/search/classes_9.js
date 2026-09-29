@@ -8,11 +8,12 @@ var searchData=
   ['libraryexporterror_5',['LibraryExportError',['../structst2cpp_1_1semantic_1_1_library_export_error.html',1,'st2cpp::semantic']]],
   ['libraryexportoptions_6',['LibraryExportOptions',['../structst2cpp_1_1semantic_1_1_library_export_options.html',1,'st2cpp::semantic']]],
   ['libraryexportresult_7',['LibraryExportResult',['../structst2cpp_1_1semantic_1_1_library_export_result.html',1,'st2cpp::semantic']]],
-  ['libraryloader_8',['LibraryLoader',['../classst2cpp_1_1library_1_1_library_loader.html',1,'st2cpp::library']]],
-  ['libraryloaderror_9',['LibraryLoadError',['../structst2cpp_1_1library_1_1_library_load_error.html',1,'st2cpp::library']]],
-  ['libraryloadresult_10',['LibraryLoadResult',['../structst2cpp_1_1library_1_1_library_load_result.html',1,'st2cpp::library']]],
-  ['libraryregistry_11',['LibraryRegistry',['../classst2cpp_1_1library_1_1_library_registry.html',1,'st2cpp::library']]],
-  ['libraryserializer_12',['LibrarySerializer',['../classst2cpp_1_1library_1_1_library_serializer.html',1,'st2cpp::library']]],
-  ['librarysymbolimporter_13',['LibrarySymbolImporter',['../classst2cpp_1_1semantic_1_1_library_symbol_importer.html',1,'st2cpp::semantic']]],
-  ['literalexpr_14',['LiteralExpr',['../struct_literal_expr.html',1,'']]]
+  ['libraryincludetracker_8',['LibraryIncludeTracker',['../classst2cpp_1_1codegen_1_1_library_include_tracker.html',1,'st2cpp::codegen']]],
+  ['libraryloader_9',['LibraryLoader',['../classst2cpp_1_1library_1_1_library_loader.html',1,'st2cpp::library']]],
+  ['libraryloaderror_10',['LibraryLoadError',['../structst2cpp_1_1library_1_1_library_load_error.html',1,'st2cpp::library']]],
+  ['libraryloadresult_11',['LibraryLoadResult',['../structst2cpp_1_1library_1_1_library_load_result.html',1,'st2cpp::library']]],
+  ['libraryregistry_12',['LibraryRegistry',['../classst2cpp_1_1library_1_1_library_registry.html',1,'st2cpp::library']]],
+  ['libraryserializer_13',['LibrarySerializer',['../classst2cpp_1_1library_1_1_library_serializer.html',1,'st2cpp::library']]],
+  ['librarysymbolimporter_14',['LibrarySymbolImporter',['../classst2cpp_1_1semantic_1_1_library_symbol_importer.html',1,'st2cpp::semantic']]],
+  ['literalexpr_15',['LiteralExpr',['../struct_literal_expr.html',1,'']]]
 ];

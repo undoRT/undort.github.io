@@ -110,11 +110,11 @@ Collaboration diagram for st2cpp::semantic::DeclVisitor:</div>
 <div class="dyncontent">
 <div class="center"><img src="classst2cpp_1_1semantic_1_1_decl_visitor__coll__graph.png" border="0" usemap="#ast2cpp_1_1semantic_1_1_decl_visitor_coll__map" alt="Collaboration graph"/></div>
 <map name="ast2cpp_1_1semantic_1_1_decl_visitor_coll__map" id="ast2cpp_1_1semantic_1_1_decl_visitor_coll__map">
-<area shape="rect" title="Visitor for declaration phase." alt="" coords="150,548,354,1133"/>
-<area shape="rect" href="classst2cpp_1_1semantic_1_1_symbol_table.html" title=" " alt="" coords="5,5,248,485"/>
-<area shape="poly" title=" " alt="" coords="180,485,190,531,184,532,175,486"/>
-<area shape="rect" href="classst2cpp_1_1semantic_1_1_diagnostics.html" title="Diagnostic collector and reporter." alt="" coords="273,33,482,458"/>
-<area shape="poly" title=" " alt="" coords="335,459,320,532,314,531,330,458"/>
+<area shape="rect" title="Visitor for declaration phase." alt="" coords="150,628,354,1213"/>
+<area shape="rect" href="classst2cpp_1_1semantic_1_1_symbol_table.html" title=" " alt="" coords="5,5,248,565"/>
+<area shape="poly" title=" " alt="" coords="185,565,194,611,188,612,179,566"/>
+<area shape="rect" href="classst2cpp_1_1semantic_1_1_diagnostics.html" title="Diagnostic collector and reporter." alt="" coords="273,73,482,498"/>
+<area shape="poly" title=" " alt="" coords="338,499,316,612,310,611,333,498"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -210,8 +210,10 @@ Private Member Functions</h2></td></tr>
 <tr class="memdesc:a9855ccf58bbffb9310b101131fb06b88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolve a type reference to a TypeId.  <br /></td></tr>
 <tr class="separator:a9855ccf58bbffb9310b101131fb06b88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa01f8857e9296dc342d25a06143f5eb8" id="r_aa01f8857e9296dc342d25a06143f5eb8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacest2cpp_1_1semantic.html#a1ce5cfb2039b7cc4b3a96b0b0b8e9341">TypeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_decl_visitor.html#aa01f8857e9296dc342d25a06143f5eb8">resolveBaseType</a> (<a class="el" href="_a_s_t_8h.html#ae96315ee246bd4a509133af84c88c5e1">BaseType</a> baseType)</td></tr>
-<tr class="memdesc:aa01f8857e9296dc342d25a06143f5eb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolve an elementary base type to its registered TypeId.  <br /></td></tr>
 <tr class="separator:aa01f8857e9296dc342d25a06143f5eb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2148e530995a2879839b3e3cc4730fbc" id="r_a2148e530995a2879839b3e3cc4730fbc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_decl_visitor.html#a2148e530995a2879839b3e3cc4730fbc">checkBuiltinTypeSpelling</a> (const <a class="el" href="struct_type_ref.html">TypeRef</a> &amp;typeRef, uint32_t line, uint32_t col)</td></tr>
+<tr class="memdesc:a2148e530995a2879839b3e3cc4730fbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report a built-in type whose spelling differs from its IEC name.  <br /></td></tr>
+<tr class="separator:a2148e530995a2879839b3e3cc4730fbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5619320fefc1e5a8c5efd5e675890ef4" id="r_a5619320fefc1e5a8c5efd5e675890ef4"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_decl_visitor.html#a5619320fefc1e5a8c5efd5e675890ef4">baseTypeName</a> (<a class="el" href="_a_s_t_8h.html#ae96315ee246bd4a509133af84c88c5e1">BaseType</a> baseType)</td></tr>
 <tr class="memdesc:a5619320fefc1e5a8c5efd5e675890ef4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the canonical ST name of an elementary base type.  <br /></td></tr>
 <tr class="separator:a5619320fefc1e5a8c5efd5e675890ef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -333,6 +335,68 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The base type name, or "UNKNOWN" when not recognized </dd></dl>
+
+</div>
+</div>
+<a id="a2148e530995a2879839b3e3cc4730fbc" name="a2148e530995a2879839b3e3cc4730fbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2148e530995a2879839b3e3cc4730fbc">&#9670;&#160;</a></span>checkBuiltinTypeSpelling()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void st2cpp::semantic::DeclVisitor::checkBuiltinTypeSpelling </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_type_ref.html">TypeRef</a> &amp;&#160;</td>
+          <td class="paramname"><em>typeRef</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>col</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Report a built-in type whose spelling differs from its IEC name. </p>
+<p>Resolve an elementary base type to its registered TypeId.</p>
+<p>No-op unless the identifier case policy is case-sensitive.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">baseType</td><td>The base type enumerator </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The TypeId of the built-in type, or 0 when unknown</dd></dl>
+<p>Check that a built-in type was spelled the way IEC declares it.</p>
+<p>The parser maps every spelling of a type keyword to the same BaseType enumerator, so <code>dint</code> and <code>DINT</code> would otherwise be indistinguishable and &ndash;caseSensitive would be blind to elementary types. <a class="el" href="struct_type_ref.html#a70942c4dd9b1d953e5e60dd29a6be9d0" title="Type name (if NAMED or user-defined)">TypeRef::name</a> keeps the spelling as written, which is what is checked here. Silent unless the identifier case policy is case-sensitive; an error when the policy is enforcing (&ndash;strict), a warning while a mis-cased spelling still resolves. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">typeRef</td><td>The type reference being resolved </td></tr>
+    <tr><td class="paramname">line</td><td>Line of the type name, for the diagnostic </td></tr>
+    <tr><td class="paramname">col</td><td>Column of the type name, for the diagnostic </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1244,15 +1308,6 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Resolve an elementary base type to its registered TypeId. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">baseType</td><td>The base type enumerator </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The TypeId of the built-in type, or 0 when unknown </dd></dl>
 
 </div>
 </div>

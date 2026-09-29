@@ -1,5 +1,6 @@
 var namespacest2cpp =
 [
+    [ "codegen", "namespacest2cpp_1_1codegen.html", "namespacest2cpp_1_1codegen" ],
     [ "json", "namespacest2cpp_1_1json.html", "namespacest2cpp_1_1json" ],
     [ "library", "namespacest2cpp_1_1library.html", "namespacest2cpp_1_1library" ],
     [ "project", "namespacest2cpp_1_1project.html", "namespacest2cpp_1_1project" ],

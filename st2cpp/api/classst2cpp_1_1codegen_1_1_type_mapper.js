@@ -1,0 +1,25 @@
+var classst2cpp_1_1codegen_1_1_type_mapper =
+[
+    [ "TypeMapper", "classst2cpp_1_1codegen_1_1_type_mapper.html#aeacf7bb79291a7d6d436245ddd4e2c09", null ],
+    [ "applySemanticAssignmentCast", "classst2cpp_1_1codegen_1_1_type_mapper.html#a72057f86b3fc88b94bef70378abce721", null ],
+    [ "getArrayType", "classst2cpp_1_1codegen_1_1_type_mapper.html#aaf29cc5999265944d12e31abe4162067", null ],
+    [ "getBaseFBName", "classst2cpp_1_1codegen_1_1_type_mapper.html#a54ce19ea20477220730788e3064ddbe2", null ],
+    [ "getBaseTypeName", "classst2cpp_1_1codegen_1_1_type_mapper.html#a44755e380a0755705fdc19427542bf1d", null ],
+    [ "getTypeAlignment", "classst2cpp_1_1codegen_1_1_type_mapper.html#a484510884a4e9180358108fe78cabd4b", null ],
+    [ "getTypeSizeInBytes", "classst2cpp_1_1codegen_1_1_type_mapper.html#aa54bfb610e6197026604fc00c25fddcb", null ],
+    [ "identifiers", "classst2cpp_1_1codegen_1_1_type_mapper.html#ae381a5bae2355a2175b67f39ffde084b", null ],
+    [ "isSemanticBoolType", "classst2cpp_1_1codegen_1_1_type_mapper.html#acfe5fad26cb6787578754c71886f194e", null ],
+    [ "isSemanticEnumType", "classst2cpp_1_1codegen_1_1_type_mapper.html#a4514984ddf16b705419d7a0dd2c2f915", null ],
+    [ "isVoidType", "classst2cpp_1_1codegen_1_1_type_mapper.html#a3787f778f28aa0450370bf85769a2528", null ],
+    [ "mapBaseType", "classst2cpp_1_1codegen_1_1_type_mapper.html#abe25201cd004fc1f83f2485c91936559", null ],
+    [ "mapType", "classst2cpp_1_1codegen_1_1_type_mapper.html#a4ffcf1532ccf7c174dd38f1efee20c98", null ],
+    [ "mapTypeId", "classst2cpp_1_1codegen_1_1_type_mapper.html#acce47e6cad5422620441af90b0f95765", null ],
+    [ "normalize", "classst2cpp_1_1codegen_1_1_type_mapper.html#a7c405a80f7b953bf412f881a6172c919", null ],
+    [ "normalizeIdent", "classst2cpp_1_1codegen_1_1_type_mapper.html#ad24e1ae4294257ed8c7dbbd9c5dc5617", null ],
+    [ "normalizeType", "classst2cpp_1_1codegen_1_1_type_mapper.html#a6a301f737d9a46f8cb6b8a48f0c17022", null ],
+    [ "registerTypeAliases", "classst2cpp_1_1codegen_1_1_type_mapper.html#a268e548b28e0d99a21d5087629c198aa", null ],
+    [ "resolveAliasLegacy", "classst2cpp_1_1codegen_1_1_type_mapper.html#ad1547dbad6960315fd5f06378b95c853", null ],
+    [ "m_aliasTypes", "classst2cpp_1_1codegen_1_1_type_mapper.html#a61e2522e29499becbbad4b17a85491c3", null ],
+    [ "m_identifiers", "classst2cpp_1_1codegen_1_1_type_mapper.html#ac8692825625e5d42478cba91980597ca", null ],
+    [ "m_semantic", "classst2cpp_1_1codegen_1_1_type_mapper.html#acbc7bf698ae4ab0ffe27aa2b8f8caefb", null ]
+];

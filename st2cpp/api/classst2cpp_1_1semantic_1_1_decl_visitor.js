@@ -2,6 +2,7 @@ var classst2cpp_1_1semantic_1_1_decl_visitor =
 [
     [ "DeclVisitor", "classst2cpp_1_1semantic_1_1_decl_visitor.html#a87be7a20f3774f348f36672544670633", null ],
     [ "baseTypeName", "classst2cpp_1_1semantic_1_1_decl_visitor.html#a5619320fefc1e5a8c5efd5e675890ef4", null ],
+    [ "checkBuiltinTypeSpelling", "classst2cpp_1_1semantic_1_1_decl_visitor.html#a2148e530995a2879839b3e3cc4730fbc", null ],
     [ "collectFbCompositionEdges", "classst2cpp_1_1semantic_1_1_decl_visitor.html#af657da4b0831a3fe254ee89fdffb8d62", null ],
     [ "computeTopoOrders", "classst2cpp_1_1semantic_1_1_decl_visitor.html#af42c27ed7726b1772add0b6f80702504", null ],
     [ "detectValueCycles", "classst2cpp_1_1semantic_1_1_decl_visitor.html#aa5de473d1d17435f8f33649fe3f5aa54", null ],

@@ -3,6 +3,7 @@ var _symbol_table_8h =
     [ "st2cpp::semantic::Symbol", "structst2cpp_1_1semantic_1_1_symbol.html", "structst2cpp_1_1semantic_1_1_symbol" ],
     [ "st2cpp::semantic::Scope", "structst2cpp_1_1semantic_1_1_scope.html", "structst2cpp_1_1semantic_1_1_scope" ],
     [ "st2cpp::semantic::SymbolTable", "classst2cpp_1_1semantic_1_1_symbol_table.html", "classst2cpp_1_1semantic_1_1_symbol_table" ],
+    [ "st2cpp::semantic::SymbolTable::CaseMismatch", "structst2cpp_1_1semantic_1_1_symbol_table_1_1_case_mismatch.html", "structst2cpp_1_1semantic_1_1_symbol_table_1_1_case_mismatch" ],
     [ "ScopeId", "_symbol_table_8h.html#a858c422b099cad80709b821042555486", null ],
     [ "SymbolId", "_symbol_table_8h.html#a04ded7b7fa589f2e5fa9ae2e7a22b3a3", null ],
     [ "TypeId", "_symbol_table_8h.html#a1ce5cfb2039b7cc4b3a96b0b0b8e9341", null ],

@@ -1,0 +1,15 @@
+<map id="st2cpp::codegen::SemanticBridge" name="st2cpp::codegen::SemanticBridge">
+<area shape="rect" id="Node000001" title="Read&#45;only access to the semantic analysis for the code generator." alt="" coords="425,721,696,1001"/>
+<area shape="rect" id="Node000002" href="$structst2cpp_1_1semantic_1_1_semantic_info.html" title="Result of semantic analysis, passed to CodeGenerator." alt="" coords="338,493,557,659"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="482,658,501,705,496,707,477,660"/>
+<area shape="rect" id="Node000003" href="$classst2cpp_1_1semantic_1_1_diagnostics.html" title="Diagnostic collector and reporter." alt="" coords="5,5,215,431"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="217,415,229,429,275,470,325,506,322,511,271,475,225,433,213,418"/>
+<area shape="rect" id="Node000004" href="$structst2cpp_1_1semantic_1_1_semantic_info_1_1_process_image_config.html" title=" " alt="" coords="239,148,434,288"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="361,287,420,477,415,478,356,289"/>
+<area shape="rect" id="Node000005" href="$structst2cpp_1_1semantic_1_1_preserved_semantics.html" title="Preserved&#45;semantics record (Fase 6)" alt="" coords="459,148,657,288"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="543,289,490,470,487,479,482,477,485,469,538,288"/>
+<area shape="rect" id="Node000006" href="$classst2cpp_1_1library_1_1_library_registry.html" title="Contains the registered libraries, retrievable by id (case&#45;insensitive, IEC 61131&#45;3 style)." alt="" coords="682,78,863,358"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="731,360,696,420,674,447,649,471,631,482,614,487,573,495,572,490,612,482,629,477,646,467,670,444,692,417,726,357"/>
+<area shape="rect" id="Node000007" href="$structst2cpp_1_1codegen_1_1_identifier_policy.html" title="How identifiers are spelled in the generated C++." alt="" coords="581,516,767,636"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="653,637,625,707,620,705,648,635"/>
+</map>

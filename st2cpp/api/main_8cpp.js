@@ -1,5 +1,6 @@
 var main_8cpp =
 [
+    [ "alwaysReport", "main_8cpp.html#aa9d150e8899ea60d92a5920daec1b51f", null ],
     [ "deduplicateMergedTu", "main_8cpp.html#a0ac1acce504a3f53fc30a85ba33ba7dd", null ],
     [ "findStFiles", "main_8cpp.html#a0a6728c4068a8bdfe9a23416b335db4d", null ],
     [ "hasUnresolvableCircularDependency", "main_8cpp.html#a67fb01558ca69b4edc555d365b37f579", null ],
@@ -22,6 +23,7 @@ var main_8cpp =
     [ "writeFile", "main_8cpp.html#a32887394c5c3210a200f9f224b6d57ad", null ],
     [ "writeFileInDir", "main_8cpp.html#a6a87425d55903be5edd7995884122963", null ],
     [ "writeGeneratedFiles", "main_8cpp.html#acd957bec61c57082f6810dec317938dd", null ],
+    [ "caseSensitiveMode", "main_8cpp.html#adf3e5a1994f9572e0111a80245936af8", null ],
     [ "strictMode", "main_8cpp.html#a2ba7ceb347cea533a74c6e8ed02797c0", null ],
     [ "verbose", "main_8cpp.html#ab3f078684998b83967d507d0f453f454", null ]
 ];

@@ -1,19 +1,38 @@
 <map id="CodeGenerator" name="CodeGenerator">
-<area shape="rect" id="Node000001" title="Emit C++ code from the parsed AST." alt="" coords="475,881,686,1521"/>
-<area shape="rect" id="Node000002" href="$class_scope_manager.html" title="Manages the symbol scope stack for code generation." alt="" coords="136,493,313,819"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="316,798,328,817,468,1029,464,1032,324,820,311,801"/>
-<area shape="rect" id="Node000003" href="$structst2cpp_1_1semantic_1_1_semantic_info.html" title="Result of semantic analysis, passed to CodeGenerator." alt="" coords="338,573,557,739"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="470,739,501,864,496,866,465,740"/>
-<area shape="rect" id="Node000004" href="$classst2cpp_1_1semantic_1_1_diagnostics.html" title="Diagnostic collector and reporter." alt="" coords="5,5,215,431"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="217,415,229,429,254,449,276,461,300,472,326,491,358,524,386,559,382,562,354,527,323,495,297,476,274,465,251,454,225,433,213,418"/>
-<area shape="rect" id="Node000005" href="$structst2cpp_1_1semantic_1_1_semantic_info_1_1_process_image_config.html" title=" " alt="" coords="239,148,434,288"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="357,288,425,556,420,558,352,289"/>
-<area shape="rect" id="Node000006" href="$structst2cpp_1_1semantic_1_1_preserved_semantics.html" title="Preserved&#45;semantics record (Fase 6)" alt="" coords="459,148,657,288"/>
-<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="543,289,475,558,470,556,538,288"/>
-<area shape="rect" id="Node000007" href="$classst2cpp_1_1library_1_1_library_registry.html" title="Contains the registered libraries, retrievable by id (case&#45;insensitive, IEC 61131&#45;3 style)." alt="" coords="682,78,863,358"/>
-<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="732,360,698,420,677,447,652,471,630,483,610,485,591,486,570,496,535,526,505,562,501,558,531,522,567,491,590,481,610,480,629,478,648,467,673,444,694,417,727,357"/>
-<area shape="rect" id="Node000008" href="$struct_process_image_config.html" title="Configuration for Process Image sizing." alt="" coords="581,573,727,739"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="646,740,629,865,623,865,640,739"/>
-<area shape="rect" id="Node000009" href="$class_address_allocator.html" title="Manages allocation of AT addresses with placeholder &#39;*&#39;." alt="" coords="752,543,932,769"/>
-<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="791,770,696,967,691,965,786,768"/>
+<area shape="rect" id="Node000001" title="Emit C++ code from the parsed AST." alt="" coords="402,2711,597,2936"/>
+<area shape="rect" id="Node000002" href="$structst2cpp_1_1codegen_1_1_emission_context.html" title="Everything a single generation run owns, shared by the emitters." alt="" coords="413,1109,639,1589"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="415,1484,368,1556,326,1636,309,1679,296,1723,288,1768,285,1813,285,2509,287,2540,294,2570,318,2628,353,2681,392,2727,388,2730,348,2684,313,2631,289,2572,282,2541,279,2509,279,1813,282,1767,291,1722,304,1678,321,1634,363,1553,410,1481"/>
+<area shape="rect" id="Node000013" href="$classst2cpp_1_1codegen_1_1_body_emitter.html" title="Turns statements and expressions into C++ text." alt="" coords="632,1652,841,1977"/>
+<area shape="poly" id="edge14_Node000013_Node000002" title=" " alt="" coords="637,1588,659,1636,654,1638,632,1591"/>
+<area shape="rect" id="Node000014" href="$classst2cpp_1_1codegen_1_1_decl_emitter.html" title="Emits declarations and the shells that carry a body." alt="" coords="355,2040,561,2305"/>
+<area shape="poly" id="edge16_Node000014_Node000002" title=" " alt="" coords="509,1590,473,2024,468,2023,504,1589"/>
+<area shape="rect" id="Node000015" href="$classst2cpp_1_1codegen_1_1_project_emitter.html" title="Assembles the generated files." alt="" coords="481,2368,721,2648"/>
+<area shape="poly" id="edge19_Node000015_Node000002" title=" " alt="" coords="554,1589,559,1652,583,2029,598,2351,592,2352,578,2029,554,1652,549,1590"/>
+<area shape="rect" id="Node000003" href="$class_scope_manager.html" title="Manages the symbol scope stack for code generation." alt="" coords="5,721,183,1047"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="185,1031,196,1045,245,1100,297,1152,402,1246,398,1250,294,1156,241,1103,192,1048,181,1034"/>
+<area shape="rect" id="Node000004" href="$structst2cpp_1_1semantic_1_1_semantic_info.html" title="Result of semantic analysis, passed to CodeGenerator." alt="" coords="399,493,618,659"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="513,659,523,1093,518,1093,508,659"/>
+<area shape="rect" id="Node000009" href="$classst2cpp_1_1codegen_1_1_semantic_bridge.html" title="Read&#45;only access to the semantic analysis for the code generator." alt="" coords="207,744,477,1024"/>
+<area shape="poly" id="edge9_Node000009_Node000004" title=" " alt="" coords="412,661,395,684,374,730,369,727,390,681,407,657"/>
+<area shape="rect" id="Node000005" href="$classst2cpp_1_1semantic_1_1_diagnostics.html" title="Diagnostic collector and reporter." alt="" coords="67,5,276,431"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="278,415,291,429,329,460,386,499,383,503,326,465,287,433,274,418"/>
+<area shape="rect" id="Node000006" href="$structst2cpp_1_1semantic_1_1_semantic_info_1_1_process_image_config.html" title=" " alt="" coords="301,148,495,288"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="422,287,481,477,476,478,417,289"/>
+<area shape="rect" id="Node000007" href="$structst2cpp_1_1semantic_1_1_preserved_semantics.html" title="Preserved&#45;semantics record (Fase 6)" alt="" coords="520,148,719,288"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="604,289,551,470,548,479,543,477,546,469,599,288"/>
+<area shape="rect" id="Node000008" href="$classst2cpp_1_1library_1_1_library_registry.html" title="Contains the registered libraries, retrievable by id (case&#45;insensitive, IEC 61131&#45;3 style)." alt="" coords="743,78,925,358"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="787,359,753,419,733,446,709,471,673,500,634,524,631,520,670,496,706,467,728,443,749,416,783,357"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="391,1023,414,1084,417,1093,412,1095,409,1086,386,1025"/>
+<area shape="rect" id="Node000010" href="$structst2cpp_1_1codegen_1_1_identifier_policy.html" title="How identifiers are spelled in the generated C++." alt="" coords="173,516,359,636"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="265,636,270,697,277,727,272,729,265,698,260,637"/>
+<area shape="rect" id="Node000011" href="$struct_process_image_config.html" title="Configuration for Process Image sizing." alt="" coords="671,801,818,967"/>
+<area shape="poly" id="edge11_Node000002_Node000011" title=" " alt="" coords="708,968,648,1095,644,1093,704,966"/>
+<area shape="rect" id="Node000012" href="$class_address_allocator.html" title="Manages allocation of AT addresses with placeholder &#39;*&#39;." alt="" coords="843,771,1023,997"/>
+<area shape="poly" id="edge12_Node000002_Node000012" title=" " alt="" coords="868,999,832,1048,744,1148,653,1238,649,1234,740,1144,828,1045,864,995"/>
+<area shape="poly" id="edge13_Node000001_Node000013" title=" " alt="" coords="780,1977,803,2126,810,2211,812,2299,807,2390,794,2479,770,2567,735,2649,711,2686,681,2718,648,2746,613,2770,610,2765,644,2742,678,2714,707,2682,730,2647,765,2565,788,2478,802,2389,807,2299,805,2211,798,2127,775,1978"/>
+<area shape="poly" id="edge17_Node000014_Node000013" title=" " alt="" coords="634,1880,565,1935,533,1967,506,2003,493,2026,488,2024,501,2000,529,1964,561,1931,630,1875"/>
+<area shape="poly" id="edge20_Node000015_Node000013" title=" " alt="" coords="698,1978,685,2041,628,2352,622,2351,679,2039,693,1977"/>
+<area shape="poly" id="edge15_Node000001_Node000014" title=" " alt="" coords="425,2306,410,2384,401,2470,401,2560,414,2647,430,2695,424,2696,409,2649,396,2560,396,2470,405,2383,419,2305"/>
+<area shape="poly" id="edge21_Node000015_Node000014" title=" " alt="" coords="509,2304,524,2343,528,2352,523,2354,520,2345,504,2306"/>
+<area shape="poly" id="edge18_Node000001_Node000015" title=" " alt="" coords="558,2649,543,2696,538,2695,553,2647"/>
 </map>

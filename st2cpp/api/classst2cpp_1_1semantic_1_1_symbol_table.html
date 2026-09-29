@@ -93,6 +93,7 @@ $(document).ready(function(){initNavTree('classst2cpp_1_1semantic_1_1_symbol_tab
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
@@ -108,12 +109,41 @@ Collaboration diagram for st2cpp::semantic::SymbolTable:</div>
 <div class="dyncontent">
 <div class="center"><img src="classst2cpp_1_1semantic_1_1_symbol_table__coll__graph.png" border="0" usemap="#ast2cpp_1_1semantic_1_1_symbol_table_coll__map" alt="Collaboration graph"/></div>
 <map name="ast2cpp_1_1semantic_1_1_symbol_table_coll__map" id="ast2cpp_1_1semantic_1_1_symbol_table_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,248,485"/>
+<area shape="rect" title=" " alt="" coords="5,5,248,565"/>
 </map>
 </div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structst2cpp_1_1semantic_1_1_symbol_table_1_1_case_mismatch.html">CaseMismatch</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identifier spellings that only matched through the case fallback.  <a href="structst2cpp_1_1semantic_1_1_symbol_table_1_1_case_mismatch.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a01ad025b27328226c53f6b07e2ec03d5" id="r_a01ad025b27328226c53f6b07e2ec03d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#a01ad025b27328226c53f6b07e2ec03d5">setCaseSensitive</a> (bool value)</td></tr>
+<tr class="memdesc:a01ad025b27328226c53f6b07e2ec03d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Case policy of the table, applied to every identifier key.  <br /></td></tr>
+<tr class="separator:a01ad025b27328226c53f6b07e2ec03d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a783cd24f5f86b592ae4757ff5e555d35" id="r_a783cd24f5f86b592ae4757ff5e555d35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#a783cd24f5f86b592ae4757ff5e555d35">setCaseFallback</a> (bool value)</td></tr>
+<tr class="memdesc:a783cd24f5f86b592ae4757ff5e555d35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether a mis-cased reference falls back to the uppercase spelling.  <br /></td></tr>
+<tr class="separator:a783cd24f5f86b592ae4757ff5e555d35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cb1abeec83a4ddbc7034e24be17c6b2" id="r_a9cb1abeec83a4ddbc7034e24be17c6b2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#a9cb1abeec83a4ddbc7034e24be17c6b2">caseSensitive</a> () const</td></tr>
+<tr class="separator:a9cb1abeec83a4ddbc7034e24be17c6b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2af70a8dae215bfe301c07618f3a5a89" id="r_a2af70a8dae215bfe301c07618f3a5a89"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#a2af70a8dae215bfe301c07618f3a5a89">caseFallback</a> () const</td></tr>
+<tr class="separator:a2af70a8dae215bfe301c07618f3a5a89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2db6ae44253100314d1cfb601131fa2" id="r_ae2db6ae44253100314d1cfb601131fa2"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#ae2db6ae44253100314d1cfb601131fa2">normalizeKey</a> (const std::string &amp;<a class="el" href="_library_loader_8cpp.html#a9b45b3e13bd9167aab02e17e08916231">name</a>) const</td></tr>
+<tr class="memdesc:ae2db6ae44253100314d1cfb601131fa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The lookup key for an identifier under the current case policy.  <br /></td></tr>
+<tr class="separator:ae2db6ae44253100314d1cfb601131fa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0734bc80a14a096feff8ce3a0c14019b" id="r_a0734bc80a14a096feff8ce3a0c14019b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#a0734bc80a14a096feff8ce3a0c14019b">nameMatches</a> (const std::string &amp;a, const std::string &amp;b) const</td></tr>
+<tr class="memdesc:a0734bc80a14a096feff8ce3a0c14019b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare two spellings under the current case policy.  <br /></td></tr>
+<tr class="separator:a0734bc80a14a096feff8ce3a0c14019b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6bdcb3f0695ba336dddb485a5e4c556" id="r_af6bdcb3f0695ba336dddb485a5e4c556"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacest2cpp_1_1semantic.html#a04ded7b7fa589f2e5fa9ae2e7a22b3a3">SymbolId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#af6bdcb3f0695ba336dddb485a5e4c556">findInScope</a> (const <a class="el" href="structst2cpp_1_1semantic_1_1_scope.html">Scope</a> *scope, const std::string &amp;<a class="el" href="_library_loader_8cpp.html#a9b45b3e13bd9167aab02e17e08916231">name</a>) const</td></tr>
+<tr class="memdesc:af6bdcb3f0695ba336dddb485a5e4c556"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolve a name in one scope, honouring the case policy.  <br /></td></tr>
+<tr class="separator:af6bdcb3f0695ba336dddb485a5e4c556"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ecaf3132abb725b8f920c3a215dc391" id="r_a2ecaf3132abb725b8f920c3a215dc391"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="structst2cpp_1_1semantic_1_1_symbol_table_1_1_case_mismatch.html">CaseMismatch</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#a2ecaf3132abb725b8f920c3a215dc391">caseMismatches</a> () const</td></tr>
+<tr class="separator:a2ecaf3132abb725b8f920c3a215dc391"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e2c744434ffb39e896f8a455b96c1c7" id="r_a7e2c744434ffb39e896f8a455b96c1c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#a7e2c744434ffb39e896f8a455b96c1c7">clearCaseMismatches</a> ()</td></tr>
+<tr class="separator:a7e2c744434ffb39e896f8a455b96c1c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2fdb06efb33173a3f12fd91fbb44dad2" id="r_a2fdb06efb33173a3f12fd91fbb44dad2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#a2fdb06efb33173a3f12fd91fbb44dad2">SymbolTable</a> ()</td></tr>
 <tr class="separator:a2fdb06efb33173a3f12fd91fbb44dad2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e6eed3ebdffec180ce89b46d3a8807a" id="r_a1e6eed3ebdffec180ce89b46d3a8807a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacest2cpp_1_1semantic.html#a858c422b099cad80709b821042555486">ScopeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#a1e6eed3ebdffec180ce89b46d3a8807a">pushScope</a> (const std::string &amp;<a class="el" href="_library_loader_8cpp.html#a9b45b3e13bd9167aab02e17e08916231">name</a>)</td></tr>
@@ -198,9 +228,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ade46e481225c2665fcb791e497c60ae4" id="r_ade46e481225c2665fcb791e497c60ae4"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#ade46e481225c2665fcb791e497c60ae4">normalizeKey</a> (const std::string &amp;<a class="el" href="_library_loader_8cpp.html#a9b45b3e13bd9167aab02e17e08916231">name</a>)</td></tr>
-<tr class="memdesc:ade46e481225c2665fcb791e497c60ae4"><td class="mdescLeft">&#160;</td><td class="mdescRight">IEC 61131-3 identifiers are case-insensitive Normalizes a name to an uppercase key so declarations and lookups match regardless of spelling (e.g. <code>Name</code> vs <code>name</code>).  <br /></td></tr>
-<tr class="separator:ade46e481225c2665fcb791e497c60ae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff04123d84529aeeb3a4963ac3cda969" id="r_aff04123d84529aeeb3a4963ac3cda969"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#aff04123d84529aeeb3a4963ac3cda969">asciiUpper</a> (const std::string &amp;<a class="el" href="_library_loader_8cpp.html#a9b45b3e13bd9167aab02e17e08916231">name</a>)</td></tr>
+<tr class="memdesc:aff04123d84529aeeb3a4963ac3cda969"><td class="mdescLeft">&#160;</td><td class="mdescRight">IEC 61131-3 identifiers are case-insensitive Normalizes a name to an uppercase key so declarations and lookups match regardless of spelling (e.g. <code>Name</code> vs <code>name</code>).  <br /></td></tr>
+<tr class="separator:aff04123d84529aeeb3a4963ac3cda969"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -209,6 +239,9 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a33320898046e7f03b90c3f9d2ad92f0a" id="r_a33320898046e7f03b90c3f9d2ad92f0a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#a33320898046e7f03b90c3f9d2ad92f0a">registerIecConversionFunctions</a> ()</td></tr>
 <tr class="memdesc:a33320898046e7f03b90c3f9d2ad92f0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register the IEC 61131-3 conversion functions (X_TO_Y).  <br /></td></tr>
 <tr class="separator:a33320898046e7f03b90c3f9d2ad92f0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d7f73ecf392d5bb8674113a0828e788" id="r_a4d7f73ecf392d5bb8674113a0828e788"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#a4d7f73ecf392d5bb8674113a0828e788">recordCaseMismatch</a> (const std::string &amp;written, <a class="el" href="namespacest2cpp_1_1semantic.html#a04ded7b7fa589f2e5fa9ae2e7a22b3a3">SymbolId</a> id) const</td></tr>
+<tr class="memdesc:a4d7f73ecf392d5bb8674113a0828e788"><td class="mdescLeft">&#160;</td><td class="mdescRight">Note that a reference matched a declaration only by case.  <br /></td></tr>
+<tr class="separator:a4d7f73ecf392d5bb8674113a0828e788"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -222,6 +255,12 @@ Private Attributes</h2></td></tr>
 <tr class="separator:ab9fa3dbc0561086096f30b20dbbd79ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8d3398376cc561a61e2140c33a7fa9e" id="r_ad8d3398376cc561a61e2140c33a7fa9e"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, <a class="el" href="namespacest2cpp_1_1semantic.html#a1ce5cfb2039b7cc4b3a96b0b0b8e9341">TypeId</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#ad8d3398376cc561a61e2140c33a7fa9e">typeNameToId_</a></td></tr>
 <tr class="separator:ad8d3398376cc561a61e2140c33a7fa9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af99f45e042081136d08e287f57154bbf" id="r_af99f45e042081136d08e287f57154bbf"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structst2cpp_1_1semantic_1_1_symbol_table_1_1_case_mismatch.html">CaseMismatch</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#af99f45e042081136d08e287f57154bbf">caseMismatches_</a></td></tr>
+<tr class="separator:af99f45e042081136d08e287f57154bbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9eda7d047e622f0072cbf67012c6ce5f" id="r_a9eda7d047e622f0072cbf67012c6ce5f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#a9eda7d047e622f0072cbf67012c6ce5f">caseSensitive_</a> = false</td></tr>
+<tr class="separator:a9eda7d047e622f0072cbf67012c6ce5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94eb528819d5a25806abf3f23834a425" id="r_a94eb528819d5a25806abf3f23834a425"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#a94eb528819d5a25806abf3f23834a425">caseFallback_</a> = false</td></tr>
+<tr class="separator:a94eb528819d5a25806abf3f23834a425"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45867438b480d4e5895158eaab221434" id="r_a45867438b480d4e5895158eaab221434"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacest2cpp_1_1semantic.html#a858c422b099cad80709b821042555486">ScopeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#a45867438b480d4e5895158eaab221434">globalScopeId_</a> = 1</td></tr>
 <tr class="separator:a45867438b480d4e5895158eaab221434"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a303f144a4f5f0f288aa0d504a303475b" id="r_a303f144a4f5f0f288aa0d504a303475b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacest2cpp_1_1semantic.html#a858c422b099cad80709b821042555486">ScopeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#a303f144a4f5f0f288aa0d504a303475b">currentScopeId_</a> = 1</td></tr>
@@ -256,6 +295,134 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="aff04123d84529aeeb3a4963ac3cda969" name="aff04123d84529aeeb3a4963ac3cda969"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff04123d84529aeeb3a4963ac3cda969">&#9670;&#160;</a></span>asciiUpper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string st2cpp::semantic::SymbolTable::asciiUpper </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>IEC 61131-3 identifiers are case-insensitive Normalizes a name to an uppercase key so declarations and lookups match regardless of spelling (e.g. <code>Name</code> vs <code>name</code>). </p>
+
+</div>
+</div>
+<a id="a2af70a8dae215bfe301c07618f3a5a89" name="a2af70a8dae215bfe301c07618f3a5a89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2af70a8dae215bfe301c07618f3a5a89">&#9670;&#160;</a></span>caseFallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool st2cpp::semantic::SymbolTable::caseFallback </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2ecaf3132abb725b8f920c3a215dc391" name="a2ecaf3132abb725b8f920c3a215dc391"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ecaf3132abb725b8f920c3a215dc391">&#9670;&#160;</a></span>caseMismatches()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; <a class="el" href="structst2cpp_1_1semantic_1_1_symbol_table_1_1_case_mismatch.html">CaseMismatch</a> &gt; &amp; st2cpp::semantic::SymbolTable::caseMismatches </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9cb1abeec83a4ddbc7034e24be17c6b2" name="a9cb1abeec83a4ddbc7034e24be17c6b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cb1abeec83a4ddbc7034e24be17c6b2">&#9670;&#160;</a></span>caseSensitive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool st2cpp::semantic::SymbolTable::caseSensitive </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7e2c744434ffb39e896f8a455b96c1c7" name="a7e2c744434ffb39e896f8a455b96c1c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e2c744434ffb39e896f8a455b96c1c7">&#9670;&#160;</a></span>clearCaseMismatches()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void st2cpp::semantic::SymbolTable::clearCaseMismatches </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ac074a55798624c4c31d073937dffcb0b" name="ac074a55798624c4c31d073937dffcb0b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac074a55798624c4c31d073937dffcb0b">&#9670;&#160;</a></span>currentScope()</h2>
 
@@ -526,6 +693,52 @@ Private Attributes</h2></td></tr>
 
 <p>Id of the external scope that holds library-imported symbols. </p>
 <p>The external scope is never part of the local/global lookup chain; it is consulted explicitly as the final fallback so that project-local symbols always shadow external ones. </p>
+
+</div>
+</div>
+<a id="af6bdcb3f0695ba336dddb485a5e4c556" name="af6bdcb3f0695ba336dddb485a5e4c556"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6bdcb3f0695ba336dddb485a5e4c556">&#9670;&#160;</a></span>findInScope()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacest2cpp_1_1semantic.html#a04ded7b7fa589f2e5fa9ae2e7a22b3a3">SymbolId</a> st2cpp::semantic::SymbolTable::findInScope </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structst2cpp_1_1semantic_1_1_scope.html">Scope</a> *&#160;</td>
+          <td class="paramname"><em>scope</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resolve a name in one scope, honouring the case policy. </p>
+<p>Tries the exact key first; when the fallback is enabled a miss retries the uppercase spelling and records the mismatch, which <a class="el" href="classst2cpp_1_1semantic_1_1_semantic_analyzer.html" title="Semantic Analyzer - performs semantic analysis on TranslationUnit.">SemanticAnalyzer</a> drains into a warning. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scope</td><td>The scope to search </td></tr>
+    <tr><td class="paramname">name</td><td>The identifier as written </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The resolved SymbolId, or 0 when not found </dd></dl>
 
 </div>
 </div>
@@ -1004,8 +1217,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ade46e481225c2665fcb791e497c60ae4" name="ade46e481225c2665fcb791e497c60ae4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade46e481225c2665fcb791e497c60ae4">&#9670;&#160;</a></span>normalizeKey()</h2>
+<a id="a0734bc80a14a096feff8ce3a0c14019b" name="a0734bc80a14a096feff8ce3a0c14019b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0734bc80a14a096feff8ce3a0c14019b">&#9670;&#160;</a></span>nameMatches()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1014,21 +1227,61 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static std::string st2cpp::semantic::SymbolTable::normalizeKey </td>
+          <td class="memname">bool st2cpp::semantic::SymbolTable::nameMatches </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>name</em></td><td>)</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>IEC 61131-3 identifiers are case-insensitive Normalizes a name to an uppercase key so declarations and lookups match regardless of spelling (e.g. <code>Name</code> vs <code>name</code>). </p>
+<p>Compare two spellings under the current case policy. </p>
+<p>Case-insensitive by default. In case-sensitive mode two different spellings match only while the fallback is enabled, so that a permissively resolved mis-cased reference still reaches the declaration it names. </p><dl class="section return"><dt>Returns</dt><dd>true when a and b name the same identifier </dd></dl>
+
+</div>
+</div>
+<a id="ae2db6ae44253100314d1cfb601131fa2" name="ae2db6ae44253100314d1cfb601131fa2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2db6ae44253100314d1cfb601131fa2">&#9670;&#160;</a></span>normalizeKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string st2cpp::semantic::SymbolTable::normalizeKey </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The lookup key for an identifier under the current case policy. </p>
+<dl class="section return"><dt>Returns</dt><dd>The identifier verbatim in case-sensitive mode, uppercased otherwise </dd></dl>
 
 </div>
 </div>
@@ -1115,6 +1368,45 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4d7f73ecf392d5bb8674113a0828e788" name="a4d7f73ecf392d5bb8674113a0828e788"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d7f73ecf392d5bb8674113a0828e788">&#9670;&#160;</a></span>recordCaseMismatch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void st2cpp::semantic::SymbolTable::recordCaseMismatch </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>written</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacest2cpp_1_1semantic.html#a04ded7b7fa589f2e5fa9ae2e7a22b3a3">SymbolId</a>&#160;</td>
+          <td class="paramname"><em>id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Note that a reference matched a declaration only by case. </p>
+<p>Mutable because the lookups that observe the fallback are const. </p>
 
 </div>
 </div>
@@ -1347,7 +1639,136 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a783cd24f5f86b592ae4757ff5e555d35" name="a783cd24f5f86b592ae4757ff5e555d35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a783cd24f5f86b592ae4757ff5e555d35">&#9670;&#160;</a></span>setCaseFallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void st2cpp::semantic::SymbolTable::setCaseFallback </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Whether a mis-cased reference falls back to the uppercase spelling. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>true to keep resolving, false to reject the reference </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a01ad025b27328226c53f6b07e2ec03d5" name="a01ad025b27328226c53f6b07e2ec03d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01ad025b27328226c53f6b07e2ec03d5">&#9670;&#160;</a></span>setCaseSensitive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void st2cpp::semantic::SymbolTable::setCaseSensitive </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Case policy of the table, applied to every identifier key. </p>
+<p>By default the table follows IEC 61131-3 and folds identifiers to uppercase, so <code>name</code> and <code>Name</code> are the same symbol. With &ndash;caseSensitive the key is the identifier verbatim and the two become distinct symbols, which is what makes a mis-cased reference fail to resolve. In that mode <a class="el" href="classst2cpp_1_1semantic_1_1_symbol_table.html#a783cd24f5f86b592ae4757ff5e555d35" title="Whether a mis-cased reference falls back to the uppercase spelling.">setCaseFallback()</a> decides whether a mis-cased reference still resolves through the uppercase spelling: off under &ndash;strict (the reference is reported as undeclared, like C++), on in permissive mode. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a94eb528819d5a25806abf3f23834a425" name="a94eb528819d5a25806abf3f23834a425"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94eb528819d5a25806abf3f23834a425">&#9670;&#160;</a></span>caseFallback_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool st2cpp::semantic::SymbolTable::caseFallback_ = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af99f45e042081136d08e287f57154bbf" name="af99f45e042081136d08e287f57154bbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af99f45e042081136d08e287f57154bbf">&#9670;&#160;</a></span>caseMismatches_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="structst2cpp_1_1semantic_1_1_symbol_table_1_1_case_mismatch.html">CaseMismatch</a>&gt; st2cpp::semantic::SymbolTable::caseMismatches_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9eda7d047e622f0072cbf67012c6ce5f" name="a9eda7d047e622f0072cbf67012c6ce5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9eda7d047e622f0072cbf67012c6ce5f">&#9670;&#160;</a></span>caseSensitive_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool st2cpp::semantic::SymbolTable::caseSensitive_ = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a303f144a4f5f0f288aa0d504a303475b" name="a303f144a4f5f0f288aa0d504a303475b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a303f144a4f5f0f288aa0d504a303475b">&#9670;&#160;</a></span>currentScopeId_</h2>
 

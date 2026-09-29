@@ -1,6 +1,7 @@
 var dir_b6621b694f7e4fe08ae18e50638ef9ad =
 [
     [ "test_body_visitor.cpp", "test__body__visitor_8cpp.html", "test__body__visitor_8cpp" ],
+    [ "test_case_sensitivity.cpp", "test__case__sensitivity_8cpp.html", "test__case__sensitivity_8cpp" ],
     [ "test_codegen_semantic.cpp", "test__codegen__semantic_8cpp.html", "test__codegen__semantic_8cpp" ],
     [ "test_decl_visitor.cpp", "test__decl__visitor_8cpp.html", "test__decl__visitor_8cpp" ],
     [ "test_diagnostics.cpp", "test__diagnostics_8cpp.html", "test__diagnostics_8cpp" ],

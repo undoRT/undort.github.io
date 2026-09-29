@@ -53,6 +53,7 @@ var _diagnostics_8h =
       [ "UnsupportedConstruct", "_diagnostics_8h.html#aa0c07614d70294cc051420d48b97f3d8a7c30de64029ecd08bcb8a74378950b1e", null ],
       [ "InvalidTimeLiteral", "_diagnostics_8h.html#aa0c07614d70294cc051420d48b97f3d8a985db17aa485c5b9857ace42127ce030", null ],
       [ "SyntaxError", "_diagnostics_8h.html#aa0c07614d70294cc051420d48b97f3d8aece592fd242f4ba674cc9da539a625a7", null ],
+      [ "CaseMismatch", "_diagnostics_8h.html#aa0c07614d70294cc051420d48b97f3d8a6e0f790d4b76f3f05afb11a9af9db3a4", null ],
       [ "InternalError", "_diagnostics_8h.html#aa0c07614d70294cc051420d48b97f3d8a8462b58246e70e5c83e5b939a9332cb5", null ]
     ] ],
     [ "DiagnosticSeverity", "_diagnostics_8h.html#a9884b36d7a4558b2df56061f8b59c167", [

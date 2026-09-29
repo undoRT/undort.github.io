@@ -1,7 +1,7 @@
 <map id="st2cpp::semantic::SemanticAnalyzer" name="st2cpp::semantic::SemanticAnalyzer">
-<area shape="rect" id="Node000001" title="Semantic Analyzer &#45; performs semantic analysis on TranslationUnit." alt="" coords="155,548,349,788"/>
-<area shape="rect" id="Node000002" href="$classst2cpp_1_1semantic_1_1_symbol_table.html" title=" " alt="" coords="5,5,248,485"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,485,214,531,209,533,195,486"/>
-<area shape="rect" id="Node000003" href="$classst2cpp_1_1semantic_1_1_diagnostics.html" title="Diagnostic collector and reporter." alt="" coords="273,33,482,458"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="317,459,295,533,290,531,312,458"/>
+<area shape="rect" id="Node000001" title="Semantic Analyzer &#45; performs semantic analysis on TranslationUnit." alt="" coords="155,628,349,948"/>
+<area shape="rect" id="Node000002" href="$classst2cpp_1_1semantic_1_1_symbol_table.html" title=" " alt="" coords="5,5,248,565"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="199,565,211,612,206,613,194,566"/>
+<area shape="rect" id="Node000003" href="$classst2cpp_1_1semantic_1_1_diagnostics.html" title="Diagnostic collector and reporter." alt="" coords="273,73,482,498"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="327,499,298,613,293,612,322,498"/>
 </map>

@@ -12,13 +12,13 @@ var searchData=
   ['maketoken_9',['makeToken',['../class_lexer.html#a74f5cd9404b377d8914efbc2917b6c7e',1,'Lexer']]],
   ['makeunknown_10',['makeUnknown',['../structst2cpp_1_1semantic_1_1_type_info.html#a66ed78720ae9b4aeb6f4ba80bb29326e',1,'st2cpp::semantic::TypeInfo']]],
   ['makevoid_11',['makeVoid',['../structst2cpp_1_1semantic_1_1_type_info.html#a020c673fd2e06c7237b253bed87941d4',1,'st2cpp::semantic::TypeInfo']]],
-  ['mapbasetype_12',['mapBaseType',['../class_code_generator.html#a58ef640dd935c30031fd6c735031d272',1,'CodeGenerator']]],
-  ['maptype_13',['mapType',['../class_code_generator.html#a30727429ba7b6c90eb7875d299156ce0',1,'CodeGenerator']]],
-  ['maptypeid_14',['mapTypeId',['../class_code_generator.html#a22d0587e01d548741f99dec16142c1e1',1,'CodeGenerator']]],
+  ['mapbasetype_12',['mapbasetype',['../classst2cpp_1_1codegen_1_1_type_mapper.html#abe25201cd004fc1f83f2485c91936559',1,'st2cpp::codegen::TypeMapper::mapBaseType()'],['../structst2cpp_1_1codegen_1_1_emission_context.html#acd36b2735129ef84fd34732ad8a93671',1,'st2cpp::codegen::EmissionContext::mapBaseType()']]],
+  ['maptype_13',['maptype',['../classst2cpp_1_1codegen_1_1_type_mapper.html#a4ffcf1532ccf7c174dd38f1efee20c98',1,'st2cpp::codegen::TypeMapper::mapType()'],['../structst2cpp_1_1codegen_1_1_emission_context.html#aa66b76a1d87e8e0b232e445fff74354e',1,'st2cpp::codegen::EmissionContext::mapType(const TypeRef &amp;tr) const']]],
+  ['maptypeid_14',['maptypeid',['../structst2cpp_1_1codegen_1_1_emission_context.html#aa99af0f20191f5193841964aa8556f37',1,'st2cpp::codegen::EmissionContext::mapTypeId()'],['../classst2cpp_1_1codegen_1_1_type_mapper.html#acce47e6cad5422620441af90b0f95765',1,'st2cpp::codegen::TypeMapper::mapTypeId()']]],
   ['markfixedaddress_15',['markFixedAddress',['../class_address_allocator.html#ac0fd51c0b939b674ae5954a3583420a1',1,'AddressAllocator']]],
   ['match_16',['match',['../class_lexer.html#a1ae163f94b38ab0e4c88951e9a810859',1,'Lexer::match()'],['../class_parser.html#acad4b84eb3bcffba31d8b4a402ad2840',1,'Parser::match()']]],
   ['matches_17',['matches',['../structst2cpp_1_1library_1_1_version_constraint.html#a0d27ae94d6c948c3164f3156a3582983',1,'st2cpp::library::VersionConstraint']]],
-  ['memberdecl_18',['memberDecl',['../class_code_generator.html#a62b9108cc9f8091e3b54be2c5611a9f3',1,'CodeGenerator']]],
+  ['memberdecl_18',['memberDecl',['../classst2cpp_1_1codegen_1_1_decl_emitter.html#afcc08751a3e727b85cfcb2650191c548',1,'st2cpp::codegen::DeclEmitter']]],
   ['mergetranslationunit_19',['mergeTranslationUnit',['../main_8cpp.html#a03d45d80e871c1612c00a389e556ee3b',1,'main.cpp']]],
   ['missingdependencies_20',['missingDependencies',['../classst2cpp_1_1library_1_1_library_registry.html#ad02642c92a8292a45d2ebe3609093540',1,'st2cpp::library::LibraryRegistry']]]
 ];

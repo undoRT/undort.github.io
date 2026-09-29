@@ -6,5 +6,8 @@ var test__codegen__external__library_8cpp =
     [ "TEST_F", "test__codegen__external__library_8cpp.html#a77571db67e8d24cb7d66db1fab820b61", null ],
     [ "TEST_F", "test__codegen__external__library_8cpp.html#aee88d967dd7cadda159153ef95f237dc", null ],
     [ "TEST_F", "test__codegen__external__library_8cpp.html#ada0aa2934e39d59eb5d61dd65fcdd7cd", null ],
-    [ "TEST_F", "test__codegen__external__library_8cpp.html#a562b77923f6c3453a542ff75e5b1987f", null ]
+    [ "TEST_F", "test__codegen__external__library_8cpp.html#a562b77923f6c3453a542ff75e5b1987f", null ],
+    [ "TEST_F", "test__codegen__external__library_8cpp.html#a66b3312204807abdcab64cde39ef5a88", null ],
+    [ "TEST_F", "test__codegen__external__library_8cpp.html#a764aa04104ad5908293de05cadee94b1", null ],
+    [ "TEST_F", "test__codegen__external__library_8cpp.html#a02e35d36fe926249bc0ce63f115b71fe", null ]
 ];

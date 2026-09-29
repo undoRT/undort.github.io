@@ -5,6 +5,7 @@ var searchData=
   ['translationunit_2',['TranslationUnit',['../struct_translation_unit.html',1,'']]],
   ['typealias_3',['TypeAlias',['../struct_type_alias.html',1,'']]],
   ['typeinfo_4',['TypeInfo',['../structst2cpp_1_1semantic_1_1_type_info.html',1,'st2cpp::semantic']]],
-  ['typeref_5',['typeref',['../structst2cpp_1_1library_1_1_type_ref.html',1,'st2cpp::library::TypeRef'],['../struct_type_ref.html',1,'TypeRef']]],
-  ['typesystemtest_6',['TypeSystemTest',['../class_type_system_test.html',1,'']]]
+  ['typemapper_5',['TypeMapper',['../classst2cpp_1_1codegen_1_1_type_mapper.html',1,'st2cpp::codegen']]],
+  ['typeref_6',['typeref',['../structst2cpp_1_1library_1_1_type_ref.html',1,'st2cpp::library::TypeRef'],['../struct_type_ref.html',1,'TypeRef']]],
+  ['typesystemtest_7',['TypeSystemTest',['../class_type_system_test.html',1,'']]]
 ];
