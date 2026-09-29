@@ -122,7 +122,8 @@
         <p class="lead">
             A transpiler that compiles IEC 61131-3 Structured Text into clean, native C++17 — validated by a
             complete semantic analysis stage and driven by JSON-defined data and external libraries.
-            No virtual machine, no interpreter — just auditable, standard C++ you can compile, debug, and ship anywhere.
+            No virtual machine, no interpreter: the output is auditable, standard C++ that compiles, debugs and
+            deploys on any toolchain.
         </p>
 
         <h2 id="overview">Overview</h2>
@@ -160,8 +161,8 @@
         <div class="callout success">
             <strong>v0.4 highlights:</strong> semantic analysis is production-ready, external libraries and
             project configuration are defined in versioned JSON, and the compiler now <em>exports</em> ST back to
-            JSON library descriptors. The test suite comprises <strong>715 automated tests</strong> across 29
-            suites, executed on every commit.
+            JSON library descriptors. The test suite comprises more than <strong>710 automated tests</strong>,
+            executed on every commit.
         </div>
 
         <h2 id="whats-new">What's New in v0.4</h2>
@@ -201,7 +202,7 @@
                 <tr>
                     <td>Process image</td>
                     <td><code>--pi-auto</code> detection and manual <code>--pi-input/output/marker</code></td>
-                    <td>Zero-config I/O mapping, or full control when you need it</td>
+                    <td>Zero-configuration I/O mapping, or explicit control of every address</td>
                 </tr>
             </tbody>
         </table>
@@ -713,8 +714,8 @@ void MAIN::run() {
         </table>
 
         <div class="callout success">
-            <strong>Total (v0.4):</strong> <strong>715 tests</strong> from 29 suites (2 disabled) run on every
-            commit to guarantee reliability and prevent regressions.
+            <strong>Total (v0.4):</strong> more than <strong>710 tests</strong> run on every commit to guarantee
+            reliability and prevent regressions.
         </div>
 
         <p>
@@ -744,7 +745,7 @@ JSON side:
         </p>
 
         <div class="callout info">
-            <strong>🔗 Integration with undoCore:</strong> The generated code includes
+            <strong>Integration with undoCore:</strong> The generated code includes
             <code>#include &lt;undoCore/undoCore.hpp&gt;</code> and uses <code>STArray</code>,
             <code>VAR_INOUT</code>, and conversion functions from the undoCore library.
         </div>
@@ -771,7 +772,7 @@ JSON side:
 │   └── cli/           # main.cpp + argument parsing
 ├── st2cpp_includes/
 │   └── undoCore/      # undoCore submodule (types, conversions, math)
-├── tests/             # 715 tests
+├── tests/             # 710+ tests
 ├── scripts/           # build.sh, generate_docs.sh
 └── CMakeLists.txt</code></pre>
 
