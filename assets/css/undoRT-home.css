@@ -455,6 +455,7 @@ header {
 .product-badge.compiler   { background-color: rgba(245, 158, 11, 0.1);  color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.2); }
 .product-badge.utility    { background-color: rgba(176, 168, 204, 0.1); color: #c3bcdf; border: 1px solid rgba(176, 168, 204, 0.2); }
 .product-badge.foundation { background-color: rgba(0, 180, 216, 0.1);   color: var(--cyan); border: 1px solid rgba(0, 180, 216, 0.2); }
+.product-badge.ide        { background-color: rgba(56, 189, 248, 0.1);  color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.2); }
 
 .feature-card p {
     color: var(--text-muted);

@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>undoStudio - The undoRT IDE | undoRT</title>
+    <meta name="description" content="undoStudio v0.1 — the IDE of the undoRT ecosystem: one editor panel for every kind of file, IEC 61131-3 Structured Text with semantic colouring and completion, projects described in JSON, an embedded terminal, and every feature shipped as an independent undoApp.">
+
+    <!-- shared CSS -->
+    <link rel="stylesheet" href="../assets/css/undoRT.css">
+
+    <link rel="icon" type="image/png" href="../assets/images/undoRT_logo.png">
+    <link rel="manifest" href="../assets/manifest.json">
+    <link rel="apple-touch-icon" href="../assets/images/undoRT_logo.png">
+</head>
+<body>
+
+<header class="topbar">
+    <a href="index.html">
+        <img src="../assets/images/undoStudio_logo.png" alt="undoStudio" class="topbar-logo">
+    </a>
+    <div class="topbar-sep"></div>
+    <a href="index.html" class="topbar-product">undoStudio</a>
+    <span class="topbar-version">v0.1</span>
+
+    <div class="topbar-actions">
+        <button class="toc-toggle" aria-label="Toggle table of contents" aria-expanded="false">
+            <span>Contents</span>
+            <svg class="chevron" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+
+    <nav class="topbar-links" id="topbar-links">
+        <a href="../index.html">Home</a>
+        <a href="../architecture.html">Architecture</a>
+
+        <div class="nav-dropdown">
+            <button class="nav-dropdown-toggle" aria-expanded="false">
+                Docs
+                <svg class="chevron" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <div class="nav-dropdown-menu">
+                <a href="index.html" class="current">
+                    <strong>undoStudio</strong>
+                    <span>The IDE: editor, projects, terminal</span>
+                </a>
+                <a href="../st2cpp/">
+                    <strong>st2cpp</strong>
+                    <span>ST → C++ transpiler docs</span>
+                </a>
+                <a href="../undoCore/">
+                    <strong>undoCore</strong>
+                    <span>Header-only core infrastructure</span>
+                </a>
+                <a href="../undoPLC/">
+                    <strong>undoPLC</strong>
+                    <span>Multi-threading PLC infrastructure</span>
+                </a>
+                <a href="../undoBUS/">
+                    <strong>undoBUS</strong>
+                    <span>Fieldbus master implementations</span>
+                </a>
+                <span class="nav-dropdown-soon">More products coming soon</span>
+            </div>
+        </div>
+
+        <a href="https://github.com/undoRT/undoStudio" target="_blank" class="gh">GitHub</a>
+    </nav>
+</header>
+
+<div class="layout">
+
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-section-title">Getting Started</div>
+        <a href="#overview" class="active">Overview</a>
+        <a href="#installation">Installation</a>
+        <a href="#the-window">The Window</a>
+
+        <div class="sidebar-section-title">Editing</div>
+        <a href="#editor">The Editor Panel</a>
+        <a href="#structured-text">Structured Text</a>
+        <a href="#autocomplete">Autocomplete &amp; Signatures</a>
+        <a href="#json">JSON: Text or Tree</a>
+        <a href="#keyboard">Keyboard</a>
+
+        <div class="sidebar-section-title">Projects</div>
+        <a href="#workspace">The Workspace Tree</a>
+        <a href="#project-format">Projects on Disk</a>
+        <a href="#recent">Recent Projects &amp; Files</a>
+        <a href="#state">State Between Runs</a>
+
+        <div class="sidebar-section-title">Building</div>
+        <a href="#output">Compiling &amp; ST Output</a>
+
+        <div class="sidebar-section-title">Extending</div>
+        <a href="#undoapps">undoApps</a>
+        <a href="#terminal">Terminal</a>
+        <a href="#testing">Testing</a>
+    </nav>
+
+    <main class="content">
+
+        <h1>undoStudio <span class="status-pill release">Released · v0.1</span></h1>
+        <p class="lead">
+            The IDE of the <a href="../index.html">undoRT ecosystem</a>. It edits what
+            <a href="../st2cpp/">st2cpp</a> compiles and what <a href="../undoPLC/">undoPLC</a> runs:
+            IEC 61131-3 Structured Text with the colouring and the completion lists driven by
+            what the file actually declares, a project described in JSON, and
+            <strong>Compile</strong> one button away from the transpiler.
+        </p>
+
+        <h2 id="overview">Overview</h2>
+        <p>
+            undoStudio owns the application lifecycle, the window, the ImGui framework and the
+            project on disk. It implements <strong>no domain functionality</strong>: everything else
+            is an <em>undoApp</em>, an independent module built as a shared object and loaded from
+            <code>plugins/</code>. The split is the architecture, not a convenience — an undoApp that
+            has to be linked into the executable cannot be shipped on its own.
+        </p>
+
+        <figure>
+            <img src="images/undoStudio.png" alt="undoStudio: the Workspace tree on the left, the Editor panel in the middle with a Structured Text file open, the ST Output panel below and the ST Outline on the right">
+            <figcaption>The shipped layout: <strong>Workspace</strong>, <strong>Editor</strong>, <strong>ST Output</strong> and <strong>ST Outline</strong>.</figcaption>
+        </figure>
+
+        <ul class="feature-list">
+            <li><span>One editor panel for every kind of file: <code>.st</code>, <code>.json</code>, <code>.cpp</code>, plain text</span></li>
+            <li><span>Structured Text parsed as it is edited: semantic colouring from the symbol table, not from a keyword list</span></li>
+            <li><span>Member, statement and signature completion, all driven by the parsed file</span></li>
+            <li><span><code>Ctrl+Click</code> from an identifier to its declaration, across files</span></li>
+            <li><span>One POU in two panes — <code>Variables</code> above <code>Body</code>, with the splitter remembered per workspace</span></li>
+            <li><span>Method tabs on a <code>FUNCTION_BLOCK</code>, added and removed from the tab itself</span></li>
+            <li><span>A project is JSON: <code>project.json</code>, <code>plcs.json</code>, <code>tasks.json</code>, one file per task</span></li>
+            <li><span>A role-aware tree: the context menu knows whether it is on a POU folder, a PLC or a task</span></li>
+            <li><span>Diagnostics reported against the generated file, through the source map back to the editor that owns the line</span></li>
+            <li><span>An embedded terminal — one shell per tab, on a real pty</span></li>
+            <li><span>Recent projects and recent files, remembered between runs, in <code>Ctrl+R</code> and <code>Ctrl+P</code></span></li>
+            <li><span>Every feature is a plugin: a third party can add a panel without touching the core</span></li>
+        </ul>
+
+        <div class="callout success">
+            <strong>v0.1:</strong> the project configuration is JSON, every kind of file opens in one
+            editor panel, a <code>FUNCTION</code> can be parsed, and the version is announced from one
+            place. Three test suites — <strong>40 tests</strong> — run on every build, all of them
+            headless: no GPU and no display.
+        </div>
+
+        <h2 id="installation">Installation</h2>
+        <h3>Download the archive</h3>
+        <p>
+            Grab the latest release from
+            <a href="https://github.com/undoRT/undoStudio/releases" target="_blank">GitHub Releases</a>:
+        </p>
+        <pre><code>tar -xzf undoStudio-&lt;version&gt;-linux-x86_64.tar.gz
+cd undoStudio-&lt;version&gt;
+./undoStudio</code></pre>
+
+        <div class="callout warn">
+            <strong>Start it from the directory it was unpacked into.</strong> Fonts, icons, themes and
+            the shipped layout are opened as <code>resources/…</code> and the undoApps are loaded from
+            <code>plugins/</code>, both relative to the <em>working directory</em> — from anywhere else
+            the IDE comes up without them.
+        </div>
+
+        <p>What is in the archive:</p>
+        <table>
+            <thead><tr><th>Path</th><th>What</th></tr></thead>
+            <tbody>
+                <tr><td><code>undoStudio</code></td><td>the IDE</td></tr>
+                <tr><td><code>libundoStudioCore.so</code></td><td>the core library it links</td></tr>
+                <tr><td><code>plugins/</code></td><td>the undoApps, loaded at start-up</td></tr>
+                <tr><td><code>resources/</code></td><td>fonts, icons, themes, default layout</td></tr>
+                <tr><td><code>st2cpp/</code></td><td>the transpiler the <strong>Compile</strong> button invokes</td></tr>
+                <tr><td><code>docs/</code></td><td>the feature documentation, a screenshot on every page</td></tr>
+            </tbody>
+        </table>
+        <p>
+            The X11 and OpenGL development libraries GLFW builds against, and glm, still have to be on
+            the machine; they are in the
+            <a href="https://github.com/undoRT/undoStudio#system-packages" target="_blank">README under
+            “System packages”</a>.
+        </p>
+
+        <h3>Build from source</h3>
+        <p>
+            Every dependency is a git submodule, and two of them are undoRT forks — the
+            ImGuiColorTextEdit branch that carries the semantic tokens, and st2cpp itself:
+        </p>
+        <pre><code>git clone --recursive https://github.com/undoRT/undoStudio.git
+cd undoStudio
+
+cmake -B build -DCMAKE_BUILD_TYPE=Release
+cmake --build build -j"$(nproc)"
+
+# the transpiler the Compile button shells out to
+cmake -S third_party/st2cpp -B build/st2cpp -DCMAKE_BUILD_TYPE=Release
+cmake --build build/st2cpp -j"$(nproc)"</code></pre>
+        <p>
+            The binary, the core library and the undoApps are written next to <code>resources/</code>,
+            because that is the directory the IDE resolves them against. The intermediates go to
+            <code>build/</code> — <code>-B</code> decides where those go, not where the build puts
+            anything it has to find again.
+        </p>
+
+        <h2 id="the-window">The Window</h2>
+        <p>Four panels, all listed under <strong>View</strong>, all shown or hidden from there:</p>
+        <table>
+            <thead><tr><th>Panel</th><th>What is in it</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Workspace</strong></td><td>the file tree and the project toolbar</td></tr>
+                <tr><td><strong>Editor</strong></td><td>every open file, above one tab bar</td></tr>
+                <tr><td><strong>ST Output</strong></td><td>build and validation messages, filterable</td></tr>
+                <tr><td><strong>ST Outline</strong></td><td>the POU, its sections, methods, structs and enums, from the parsed file</td></tr>
+            </tbody>
+        </table>
+        <p>
+            <strong>View &gt; Reset Layout</strong> puts them back where the shipped layout has them,
+            and the terminal — an undoApp panel like any other — appears when its plugin is there.
+        </p>
+
+        <h2 id="editor">The Editor Panel</h2>
+        <p>
+            undoStudio has <strong>one</strong> editor panel. A Structured Text file, a JSON file, a C++
+            file and a plain text file all open in it, each in its own tab, above the same tab bar. A
+            document on screen is a document on screen whichever extension it has.
+        </p>
+
+        <figure>
+            <img src="images/editor-tabs.png" alt="the Editor panel with three files open, one of them marked with an asterisk">
+            <figcaption>Three files open in one panel; the asterisk is unsaved changes in that file.</figcaption>
+        </figure>
+
+        <h3>The tab bar</h3>
+        <table>
+            <thead><tr><th></th><th>What it does</th></tr></thead>
+            <tbody>
+                <tr><td>A click keeps the tab</td><td>there is one preview slot, and browsing the tree through it replaces what was there. A file somebody asked to see is still there when they ask for another one.</td></tr>
+                <tr><td>A second click is not needed</td><td>ImGui only reports a double click when both clicks land within a few pixels of each other — a rule nobody can see.</td></tr>
+                <tr><td>An asterisk means unsaved changes</td><td>it is the file's own text that is asked, not a flag set when the tab was left. Browsing past a file with edits pins it rather than throwing the typing away.</td></tr>
+                <tr><td><code>Ctrl+S</code> saves</td><td>the button is there too, in the ST toolbar</td></tr>
+                <tr><td>Closing a tab unloads the file</td><td>closing the project clears them all</td></tr>
+                <tr><td>Renaming follows the file</td><td>a rename or a move in the tree rewrites the tab, the path a save goes to and the key its text is held under — all three, or <code>Ctrl+S</code> writes a copy where the original used to be</td></tr>
+            </tbody>
+        </table>
+        <p>
+            A file that is not on screen is not kept in memory as text on disk: its unsaved contents are
+            stashed, and the stash is handed back when the tab is selected again — at the cursor and the
+            pane division it was left at.
+        </p>
+
+        <h3>Which backend a file gets</h3>
+        <table>
+            <thead><tr><th>Extension</th><th>Backend</th><th>Notes</th></tr></thead>
+            <tbody>
+                <tr><td><code>.st</code></td><td>Structured Text</td><td><a href="#structured-text">below</a></td></tr>
+                <tr><td><code>.json</code></td><td>JSON tree, or text</td><td><a href="#json">the file's role, not its extension</a></td></tr>
+                <tr><td><code>.c</code> <code>.cpp</code> <code>.cc</code> <code>.cxx</code> <code>.h</code> <code>.hpp</code> <code>.hh</code> <code>.hxx</code></td><td>C++</td><td>syntax colouring from ImGuiColorTextEdit's own definition</td></tr>
+                <tr><td>anything else</td><td>Text</td><td>no colouring</td></tr>
+            </tbody>
+        </table>
+
+        <h2 id="structured-text">Structured Text</h2>
+        <p>
+            The ST backend edits IEC 61131-3 Structured Text — POUs, variable sections, methods,
+            structs and enums — with the file <strong>parsed</strong>, so the colouring, the outline and
+            the completion lists all come from what the file declares rather than from a list of
+            keywords.
+        </p>
+
+        <figure>
+            <img src="images/editor-st-split.png" alt="a .st file open, Variables above Body, with the splitter between them">
+            <figcaption>One POU in two panes: <strong>Variables</strong> above <strong>Body</strong>, with a splitter between.</figcaption>
+        </figure>
+
+        <h3>The two panes</h3>
+        <p>
+            The upper pane holds the variable sections — <code>VAR</code>, <code>VAR_INPUT</code>,
+            <code>VAR_OUTPUT</code>, <code>VAR_IN_OUT</code>, <code>VAR_EXTERNAL</code>,
+            <code>VAR_GLOBAL</code>, <code>VAR_TEMP</code> — and the lower one the cyclic code. Where
+            the splitter sits is remembered per workspace.
+        </p>
+
+        <h3>Methods</h3>
+        <p>
+            A <code>FUNCTION_BLOCK</code> has method tabs beside the POU tab; <code>PROGRAM</code> and
+            <code>FUNCTION</code> do not, because they have no methods in ST. Tabs can be dragged to
+            reorder them.
+        </p>
+        <ul class="feature-list">
+            <li><span><strong>+</strong> adds a method, asking for its name <em>and</em> its return type</span></li>
+            <li><span>right-click a method tab for <strong>Delete Method</strong>, with a confirmation</span></li>
+            <li><span><strong>Add Method</strong> in a file's context menu does the same thing</span></li>
+            <li><span>saving and compiling serialize <strong>every</strong> tab of the POU, not only the one on screen</span></li>
+        </ul>
+
+        <h3>Semantic colouring</h3>
+        <p>
+            Identifiers are coloured by what they resolve to — a declared variable, a function, a type,
+            a keyword — using the symbol table st2cpp builds. A name that resolves to nothing is left
+            uncoloured, which is how a typo shows up before it is compiled.
+        </p>
+
+        <h3>The toolbar</h3>
+        <table>
+            <thead><tr><th>Button</th><th>What it does</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Save</strong></td><td>writes the whole POU, every method tab included</td></tr>
+                <tr><td><strong>Compile</strong></td><td>hands the project to st2cpp — <a href="#output">below</a></td></tr>
+                <tr><td><strong>Validate</strong></td><td>parses and analyses without generating</td></tr>
+                <tr><td><strong>Close</strong></td><td>closes the document</td></tr>
+                <tr><td><strong>Tooltips</strong></td><td>off by default</td></tr>
+            </tbody>
+        </table>
+
+        <h2 id="autocomplete">Autocomplete &amp; Signature Help</h2>
+        <p>
+            Three lists, plus signature help and declaration jumps, all driven by the parsed file — so
+            what they offer is what the file actually declares.
+        </p>
+
+        <figure>
+            <img src="images/autocomplete-members.png" alt="member completion open after a dot, with the list drawn beside the cursor">
+            <figcaption>Member completion after a <code>.</code>: the fields and methods of the thing before the dot.</figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/autocomplete-signature.png" alt="signature help under a call being typed, with its parameters listed">
+            <figcaption>Signature help inside a call: the parameters, with the one being filled in marked.</figcaption>
+        </figure>
+
+        <table>
+            <thead><tr><th>List</th><th>Offered when</th><th>Offers</th></tr></thead>
+            <tbody>
+                <tr><td>Member</td><td>after a <code>.</code></td><td>the fields and methods of the thing before the dot</td></tr>
+                <tr><td>Statement</td><td>on a keyword fragment</td><td>the ST statements and declarations that begin with what is typed — and the list knows which pane it is in</td></tr>
+                <tr><td>Signature help</td><td>inside the parentheses of a call</td><td>that function's parameters, one per line</td></tr>
+            </tbody>
+        </table>
+        <p>
+            Without a <code>.</code> the identifier being typed is the prefix, so a half-typed variable
+            or method name is completable too; neither list opens inside a comment or a string literal,
+            where a name cannot be completed anyway. Only one list is ever on screen: a statement list
+            answers about the same word a member list would, and the more specific one wins.
+        </p>
+        <p>
+            <code>Tab</code> opens the parameter picker for the call being written, and the name and
+            type of the parameter being filled in are shown in grey at the caret. <code>↑</code>
+            <code>↓</code> move, <code>PageUp</code> <code>PageDown</code> move a page, <code>Enter</code>
+            accepts, <code>Esc</code> dismisses.
+        </p>
+        <p>
+            <strong>Ctrl+Click</strong> on an identifier jumps to where it is declared, across files. The
+            status line says so while the mouse is over it, and a click on something that is not declared
+            is reported in the ST Output panel rather than doing nothing.
+        </p>
+
+        <h2 id="json">JSON: Text or Tree</h2>
+        <p>
+            A <code>.json</code> file gets one of two backends: <strong>text</strong>, which you can edit,
+            or the <strong>tree viewer</strong>, which you can only look at. Which one it gets is the
+            file's <strong>role</strong>, not its extension — answered from the project that is open.
+        </p>
+
+        <figure>
+            <img src="images/json-text.png" alt="project.json open as text in the Editor panel">
+            <figcaption><code>project.json</code> as text: it is the file the user is told to edit by hand.</figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/json-tree.png" alt="the same file as a tree, with the node count and a Pretty Print button">
+            <figcaption>The same file as a tree: nodes, the node count, Expand/Collapse, search and Pretty Print.</figcaption>
+        </figure>
+
+        <p>
+            A project's own configuration would go to the viewer by extension, and the viewer draws a
+            tree and has nothing to type into. Those are the files the user is told to edit by hand —
+            <code>exports.json</code> holds the PROGRAM order, a task file its cycle time — so they open
+            as text. Every other <code>.json</code> gets the tree, and outside a project there are no
+            configuration files, so a <code>.json</code> there is a tree.
+        </p>
+        <p>
+            Right-click any <code>.json</code> in the Workspace tree for <strong>Open as Text</strong> and
+            <strong>Open as Tree</strong>. Both <em>replace</em> the tab rather than adding a second one:
+            one file is one row in the bar, and the row is whichever view it is in.
+        </p>
+
+        <h2 id="keyboard">Keyboard</h2>
+        <table>
+            <thead><tr><th>Keys</th><th>Where</th><th>What</th></tr></thead>
+            <tbody>
+                <tr><td><code>Ctrl+R</code></td><td>global</td><td><strong>File &gt; Open Recent Projects</strong></td></tr>
+                <tr><td><code>Ctrl+P</code></td><td>global</td><td><strong>File &gt; Open Recent Files</strong> — what reaches for a file in VS Code, so the file list could not have had <code>Ctrl+R</code></td></tr>
+                <tr><td><code>Ctrl+S</code></td><td>Editor, ST document</td><td>save — the ST document writes the whole POU</td></tr>
+                <tr><td><code>Ctrl+N</code></td><td>ST document</td><td>new POU</td></tr>
+                <tr><td><code>Ctrl+W</code></td><td>Editor, ST document</td><td>close the document</td></tr>
+                <tr><td><code>Ctrl+Click</code></td><td>ST document</td><td>go to the declaration of the identifier under the cursor</td></tr>
+                <tr><td><code>↑</code> <code>↓</code> <code>Enter</code></td><td>recent popups</td><td>walk the list and open the one chosen, without a mouse</td></tr>
+                <tr><td><code>x</code></td><td>recent popups</td><td>forget that one entry</td></tr>
+            </tbody>
+        </table>
+        <p>
+            <code>Ctrl+R</code> and <code>Ctrl+P</code> are held off while anything owns the keyboard — a
+            code editor, the terminal — because in there the same two keys mean something else entirely,
+            and stealing them would break the program the user is in.
+        </p>
+
+        <h2 id="workspace">The Workspace Tree</h2>
+        <figure>
+            <img src="images/workspace-tree.png" alt="a project tree with a folder expanded and a file selected">
+            <figcaption>A project open: node names coloured by what they are — POUs in greens, <code>.st</code> in violet, configuration in amber.</figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/workspace-context.png" alt="the right-click menu on a .json showing Open as Text and Open as Tree">
+            <figcaption>The context menu on a file. The menu knows which folder it is on, because inside a project each one means something different.</figcaption>
+        </figure>
+
+        <h3>The two toolbars</h3>
+        <table>
+            <thead><tr><th></th><th>Without a project</th><th>With a project</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td>Above the tree</td>
+                    <td><strong>New Project</strong>, <strong>Open Project</strong>, <strong>Select Workspace</strong>, <strong>Refresh</strong></td>
+                    <td>the project name in green, <strong>Save</strong>, <strong>Close</strong>, <strong>Select Workspace</strong>, <strong>Refresh</strong></td>
+                </tr>
+                <tr>
+                    <td>Below the tree</td>
+                    <td><strong>+ POU</strong>, <strong>+ Folder</strong>, <strong>+ File</strong></td>
+                    <td><strong>+ PLC</strong>, <strong>+ Task</strong></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>What the context menu offers</h3>
+        <table>
+            <thead><tr><th>Folder</th><th>Items</th></tr></thead>
+            <tbody>
+                <tr><td><strong>POUs</strong></td><td>New PROGRAM, New FUNCTION_BLOCK, New FUNCTION</td></tr>
+                <tr><td><strong>GVLs</strong></td><td>New GVL</td></tr>
+                <tr><td><strong>DUTs</strong></td><td>New STRUCT, New ENUM</td></tr>
+                <tr><td><strong>Libs</strong></td><td>Add Library File</td></tr>
+                <tr><td><strong>undoLogic</strong></td><td>Add PLC…</td></tr>
+                <tr><td><strong>a PLC</strong></td><td>Add Task…, Rename PLC…, Delete PLC</td></tr>
+                <tr><td><strong>Tasks</strong></td><td>Add Task…</td></tr>
+                <tr><td><strong>anything else</strong></td><td>New POU, New File, New Folder, Rename, Delete Folder</td></tr>
+            </tbody>
+        </table>
+        <p>
+            <strong>Delete</strong> is not on the keyboard: removing a file is not something a stray
+            keypress should do. Dragging a file onto a folder moves it there, and the rename follows the
+            tab, the save path and the recent files entry with it.
+        </p>
+
+        <h2 id="project-format">Projects on Disk</h2>
+        <figure>
+            <img src="images/project-open.png" alt="a project open, its name and the Save and Close buttons in the Workspace toolbar">
+            <figcaption>A project open: the header names it in green, with <strong>Save</strong> and <strong>Close</strong> beside it.</figcaption>
+        </figure>
+
+        <p>A project is a directory with a <code>.undoProject/</code> descriptor in it:</p>
+        <pre><code>myProject/
+|-- .undoProject/
+|   |-- project.json          name, version, author, target, semantics
+|   |-- plcs.json             the PLCs
+|   `-- tasks.json            the task list
+|-- undoCore/
+|   |-- tasks/                one JSON file per task
+|   `-- ...                   the core sources
+|-- undoLogic/
+|   `-- &lt;plc&gt;/
+|       `-- exports.json      the PROGRAM order of that PLC
+`-- ...</code></pre>
+
+        <table>
+            <thead><tr><th>File</th><th>What it holds</th></tr></thead>
+            <tbody>
+                <tr><td><code>.undoProject/project.json</code></td><td>the project's name, version, author and creation date; the target architecture, OS and kernel; and the semantics settings</td></tr>
+                <tr><td><code>.undoProject/plcs.json</code></td><td>the PLCs in the project</td></tr>
+                <tr><td><code>.undoProject/tasks.json</code></td><td>the task list</td></tr>
+                <tr><td><code>undoCore/tasks/&lt;name&gt;.json</code></td><td>one task: its PLC, cycle, priority and CPU</td></tr>
+                <tr><td><code>undoLogic/&lt;plc&gt;/exports.json</code></td><td>the PROGRAM order of one PLC</td></tr>
+            </tbody>
+        </table>
+
+        <div class="callout warn">
+            <strong>JSON only.</strong> Nothing reads the old TOML format and nothing migrates it, so a
+            project written against it has to be rewritten once. <code>strictness</code> under
+            <code>semantics</code> is a boolean rather than a string, and a project written before that
+            key existed reads as strict — which is what a new project is written with.
+        </div>
+
+        <p>
+            The tree is built from the roles in <code>plcs.json</code> and the shape of the directory
+            rather than from names alone: <code>undoLogic/&lt;plc&gt;/exports.json</code> is the PLC's
+            exports file <em>because</em> the PLC is in the list, not because of what it is called. A
+            project with no <code>plcs.json</code> has no PLC, and its exports file is an ordinary
+            <code>.json</code>.
+        </p>
+        <p>
+            A folder can also be opened as a workspace with no project in it — <strong>Select
+            Workspace</strong>. The tree is flat rather than role-aware, the folder menu offers the
+            generic items, and every <code>.json</code> in it is a tree.
+        </p>
+
+        <h2 id="recent">Recent Projects &amp; Files</h2>
+        <figure>
+            <img src="images/recent-projects.png" alt="the recent projects popup, with the path of the selected one under it">
+            <figcaption>The recent projects popup: the full path of the entry under the cursor, because a row is identified by its path and not by its name.</figcaption>
+        </figure>
+
+        <table>
+            <thead><tr><th></th><th>What it does</th></tr></thead>
+            <tbody>
+                <tr><td><code>Ctrl+R</code></td><td>the recent projects — <strong>File &gt; Open Recent Projects</strong></td></tr>
+                <tr><td><code>Ctrl+P</code></td><td>the recent files — <strong>File &gt; Open Recent Files</strong></td></tr>
+                <tr><td>Nothing is reopened on its own</td><td>a project is not opened at startup because it happens to be on disk, and a file is not reopened because it was open last time</td></tr>
+                <tr><td><code>x</code></td><td>forget that one entry</td></tr>
+                <tr><td><strong>Remember</strong></td><td>how many to keep — the limit is editable in the popup it governs</td></tr>
+                <tr><td><code>(missing)</code></td><td>an entry whose file or folder is gone is kept and marked, rather than dropped: an entry vanishing is never a mistake</td></tr>
+            </tbody>
+        </table>
+        <p>
+            A file is remembered however it was reached — clicked in the tree, opened from the menu,
+            dropped onto the window — and <strong>opening it puts it back where it was</strong>, at the
+            cursor and the pane it was left in. The list is ordered by when a file was <em>last looked
+            at</em>, and an entry follows a rename or a move.
+        </p>
+        <p>
+            Both lists read and write the same <code>max</code> key in the same <code>[recent]</code>
+            section: there is nothing useful to configure separately about how much of two lists of the
+            same kind to remember. Changing it through either list trims the other on the next load.
+        </p>
+
+        <h2 id="state">State Between Runs</h2>
+        <p>
+            Four files are written next to the layout. They are yours, they are not tracked, and deleting
+            any of them puts that part of the setup back to its default.
+        </p>
+        <table>
+            <thead><tr><th>File</th><th>What it holds</th></tr></thead>
+            <tbody>
+                <tr><td><code>undoStudio_layout.ini</code></td><td>the dock layout. A first run adopts the one under <code>resources/</code>, which <em>is</em> tracked, because it is the layout a fresh install opens with</td></tr>
+                <tr><td><code>undoStudio.ini</code></td><td>the window size, the recent projects, the recent files, and the one limit they share</td></tr>
+                <tr><td><code>undoApp.Editor.ini</code></td><td>where the Variables and Body sections are divided</td></tr>
+                <tr><td><code>undoApp.Terminal.ini</code></td><td>the size the terminal is drawn at</td></tr>
+            </tbody>
+        </table>
+        <p>
+            They sit in the <strong>working directory</strong>, which is why an installed copy has to be
+            started from the directory holding <code>resources/</code> and <code>plugins/</code>. They
+            are the IDE's state and not the project's: nothing in a project reads them, so deleting them
+            costs nothing but a layout.
+        </p>
+
+        <h2 id="output">Compiling &amp; ST Output</h2>
+        <figure>
+            <img src="images/output-filters.png" alt="the ST Output panel with its severity switches, the search field, and errors in the log">
+            <figcaption>ST Output: a switch and a count per severity, a search field, and <strong>Copy</strong> for the lines currently shown.</figcaption>
+        </figure>
+
+        <p>
+            <strong>Compile</strong> on the ST toolbar hands the project to <strong>st2cpp</strong>, which
+            is a separate command-line binary built from <code>third_party/st2cpp</code>. The Editor looks
+            for it on <code>PATH</code> first and then at <code>build/st2cpp/st2cpp</code>, and
+            <strong>prints the path it used</strong> at the top of the panel. A missing transpiler is
+            reported plainly and nothing else stops working.
+        </p>
+        <p><strong>Validate</strong> parses and analyses without generating.</p>
+
+        <table>
+            <thead><tr><th></th><th>What it does</th></tr></thead>
+            <tbody>
+                <tr><td>Errors, Warnings, Success, Detail</td><td>show or hide each severity, with a count beside it</td></tr>
+                <tr><td>Generated ST</td><td>the generated file in full, off by default</td></tr>
+                <tr><td>Search output</td><td>filter the lines — and it belongs to the panel and to the workspace it was typed in, so a query left over from one project does not filter the next project's log to nothing</td></tr>
+                <tr><td>Copy</td><td>the lines currently shown, not the whole log</td></tr>
+                <tr><td>Clear</td><td>empty the panel</td></tr>
+            </tbody>
+        </table>
+
+        <div class="callout info">
+            <strong>The generated file is not the file you edit.</strong> A <code>.st</code> file is
+            regenerated from the panes being edited, and a <strong>source map</strong> maps each generated
+            line back to the editor that owns it. A diagnostic is therefore reported against the
+            generated file, and its line numbers mean nothing without that map — so one that falls
+            outside every editor's own lines says so and names the generated line.
+        </div>
+
+        <h2 id="undoapps">undoApps</h2>
+        <p>
+            A plugin is a shared object exporting <strong>two C symbols</strong>.
+            <code>createUndoApp</code> is expected to have fully initialised the app — registering its
+            panels and all — before it returns, and <code>destroyUndoApp</code> to have removed them
+            again:
+        </p>
+        <pre><code>extern "C" {
+
+void* createUndoApp()
+{
+    auto&amp; app = MyApp::getInstance();
+    app.initialize();   // registers the panels
+    return &amp;app;
+}
+
+void destroyUndoApp(void* app)
+{
+    static_cast&lt;MyApp*&gt;(app)->shutdown();   // removes them
+}
+
+} // extern "C"</code></pre>
+
+        <table>
+            <thead><tr><th>undoApp</th><th>What it is</th></tr></thead>
+            <tbody>
+                <tr><td><strong>undoApp.Editor</strong></td><td>Structured Text, JSON, text and C++ editing, the Workspace tree and the projects</td></tr>
+                <tr><td><strong>undoApp.Terminal</strong></td><td>the embedded shell</td></tr>
+                <tr><td><strong>undoApp.Demo</strong></td><td>the smallest possible undoApp, there to show the shape of one. <code>BUILD_DEMO_APP</code> is off by default</td></tr>
+            </tbody>
+        </table>
+        <p>
+            Registering a panel <strong>by a name another undoApp already registered</strong> replaces that
+            one's callback rather than adding a second panel, so the load order decides which body is
+            drawn. The core cannot call into an undoApp: it leaves a request and the undoApp picks it up,
+            which is what the add-METHOD dialog and both recent-files lists live by.
+        </p>
+
+        <h3>The ones that are meant to</h3>
+        <p>Each is described by what it is for rather than what it does, because none of them exists yet.</p>
+        <table>
+            <thead><tr><th>undoApp</th><th>For</th></tr></thead>
+            <tbody>
+                <tr><td><strong>undoApp.PLC</strong></td><td>PLC configuration, tasks, variables, deployment, against undoPLC</td></tr>
+                <tr><td><strong>undoApp.BUS</strong></td><td>EtherCAT and fieldbus configuration, PDO mapping, network diagnostics</td></tr>
+                <tr><td><strong>undoApp.Diagnostics</strong></td><td>PLC status, task execution, cycle time, jitter, CPU, runtime errors</td></tr>
+                <tr><td><strong>undoApp.OPCUA</strong></td><td>OPC UA servers and clients, namespaces, node publishing</td></tr>
+                <tr><td><strong>undoApp.Motion</strong></td><td>axes, motion profiles, drives, kinematics</td></tr>
+                <tr><td><strong>undoApp.Import</strong></td><td>migrating TwinCAT, CODESYS and other IEC 61131 projects</td></tr>
+            </tbody>
+        </table>
+
+        <h2 id="terminal">Terminal</h2>
+        <figure>
+            <img src="images/terminal.png" alt="a shell session in its own tab, with the font size buttons beside it">
+            <figcaption>One shell per tab: a build running in one tab does not stop you using another.</figcaption>
+        </figure>
+        <p>
+            A <code>libvterm</code> terminal drawn with ImGui, each tab running a real shell on a pty.
+        </p>
+        <table>
+            <thead><tr><th></th><th>What it does</th></tr></thead>
+            <tbody>
+                <tr><td><strong>+</strong></td><td>a new shell</td></tr>
+                <tr><td><strong>x</strong> on a tab</td><td>close that shell</td></tr>
+                <tr><td><strong>A−</strong> / <strong>A+</strong></td><td>smaller / larger text, with the size in pixels beside them — and <code>Ctrl</code> + wheel is the same. The buttons are there because a terminal sized by a shortcut nobody can find is a terminal people stop reading</td></tr>
+            </tbody>
+        </table>
+        <div class="callout placeholder">
+            <strong>Known limitation:</strong> a terminal tab cannot be dragged to reorder, unlike the
+            file tabs beside it. ImGui would move the tab and the panel would keep drawing the shell it
+            thinks is there, so it is not offered rather than offered and wrong.
+        </div>
+
+        <h2 id="testing">Testing</h2>
+        <p>
+            Three suites, all headless: <strong>no GPU and no display</strong>. They create an ImGui
+            context with a font atlas and drive real frames.
+        </p>
+        <pre><code>./src/core/tests/run_tests.sh                    # 12 tests
+./undoApps/undoApp.Editor/tests/run_tests.sh     # 26 tests
+./undoApps/undoApp.Terminal/tests/run_tests.sh   # 2 tests
+
+# a subset, by name
+./undoApps/undoApp.Editor/tests/run_tests.sh completion</code></pre>
+        <p>
+            Each check that could not fail would not be a check, so every one of them found a real bug: a
+            fuzzy match stealing the member completion, 1841 cells in 1920 painted the wrong colour, a
+            key written above its own section header, and a row in the recent-files popup that rendered in
+            the right order, in the right place, with the right name on it, and could not be picked
+            because its ID belonged to another row.
+        </p>
+        <p>
+            The Editor and Terminal suites link against the built core and need the project compiled
+            first. They run on every release build, which is why the archive is only ever attached to a
+            release somebody deliberately made.
+        </p>
+
+    </main>
+</div>
+
+<footer>
+    <p>&copy; 2026 undoRT Open Source Project. <a href="https://github.com/undoRT/undoStudio" target="_blank">undoStudio on GitHub</a> — <a href="https://github.com/undoRT/undoStudio/blob/main/docs/editor.md" target="_blank">documentation</a>, <a href="https://github.com/undoRT/undoStudio/blob/main/CHANGELOG.md" target="_blank">changelog</a>.</p>
+</footer>
+
+<script>
+    (function () {
+        var tocToggle  = document.querySelector('.toc-toggle');
+        var navToggle  = document.querySelector('.nav-toggle');
+        var topbarLinks = document.getElementById('topbar-links');
+        var sidebar    = document.getElementById('sidebar');
+        var docsDrop   = document.querySelector('.nav-dropdown');
+        var docsBtn    = document.querySelector('.nav-dropdown-toggle');
+
+        tocToggle.addEventListener('click', function () {
+            var isOpen = sidebar.classList.toggle('toc-open');
+            tocToggle.classList.toggle('active', isOpen);
+            tocToggle.setAttribute('aria-expanded', isOpen);
+            topbarLinks.classList.remove('nav-open');
+            navToggle.classList.remove('active');
+        });
+
+        navToggle.addEventListener('click', function () {
+            var isOpen = topbarLinks.classList.toggle('nav-open');
+            navToggle.classList.toggle('active', isOpen);
+            navToggle.setAttribute('aria-expanded', isOpen);
+            sidebar.classList.remove('toc-open');
+            tocToggle.classList.remove('active');
+            tocToggle.setAttribute('aria-expanded', 'false');
+        });
+
+        docsBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            docsDrop.classList.toggle('dropdown-open');
+            docsBtn.setAttribute('aria-expanded', docsDrop.classList.contains('dropdown-open') ? 'true' : 'false');
+        });
+
+        document.addEventListener('click', function (e) {
+            if (!docsDrop.contains(e.target)) {
+                docsDrop.classList.remove('dropdown-open');
+                docsBtn.setAttribute('aria-expanded', 'false');
+            }
+            if (!topbarLinks.contains(e.target) && !navToggle.contains(e.target)) {
+                topbarLinks.classList.remove('nav-open');
+                navToggle.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
+            }
+            if (!sidebar.contains(e.target) && !tocToggle.contains(e.target)) {
+                sidebar.classList.remove('toc-open');
+                tocToggle.classList.remove('active');
+                tocToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        topbarLinks.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                topbarLinks.classList.remove('nav-open');
+                navToggle.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
+                docsDrop.classList.remove('dropdown-open');
+            });
+        });
+
+        sidebar.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                sidebar.classList.remove('toc-open');
+                tocToggle.classList.remove('active');
+                tocToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        var headings = document.querySelectorAll('.content h2[id], .content h3[id]');
+        var sideLinks = document.querySelectorAll('.sidebar a[href^="#"]');
+
+        var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    sideLinks.forEach(function (l) { l.classList.remove('active'); });
+                    var active = document.querySelector('.sidebar a[href="#' + entry.target.id + '"]');
+                    if (active) active.classList.add('active');
+                }
+            });
+        }, { rootMargin: '-20% 0px -70% 0px' });
+
+        headings.forEach(function (h) { observer.observe(h); });
+    })();
+</script>
+
+</body>
+</html>

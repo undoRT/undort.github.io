@@ -39,6 +39,10 @@
                     </svg>
                 </button>
                 <div class="nav-dropdown-menu">
+                    <a href="undoStudio/">
+                        <strong>undoStudio</strong>
+                        <span>The IDE: editor, projects, terminal</span>
+                    </a>
                     <a href="st2cpp/">
                         <strong>st2cpp</strong>
                         <span>ST → C++ transpiler docs</span>
@@ -70,13 +74,18 @@
         <section class="architecture-card">
             <h2>The Integration Pipeline</h2>
             <p>
-                The full undoRT pipeline moves from Structured Text source to deterministic hardware execution in four stages. The first two stages — the <strong>st2cpp</strong> compiler and the <strong>undoCore</strong> foundation library — are now released. The remaining components are in active development.
+                The full undoRT pipeline moves from Structured Text source to deterministic hardware execution in four stages. The first three — the <strong>undoStudio</strong> IDE the source is written in, the <strong>st2cpp</strong> compiler and the <strong>undoCore</strong> foundation library — are now released. The remaining components are in active development.
             </p>
 
             <div class="pipeline">
                 <div class="pipeline-node">
                     <div class="pipeline-box ready">ST Source</div>
                     <span class="pipeline-label">IEC 61131-3</span>
+                </div>
+                <span class="pipeline-arrow">→</span>
+                <div class="pipeline-node">
+                    <div class="pipeline-box ready">undoStudio</div>
+                    <span class="pipeline-label">Released v0.1</span>
                 </div>
                 <span class="pipeline-arrow">→</span>
                 <div class="pipeline-node">
@@ -174,6 +183,48 @@
             <p>
                 Today, the generated C++ from st2cpp can already be compiled and run standalone on any C++17-capable platform — the RT integration is the next step, not a prerequisite for using the compiler.
             </p>
+        </section>
+
+        <section class="architecture-card">
+            <h2>undoStudio — Where the ST Source Comes From</h2>
+            <p>
+                <strong>undoStudio</strong> is the IDE the pipeline starts in: the editor for IEC 61131-3
+                Structured Text, the project layout the compiler is pointed at, and the diagnostics the
+                compiler produces read back against the source that caused them.
+            </p>
+            <ul>
+                <li>
+                    <strong>One editor panel for every kind of file.</strong> A <code>.st</code>, a
+                    <code>.json</code>, a <code>.cpp</code> and a configuration file all open above the
+                    same tab bar, because a document on screen is a document on screen whichever extension
+                    it has.
+                </li>
+                <li>
+                    <strong>Semantic editing.</strong> Structured Text is parsed as it is edited, so the
+                    colouring, the outline and the member/statement/signature completion lists come from the
+                    symbol table the compiler itself builds — a name that resolves to nothing is left
+                    uncoloured, which is how a typo shows up before it is compiled.
+                </li>
+                <li>
+                    <strong>The project is JSON.</strong> <code>project.json</code>,
+                    <code>plcs.json</code>, <code>tasks.json</code>, one file per task and the PROGRAM order
+                    per PLC: the same versioned data st2cpp imports and exports, which is what lets the IDE
+                    and the compiler agree without either owning a format of its own.
+                </li>
+                <li>
+                    <strong>Diagnostics belong to a line.</strong> A <code>.st</code> file is not edited as
+                    one blob — it is regenerated from the panes being edited, and a source map maps each
+                    generated line back to the editor that owns it, so a diagnostic reported against the
+                    generated file still points at what the user typed.
+                </li>
+                <li>
+                    <strong>No domain functionality in the core.</strong> The IDE owns the lifecycle, the
+                    window, the ImGui framework and the project on disk; everything else is an
+                    <strong>undoApp</strong> loaded from <code>plugins/</code>. A third party adds a panel
+                    without the core changing, and the PLC, fieldbus and diagnostics panels the runtime will
+                    need are the same kind of thing.
+                </li>
+            </ul>
         </section>
 
         <section class="architecture-card">
