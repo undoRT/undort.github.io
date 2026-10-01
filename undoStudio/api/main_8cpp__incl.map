@@ -1,0 +1,43 @@
+<map id="src/main.cpp" name="src/main.cpp">
+<area shape="rect" id="Node000001" title="Entry point for undoStudio application." alt="" coords="896,5,1001,31"/>
+<area shape="rect" id="Node000002" href="$_application_8hpp.html" title="Core application manager for undoStudio." alt="" coords="202,86,434,111"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="896,28,424,87,423,82,896,23"/>
+<area shape="rect" id="Node000009" href="$_im_gui_manager_8hpp.html" title="ImGui UI management for undoStudio." alt="" coords="564,86,803,111"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="911,33,736,85,734,80,909,28"/>
+<area shape="rect" id="Node000014" href="$_window_service_8hpp.html" title="Window management service interface." alt="" coords="871,79,1026,119"/>
+<area shape="poly" id="edge18_Node000001_Node000014" title=" " alt="" coords="951,31,951,65,946,65,946,31"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="1050,86,1130,111"/>
+<area shape="poly" id="edge23_Node000001_Node000016" title=" " alt="" coords="971,29,1058,77,1056,82,968,33"/>
+<area shape="rect" id="Node000017" title=" " alt="" coords="1155,86,1231,111"/>
+<area shape="poly" id="edge24_Node000001_Node000017" title=" " alt="" coords="989,28,1143,76,1150,79,1149,84,1141,81,987,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="405,167,482,192"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="338,109,415,157,412,161,335,114"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="667,240,726,265"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="298,114,274,130,252,150,240,171,240,180,245,190,265,200,304,210,418,227,654,246,653,252,418,232,303,215,263,205,241,194,235,182,234,169,247,146,271,126,295,109"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="652,167,715,192"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="378,109,639,164,638,169,377,114"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="256,167,380,192"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="321,112,321,153,315,153,315,112"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="5,167,92,192"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="280,114,102,165,100,160,278,109"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="117,167,181,192"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="294,114,187,163,184,159,292,109"/>
+<area shape="poly" id="edge11_Node000009_Node000003" title=" " alt="" coords="649,114,492,165,490,160,648,109"/>
+<area shape="poly" id="edge14_Node000009_Node000004" title=" " alt="" coords="635,114,596,127,562,144,550,155,543,166,541,177,547,191,569,213,596,228,626,239,654,245,653,250,624,244,594,233,565,217,542,193,536,178,538,164,546,151,559,140,594,122,633,109"/>
+<area shape="poly" id="edge13_Node000009_Node000005" title=" " alt="" coords="686,112,686,153,681,153,681,112"/>
+<area shape="poly" id="edge15_Node000009_Node000006" title=" " alt="" coords="631,114,385,166,384,161,630,109"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="557,167,628,192"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="672,114,618,160,615,156,668,109"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="739,167,801,192"/>
+<area shape="poly" id="edge10_Node000009_Node000011" title=" " alt="" coords="698,110,749,155,745,159,694,113"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="949,167,1036,192"/>
+<area shape="poly" id="edge12_Node000009_Node000012" title=" " alt="" coords="729,109,937,161,936,166,728,114"/>
+<area shape="rect" id="Node000013" href="$version_8hpp.html" title="The version of undoStudio, as a number and as a string." alt="" coords="826,167,925,192"/>
+<area shape="poly" id="edge16_Node000009_Node000013" title=" " alt="" coords="712,109,836,159,834,164,710,114"/>
+<area shape="poly" id="edge17_Node000013_Node000004" title=" " alt="" coords="848,195,739,237,737,232,846,190"/>
+<area shape="poly" id="edge20_Node000014_Node000004" title=" " alt="" coords="996,116,1023,132,1046,150,1058,171,1057,182,1051,194,1029,210,997,223,912,240,819,250,740,253,740,248,819,244,911,235,995,218,1026,205,1047,190,1052,181,1053,172,1042,153,1020,136,993,121"/>
+<area shape="poly" id="edge21_Node000014_Node000005" title=" " alt="" coords="886,121,729,167,727,162,884,116"/>
+<area shape="poly" id="edge19_Node000014_Node000012" title=" " alt="" coords="962,118,982,153,977,156,957,120"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="1111,167,1215,192"/>
+<area shape="poly" id="edge22_Node000014_Node000015" title=" " alt="" coords="1001,116,1120,159,1118,164,999,121"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="include/undoStudio/core/ProjectManager.hpp" name="include/undoStudio/core/ProjectManager.hpp">
+<area shape="rect" id="Node000001" title="undoProject management service for undoStudio" alt="" coords="108,5,295,45"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,93,64,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,48,73,90,70,85,160,43"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="89,93,151,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="183,47,144,85,140,82,180,44"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="176,93,227,119"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="204,46,204,79,199,79,199,46"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="251,93,325,119"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="224,44,267,82,263,86,221,48"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="350,93,437,119"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="248,43,354,86,352,91,246,48"/>
+</map>

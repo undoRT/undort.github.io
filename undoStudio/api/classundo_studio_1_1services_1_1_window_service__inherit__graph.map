@@ -1,0 +1,5 @@
+<map id="undoStudio::services::WindowService" name="undoStudio::services::WindowService">
+<area shape="rect" id="Node000001" title="Abstract interface for window management service." alt="" coords="19,5,183,305"/>
+<area shape="rect" id="Node000002" href="$classundo_studio_1_1services_1_1_window_service_g_l_f_w.html" title="GLFW implementation of WindowService." alt="" coords="5,353,197,833"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="104,319,104,353,99,353,99,319"/>
+</map>

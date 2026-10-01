@@ -1,0 +1,5 @@
+<map id="undoStudio::core::ProjectManager" name="undoStudio::core::ProjectManager">
+<area shape="rect" id="Node000001" title="Singleton service that manages the lifecycle of an undoProject." alt="" coords="5,288,181,1048"/>
+<area shape="rect" id="Node000002" href="$structundo_studio_1_1core_1_1_project_config.html" title="Top&#45;level project metadata." alt="" coords="5,5,181,225"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,226,96,272,91,272,91,226"/>
+</map>

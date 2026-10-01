@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['kcallbacks_0',['kCallbacks',['../classundo_app_1_1_terminal_1_1_terminal_session.html#a113925eeba65a443fc554c759795c7d5',1,'undoApp::Terminal::TerminalSession']]],
+  ['kcorefile_1',['kCoreFile',['../namespaceundo_studio_1_1core_1_1settings.html#add3040c0dc157eff11fc0949ff57fc16',1,'undoStudio::core::settings']]],
+  ['kdefaultfontsize_2',['kDefaultFontSize',['../classundo_app_1_1_terminal_1_1_terminal_app.html#a72765db12302e40f1d8cfce8ba8743be',1,'undoApp::Terminal::TerminalApp']]],
+  ['kdefaultmaxrecent_3',['kDefaultMaxRecent',['../classundo_studio_1_1core_1_1_project_manager.html#a9d19e056d150725c260b2d9b3ca5195f',1,'undoStudio::core::ProjectManager']]],
+  ['kdefaultmaxrecentfiles_4',['kDefaultMaxRecentFiles',['../namespaceundo_studio_1_1core.html#a17d61ffcca70c998918f8d8fcec36854',1,'undoStudio::core']]],
+  ['key_5',['key',['../structundo_app_1_1_j_s_o_n_1_1_j_s_o_n_node.html#aac5c698e7e4552525b11bfe3acebcc64',1,'undoApp::JSON::JSONNode::key'],['../_settings_8cpp.html#aa4cdb693ee7f3d1d131bb328468184b7',1,'key:&#160;Settings.cpp']]],
+  ['kind_6',['kind',['../structundo_app_1_1_open_document.html#a14b5b26772853e0c2675771318cad472',1,'undoApp::OpenDocument::kind'],['../structundo_app_1_1_s_t_1_1_suggestion.html#a038063aaa7595310b051346fa7fa19fd',1,'undoApp::ST::Suggestion::kind']]],
+  ['kindtext_7',['kindtext',['../structundo_app_1_1_s_t_1_1_s_t_app_1_1_workspace_declaration.html#acc9fe789824c3e073c595054535abed9',1,'undoApp::ST::STApp::WorkspaceDeclaration::kindText'],['../structundo_app_1_1_s_t_1_1_declaration.html#a23dc65cdccaf748b47d00414e46b656a',1,'undoApp::ST::Declaration::kindText']]],
+  ['kmaxfontsize_8',['kMaxFontSize',['../classundo_app_1_1_terminal_1_1_terminal_app.html#a42b04f2c815796cc82fa713185c8f82b',1,'undoApp::Terminal::TerminalApp']]],
+  ['kmaxrecentlimit_9',['kmaxrecentlimit',['../classundo_studio_1_1core_1_1_project_manager.html#aa90ed48161420ec471bf8523022c77e3',1,'undoStudio::core::ProjectManager::kMaxRecentLimit'],['../classundo_studio_1_1core_1_1_recent_files.html#abc9e08f19fcb15b9ebba0a45b6ca845c',1,'undoStudio::core::RecentFiles::kMaxRecentLimit']]],
+  ['kmembercompletionwindowflags_10',['kMemberCompletionWindowFlags',['../classundo_app_1_1_s_t_1_1_s_t_app.html#a80b04152526ef33f150a3323fc0c0b2a',1,'undoApp::ST::STApp']]],
+  ['kminfontsize_11',['kMinFontSize',['../classundo_app_1_1_terminal_1_1_terminal_app.html#aa112ae2973447248689d7891ebd5d221',1,'undoApp::Terminal::TerminalApp']]],
+  ['kminrecentlimit_12',['kminrecentlimit',['../classundo_studio_1_1core_1_1_recent_files.html#a63a0d97b5da7dee096f93368edfeeb5b',1,'undoStudio::core::RecentFiles::kMinRecentLimit'],['../classundo_studio_1_1core_1_1_project_manager.html#a60da9aeefb9e98ad73cd52c78349c02b',1,'undoStudio::core::ProjectManager::kMinRecentLimit']]],
+  ['knoindex_13',['kNoIndex',['../classundo_app_1_1_editor_1_1_editor_app.html#af077b0b90592ebabcd46149843191556',1,'undoApp::Editor::EditorApp']]],
+  ['kprojectconfigdirname_14',['kProjectConfigDirName',['../namespaceundo_studio_1_1core.html#a5cf5b985d630f3a40146c64fd8c6052e',1,'undoStudio::core']]],
+  ['krecentfilespopup_15',['kRecentFilesPopup',['../classundo_studio_1_1ui_1_1_im_gui_manager.html#a8bfbb9b9b7eb61283803553f14ef70d5',1,'undoStudio::ui::ImGuiManager']]],
+  ['krecentprojectspopup_16',['kRecentProjectsPopup',['../classundo_studio_1_1ui_1_1_im_gui_manager.html#a067cbfd41a664639cf58ea2b6534751c',1,'undoStudio::ui::ImGuiManager']]],
+  ['ksettingsfile_17',['kSettingsFile',['../classundo_app_1_1_terminal_1_1_terminal_app.html#a8b84c4c48ca7ac0a97ae5a9fa11d1a3b',1,'undoApp::Terminal::TerminalApp']]],
+  ['ksignaturehelpwindowflags_18',['kSignatureHelpWindowFlags',['../classundo_app_1_1_s_t_1_1_s_t_app.html#a52c961146588dec6be4af3a82e3be1ac',1,'undoApp::ST::STApp']]]
+];

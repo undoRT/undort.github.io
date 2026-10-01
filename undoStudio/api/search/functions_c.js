@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['onbell_0',['onBell',['../classundo_app_1_1_terminal_1_1_terminal_session.html#a8d1596e1276a3cc379500baf72c6d466',1,'undoApp::Terminal::TerminalSession']]],
+  ['onmovecursor_1',['onMoveCursor',['../classundo_app_1_1_terminal_1_1_terminal_session.html#a8fb7cc3dc91de999bc79a8521c183826',1,'undoApp::Terminal::TerminalSession']]],
+  ['onoutput_2',['onOutput',['../classundo_app_1_1_terminal_1_1_terminal_session.html#a56419d826081ff34710d620d60f1d872',1,'undoApp::Terminal::TerminalSession']]],
+  ['onscrollbackpush_3',['onScrollbackPush',['../classundo_app_1_1_terminal_1_1_terminal_session.html#a0119656a56faf35ef40b83c884b81ead',1,'undoApp::Terminal::TerminalSession']]],
+  ['onsettermprop_4',['onSetTermProp',['../classundo_app_1_1_terminal_1_1_terminal_session.html#a837d4e082e32efff40be34258bfcf324',1,'undoApp::Terminal::TerminalSession']]],
+  ['open_5',['open',['../classundo_app_1_1_open_documents.html#a690d1398878777d50e86e72e1c9dd4b2',1,'undoApp::OpenDocuments']]],
+  ['opendocument_6',['openDocument',['../classundo_app_1_1_editor_1_1_editor_app.html#a2588e1956f570ef0712cf6179ed713d9',1,'undoApp::Editor::EditorApp']]],
+  ['openfile_7',['openfile',['../classundo_app_1_1_cpp_app.html#a844a5e91e6bffe3e0946812912cc25e3',1,'undoApp::CppApp::openFile()'],['../classundo_app_1_1_editor_1_1_editor_app.html#a4b758c34d0789f29c2f7b2e78b3978de',1,'undoApp::Editor::EditorApp::openFile()'],['../classundo_app_1_1_s_t_1_1_s_t_app.html#a5746c201730d14a3723dc5918c99a9aa',1,'undoApp::ST::STApp::openFile()'],['../classundo_app_1_1_text_app.html#ac3f75d48c27f9ec17d157f6bb6bf666e',1,'undoApp::TextApp::openFile()']]],
+  ['openfileastext_8',['openFileAsText',['../classundo_app_1_1_editor_1_1_editor_app.html#ab5ab9f18f5838d6dadf95682727a8e5d',1,'undoApp::Editor::EditorApp']]],
+  ['openfileastree_9',['openFileAsTree',['../classundo_app_1_1_editor_1_1_editor_app.html#a78d9054a88ecad6b8125d22690400b4f',1,'undoApp::Editor::EditorApp']]],
+  ['openmethodof_10',['openMethodOf',['../classundo_app_1_1_s_t_1_1_s_t_app.html#adf6d85ee8d66dfc1074e15dd5a3112a9',1,'undoApp::ST::STApp']]],
+  ['openproject_11',['openproject',['../classundo_studio_1_1core_1_1_project_manager.html#a37cc5f62292fb9b06d4fc7b1720e1872',1,'undoStudio::core::ProjectManager::openProject()'],['../classundo_app_1_1_editor_1_1_editor_app.html#ad70b104074af6db4518f3be76b7a5e2a',1,'undoApp::Editor::EditorApp::openProject()']]],
+  ['openrecentfiles_12',['openRecentFiles',['../classundo_studio_1_1ui_1_1_im_gui_manager.html#a9d097c1bd7294161fd4fe3420e035696',1,'undoStudio::ui::ImGuiManager']]],
+  ['openrecentprojects_13',['openRecentProjects',['../classundo_studio_1_1ui_1_1_im_gui_manager.html#a6513cd1a45c60b48d32284eb780e6c41',1,'undoStudio::ui::ImGuiManager']]],
+  ['openworkspacedialog_14',['openworkspacedialog',['../classundo_app_1_1_editor_1_1_editor_app.html#a50f763b18256bae43cccb7d7c0b1528f',1,'undoApp::Editor::EditorApp::openWorkspaceDialog()'],['../classundo_app_1_1_s_t_1_1_s_t_app.html#a163c2d5866ecaa5f74a1e4e2863a60a3',1,'undoApp::ST::STApp::openWorkspaceDialog()']]],
+  ['operator_3d_15',['operator=',['../classundo_studio_1_1core_1_1_application.html#a0195312132be681afbc4ca4bebed3619',1,'undoStudio::core::Application::operator=()'],['../classundo_studio_1_1core_1_1_plugin_manager.html#adbb0c85b0dfadb7a6d43c14bbdd17da1',1,'undoStudio::core::PluginManager::operator=()'],['../classundo_studio_1_1core_1_1_project_manager.html#a8cd450fbdaa91b3da3bf43f941440c8b',1,'undoStudio::core::ProjectManager::operator=()'],['../classundo_studio_1_1ui_1_1_im_gui_manager.html#a3e9b023d43f762750660bff5c82dbb74',1,'undoStudio::ui::ImGuiManager::operator=()'],['../classundo_app_1_1_terminal_1_1_terminal_session.html#a53ac396fc08a6365901ee8c443472df2',1,'undoApp::Terminal::TerminalSession::operator=()']]],
+  ['ownerplc_16',['ownerPLC',['../classundo_studio_1_1core_1_1_project_manager.html#a93508dfe241c67cdc0a63f084329ba83',1,'undoStudio::core::ProjectManager']]]
+];

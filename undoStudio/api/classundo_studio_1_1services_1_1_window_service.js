@@ -1,0 +1,28 @@
+var classundo_studio_1_1services_1_1_window_service =
+[
+    [ "CloseCallback", "classundo_studio_1_1services_1_1_window_service.html#a09a7440ca69a284ab99a0b502bd7bda0", null ],
+    [ "FileDropHandler", "classundo_studio_1_1services_1_1_window_service.html#a10ee82f3961a84b1624e80539d3bb7f7", null ],
+    [ "KeyCallback", "classundo_studio_1_1services_1_1_window_service.html#a26bfbe2076ee9375d8af77b9d0f06bf7", null ],
+    [ "MouseButtonCallback", "classundo_studio_1_1services_1_1_window_service.html#a35ec6bc63627240c165665cd47560729", null ],
+    [ "MouseCallback", "classundo_studio_1_1services_1_1_window_service.html#a411806b3140726a26a471908a2e2886a", null ],
+    [ "ResizeCallback", "classundo_studio_1_1services_1_1_window_service.html#ad40234137a9213e92b48a2dba287156d", null ],
+    [ "ScrollCallback", "classundo_studio_1_1services_1_1_window_service.html#a6743f0d4e09464dbf794d49e1a8e1fa3", null ],
+    [ "~WindowService", "classundo_studio_1_1services_1_1_window_service.html#aa0085dd0b2dd0727f84df584e6e4a8be", null ],
+    [ "getInstance", "classundo_studio_1_1services_1_1_window_service.html#ae8fb744f16ae622c2c962fb196d9063b", null ],
+    [ "getNativeHandle", "classundo_studio_1_1services_1_1_window_service.html#a3386ab20b0ff4cbc4e89ffcf19069428", null ],
+    [ "getWindowSize", "classundo_studio_1_1services_1_1_window_service.html#a6b898517535fe2edbf57c531ebc64d44", null ],
+    [ "initialize", "classundo_studio_1_1services_1_1_window_service.html#a2e71d86a2aac42efc3e0229ff8f896e2", null ],
+    [ "pollEvents", "classundo_studio_1_1services_1_1_window_service.html#a1618fa5ed9788fdf316704fd44f38416", null ],
+    [ "setCloseCallback", "classundo_studio_1_1services_1_1_window_service.html#ae61e2ef85336ca36e57675e0d31eb367", null ],
+    [ "setFileDropHandler", "classundo_studio_1_1services_1_1_window_service.html#a4bc442a84aafdea5c2395dd2cb29304f", null ],
+    [ "setKeyCallback", "classundo_studio_1_1services_1_1_window_service.html#aef314c6a71ae2734e0eaa5a0e64ee46a", null ],
+    [ "setMouseButtonCallback", "classundo_studio_1_1services_1_1_window_service.html#a44f403beaa21b5fa0dec775cc3764596", null ],
+    [ "setMouseCallback", "classundo_studio_1_1services_1_1_window_service.html#a4694a2ba95a9c122ca0591ea328f1ea9", null ],
+    [ "setResizeCallback", "classundo_studio_1_1services_1_1_window_service.html#a33822cdfda9a61732e2a108877d00bda", null ],
+    [ "setScrollCallback", "classundo_studio_1_1services_1_1_window_service.html#a8c0e2c2b0fd894430fdc3cddfc33906d", null ],
+    [ "setTitle", "classundo_studio_1_1services_1_1_window_service.html#a37222edffff388e9b6d980e912d9fa07", null ],
+    [ "setWindowSize", "classundo_studio_1_1services_1_1_window_service.html#a3b305906268f854354d7f63b01c5fb05", null ],
+    [ "shouldClose", "classundo_studio_1_1services_1_1_window_service.html#af3713f883016a0be2e5be0e585417918", null ],
+    [ "shutdown", "classundo_studio_1_1services_1_1_window_service.html#ad0fe07da54f6e818f5448d0c2b94be39", null ],
+    [ "swapBuffers", "classundo_studio_1_1services_1_1_window_service.html#a796018cda7eb98608daf7bdeaa69df61", null ]
+];

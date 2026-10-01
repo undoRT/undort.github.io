@@ -1,0 +1,27 @@
+<map id="src/services/WindowServiceGLFW.cpp" name="src/services/WindowServiceGLFW.cpp">
+<area shape="rect" id="Node000001" title="GLFW implementation of the WindowService interface." alt="" coords="437,5,639,45"/>
+<area shape="rect" id="Node000002" href="$_window_service_8hpp.html" title="Window management service interface." alt="" coords="82,93,237,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="455,48,251,94,250,89,454,43"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="200,181,263,207"/>
+<area shape="poly" id="edge12_Node000001_Node000005" title=" " alt="" coords="449,48,389,68,331,96,285,133,250,172,246,168,282,129,329,91,387,63,447,43"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="287,181,391,207"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="438,44,391,63,371,78,353,95,344,112,339,130,338,167,333,167,334,130,339,110,349,92,367,73,389,59,435,39"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="363,101,473,126"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="513,48,447,95,444,90,510,43"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="498,101,578,126"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="541,46,541,87,535,87,535,46"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="602,101,679,126"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="562,44,618,89,614,93,559,48"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="704,101,828,126"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="589,43,724,93,722,98,587,48"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="852,101,912,126"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="640,41,738,62,841,91,847,93,845,98,840,96,737,67,639,46"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="936,101,1039,126"/>
+<area shape="poly" id="edge13_Node000001_Node000012" title=" " alt="" coords="640,38,776,60,925,91,939,94,938,99,924,96,775,66,639,43"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,181,92,207"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="134,136,78,175,75,171,131,131"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="117,181,175,207"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="159,134,153,168,148,167,153,133"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="179,132,213,169,209,173,175,135"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="204,131,301,173,299,178,201,136"/>
+</map>

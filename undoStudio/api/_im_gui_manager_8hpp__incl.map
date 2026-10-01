@@ -1,0 +1,20 @@
+<map id="include/undoStudio/ui/ImGuiManager.hpp" name="include/undoStudio/ui/ImGuiManager.hpp">
+<area shape="rect" id="Node000001" title="ImGui UI management for undoStudio." alt="" coords="299,5,465,45"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,93,76,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="299,48,90,95,89,90,298,43"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="100,93,163,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="323,48,177,93,175,88,321,43"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="187,93,265,119"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="346,48,262,89,260,85,343,43"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="289,93,376,119"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="372,47,349,83,345,80,368,44"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="400,93,463,119"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="396,44,419,80,415,83,392,47"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="589,167,647,192"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="413,43,590,157,587,161,410,48"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="539,93,663,119"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="435,43,556,86,555,91,433,48"/>
+<area shape="rect" id="Node000009" href="$version_8hpp.html" title="The version of undoStudio, as a number and as a string." alt="" coords="687,93,786,119"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="465,42,675,88,674,94,464,47"/>
+<area shape="poly" id="edge9_Node000009_Node000007" title=" " alt="" coords="719,121,651,162,648,157,716,116"/>
+</map>

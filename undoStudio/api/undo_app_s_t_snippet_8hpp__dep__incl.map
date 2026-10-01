@@ -1,0 +1,7 @@
+<map id="undoApps/undoApp.Editor/include/undoAppSTSnippet.hpp" name="undoApps/undoApp.Editor/include/undoAppSTSnippet.hpp">
+<area shape="rect" id="Node000001" title="Statement skeletons offered by the editor&#39;s suggestion list." alt="" coords="5,5,232,45"/>
+<area shape="rect" id="Node000002" href="$undo_app_s_t_8hpp.html" title="Header of the Structured Text editor undoApp." alt="" coords="24,93,213,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="121,59,121,93,116,93,116,59"/>
+<area shape="rect" id="Node000003" href="$undo_app_editor_8hpp.html" title="Main header for the unified undoApp.Editor plugin." alt="" coords="19,181,218,221"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="121,147,121,181,116,181,116,147"/>
+</map>

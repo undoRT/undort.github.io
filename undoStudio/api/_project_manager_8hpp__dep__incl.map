@@ -1,0 +1,9 @@
+<map id="include/undoStudio/core/ProjectManager.hpp" name="include/undoStudio/core/ProjectManager.hpp">
+<area shape="rect" id="Node000001" title="undoProject management service for undoStudio" alt="" coords="233,5,420,45"/>
+<area shape="rect" id="Node000002" href="$_project_manager_8cpp.html" title="Implementation of the undoProject management service." alt="" coords="5,101,211,126"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="267,53,138,103,136,98,265,48"/>
+<area shape="rect" id="Node000003" href="$_im_gui_manager_8cpp.html" title="Implementation of the ImGuiManager class." alt="" coords="235,101,418,126"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="329,59,329,100,324,100,324,59"/>
+<area shape="rect" id="Node000004" href="$undo_app_editor_8hpp.html" title="Main header for the unified undoApp.Editor plugin." alt="" coords="442,93,641,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="387,48,495,91,493,96,385,53"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="undoApp::ST::STApp" name="undoApp::ST::STApp">
+<area shape="rect" id="Node000001" title="Main application class for the Structured Text editor plugin." alt="" coords="331,323,585,1128"/>
+<area shape="rect" id="Node000002" href="$structundo_app_1_1_s_t_1_1_file_node.html" title="Node structure for the file tree representation." alt="" coords="5,25,164,211"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="144,210,325,503,320,506,139,213"/>
+<area shape="rect" id="Node000003" href="$structundo_app_1_1_s_t_1_1_output_filter.html" title="Which severities the Output panel shows." alt="" coords="189,35,367,201"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="305,200,336,305,331,307,300,202"/>
+<area shape="rect" id="Node000004" href="$structundo_app_1_1_s_t_1_1_s_t_app_1_1_completion_spot.html" title=" " alt="" coords="392,68,535,168"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="464,168,462,255,461,307,456,306,457,255,459,168"/>
+<area shape="rect" id="Node000005" href="$structundo_app_1_1_s_t_1_1_call_signature.html" title="The parameter list of a callable." alt="" coords="565,35,754,201"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="652,201,633,299,593,421,588,419,627,298,647,200"/>
+<area shape="rect" id="Node000006" href="$structundo_app_1_1_s_t_1_1_call_site.html" title="The call the cursor sits inside, if any." alt="" coords="778,5,930,231"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="783,232,596,518,591,516,779,229"/>
+</map>

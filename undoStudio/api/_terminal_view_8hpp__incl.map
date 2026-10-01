@@ -1,0 +1,16 @@
+<map id="undoApps/undoApp.Terminal/include/TerminalView.hpp" name="undoApps/undoApp.Terminal/include/TerminalView.hpp">
+<area shape="rect" id="Node000001" title="Drawing one terminal session, and the keyboard that drives it." alt="" coords="208,5,415,45"/>
+<area shape="rect" id="Node000002" href="$_terminal_session_8hpp.html" title="A shell under a pseudo&#45;terminal, and the screen it draws." alt="" coords="176,93,332,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="300,47,273,84,269,80,295,44"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="369,167,427,192"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="325,45,387,153,382,156,320,47"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,167,79,192"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="221,121,90,165,88,160,219,116"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="103,167,170,192"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="237,121,169,162,166,157,234,116"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="195,167,257,192"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="252,120,238,155,233,153,247,118"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="278,116,363,158,361,163,276,121"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="281,167,344,192"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="266,117,297,155,293,158,262,121"/>
+</map>

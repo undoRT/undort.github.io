@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['inherited_0',['inherited',['../structundo_app_1_1_s_t_1_1_call_signature.html#aae09568195bf1e4274537fef1a3f3471',1,'undoApp::ST::CallSignature::inherited'],['../structundo_app_1_1_s_t_1_1_suggestion.html#a55c92bb540a5938620d0060150efef3a',1,'undoApp::ST::Suggestion::inherited']]],
+  ['insert_1',['insert',['../structundo_app_1_1_s_t_1_1_statement_snippet.html#ad87d573c1d428f33ff751e008f55f426',1,'undoApp::ST::StatementSnippet']]],
+  ['instance_2',['instance',['../structundo_studio_1_1core_1_1_plugin_manager_1_1_loaded_plugin.html#a8e658dbfe53c04df8e38b649551021b3',1,'undoStudio::core::PluginManager::LoadedPlugin']]],
+  ['isabstract_3',['isabstract',['../structundo_app_1_1_s_t_1_1_method_data.html#a9076aa4f1943a288543648a5a91fe038',1,'undoApp::ST::MethodData::isAbstract'],['../structundo_app_1_1_s_t_1_1_suggestion.html#a4a942ffa631e53a065da53b06e22eac6',1,'undoApp::ST::Suggestion::isAbstract']]],
+  ['isarray_4',['isArray',['../structundo_app_1_1_j_s_o_n_1_1_j_s_o_n_node.html#a251065e540e6155c6e1423387cdacddb',1,'undoApp::JSON::JSONNode']]],
+  ['iscomment_5',['isComment',['../_settings_8cpp.html#a8d8d71b076859caedebc63de94bf2c98',1,'Settings.cpp']]],
+  ['isconstant_6',['isConstant',['../structundo_app_1_1_s_t_1_1_suggestion.html#a5b63819ed09253af9505bf1836cc54f4',1,'undoApp::ST::Suggestion']]],
+  ['isdirectory_7',['isdirectory',['../structundo_app_1_1_editor_1_1_file_node.html#a6d518f9a35fe221b44999f5f89927d6e',1,'undoApp::Editor::FileNode::isDirectory'],['../structundo_app_1_1_s_t_1_1_file_node.html#a62d3526759e44d17a07322638aba8d1f',1,'undoApp::ST::FileNode::isDirectory']]],
+  ['isdragging_8',['isdragging',['../structundo_app_1_1_editor_1_1_file_node.html#a90faa79a7753ccaeb61cbd802f979019',1,'undoApp::Editor::FileNode::isDragging'],['../structundo_app_1_1_s_t_1_1_file_node.html#a5285123b817b1d9ae3a4277c13e4843f',1,'undoApp::ST::FileNode::isDragging']]],
+  ['isfinal_9',['isFinal',['../structundo_app_1_1_s_t_1_1_method_data.html#a1813413e2264a4f11e6b85d43755059e',1,'undoApp::ST::MethodData']]],
+  ['isobject_10',['isObject',['../structundo_app_1_1_j_s_o_n_1_1_j_s_o_n_node.html#a3a54ea16161fc6fbefbed6ccca79f227',1,'undoApp::JSON::JSONNode']]],
+  ['isoverride_11',['isoverride',['../structundo_app_1_1_s_t_1_1_method_data.html#aa30254ecb3df5c79459f5f590787516e',1,'undoApp::ST::MethodData::isOverride'],['../structundo_app_1_1_s_t_1_1_suggestion.html#a2a21cc9b6c2507c2bd96a3458222f005',1,'undoApp::ST::Suggestion::isOverride']]],
+  ['isparameter_12',['isParameter',['../structundo_app_1_1_s_t_1_1_signature_segment.html#ac4fd58cab47179e946e33fe7f5f27cea',1,'undoApp::ST::SignatureSegment']]],
+  ['isretain_13',['isRetain',['../structundo_app_1_1_s_t_1_1_suggestion.html#acf1e183f3be7fb3b6eae7417f5487a39',1,'undoApp::ST::Suggestion']]],
+  ['isvariables_14',['isVariables',['../structundo_app_1_1_s_t_1_1_source_segment.html#ab514781fb80cba3c6f62cebee8606f7f',1,'undoApp::ST::SourceSegment']]],
+  ['italic_15',['italic',['../structundo_app_1_1_terminal_1_1_cell.html#a2c7543d120ba64d688d2fb7f082cd2a3',1,'undoApp::Terminal::Cell']]]
+];

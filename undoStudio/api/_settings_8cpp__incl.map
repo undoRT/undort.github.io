@@ -1,0 +1,16 @@
+<map id="src/core/Settings.cpp" name="src/core/Settings.cpp">
+<area shape="rect" id="Node000001" title="Reading and writing the IDE&#39;s own state files." alt="" coords="246,5,403,31"/>
+<area shape="rect" id="Node000002" href="$_settings_8hpp.html" title="Reading and writing the IDE&#39;s own state files." alt="" coords="5,79,217,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="291,33,160,77,158,72,290,28"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="193,152,256,177"/>
+<area shape="poly" id="edge7_Node000001_Node000004" title=" " alt="" coords="318,33,283,80,242,142,237,139,278,77,314,29"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="292,79,357,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="327,31,327,65,322,65,322,31"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="381,79,455,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="341,29,394,68,390,72,338,33"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="479,79,554,104"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="356,28,473,71,471,76,355,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="82,152,141,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="114,104,114,138,109,138,109,104"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="131,102,196,142,193,147,128,106"/>
+</map>

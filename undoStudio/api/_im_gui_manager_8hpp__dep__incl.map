@@ -1,0 +1,9 @@
+<map id="include/undoStudio/ui/ImGuiManager.hpp" name="include/undoStudio/ui/ImGuiManager.hpp">
+<area shape="rect" id="Node000001" title="ImGui UI management for undoStudio." alt="" coords="177,5,342,45"/>
+<area shape="rect" id="Node000002" href="$_application_8cpp.html" title="Implementation of the Application class." alt="" coords="5,93,183,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="209,54,120,96,117,91,206,49"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html" title="Entry point for undoStudio application." alt="" coords="207,93,312,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="262,59,262,93,257,93,257,59"/>
+<area shape="rect" id="Node000004" href="$_im_gui_manager_8cpp.html" title="Implementation of the ImGuiManager class." alt="" coords="336,93,519,119"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="313,49,404,91,401,96,311,53"/>
+</map>

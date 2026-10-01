@@ -1,0 +1,17 @@
+<map id="src/core/PluginManager.cpp" name="src/core/PluginManager.cpp">
+<area shape="rect" id="Node000001" title="Implementation of the PluginManager class." alt="" coords="311,5,511,31"/>
+<area shape="rect" id="Node000002" href="$_plugin_manager_8hpp.html" title="Dynamic plugin loader for undoApps." alt="" coords="5,79,260,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="367,33,192,78,190,73,366,28"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="285,79,351,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="398,33,346,72,342,68,395,29"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="375,79,447,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="414,31,414,65,409,65,409,31"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="471,79,557,104"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="429,28,487,68,484,73,426,33"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="581,79,661,104"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="446,28,574,72,573,77,444,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="61,152,119,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="128,106,106,142,102,139,123,103"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="144,152,207,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="142,103,164,139,159,142,137,106"/>
+</map>

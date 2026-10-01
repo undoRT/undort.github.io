@@ -1,0 +1,11 @@
+<map id="include/undoStudio/services/WindowService.hpp" name="include/undoStudio/services/WindowService.hpp">
+<area shape="rect" id="Node000001" title="Window management service interface." alt="" coords="83,5,295,45"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,93,92,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="156,48,83,89,80,84,154,43"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="117,93,175,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="181,47,161,83,156,80,176,44"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="200,93,263,119"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="201,44,221,80,216,83,197,47"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="287,93,391,119"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="226,43,306,84,303,89,224,48"/>
+</map>

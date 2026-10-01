@@ -1,0 +1,23 @@
+<map id="undoApps/undoApp.Terminal/include/TerminalApp.hpp" name="undoApps/undoApp.Terminal/include/TerminalApp.hpp">
+<area shape="rect" id="Node000001" title="The terminal undoApp: the panel, and the sessions it holds." alt="" coords="255,5,461,45"/>
+<area shape="rect" id="Node000002" href="$_terminal_session_8hpp.html" title="A shell under a pseudo&#45;terminal, and the screen it draws." alt="" coords="113,167,269,192"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="255,42,209,62,189,77,172,95,167,108,167,124,178,154,173,156,162,125,162,108,168,92,185,73,206,57,253,37"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="282,240,341,265"/>
+<area shape="poly" id="edge11_Node000001_Node000006" title=" " alt="" coords="357,46,319,227,314,226,351,45"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="373,240,436,265"/>
+<area shape="poly" id="edge12_Node000001_Node000007" title=" " alt="" coords="365,45,402,226,397,227,359,46"/>
+<area shape="rect" id="Node000008" href="$_terminal_view_8hpp.html" title="Drawing one terminal session, and the keyboard that drives it." alt="" coords="183,93,320,119"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="334,48,280,87,277,83,331,43"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="446,93,523,119"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="390,43,456,84,453,88,387,48"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,240,79,265"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="168,194,80,236,78,232,166,190"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="103,240,170,265"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="184,194,156,231,152,228,180,191"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="195,240,257,265"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="199,191,217,226,212,229,195,194"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="212,190,281,230,278,235,209,194"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="226,189,361,234,360,239,225,195"/>
+<area shape="poly" id="edge8_Node000008_Node000002" title=" " alt="" coords="243,121,212,158,208,154,239,117"/>
+<area shape="poly" id="edge9_Node000008_Node000006" title=" " alt="" coords="260,118,283,166,306,226,301,228,278,168,255,120"/>
+</map>

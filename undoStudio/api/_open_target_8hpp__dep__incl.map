@@ -1,0 +1,7 @@
+<map id="include/undoStudio/core/OpenTarget.hpp" name="include/undoStudio/core/OpenTarget.hpp">
+<area shape="rect" id="Node000001" title="Decides what a path given to the IDE at launch, or dropped on it, is." alt="" coords="115,5,275,45"/>
+<area shape="rect" id="Node000002" href="$_application_8cpp.html" title="Implementation of the Application class." alt="" coords="5,93,183,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="162,56,111,95,108,91,158,52"/>
+<area shape="rect" id="Node000003" href="$_open_target_8cpp.html" title="Decides what a path given to the IDE at launch, or dropped on it, is." alt="" coords="207,93,386,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="232,52,283,91,280,95,229,56"/>
+</map>
