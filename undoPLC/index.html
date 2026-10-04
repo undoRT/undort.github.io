@@ -20,7 +20,7 @@
     </a>
     <div class="topbar-sep"></div>
     <a href="index.html" class="topbar-product">undoPLC</a>
-    <span class="topbar-version">v0.2.0</span>
+    <span class="topbar-version">v0.2.3</span>
 
     <div class="topbar-actions">
         <button class="toc-toggle" aria-label="Toggle table of contents" aria-expanded="false">
@@ -91,20 +91,23 @@
 
     <main class="content">
 
-        <h1>undoPLC <span class="status-pill release">Released · v0.2.0</span></h1>
+        <h1>undoPLC <span class="status-pill release">Released · v0.2.3</span></h1>
         <p class="lead">
             Open source multi-threaded PLC infrastructure designed for the <a href="../index.html">undoRT ecosystem</a>.
             Provides deterministic Master/Worker synchronization with real-time guarantees.
         </p>
 
         <div class="callout info">
-            <strong>🔄 v0.2.0 Update:</strong> This release integrates <a href="../undoCore/">undoCore</a> as the shared foundation library,
-            providing <code>ProcessImage</code> for I/O management and <code>IoBus</code> as the fieldbus contract.
+            <strong>v0.2.3:</strong> Builds as C++17. <code>std::latch</code>, added in v0.1.1 for the task
+            registration handshake, was the only C++20 construct in the library; it is now
+            <code>UndoLatch</code>, built on <code>std::mutex</code> and <code>std::condition_variable</code>.
+            v0.2.2 also corrected the project version, which the packaging had been reporting as
+            0.2.0.
         </div>
 
         <h2 id="overview">Overview</h2>
         <p>
-            <strong>undoPLC</strong> is a C++20 framework that implements a deterministic fork-join execution model
+            <strong>undoPLC</strong> is a C++17 framework that implements a deterministic fork-join execution model
             for real-time control applications. It provides:
         </p>
 
@@ -113,13 +116,14 @@
             <li>CPU isolation and frequency management (<code>undoSystem</code>)</li>
             <li>Priority inheritance mutexes (<code>undoMutex</code>)</li>
             <li>Master/Worker task synchronization (<code>undoTasks</code>)</li>
+            <li>One-shot registration gate (<code>undoLatch</code>)</li>
             <li>Aligned cycle time management</li>
             <li>SCHED_FIFO real-time scheduling</li>
-            <li><strong>NEW:</strong> Integrated with <code>undoCore</code> for I/O management</li>
+            <li><code>undoCore</code> integration for I/O management</li>
         </ul>
 
         <div class="callout info">
-            <strong>💡 Real-time ready:</strong> Designed for PREEMPT_RT kernels with isolated CPU cores.
+            <strong>Real-time ready:</strong> Designed for PREEMPT_RT kernels with isolated CPU cores.
             Requires at least 2 isolated cores (1 for Master, 1+ for Workers).
         </div>
 
@@ -134,7 +138,7 @@
             <li><strong>Execution phase:</strong> Workers run user logic in parallel</li>
             <li><strong>Join phase:</strong> Master waits for all workers to complete</li>
             <li><strong>Watchdog:</strong> Detects cycle overruns and triggers safe stop</li>
-            <li><strong>NEW:</strong> Uses <code>undoCore::ProcessImage</code> for I/O management</li>
+            <li>Uses <code>undoCore::ProcessImage</code> for I/O management</li>
         </ul>
 
         <h3>2. Cycle Time Management</h3>
@@ -195,6 +199,11 @@ uint64_t cycleTimeNs = master.getCurrentCycleTimeNs();</code></pre>
                     <td>Pthread mutex with <code>PTHREAD_PRIO_INHERIT</code></td>
                 </tr>
                 <tr>
+                    <td><code>UndoLatch</code></td>
+                    <td>One-shot gate that opens once every task thread has registered. Header only,
+                        built on <code>std::mutex</code> and <code>std::condition_variable</code></td>
+                </tr>
+                <tr>
                     <td><code>undoCore::ProcessImage</code></td>
                     <td>Double-buffered IEC 61131-3 memory layout (%I, %Q, %M)</td>
                 </tr>
@@ -206,8 +215,8 @@ uint64_t cycleTimeNs = master.getCurrentCycleTimeNs();</code></pre>
         </table>
 
         <div class="callout success">
-            <strong>✅ Shared Foundation:</strong> undoPLC now uses <code>undoCore</code> as a submodule,
-            ensuring seamless interoperability with undoBUS and other undoRT components.
+            <strong>Shared foundation:</strong> undoCore is carried as a submodule, so undoPLC,
+            undoBUS and the rest of the ecosystem share one set of contracts.
         </div>
 
         <h3>Execution Flow</h3>
@@ -251,7 +260,7 @@ while (running) {
 
         <p>
             The <strong>aligned cycle time</strong> is a key feature that provides deterministic timing
-            independent of system jitter. Here's how it works:
+            independent of system jitter. It works in three steps:
         </p>
 
         <h3>Initialization</h3>
@@ -282,7 +291,7 @@ _cycleTimeNs = _master->getCycleNs();
 _currentCycleTimeNs = _master->getCurrentCycleTimeNs();</code></pre>
 
         <div class="callout success">
-            <strong>✓ Benefits:</strong> All workers see the <em>exact same</em> absolute timestamp for each cycle,
+            <strong>Consequence:</strong> All workers see the <em>exact same</em> absolute timestamp for each cycle,
             enabling precise coordination and logging.
         </div>
 
@@ -341,13 +350,28 @@ $ sudo ./undoPLC --log2console
 # [INFO] undoPLC: cycle 1000 (1000 mS)| exec[min=98 max=102]us jitter[min=0 max=5]us</code></pre>
 
         <div class="callout warn">
-            <strong>⚠️ Requirements:</strong>
+            <strong>Requirements:</strong>
             <ul style="margin: 8px 0 0 20px; color: #fcd34d;">
                 <li>PREEMPT_RT kernel</li>
                 <li>At least 2 isolated CPU cores (<code>isolcpus=</code> in GRUB)</li>
                 <li>Root privileges for CPU frequency management</li>
             </ul>
         </div>
+
+        <h3>Unit Tests</h3>
+        <p>
+            The real-time application above needs an RT kernel. The unit tests do not, and are
+            built with <code>-DBUILD_TESTS=ON</code> and run through <code>ctest</code>:
+        </p>
+        <pre><code>cmake -S . -B build -DBUILD_TESTS=ON
+cmake --build build -j
+cd build &amp;&amp; ctest --output-on-failure</code></pre>
+        <p>
+            <code>test_latch</code> covers <code>UndoLatch</code>: that it opens only after the last
+            arrival, that it never opens early, that <code>wait()</code> is idempotent and safe from
+            several threads at once, the Master/Worker registration handshake itself, and
+            concurrent arrivals. It is the one test that runs without isolated cores.
+        </p>
 
         <h3>Configuration Example</h3>
         <pre><code># GRUB configuration (/etc/default/grub)
@@ -403,11 +427,17 @@ $ cat /sys/devices/system/cpu/isolated
                         <code>setCpuNominalFrequency()</code>, <code>tsc2Ns()</code>
                     </td>
                 </tr>
+                <tr>
+                    <td><code>UndoLatch</code></td>
+                    <td>
+                        <code>count_down()</code>, <code>wait()</code>, <code>try_wait()</code>
+                    </td>
+                </tr>
             </tbody>
         </table>
 
         <div class="callout info">
-            <strong>📖 More documentation:</strong> Visit the
+            <strong>More documentation:</strong> Visit the
             <a href="https://github.com/undoRT/undoPLC">GitHub repository</a>
             for build instructions, examples, and contributing guidelines.
         </div>

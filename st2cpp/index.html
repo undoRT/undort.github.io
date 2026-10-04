@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>st2cpp - Documentation | undoRT</title>
-    <meta name="description" content="st2cpp v0.4 — IEC 61131-3 Structured Text to native C++17, validated by a full semantic analysis stage, driven by JSON library descriptors, and exportable back to JSON.">
+    <meta name="description" content="st2cpp v0.5: IEC 61131-3 Structured Text to native C++17, validated by a full semantic analysis stage, driven by JSON library descriptors, and able to emit an undoPLC task runtime.">
 
     <!-- shared CSS -->
     <link rel="stylesheet" href="../assets/css/undoRT.css">
@@ -21,7 +21,7 @@
     </a>
     <div class="topbar-sep"></div>
     <a href="index.html" class="topbar-product">st2cpp</a>
-    <span class="topbar-version">v0.4</span>
+    <span class="topbar-version">v0.5</span>
 
     <div class="topbar-actions">
         <button class="toc-toggle" aria-label="Toggle table of contents" aria-expanded="false">
@@ -83,7 +83,7 @@
     <nav class="sidebar" id="sidebar">
         <div class="sidebar-section-title">Getting Started</div>
         <a href="#overview" class="active">Overview</a>
-        <a href="#whats-new">What's New in v0.4</a>
+        <a href="#whats-new">What's New in v0.5</a>
         <a href="#installation">Installation</a>
         <a href="#quick-start">Quick Start</a>
 
@@ -94,11 +94,14 @@
         <a href="#process-image">Process Image &amp; AT</a>
 
         <div class="sidebar-section-title">Data &amp; Libraries (JSON)</div>
-        <a href="#json">Data-Driven by Design</a>
+        <a href="#json">JSON Configuration</a>
         <a href="#descriptor">Library Descriptor v1.0</a>
         <a href="#project-config">Project Configuration v1.0</a>
         <a href="#import-export">Import &amp; Export</a>
         <a href="#ext-libs">Using External Libraries</a>
+
+        <div class="sidebar-section-title">Tasks</div>
+        <a href="#tasks">Task Configuration</a>
 
         <div class="sidebar-section-title">Language</div>
         <a href="#supported">Supported Constructs</a>
@@ -122,12 +125,12 @@
 
     <main class="content">
 
-        <h1>st2cpp <span class="status-pill release">Released · v0.4</span></h1>
+        <h1>st2cpp <span class="status-pill release">Released · v0.5</span></h1>
         <p class="lead">
-            A transpiler that compiles IEC 61131-3 Structured Text into clean, native C++17 — validated by a
+            A transpiler that compiles IEC 61131-3 Structured Text into native C++17, validated by a
             complete semantic analysis stage and driven by JSON-defined data and external libraries.
-            No virtual machine, no interpreter: the output is auditable, standard C++ that compiles, debugs and
-            deploys on any toolchain.
+            There is no virtual machine and no interpreter: the output is auditable, standard C++ that
+            compiles, debugs and deploys on any toolchain.
         </p>
 
         <h2 id="overview">Overview</h2>
@@ -137,7 +140,7 @@
             that compile with any C++17-capable toolchain.
         </p>
         <p>
-            Before any code is emitted, your program is <strong>checked</strong>, not just parsed: a two-pass
+            Before any code is emitted the program is <strong>checked</strong>, not just parsed: a two-pass
             semantic analysis verifies symbols, scopes, types, array bounds, inheritance and interfaces, and
             process-image addresses — catching at build time the errors that would otherwise surface on a live plant.
         </p>
@@ -163,20 +166,47 @@
         </ul>
 
         <div class="callout success">
-            <strong>v0.4 highlights:</strong> semantic analysis is production-ready, external libraries and
-            project configuration are defined in versioned JSON, and the compiler now <em>exports</em> ST back to
-            JSON library descriptors. The test suite comprises more than <strong>710 automated tests</strong>,
-            executed on every commit.
+            <strong>v0.5 highlights:</strong> task configuration. A <code>tasks.json</code> document
+            declares which cyclic task runs which programs, at which cycle, priority and CPU core, and
+            the compiler emits an <a href="#tasks">undoPLC runtime</a> around the generated code.
+            The whole toolchain also drops to C++17: undoPLC only needed C++20 for
+            <code>std::latch</code>, which it has now replaced. The test suite comprises
+            <strong>765 automated tests</strong>, executed on every commit.
         </div>
 
-        <h2 id="whats-new">What's New in v0.4</h2>
+        <h2 id="whats-new">What's New in v0.5</h2>
         <table>
             <thead><tr><th>Area</th><th>Feature</th><th>Benefit</th></tr></thead>
             <tbody>
                 <tr>
+                    <td>Tasks</td>
+                    <td>Task Configuration JSON v1.0 (<code>tasks.json</code>, <code>--tasks</code>) with loader and full validation</td>
+                    <td>The cycle, priority, CPU core and program list of every cyclic task are declared as data</td>
+                </tr>
+                <tr>
+                    <td>Runtime</td>
+                    <td>Generates <code>Runtime.cpp</code>: one undoPLC Master per PLC instance, one Worker per task</td>
+                    <td>The generated project is a runnable PLC rather than a set of translation units</td>
+                </tr>
+                <tr>
+                    <td>Runtime</td>
+                    <td>One PROGRAM instance per calling task, called in declared order</td>
+                    <td>Matches TwinCAT, so a program shared by two tasks cannot corrupt the other one's state</td>
+                </tr>
+                <tr>
+                    <td>Toolchain</td>
+                    <td>C++17 across st2cpp, the tests, the generated code, undoPLC and undoCore</td>
+                    <td>Reaches toolchains that do not implement C++20</td>
+                </tr>
+                <tr>
+                    <td>Runtime</td>
+                    <td>Startup and shutdown diagnostics no longer go through the deferred logger</td>
+                    <td>Messages logged before <code>ioc.run()</code> were not shown until later and were lost if the program exited first</td>
+                </tr>
+                <tr>
                     <td>Semantic analysis</td>
                     <td>Full two-pass analyzer: symbol table, scopes, type checking, interfaces &amp; inheritance verification, circular-dependency detection</td>
-                    <td>Errors are caught before codegen — fewer surprises on the target</td>
+                    <td>Errors are caught before codegen, so fewer failures reach the target</td>
                 </tr>
                 <tr>
                     <td>Semantic analysis</td>
@@ -196,7 +226,7 @@
                 <tr>
                     <td>Export (JSON)</td>
                     <td><code>LibraryDescriptorBuilder</code>: ST → semantic-only descriptor → JSON, round-trippable</td>
-                    <td>Your ST logic becomes reusable, re-importable, machine-readable data</td>
+                    <td>ST logic becomes reusable, re-importable, machine-readable data</td>
                 </tr>
                 <tr>
                     <td>Codegen</td>
@@ -215,7 +245,7 @@
 
         <h3>Download pre-built binary</h3>
         <p>
-            Grab the latest release from
+            The pre-built binaries are on
             <a href="https://github.com/undoRT/st2cpp/releases" target="_blank">GitHub Releases</a>:
         </p>
         <table>
@@ -236,7 +266,7 @@ unzip st2cpp-win-x64.zip
 st2cpp.exe --help</code></pre>
 
         <h3>Build from source</h3>
-        <p>Prerequisites: a C++17 compiler (GCC 11+, Clang 15+, or MSVC 2019+), CMake 3.16+.</p>
+        <p>Prerequisites: a C++17 compiler (GCC 7+, Clang 5+, or MSVC 2019+), CMake 3.16+.</p>
         <pre><code>git clone https://github.com/undoRT/st2cpp.git
 cd st2cpp
 ./build.sh
@@ -266,7 +296,7 @@ g++ -std=c++17 -I./st2cpp_includes build/Programs/Main.cpp -o plc_main</code></p
              SEMANTIC ANALYSIS
         ===================================================================== -->
 
-        <h2 id="semantic">Semantic Analysis — Code You Can Trust</h2>
+        <h2 id="semantic">Semantic Analysis</h2>
         <p>
             St2cpp doesn't stop at parsing. Every source is <strong>analyzed</strong> before code generation:
             the analyzer builds a full symbol table with case-insensitive IEC 61131-3 identifier resolution,
@@ -276,14 +306,14 @@ g++ -std=c++17 -I./st2cpp_includes build/Programs/Main.cpp -o plc_main</code></p
         <p>
             Because PLC programs run critical equipment, errors are surfaced <strong>at compile time</strong>
             with precise <code>file:line:col</code> diagnostics and stable error codes — so a semantics failure
-            never becomes a runtime failure on your controller.
+            never becomes a runtime failure on the controller.
         </p>
 
         <h3 id="semantic-passes">Two-Pass Analysis</h3>
         <ul class="feature-list">
             <li><strong>First pass</strong> — registers every enum, struct, interface and POU header with a stable type id, so forward references (a struct or FB that uses a type declared later) resolve correctly.</li>
             <li><strong>Second pass</strong> — resolves every body: names, types, expressions, calls, members.</li>
-            <li><strong>Declaration-order independent</strong> — the result is identical no matter how your files are ordered after a workspace merge.</li>
+            <li><strong>Declaration-order independent</strong>: the result is identical regardless of file order after a workspace merge.</li>
             <li><strong>Circular dependency detection</strong> — by-value cycles (<code>A</code> contains <code>B</code> contains <code>A</code>) are reported; pointer / <code>REF_TO</code> cycles stay legal, as in IEC.</li>
             <li><strong>Inheritance &amp; interfaces</strong> — <code>EXTENDS</code>/<code>SUPER^</code> resolution and <code>IMPLEMENTS</code> contract verification (abstract methods, overrides).</li>
             <li><strong>Enums are typed</strong> — enumerators carry their enum type, usable in assignments and comparisons.</li>
@@ -318,10 +348,10 @@ g++ -std=c++17 -I./st2cpp_includes build/Programs/Main.cpp -o plc_main</code></p
              JSON DATA & LIBRARIES
         ===================================================================== -->
 
-        <h2 id="json">Data-Driven by Design — Everything Is JSON</h2>
+        <h2 id="json">JSON Configuration</h2>
         <p>
             Libraries, data types and projects are <strong>data</strong>, not code. st2cpp ships a self-contained
-            JSON engine and two versioned schemas, so your engineering data survives between tools, versions and
+            JSON engine and two versioned schemas, so the engineering data survives across tools, versions and
             teams — and the compiler both <em>consumes</em> and <em>produces</em> it.
         </p>
 
@@ -403,8 +433,86 @@ g++ -std=c++17 -I./st2cpp_includes build/Programs/Main.cpp -o plc_main</code></p
         <p>
             Symbols from the declared libraries resolve during analysis, and the generated C++ calls compile against
             the referenced C++ (or other ST libraries) with the right namespace and includes — a clean boundary
-            between your logic and third-party or native code, driven entirely by data.
+            between the transpiled logic and third-party or native code, driven entirely by data.
         </p>
+
+        <!-- ====================================================================
+             TASKS
+        ===================================================================== -->
+
+        <h2 id="tasks">Task Configuration and the PLC Runtime</h2>
+        <p>
+            A <code>tasks.json</code> document declares the cyclic tasks of a PLC: which programs each
+            one runs, at which cycle, priority and CPU core. It is passed to st2cpp, not to the
+            generated binary. With <code>--tasks</code> the compiler emits an extra
+            <code>Runtime.cpp</code> around the generated code, and the result is a runnable PLC.
+        </p>
+        <pre><code>{
+  "schema_version": "1.0",
+  "plc_name": "Demo",
+  "tasks": [
+    { "name": "cycle", "plc": "Line1", "cycle_ms": 10, "priority": 40,
+      "programs": ["MAIN", "Control", "Report"] }
+  ]
+}</code></pre>
+        <pre><code>st2cpp --workspace ./src --project-style --tasks tasks.json --output-dir generated</code></pre>
+        <p>
+            <code>--tasks</code> requires <code>--workspace</code> and <code>--project-style</code>,
+            because <code>Runtime.cpp</code> includes the modular <code>Programs.hpp</code>.
+        </p>
+
+        <h3>What the generated runtime looks like</h3>
+        <p>
+            One <code>UndoMasterTaskBase</code> per distinct <code>plc</code> value, and one
+            <code>UndoWorkerTaskBase</code> per task, each calling <code>run()</code> on the programs
+            it lists, in the order they are declared:
+        </p>
+        <pre><code>Line1_cycle    _program_MAIN.run();
+Line1_cycle    _program_CONTROL.run();
+Line1_cycle    _program_REPORT.run();</code></pre>
+        <p>
+            Each Worker declares its own member per program, so a program listed by two tasks is
+            instantiated once in each: two independent objects, as in TwinCAT. They cannot corrupt
+            each other's state.
+        </p>
+
+        <h3>How the Master is derived</h3>
+        <p>
+            This is not a free choice. undoPLC drives every Worker from a single Master cycle, so the
+            Master runs at the finest cycle its tasks asked for, and at a priority strictly above all
+            of them, so a task that overruns cannot delay the cycle supervising it.
+        </p>
+        <table>
+            <thead><tr><th>Task</th><th>PLC</th><th>Cycle</th><th>Priority</th><th>Master cycle</th><th>Master priority</th></tr></thead>
+            <tbody>
+                <tr><td><code>cycle</code></td><td>Line1</td><td>10 ms</td><td>40</td><td rowspan="2">10 ms</td><td rowspan="2">41</td></tr>
+                <tr><td><code>aux</code></td><td>Line1</td><td>20 ms</td><td>45</td></tr>
+                <tr><td><code>logic</code></td><td>Line2</td><td>20 ms</td><td>40</td><td>20 ms</td><td>41</td></tr>
+            </tbody>
+        </table>
+        <div class="callout warn">
+            <strong>A slower <code>cycle_ms</code> does not slow the task down.</strong>
+            It still runs every Master cycle. In the table above <code>aux</code> declares 20 ms and
+            runs at 10 ms, because it shares Line1's Master with <code>cycle</code>. A task that
+            genuinely has to run slower belongs on a PLC instance whose fastest task is that slow.
+        </div>
+
+        <h3>Validation</h3>
+        <p>
+            The loader collects every violation before it fails, so one run reports the whole set
+            rather than the first problem. Worker priorities run from 1 to 98, with 99 reserved for
+            the Master. Every name must be unique, the cycle must be positive, and each program in a
+            task must exist in the workspace.
+        </p>
+
+        <div class="callout info">
+            <strong>Running the result.</strong> The PLC needs one isolated CPU per Master plus one
+            per task, and root: for <code>SCHED_FIFO</code> priorities and to pin the isolated cores
+            to their nominal frequency. Both are checked at startup and both are fatal, because a PLC
+            running with an unpinned governor would appear to work while its jitter stopped being
+            bounded. The <code>examples/tasks</code> directory in the repository is a complete worked
+            example that measures the invocation rate of each program.
+        </div>
 
         <!-- ====================================================================
              LANGUAGE
@@ -554,6 +662,7 @@ public:
                 <tr><td><code>--caseSensitive</code></td><td>Preserve original case (IEC identifiers are otherwise normalized)</td><td>off</td></tr>
                 <tr><td><code>--workspace &lt;path&gt;</code></td><td>Process all <code>.st</code> files recursively</td><td>—</td></tr>
                 <tr><td><code>--ext-libs &lt;file.json&gt;</code></td><td>Load external libraries from a Project Configuration JSON</td><td>—</td></tr>
+                <tr><td><code>--tasks &lt;tasks.json&gt;</code></td><td>Task Configuration; emits an undoPLC runtime. Requires <code>--workspace</code> and <code>--project-style</code></td><td>—</td></tr>
                 <tr><td><code>--project-style</code></td><td>Modular output with dependency management</td><td>off</td></tr>
                 <tr><td><code>--output-dir &lt;dir&gt;</code></td><td>Output directory (workspace/project mode)</td><td><code>generated/</code></td></tr>
                 <tr><td><code>--pi-auto</code></td><td>Auto-detect Process Image sizes</td><td>on</td></tr>
@@ -581,8 +690,9 @@ public:
         </p>
         <pre><code>./st2cpp counter.st -o counter.cpp -H counter.hpp --namespace myplc</code></pre>
         <p>
-            Include the <code>undoCore/</code> runtime (shipped in the <code>st2cpp_includes/</code> folder) in your
-            compiler's include path when building the output:
+            Include the undoCore headers (shipped in
+            <code>st2cpp_includes/undoPLC/third_party/undoCore</code>) in the compiler's include path when
+            building the output:
         </p>
         <pre><code>g++ -std=c++17 -I./st2cpp_includes counter.cpp -o counter</code></pre>
 
@@ -606,7 +716,7 @@ public:
 
         <div class="callout info">
             Use project mode for any workspace with more than 2–3 Function Blocks.
-            It enables incremental compilation and keeps each FB as a separate file in your IDE.
+            It enables incremental compilation and keeps each FB in a separate file, which is what an IDE indexes well.
         </div>
 
         <h2 id="example">Full Example</h2>
@@ -718,8 +828,8 @@ void MAIN::run() {
         </table>
 
         <div class="callout success">
-            <strong>Total (v0.4):</strong> more than <strong>710 tests</strong> run on every commit to guarantee
-            reliability and prevent regressions.
+            <strong>Total (v0.5):</strong> <strong>765 tests</strong> run on every commit to catch
+            regressions before they ship.
         </div>
 
         <p>
@@ -751,7 +861,9 @@ JSON side:
         <div class="callout info">
             <strong>Integration with undoCore:</strong> The generated code includes
             <code>#include &lt;undoCore/undoCore.hpp&gt;</code> and uses <code>STArray</code>,
-            <code>VAR_INOUT</code>, and conversion functions from the undoCore library.
+            <code>VAR_INOUT</code> and the conversion functions from undoCore. The undoPLC runtime
+            in <code>Runtime.cpp</code> additionally derives from <code>undoTasks.hpp</code>, whose own
+            dependencies ship in the same submodule.
         </div>
 
         <h2 id="project-layout">Repository Layout</h2>
@@ -775,8 +887,8 @@ JSON side:
 │   ├── codegen/       # Code generator
 │   └── cli/           # main.cpp + argument parsing
 ├── st2cpp_includes/
-│   └── undoCore/      # undoCore submodule (types, conversions, math)
-├── tests/             # 710+ tests
+│   └── undoPLC/       # undoPLC submodule (undoTasks runtime, nested undoCore)
+├── tests/             # 765 tests
 ├── scripts/           # build.sh, generate_docs.sh
 └── CMakeLists.txt</code></pre>
 

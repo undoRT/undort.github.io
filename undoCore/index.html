@@ -20,7 +20,7 @@
     </a>
     <div class="topbar-sep"></div>
     <a href="index.html" class="topbar-product">undoCore</a>
-    <span class="topbar-version">v0.2</span>
+    <span class="topbar-version">v0.2.4</span>
 
     <div class="topbar-actions">
         <button class="toc-toggle" aria-label="Toggle table of contents" aria-expanded="false">
@@ -107,7 +107,7 @@
 
     <main class="content">
 
-        <h1>undoCore <span class="status-pill release">Released</span></h1>
+        <h1>undoCore <span class="status-pill release">Released · v0.2.4</span></h1>
         <p class="lead">
             Header-only C++17 core infrastructure providing fundamental contracts and data structures
             for the <a href="../index.html">undoRT ecosystem</a>.
@@ -116,14 +116,25 @@
         <h2 id="overview">Overview</h2>
         <p>
             <strong>undoCore</strong> is the shared foundation library used across all undoRT projects.
-            It defines the common interfaces and data structures that ensure seamless interoperability
-            between components like <a href="../undoPLC/">undoPLC</a>, <a href="../undoBUS/">undoBUS</a>,
+            It defines the common interfaces and data structures shared by
+            components like <a href="../undoPLC/">undoPLC</a>, <a href="../undoBUS/">undoBUS</a>,
             and <a href="../st2cpp/">st2cpp</a>.
         </p>
 
         <div class="callout info">
-            <strong>Header-only:</strong> Zero compilation overhead — just include and use.
-            Perfect for integrating into any C++17 project with minimal friction.
+            <strong>Header-only:</strong> Zero compilation overhead, just include and use.
+            It integrates with any C++17 project.
+        </div>
+
+        <div class="callout info">
+            <strong>v0.2.4:</strong> The INTERFACE compile feature dropped from
+            <code>cxx_std_20</code> to <code>cxx_std_17</code>. undoCore contained no C++20 construct,
+            so this was a declaration rather than a real dependency, but as an INTERFACE requirement it
+            forced every consumer to C++20 through CMake: a target linking
+            <code>undoCore::undoCore</code> went from <code>-std=gnu++20</code> to carrying no
+            <code>-std</code> flag at all. The same release fixes the include path in
+            <code>tests/test_processImage</code>, which resolved outside the repository through
+            <code>CMAKE_SOURCE_DIR</code> and could not build.
         </div>
 
         <h2 id="features">Key Features</h2>
@@ -150,7 +161,7 @@
 target_link_libraries(your_app undoCore::undoCore)</code></pre>
 
         <h3>Manual Installation</h3>
-        <p>Copy the <code>include/undoCore/</code> directory to your project's include path.</p>
+        <p>Copy the <code>include/undoCore/</code> directory into the include path of the project that uses it.</p>
 
         <h3>As a Submodule</h3>
         <pre><code>git submodule add https://github.com/undoRT/undoCore.git third_party/undoCore</code></pre>
@@ -371,7 +382,7 @@ process(counter);  // counter becomes 1</code></pre>
             </tbody>
         </table>
 
-        <h3>Generic TO_* Functions (New in v0.2.1)</h3>
+        <h3>Generic TO_* Functions</h3>
         <p>
             <code>conversions.hpp</code> now includes generic template versions of all <code>TO_*</code> conversions:
         </p>
@@ -390,7 +401,7 @@ DINT r2 = TO_DINT_ROUND(3.5f);       // 4 (ties away from zero)
 DINT t = TO_DINT_TRUNC(3.99f);       // 3</code></pre>
 
         <div class="callout info">
-            <strong>💡 Tip:</strong> The <code>TO_*</code> functions are type-safe and work with any
+            <strong>Note:</strong> The <code>TO_*</code> functions are type-safe and work with any
             numeric type, making generated code cleaner and more readable.
         </div>
 
@@ -418,7 +429,7 @@ STRING dateStr = DATE_TO_STRING(d);   // "2026-07-12"</code></pre>
             and <code>std::out_of_range</code> for out-of-range values.
         </div>
 
-        <h2 id="math">Math Functions (New in v0.2.1)</h2>
+        <h2 id="math">Math Functions</h2>
 
         <p>
             <code>undoMath.hpp</code> provides the complete set of IEC 61131-3 standard mathematical
@@ -527,14 +538,14 @@ std::cout &lt;&lt; v.major &lt;&lt; "." &lt;&lt; v.minor &lt;&lt; "." &lt;&lt; v
         <h2 id="cmake">CMake Integration</h2>
 
         <p>
-            Add undoCore to your CMake project using <code>find_package</code>:
+            Add undoCore to a CMake project using <code>find_package</code>:
         </p>
 
         <pre><code>find_package(undoCore REQUIRED)
 target_link_libraries(your_app undoCore::undoCore)</code></pre>
 
         <div class="callout success">
-            <strong>✓ Zero Build Time:</strong> As a header-only library, undoCore adds no compilation overhead to your project.
+            <strong>No build step:</strong> As a header-only library, undoCore adds no compilation overhead.
         </div>
 
         <h2 id="examples">Examples</h2>
@@ -605,7 +616,7 @@ public:
         </p>
 
         <div class="callout info">
-            <strong>📖 More documentation:</strong> Visit the
+            <strong>More documentation:</strong> Visit the
             <a href="https://github.com/undoRT/undoCore">GitHub repository</a>
             for build instructions, examples, and contributing guidelines.
         </div>
