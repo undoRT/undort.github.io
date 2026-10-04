@@ -107,7 +107,6 @@
 
         <!-- ─── Coming Soon Banner ─── -->
         <div class="coming-soon-banner">
-            <div class="coming-soon-banner-icon">🚧</div>
             <div>
                 <h3>In Active Development</h3>
                 <p>
@@ -120,14 +119,14 @@
 
         <h2 id="overview">Overview</h2>
         <p>
-            <strong>undoBUS</strong> provides fieldbus master implementations that integrate seamlessly with
-            the undoRT ecosystem. Built on the <code>IoBus</code> interface defined in
-            <a href="../undoCore/">undoCore</a>, undoBUS will offer deterministic, real-time fieldbus
-            communication for industrial automation.
+            <strong>undoBUS</strong> provides fieldbus master implementations for the undoRT ecosystem.
+            Built on the <code>IoBus</code> interface defined in
+            <a href="../undoCore/">undoCore</a>, undoBUS is intended to provide deterministic,
+            real-time fieldbus communication for industrial automation.
         </p>
 
         <div class="callout info">
-            <strong>💡 Design Philosophy:</strong> undoBUS implements the <code>IoBus</code> contract,
+            <strong>Design philosophy:</strong> undoBUS implements the <code>IoBus</code> contract,
             ensuring that any fieldbus protocol can be used interchangeably with undoPLC.
             The bus drives the cycle timing — undoPLC is always the follower.
         </div>
@@ -199,7 +198,7 @@
         </ul>
 
         <div class="callout warn">
-            <strong>⚠️ Requirements:</strong>
+            <strong>Requirements:</strong>
             <ul style="margin: 8px 0 0 20px; color: #fcd34d;">
                 <li>IgH EtherCAT Master kernel module</li>
                 <li>PREEMPT_RT kernel</li>
@@ -208,8 +207,8 @@
         </div>
 
         <h3>Anticipated API</h3>
-        <pre><code>#include <undoBUS/EtherCATMaster.hpp>
-#include <undoCore/undoCore.hpp>
+        <pre><code>#include &lt;undoBUS/EtherCATMaster.hpp&gt;
+#include &lt;undoCore/undoCore.hpp&gt;
 
 using namespace undoCore;
 using namespace undoBUS;
@@ -244,7 +243,7 @@ while (running) {
         </p>
 
         <div class="callout placeholder">
-            <strong>📋 Planned:</strong> Profibus DP master with configurable baud rates,
+            <strong>Planned:</strong> Profibus DP master with configurable baud rates,
             slave parameterization, and diagnostic support.
         </div>
 
@@ -263,14 +262,14 @@ while (running) {
         </ul>
 
         <div class="callout info">
-            <strong>🔌 Extensible Design:</strong> The <code>IoBus</code> interface makes it straightforward
-            to add support for any fieldbus protocol. Contributions are welcome!
+            <strong>Extensible by contract:</strong> the <code>IoBus</code> interface is the only thing a new
+            protocol has to implement. Contributions are welcome.
         </div>
 
         <h2 id="undo-core">Integration with undoCore</h2>
 
         <p>
-            undoBUS is built on <a href="../undoCore/">undoCore</a>, using:
+            undoBUS builds on <a href="../undoCore/">undoCore</a>, using:
         </p>
 
         <ul style="color: var(--text-muted); margin-left: 20px;">
@@ -279,7 +278,7 @@ while (running) {
             <li><strong><code>types.hpp</code></strong> — IEC 61131-3 type mapping</li>
         </ul>
 
-        <pre><code>#include <undoCore/undoCore.hpp>
+        <pre><code>#include &lt;undoCore/undoCore.hpp&gt;
 
 class EtherCATMaster : public IoBus {
     // Implements all IoBus virtual methods
@@ -311,7 +310,7 @@ protected:
 };</code></pre>
 
         <div class="callout success">
-            <strong>✅ Protocol Agnostic:</strong> undoPLC works with <em>any</em> fieldbus that implements
+            <strong>Protocol agnostic:</strong> undoPLC works with <em>any</em> fieldbus that implements
             the <code>IoBus</code> interface — EtherCAT, Profibus, Modbus, or a simulated bus for testing.
         </div>
 
@@ -355,20 +354,20 @@ protected:
         </table>
 
         <div class="callout info">
-            <strong>📖 More information:</strong> Visit the
+            <strong>More information:</strong> Visit the
             <a href="https://github.com/undoRT/undoBUS" target="_blank">GitHub repository</a>
             for the latest development status and contributing guidelines.
         </div>
 
         <h2 id="api">API Reference</h2>
         <p>
-            Full API documentation will be generated with Doxygen when the first release is available:
-            <a href="api/">Browse API Reference</a>
+            undoBUS has no release yet, so there is no API reference to link to. The repository currently
+            holds the project skeleton and nothing else.
         </p>
 
         <div class="callout placeholder">
-            <strong>📝 Documentation in Progress:</strong> API documentation will be generated
-            as the implementation is completed. Check back after the v0.1.0 release.
+            <strong>Documentation in progress:</strong> API documentation will be generated with Doxygen
+            and published as the implementation is completed.
         </div>
 
     </main>
