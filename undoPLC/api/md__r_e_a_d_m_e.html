@@ -116,6 +116,7 @@ Requirements</h1>
 <li>At least <b>2 isolated CPU cores</b> (1 for Master + 1+ for Workers)</li>
 <li><code>isolcpus=</code>, <code>nozh_full=</code>, <code>rcu_nocbs=</code> in GRUB</li>
 <li>Root privileges for CPU frequency management</li>
+<li>A <b>C++17</b> compiler and CMake 3.16 or newer to build</li>
 </ul>
 <p>Example of grub basic option (if you don't use undoOS):</p>
 <div class="fragment"><div class="line">GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet splash systemd.unit=multi-user.target isolcpus=domain,managed_irq,&lt;cpuList&gt; nohz_full=&lt;cpuList&gt; rcu_nocbs=&lt;cpuList&gt; intel_idle.max_cstate=1 processor.max_cstate=1 intel_pstate=passive nowatchdog nmi_watchdog=0 transparent_hugepage=never skew_tick=1&quot;</div>
@@ -187,6 +188,7 @@ Documentation</h1>
 <ul>
 <li><a href="https://undort.com/undoPLC/api/">API Reference</a> – Doxygen-generated</li>
 <li><a href="https://github.com/undoRT/undoPLC">Source Code</a></li>
+<li>Changelog – what changed in each release</li>
 </ul>
 <h1><a class="anchor" id="autotoc_md13"></a>
 License</h1>

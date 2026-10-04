@@ -34,7 +34,7 @@ var class_undo_master_task_base =
     [ "_diagVars", "class_undo_master_task_base.html#aa6cb0bbc9ce95ec7e8d4e350363a0482", null ],
     [ "_ioBus", "class_undo_master_task_base.html#a17ba79ed6b7328bb315ea7642358c67e", null ],
     [ "_prio", "class_undo_master_task_base.html#acb10bfaf7036473923c63cca4f8d8cf9", null ],
-    [ "_registrationLatch", "class_undo_master_task_base.html#aa147233cfa7113ee5a60272e62df5be7", null ],
+    [ "_registrationLatch", "class_undo_master_task_base.html#abdd9c7a86d437aee96113b312b070a23", null ],
     [ "_running", "class_undo_master_task_base.html#a2c055deeceebd9a7d0cb9636e2bfb5b4", null ],
     [ "_STARTUP_DELAY_CYCLES", "class_undo_master_task_base.html#a0cac214a31acc5f04d3e7ca965ceb688", null ],
     [ "_syncVars", "class_undo_master_task_base.html#a3c94da0d3d7a2c39a9f479ddb2c44a25", null ],

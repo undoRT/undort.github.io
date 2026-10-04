@@ -1,0 +1,7 @@
+<map id="include/undoLatch.hpp" name="include/undoLatch.hpp">
+<area shape="rect" id="Node000001" title="One&#45;shot countdown latch, replacing std::latch to keep the library on C++17." alt="" coords="6,5,174,31"/>
+<area shape="rect" id="Node000002" href="$undo_tasks_8hpp.html" title="Core real&#45;time task framework for Master and Worker synchronization." alt="" coords="5,79,175,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,44,93,79,87,79,87,44"/>
+<area shape="rect" id="Node000003" href="$undo_tasks_8cpp.html" title="Implementation of deterministic Master/Worker synchronized execution loops." alt="" coords="20,152,160,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="93,118,93,152,87,152,87,118"/>
+</map>

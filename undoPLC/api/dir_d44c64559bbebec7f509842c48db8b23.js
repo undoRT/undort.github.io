@@ -1,5 +1,6 @@
 var dir_d44c64559bbebec7f509842c48db8b23 =
 [
+    [ "undoLatch.hpp", "undo_latch_8hpp.html", "undo_latch_8hpp" ],
     [ "undoLog.hpp", "undo_log_8hpp.html", "undo_log_8hpp" ],
     [ "undoMutex.hpp", "undo_mutex_8hpp.html", "undo_mutex_8hpp" ],
     [ "undoSystem.hpp", "undo_system_8hpp.html", "undo_system_8hpp" ],

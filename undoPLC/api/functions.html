@@ -97,6 +97,7 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 <h3><a id="index__5F" name="index__5F"></a>- _ -</h3><ul>
 <li>_cpuId&#160;:&#160;<a class="el" href="class_undo_master_task_base.html#a464f66e02e3396a609f3438285eaab86">UndoMasterTaskBase</a>, <a class="el" href="class_undo_worker_task_base.html#a86791a9efddbc8c165b72b9f3305bd9b">UndoWorkerTaskBase</a></li>
 <li>_currentCycleTimeNs&#160;:&#160;<a class="el" href="class_undo_master_task_base.html#a5c70a184dd6c78c6de8fa75f3ed46b88">UndoMasterTaskBase</a>, <a class="el" href="class_undo_worker_task_base.html#ad4c6809bc8dc171fcc0acfececcc45ba">UndoWorkerTaskBase</a></li>
+<li>_cv&#160;:&#160;<a class="el" href="class_undo_latch.html#a35ad685032452cd640f13c2b766c5ce3">UndoLatch</a></li>
 <li>_cycleTimeNs&#160;:&#160;<a class="el" href="class_undo_master_task_base.html#abdad8fee9357e1d327855ea7f637ce91">UndoMasterTaskBase</a>, <a class="el" href="class_undo_worker_task_base.html#aad0e93f96a06f6e0649513621640babb">UndoWorkerTaskBase</a></li>
 <li>_diagVars&#160;:&#160;<a class="el" href="class_undo_master_task_base.html#aa6cb0bbc9ce95ec7e8d4e350363a0482">UndoMasterTaskBase</a>, <a class="el" href="class_undo_worker_task_base.html#a42e712322c3edfb906987d31466e59ad">UndoWorkerTaskBase</a></li>
 <li>_eventFd&#160;:&#160;<a class="el" href="class_undo_log.html#a4fb8d7996d684b1f9377e6608e1efdca">UndoLog</a></li>
@@ -109,13 +110,15 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 <li>_log2console&#160;:&#160;<a class="el" href="class_undo_log.html#ab862c3021deafc834dc75913bf55694d">UndoLog</a></li>
 <li>_master&#160;:&#160;<a class="el" href="class_undo_worker_task_base.html#a227e58be512d182f4a434aac3109d856">UndoWorkerTaskBase</a></li>
 <li>_masterIsPresent&#160;:&#160;<a class="el" href="class_undo_worker_task_base.html#a0b25d2fb84b068768c9010bd71bb2af3">UndoWorkerTaskBase</a></li>
-<li>_mutex&#160;:&#160;<a class="el" href="class_undo_mutex.html#af2479ba0ecc899818d8972c88c10fe25">UndoMutex</a></li>
+<li>_mutex&#160;:&#160;<a class="el" href="class_undo_latch.html#acb36384d796f1fb4369fed624b78e9e4">UndoLatch</a>, <a class="el" href="class_undo_mutex.html#af2479ba0ecc899818d8972c88c10fe25">UndoMutex</a></li>
 <li>_onlineCores&#160;:&#160;<a class="el" href="class_undo_sys.html#afbe0e9c7cdf27851a891ea0db29871ab">UndoSys</a></li>
+<li>_open&#160;:&#160;<a class="el" href="class_undo_latch.html#a356f3a78711dea98bbfe7521d82dd702">UndoLatch</a></li>
 <li>_prio&#160;:&#160;<a class="el" href="class_undo_master_task_base.html#acb10bfaf7036473923c63cca4f8d8cf9">UndoMasterTaskBase</a>, <a class="el" href="class_undo_worker_task_base.html#adbf9008c8ecfe36e0f6bc7e0981ffb53">UndoWorkerTaskBase</a></li>
 <li>_queues&#160;:&#160;<a class="el" href="class_undo_log.html#a17dd388b5107246556e8979ea4d01324">UndoLog</a></li>
-<li>_registrationLatch&#160;:&#160;<a class="el" href="class_undo_master_task_base.html#aa147233cfa7113ee5a60272e62df5be7">UndoMasterTaskBase</a></li>
+<li>_registrationLatch&#160;:&#160;<a class="el" href="class_undo_master_task_base.html#abdd9c7a86d437aee96113b312b070a23">UndoMasterTaskBase</a></li>
 <li>_registrationMutex&#160;:&#160;<a class="el" href="class_undo_log.html#ab873c47b32b8d8f1b660b2c0e6d7a53a">UndoLog</a></li>
 <li>_registrationOpen&#160;:&#160;<a class="el" href="class_undo_log.html#af9b136bb9665ef72915fa523a297ff0f">UndoLog</a></li>
+<li>_remaining&#160;:&#160;<a class="el" href="class_undo_latch.html#a333dbb08c36ac5ea52acad192faac013">UndoLatch</a></li>
 <li>_running&#160;:&#160;<a class="el" href="class_undo_master_task_base.html#a2c055deeceebd9a7d0cb9636e2bfb5b4">UndoMasterTaskBase</a>, <a class="el" href="class_undo_worker_task_base.html#acd8ff58bcef7f2682829d72e4a80166d">UndoWorkerTaskBase</a></li>
 <li>_sharedCores&#160;:&#160;<a class="el" href="class_undo_sys.html#a6c707eae684d6425d3ec033f26a881de">UndoSys</a></li>
 <li>_sharedCoresChecked&#160;:&#160;<a class="el" href="class_undo_sys.html#aaf62f8b66e24cdd23b32a1b90b31e20d">UndoSys</a></li>
@@ -141,6 +144,7 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 
 <h3><a id="index_c" name="index_c"></a>- c -</h3><ul>
 <li>closeRegistration()&#160;:&#160;<a class="el" href="class_undo_log.html#a67915c438c7cc05c382f4d51e495ca24">UndoLog</a></li>
+<li>count_down()&#160;:&#160;<a class="el" href="class_undo_latch.html#aa0390ce5b3d4a6fdd8ab6db85aa40f4f">UndoLatch</a></li>
 <li>countDownRegistration()&#160;:&#160;<a class="el" href="class_undo_master_task_base.html#a10bbf938e30d12c219da833b7501cdb3">UndoMasterTaskBase</a></li>
 <li>cycleCounter&#160;:&#160;<a class="el" href="struct_sync_vars.html#ab3f342e5944e863b57970e2539706918">SyncVars</a></li>
 </ul>
@@ -254,11 +258,13 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 <li>timestampNs&#160;:&#160;<a class="el" href="struct_log_record.html#aaf3e3c2460990569f68460be0ccfcdc5">LogRecord</a></li>
 <li>toString()&#160;:&#160;<a class="el" href="struct_version.html#ac90b3ac66d4b768a11883711878b1b43">Version</a></li>
 <li>try_lock()&#160;:&#160;<a class="el" href="class_undo_mutex.html#a372b66e1dae167835a5c806fa51a98b2">UndoMutex</a></li>
+<li>try_wait()&#160;:&#160;<a class="el" href="class_undo_latch.html#a652dfbf8a651e9401c8efcd255ac7d1a">UndoLatch</a></li>
 <li>tsc2Ns()&#160;:&#160;<a class="el" href="class_undo_sys.html#a16f015d0342dfff85b2994c65f42c17e">UndoSys</a></li>
 </ul>
 
 
 <h3><a id="index_u" name="index_u"></a>- u -</h3><ul>
+<li>UndoLatch()&#160;:&#160;<a class="el" href="class_undo_latch.html#a10f95fa04c4de7bb92a8c6249eba6ee8">UndoLatch</a></li>
 <li>UndoLog()&#160;:&#160;<a class="el" href="class_undo_log.html#a36827304f0a649fb5e84fb9fc71f5623">UndoLog</a></li>
 <li>UndoMasterTaskBase()&#160;:&#160;<a class="el" href="class_undo_master_task_base.html#a18ebeb9a02995671ec543a5f2a4788e3">UndoMasterTaskBase</a>, <a class="el" href="class_undo_worker_task_base.html#a387c8742681c202f1c00ccb186214ded">UndoWorkerTaskBase</a></li>
 <li>UndoMutex()&#160;:&#160;<a class="el" href="class_undo_mutex.html#a842ad0598fbdf6739b8a44158c5060d7">UndoMutex</a></li>
@@ -269,6 +275,7 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 
 
 <h3><a id="index_w" name="index_w"></a>- w -</h3><ul>
+<li>wait()&#160;:&#160;<a class="el" href="class_undo_latch.html#a2f07bc23c87edc69a20c74d316599f23">UndoLatch</a></li>
 <li>waitAllRegistered()&#160;:&#160;<a class="el" href="class_undo_master_task_base.html#a253a75ac5cf5abf9d0d06486d49b987f">UndoMasterTaskBase</a></li>
 <li>waitCycle()&#160;:&#160;<a class="el" href="class_undo_master_task_base.html#a184015afe9acf84e15ea512e393be3ec">UndoMasterTaskBase</a></li>
 <li>workerCv&#160;:&#160;<a class="el" href="struct_sync_vars.html#a695848b808dbbbdf8841366890f6faf3">SyncVars</a></li>

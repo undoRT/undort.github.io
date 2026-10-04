@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>undoPLC: Class List</title>
+<title>undoPLC: Member List</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -66,7 +66,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('annotated.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('class_undo_latch.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -92,24 +92,21 @@ $(document).ready(function(){initNavTree('annotated.html',''); initResizable(); 
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Class List</div></div>
+  <div class="headertitle"><div class="title">UndoLatch Member List</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock">Here are the classes, structs, unions and interfaces with brief descriptions:</div><div class="directory">
+
+<p>This is the complete list of members for <a class="el" href="class_undo_latch.html">UndoLatch</a>, including all inherited members.</p>
 <table class="directory">
-<tr id="row_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct_diag_vars.html" target="_self">DiagVars</a></td><td class="desc">Basic struct to make some diag </td></tr>
-<tr id="row_1_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct_log_record.html" target="_self">LogRecord</a></td><td class="desc">Fixed dimensione struct allocated in stack/queue without usage of heap </td></tr>
-<tr id="row_2_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct_sync_vars.html" target="_self">SyncVars</a></td><td class="desc"></td></tr>
-<tr id="row_3_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_undo_latch.html" target="_self">UndoLatch</a></td><td class="desc">Blocks until a fixed number of arrivals, then opens for good </td></tr>
-<tr id="row_4_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_undo_log.html" target="_self">UndoLog</a></td><td class="desc"></td></tr>
-<tr id="row_5_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_undo_master_task_base.html" target="_self">UndoMasterTaskBase</a></td><td class="desc">Base class responsible for fieldbus orchestration and worker synchronization </td></tr>
-<tr id="row_6_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_undo_mutex.html" target="_self">UndoMutex</a></td><td class="desc">Wrapper class for the usage of pthread_mutex with PTHREAD_PRIO_INHERIT Since std::mutex is not PTHREAD_PRIO_INHERIT, just use this simple wrapper </td></tr>
-<tr id="row_7_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_undo_sys.html" target="_self">UndoSys</a></td><td class="desc">Manages low-level system configurations for real-time operations </td></tr>
-<tr id="row_8_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_undo_worker_task_base.html" target="_self">UndoWorkerTaskBase</a></td><td class="desc">Base class for concurrent execution units (PRGs) </td></tr>
-<tr id="row_9_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct_version.html" target="_self">Version</a></td><td class="desc">Get version numbers as tuple </td></tr>
-</table>
-</div><!-- directory -->
-</div><!-- contents -->
+  <tr class="even"><td class="entry"><a class="el" href="class_undo_latch.html#a35ad685032452cd640f13c2b766c5ce3">_cv</a></td><td class="entry"><a class="el" href="class_undo_latch.html">UndoLatch</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_undo_latch.html#acb36384d796f1fb4369fed624b78e9e4">_mutex</a></td><td class="entry"><a class="el" href="class_undo_latch.html">UndoLatch</a></td><td class="entry"><span class="mlabel">mutable</span><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_undo_latch.html#a356f3a78711dea98bbfe7521d82dd702">_open</a></td><td class="entry"><a class="el" href="class_undo_latch.html">UndoLatch</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_undo_latch.html#a333dbb08c36ac5ea52acad192faac013">_remaining</a></td><td class="entry"><a class="el" href="class_undo_latch.html">UndoLatch</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_undo_latch.html#aa0390ce5b3d4a6fdd8ab6db85aa40f4f">count_down</a>(std::ptrdiff_t n=1)</td><td class="entry"><a class="el" href="class_undo_latch.html">UndoLatch</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_undo_latch.html#a652dfbf8a651e9401c8efcd255ac7d1a">try_wait</a>() const</td><td class="entry"><a class="el" href="class_undo_latch.html">UndoLatch</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_undo_latch.html#a10f95fa04c4de7bb92a8c6249eba6ee8">UndoLatch</a>(std::ptrdiff_t expected)</td><td class="entry"><a class="el" href="class_undo_latch.html">UndoLatch</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">explicit</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_undo_latch.html#a2f07bc23c87edc69a20c74d316599f23">wait</a>()</td><td class="entry"><a class="el" href="class_undo_latch.html">UndoLatch</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+</table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
