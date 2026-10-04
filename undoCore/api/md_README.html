@@ -95,8 +95,8 @@ $(document).ready(function(){initNavTree('md_README.html',''); initResizable(); 
   <div class="headertitle"><div class="title">undoCore</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md0"></a> <img src="https://img.shields.io/badge/C++20-blue.svg" alt="C++20" style="pointer-events: none;" class="inline"/> <img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="License: GPL v3" style="pointer-events: none;" class="inline"/> <a href="https://undort.com/undoCore/api/"><img src="https://github.com/undoRT/undoCore/actions/workflows/docs.yml/badge.svg" alt="Docs" style="pointer-events: none;" class="inline"/></a> <a href="https://github.com/undoRT/undoCore/actions/workflows/build.yml"><img src="https://github.com/undoRT/undoCore/actions/workflows/build.yml/badge.svg" alt="Build" style="pointer-events: none;" class="inline"/></a> <a href="https://github.com/undoRT/undoCore/releases"><img src="https://github.com/undoRT/undoCore/actions/workflows/release.yml/badge.svg" alt="Release" style="pointer-events: none;" class="inline"/></a></p>
-<p><em><b>Header-only C++20 library providing core infrastructure for the undoRT ecosystem.</b></em></p>
+<div class="textblock"><p><a class="anchor" id="autotoc_md0"></a> <img src="https://img.shields.io/badge/C++17-blue.svg" alt="C++17" style="pointer-events: none;" class="inline"/> <img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="License: GPL v3" style="pointer-events: none;" class="inline"/> <a href="https://undort.com/undoCore/api/"><img src="https://github.com/undoRT/undoCore/actions/workflows/docs.yml/badge.svg" alt="Docs" style="pointer-events: none;" class="inline"/></a> <a href="https://github.com/undoRT/undoCore/actions/workflows/build.yml"><img src="https://github.com/undoRT/undoCore/actions/workflows/build.yml/badge.svg" alt="Build" style="pointer-events: none;" class="inline"/></a> <a href="https://github.com/undoRT/undoCore/releases"><img src="https://github.com/undoRT/undoCore/actions/workflows/release.yml/badge.svg" alt="Release" style="pointer-events: none;" class="inline"/></a></p>
+<p><em><b>Header-only C++17 library providing core infrastructure for the undoRT ecosystem.</b></em></p>
 <hr  />
 <p><a class="el" href="namespaceundoCore.html">undoCore</a> defines the fundamental contracts and data structures used across the undoRT family of projects:</p>
 <ul>
@@ -111,7 +111,7 @@ Features</h1>
 <ul>
 <li><b>IoBus Interface</b> – Abstract contract for fieldbus master synchronization</li>
 <li><b>Process Image</b> – Double-buffered memory layout for IEC 61131-3 (I) —('Q) – M)</li>
-<li><b>IEC 61131-3 Types</b> – Complete set of elementary types mapped to C++20</li>
+<li><b>IEC 61131-3 Types</b> – Complete set of elementary types mapped to C++17</li>
 <li><b>STArray</b> – IEC 61131-3 compatible array with arbitrary bounds</li>
 <li><b>VAR_IN_OUT</b> – Reference wrapper for in-out parameters</li>
 <li><b>Time Literals</b> ‣ IEC-style time literal parsing (T#10s, T#100ms, etc.)</li>
@@ -120,7 +120,7 @@ Features</h1>
 <h1><a class="anchor" id="autotoc_md3"></a>
 Requirements</h1>
 <ul>
-<li>C++20 compiler (GCC 11+, Clang 14+)</li>
+<li>C++17 compiler (GCC 7+, Clang 5+)</li>
 <li>CMake 3.20+</li>
 <li>Linux (development and testing)</li>
 <li>Little-endian architecture (x86/x86_64)</li>
