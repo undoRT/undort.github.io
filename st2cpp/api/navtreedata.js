@@ -40,21 +40,23 @@ var NAVTREE =
       [ "External Libraries", "md__r_e_a_d_m_e.html#autotoc_md13", [
         [ "Exporting descriptors from ST", "md__r_e_a_d_m_e.html#autotoc_md14", null ]
       ] ],
-      [ "Documentation", "md__r_e_a_d_m_e.html#autotoc_md16", null ],
-      [ "CLI Reference", "md__r_e_a_d_m_e.html#autotoc_md18", null ],
-      [ "What's Supported", "md__r_e_a_d_m_e.html#autotoc_md20", null ],
-      [ "Testing", "md__r_e_a_d_m_e.html#autotoc_md22", null ],
-      [ "Known Limitations (Beta)", "md__r_e_a_d_m_e.html#autotoc_md23", null ],
-      [ "Contributing", "md__r_e_a_d_m_e.html#autotoc_md25", null ],
-      [ "Testing Checklist", "md__r_e_a_d_m_e.html#autotoc_md27", null ],
-      [ "License", "md__r_e_a_d_m_e.html#autotoc_md28", null ],
-      [ "Acknowledgements", "md__r_e_a_d_m_e.html#autotoc_md29", null ]
+      [ "PLC Tasks and the undoPLC Runtime", "md__r_e_a_d_m_e.html#autotoc_md16", null ],
+      [ "Documentation", "md__r_e_a_d_m_e.html#autotoc_md18", null ],
+      [ "CLI Reference", "md__r_e_a_d_m_e.html#autotoc_md20", null ],
+      [ "What's Supported", "md__r_e_a_d_m_e.html#autotoc_md22", null ],
+      [ "Testing", "md__r_e_a_d_m_e.html#autotoc_md24", null ],
+      [ "Known Limitations (Beta)", "md__r_e_a_d_m_e.html#autotoc_md25", null ],
+      [ "Contributing", "md__r_e_a_d_m_e.html#autotoc_md27", null ],
+      [ "Testing Checklist", "md__r_e_a_d_m_e.html#autotoc_md29", null ],
+      [ "License", "md__r_e_a_d_m_e.html#autotoc_md30", null ],
+      [ "Acknowledgements", "md__r_e_a_d_m_e.html#autotoc_md31", null ]
     ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
         [ "All", "namespacemembers.html", null ],
         [ "Functions", "namespacemembers_func.html", null ],
+        [ "Variables", "namespacemembers_vars.html", null ],
         [ "Typedefs", "namespacemembers_type.html", null ],
         [ "Enumerations", "namespacemembers_enum.html", null ]
       ] ]
@@ -87,21 +89,22 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_a_s_t_8h.html",
-"_project_loader_8h.html",
-"class_address_allocator.html#af71868f09d029a8098279e8b122cac5b",
-"classst2cpp_1_1codegen_1_1_decl_emitter.html#a5805e17ee100b2b5889950647e85f684",
-"classst2cpp_1_1library_1_1_library_descriptor.html#a729243c4e29dbae13eb33f3e737d4283",
-"classst2cpp_1_1semantic_1_1_decl_visitor.html#a7a4a61681f707a20f57f0a2acf7867fc",
-"classst2cpp_1_1semantic_1_1_symbol_table.html#a6b0ea79dfd65af977d1a9e0565fceef4",
-"md__r_e_a_d_m_e.html#autotoc_md5",
-"struct_call_expr_1_1_arg.html#af0e93ad1579aadf82c9df3d05ac1c892",
-"structst2cpp_1_1codegen_1_1_emission_context.html#a0f13355540dd862c490b427b1141effb",
-"structst2cpp_1_1json_1_1_json_value.html#a9f898a1b85b36825794d40460982cf23",
-"structst2cpp_1_1library_1_1_symbol_cpp_binding.html",
-"structst2cpp_1_1semantic_1_1_preserved_semantics.html",
-"test__body__visitor_8cpp.html#a20315beeb58d8021fac79a1a20499e6e",
-"test__complex__program_8cpp.html#aee4321cf6d1707bd952771b6d39a55d8",
-"test__library__loader_8cpp.html#a1fd627a8d309cb892de684873b353955"
+"_project_loader_8cpp.html",
+"_type_system_8h.html#abbf3ccf9a530769def37993bfb56b95c",
+"classst2cpp_1_1codegen_1_1_body_emitter.html#aee271501148351051b97ce9cddd1d3f1",
+"classst2cpp_1_1json_1_1_json_parse_error.html",
+"classst2cpp_1_1semantic_1_1_decl_visitor.html#a2403d04833e088657325081f86595d41",
+"classst2cpp_1_1semantic_1_1_symbol_table.html#a2ecaf3132abb725b8f920c3a215dc391",
+"main_8cpp.html#a0a6728c4068a8bdfe9a23416b335db4d",
+"struct_address_expr.html",
+"struct_type_ref.html#af94b194a5da0b17a56ca9e3393b3fe77",
+"structst2cpp_1_1codegen_1_1_identifier_policy.html#a748c5c10c4f70ece7b8485bb49654c89",
+"structst2cpp_1_1library_1_1_init_value.html#af85f1d46338490a040b427143259118c",
+"structst2cpp_1_1semantic_1_1_library_descriptor_builder_1_1_impl.html#aa5c23cf91ca284ae89e4c19af247f776",
+"structst2cpp_1_1semantic_1_1_type_info.html#ae5df07a9afc0c71938166114aba96612",
+"test__case__sensitivity_8cpp.html#a631ef5a74305cb76c07f2ad5ffa638c1",
+"test__iec__time_8cpp.html#ac9e4a8a700d0897b25b7a6727660dd64",
+"test__project__loader_8cpp.html#a3a9aa58497b29dc56bb6271c7b417f59"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

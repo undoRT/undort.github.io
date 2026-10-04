@@ -10,6 +10,7 @@ var dir_94a31b536183ae07caec48c0d7011dc6 =
     [ "LibraryIncludeTracker.h", "_library_include_tracker_8h.html", "_library_include_tracker_8h" ],
     [ "ProcessImage.h", "_process_image_8h.html", "_process_image_8h" ],
     [ "ProjectEmitter.h", "_project_emitter_8h.html", "_project_emitter_8h" ],
+    [ "RuntimeEmitter.h", "_runtime_emitter_8h.html", "_runtime_emitter_8h" ],
     [ "ScopeManager.h", "_scope_manager_8h.html", "_scope_manager_8h" ],
     [ "SemanticBridge.h", "_semantic_bridge_8h.html", "_semantic_bridge_8h" ],
     [ "TypeMapper.h", "_type_mapper_8h.html", "_type_mapper_8h" ]

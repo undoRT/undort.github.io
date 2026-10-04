@@ -126,7 +126,7 @@ Build from source</h2>
 <h2><a class="anchor" id="autotoc_md4"></a>
 Build Requirements</h2>
 <ul>
-<li>C++17 compiler (gcc+ 11 + or clang 15 +)</li>
+<li>C++17 compiler (GCC ≥ 7, Clang ≥ 5)</li>
 <li>CMake 3.16 +</li>
 <li>Google Test (for building tests)</li>
 </ul>
@@ -233,6 +233,46 @@ Exporting descriptors from ST</h2>
 </div><!-- fragment --><p>See `docs/15-library-descriptor-export.md`.</p>
 <hr  />
 <h1><a class="anchor" id="autotoc_md16"></a>
+PLC Tasks and the undoPLC Runtime</h1>
+<p><code>tasks.json</code> declares <b>what actually runs, and when</b>: which cyclic task calls which programs, at which cycle, priority and CPU core.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  &quot;$schemaVersion&quot;: &quot;1.0&quot;,</div>
+<div class="line">  &quot;tasks&quot;: [</div>
+<div class="line">    { &quot;name&quot;: &quot;cycle&quot;,   &quot;plc&quot;: &quot;Line1&quot;, &quot;cycle_ms&quot;: 10, &quot;priority&quot;: 40, &quot;programs&quot;: [&quot;MAIN&quot;, &quot;Report&quot;] },</div>
+<div class="line">    { &quot;name&quot;: &quot;aux&quot;,     &quot;plc&quot;: &quot;Line1&quot;, &quot;cycle_ms&quot;: 20, &quot;priority&quot;: 45, &quot;programs&quot;: [&quot;Control&quot;, &quot;MAIN&quot;] },</div>
+<div class="line">    { &quot;name&quot;: &quot;watchdog&quot;,&quot;plc&quot;: &quot;Line1&quot;, &quot;cycle_ms&quot;: 100, &quot;priority&quot;: 30 },</div>
+<div class="line">    { &quot;name&quot;: &quot;logic&quot;,   &quot;plc&quot;: &quot;Line2&quot;, &quot;cycle_ms&quot;: 20, &quot;priority&quot;: 40, &quot;programs&quot;: [&quot;Control&quot;, &quot;Report&quot;] }</div>
+<div class="line">  ]</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>You pass it to <b><a class="el" href="namespacest2cpp.html">st2cpp</a></b>, not to the generated program:</p>
+<div class="fragment"><div class="line">st2cpp --workspace ./src --project-style --tasks tasks.json --output-dir generated</div>
+</div><!-- fragment --><p><code>--tasks</code> requires <code>--workspace</code> and <code>--project-style</code>, because the runtime it generates (<code>Runtime.cpp</code>) includes the modular project's <code>Programs.hpp</code>.</p>
+<p><a class="el" href="namespacest2cpp.html">st2cpp</a> turns the configuration into C++ <b>at transpilation time</b>: one <code>UndoMasterTaskBase</code> per distinct <code>plc</code>, one <code>UndoWorkerTaskBase</code> per task, each calling <code>run()</code> on its own instances of the listed programs, in the declared order. Once compiled, the binary takes <b>no JSON at runtime</b> — the schedule is baked into the classes. The only runtime flag is <code>--log2console</code>, which mirrors the undoPLC logger to stdout.</p>
+<p>Deriving a Master from its tasks is not free choice — undoPLC drives every Worker from a single Master cycle, so the Master runs at the <b>finest</b> cycle its tasks asked for and one priority <b>above</b> all of them:</p>
+<p>A task may list <b>several</b> programs, and the same program may be listed by <b>several</b> tasks — it then runs once per task, each with its own instance:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Task   </th><th class="markdownTableHeadNone">PLC   </th><th class="markdownTableHeadNone">Cycle   </th><th class="markdownTableHeadNone">Priority   </th><th class="markdownTableHeadNone">Programs    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>cycle</code>   </td><td class="markdownTableBodyNone"><code>Line1</code>   </td><td class="markdownTableBodyNone">10 ms   </td><td class="markdownTableBodyNone">40   </td><td class="markdownTableBodyNone"><code>MAIN</code>, <code>Report</code>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>aux</code>   </td><td class="markdownTableBodyNone"><code>Line1</code>   </td><td class="markdownTableBodyNone">20 ms   </td><td class="markdownTableBodyNone">45   </td><td class="markdownTableBodyNone"><code>Control</code>, <code>MAIN</code>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>watchdog</code>   </td><td class="markdownTableBodyNone"><code>Line1</code>   </td><td class="markdownTableBodyNone">100 ms   </td><td class="markdownTableBodyNone">30   </td><td class="markdownTableBodyNone">(none)    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>logic</code>   </td><td class="markdownTableBodyNone"><code>Line2</code>   </td><td class="markdownTableBodyNone">20 ms   </td><td class="markdownTableBodyNone">40   </td><td class="markdownTableBodyNone"><code>Control</code>, <code>Report</code>   </td></tr>
+</table>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">PLC   </th><th class="markdownTableHeadNone">Master cycle   </th><th class="markdownTableHeadNone">Master priority    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>Line1</code>   </td><td class="markdownTableBodyNone"><b>10 ms</b> (fastest of 10/20/100)   </td><td class="markdownTableBodyNone"><b>46</b> (max prio 45 + 1)    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>Line2</code>   </td><td class="markdownTableBodyNone"><b>20 ms</b>   </td><td class="markdownTableBodyNone"><b>41</b> (max prio 40 + 1)   </td></tr>
+</table>
+<p>A task declaring a slower cycle is therefore <b>not</b> slowed down — it still runs every Master cycle. In the table above <code>aux</code> and <code>watchdog</code> both run at 10 ms, because they share <code>Line1</code>'s Master with <code>cycle</code>. Compile and link the result against <code>libundoPLC.a</code>; running it needs isolated CPUs (<code>isolcpus=</code>, one per Master plus one per task) and <b>root</b>, for two reasons: <code>SCHED_FIFO</code> thread priorities, and writing the cpufreq governor to pin the isolated cores to their nominal frequency. Both are checked at startup and both are fatal — a PLC that cannot pin its governor would appear to work while its jitter is no longer bounded. Runnable example: <a href="examples/tasks"><code>examples/tasks</code></a>. Schema: `docs/16-task-configuration-spec.md`.</p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md18"></a>
 Documentation</h1>
 <p>In-repository technical documentation lives in `docs/`:</p>
 <table class="markdownTable">
@@ -267,10 +307,12 @@ Documentation</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">`14-examples.md`   </td><td class="markdownTableBodyNone">Example walkthroughs    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">`15-library-descriptor-export.md`   </td><td class="markdownTableBodyNone">Descriptor import (optional bindings) and export (<code>LibraryDescriptorBuilder</code>, CLI <code>--export-descriptor</code>, ST → JSON)   </td></tr>
+<td class="markdownTableBodyNone">`15-library-descriptor-export.md`   </td><td class="markdownTableBodyNone">Descriptor import (optional bindings) and export (<code>LibraryDescriptorBuilder</code>, CLI <code>--export-descriptor</code>, ST → JSON)    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">`16-task-configuration-spec.md`   </td><td class="markdownTableBodyNone">Task Configuration JSON v1.0 spec, and the undoPLC Master/Worker runtime it generates   </td></tr>
 </table>
 <hr  />
-<h1><a class="anchor" id="autotoc_md18"></a>
+<h1><a class="anchor" id="autotoc_md20"></a>
 CLI Reference</h1>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -292,40 +334,42 @@ CLI Reference</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><code>--ext-libs &lt;file.json&gt;</code>   </td><td class="markdownTableBodyNone">Load external libraries listed in the given Project Configuration JSON (<code>project.json</code>)    </td></tr>
 <tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>--tasks &lt;tasks.json&gt;</code>   </td><td class="markdownTableBodyNone">Load the Task Configuration JSON and emit the undoPLC runtime (<code>Runtime.cpp</code>). Requires <code>--workspace</code> and <code>--project-style</code>    </td></tr>
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><code>--project-style</code>   </td><td class="markdownTableBodyNone">Generate modular project structure (separate files for each FB)    </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><code>--output-dir &lt;dir&gt;</code>   </td><td class="markdownTableBodyNone">Output directory (default: generated)    </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><code>--pi-auto</code>   </td><td class="markdownTableBodyNone">Auto-detect Process Image sizes (default)    </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><code>--pi-no-auto</code>   </td><td class="markdownTableBodyNone">Disable auto-detection, use manual sizes    </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><code>--pi-input &lt;bytes&gt;</code>   </td><td class="markdownTableBodyNone">Process Image Input size in bytes (default: 1024)    </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><code>--pi-output &lt;bytes&gt;</code>   </td><td class="markdownTableBodyNone">Process Image Output size in bytes (default: 1024)    </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><code>--pi-marker &lt;bytes&gt;</code>   </td><td class="markdownTableBodyNone">Process Image Marker size in bytes (default: 1024)    </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><code>--export-descriptor &lt;file.json&gt;</code>   </td><td class="markdownTableBodyNone">Export a semantic-only JSON Library Descriptor from the analyzed ST    </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><code>--lib-id &lt;id&gt;</code>   </td><td class="markdownTableBodyNone">Library id for <code>--export-descriptor</code> (required)    </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><code>--lib-name &lt;name&gt;</code>   </td><td class="markdownTableBodyNone">Library name for <code>--export-descriptor</code> (required)    </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><code>--lib-version &lt;ver&gt;</code>   </td><td class="markdownTableBodyNone">Library semver version for <code>--export-descriptor</code> (required)    </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><code>--lib-description &lt;text&gt;</code>   </td><td class="markdownTableBodyNone">Optional library description    </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><code>--lib-dependency &lt;id&gt;=&lt;constraint&gt;</code>   </td><td class="markdownTableBodyNone"><a class="el" href="struct_version.html" title="Get version numbers as tuple.">Version</a> policy for an external dependency (repeatable)    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><code>-v, --verbose</code>   </td><td class="markdownTableBodyNone">Print detailed processing information    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><code>--strict</code>   </td><td class="markdownTableBodyNone">Strict IEC 61131-3 mode: block generation on semantic errors    </td></tr>
+<td class="markdownTableBodyNone"><code>-v, --verbose</code>   </td><td class="markdownTableBodyNone">Print detailed processing information    </td></tr>
 <tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>--strict</code>   </td><td class="markdownTableBodyNone">Strict IEC 61131-3 mode: block generation on semantic errors    </td></tr>
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><code>-h, --help</code>   </td><td class="markdownTableBodyNone">Show this help   </td></tr>
 </table>
 <hr  />
-<h1><a class="anchor" id="autotoc_md20"></a>
+<h1><a class="anchor" id="autotoc_md22"></a>
 What's Supported</h1>
 <ul>
 <li><b>POUs</b>: <code>FUNCTION</code>, <code>FUNCTION_BLOCK</code>, <code>PROGRAM</code></li>
@@ -342,7 +386,7 @@ What's Supported</h1>
 <li><b>Circular-dependency</b>: Detected and reported with clear error messages</li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md22"></a>
+<h1><a class="anchor" id="autotoc_md24"></a>
 Testing</h1>
 <p>The project includes a comprehensive test suite using Google Test (<b>663 tests passing, 2 disabled, 24 suites</b>), covering:</p>
 <ul>
@@ -360,14 +404,14 @@ Testing</h1>
 <div class="line">cd build</div>
 <div class="line">ctest --output-on-failure --verbose</div>
 </div><!-- fragment --><p>All tests are automatically executed in the CI/CD pipeline on every pull request and commit to main. Test results are available in the [Actions] tab(<a href="https://github.com/undoRT/st2cpp/actions">https://github.com/undoRT/st2cpp/actions</a>) of the GitHub repository.</p>
-<h1><a class="anchor" id="autotoc_md23"></a>
+<h1><a class="anchor" id="autotoc_md25"></a>
 Known Limitations (Beta)</h1>
 <ul>
 <li><code>ARRAY[*]</code> (variable-length arrays) not supported</li>
 <li><code>VAR_CONFIG</code> and SFC (<code>ACTION</code>, <code>TRANSITION</code>) not yet implemented</li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md25"></a>
+<h1><a class="anchor" id="autotoc_md27"></a>
 Contributing</h1>
 <ol type="1">
 <li>Fork the repo and create a feature branch</li>
@@ -376,7 +420,7 @@ Contributing</h1>
 </ol>
 <p>Core standards: C++17, RAII, Doxygen on all public APIs.</p>
 <hr  />
-<h1><a class="anchor" id="autotoc_md27"></a>
+<h1><a class="anchor" id="autotoc_md29"></a>
 Testing Checklist</h1>
 <p>Before submitting a PR, ensure that:</p>
 <ul>
@@ -384,10 +428,10 @@ Testing Checklist</h1>
 <li>[ ] No regression test failures</li>
 <li>[ ] Code is documented with Doxygen comments</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md28"></a>
+<h1><a class="anchor" id="autotoc_md30"></a>
 License</h1>
 <p>GPL-3.0 &ndash; see [LICENSE](LICENSE).</p>
-<h1><a class="anchor" id="autotoc_md29"></a>
+<h1><a class="anchor" id="autotoc_md31"></a>
 Acknowledgements</h1>
 <p>Architecture inspired by <a href="https://github.com/Autonomy-Logic/STruCpp">STruCpp</a> (TypeScript). No code was copied or ported. </p>
 </div></div><!-- contents -->

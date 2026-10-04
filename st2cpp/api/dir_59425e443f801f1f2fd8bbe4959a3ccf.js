@@ -5,6 +5,7 @@ var dir_59425e443f801f1f2fd8bbe4959a3ccf =
     [ "library", "dir_369c1ef994c142d7ffd5beb2bb97e005.html", "dir_369c1ef994c142d7ffd5beb2bb97e005" ],
     [ "project", "dir_5addfc62a630b3ee9c94b5c3f92079db.html", "dir_5addfc62a630b3ee9c94b5c3f92079db" ],
     [ "semantic", "dir_b6621b694f7e4fe08ae18e50638ef9ad.html", "dir_b6621b694f7e4fe08ae18e50638ef9ad" ],
+    [ "task", "dir_2febdea8e5ecaf3cbb9c9d9c3a007729.html", "dir_2febdea8e5ecaf3cbb9c9d9c3a007729" ],
     [ "test_allocator.cpp", "test__allocator_8cpp.html", "test__allocator_8cpp" ],
     [ "test_compilation.cpp", "test__compilation_8cpp.html", "test__compilation_8cpp" ],
     [ "test_complex_program.cpp", "test__complex__program_8cpp.html", "test__complex__program_8cpp" ],

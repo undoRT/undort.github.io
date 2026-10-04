@@ -8,5 +8,6 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "parser", "dir_3641795f5ac83aac21456e1fce038978.html", "dir_3641795f5ac83aac21456e1fce038978" ],
     [ "project", "dir_181c00e2b942bc2bd301cc4650f9e5c8.html", "dir_181c00e2b942bc2bd301cc4650f9e5c8" ],
     [ "semantic", "dir_f9a2551e091110f72e695cb99a00ebd1.html", "dir_f9a2551e091110f72e695cb99a00ebd1" ],
+    [ "task", "dir_7209ed1703959184fd325a1c62bce49f.html", "dir_7209ed1703959184fd325a1c62bce49f" ],
     [ "version.hpp", "version_8hpp.html", "version_8hpp" ]
 ];

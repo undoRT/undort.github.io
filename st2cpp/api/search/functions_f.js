@@ -55,5 +55,6 @@ var searchData=
   ['run_52',['run',['../structst2cpp_1_1semantic_1_1_library_descriptor_builder_1_1_impl.html#acdedcd6049299548c0d21c377aacf182',1,'st2cpp::semantic::LibraryDescriptorBuilder::Impl']]],
   ['runcommand_53',['runCommand',['../class_test_helper.html#a2f69e0294f6c5658f2ccd7527ff287f2',1,'TestHelper']]],
   ['runmetadatavalidation_54',['runMetadataValidation',['../structst2cpp_1_1semantic_1_1_library_descriptor_builder_1_1_impl.html#a736ad37d2136cd7e1af2827d6a2808be',1,'st2cpp::semantic::LibraryDescriptorBuilder::Impl']]],
-  ['runsemanticanalysis_55',['runSemanticAnalysis',['../main_8cpp.html#aaac6427621f9c5f63e7f26ab5e2795e0',1,'main.cpp']]]
+  ['runsemanticanalysis_55',['runSemanticAnalysis',['../main_8cpp.html#aaac6427621f9c5f63e7f26ab5e2795e0',1,'main.cpp']]],
+  ['runtimeemitter_56',['RuntimeEmitter',['../classst2cpp_1_1codegen_1_1_runtime_emitter.html#af5ace9cc5228ec6ba87c305fc1c9369d',1,'st2cpp::codegen::RuntimeEmitter']]]
 ];

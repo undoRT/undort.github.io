@@ -90,6 +90,7 @@ var hierarchy =
     [ "MethodParameter", "struct_method_parameter.html", null ],
     [ "st2cpp::codegen::ParameterInfo", "structst2cpp_1_1codegen_1_1_parameter_info.html", null ],
     [ "Parser", "class_parser.html", null ],
+    [ "st2cpp::task::PlcGroup", "structst2cpp_1_1task_1_1_plc_group.html", null ],
     [ "st2cpp::semantic::TypeChecker::PointerResult", "structst2cpp_1_1semantic_1_1_type_checker_1_1_pointer_result.html", null ],
     [ "POU", "struct_p_o_u.html", null ],
     [ "st2cpp::semantic::PreservedSemantics", "structst2cpp_1_1semantic_1_1_preserved_semantics.html", null ],
@@ -110,6 +111,8 @@ var hierarchy =
       [ "ParseError", "class_parse_error.html", null ],
       [ "st2cpp::json::JsonParseError", "classst2cpp_1_1json_1_1_json_parse_error.html", null ]
     ] ],
+    [ "st2cpp::codegen::RuntimeEmitter", "classst2cpp_1_1codegen_1_1_runtime_emitter.html", null ],
+    [ "st2cpp::codegen::RuntimeEmitter::RuntimeResult", "structst2cpp_1_1codegen_1_1_runtime_emitter_1_1_runtime_result.html", null ],
     [ "ScopeManager::Scope", "struct_scope_manager_1_1_scope.html", null ],
     [ "st2cpp::semantic::Scope", "structst2cpp_1_1semantic_1_1_scope.html", null ],
     [ "ScopeManager", "class_scope_manager.html", null ],
@@ -130,6 +133,11 @@ var hierarchy =
     [ "st2cpp::semantic::Symbol", "structst2cpp_1_1semantic_1_1_symbol.html", null ],
     [ "st2cpp::library::SymbolCppBinding", "structst2cpp_1_1library_1_1_symbol_cpp_binding.html", null ],
     [ "st2cpp::semantic::SymbolTable", "classst2cpp_1_1semantic_1_1_symbol_table.html", null ],
+    [ "st2cpp::task::TaskConfig", "structst2cpp_1_1task_1_1_task_config.html", null ],
+    [ "st2cpp::task::TaskConfigError", "structst2cpp_1_1task_1_1_task_config_error.html", null ],
+    [ "st2cpp::task::TaskConfigLoader", "classst2cpp_1_1task_1_1_task_config_loader.html", null ],
+    [ "st2cpp::task::TaskConfigLoadResult", "structst2cpp_1_1task_1_1_task_config_load_result.html", null ],
+    [ "st2cpp::task::TaskEntry", "structst2cpp_1_1task_1_1_task_entry.html", null ],
     [ "testing::Test", null, [
       [ "BodyVisitorTest", "class_body_visitor_test.html", null ],
       [ "CaseSensitivityTest", "class_case_sensitivity_test.html", null ],
@@ -143,11 +151,13 @@ var hierarchy =
       [ "ProcessImageTest", "class_process_image_test.html", null ],
       [ "SemanticLibraryTest", "class_semantic_library_test.html", null ],
       [ "SymbolTableTest", "class_symbol_table_test.html", null ],
+      [ "TaskConfigLoaderTest", "class_task_config_loader_test.html", null ],
       [ "TypeSystemTest", "class_type_system_test.html", null ]
     ] ],
     [ "TestHelper", "class_test_helper.html", null ],
     [ "testing::TestWithParam", null, [
-      [ "GoldenTest", "class_golden_test.html", null ]
+      [ "GoldenTest", "class_golden_test.html", null ],
+      [ "TaskConfigLoaderInvalidTest", "class_task_config_loader_invalid_test.html", null ]
     ] ],
     [ "Token", "struct_token.html", null ],
     [ "TranslationUnit", "struct_translation_unit.html", null ],

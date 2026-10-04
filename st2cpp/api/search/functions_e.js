@@ -47,8 +47,9 @@ var searchData=
   ['printusage_44',['printUsage',['../main_8cpp.html#a85fda61d19f17f9567ee500e54d7e78e',1,'main.cpp']]],
   ['printversion_45',['printVersion',['../main_8cpp.html#ac1832783e1e213b53c0598652d788926',1,'main.cpp']]],
   ['processsinglefile_46',['processSingleFile',['../main_8cpp.html#a18d6a48d96debf1471807342f9c5676c',1,'main.cpp']]],
-  ['projectemitter_47',['ProjectEmitter',['../classst2cpp_1_1codegen_1_1_project_emitter.html#a8507e17f2cc9064613c00cc42ae00b86',1,'st2cpp::codegen::ProjectEmitter']]],
-  ['push_48',['push',['../structst2cpp_1_1codegen_1_1_emission_context.html#a863db49df014afec5cb26a2e14c739a7',1,'st2cpp::codegen::EmissionContext']]],
-  ['pushexternalscope_49',['pushExternalScope',['../classst2cpp_1_1semantic_1_1_symbol_table.html#ab9432af2f407535746380d72f0290677',1,'st2cpp::semantic::SymbolTable']]],
-  ['pushscope_50',['pushscope',['../classst2cpp_1_1semantic_1_1_symbol_table.html#a1e6eed3ebdffec180ce89b46d3a8807a',1,'st2cpp::semantic::SymbolTable::pushScope()'],['../classst2cpp_1_1semantic_1_1_body_visitor.html#a3d5a10b5c4333a7733d9ab90f4a5bd22',1,'st2cpp::semantic::BodyVisitor::pushScope()'],['../class_scope_manager.html#a280691c6a3e815f2927974272823e34d',1,'ScopeManager::pushScope()']]]
+  ['programtypename_47',['programTypeName',['../classst2cpp_1_1codegen_1_1_runtime_emitter.html#afe020cdc098bf3bff998efacd62d49f8',1,'st2cpp::codegen::RuntimeEmitter']]],
+  ['projectemitter_48',['ProjectEmitter',['../classst2cpp_1_1codegen_1_1_project_emitter.html#a8507e17f2cc9064613c00cc42ae00b86',1,'st2cpp::codegen::ProjectEmitter']]],
+  ['push_49',['push',['../structst2cpp_1_1codegen_1_1_emission_context.html#a863db49df014afec5cb26a2e14c739a7',1,'st2cpp::codegen::EmissionContext']]],
+  ['pushexternalscope_50',['pushExternalScope',['../classst2cpp_1_1semantic_1_1_symbol_table.html#ab9432af2f407535746380d72f0290677',1,'st2cpp::semantic::SymbolTable']]],
+  ['pushscope_51',['pushscope',['../classst2cpp_1_1semantic_1_1_symbol_table.html#a1e6eed3ebdffec180ce89b46d3a8807a',1,'st2cpp::semantic::SymbolTable::pushScope()'],['../classst2cpp_1_1semantic_1_1_body_visitor.html#a3d5a10b5c4333a7733d9ab90f4a5bd22',1,'st2cpp::semantic::BodyVisitor::pushScope()'],['../class_scope_manager.html#a280691c6a3e815f2927974272823e34d',1,'ScopeManager::pushScope()']]]
 ];

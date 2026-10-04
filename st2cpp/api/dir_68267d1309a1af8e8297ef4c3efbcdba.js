@@ -7,5 +7,6 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "library", "dir_0aacf3aed1a5c7085b23ed9486273ee2.html", "dir_0aacf3aed1a5c7085b23ed9486273ee2" ],
     [ "parser", "dir_6cd8491d143eb218b70983dbdb3c58bc.html", "dir_6cd8491d143eb218b70983dbdb3c58bc" ],
     [ "project", "dir_00f0a3b1654669903f8939607e046ce9.html", "dir_00f0a3b1654669903f8939607e046ce9" ],
-    [ "semantic", "dir_f8bacd05876e9609c05b390a7201ebf7.html", "dir_f8bacd05876e9609c05b390a7201ebf7" ]
+    [ "semantic", "dir_f8bacd05876e9609c05b390a7201ebf7.html", "dir_f8bacd05876e9609c05b390a7201ebf7" ],
+    [ "task", "dir_2446a0d63b267fbc56c08872bbbb5182.html", "dir_2446a0d63b267fbc56c08872bbbb5182" ]
 ];

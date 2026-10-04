@@ -14,6 +14,7 @@ var annotated_dup =
         [ "LibraryIncludeTracker", "classst2cpp_1_1codegen_1_1_library_include_tracker.html", "classst2cpp_1_1codegen_1_1_library_include_tracker" ],
         [ "ParameterInfo", "structst2cpp_1_1codegen_1_1_parameter_info.html", "structst2cpp_1_1codegen_1_1_parameter_info" ],
         [ "ProjectEmitter", "classst2cpp_1_1codegen_1_1_project_emitter.html", "classst2cpp_1_1codegen_1_1_project_emitter" ],
+        [ "RuntimeEmitter", "classst2cpp_1_1codegen_1_1_runtime_emitter.html", "classst2cpp_1_1codegen_1_1_runtime_emitter" ],
         [ "SemanticBridge", "classst2cpp_1_1codegen_1_1_semantic_bridge.html", "classst2cpp_1_1codegen_1_1_semantic_bridge" ],
         [ "TypeMapper", "classst2cpp_1_1codegen_1_1_type_mapper.html", "classst2cpp_1_1codegen_1_1_type_mapper" ]
       ] ],
@@ -84,6 +85,14 @@ var annotated_dup =
         [ "Symbol", "structst2cpp_1_1semantic_1_1_symbol.html", "structst2cpp_1_1semantic_1_1_symbol" ],
         [ "SymbolTable", "classst2cpp_1_1semantic_1_1_symbol_table.html", "classst2cpp_1_1semantic_1_1_symbol_table" ],
         [ "TypeInfo", "structst2cpp_1_1semantic_1_1_type_info.html", "structst2cpp_1_1semantic_1_1_type_info" ]
+      ] ],
+      [ "task", "namespacest2cpp_1_1task.html", [
+        [ "PlcGroup", "structst2cpp_1_1task_1_1_plc_group.html", "structst2cpp_1_1task_1_1_plc_group" ],
+        [ "TaskConfig", "structst2cpp_1_1task_1_1_task_config.html", "structst2cpp_1_1task_1_1_task_config" ],
+        [ "TaskConfigError", "structst2cpp_1_1task_1_1_task_config_error.html", "structst2cpp_1_1task_1_1_task_config_error" ],
+        [ "TaskConfigLoader", "classst2cpp_1_1task_1_1_task_config_loader.html", "classst2cpp_1_1task_1_1_task_config_loader" ],
+        [ "TaskConfigLoadResult", "structst2cpp_1_1task_1_1_task_config_load_result.html", "structst2cpp_1_1task_1_1_task_config_load_result" ],
+        [ "TaskEntry", "structst2cpp_1_1task_1_1_task_entry.html", "structst2cpp_1_1task_1_1_task_entry" ]
       ] ]
     ] ],
     [ "AddressAllocator", "class_address_allocator.html", "class_address_allocator" ],
@@ -149,6 +158,8 @@ var annotated_dup =
     [ "StructType", "struct_struct_type.html", "struct_struct_type" ],
     [ "SuperCallExpr", "struct_super_call_expr.html", "struct_super_call_expr" ],
     [ "SymbolTableTest", "class_symbol_table_test.html", "class_symbol_table_test" ],
+    [ "TaskConfigLoaderInvalidTest", "class_task_config_loader_invalid_test.html", null ],
+    [ "TaskConfigLoaderTest", "class_task_config_loader_test.html", null ],
     [ "TestHelper", "class_test_helper.html", "class_test_helper" ],
     [ "Token", "struct_token.html", "struct_token" ],
     [ "TranslationUnit", "struct_translation_unit.html", "struct_translation_unit" ],

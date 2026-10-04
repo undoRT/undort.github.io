@@ -1,19 +1,21 @@
 <map id="include/json/JsonValue.h" name="include/json/JsonValue.h">
-<area shape="rect" id="Node000001" title="Minimal self&#45;contained JSON DOM, parser and serializer." alt="" coords="1450,5,1629,31"/>
+<area shape="rect" id="Node000001" title="Minimal self&#45;contained JSON DOM, parser and serializer." alt="" coords="1890,5,2069,31"/>
 <area shape="rect" id="Node000002" href="$_library_loader_8h.html" title="Loads a LibraryDescriptor from JSON and validates it." alt="" coords="537,86,755,111"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1437,31,756,90,755,85,1436,26"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1876,28,756,94,756,88,1876,23"/>
 <area shape="rect" id="Node000014" href="$_library_serializer_8h.html" title="Serializes a LibraryDescriptor back to JSON." alt="" coords="989,86,1225,111"/>
-<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="1464,36,1171,89,1170,83,1463,30"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="1877,31,1226,89,1225,84,1876,26"/>
 <area shape="rect" id="Node000016" href="$_project_config_loader_8h.html" title="Loads a Project Configuration from JSON and validates it." alt="" coords="1243,174,1451,214"/>
-<area shape="poly" id="edge18_Node000001_Node000016" title=" " alt="" coords="1519,42,1370,176,1366,172,1515,38"/>
-<area shape="rect" id="Node000018" href="$test__project__config__loader_8cpp.html" title="Tests for ProjectConfigLoader: JSON &#45;&gt; ProjectConfig + validation." alt="" coords="1439,269,1634,309"/>
-<area shape="poly" id="edge29_Node000001_Node000018" title=" " alt="" coords="1542,45,1540,269,1534,269,1536,44"/>
-<area shape="rect" id="Node000019" href="$_json_value_8cpp.html" title="JSON parser and serializer implementation." alt="" coords="1577,86,1744,111"/>
-<area shape="poly" id="edge26_Node000001_Node000019" title=" " alt="" coords="1571,36,1644,84,1641,88,1568,41"/>
-<area shape="rect" id="Node000020" href="$test__cli__export_8cpp.html" title="End&#45;to&#45;end tests for the –export&#45;descriptor CLI command." alt="" coords="1768,79,1897,119"/>
-<area shape="poly" id="edge27_Node000001_Node000020" title=" " alt="" coords="1596,32,1768,77,1767,83,1595,37"/>
-<area shape="rect" id="Node000021" href="$test__json_8cpp.html" title="Tests for the minimal JSON module (st2cpp::json)" alt="" coords="1921,79,2051,119"/>
-<area shape="poly" id="edge28_Node000001_Node000021" title=" " alt="" coords="1637,30,1767,50,1911,76,1922,78,1920,84,1909,81,1766,55,1636,35"/>
+<area shape="poly" id="edge18_Node000001_Node000016" title=" " alt="" coords="1926,37,1416,176,1415,171,1924,32"/>
+<area shape="rect" id="Node000018" href="$test__project__config__loader_8cpp.html" title="Tests for ProjectConfigLoader: JSON &#45;&gt; ProjectConfig + validation." alt="" coords="1839,269,2034,309"/>
+<area shape="poly" id="edge34_Node000001_Node000018" title=" " alt="" coords="2020,34,2083,66,2117,87,2148,111,2172,137,2188,164,2191,194,2177,223,2155,240,2121,254,2035,275,2034,270,2119,249,2153,235,2173,220,2185,193,2183,166,2168,140,2144,115,2114,92,2081,71,2018,39"/>
+<area shape="rect" id="Node000019" href="$_task_config_loader_8h.html" title="Loads a Task Configuration from tasks.json and validates it." alt="" coords="1788,86,2019,111"/>
+<area shape="poly" id="edge26_Node000001_Node000019" title=" " alt="" coords="1961,42,1917,88,1913,84,1957,39"/>
+<area shape="rect" id="Node000023" href="$_json_value_8cpp.html" title="JSON parser and serializer implementation." alt="" coords="2167,86,2333,111"/>
+<area shape="poly" id="edge31_Node000001_Node000023" title=" " alt="" coords="2032,32,2211,83,2210,89,2031,37"/>
+<area shape="rect" id="Node000024" href="$test__cli__export_8cpp.html" title="End&#45;to&#45;end tests for the –export&#45;descriptor CLI command." alt="" coords="2357,79,2487,119"/>
+<area shape="poly" id="edge32_Node000001_Node000024" title=" " alt="" coords="2075,30,2205,50,2347,76,2358,78,2356,84,2345,81,2204,55,2075,35"/>
+<area shape="rect" id="Node000025" href="$test__json_8cpp.html" title="Tests for the minimal JSON module (st2cpp::json)" alt="" coords="2511,79,2640,119"/>
+<area shape="poly" id="edge33_Node000001_Node000025" title=" " alt="" coords="2083,25,2277,44,2500,76,2511,78,2510,83,2499,81,2277,49,2083,30"/>
 <area shape="rect" id="Node000003" href="$_project_loader_8h.html" title="Loads every configured Library Descriptor into a LibraryRegistry." alt="" coords="5,181,228,207"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="557,116,240,169,168,184,167,179,239,164,556,111"/>
 <area shape="rect" id="Node000010" href="$_library_loader_8cpp.html" title="LibraryLoader implementation: JSON &#45;&gt; LibraryDescriptor (validated)" alt="" coords="252,181,459,207"/>
@@ -24,29 +26,36 @@
 <area shape="poly" id="edge11_Node000002_Node000012" title=" " alt="" coords="691,114,849,171,847,176,689,119"/>
 <area shape="rect" id="Node000013" href="$test__library__registry_8cpp.html" title="Tests for LibraryRegistry." alt="" coords="483,174,636,214"/>
 <area shape="poly" id="edge12_Node000002_Node000013" title=" " alt="" coords="628,123,579,176,575,172,624,119"/>
-<area shape="rect" id="Node000004" href="$main_8cpp.html" title="Command&#45;line driver for the st2cpp transpiler." alt="" coords="1287,277,1411,302"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="176,207,240,219,396,235,530,241,647,242,757,240,867,238,984,239,1118,248,1274,267,1310,274,1309,279,1274,272,1117,253,984,245,867,243,757,245,647,247,530,247,396,240,239,224,175,212"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html" title="Command&#45;line driver for the st2cpp transpiler." alt="" coords="1427,277,1551,302"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="176,207,240,219,418,236,569,243,702,243,827,239,952,236,1085,237,1237,246,1414,267,1450,274,1449,279,1414,272,1236,251,1085,242,952,241,827,244,703,248,569,248,417,242,239,224,175,212"/>
 <area shape="rect" id="Node000005" href="$_project_loader_8cpp.html" title="ProjectLoader implementation." alt="" coords="12,277,221,302"/>
 <area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="119,220,119,277,114,277,114,220"/>
-<area shape="rect" id="Node000006" href="$test__codegen__external__library_8cpp.html" title="C++ generation of external library C++ bindings." alt="" coords="249,269,467,309"/>
-<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="160,209,310,267,308,272,158,214"/>
-<area shape="rect" id="Node000007" href="$test__project__loader_8cpp.html" title="Tests for ProjectLoader: ProjectConfig &#45;&gt; LibraryRegistry." alt="" coords="499,269,647,309"/>
-<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="184,207,240,219,499,271,498,276,239,224,183,212"/>
-<area shape="rect" id="Node000008" href="$test__semantic__library_8cpp.html" title="Semantic integration tests: LibraryRegistry &#45;&gt; SemanticAnalyzer." alt="" coords="674,269,837,309"/>
-<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="179,207,240,219,357,235,449,243,541,251,658,267,674,269,673,274,658,272,540,257,448,249,356,240,239,224,178,212"/>
-<area shape="rect" id="Node000009" href="$test__compilation_8cpp.html" title="Implementation of test cases for compilation of generated code." alt="" coords="862,277,1057,302"/>
-<area shape="poly" id="edge8_Node000003_Node000009" title=" " alt="" coords="177,207,240,219,410,238,544,245,678,251,849,267,898,274,898,279,848,272,677,256,544,250,410,243,239,224,176,212"/>
-<area shape="poly" id="edge14_Node000014_Node000004" title=" " alt="" coords="1240,105,1308,113,1375,125,1430,142,1451,152,1465,165,1474,179,1476,193,1466,223,1450,242,1431,258,1389,279,1387,274,1428,253,1447,238,1461,220,1471,193,1469,181,1461,168,1448,157,1428,147,1373,130,1308,118,1239,110"/>
+<area shape="rect" id="Node000006" href="$test__codegen__external__library_8cpp.html" title="C++ generation of external library C++ bindings." alt="" coords="970,269,1189,309"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="177,207,240,219,435,240,588,247,742,252,938,267,970,270,970,276,938,272,741,257,588,252,435,245,239,224,176,212"/>
+<area shape="rect" id="Node000007" href="$test__project__loader_8cpp.html" title="Tests for ProjectLoader: ProjectConfig &#45;&gt; LibraryRegistry." alt="" coords="256,269,404,309"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="156,210,288,267,286,272,154,214"/>
+<area shape="rect" id="Node000008" href="$test__semantic__library_8cpp.html" title="Semantic integration tests: LibraryRegistry &#45;&gt; SemanticAnalyzer." alt="" coords="506,269,669,309"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="183,207,240,219,506,270,505,275,239,224,182,212"/>
+<area shape="rect" id="Node000009" href="$test__compilation_8cpp.html" title="Implementation of test cases for compilation of generated code." alt="" coords="731,277,926,302"/>
+<area shape="poly" id="edge8_Node000003_Node000009" title=" " alt="" coords="178,207,240,219,363,236,460,246,681,267,741,274,740,279,680,272,459,251,363,241,239,224,177,212"/>
+<area shape="poly" id="edge14_Node000014_Node000004" title=" " alt="" coords="1239,107,1307,115,1373,127,1428,143,1450,153,1465,165,1483,192,1492,223,1494,253,1493,276,1487,276,1488,253,1486,224,1478,194,1461,169,1447,158,1426,148,1372,132,1306,121,1239,112"/>
 <area shape="poly" id="edge16_Node000014_Node000011" title=" " alt="" coords="1038,117,815,169,804,172,802,167,813,164,1037,112"/>
 <area shape="poly" id="edge17_Node000014_Node000012" title=" " alt="" coords="1070,119,942,176,940,172,1068,114"/>
 <area shape="rect" id="Node000015" href="$_library_serializer_8cpp.html" title="LibrarySerializer implementation." alt="" coords="996,181,1219,207"/>
 <area shape="poly" id="edge15_Node000014_Node000015" title=" " alt="" coords="1110,125,1110,181,1105,181,1105,125"/>
-<area shape="poly" id="edge19_Node000016_Node000004" title=" " alt="" coords="1350,228,1351,276,1346,276,1345,228"/>
-<area shape="poly" id="edge21_Node000016_Node000006" title=" " alt="" coords="1258,219,1230,224,1118,238,1022,246,859,253,695,256,486,272,468,274,467,269,486,267,695,251,858,247,1022,241,1117,233,1230,219,1257,214"/>
-<area shape="poly" id="edge23_Node000016_Node000007" title=" " alt="" coords="1257,219,1230,224,1071,242,946,249,821,254,662,272,648,274,647,269,662,267,821,249,946,243,1071,237,1230,219,1256,214"/>
-<area shape="poly" id="edge24_Node000016_Node000008" title=" " alt="" coords="1254,219,1230,224,1124,240,1040,249,957,257,850,272,837,274,836,269,850,267,956,252,1040,243,1123,235,1230,219,1253,214"/>
-<area shape="poly" id="edge25_Node000016_Node000009" title=" " alt="" coords="1256,220,1008,279,1007,274,1255,215"/>
-<area shape="rect" id="Node000017" href="$_project_config_loader_8cpp.html" title="ProjectConfigLoader implementation." alt="" coords="1083,269,1263,309"/>
-<area shape="poly" id="edge20_Node000016_Node000017" title=" " alt="" coords="1301,223,1209,272,1207,267,1299,218"/>
-<area shape="poly" id="edge22_Node000016_Node000018" title=" " alt="" coords="1399,218,1500,267,1497,272,1397,222"/>
+<area shape="poly" id="edge19_Node000016_Node000004" title=" " alt="" coords="1389,219,1473,274,1470,279,1386,224"/>
+<area shape="poly" id="edge21_Node000016_Node000006" title=" " alt="" coords="1281,221,1134,272,1133,267,1279,216"/>
+<area shape="poly" id="edge23_Node000016_Node000007" title=" " alt="" coords="1258,219,1230,224,1024,247,863,254,701,259,494,272,404,281,404,276,494,267,701,253,863,249,1024,242,1230,219,1257,214"/>
+<area shape="poly" id="edge24_Node000016_Node000008" title=" " alt="" coords="1256,219,1230,224,1087,243,975,251,863,258,720,272,669,278,669,273,719,267,863,253,975,246,1087,237,1230,219,1255,214"/>
+<area shape="poly" id="edge25_Node000016_Node000009" title=" " alt="" coords="1253,220,1230,224,905,279,904,274,1230,219,1251,214"/>
+<area shape="rect" id="Node000017" href="$_project_config_loader_8cpp.html" title="ProjectConfigLoader implementation." alt="" coords="1223,269,1403,309"/>
+<area shape="poly" id="edge20_Node000016_Node000017" title=" " alt="" coords="1338,228,1322,270,1317,268,1333,226"/>
+<area shape="poly" id="edge22_Node000016_Node000018" title=" " alt="" coords="1465,211,1839,270,1839,275,1464,216"/>
+<area shape="poly" id="edge27_Node000019_Node000004" title=" " alt="" coords="1786,116,1658,138,1603,152,1566,169,1539,194,1519,224,1495,278,1490,275,1514,222,1535,190,1563,164,1602,147,1657,132,1785,110"/>
+<area shape="rect" id="Node000020" href="$_task_config_loader_8cpp.html" title="TaskConfigLoader implementation." alt="" coords="1577,181,1795,207"/>
+<area shape="poly" id="edge28_Node000019_Node000020" title=" " alt="" coords="1865,119,1714,184,1712,179,1863,114"/>
+<area shape="rect" id="Node000021" href="$test__codegen__runtime_8cpp.html" title="C++ generation of the undoPLC runtime from a task configuration." alt="" coords="1819,174,1988,214"/>
+<area shape="poly" id="edge29_Node000019_Node000021" title=" " alt="" coords="1906,125,1906,174,1901,174,1901,125"/>
+<area shape="rect" id="Node000022" href="$test__task__config__loader_8cpp.html" title="Implementation of test cases for the task configuration loader." alt="" coords="2012,174,2163,214"/>
+<area shape="poly" id="edge30_Node000019_Node000022" title=" " alt="" coords="1939,115,2051,172,2049,176,1937,120"/>
 </map>

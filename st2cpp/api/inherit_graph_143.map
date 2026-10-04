@@ -1,3 +1,31 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$struct_var_section.html" title="A section of variable declarations (VAR_INPUT, VAR_OUTPUT, etc.)" alt="" coords="5,5,96,31"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,327,107,352"/>
+<area shape="rect" id="Node000001" href="$class_body_visitor_test.html" title=" " alt="" coords="195,5,318,31"/>
+<area shape="poly" id="edge3_Node000000_Node000001" title=" " alt="" coords="55,313,60,256,75,182,87,144,104,106,126,71,153,40,172,27,194,20,196,25,175,32,156,44,130,74,109,108,92,145,80,184,65,257,60,313"/>
+<area shape="rect" id="Node000002" href="$class_case_sensitivity_test.html" title=" " alt="" coords="182,55,331,80"/>
+<area shape="poly" id="edge4_Node000000_Node000002" title=" " alt="" coords="57,312,65,264,82,204,110,142,129,114,153,89,181,74,183,78,156,93,134,117,115,145,87,206,70,265,63,313"/>
+<area shape="rect" id="Node000003" href="$class_cli_export_test.html" title=" " alt="" coords="203,104,310,129"/>
+<area shape="poly" id="edge5_Node000000_Node000003" title=" " alt="" coords="60,312,71,273,89,226,116,179,133,157,153,139,177,125,202,118,204,123,179,130,156,143,137,161,120,182,94,229,76,275,65,314"/>
+<area shape="rect" id="Node000004" href="$class_codegen_external_library_test.html" title=" " alt="" coords="155,153,359,179"/>
+<area shape="poly" id="edge6_Node000000_Node000004" title=" " alt="" coords="65,313,97,250,122,216,153,188,175,176,177,181,156,192,126,220,102,252,69,315"/>
+<area shape="rect" id="Node000005" href="$class_codegen_semantic_test.html" title=" " alt="" coords="173,203,340,228"/>
+<area shape="poly" id="edge7_Node000000_Node000005" title=" " alt="" coords="72,314,106,274,129,254,153,237,179,226,181,231,156,242,132,258,110,278,76,317"/>
+<area shape="rect" id="Node000006" href="$class_compilation_test.html" title="Test fixture for compilation tests." alt="" coords="193,252,320,277"/>
+<area shape="poly" id="edge8_Node000000_Node000006" title=" " alt="" coords="89,317,154,286,192,274,194,280,156,291,91,322"/>
+<area shape="rect" id="Node000007" href="$class_complex_program_test.html" title=" " alt="" coords="176,301,337,327"/>
+<area shape="poly" id="edge9_Node000000_Node000007" title=" " alt="" coords="120,329,175,322,176,327,121,334"/>
+<area shape="rect" id="Node000008" href="$class_decl_visitor_test.html" title=" " alt="" coords="197,351,316,376"/>
+<area shape="poly" id="edge10_Node000000_Node000008" title=" " alt="" coords="120,344,197,354,197,359,120,350"/>
+<area shape="rect" id="Node000009" href="$class_generation_test.html" title="Test fixture for code generation tests." alt="" coords="197,400,317,425"/>
+<area shape="poly" id="edge11_Node000000_Node000009" title=" " alt="" coords="93,356,156,385,197,397,195,403,154,390,91,361"/>
+<area shape="rect" id="Node000010" href="$class_process_image_test.html" title=" " alt="" coords="187,449,326,475"/>
+<area shape="poly" id="edge12_Node000000_Node000010" title=" " alt="" coords="77,361,111,399,132,418,156,434,188,448,186,453,153,439,129,422,107,403,73,365"/>
+<area shape="rect" id="Node000011" href="$class_semantic_library_test.html" title=" " alt="" coords="179,499,334,524"/>
+<area shape="poly" id="edge13_Node000000_Node000011" title=" " alt="" coords="70,364,102,425,127,457,156,484,180,496,178,501,153,488,123,460,98,428,65,366"/>
+<area shape="rect" id="Node000012" href="$class_symbol_table_test.html" title=" " alt="" coords="191,548,322,573"/>
+<area shape="poly" id="edge14_Node000000_Node000012" title=" " alt="" coords="65,365,76,403,94,448,121,494,156,533,173,544,192,551,190,556,171,548,153,537,116,498,90,451,71,404,60,366"/>
+<area shape="rect" id="Node000013" href="$class_task_config_loader_test.html" title="Shared fixture for every task configuration test." alt="" coords="175,597,338,623"/>
+<area shape="poly" id="edge15_Node000000_Node000013" title=" " alt="" coords="63,366,71,413,87,471,115,532,134,559,156,583,177,595,174,600,153,587,130,562,110,534,82,473,66,414,57,366"/>
+<area shape="rect" id="Node000014" href="$class_type_system_test.html" title=" " alt="" coords="193,647,320,672"/>
+<area shape="poly" id="edge16_Node000000_Node000014" title=" " alt="" coords="61,365,66,421,81,493,93,531,109,568,130,602,156,632,174,644,194,651,192,656,171,649,153,636,126,605,104,571,88,533,75,495,61,422,55,366"/>
 </map>
